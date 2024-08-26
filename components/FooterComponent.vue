@@ -58,26 +58,26 @@ export default {
 .footer{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to top, #e5dbdc 50%, #fafafa 100% );
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
 }.damen{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to top, #c7dee6 50%, #ffffff 100% );
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
 }
 .kontakt{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to top, #c7e6ca 50%, #ffffff 100% );
+  background-image: linear-gradient(to bottom, #c7e6ca 50%, #ffffff 100% );
 }
 .datenschutz{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to top, #e5dbdc 50%, #fafafa 100% );
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
 }
 .impressum{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to top, #e5dbdc 50%, #fafafa 100% );
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
 }
 
 .nav-link {
