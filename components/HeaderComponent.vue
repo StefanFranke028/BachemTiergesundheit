@@ -18,7 +18,7 @@
           <span  @click="navigateTo('vita')">VITA</span>
         </v-col>
         <v-col class="d-flex justify-center" cols="1">
-          <span  @click="navigateTo('damen')">ESCORD</span>
+          <span  @click="navigateTo('damen')">ESCORT</span>
         </v-col>
         <v-col class="d-flex justify-center" cols="1">
           <span  @click="navigateTo('bewerben')">BEWERBEN</span>
