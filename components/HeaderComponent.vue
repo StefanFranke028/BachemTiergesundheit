@@ -7,7 +7,7 @@
       <span style="font-size: 22px; color: grey; ">
           MAXI
         <b class="ml-n1" style="color: black">
-        ESCORD
+        ESCORT
         </b>
       </span>
     </div>
