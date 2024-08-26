@@ -1,6 +1,6 @@
 <template>
   <div >
-    <img style="width: 100vw; height: 500px;" src="~/assets/bg-home1.webp" alt="schwarz-weis Hintergrundbild" />
+    <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
     <div class="card">
       <div class="cardIn1">
         <div  class="text-center text2 dosis">discover your <br> authentic style and <br> be the stunning lady <br> you naturally are
@@ -154,6 +154,7 @@ p{
    height: 300px;
    width: 250px;
    background-color: black;
+  box-shadow: 2px -2px 5px rgba(67, 67, 67, 0.87);
    position: absolute;
    left: 28%;
    top: 40%;

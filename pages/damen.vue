@@ -62,16 +62,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
-.card{
-  z-index: 300;
-  height: 650px;
-  width: 80vw;
-  background-color: #edd5d7;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 .cardIn1{
   height: 400px;
   width: 400px;
@@ -80,14 +71,7 @@ export default {
   left: 40%;
   top: 10%;
 }
-.cardIn2{
-  height: 300px;
-  width: 250px;
-  background-color: black;
-  position: absolute;
-  left: 28%;
-  top: 40%;
-}
+
 h1{
   font-size: 2.5vw;
 }

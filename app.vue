@@ -17,7 +17,10 @@ export default {
 </script>
 
 <style>
-
+button{
+  border-radius: 30px !important;
+  background-color: black !important;
+}
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
