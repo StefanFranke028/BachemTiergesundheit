@@ -1,5 +1,5 @@
 <template>
-  <div class="footer" >
+  <div :class="formattedPath" >
     <v-row style="width: 100%" class="justify-center ma-0">
       <v-col cols="6">
         <h2 class="">ELEGANZ TRIFFT LEIDENSCHAFT </h2>
@@ -39,6 +39,17 @@ export default {
   name: "FooterComponent",
   components:{
 
+  },
+  computed:{
+    formattedPath() {
+      // Überprüfe, ob der Pfad mehr als nur ein "/" enthält
+      if (this.$route.path !== '/') {
+        // Entferne das führende "/" vom Pfad
+        return this.$route.path.substring(1);
+      }
+      // Wenn der Pfad nur aus "/" besteht, gib ihn unverändert zurück
+      return 'footer';
+    }
   }
 }
 </script>
@@ -47,8 +58,28 @@ export default {
 .footer{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to right, #e5dbdc 40%,  #c7dee6 100% );
+  background-image: linear-gradient(to top, #e5dbdc 50%, #fafafa 100% );
+}.damen{
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to top, #c7dee6 50%, #ffffff 100% );
 }
+.kontakt{
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to top, #c7e6ca 50%, #ffffff 100% );
+}
+.datenschutz{
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to top, #e5dbdc 50%, #fafafa 100% );
+}
+.impressum{
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to top, #e5dbdc 50%, #fafafa 100% );
+}
+
 .nav-link {
   text-decoration: none;
   color: inherit;

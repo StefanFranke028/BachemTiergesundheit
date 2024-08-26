@@ -4,11 +4,11 @@
   <v-row style="width: 100%; height: 100%" class="pa-0">
     <v-col cols="2" @click="navigateTo('/')" class="pa-0 d-flex justify-center align-center">
     <div style="cursor: pointer">
-      <span style="font-size: 22px; color: black; ">
-        <b>
+      <span style="font-size: 22px; color: grey; ">
           MAXI
-        </b>
+        <b class="ml-n1" style="color: black">
         ESCORD
+        </b>
       </span>
     </div>
     </v-col>
@@ -35,7 +35,9 @@
       </v-row>
 
     </v-col>
-    <v-col cols="2" class="pa-0 d-flex justify-center align-center">ICON</v-col>
+    <v-col cols="2" class="pa-0 d-flex justify-center align-center">
+      <v-img @click="navigateTo('/')" style="height: 110px; width: 110px; cursor: pointer" src="~/assets/logo.png"  alt=""></v-img>
+    </v-col>
   </v-row>
 </div>
 </template>
