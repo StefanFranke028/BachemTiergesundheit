@@ -26,7 +26,7 @@
 
 
 
-    <div class="mt-n2" style="width: 100vw; height:150px; background-color: #edd5d7">
+    <div class="mt-n2" style="width: 100vw; height:150px; background-color: #e5dbdc">
 
     </div>
 
@@ -39,7 +39,7 @@
         <v-col style="background-color: black" class="pa-0" cols="6">
           <v-img style="z-index: 0" src="~/assets/bild-links.webp"  alt=""></v-img>
         </v-col>
-        <v-col style="background-color: #e6dada" class="pa-0" cols="6">
+        <v-col style="background-color: #f1edec" class="pa-0" cols="6">
           <v-row  style="width: 50%; height: 33%; position: absolute;" class="d-flex justify-center align-end">
             <v-col cols="6">
               <p style="font-size: 2vh">
@@ -61,7 +61,7 @@
     </div>
 
     <div style="height: 450px; width: 100vw;" class="d-flex justify-center align-center">
-        <div  style="background-color: #edd5d7; max-height: 400px; width: 800px;margin-top: 300px; margin-left: -20%">
+        <div  style="background-color: #f1edec; max-height: 400px; width: 800px;margin-top: 300px; margin-left: -20%">
           <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
             <v-col cols="6" class="d-flex justify-center">
 
@@ -109,7 +109,7 @@ export default {
   z-index: 300;
   height: 650px;
   width: 80vw;
-  background-color: #edd5d7;
+  background-color: #e5dbdc;
   position: absolute;
   top: 200px;
   left: 50%;

@@ -5,11 +5,12 @@
         <h2 class="text-white">UNSEREN SERVICE LIVE ERLEBEN </h2>
         <p style="font-size: 14px" class="text-white mt-" >erotisch | leidenschaftlich | hautnah</p>
         <br>
-        <p style="font-size: 12px" class="text-white mt-" >Escord:</p>
-        <p style="font-size: 12px" class="text-white mt-" >Straße</p>
-        <p style="font-size: 12px" class="text-white mt-" >PLZ ORT</p> <br>
-        <p style="font-size: 12px" class="text-white mt-" >Kontakt:</p>
-        <p style="font-size: 12px" class="text-white mt-" >email</p>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
 
       </v-col>
       <v-col cols="2" class="d-flex justify-center">

@@ -3,23 +3,35 @@
 <div class="header">
   <v-row style="width: 100%; height: 100%" class="pa-0">
     <v-col cols="2" @click="navigateTo('/')" class="pa-0 d-flex justify-center align-center">
-    <p style="cursor: pointer">
-      NAME
-    </p>
+    <div style="cursor: pointer">
+      <span style="font-size: 22px; color: black; font-weight: bold">
+        MAXI
+      </span>
+      <span style="font-size: 22px; color: black; font-weight: 1">
+        ESCORD
+
+      </span>
+    </div>
     </v-col>
     <v-col cols="8" class="pa-0 d-flex justify-center align-center">
       <v-row class="d-flex justify-center">
-        <v-col cols="2">
-          <span  @click="navigateTo('damen')">DAMEN</span>
+        <v-col class="d-flex justify-center" cols="1">
+          <span  @click="navigateTo('vita')">VITA</span>
         </v-col>
-        <v-col cols="2">
+        <v-col class="d-flex justify-center" cols="1">
+          <span  @click="navigateTo('damen')">ESCORD</span>
+        </v-col>
+        <v-col class="d-flex justify-center" cols="1">
+          <span  @click="navigateTo('bewerben')">BEWERBEN</span>
+        </v-col>
+        <v-col class="d-flex justify-center" cols="1">
           <span @click="navigateTo('kontakt')">KONTAKT</span>
         </v-col>
-        <v-col cols="2">
-          <span  @click="navigateTo('impressum')">IMPRESSUM</span>
+        <v-col class="d-flex justify-center" cols="1">
+          <span @click="navigateTo('honorare')">HONORARE</span>
         </v-col>
-        <v-col cols="2">
-          <span  @click="navigateTo('datenschutz')">DETENSCHUTZ</span>
+        <v-col class="d-flex justify-center" cols="1">
+          <span @click="navigateTo('blog')">BLOG</span>
         </v-col>
       </v-row>
 
