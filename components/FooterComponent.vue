@@ -67,7 +67,7 @@ export default {
 .kontakt{
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to bottom, #c7e6ca 50%, #ffffff 100% );
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
 }
 .datenschutz{
   width: 100%;
@@ -78,6 +78,19 @@ export default {
   width: 100%;
   height: 250px;
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
+}
+.vita{
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
+}.bewerben{
+  width: 100%;
+  height: 250px;
+   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
+}.blog{
+  width: 100%;
+  height: 250px;
+    background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
 }
 
 .nav-link {

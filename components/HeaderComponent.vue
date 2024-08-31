@@ -36,7 +36,7 @@
 
     </v-col>
     <v-col cols="2" class="pa-0 d-flex justify-center align-center">
-      <v-img @click="navigateTo('/')" style="height: 110px; width: 110px; cursor: pointer" src="~/assets/logo.png"  alt=""></v-img>
+      <v-img class="mb-n4" @click="navigateTo('/')" style="height: 130px; width: 130px; cursor: pointer" src="~/assets/logo.png"  alt=""></v-img>
     </v-col>
   </v-row>
 </div>

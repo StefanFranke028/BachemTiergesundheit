@@ -1,5 +1,5 @@
 <template>
-<div style="width: 100vw;">
+<div style="width: 100vw;" class="mt-3">
   <div class="card">
     <div class="cardIn1">
       <h1 style="margin-left: -90px" class="dm-serif">About The <br> experience</h1>

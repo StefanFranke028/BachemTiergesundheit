@@ -1,9 +1,8 @@
-
 <template>
-<div style="width: 100vw;">
+<div style="width: 100vw;" class="mt-3">
   <div class="card">
     <div class="cardIn1">
-      <h1 style="margin-left: -90px" class="dm-serif">Unser <br> kontakt</h1>
+      <h1 style="margin-left: -90px" class="dm-serif">Unser <br> Kontakt</h1>
       <p class="dosis" style="margin-bottom: 100px;margin-left: 200px; margin-right: -70px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
     </div>
   </div>
@@ -19,20 +18,18 @@
   </div>
   <div style="width: 100vw; height: 600px">
     <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
-      <v-col style="background-color: #d4ead4" class="pa-0" cols="12">
+      <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0" cols="12">
         <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
           <v-col cols="7">
             <div style="width: 100%; height: 300px; background-color: white; box-shadow: 2px 2px 6px rgba(0,0,0,0.64)">
               <v-row style="width: 100%; height: 100%" class="ma-0">
                 <v-col cols="6" class="d-flex justify-center align-center">
-                  <!-- Anruf-Link hinzufügen -->
                   <v-img @click="dialPhoneNumber"
                          style="height: 200px; width: 200px; cursor: pointer"
                          src="~/assets/phone.png"
                          alt=""></v-img>
                 </v-col>
                 <v-col cols="6" class="d-flex justify-center align-center">
-                  <!-- E-Mail-Link hinzufügen -->
                   <v-img @click="openEmailProgram"
                          style="height: 200px; width: 200px; cursor: pointer"
                          src="~/assets/mail.png"
@@ -128,7 +125,7 @@ h1{
   z-index: 300;
   height: 650px;
   width: 80vw;
-  background-color: #c7e6ca;
+  background-color: #d1e3d3;
   position: absolute;
   top: 200px;
   left: 50%;
