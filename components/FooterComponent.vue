@@ -17,19 +17,20 @@
 
       </v-col>
     </v-row>
-    <div style="position: relative; left: 70%;">
-      <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
-        <span class="">Impressum</span>
+    <div style="position: relative;" class="d-flex justify-center mt-5">
+      <p style="font-size: 11px">
+         Copyright © 1999-2024 Agentur Venus Escorts ® • Alle Rechte vorbehalten • <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <span class="">Anbieterkennzeichnung</span>
       </router-link> &nbsp;
-      <span class="">|</span> &nbsp;
-      <router-link to="/admin" class="nav-link"  title="Impressum" aria-label="Impressum">
-        <span class="">Verwaltung</span>
-      </router-link> &nbsp; &nbsp;
-      <span class="">|</span> &nbsp;
-      <router-link to="/datenschutz" class="nav-link"  title="Impressum" aria-label="Impressum">
-        <span class="">Datenschutz</span>
-      </router-link> &nbsp;
+         •
+        <router-link to="/datenschutz" class="nav-link"  title="Impressum" aria-label="Impressum">
+          <span class=""> Disclaimer & Datenschutzerklärung </span>
+        </router-link> &nbsp;
+        • Sitemap
+
+      </p>
     </div>
+
   </div>
 </template>
 
