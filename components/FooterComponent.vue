@@ -9,9 +9,6 @@
         <br>
         <br>
         <br>
-
-
-
       </v-col>
       <v-col cols="2" class="d-flex justify-center">
 
@@ -19,14 +16,19 @@
     </v-row>
     <div style="position: relative;" class="d-flex justify-center mt-5">
       <p style="font-size: 11px">
-         Copyright © 1999-2024 Agentur Venus Escorts ® • Alle Rechte vorbehalten • <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
+         Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
+        <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
         <span class="">Anbieterkennzeichnung</span>
       </router-link> &nbsp;
          •
         <router-link to="/datenschutz" class="nav-link"  title="Impressum" aria-label="Impressum">
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
-        • Sitemap
+        •
+        <router-link to="/verwaltung" class="nav-link"  title="Impressum" aria-label="Impressum">
+          <span class="">Sitemap</span>
+        </router-link> &nbsp;
+
 
       </p>
     </div>

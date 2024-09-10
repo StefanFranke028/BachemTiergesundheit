@@ -5,7 +5,13 @@
         <h1 style="margin-left: -90px" class="dm-serif">Bewirb dich <br> bei uns</h1>
         <div class="line-with-dot">
         </div>
-        <p class="dosis" style="margin-bottom: 100px;margin-left: 200px; margin-right: -70px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
+        <p class="dosis"  style="margin-bottom: 100px;margin-left: 160px; margin-right: -70px">
+          Hey... wie schön, dass du hier bist! <br> <br>
+          Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit,
+          Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen
+          unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen
+          jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über
+          die folgenden Wege:        </p>
       </div>
     </div>
     <div style="width: 100vw; height: 600px">
@@ -20,31 +26,25 @@
     </div>
     <div style="width: 100vw; height: 600px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
-        <v-col style="background-color: #f1edec" class="pa-0" cols="12">
+        <v-col style="background-color:  #f1edec" class="pa-0" cols="12">
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
             <v-col cols="7">
-              <div style="width: 100%; height: 300px; background-color: white; box-shadow: 2px 2px 6px rgba(0,0,0,0.64)">
-                <v-row style="width: 100%; height: 100%" class="ma-0">
-                  <v-col cols="6" class="d-flex justify-center align-center">
-                    <v-img @click="dialPhoneNumber"
-                           style="height: 200px; width: 200px; cursor: pointer"
-                           src="~/assets/phone.png"
-                           alt=""></v-img>
+              <div style="width: 100%; height: 300px;" class="d-flex align-center">
+                <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
+                  <v-col cols="12" class="d-flex ">
+                    <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="">+49 151-670 376 96</a>  </p>
                   </v-col>
-                  <v-col cols="6" class="d-flex justify-center align-center">
-                    <v-img @click="openEmailProgram"
-                           style="height: 200px; width: 200px; cursor: pointer"
-                           src="~/assets/mail.png"
-                           alt=""></v-img>
+                  <v-col cols="12" class="d-flex ">
+                    <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href=""> bewerbung@maxi-escort.de</a>  </p>
                   </v-col>
-                </v-row>
-                <v-row style="width: 100%;" class="mt-n16 ma-0">
-                  <v-col cols="6" class="d-flex justify-center align-center">
-                    <p style="cursor: pointer" @click="dialPhoneNumber">01734238762346</p>
+                  <v-col cols="12" class="d-flex ">
+                    <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
                   </v-col>
-                  <v-col cols="6" class="d-flex justify-center align-center">
-                    <p style="cursor: pointer" @click="openEmailProgram">etsteemail@gmail.com</p>
+                  <v-col cols="12" class="d-flex ">
+                    <p style="">Ich freue mich darauf, <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
+                      ermöglichen zu können.</p>
                   </v-col>
+
                 </v-row>
               </div>
 
@@ -64,10 +64,10 @@ export default {
   name: "kontakt",
   methods:{
     dialPhoneNumber() {
-      window.location.href = "tel:01734238762346"; // Fügt die tatsächliche Telefonnummer hier ein
+      window.location.href = "tel:015167037696"; // Fügt die tatsächliche Telefonnummer hier ein
     },
     openEmailProgram() {
-      window.location.href = "mailto:etsteemail@gmail.com"; // Fügt die tatsächliche E-Mail-Adresse hier ein
+      window.location.href = "mailto:bewerbung@maxi-escort.de"; // Fügt die tatsächliche E-Mail-Adresse hier ein
     }
   }
 }
