@@ -2,11 +2,20 @@
   <div style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1">
-        <h1 style="margin-left: -90px" class="dm-serif">Lernen Sie <br> Uns Kennen</h1>
+        <h1 style="margin-left: -90px" class="dm-serif"> Meine Vita</h1>
         <div class="vertical-marker">
         </div >
-        <p class="dosis" style="margin-top: -100px;margin-left: 200px; margin-right: -70px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
-        <v-btn theme="dark" style="position: relative; left: -14%; top:15vh">Beispielknopf</v-btn>
+        <p class="dosis" style="margin-top: -100px;margin-left: 160px; margin-right: -70px">
+          Unsere Agentur wurde im Jahr 2007 unter dem Namen Maxi &amp; Friends
+          Escort gegründet, inspiriert von der Vision, außergewöhnliche
+          Begleitungen für besondere Anlässe zu bieten. Seitdem haben wir uns
+          kontinuierlich weiterentwickelt und sind stolz darauf, eine der führenden
+          Agenturen in der Branche zu sein. Heute präsentieren wir uns im neuen
+          Gewand als Maxi Escort, um Ihnen weiterhin erstklassige Erlebnisse zu
+          bieten.
+        </p>
+        <router-link aria-label="Escort" to="damen" style="position: relative; left: -14%; top:13vh">  <v-btn theme="dark" class="text-center" > zum Escort</v-btn></router-link>
+
       </div>
     </div>
     <div style="width: 100vw; height: 600px">
@@ -27,17 +36,149 @@
         <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
 
-            <v-col cols="6">
-              <h2 style="font-size: 2vw" class="text-center dm-serif">Hallo Testüberschrift</h2>
+            <v-col cols="7">
+              <h2 style="font-size: 1.6vw" class="text-center dm-serif">Was mich dazu inspiriert hat, Maxi Escort zu gründen?</h2>
               <br>
               <br>
-              <p class="dosis" style=" text-align: justify;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+              <p class="dosis" style=" text-align: justify;">
+                Ich habe Maxi Escort gegründet, weil ich eine Leidenschaft für erstklassigen Service
+                und unvergessliche Erlebnisse habe. Es war mir wichtig, einen Ort zu schaffen, an
+                dem sich unsere Kunden wohl und geschätzt fühlen. Unsere Dienstleistungen sind
+                darauf ausgerichtet, höchste Ansprüche zu erfüllen und besondere Momente zu
+                kreieren.
                 <br>
                 <br>
-                et, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                Ich wollte etwas Einzigartiges schaffen, das sich durch Diskretion, Professionalität
+                und persönliche Betreuung auszeichnet. Maxi Escort ist mehr als nur ein Service –
+                es ist eine Erfahrung, die in Erinnerung bleibt.
+                <br>
+                <br>
+                Maxi Escort ist einzigartig, weil wir auf höchste Qualität und Diskretion setzen.
+                Unsere Dienstleistungen sind maßgeschneidert, um Ihre individuellen Wünsche zu
+                erfüllen. Hier sind einige Punkte, die uns besonders machen:
+              </p>
+
+
+            </v-col>
+            <v-col cols="5"></v-col>
+          </v-row>
+        </v-col>
+
+      </v-row>
+    </div>
+    <div style="width: 100vw; height: 900px">
+      <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
+        <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
+          <v-row style="width: 100%; height: 100%" class="ma-0 mt-16">
+            <v-col cols="3"></v-col>
+
+            <v-col class="" cols="7">
+
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif">Exklusivität</h5>
+
+              <p class="dosis" style=" text-align: justify;">
+                Wir bieten ausschließlich Begleitungen an, die durch uns sorgfältig ausgewählt
+                wurden, um unseren und Ihren Ansprüchen immer gerecht werden zu können.
+
+              </p>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Diskretion</h5>
+
+              <p class="dosis" style=" text-align: justify;">
+                Ihre Privatsphäre ist uns heilig. Wir garantieren und stehen für absolute
+                Vertraulichkeit.
+              </p>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Personalisierter Service</h5>
+
+              <p class="dosis" style=" text-align: justify;">
+                Jeder Kunde erhält eine individuelle Betreuung, um
+                sicherzustellen, dass fast alle Wünsche erfüllt werden.
+              </p>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Erfahrung</h5>
+
+              <p class="dosis" style=" text-align: justify;">
+                Mit jahrelanger Erfahrung in der Branche wissen wir genau, wie wir Ihre
+                Erwartungen übertreffen können.
+                Wir freuen uns darauf, Ihnen einen unvergesslichen Service zu bieten!
+
+                Unsere Begleitpersonen sind das Herzstück von Maxi Escort.
+              </p>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Erfahrung</h5>
+
+              <p class="dosis" style=" text-align: justify;">
+                Mit jahrelanger Erfahrung in der Branche wissen wir genau, wie wir Ihre
+                Erwartungen übertreffen können.
+                Wir freuen uns darauf, Ihnen einen unvergesslichen Service zu bieten!
+
+                Unsere Begleitpersonen sind das Herzstück von Maxi Escort.
+              </p>
+
+              <div class="d-flex justify-center mt-10" style="width: 100%;">
+                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
+
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col class="pa-0" cols="6">
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+        </v-col>
+
+
+      </v-row>
+    </div>
+    <div style="width: 100vw; height: 900px">
+      <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
+        <v-col class="pa-0" cols="6">
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+        </v-col>
+        <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
+          <v-row style="width: 100%; height: 100%" class="ma-0 mt-16">
+
+            <v-col cols="7">
+              <h1 style="font-size: 1.6vw" class="text-center dm-serif">Was macht sie besonders?</h1>
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-5">Vielfalt</h2>
+
+              <p class="dosis" style=" text-align: justify;">
+                Unsere Begleitpersonen kommen aus verschiedenen Hintergründen und
+                Kulturen, sodass wir für jeden Geschmack die passende Begleitung bieten können.
+
+              </p>
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8">Professionalität</h2>
+
+              <p class="dosis" style=" text-align: justify;">
+                Jede Begleitperson wird sorgfältig ausgewählt, um höchsten
+                Ansprüchen gerecht werden zu können, sei es Öffentlicher Auftritt, Eloquenz oder
+                Einfühlungsvermögen. Nichts ist schlimmer als eine unprofessionelle Begleitung.
+
+              </p>
+
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8">Charme und Intelligenz</h2>
+
+              <p class="dosis" style=" text-align: justify;">
+                Unsere Begleitpersonen sind nicht nur attraktiv, sondern
+                auch charmant und intelligent. Sie können sich in jeder Gesellschaft bewegen und
+                interessante Gespräche führen.
+
+              </p>
+
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8">Diskretion und Vertraulichkeit</h2>
+
+              <p class="dosis" style=" text-align: justify;">
+                Ihre Privatsphäre ist uns wichtig. Unsere
+                Begleitpersonen sind diskret und respektieren Ihre Vertraulichkeit.
+
+              </p>
+              <br><br>
+              <p>
+                Ich bin stolz darauf, ein Team zu haben, das so engagiert und professionell ist.
+              </p>
+              <p>
+                Diese Kombination aus Erfahrung, Professionalität, Exklusivität und
+                Kundenzufriedenheit macht Maxi Escort zu einer herausragenden Agentur in der
+                Branche.
               </p>
               <div class="d-flex justify-center mt-10" style="width: 100%;">
-                <v-btn theme="dark" class="text-center">beispielknopf</v-btn>
+                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
 
               </div>
             </v-col>
@@ -47,6 +188,7 @@
 
       </v-row>
     </div>
+
   </div>
 </template>
 

@@ -3,6 +3,8 @@
     <div class="card">
       <div class="cardIn1">
         <h1 style="margin-left: -90px" class="dm-serif">Bewirb dich <br> bei uns</h1>
+        <div class="line-with-dot">
+        </div>
         <p class="dosis" style="margin-bottom: 100px;margin-left: 200px; margin-right: -70px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
       </div>
     </div>
@@ -157,5 +159,26 @@ p{
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
+}
+
+.line-with-dot {
+  position: relative;
+  width: 50%; /* Breite des Striches anpassen */
+  height: 2px; /* Höhe des Striches */
+  background-color: black; /* Farbe des Striches */
+  top: -12%;
+  left: 50%;
+}
+
+.line-with-dot::after {
+  content: '';
+  position: absolute;
+  right: 0; /* Positioniert den Punkt rechts */
+  top: 50%; /* Zentriert den Punkt vertikal */
+  width: 10px; /* Größe des Punktes */
+  height: 10px; /* Größe des Punktes */
+  background-color: black; /* Farbe des Punktes */
+  border-radius: 50%; /* Macht den Punkt rund */
+  transform: translate(50%, -50%); /* Zentriert den Punkt richtig auf der Linie */
 }
 </style>

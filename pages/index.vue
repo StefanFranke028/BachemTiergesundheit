@@ -3,15 +3,27 @@
     <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
     <div class="card">
       <div class="cardIn1">
-        <div  class="text-center text2 dosis">discover your <br> authentic style and <br> be the stunning lady <br> you naturally are
+        <div  class="text-center text2 dosis">„Ein Mädchen sollte <br> zwei Sachen sein: <br> elegant und fabulös.“ <br> Coco Chanel.
           <br>
-          <v-btn theme="dark" class="mt-6">irgend ein text</v-btn>
+
+          <div class="d-flex justify-center mt-10" style="width: 100%;">
+            <router-link to="vita">  <v-btn theme="dark" class="text-center" >  Zur Vita</v-btn></router-link>
+
+          </div>
         </div>
       </div>
       <div class="cardIn2">
         <div class="text3 ">
-          <p class="text-center">
-            Hier könnte noch ein weiterer beliebiger Text stehen
+          <p class="">
+            Willkommen bei Maxi Escort, wo Exklusivität und Diskretion auf
+            höchstem Niveau garantiert sind.
+          </p>
+        </div>
+        <div class="text4 ">
+          <p class="">
+            Unsere Mission ist es, Ihnen
+            unvergessliche Erlebnisse zu bieten, die durch Eleganz und
+            Professionalität geprägt sind.
           </p>
         </div>
         <div class="line-with-dot">
@@ -36,17 +48,28 @@
           <v-img style="z-index: 0" src="~/assets/bild-links.webp"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: #f1edec" class="pa-0" cols="6">
-          <v-row  style="width: 50%; height: 33%; position: absolute;" class="d-flex justify-center align-end">
+          <v-row  style="width: 50%; height: 30%; position: absolute;" class="d-flex justify-center align-end">
             <v-col cols="6">
               <p style="font-size: 2vh">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-              <v-btn  theme="dark" class="mt-10">testKnopf</v-btn>
+
+                Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und
+                Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres
+                Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen
+                sowie im Umgang mit unseren Kunden.
+              </p>
+              <br>
+              <br>
+
+              <div class="d-flex justify-center mt-10" style="width: 100%;">
+                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  ZU Unseren Begleitpersonen</v-btn></router-link>
+
+              </div>
             </v-col>
 
           </v-row>
-          <div style="position: relative; top: 20% ; left:-35%">
-            <h1 class="text-white text-center dm-serif">It's about way more.</h1>
-            <h1 class="text-white text-center dm-serif">than just a pretty outfit.</h1>
+          <div style="position: relative; top: 20% ; left:-40%">
+            <h1 class="text-white text-center dm-serif">Unsere Werte &amp; </h1>
+            <h1 class="text-white text-center dm-serif">Grundsätze</h1>
             <div class="vertical-marker">
             </div>
 
@@ -67,10 +90,21 @@
             </v-col>
             <v-col class="d-flex justify-center" style="margin-top: 15%" cols="6">
               <div style="height: 80%" class="ml-16">
-                <h1 style="color: #615f5f" class="dosis1">details</h1>
+                <h1 style="color: #615f5f" class="dosis1">Maxi Escort Team</h1>
                 <p  style="color: #615f5f" >
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                  Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf
+                  konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt
+                  einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass
+                  Ihre Wünsche erfüllt werden.
+                </p>
+                <br>
+                <br>
+                <p>
+                  Genießen Sie den Tag. <br> <br>
 
+                  Maxi Escort Service Frankfurt. <br> <br>
+                  Ihre
+                  Maxi
                 </p>
               </div>
 
@@ -140,7 +174,7 @@ p{
 }
 .cardIn1{
   height: 400px;
-  width: 300px;
+  width: 350px;
   background-color: white;
   position: absolute;
   left: 40%;
@@ -169,6 +203,13 @@ p{
    height: 2px; /* Höhe des Striches */
    top:-50%;
    left: 0%;
+ }
+.text4{
+   position: relative;
+   width: 60%; /* Breite des Striches anpassen */
+   height: 2px; /* Höhe des Striches */
+   top:40%;
+   left: 110%;
  }
 .line-with-dot {
   position: relative;
