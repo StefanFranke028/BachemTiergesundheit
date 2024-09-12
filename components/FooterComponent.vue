@@ -66,6 +66,10 @@ export default {
   width: 100%;
   height: 250px;
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
+}.honorare{
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
 }
 .kontakt{
   width: 100%;

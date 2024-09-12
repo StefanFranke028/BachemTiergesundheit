@@ -44,24 +44,24 @@
                     <p style="">Ich freue mich darauf, <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
                       ermöglichen zu können.</p>
                   </v-col>
-
                 </v-row>
               </div>
-
             </v-col>
           </v-row>
         </v-col>
-
-
       </v-row>
     </div>
   </div>
 </template>
 
 <script >
+import { Icon } from '@iconify/vue';
 
 export default {
   name: "kontakt",
+  components:{
+    Icon
+  },
   methods:{
     dialPhoneNumber() {
       window.location.href = "tel:015167037696"; // Fügt die tatsächliche Telefonnummer hier ein
