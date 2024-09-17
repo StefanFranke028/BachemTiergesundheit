@@ -15,7 +15,7 @@
       <div class="cardIn2">
         <div class="text3 ">
           <p class="">
-            {{landingpage[0].text2 }}
+            Willkommen bei Maxi Escort, {{landingpage[0].text2 }}
           </p>
         </div>
         <div class="text4 ">
@@ -121,8 +121,9 @@
         </div>
       </div>
     </v-img>
-    <div  style="background-color:  #e5dbdc; width: 100vw; height: 120px" class="pa-6">
-      <p style="font-size: 12px" class="text-center">
+    <div  style="background-color:  #e5dbdc; width: 100vw; height: 130px" class="pa-6">
+      <h1 class="mt-n2 text-center h1mobile dm-serif">Willkommen bei Maxi Escort,</h1>
+      <p style="font-size: 12px" class="text-center mt-3">
         {{landingpage[0].text2}}
         {{landingpage[0].text3}}
       </p>
@@ -177,7 +178,7 @@ export default {
       landingpage:[
         {
           text1: 'Ein Mädchen sollte zwei Sachen sein:  elegant und fabulös.“  Coco Chanel.',
-          text2: 'Willkommen bei Maxi Escort, wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
+          text2: 'wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
           text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
           text4: 'Unsere Werte & Grundsätze',
           text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
