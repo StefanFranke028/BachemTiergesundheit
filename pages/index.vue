@@ -127,7 +127,7 @@
         {{landingpage[0].text3}}
       </p>
     </div>
-    <div style="background-color:  #f1edec; width: 100vw; height: 300px" class="">
+    <div style="background-color:  #f1edec; width: 100vw; height: 200px" class="">
       <div class="pt-5">
         <h1 class="mt-3 text-center h1mobile dm-serif">{{ landingpage[0].text4}}</h1>
 
@@ -138,20 +138,24 @@
         </p>
       </div>
     </div>
-    <div style="background-color:  white; width: 100vw; height: 300px" class="">
+    <div style="background-color:  white; width: 100vw; height: 350px" class="">
       <v-row style="width: 100%;height: 100%" class="ma-0 justify-center align-center">
-        <v-col style="background-color: #f1edec; height: 70%" cols="10">
+        <v-col style="background-color: #f1edec; height: 80%" cols="10">
           <v-row style="width: 100%;" class="ma-0">
             <v-col cols="6">
               <div>
-                <v-img src="~/assets/frau-unten.jpg" cover class="mt-n14" style="width: 100%; height: 170%;">
+                <v-img src="~/assets/frau-unten.jpg" cover class="mt-n10" style="width: 100%; height: 170%;">
 
                 </v-img>
+                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text8}}</p>
+                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text9}}</p>
+                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text10}}</p>
               </div>
             </v-col>
             <v-col cols="6">
               <h1  style="color: #615f5f;font-size: 15px" class="dosis1">{{landingpage[0].text6}}</h1>
               <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text7}}</p>
+
             </v-col>
           </v-row>
         </v-col>
