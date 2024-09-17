@@ -1,6 +1,9 @@
 <template>
 <div class="header">
-  <v-navigation-drawer v-model="drawer" temporary :class="formattedPath">
+  <v-navigation-drawer
+      v-model="drawer" temporary
+      :class="formattedPath"
+      location="right">
     <v-list density="compact" nav>
       <v-list-item
           v-for="item in menuItems"
