@@ -10,6 +10,7 @@
     <v-main>
           <NuxtPage></NuxtPage>
     </v-main>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
