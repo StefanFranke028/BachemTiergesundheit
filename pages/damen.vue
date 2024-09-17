@@ -1,11 +1,12 @@
 <template>
-<div style="width: 100vw;" class="mt-3">
+<div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
   <div class="card">
-    <div class="cardIn1">
-      <h1 style="margin-left: -90px" class="dm-serif">About The <br> experience</h1>
+    <div class="cardIn1 px-5">
+      <h1 style="margin-left: -90px" class="dm-serif">Unsere <br> Begleitpersonen</h1>
       <div class="vertical-marker">
       </div >
-      <p class="dosis" style="margin-top: -100px;margin-left: 200px; margin-right: -70px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
+      <p class="dosis" style="margin-top: -100px;">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
     <v-btn theme="dark" style="position: relative; left: -14%; top:15vh">Beispielknopf</v-btn>
     </div>
   </div>
@@ -46,6 +47,9 @@
     </v-row>
   </div>
 </div>
+  <div v-if="mobile || tablet">
+    Escort
+  </div>
 </template>
 
 
@@ -53,8 +57,32 @@
 <script >
 
 
+import {useScreenStore} from "~/stores/screen.js";
+
 export default {
-  name: "damen"
+  name: "damen",
+  computed:{
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
 }
 </script>
 

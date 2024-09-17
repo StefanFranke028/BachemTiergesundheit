@@ -1,6 +1,5 @@
 <template>
-
-      <div  style="background-color: #ffffff" class="pa-5 mt-4">
+  <div v-if="desktop|| tabletHorizontal"  style="background-color: #ffffff" class="pa-5 mt-4">
         <v-row>
           <v-col cols="12">
             <div>
@@ -312,15 +311,40 @@
         </v-row>
 
       </div>
-
+  <div v-if="mobile || tablet">
+    datenschutz
+  </div>
 </template>
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "KontaktView",
-  components: {FooterComponent, HeaderComponent}
+  components: {FooterComponent, HeaderComponent},
+  computed:{
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div v-if="desktop|| tabletHorizontal"  >
     <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
     <div class="card">
       <div class="cardIn1">
@@ -50,11 +50,15 @@
 
 
   </div>
+  <div v-if="mobile || tablet">
+    Blog
+  </div>
 </template>
 
 <script >
 
 import FooterComponent from "~/components/FooterComponent.vue";
+import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   data() {
@@ -97,8 +101,30 @@ export default {
     }
   },
   components: {
-    FooterComponent
-  }
+    FooterComponent,
+  },
+    computed:{
+      wide() {
+        const screenStore = useScreenStore();
+        return screenStore.wide;
+      },
+      desktop() {
+        const screenStore = useScreenStore();
+        return screenStore.desktop;
+      },
+      mobile() {
+        const screenStore = useScreenStore();
+        return screenStore.mobile;
+      },
+      tablet() {
+        const screenStore = useScreenStore();
+        return screenStore.tablet;
+      },
+      tabletHorizontal() {
+        const screenStore = useScreenStore();
+        return screenStore.tabletHorizontal;
+      },
+    },
 }
 </script>
 

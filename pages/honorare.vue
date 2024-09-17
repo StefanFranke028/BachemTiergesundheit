@@ -1,11 +1,11 @@
 <template>
-  <div style="width: 100vw;" class="mt-3">
+  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
-      <div class="cardIn1">
+      <div class="cardIn1 px-5">
         <h1 style="margin-left: -90px" class="dm-serif">Unsere  <br> Honorare </h1>
         <div class="vertical-marker">
         </div >
-        <p  class="dosis" style="margin-top: -100px;margin-left: 200px; margin-right: -70px">
+        <p  class="dosis" style="margin-top: -100px">
           Lieber Gast, unsere Agentur präsentiert vier exklusive
           Honorarkategorien. Dinner Date, Classic, Exklusiv und VIP.
           Jede Dame genießt die Freiheit, das aus den Honorarkategorien frei zu
@@ -14,7 +14,7 @@
           Escort Dates anbieten möchte.
         </p>
         <div class="d-flex justify-center mt-10" style="width: 100%;">
-          <router-link to="damen" style="position: relative; left: -8%; top:5vh">   <v-btn theme="dark" class="text-center" >  ZU Unseren Begleitpersonen</v-btn></router-link>
+          <router-link to="damen" style="position: relative; left: -14%; top:11vh">    <v-btn theme="dark" class="text-center" >ZU Unseren Begleitpersonen</v-btn></router-link>
 
         </div>
       </div>
@@ -141,14 +141,14 @@
                   </p>
                 </v-col>
               </v-row>
-
             </v-col>
           </v-row>
         </v-col>
-
       </v-row>
     </div>
-
+  </div>
+  <div v-if="mobile || tablet">
+    honorare
   </div>
 </template>
 
@@ -157,9 +157,32 @@
 <script >
 
 
+import {useScreenStore} from "~/stores/screen.js";
+
 export default {
   name: "damen",
-
+  computed:{
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
   data(){
     return{
       dinnerPreise:[

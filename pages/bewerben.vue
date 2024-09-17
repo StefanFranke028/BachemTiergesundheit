@@ -1,11 +1,11 @@
 <template>
-  <div style="width: 100vw;" class="mt-3">
+  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
-      <div class="cardIn1">
+      <div class="cardIn1 px-5">
         <h1 style="margin-left: -90px" class="dm-serif">Bewirb dich <br> bei uns</h1>
         <div class="line-with-dot">
         </div>
-        <p class="dosis"  style="margin-bottom: 100px;margin-left: 160px; margin-right: -70px">
+        <p class="dosis"  style="margin-bottom: 100px;margin-left: 30px; ">
           Hey... wie schön, dass du hier bist! <br> <br>
           Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit,
           Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen
@@ -52,15 +52,41 @@
       </v-row>
     </div>
   </div>
+  <div v-if="mobile || tablet">
+    bewerben
+  </div>
 </template>
 
 <script >
 import { Icon } from '@iconify/vue';
+import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "kontakt",
   components:{
     Icon
+  },
+  computed:{
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
   },
   methods:{
     dialPhoneNumber() {

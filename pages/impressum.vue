@@ -1,5 +1,5 @@
 <template>
-  <div class="pa-16">
+  <div v-if="desktop|| tabletHorizontal" class="pa-16">
 
   <h1>Impressum</h1>
 
@@ -24,15 +24,40 @@
 
   <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
   </div>
-
+  <div v-if="mobile || tablet">
+    Impressum
+  </div>
 </template>
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "KontaktView",
-  components: {FooterComponent, HeaderComponent}
+  components: {FooterComponent, HeaderComponent},
+  computed:{
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
 }
 </script>
 
