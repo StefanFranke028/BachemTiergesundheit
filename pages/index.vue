@@ -15,15 +15,12 @@
       <div class="cardIn2">
         <div class="text3 ">
           <p class="">
-            Willkommen bei Maxi Escort, wo Exklusivität und Diskretion auf
-            höchstem Niveau garantiert sind.
+            {{landingpage[0].text2 }}
           </p>
         </div>
         <div class="text4 ">
           <p class="">
-            Unsere Mission ist es, Ihnen
-            unvergessliche Erlebnisse zu bieten, die durch Eleganz und
-            Professionalität geprägt sind.
+           {{landingpage[0].text3}}
           </p>
         </div>
         <div class="line-with-dot">
@@ -33,15 +30,9 @@
         </div>
       </div>
     </div>
-
     <div class="mt-n2" style="width: 100vw; height:150px; background-color: #e5dbdc">
 
     </div>
-
-
-
-
-
     <div >
       <v-row style="width: 100%; height: 100%" class="ma-0 pa-0">
         <v-col style="background-color: black" class="pa-0" cols="6">
@@ -72,13 +63,11 @@
             <h1 class="text-white text-center dm-serif">Grundsätze</h1>
             <div class="vertical-marker">
             </div>
-
           </div>
 
         </v-col>
       </v-row>
     </div>
-
     <div style="height: 450px; width: 100vw;" class="d-flex justify-center align-center">
         <div  style="background-color: #f1edec; max-height: 400px; width: 800px;margin-top: 300px; margin-left: -20%">
           <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
@@ -117,9 +106,58 @@
   </div>
 
   </div>
-  <div v-if="mobile || tablet">
+  <div style="width: 100vw; " v-if="mobile || tablet">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  style="width: 75%; height: 400px;  background-color: #e5dbdc;">
+          <div style="height: 250px; width: 70%; background-color: white; position: relative; left:21%; top: 10%">
+            <div class="text-center px-4 text5 dosis">
+              {{landingpage[0].text1}}
 
-    startseite
+            </div>
+          </div>
+          <v-img  src="~/assets/frau.webp" cover style="height: 200px; width: 50%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
+          </v-img>
+        </div>
+      </div>
+    </v-img>
+    <div  style="background-color:  #e5dbdc; width: 100vw; height: 120px" class="pa-6">
+      <p style="font-size: 12px" class="text-center">
+        {{landingpage[0].text2}}
+        {{landingpage[0].text3}}
+      </p>
+    </div>
+    <div style="background-color:  #f1edec; width: 100vw; height: 300px" class="">
+      <div class="pt-5">
+        <h1 class="mt-3 text-center h1mobile dm-serif">{{ landingpage[0].text4}}</h1>
+
+      </div>
+      <div class="px-10 mt-4">
+        <p style="font-size: 14px" class="text-center">
+          {{landingpage[0].text5}}
+        </p>
+      </div>
+    </div>
+    <div style="background-color:  white; width: 100vw; height: 300px" class="">
+      <v-row style="width: 100%;height: 100%" class="ma-0 justify-center align-center">
+        <v-col style="background-color: #f1edec; height: 70%" cols="10">
+          <v-row style="width: 100%;" class="ma-0">
+            <v-col cols="6">
+              <div>
+                <v-img src="~/assets/frau-unten.jpg" cover class="mt-n14" style="width: 100%; height: 170%;">
+
+                </v-img>
+              </div>
+            </v-col>
+            <v-col cols="6">
+              <h1  style="color: #615f5f;font-size: 15px" class="dosis1">{{landingpage[0].text6}}</h1>
+              <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text7}}</p>
+            </v-col>
+          </v-row>
+        </v-col>
+
+      </v-row>
+    </div>
   </div>
 </template>
 
@@ -129,6 +167,26 @@ import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
+  data(){
+
+    return{
+      landingpage:[
+        {
+          text1: 'Ein Mädchen sollte zwei Sachen sein:  elegant und fabulös.“  Coco Chanel.',
+          text2: 'Willkommen bei Maxi Escort, wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
+          text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
+          text4: 'Unsere Werte & Grundsätze',
+          text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
+          text6: 'Maxi Escort Team',
+          text7: 'Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass Ihre Wünsche erfüllt werden.',
+          text8: 'Genießen Sie den Tag',
+          text9: 'Maxi Escort Service Frankfurt.',
+          text10: 'Ihre Maxi',
+
+        }
+      ]
+    }
+  },
   components:{
     FooterComponent
   },
@@ -225,6 +283,14 @@ p{
    font-size: 30px;
 
  }
+.text5{
+  color: #8e8c8c;
+  position: relative;
+  left: 0%;
+  top:10%;
+  font-size: 15px;
+
+}
  .text3{
    position: relative;
    width: 50%; /* Breite des Striches anpassen */
@@ -261,6 +327,9 @@ p{
 }
 h1{
   font-size: 3vw;
+}
+.h1mobile{
+  font-size: 6vw;
 }
 style>
 .vertical-marker {
