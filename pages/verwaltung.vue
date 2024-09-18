@@ -17,6 +17,58 @@ export default {
     }
   },
   methods:{
+    async isUser() {
+      const userStore = useUserStore();
+
+      if (userStore.user.status !== "user") {
+        await this.$router.push('login')
+        }
+      },
+    async login() {
+      if (this.valid) {
+        try {
+          let response = await $fetch(`https://job-grow.de:8080/auth/login`, {
+            method: 'POST',
+            body: {
+              email: this.email,
+              password: this.password,
+            },
+          });
+
+          if (response && response.token) {
+            localStorage.setItem('token', response.token);
+            console.log("Token gespeichert:", response.token);
+          }
+
+          if (response && response.user) {
+            const userStore = useUserStore();
+            userStore.setUser(response.user);
+            console.log("Benutzer gespeichert:", response.user);
+          }
+        } catch (e) {
+          alert("Benutzername oder Kennwort ist falsch");
+        }
+      }
+    },
+    async getUser() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://job-grow.de:8080/auth/user", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+
+        console.log(response);
+        if (response) {
+          const userStore = useUserStore();
+          userStore.setUser(response);
+        }
+      } catch (e) {
+        alert(e);
+      }
+    },
     async updateUser() {
       const token = localStorage.getItem('token');
       console.log(this.user.kundennummer)
