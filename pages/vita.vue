@@ -102,17 +102,9 @@
 
                 Unsere Begleitpersonen sind das Herzstück von Maxi Escort.
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Erfahrung</h5>
 
-              <p class="dosis" style=" text-align: justify;">
-                Mit jahrelanger Erfahrung in der Branche wissen wir genau, wie wir Ihre
-                Erwartungen übertreffen können.
-                Wir freuen uns darauf, Ihnen einen unvergesslichen Service zu bieten!
 
-                Unsere Begleitpersonen sind das Herzstück von Maxi Escort.
-              </p>
-
-              <div class="d-flex justify-center mt-10" style="width: 100%;">
+              <div class="d-flex justify-center mt-16" style="width: 100%;">
                 <router-link to="damen">  <v-btn theme="dark" class="text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
 
               </div>
