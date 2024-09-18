@@ -191,7 +191,36 @@
 
   </div>
   <div v-if="mobile || tablet">
-    Vita
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #d1e3d3;">
+            <div class="vertical-marker-mobile">
+            </div >
+          <div style="height: 250px; width: 70%; background-color: white; ">
+            <div style="position: relative; top:-50px" class="text-center dosis">
+              <h2 style="margin-left: -120px;" class="dm-serif mt-2"> {{vita[0].text1}}</h2>
+            </div>
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
+              {{vita[0].text2}}
+            </div>
+             <router-link  aria-label="Escort" to="damen" >  <v-btn  theme="dark" class="text-center mt-3" >zum Escort</v-btn></router-link>
+          </div>
+        </div>
+
+      </div>
+
+    </v-img>
+
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: rgb(215,232,215); width: 90vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
+        <h2 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text3}}</h2>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text4}}
+        </p>
+      </div>
+
+    </v-img>
   </div>
 </template>
 
@@ -204,6 +233,23 @@ import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "damen",
+  data(){
+    return{
+      vita:[{
+        text1:'Meine Vita',
+        text2:'Unsere Agentur wurde im Jahr 2007 unter dem Namen Maxi & Friends Escort gegründet, inspiriert von der Vision, außergewöhnliche Begleitungen für besondere Anlässe zu bieten. Seitdem haben wir uns kontinuierlich weiterentwickelt und sind stolz darauf, eine der führenden Agenturen in der Branche zu sein. Heute präsentieren wir uns im neuen Gewand als Maxi Escort, um Ihnen weiterhin erstklassige Erlebnisse zu bieten.',
+        text3:'Was mich dazu inspiriert hat, Maxi Escort zu gründen?',
+        text4:'Ich habe Maxi Escort gegründet, weil ich eine Leidenschaft für erstklassigen Service und unvergessliche Erlebnisse habe. Es war mir wichtig, einen Ort zu schaffen, an dem sich unsere Kunden wohl und geschätzt fühlen. Unsere Dienstleistungen sind darauf ausgerichtet, höchste Ansprüche zu erfüllen und besondere Momente zu kreieren.\n' +
+            '\n' +
+            'Ich wollte etwas Einzigartiges schaffen, das sich durch Diskretion, Professionalität und persönliche Betreuung auszeichnet. Maxi Escort ist mehr als nur ein Service – es ist eine Erfahrung, die in Erinnerung bleibt.\n' +
+            '\n' +
+            'Maxi Escort ist einzigartig, weil wir auf höchste Qualität und Diskretion setzen. Unsere Dienstleistungen sind maßgeschneidert, um Ihre individuellen Wünsche zu erfüllen. Hier sind einige Punkte, die uns besonders machen:',
+        text5:'',
+        text6:'',
+        text7:''
+      }]
+    }
+  },
   computed:{
     wide() {
       const screenStore = useScreenStore();
@@ -253,8 +299,36 @@ h1{
   margin: 20px; /* Optional: Abstand von anderen Elementen */
   left:-80px;
   top: -20vh
+}.vertical-marker-mobile {
+  position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
+  height: 84px; /* Gesamthöhe des Elements */
+  width: 10px; /* Breite des Elements, schmal genug für einen Punkt und Strich */
+  margin: 20px; /* Optional: Abstand von anderen Elementen */
+  left: 0px;
+  top: -30vh
+}
+.vertical-marker-mobile::before {
+  content: '';
+  position: absolute;
+  top: 20vh; /* Positioniert den Punkt ganz oben */
+  left: 50%; /* Zentriert den Punkt horizontal */
+  width: 10px; /* Größe des Punktes */
+  height: 10px; /* Größe des Punktes */
+  background-color: black; /* Farbe des Punktes */
+  border-radius: 50%; /* Macht den Punkt rund */
+  transform: translateX(-50%); /* Zentriert den Punkt horizontal */
 }
 
+.vertical-marker-mobile::after {
+  content: '';
+  position: absolute;
+  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  left: 50%; /* Zentriert den Strich horizontal */
+  width: 2px; /* Breite des Striches */
+  height: 330%; /* Höhe des Striches */
+  background-color: black; /* Farbe des Striches */
+  transform: translateX(-50%); /* Zentriert den Strich horizontal */
+}
 .vertical-marker::before {
   content: '';
   position: absolute;
