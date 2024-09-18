@@ -16,6 +16,8 @@ export default {
 
     }
   },
+  mounted() {
+  },
   methods:{
     async isUser() {
       const userStore = useUserStore();
