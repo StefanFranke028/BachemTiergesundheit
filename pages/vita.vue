@@ -212,13 +212,68 @@
     </v-img>
 
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
-      <div style="background-color: rgb(215,232,215); width: 90vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
+      <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <h2 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text3}}</h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
           {{vita[0].text4}}
         </p>
       </div>
+
+    </v-img>
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
+        <h1 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text5}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text6}}
+        </p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text7}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text8}}
+        </p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text9}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text10}}
+        </p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text11}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text12}}
+        </p>
+      <router-link to="damen" >  <v-btn theme="dark" class="mt-5 text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
+      </div>
+
+
+    </v-img>
+
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
+        <h1 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text13}}</h1>
+        <h1 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text14}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text15}}
+        </p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text16}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text17}}
+        </p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text18}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text19}}
+        </p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text20}}</h1>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{vita[0].text21}}
+        </p>
+      </div>
+
 
     </v-img>
   </div>
@@ -244,9 +299,26 @@ export default {
             'Ich wollte etwas Einzigartiges schaffen, das sich durch Diskretion, Professionalität und persönliche Betreuung auszeichnet. Maxi Escort ist mehr als nur ein Service – es ist eine Erfahrung, die in Erinnerung bleibt.\n' +
             '\n' +
             'Maxi Escort ist einzigartig, weil wir auf höchste Qualität und Diskretion setzen. Unsere Dienstleistungen sind maßgeschneidert, um Ihre individuellen Wünsche zu erfüllen. Hier sind einige Punkte, die uns besonders machen:',
-        text5:'',
-        text6:'',
-        text7:''
+        text5:'Exklusivität',
+        text6:'Wir bieten ausschließlich Begleitungen an, die durch uns sorgfältig ausgewählt wurden, um unseren und Ihren Ansprüchen immer gerecht werden zu können.',
+        text7:'Diskretion',
+        text8:'Ihre Privatsphäre ist uns heilig. Wir garantieren und stehen für absolute Vertraulichkeit.',
+        text9:'Personalisierter Service',
+        text10:'Jeder Kunde erhält eine individuelle Betreuung, um sicherzustellen, dass fast alle Wünsche erfüllt werden.',
+        text11:'Erfahrung',
+        text12:'Mit jahrelanger Erfahrung in der Branche wissen wir genau, wie wir Ihre Erwartungen übertreffen können. Wir freuen uns darauf, Ihnen einen unvergesslichen Service zu bieten! Unsere Begleitpersonen sind das Herzstück von Maxi Escort.',
+        text13:'Was macht sie besonders?',
+        text14:'Vielfalt',
+        text15:'Unsere Begleitpersonen kommen aus verschiedenen Hintergründen und Kulturen, sodass wir für jeden Geschmack die passende Begleitung bieten können.',
+        text16:'Professionalität',
+        text17:'Jede Begleitperson wird sorgfältig ausgewählt, um höchsten Ansprüchen gerecht werden zu können, sei es Öffentlicher Auftritt, Eloquenz oder Einfühlungsvermögen. Nichts ist schlimmer als eine unprofessionelle Begleitung.',
+        text18:'Charme und Intelligenz',
+        text19:'Unsere Begleitpersonen sind nicht nur attraktiv, sondern auch charmant und intelligent. Sie können sich in jeder Gesellschaft bewegen und interessante Gespräche führen.',
+        text20:'Diskretion und Vertraulichkeit',
+        text21:'Ihre Privatsphäre ist uns wichtig. Unsere Begleitpersonen sind diskret und respektieren Ihre Vertraulichkeit.',
+        text22:'Ich bin stolz darauf, ein Team zu haben, das so engagiert und professionell ist.\n' +
+            '\n' +
+            'Diese Kombination aus Erfahrung, Professionalität, Exklusivität und Kundenzufriedenheit macht Maxi Escort zu einer herausragenden Agentur in der Branche.',
       }]
     }
   },
