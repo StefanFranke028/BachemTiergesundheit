@@ -128,17 +128,7 @@
         {{landingpage[0].text3}}
       </p>
     </div>
-    <div style="background-color:  #f1edec; width: 100vw; height: 200px" class="">
-      <div class="pt-5">
-        <h1 class="mt-3 text-center h1mobile dm-serif">{{ landingpage[0].text4}}</h1>
 
-      </div>
-      <div class="px-10 mt-4">
-        <p style="font-size: 14px" class="text-center">
-          {{landingpage[0].text5}}
-        </p>
-      </div>
-    </div>
     <div style="background-color:  white; width: 100vw; height: 350px" class="">
       <v-row style="width: 100%;height: 100%" class="ma-0 justify-center align-center">
         <v-col style="background-color: #f1edec; height: 80%" cols="10">
@@ -162,6 +152,17 @@
         </v-col>
 
       </v-row>
+    </div>#
+    <div style="background-color:  #f1edec; width: 100vw; height: 200px" class="">
+      <div class="pt-5">
+        <h1 class="mt-3 text-center h1mobile dm-serif">{{ landingpage[0].text4}}</h1>
+
+      </div>
+      <div class="px-10 mt-4">
+        <p style="font-size: 14px" class="text-center">
+          {{landingpage[0].text5}}
+        </p>
+      </div>
     </div>
   </div>
 </template>
