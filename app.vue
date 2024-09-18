@@ -63,6 +63,36 @@ export default {
 </script>
 
 <style>
+.vertical-marker-mobile {
+  position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
+  height: 84px; /* Gesamthöhe des Elements */
+  width: 10px; /* Breite des Elements, schmal genug für einen Punkt und Strich */
+  margin: 20px; /* Optional: Abstand von anderen Elementen */
+  left: 0px;
+  top: -30vh
+}
+.vertical-marker-mobile::before {
+  content: '';
+  position: absolute;
+  top: 20vh; /* Positioniert den Punkt ganz oben */
+  left: 50%; /* Zentriert den Punkt horizontal */
+  width: 10px; /* Größe des Punktes */
+  height: 10px; /* Größe des Punktes */
+  background-color: black; /* Farbe des Punktes */
+  border-radius: 50%; /* Macht den Punkt rund */
+  transform: translateX(-50%); /* Zentriert den Punkt horizontal */
+}
+
+.vertical-marker-mobile::after {
+  content: '';
+  position: absolute;
+  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  left: 50%; /* Zentriert den Strich horizontal */
+  width: 2px; /* Breite des Striches */
+  height: 330%; /* Höhe des Striches */
+  background-color: black; /* Farbe des Striches */
+  transform: translateX(-50%); /* Zentriert den Strich horizontal */
+}
 button{
   border-radius: 30px !important;
   background-color: black !important;

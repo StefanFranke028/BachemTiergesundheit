@@ -187,7 +187,6 @@ export default {
           text8: 'Genießen Sie den Tag',
           text9: 'Maxi Escort Service Frankfurt.',
           text10: 'Ihre Maxi',
-
         }
       ]
     }

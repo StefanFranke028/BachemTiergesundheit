@@ -53,7 +53,47 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    bewerben
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #e5dbdc;">
+          <div class="vertical-marker-mobile">
+          </div >
+          <div style="height: 250px; width: 70%; background-color: white; ">
+            <div style="position: relative; top:-50px" class="text-center dosis">
+              <h2 style="margin-left: -80px; " class="dm-serif mt-2"> {{bewerben[0].text1}}</h2>
+            </div>
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
+              {{bewerben[0].text2}}
+            </div>
+            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-7" >zur Vita</v-btn></router-link>
+          </div>
+        </div>
+
+      </div>
+
+    </v-img>
+
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: #f1edec; width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
+        <v-row style="width: 100%; height: 30%" class="ma-0">
+          <v-col cols="12" class="d-flex ">
+            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="">{{bewerben[0].telefon}}</a>  </p>
+          </v-col>
+          <v-col cols="12" class="d-flex ">
+            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href=""> {{bewerben[0].email}}</a>  </p>
+          </v-col>
+          <v-col cols="12" class="d-flex ">
+            <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
+          </v-col>
+          <v-col cols="12" class="d-flex ">
+            <p style="">Ich freue mich darauf, <br> <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
+              ermöglichen zu können.</p>
+          </v-col>
+        </v-row>
+      </div>
+
+    </v-img>
+
   </div>
 </template>
 
@@ -66,6 +106,17 @@ export default {
   components:{
     Icon
   },
+  data(){
+    return{
+      bewerben:[{
+        text1: 'Bewirb dich bei uns',
+        text2: 'Hey... wie schön, dass du hier bist! Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit, Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über die folgenden Wege:',
+        telefon: '+49 151-670 376 96',
+        email: 'bewerbung@maxi-escort.de',
+      }]
+    }
+  },
+
   computed:{
     wide() {
       const screenStore = useScreenStore();
@@ -103,6 +154,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
 
 
 .cardIn1{

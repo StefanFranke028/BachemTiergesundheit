@@ -1,5 +1,5 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal" class="desktop" :class="formattedPath" >
+  <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'verwaltung'" class="desktop" :class="formattedPath" >
     <v-row style="width: 100%" class="justify-center ma-0">
       <v-col cols="6">
         <h2 class="">ELEGANZ TRIFFT LEIDENSCHAFT </h2>

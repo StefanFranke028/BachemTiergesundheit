@@ -48,7 +48,37 @@
   </div>
 </div>
   <div v-if="mobile || tablet">
-    Escort
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #c7dee6;">
+          <div class="vertical-marker-mobile">
+          </div >
+          <div style="height: 250px; width: 70%; background-color: white; ">
+            <div style="position: relative; top:-50px" class="text-center dosis">
+              <h2 style="margin-left: -80px; " class="dm-serif mt-n5"> {{escort[0].text1}}</h2>
+            </div>
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
+              {{escort[0].text2}}
+            </div>
+            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
+          </div>
+        </div>
+
+      </div>
+
+    </v-img>
+
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: #d4e2ea; width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
+        <h2 style="font-size: 5vw" class="text-center dm-serif">{{escort[0].text3}}</h2>
+
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
+          {{escort[0].text4}}
+        </p>
+      </div>
+
+    </v-img>
+
   </div>
 </template>
 
@@ -61,6 +91,16 @@ import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "damen",
+  data(){
+    return{
+      escort:[{
+        text1: 'Unsere Begleitpersonen',
+        text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasdLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd',
+        text3: 'Hier Coole Überschrift',
+        text4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.et, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor',
+      }]
+    }
+  },
   computed:{
     wide() {
       const screenStore = useScreenStore();
@@ -99,7 +139,36 @@ export default {
   left: 40%;
   top: 10%;
 }
+.vertical-marker-mobile {
+  position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
+  height: 84px; /* Gesamthöhe des Elements */
+  width: 10px; /* Breite des Elements, schmal genug für einen Punkt und Strich */
+  margin: 20px; /* Optional: Abstand von anderen Elementen */
+  left: 0px;
+  top: -30vh
+}
+.vertical-marker-mobile::before {
+  content: '';
+  position: absolute;
+  top: 20vh; /* Positioniert den Punkt ganz oben */
+  left: 50%; /* Zentriert den Punkt horizontal */
+  width: 10px; /* Größe des Punktes */
+  height: 10px; /* Größe des Punktes */
+  background-color: black; /* Farbe des Punktes */
+  border-radius: 50%; /* Macht den Punkt rund */
+  transform: translateX(-50%); /* Zentriert den Punkt horizontal */
+}
 
+.vertical-marker-mobile::after {
+  content: '';
+  position: absolute;
+  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  left: 50%; /* Zentriert den Strich horizontal */
+  width: 2px; /* Breite des Striches */
+  height: 330%; /* Höhe des Striches */
+  background-color: black; /* Farbe des Striches */
+  transform: translateX(-50%); /* Zentriert den Strich horizontal */
+}
 h1{
   font-size: 2.5vw;
 }
