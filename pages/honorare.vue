@@ -84,7 +84,7 @@
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 style="font-size: 2vw" class="text-center dm-serif">Maxi Dinner Date</h2>
+              <h2 style="font-size: 2vw" class="text-center dm-serif">Maxi Escort Date</h2>
               <br>
               <br>
               <v-row style="width: 100%; border-radius: 10px">
@@ -148,8 +148,131 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    honorare
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #c7dee6;">
+          <div class="vertical-marker-mobile">
+          </div >
+          <div style="height: 250px; width: 70%; background-color: white; ">
+            <div style="position: relative; top:-50px" class="text-center dosis">
+              <h2 style="margin-left: -80px; " class="dm-serif mt-n5"> {{honorare[0].text1}}</h2>
+            </div>
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
+              {{honorare[0].text2}}
+            </div>
+            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
+          </div>
+        </div>
+
+      </div>
+
+    </v-img>
+
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+
+      <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
+        <v-col cols="12" class=" ">
+          <h2 style="font-size: 8vw; color: #c7dee6" class="text-center dm-serif">Maxi Dinner Date</h2>
+          <br>
+          <br>
+          <v-row style="width: 100%; border-radius: 10px" class="mx-0">
+            <v-col  cols="6" class="d-flex justify-center tabelleleft">
+              <h3>
+                Dauer
+              </h3>
+            </v-col>
+            <v-divider vertical></v-divider>
+            <v-col cols="6" class="d-flex justify-center tabelleright">
+              <h3>
+                Geschenk
+
+              </h3>
+            </v-col>
+          </v-row>
+          <v-row v-for="preis in dinnerPreise" class="mx-0" :key="preis" style="width: 100%; ">
+            <v-col  cols="6" class="d-flex justify-center tabelleleftmid">
+              <p>
+                {{ preis.dauer }}
+              </p>
+            </v-col>
+            <v-col cols="6" class="d-flex justify-center tabellerightmid">
+              <p>
+                {{ preis.preis }}
+              </p>
+            </v-col>
+          </v-row>
+
+        </v-col>
+      </v-row>
+    </v-img>
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 800px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+
+      <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
+        <v-col cols="12" class=" ">
+          <h2 style="font-size: 8vw; color: #c7dee6" class="text-center dm-serif">Maxi Escort Date</h2>
+          <br>
+          <br>
+          <v-row style="width: 100%; border-radius: 10px" class="ma-0">
+            <v-col  cols="3" class="d-flex justify-center tabelleleft">
+              <h3>
+                Dauer
+              </h3>
+            </v-col>
+            <v-divider vertical></v-divider>
+            <v-col cols="3" class="d-flex justify-center tabelle">
+              <h3>
+                Classic
+
+              </h3>
+            </v-col>
+            <v-divider vertical></v-divider>
+
+            <v-col cols="3" class="d-flex justify-center tabelle">
+              <h3>
+                Exclusiv
+
+              </h3>
+            </v-col>
+            <v-divider vertical></v-divider>
+
+            <v-col cols="3" class="d-flex justify-center tabelleright">
+              <h3>
+                VIP
+
+              </h3>
+            </v-col>
+
+
+          </v-row>
+          <v-row v-for="preis in escordPreise" :key="preise" style="width: 100%; " class="ma-0">
+            <v-col  cols="3" class="d-flex justify-center tabelleleftmid">
+              <p class="text-center">
+                {{ preis.dauer }}
+              </p>
+            </v-col>
+            <v-col cols="3" class="d-flex justify-center tabellerightmid">
+              <p>
+                {{ preis.classic }}
+              </p>
+            </v-col>
+            <v-col cols="3" class="d-flex justify-center tabellerightmid">
+              <p>
+                {{ preis.exclusiv }}
+              </p>
+            </v-col>
+            <v-col cols="3" class="d-flex justify-center tabellerightmid">
+              <p>
+                {{ preis.vip }}
+              </p>
+            </v-col>
+          </v-row>
+
+        </v-col>
+      </v-row>
+    </v-img>
+
   </div>
+
 </template>
 
 
@@ -185,6 +308,12 @@ export default {
   },
   data(){
     return{
+      honorare:[{
+        text1: 'Unsere Begleitpersonen',
+        text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasdLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd',
+        text3: 'Hier Coole Überschrift',
+        text4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.et, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor',
+      }],
       dinnerPreise:[
         {dauer:'Bis zu 2 Stunden', preis:'350 €'},
         {dauer:'Bis zu 4 Stunden', preis:'550 €'},

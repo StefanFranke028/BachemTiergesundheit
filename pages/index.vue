@@ -152,7 +152,7 @@
         </v-col>
 
       </v-row>
-    </div>#
+    </div>
     <div style="background-color:  #f1edec; width: 100vw; height: 200px" class="">
       <div class="pt-5">
         <h1 class="mt-3 text-center h1mobile dm-serif">{{ landingpage[0].text4}}</h1>

@@ -51,7 +51,45 @@
 
   </div>
   <div v-if="mobile || tablet">
-    Blog
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #c7dee6;">
+          <div class="vertical-marker-mobile">
+          </div >
+          <div style="height: 250px; width: 70%; background-color: white; ">
+            <div style="position: relative; top:-50px" class="text-center dosis">
+              <h2 style="margin-left: -80px; " class="dm-serif mt-n5"> {{blog[0].text1}}</h2>
+            </div>
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
+              {{blog[0].text2}}
+            </div>
+            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
+          </div>
+        </div>
+
+      </div>
+
+    </v-img>
+
+    <v-img v-for="(blog, index) in blogs" :key="blog" class="d-flex justify-center align-center" cover style="width: 100%; height: 1000px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+
+      <v-row  class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
+        <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
+          <v-row style="width: 100%; height: 100%;" class="ma-0">
+
+            <v-col cols="12" >
+              <h1 style="font-size: 28px" class="text-center dm-serif">{{ blog.ueberschrift }}</h1>
+              <h3 class="text-center dm-serif" style="color: #8e8c8c">{{ blog.unterUeberschrift }}</h3>
+              <br><br>
+              <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
+              <p style="color: #8e8c8c" class="mt-10">{{ blog.autor }}</p>
+              <p style="color: #8e8c8c" class="mt-10">{{ blog.datum }}</p>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-img>
+
   </div>
 </template>
 
@@ -64,6 +102,12 @@ export default {
   data() {
 
     return {
+      blog:[{
+        text1: 'Unsere Begleitpersonen',
+        text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasdLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd',
+        text3: 'Hier Coole Überschrift',
+        text4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.et, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor',
+      }],
       blogs: [
         {
           ueberschrift: 'Überschrift',

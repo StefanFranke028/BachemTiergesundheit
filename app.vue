@@ -51,8 +51,8 @@ export default {
     checkMobileView() {
       const screenStore = useScreenStore();
 
-      screenStore.setWide( window.innerWidth >= 2000)
-      screenStore.setDesktop( window.innerWidth <=2000 && window.innerWidth >= 1400)
+      screenStore.setWide( window.innerWidth >= 2800)
+      screenStore.setDesktop( window.innerWidth <=2600 && window.innerWidth >= 1400)
       screenStore.setTabletHorizontal(  window.innerWidth <= 1400 && window.innerWidth >= 1000)
       screenStore.setTablet( window.innerWidth <= 1000 && window.innerWidth >= 750)
       screenStore.setMobile( window.innerWidth <= 750)
