@@ -1,17 +1,13 @@
 <template>
   <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'verwaltung'" class="desktop" :class="formattedPath" >
-    <v-row style="width: 100%" class="justify-center ma-0">
-      <v-col cols="6">
-        <h2 class="">ELEGANZ TRIFFT LEIDENSCHAFT </h2>
-        <p style="font-size: 14px" class=" mt-" >erotisch | leidenschaftlich | hautnah</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </v-col>
-      <v-col cols="2" class="d-flex justify-center">
 
+    <v-row style="width: 100%"  class="ma-0 pa-16">
+      <v-col cols="2" v-for="stadt in staedte" class="d-flex justify-center" :key="stadt">
+        <nuxt-link :to="'MaxiEscort-'+ stadt.stadt">
+          <p style="cursor:pointer">
+            {{stadt.stadt}}
+          </p>
+        </nuxt-link>
       </v-col>
     </v-row>
     <div style="position: relative;" class="d-flex justify-center mt-5">
@@ -71,6 +67,28 @@ import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "FooterComponent",
+  data(){
+    return{
+      staedte:[
+        {stadt: 'Dortmund'},
+        {stadt: 'Hamburg'},
+        {stadt: 'Hanover'},
+        {stadt: 'München'},
+        {stadt: 'Berlin'},
+        {stadt: 'Amsterdam'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+        {stadt: 'Dortmund'},
+      ],
+
+    }
+  },
   components:{
 
   },
@@ -148,7 +166,7 @@ export default {
 }
 .desktop{
         width: 100%;
-        height: 250px;
+
 }
 .nav-link {
   text-decoration: none;
