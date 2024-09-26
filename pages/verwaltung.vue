@@ -1,30 +1,64 @@
 <template>
-<div v-if="desktop || wide">
+  <!--  <div v-if="desktop || wide">-->
+  <div class="d-flex justify-center " style="width: 100vw; height: 80vh">
+    <v-row class="mt-10 d-flex justify-center">
+      <v-col cols="5">
+        <v-select v-model="selectedItem"
+                  :items="items"
+                  label="Wähle eine Seite">
+          test
+        </v-select>
+      </v-col>
+      <v-col class="mt-n5" cols="8">
+        <v-card color="blue" height="600">
+          <StartseiteComponent v-if="selectedItem === 'Startseite'"/>
+          <VitaComponent v-if="selectedItem === 'Vita'"/>
+          <DamenComponent v-if="selectedItem === 'Damen'"/>
+          <BewerbenComponent v-if="selectedItem === 'Bewerben'"/>
+          <KontaktComponent v-if="selectedItem === 'Kontakt'"/>
+          <HonorareComponent v-if="selectedItem === 'Honorare'"/>
+          <BlogComponent v-if="selectedItem === 'Blog'"/>
 
-
-</div>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
+  <!--  </div>-->
 </template>
 
 <script>
 import {useScreenStore} from "~/stores/screen.js";
+import StartseiteComponent from "~/components/verwaltung/StartseiteComponent.vue";
+import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
+import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
+import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
+import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
+import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
+import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
 
 export default {
   name: "verwaltung",
-  data(){
-    return{
-
+  components: {
+    BlogComponent,
+    HonorareComponent,
+    KontaktComponent, BewerbenComponent, DamenComponent, VitaComponent, StartseiteComponent
+  },
+  data() {
+    return {
+      items: ['Startseite', 'Vita', 'Damen', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
+      selectedItem: "Startseite",
     }
   },
   mounted() {
   },
-  methods:{
+  methods: {
     async isUser() {
       const userStore = useUserStore();
 
       if (userStore.user.status !== "user") {
         await this.$router.push('login')
-        }
-      },
+      }
+    },
     async login() {
       if (this.valid) {
         try {
@@ -101,7 +135,7 @@ export default {
       }
     },
   },
-  computed:{
+  computed: {
     wide() {
       const screenStore = useScreenStore();
       return screenStore.wide;
@@ -127,7 +161,5 @@ export default {
 </script>
 
 
-
 <style scoped>
-
 </style>
