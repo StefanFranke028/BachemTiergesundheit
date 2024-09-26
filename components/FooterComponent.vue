@@ -1,16 +1,45 @@
 <template>
   <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'verwaltung'" class="desktop" :class="formattedPath" >
+    <v-row style="width: 100%;" class="ma-0 justify-center">
+        <v-col class="d-flex justify-center" cols="4">
+          <div style="cursor: pointer">
+            <span style="font-size: 22px; color: grey; ">
+                MAXI
+                  <b class="ml-n1" style="color: black">
+                ESCORT
+              </b>
+            </span>
+        </div>
+        </v-col>
+      <v-col cols="6">
+          <div style="cursor: pointer">
+            <p class="text-center" style="font-size: 17px; color: grey; ">
+                HABEN SIE NOCH FRAGEN? &nbsp;
+              <b class="ml-n1" style="color: black">
+              RUFEN SUE UNS AN! <br> +49 151-670 376 96
+              </b>
+            </p>
+        </div>
+        </v-col>
+    </v-row>
+    <v-divider></v-divider>
+    <v-row style="width: 100%"  class="ma-0 justify-center">
+      <v-col cols="8" class="d-flex justify-center" :key="stadt">
+        <v-row style="width: 100%"  class="ma-0 pa-16">
+          <v-col cols="3" v-for="stadt in staedte" class="" :key="stadt">
+            <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.stadt">
+              <p style="cursor:pointer">
+                {{stadt.stadt}}
+              </p>
 
-    <v-row style="width: 100%"  class="ma-0 pa-16">
-      <v-col cols="2" v-for="stadt in staedte" class="d-flex justify-center" :key="stadt">
-        <nuxt-link :to="'MaxiEscort-'+ stadt.stadt">
-          <p style="cursor:pointer">
-            {{stadt.stadt}}
-          </p>
-        </nuxt-link>
+            </nuxt-link>
+            <v-divider></v-divider>
+          </v-col>
+        </v-row>
+
       </v-col>
     </v-row>
-    <div style="position: relative;" class="d-flex justify-center mt-5">
+    <div style="position: relative;" class="d-flex justify-center ">
       <p style="font-size: 11px">
         Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
         <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
