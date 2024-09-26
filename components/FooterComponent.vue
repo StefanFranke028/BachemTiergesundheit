@@ -71,6 +71,17 @@
 
       </v-col>
     </v-row>
+    <v-row style="width: 100%"  class="ma-0 ">
+      <v-col cols="12" v-for="stadt in staedte" class="" :key="stadt">
+        <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.stadt">
+          <p style="cursor:pointer">
+            {{stadt.stadt}}
+          </p>
+
+        </nuxt-link>
+        <v-divider></v-divider>
+      </v-col>
+    </v-row>
     <div style="position: relative;" class="d-flex justify-center px-2">
       <p style="font-size: 6px">
         Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
