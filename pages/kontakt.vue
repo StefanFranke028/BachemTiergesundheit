@@ -17,12 +17,10 @@
   </div>
   <div style="width: 100vw; height: 600px">
     <v-row style="width: 100%;" class="mx-0 pa-0">
-      <v-col class="pa-0" cols="6">
-        <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/federn.webp"  alt=""></v-img>
+      <v-col class="pa-0" cols="12">
+        <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/kontakt.jpg"  alt=""></v-img>
       </v-col>
-      <v-col class="pa-0" cols="6">
-        <v-img style="z-index: 0" max-height="600px" cover src="~/assets/decke.jpg"  alt=""></v-img>
-      </v-col>
+
     </v-row>
   </div>
   <div style="width: 100vw; height: 600px">
@@ -216,7 +214,7 @@ h1{
   z-index: 300;
   height: 650px;
   width: 80vw;
-  background-color: #v;
+  background-color: #d1e3d3;
   position: absolute;
   top: 200px;
   left: 50%;

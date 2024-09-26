@@ -21,17 +21,17 @@
     <div style="width: 100vw; height: 600px">
       <v-row style="width: 100%;" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/federn.webp"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/Vita.jpeg"  alt=""></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/decke.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/Vita2.jpg"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>
     <div style="width: 100vw; height: 900px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita3.jpg"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
@@ -112,7 +112,7 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita3.jpg"  alt=""></v-img>
         </v-col>
 
 
@@ -121,7 +121,7 @@
     <div style="width: 100vw; height: 900px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita3.jpg"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-16">
@@ -170,8 +170,6 @@
                 Branche.
               </p>
               <div class="d-flex justify-center mt-10" style="width: 100%;">
-                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
-
               </div>
             </v-col>
             <v-col cols="5"></v-col>

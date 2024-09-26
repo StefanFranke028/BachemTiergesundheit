@@ -59,7 +59,7 @@
       </v-row>
 
     </div>
-    <div style="background-color: #ffffff; min-height: 400px">
+    <div style="background-color: #ffffff; min-height: 400px" class="pb-10">
       <v-row style="width: 100%; height: 100%" class="mx-0 mt-4 justify-center">
         <v-col class="d-flex justify-center" v-for="dame in stadtDamen" :key="dame" cols="11" xl="3" md="3">
           <v-card style="width: 350px">

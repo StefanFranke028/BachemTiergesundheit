@@ -16,7 +16,7 @@
             <p class="text-center" style="font-size: 17px; color: grey; ">
                 HABEN SIE NOCH FRAGEN? &nbsp;
               <b class="ml-n1" style="color: black">
-              RUFEN SUE UNS AN! <br> +49 151-670 376 96
+              RUFEN SIE UNS AN! <br> +49 151-670 376 96
               </b>
             </p>
         </div>
@@ -72,9 +72,9 @@
       </v-col>
     </v-row>
     <v-row style="width: 100%"  class="ma-0 ">
-      <v-col cols="12" v-for="stadt in staedte" class="" :key="stadt">
+      <v-col cols="12" v-for="stadt in staedte"  :key="stadt">
         <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.stadt">
-          <p style="cursor:pointer">
+          <p class="text-center" style="cursor:pointer">
             {{stadt.stadt}}
           </p>
 
@@ -156,6 +156,10 @@ export default {
     formattedPath() {
       // Überprüfe, ob der Pfad mehr als nur ein "/" enthält
       if (this.$route.path !== '/') {
+        // Überprüfe, ob der Pfad mit "maxi" beginnt
+        if (this.$route.path.startsWith('/Maxi')) {
+          return 'footer';
+        }
         // Entferne das führende "/" vom Pfad
         return this.$route.path.substring(1);
       }
@@ -198,6 +202,11 @@ export default {
 }.blog{
 
     background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
+}
+.footer{
+
+     background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
+
 }
 
 .mobile{
