@@ -88,4 +88,9 @@ button {
   width: 0;
   background: transparent;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 </style>
