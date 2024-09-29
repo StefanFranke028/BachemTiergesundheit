@@ -17,13 +17,13 @@
         <v-text-field v-model="keywords" label="Header Keywords"></v-text-field>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea1" label="Textarea 1"></v-textarea>
+        <v-textarea v-model="textarea1" auto-grow label="Textarea 1"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea2" label="Textarea 2"></v-textarea>
+        <v-textarea v-model="textarea2" auto-grow label="Textarea 2"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea3" label="Textarea 3"></v-textarea>
+        <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
         <v-text-field v-model="email" label="Email" type="email"></v-text-field>

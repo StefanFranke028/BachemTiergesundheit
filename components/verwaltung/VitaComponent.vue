@@ -17,70 +17,70 @@
         <v-text-field v-model="keywords" label="Header Keywords"></v-text-field>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea1" label="Textarea 1"></v-textarea>
+        <v-textarea v-model="textarea1" auto-grow label="Textarea 1"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea2" label="Textarea 2"></v-textarea>
+        <v-textarea v-model="textarea2" auto-grow label="Textarea 2"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea3" label="Textarea 3"></v-textarea>
+        <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea4" label="Textarea 4"></v-textarea>
+        <v-textarea v-model="textarea4" auto-grow label="Textarea 4"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea5" label="Textarea 5"></v-textarea>
+        <v-textarea v-model="textarea5" auto-grow label="Textarea 5"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea6" label="Textarea 6"></v-textarea>
+        <v-textarea v-model="textarea6" auto-grow label="Textarea 6"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea7" label="Textarea 7"></v-textarea>
+        <v-textarea v-model="textarea7" auto-grow label="Textarea 7"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea8" label="Textarea 8"></v-textarea>
+        <v-textarea v-model="textarea8" auto-grow label="Textarea 8"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea9" label="Textarea 9"></v-textarea>
+        <v-textarea v-model="textarea9" auto-grow label="Textarea 9"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea10" label="Textarea 10"></v-textarea>
+        <v-textarea v-model="textarea10" auto-grow label="Textarea 10"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea11" label="Textarea 11"></v-textarea>
+        <v-textarea v-model="textarea11" auto-grow label="Textarea 11"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea12" label="Textarea 12"></v-textarea>
+        <v-textarea v-model="textarea12" auto-grow label="Textarea 12"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea13" label="Textarea 13"></v-textarea>
+        <v-textarea v-model="textarea13" auto-grow label="Textarea 13"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea14" label="Textarea 14"></v-textarea>
+        <v-textarea v-model="textarea14" auto-grow label="Textarea 14"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea15" label="Textarea 15"></v-textarea>
+        <v-textarea v-model="textarea15" auto-grow label="Textarea 15"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea16" label="Textarea 16"></v-textarea>
+        <v-textarea v-model="textarea16" auto-grow label="Textarea 16"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea17" label="Textarea 17"></v-textarea>
+        <v-textarea v-model="textarea17" auto-grow label="Textarea 17"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea18" label="Textarea 18"></v-textarea>
+        <v-textarea v-model="textarea18" auto-grow label="Textarea 18"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea19" label="Textarea 19"></v-textarea>
+        <v-textarea v-model="textarea19" auto-grow label="Textarea 19"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea20" label="Textarea 20"></v-textarea>
+        <v-textarea v-model="textarea20" auto-grow label="Textarea 20"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea21" label="Textarea 21"></v-textarea>
+        <v-textarea v-model="textarea21" auto-grow label="Textarea 21"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea22" label="Textarea 22"></v-textarea>
+        <v-textarea v-model="textarea22" auto-grow label="Textarea 22"></v-textarea>
       </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>

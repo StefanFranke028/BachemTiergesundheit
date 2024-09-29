@@ -32,6 +32,7 @@
           <KontaktComponent v-if="selectedItem === 'Kontakt'"/>
           <HonorareComponent v-if="selectedItem === 'Honorare'"/>
           <BlogComponent v-if="selectedItem === 'Blog'"/>
+          <BlogEinträgeComponent v-if="selectedItem === 'Blog-Einträge'"/>
         </v-card>
       </v-col>
     </v-row>
@@ -45,6 +46,7 @@ import StartseiteComponent from "~/components/verwaltung/StartseiteComponent.vue
 import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
 import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
 import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
+import BlogEinträgeComponent from "~/components/verwaltung/BlogEinträgeComponent.vue";
 import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
 import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
 import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
@@ -55,12 +57,13 @@ export default {
   name: "verwaltung",
   components: {
     BlogComponent,
+    BlogEinträgeComponent,
     HonorareComponent,
     KontaktComponent, BewerbenComponent, DamenComponent, VitaComponent, StartseiteComponent
   },
   data() {
     return {
-      items: ['Startseite', 'Vita', 'Damen', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
+      items: ['Startseite', 'Vita', 'Damen', 'Bewerben', 'Kontakt', 'Honorare', 'Blog', 'Blog-Einträge'],
       selectedItem: "Startseite",
     }
   },

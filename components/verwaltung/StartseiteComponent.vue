@@ -17,34 +17,34 @@
         <v-text-field v-model="keywords" label="Header Keywords"></v-text-field>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea1" label="Textarea 1"></v-textarea>
+        <v-textarea v-model="textarea1" auto-grow label="Textarea 1"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea2" label="Textarea 2"></v-textarea>
+        <v-textarea v-model="textarea2" auto-grow label="Textarea 2"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea3" label="Textarea 3"></v-textarea>
+        <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea4" label="Textarea 4"></v-textarea>
+        <v-textarea v-model="textarea4" auto-grow label="Textarea 4"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea5" label="Textarea 5"></v-textarea>
+        <v-textarea v-model="textarea5" auto-grow label="Textarea 5"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea6" label="Textarea 6"></v-textarea>
+        <v-textarea v-model="textarea6" auto-grow label="Textarea 6"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea7" label="Textarea 7"></v-textarea>
+        <v-textarea v-model="textarea7" auto-grow label="Textarea 7"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea8" label="Textarea 8"></v-textarea>
+        <v-textarea v-model="textarea8" auto-grow label="Textarea 8"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea9" label="Textarea 9"></v-textarea>
+        <v-textarea v-model="textarea9" auto-grow label="Textarea 9"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea10" label="Textarea 10"></v-textarea>
+        <v-textarea v-model="textarea10" auto-grow label="Textarea 10"></v-textarea>
       </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
