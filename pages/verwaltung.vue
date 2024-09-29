@@ -1,16 +1,28 @@
 <template>
   <!--  <div v-if="desktop || wide">-->
-  <div class="d-flex justify-center " style="width: 100vw; height: 80vh">
-    <v-row class="mt-10 d-flex justify-center">
+  <div class="background d-flex justify-center" style="width: 100vw; height: 100vh">
+
+    <v-row class="d-flex justify-center">
+      <v-col class="d-flex justify-center align-center" cols="3">
+        <h3 class="text-center">Zurück zur Startseite</h3>
+      </v-col>
+      <v-col class="d-flex justify-center align-center" cols="6">
+        <h1>Verwaltung von Maxi-Escort</h1>
+      </v-col>
+      <v-col class="d-flex justify-center align-center" cols="3">
+        <h3 class="text-center">
+          Ausloggen
+        </h3>
+      </v-col>
       <v-col cols="5">
         <v-select v-model="selectedItem"
                   :items="items"
-                  label="Wähle eine Seite">
+                  label="Wählen Sie eine Seite">
           test
         </v-select>
       </v-col>
-      <v-col class="mt-n5" cols="8">
-        <v-card color="blue" height="600">
+      <v-col cols="8">
+        <v-card style="background: rgba(250,250,250,0.4)">
           <StartseiteComponent v-if="selectedItem === 'Startseite'"/>
           <VitaComponent v-if="selectedItem === 'Vita'"/>
           <DamenComponent v-if="selectedItem === 'Damen'"/>
@@ -18,7 +30,6 @@
           <KontaktComponent v-if="selectedItem === 'Kontakt'"/>
           <HonorareComponent v-if="selectedItem === 'Honorare'"/>
           <BlogComponent v-if="selectedItem === 'Blog'"/>
-
         </v-card>
       </v-col>
     </v-row>
@@ -162,4 +173,18 @@ export default {
 
 
 <style scoped>
+.background {
+  background-image: url('../assets/verwaltungBackground.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+h3 {
+  cursor: pointer;
+}
+
+.v-row {
+  width: 100%;
+  height: 100%;
+}
 </style>
