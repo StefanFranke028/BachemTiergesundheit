@@ -305,6 +305,42 @@ export default {
 };
 </script>
 
+<script setup>
+import {useHead} from 'nuxt/app';
+import {ref, onMounted} from 'vue';
+
+const landingpage = ref(null);
+
+onMounted(async () => {
+  try {
+    const token = localStorage.getItem('token');
+    landingpage.value = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+
+    // Set up the head with dynamic values after data is loaded
+    useHead({
+      title: 'Maxi Escort Service Frankfurt',
+      meta: [
+        {
+          name: 'description',
+          content: landingpage.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+        },
+        {
+          name: 'keywords',
+          content: landingpage.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+        },
+      ],
+    });
+  } catch (e) {
+    console.error('Fehler beim Abrufen der Landingpage:', e);
+  }
+});
+</script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
