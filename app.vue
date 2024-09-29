@@ -26,8 +26,7 @@ export default {
 
   },
   mounted() {
-    this.checkMobileView()
-    this.resize()
+
   },
   computed:{
     wide() {
