@@ -4,7 +4,9 @@
 
     <v-row class="d-flex justify-center">
       <v-col class="d-flex justify-center align-center" cols="3">
-        <h3 class="text-center">Zurück zur Startseite</h3>
+        <router-link to="/">
+          <h3 class="text-center">Zurück zur Startseite</h3>
+        </router-link>
       </v-col>
       <v-col class="d-flex justify-center align-center" cols="6">
         <h1>Verwaltung von Maxi-Escort</h1>
@@ -46,6 +48,8 @@ import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
 import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
 import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
 import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
+import nuxtLayout from "#app/components/nuxt-layout.js";
+import nuxtLink from "#app/components/nuxt-link.js";
 
 export default {
   name: "verwaltung",
@@ -147,6 +151,12 @@ export default {
     },
   },
   computed: {
+    nuxtLink() {
+      return nuxtLink
+    },
+    nuxtLayout() {
+      return nuxtLayout
+    },
     wide() {
       const screenStore = useScreenStore();
       return screenStore.wide;
