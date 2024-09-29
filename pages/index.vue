@@ -362,11 +362,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: landingpage1.value[0]?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      content: landingpage1.value[0]?.description || 'text',
     },
     {
       name: 'keywords',
-      content: landingpage1.value[0]?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value[0]?.keywords || 'text',
     },
   ],
 });
