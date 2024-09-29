@@ -93,6 +93,63 @@
   </div>
 </template>
 
+<script setup>
+import FooterComponent from "~/components/FooterComponent.vue";
+import { ref } from 'vue';
+
+// Methode zum Abrufen der Landingpage-Daten
+const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
+  let token = null;
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/blog", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der Landingpage:', e);
+    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
+    return {
+      description: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      keywords: 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      text1: 'Ein Mädchen sollte zwei Sachen sein: elegant und fabelhaft.“ – Coco Chanel.',
+      text2: 'Wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
+      text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
+      text4: 'Unsere Werte & Grundsätze',
+      text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
+      text6: 'Maxi Escort Team',
+      text7: 'Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass Ihre Wünsche erfüllt werden.',
+      text8: 'Genießen Sie den Tag',
+      text9: 'Maxi Escort Service Frankfurt.',
+      text10: 'Ihre Maxi',
+    };
+  }
+});
+
+// Setze dynamisch den Head basierend auf den Landingpage-Daten
+useHead({
+  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  meta: [
+    {
+      name: 'description',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau',
+    },
+    {
+      name: 'keywords',
+      content: landingpage1.value?.keywords || 'Escort,  Diskretion, Exklusivität, Maxi Escort Service',
+    },
+  ],
+});
+</script>
+
 <script >
 
 import FooterComponent from "~/components/FooterComponent.vue";
