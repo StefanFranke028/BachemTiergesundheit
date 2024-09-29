@@ -229,6 +229,7 @@ export default {
     },
   },
   head() {
+    5
     // Überprüfen, ob die Daten geladen sind
     if (this.landingpage && this.landingpage.length > 0) {
       return {
@@ -307,10 +308,10 @@ export default {
 
 <script setup>
 import FooterComponent from "~/components/FooterComponent.vue";
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 // Methode zum Abrufen der Landingpage-Daten
-const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
+const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
   let token = null;
 
   if (process.client) {

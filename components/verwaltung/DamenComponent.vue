@@ -3,8 +3,18 @@
   <div style="overflow-y: scroll">
     <v-row class="pa-0" style="height: 625px">
       <!-- Textareas mit v-model -->
-      <v-col cols="12">
-        <v-textarea v-model="header" label="Header"></v-textarea>
+      <v-col cols="6">
+        <v-text-field
+            v-model="description"
+            :counter="155"
+            :rules="[maxLengthRule]"
+            label="Header Description"
+            maxlength="155"
+        ></v-text-field>
+      </v-col>
+
+      <v-col cols="6">
+        <v-text-field v-model="keywords" label="Header Keywords"></v-text-field>
       </v-col>
       <v-col cols="6">
         <v-textarea v-model="textarea1" label="Textarea 1"></v-textarea>
@@ -55,7 +65,9 @@
 export default {
   data() {
     return {
-      header: null,
+      description: null,
+      maxLengthRule: v => (v && v.length <= 155) || 'Die Beschreibung darf maximal 155 Zeichen lang sein.',
+      keywords: null,
       textarea1: '',
       textarea2: '',
 
@@ -80,7 +92,8 @@ export default {
 
         if (response) {
           // Wandelt HTML-Format zurück in normalen Text für Textareas
-          this.header = response.head
+          this.description = response.description;
+          this.keywords = response.keywords
           this.textarea1 = this.unformattedText(response.text1);
           this.textarea2 = this.unformattedText(response.text2);
 
@@ -111,7 +124,8 @@ export default {
     async submitChanges() {
       this.loading = true;
       const data = {
-        head: this.header,
+        description: this.description,
+        keywords: this.keywords,
         text1: this.formattedText(this.textarea1),
         text2: this.formattedText(this.textarea2),
 

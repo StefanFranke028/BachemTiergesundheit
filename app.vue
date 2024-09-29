@@ -1,6 +1,8 @@
 <template>
   <v-app>
-
+    <div v-if="$route.path !== '/verwaltung'" style="height: 100px; width: 100vw; background-color: red">
+      <h1 class="text-white text-center "> Diese Seite ist derzeit in Bearbeitung</h1>
+    </div>
     <v-main>
       <NuxtLayout></NuxtLayout>
     </v-main>
