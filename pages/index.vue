@@ -3,7 +3,10 @@
     <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
     <div class="card">
       <div class="cardIn1">
-        <div  class="text-center text2 dosis">„Ein Mädchen sollte <br> zwei Sachen sein: <br> elegant und fabulös.“ <br> Coco Chanel.
+        <div  class="text-center text2 dosis" >
+          <p v-html="landingpage[0].text1">
+
+          </p>
           <br>
 
           <div class="d-flex justify-center mt-10" style="width: 100%;">
@@ -15,12 +18,15 @@
       <div class="cardIn2">
         <div class="text3 ">
           <p class="">
-            Willkommen bei Maxi Escort, {{landingpage[0].text2 }}
+            Willkommen bei Maxi Escort,
           </p>
+            <p v-html="landingpage[0].text2">
+
+
+            </p>
         </div>
         <div class="text4 ">
-          <p class="">
-           {{landingpage[0].text3}}
+          <p class="" v-html="landingpage[0].text3">
           </p>
         </div>
         <div class="line-with-dot">
@@ -41,12 +47,9 @@
         <v-col style="background-color: #f1edec" class="pa-0" cols="6">
           <v-row  style="width: 50%; height: 30%; position: absolute;" class="d-flex justify-center align-end">
             <v-col cols="6">
-              <p style="font-size: 2vh">
+              <p style="font-size: 2vh" v-html="landingpage[0].text5">
 
-                Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und
-                Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres
-                Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen
-                sowie im Umgang mit unseren Kunden.
+
               </p>
               <br>
               <br>
@@ -59,8 +62,7 @@
 
           </v-row>
           <div style="position: relative; top: 20% ; left:-40%">
-            <h1 class="text-white text-center dm-serif">Unsere Werte &amp; </h1>
-            <h1 class="text-white text-center dm-serif">Grundsätze</h1>
+            <h1 class="text-white text-center dm-serif" v-html="landingpage[0].text4"  > </h1>
             <div class="vertical-marker">
             </div>
           </div>
@@ -79,22 +81,25 @@
             </v-col>
             <v-col class="d-flex justify-center" style="margin-top: 15%" cols="6">
               <div style="height: 80%" class="ml-16">
-                <h1 style="color: #615f5f" class="dosis1">Maxi Escort Team</h1>
-                <p  style="color: #615f5f" >
-                  Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf
-                  konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt
-                  einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass
-                  Ihre Wünsche erfüllt werden.
-                </p>
-                <br>
-                <br>
-                <p>
-                  Genießen Sie den Tag. <br> <br>
+                <h1 style="color: #615f5f" class="dosis1" v-html="landingpage[0].text6"></h1>
+                <p  style="color: #615f5f" v-html="landingpage[0].text7" >
 
-                  Maxi Escort Service Frankfurt. <br> <br>
-                  Ihre
-                  Maxi
                 </p>
+                <br>
+                <br>
+                <p v-html="landingpage[0].text8">
+
+
+                </p>
+                <br>
+                <p v-html="landingpage[0].text9">
+
+                </p>
+                <br>
+                <p v-html="landingpage[0].text10">
+
+                </p>
+
               </div>
 
             </v-col>
@@ -111,8 +116,8 @@
       <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div  style="width: 75%; height: 400px;  background-color: #e5dbdc;">
           <div style="height: 250px; width: 70%; background-color: white; position: relative; left:21%; top: 10%">
-            <div class="text-center px-4 text5 dosis">
-              {{landingpage[0].text1}}
+            <div class="text-center px-4 text5 dosis" v-html="landingpage[0].text1">
+
 
             </div>
           </div>
@@ -123,9 +128,9 @@
     </v-img>
     <div  style="background-color:  #e5dbdc; width: 100vw; height: 130px" class="pa-6">
       <h1 class="mt-n2 text-center h1mobile dm-serif">Willkommen bei Maxi Escort,</h1>
-      <p style="font-size: 12px" class="text-center mt-3">
-        {{landingpage[0].text2}}
-        {{landingpage[0].text3}}
+      <p style="font-size: 12px" class="text-center mt-3" v-html="landingpage[0].text2+' ' + landingpage[0].text3">
+
+
       </p>
     </div>
 
@@ -138,14 +143,14 @@
                 <v-img src="~/assets/frau-unten.jpg" cover class="mt-n10" style="width: 100%; height: 170%;">
 
                 </v-img>
-                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text8}}</p>
-                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text9}}</p>
-                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text10}}</p>
+                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text8"></p>
+                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text9"></p>
+                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text10"></p>
               </div>
             </v-col>
             <v-col cols="6">
-              <h1  style="color: #615f5f;font-size: 15px" class="dosis1">{{landingpage[0].text6}}</h1>
-              <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2">{{landingpage[0].text7}}</p>
+              <h1  style="color: #615f5f;font-size: 15px" class="dosis1" v-html="landingpage[0].text6"></h1>
+              <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text7"></p>
 
             </v-col>
           </v-row>
@@ -155,12 +160,12 @@
     </div>
     <div style="background-color:  #f1edec; width: 100vw; height: 200px" class="">
       <div class="pt-5">
-        <h1 class="mt-3 text-center h1mobile dm-serif">{{ landingpage[0].text4}}</h1>
+        <h1 class="mt-3 text-center h1mobile dm-serif" v-html="landingpage[0].text4"></h1>
 
       </div>
       <div class="px-10 mt-4">
-        <p style="font-size: 14px" class="text-center">
-          {{landingpage[0].text5}}
+        <p style="font-size: 14px" class="text-center" v-html="landingpage[0].text5">
+
         </p>
       </div>
     </div>
@@ -194,6 +199,27 @@ export default {
   },
   components:{
     FooterComponent
+  },
+  mounted() {
+    this.getLandingpage()
+  },
+  methods:{
+    async getLandingpage() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+        this.landingpage = []
+        this.landingpage.push(response)
+        console.log(this.landingpage);
+      } catch (e) {
+        alert(e);
+      }
+    },
   },
   computed:{
     wide() {
