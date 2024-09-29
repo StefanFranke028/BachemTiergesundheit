@@ -1,16 +1,18 @@
 <template>
-  <div v-if="desktop || tabletHorizontal" >
-    <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
+  <div v-if="desktop || tabletHorizontal">
+    <img alt="schwarz-weis Hintergrundbild" src="~/assets/bg.png" style="width: 100vw; height: 500px;"/>
     <div class="card">
       <div class="cardIn1">
-        <div  class="text-center text2 dosis" >
+        <div class="text-center text2 dosis">
           <p v-html="landingpage[0].text1">
 
           </p>
           <br>
 
           <div class="d-flex justify-center mt-10" style="width: 100%;">
-            <router-link to="vita">  <v-btn theme="dark" class="text-center" >  Zur Vita</v-btn></router-link>
+            <router-link to="vita">
+              <v-btn class="text-center" theme="dark"> Zur Vita</v-btn>
+            </router-link>
 
           </div>
         </div>
@@ -20,10 +22,10 @@
           <p class="">
             Willkommen bei Maxi Escort,
           </p>
-            <p v-html="landingpage[0].text2">
+          <p v-html="landingpage[0].text2">
 
 
-            </p>
+          </p>
         </div>
         <div class="text4 ">
           <p class="" v-html="landingpage[0].text3">
@@ -32,20 +34,22 @@
         <div class="line-with-dot">
         </div>
         <div style="width: 100%; height: 100%; overflow: hidden; position: relative; ">
-          <img src="~/assets/frau.webp" style="min-width: 90%; min-height: 90%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" alt="">
+          <img alt=""
+               src="~/assets/frau.webp"
+               style="min-width: 90%; min-height: 90%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
         </div>
       </div>
     </div>
     <div class="mt-n2" style="width: 100vw; height:150px; background-color: #e5dbdc">
 
     </div>
-    <div >
-      <v-row style="width: 100%; height: 100%" class="ma-0 pa-0">
-        <v-col style="background-color: black" class="pa-0" cols="6">
-          <v-img style="z-index: 0" src="~/assets/bild-links.webp"  alt=""></v-img>
+    <div>
+      <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
+        <v-col class="pa-0" cols="6" style="background-color: black">
+          <v-img alt="" src="~/assets/bild-links.webp" style="z-index: 0"></v-img>
         </v-col>
-        <v-col style="background-color: #f1edec" class="pa-0" cols="6">
-          <v-row  style="width: 50%; height: 30%; position: absolute;" class="d-flex justify-center align-end">
+        <v-col class="pa-0" cols="6" style="background-color: #f1edec">
+          <v-row class="d-flex justify-center align-end" style="width: 50%; height: 30%; position: absolute;">
             <v-col cols="6">
               <p style="font-size: 2vh" v-html="landingpage[0].text5">
 
@@ -55,14 +59,16 @@
               <br>
 
               <div class="d-flex justify-center mt-10" style="width: 100%;">
-                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  ZU Unseren Begleitpersonen</v-btn></router-link>
+                <router-link to="damen">
+                  <v-btn class="text-center" theme="dark"> ZU Unseren Begleitpersonen</v-btn>
+                </router-link>
 
               </div>
             </v-col>
 
           </v-row>
           <div style="position: relative; top: 20% ; left:-40%">
-            <h1 class="text-white text-center dm-serif" v-html="landingpage[0].text4"  > </h1>
+            <h1 class="text-white text-center dm-serif" v-html="landingpage[0].text4"></h1>
             <div class="vertical-marker">
             </div>
           </div>
@@ -70,87 +76,89 @@
         </v-col>
       </v-row>
     </div>
-    <div style="height: 450px; width: 100vw;" class="d-flex justify-center align-center">
-        <div  style="background-color: #f1edec; max-height: 400px; width: 800px;margin-top: 300px; margin-left: -20%">
-          <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
-            <v-col cols="6" class="d-flex justify-center">
+    <div class="d-flex justify-center align-center" style="height: 450px; width: 100vw;">
+      <div style="background-color: #f1edec; max-height: 400px; width: 800px;margin-top: 300px; margin-left: -20%">
+        <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
+          <v-col class="d-flex justify-center" cols="6">
 
-              <v-img  style="height: 80%; box-shadow: 2px 2px 5px black" cover src="~/assets/frau-unten.jpg">
+            <v-img cover src="~/assets/frau-unten.jpg" style="height: 80%; box-shadow: 2px 2px 5px black">
 
-              </v-img>
-            </v-col>
-            <v-col class="d-flex justify-center" style="margin-top: 15%" cols="6">
-              <div style="height: 80%" class="ml-16">
-                <h1 style="color: #615f5f" class="dosis1" v-html="landingpage[0].text6"></h1>
-                <p  style="color: #615f5f" v-html="landingpage[0].text7" >
+            </v-img>
+          </v-col>
+          <v-col class="d-flex justify-center" cols="6" style="margin-top: 15%">
+            <div class="ml-16" style="height: 80%">
+              <h1 class="dosis1" style="color: #615f5f" v-html="landingpage[0].text6"></h1>
+              <p style="color: #615f5f" v-html="landingpage[0].text7">
 
-                </p>
-                <br>
-                <br>
-                <p v-html="landingpage[0].text8">
+              </p>
+              <br>
+              <br>
+              <p v-html="landingpage[0].text8">
 
 
-                </p>
-                <br>
-                <p v-html="landingpage[0].text9">
+              </p>
+              <br>
+              <p v-html="landingpage[0].text9">
 
-                </p>
-                <br>
-                <p v-html="landingpage[0].text10">
+              </p>
+              <br>
+              <p v-html="landingpage[0].text10">
 
-                </p>
+              </p>
 
-              </div>
+            </div>
 
-            </v-col>
-          </v-row>
-        </div>
+          </v-col>
+        </v-row>
+      </div>
     </div>
     <div class="mt-n2" style="width: 100vw; height:300px; background-color: white">
 
-  </div>
+    </div>
 
   </div>
-  <div style="width: 100vw; " v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
-      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
-        <div  style="width: 75%; height: 400px;  background-color: #e5dbdc;">
+  <div v-if="mobile || tablet" style="width: 100vw; ">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg.png"
+           style="width: 100%; height: 450px;  ">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div style="width: 75%; height: 400px;  background-color: #e5dbdc;">
           <div style="height: 250px; width: 70%; background-color: white; position: relative; left:21%; top: 10%">
             <div class="text-center px-4 text5 dosis" v-html="landingpage[0].text1">
 
 
             </div>
           </div>
-          <v-img  src="~/assets/frau.webp" cover style="height: 200px; width: 50%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
+          <v-img cover src="~/assets/frau.webp"
+                 style="height: 200px; width: 50%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
           </v-img>
         </div>
       </div>
     </v-img>
-    <div  style="background-color:  #e5dbdc; width: 100vw; height: 130px" class="pa-6">
+    <div class="pa-6" style="background-color:  #e5dbdc; width: 100vw; height: 130px">
       <h1 class="mt-n2 text-center h1mobile dm-serif">Willkommen bei Maxi Escort,</h1>
-      <p style="font-size: 12px" class="text-center mt-3" v-html="landingpage[0].text2+' ' + landingpage[0].text3">
+      <p class="text-center mt-3" style="font-size: 12px" v-html="landingpage[0].text2+' ' + landingpage[0].text3">
 
 
       </p>
     </div>
 
-    <div style="background-color:  white; width: 100vw; height: 350px" class="">
-      <v-row style="width: 100%;height: 100%" class="ma-0 justify-center align-center">
-        <v-col style="background-color: #f1edec; height: 80%" cols="10">
-          <v-row style="width: 100%;" class="ma-0">
+    <div class="" style="background-color:  white; width: 100vw; height: 350px">
+      <v-row class="ma-0 justify-center align-center" style="width: 100%;height: 100%">
+        <v-col cols="10" style="background-color: #f1edec; height: 80%">
+          <v-row class="ma-0" style="width: 100%;">
             <v-col cols="6">
               <div>
-                <v-img src="~/assets/frau-unten.jpg" cover class="mt-n10" style="width: 100%; height: 170%;">
+                <v-img class="mt-n10" cover src="~/assets/frau-unten.jpg" style="width: 100%; height: 170%;">
 
                 </v-img>
-                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text8"></p>
-                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text9"></p>
-                <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text10"></p>
+                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text8"></p>
+                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text9"></p>
+                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text10"></p>
               </div>
             </v-col>
             <v-col cols="6">
-              <h1  style="color: #615f5f;font-size: 15px" class="dosis1" v-html="landingpage[0].text6"></h1>
-              <p  style="color: #615f5f;font-size: 11px" class="dosis1 mt-2" v-html="landingpage[0].text7"></p>
+              <h1 class="dosis1" style="color: #615f5f;font-size: 15px" v-html="landingpage[0].text6"></h1>
+              <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text7"></p>
 
             </v-col>
           </v-row>
@@ -158,13 +166,13 @@
 
       </v-row>
     </div>
-    <div style="background-color:  #f1edec; width: 100vw; height: 200px" class="">
+    <div class="" style="background-color:  #f1edec; width: 100vw; height: 200px">
       <div class="pt-5">
         <h1 class="mt-3 text-center h1mobile dm-serif" v-html="landingpage[0].text4"></h1>
 
       </div>
       <div class="px-10 mt-4">
-        <p style="font-size: 14px" class="text-center" v-html="landingpage[0].text5">
+        <p class="text-center" style="font-size: 14px" v-html="landingpage[0].text5">
 
         </p>
       </div>
@@ -172,19 +180,21 @@
   </div>
 </template>
 
-<script >
-
+<script>
 import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
+import {useHead} from 'nuxt/app';
 
 export default {
-  data(){
-
-    return{
-      landingpage:[
+  components: {
+    FooterComponent,
+  },
+  data() {
+    return {
+      landingpage: [
         {
-          text1: 'Ein Mädchen sollte zwei Sachen sein:  elegant und fabulös.“  Coco Chanel.',
-          text2: 'wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
+          text1: 'Ein Mädchen sollte zwei Sachen sein: elegant und fabelhaft.“ – Coco Chanel.',
+          text2: 'Wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
           text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
           text4: 'Unsere Werte & Grundsätze',
           text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
@@ -193,35 +203,11 @@ export default {
           text8: 'Genießen Sie den Tag',
           text9: 'Maxi Escort Service Frankfurt.',
           text10: 'Ihre Maxi',
-        }
-      ]
-    }
+        },
+      ],
+    };
   },
-  components:{
-    FooterComponent
-  },
-  mounted() {
-    this.getLandingpage()
-  },
-  methods:{
-    async getLandingpage() {
-      const token = localStorage.getItem('token');
-      try {
-        let response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
-          method: 'GET',
-          headers: {
-            Authorization: token ? `Bearer ${token}` : undefined
-          }
-        });
-        this.landingpage = []
-        this.landingpage.push(response)
-        console.log(this.landingpage);
-      } catch (e) {
-        alert(e);
-      }
-    },
-  },
-  computed:{
+  computed: {
     wide() {
       const screenStore = useScreenStore();
       return screenStore.wide;
@@ -243,8 +229,43 @@ export default {
       return screenStore.tabletHorizontal;
     },
   },
-
-}
+  mounted() {
+    this.getLandingpage();
+  },
+  methods: {
+    async getLandingpage() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined,
+          },
+        });
+        this.landingpage = [];
+        this.landingpage.push(response);
+        console.log(this.landingpage);
+      } catch (e) {
+        alert(e);
+      }
+    },
+  },
+  setup() {
+    useHead({
+      title: 'Maxi Escort Service Frankfurt',
+      meta: [
+        {
+          name: 'description',
+          content: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+        },
+        {
+          name: 'keywords',
+          content: 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+        },
+      ],
+    });
+  },
+};
 </script>
 
 
@@ -252,7 +273,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
-.card{
+.card {
   z-index: 300;
   height: 650px;
   width: 80vw;
@@ -262,12 +283,14 @@ export default {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .dm-serif {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
 }
-.dosis{
+
+.dosis {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -275,21 +298,24 @@ export default {
   letter-spacing: 0.10em;
   line-height: 1.3;
 }
-p{
+
+p {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
 }
-.dosis1{
+
+.dosis1 {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
 }
-.cardIn1{
+
+.cardIn1 {
   height: 400px;
   width: 350px;
   background-color: white;
@@ -297,51 +323,57 @@ p{
   left: 40%;
   top: 10%;
 }
-.cardIn2{
-   height: 300px;
-   width: 250px;
-   background-color: black;
-  box-shadow: 2px -2px 5px rgba(67, 67, 67, 0.87);
-   position: absolute;
-   left: 28%;
-   top: 40%;
- }
- .text2{
-   color: #8e8c8c;
-   position: relative;
-   left: 50%;
-   top:10%;
-   font-size: 30px;
 
- }
-.text5{
+.cardIn2 {
+  height: 300px;
+  width: 250px;
+  background-color: black;
+  box-shadow: 2px -2px 5px rgba(67, 67, 67, 0.87);
+  position: absolute;
+  left: 28%;
+  top: 40%;
+}
+
+.text2 {
+  color: #8e8c8c;
+  position: relative;
+  left: 50%;
+  top: 10%;
+  font-size: 30px;
+
+}
+
+.text5 {
   color: #8e8c8c;
   position: relative;
   left: 0%;
-  top:10%;
+  top: 10%;
   font-size: 15px;
 
 }
- .text3{
-   position: relative;
-   width: 50%; /* Breite des Striches anpassen */
-   height: 2px; /* Höhe des Striches */
-   top:-50%;
-   left: 0%;
- }
-.text4{
-   position: relative;
-   width: 60%; /* Breite des Striches anpassen */
-   height: 2px; /* Höhe des Striches */
-   top:40%;
-   left: 110%;
- }
+
+.text3 {
+  position: relative;
+  width: 50%; /* Breite des Striches anpassen */
+  height: 2px; /* Höhe des Striches */
+  top: -50%;
+  left: 0%;
+}
+
+.text4 {
+  position: relative;
+  width: 60%; /* Breite des Striches anpassen */
+  height: 2px; /* Höhe des Striches */
+  top: 40%;
+  left: 110%;
+}
+
 .line-with-dot {
   position: relative;
   width: 50%; /* Breite des Striches anpassen */
   height: 2px; /* Höhe des Striches */
   background-color: black; /* Farbe des Striches */
-  top:-24%;
+  top: -24%;
   left: 50%;
 }
 
@@ -356,13 +388,16 @@ p{
   border-radius: 50%; /* Macht den Punkt rund */
   transform: translate(50%, -50%); /* Zentriert den Punkt richtig auf der Linie */
 }
-h1{
+
+h1 {
   font-size: 3vw;
 }
-.h1mobile{
+
+.h1mobile {
   font-size: 6vw;
 }
-style>
+
+style >
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
   height: 30vh; /* Gesamthöhe des Elements */
