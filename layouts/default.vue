@@ -6,7 +6,6 @@
   </div>
   <div v-if="mobile || tablet">
     <HeadermobileComponent></HeadermobileComponent>
-
     <v-main>
       <NuxtPage></NuxtPage>
     </v-main>
