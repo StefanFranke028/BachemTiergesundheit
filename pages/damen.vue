@@ -139,7 +139,10 @@
 import FooterComponent from "~/components/FooterComponent.vue";
 import { ref } from 'vue';
 
-// Methode zum Abrufen der Landingpage-Daten
+// Reaktives Array für Landingpage-Daten
+const escort = ref([]);
+
+// Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
   let token = null;
 
@@ -155,6 +158,7 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
         Authorization: token ? `Bearer ${token}` : undefined,
       },
     });
+
     return response;
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
@@ -176,17 +180,23 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 });
 
+// Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
+if (landingpage1.value) {
+  escort.value.push(landingpage1.value);
+  console.log(escort.value);
+}
+
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort,  Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
     },
   ],
 });
@@ -246,25 +256,9 @@ export default {
   }
   },
   mounted() {
-    this.getLandingpage()
   },
   methods:{
-    async getLandingpage() {
-      const token = localStorage.getItem('token');
-      try {
-        let response = await $fetch("https://maxi-escort.de:8443/auth/escort", {
-          method: 'GET',
-          headers: {
-            Authorization: token ? `Bearer ${token}` : undefined
-          }
-        });
-        this.escort = []
-        this.escort.push(response)
-        console.log(this.escort);
-      } catch (e) {
-        alert(e);
-      }
-    },
+
   },
   computed:{
 

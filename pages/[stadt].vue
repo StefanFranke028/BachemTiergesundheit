@@ -77,10 +77,6 @@
 </template>
 
 
-<script setup>
-
-import "./[stadt].vue";
-</script>
 
 <script>
 import {useScreenStore} from "~/stores/screen.js";

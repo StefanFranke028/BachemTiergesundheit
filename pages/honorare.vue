@@ -49,7 +49,7 @@
 
 
              </v-row>
-              <v-row v-for="preis in dinnerPreise" :key="preise" style="width: 100%; ">
+              <v-row v-for="preis in dinnerPreise" :key="preis" style="width: 100%; ">
                 <v-col  cols="6" class="d-flex justify-center tabelleleftmid">
                   <p>
                     {{ preis.dauer }}
@@ -273,7 +273,10 @@
 import FooterComponent from "~/components/FooterComponent.vue";
 import { ref } from 'vue';
 
-// Methode zum Abrufen der Landingpage-Daten
+// Reaktives Array für Landingpage-Daten
+const honorare = ref([]);
+
+// Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
   let token = null;
 
@@ -289,6 +292,7 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
         Authorization: token ? `Bearer ${token}` : undefined,
       },
     });
+
     return response;
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
@@ -310,17 +314,23 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 });
 
+// Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
+if (landingpage1.value) {
+  honorare.value.push(landingpage1.value);
+  console.log(honorare.value);
+}
+
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort,  Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
     },
   ],
 });
@@ -356,30 +366,10 @@ export default {
     },
   },
   mounted() {
-    this.getLandingpage()
+
   },
 
   methods:{
-    async getLandingpage() {
-      console.log(this.honorare);
-
-      const token = localStorage.getItem('token');
-      try {
-        let response = await $fetch("https://maxi-escort.de:8443/auth/honorare", {
-          method: 'GET',
-          headers: {
-            Authorization: token ? `Bearer ${token}` : undefined
-          }
-        });
-        this.honorare = []
-        this.honorare.push(response)
-        console.log(this.honorare);
-      } catch (e) {
-        alert(e);
-      }
-    },
-
-
   },
   data(){
     return{

@@ -3,14 +3,12 @@
     <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
     <div class="card">
       <div class="cardIn1">
-        <div  class="text-center text2 dosis">discover your <br> authentic style and <br> be the stunning lady <br> you naturally are
-          <br>
+        <div  class="text-center text2 dosis" v-html="blog[0].text2">
         </div>
       </div>
       <div class="cardIn2">
         <div class="text3 ">
-          <p class="text-center">
-            Hier könnte noch ein weiterer beliebiger Text stehen
+          <p class="text-center" v-html="blog[0].text1">
           </p>
         </div>
         <div class="line-with-dot">
@@ -58,10 +56,9 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-n5"> {{blog[0].text1}}</h2>
+              <h2 style="margin-left: -80px; " class="dm-serif mt-n5" v-html="blog[0].text1"></h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
-              {{blog[0].text2}}
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="blog[0].text2">
             </div>
             <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
           </div>
@@ -97,7 +94,11 @@
 import FooterComponent from "~/components/FooterComponent.vue";
 import { ref } from 'vue';
 
-// Methode zum Abrufen der Landingpage-Daten
+// Reaktives Array für Landingpage-Daten
+const blog = ref([]);
+const blogs = ref([]);
+
+// Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
   let token = null;
 
@@ -113,6 +114,7 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
         Authorization: token ? `Bearer ${token}` : undefined,
       },
     });
+
     return response;
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
@@ -134,17 +136,48 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 });
 
+const { data: blogs1, pending1, error2 } = await useAsyncData('blog', async () => {
+  let token = null;
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/blog/entries", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der Landingpage:', e);
+  }
+});
+// Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
+if (landingpage1.value) {
+  blog.value.push(landingpage1.value);
+  console.log(blog.value);
+}
+if (blogs1.value) {
+  blogs.value = blogs1.value;
+  console.log(blogs.value);
+}
+
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort,  Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
     },
   ],
 });
