@@ -1,5 +1,9 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
+  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3"
+
+
+
+  >
     <div class="card">
       <div class="cardIn1 px-5">
         <h1 style="margin-left: -90px" class="dm-serif" v-html="bewerben[0].text1"></h1>
@@ -28,10 +32,10 @@
               <div style="width: 100%; height: 300px;" class="d-flex align-center">
                 <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
                   <v-col cols="12" class="d-flex ">
-                    <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="" v-html="bewerben[0].telefon"></a>  </p>
+                    <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+bewerben[0].telefon">{{bewerben[0].telefon}}</a>  </p>
                   </v-col>
                   <v-col cols="12" class="d-flex ">
-                    <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="bewerben[0].email"> </a>  </p>
+                    <p style="cursor: pointer"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email"> {{bewerben[0].email}}</a>  </p>
                   </v-col>
                   <v-col cols="12" class="d-flex ">
                     <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
@@ -179,15 +183,14 @@
       </div>
 
     </v-img>
-
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%" class="ma-0">
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="" v-html="bewerben[0].telefon"></a>  </p>
+            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+ bewerben[0].telefon" v-html="bewerben[0].telefon"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="bewerben[0].email"></a>  </p>
+            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+ bewerben[0].email"  v-html="bewerben[0].email"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
             <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
@@ -198,7 +201,6 @@
           </v-col>
         </v-row>
       </div>
-
     </v-img>
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 550px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
