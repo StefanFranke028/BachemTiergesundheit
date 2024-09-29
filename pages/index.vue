@@ -252,7 +252,7 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Maxi Escort Service Frankfurt',
+      title: 'Maxi Escort Service',
       meta: [
         {
           name: 'description',
