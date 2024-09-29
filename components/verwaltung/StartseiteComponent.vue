@@ -1,8 +1,11 @@
 <template>
 
   <div style="overflow-y: scroll">
-    <v-row class="pa-0" style="height: 625px">
+    <v-row style="height: 625px">
       <!-- Textareas mit v-model -->
+      <v-col cols="6">
+        <v-textarea v-model="header" label="Header"></v-textarea>
+      </v-col>
       <v-col cols="6">
         <v-textarea v-model="textarea1" label="Textarea 1"></v-textarea>
       </v-col>
@@ -76,6 +79,7 @@
 export default {
   data() {
     return {
+      header: null,
       textarea1: '',
       textarea2: '',
       textarea3: '',
@@ -106,6 +110,7 @@ export default {
         });
 
         if (response) {
+          this.header = response.head
           // Wandelt HTML-Format zurück in normalen Text für Textareas
           this.textarea1 = this.unformattedText(response.text1);
           this.textarea2 = this.unformattedText(response.text2);
@@ -147,6 +152,7 @@ export default {
     async submitChanges() {
       this.loading = true;
       const data = {
+        head: this.header,
         text1: this.formattedText(this.textarea1),
         text2: this.formattedText(this.textarea2),
         text3: this.formattedText(this.textarea3),
@@ -187,5 +193,10 @@ export default {
 .v-tab {
   background-color: rgba(255, 255, 255, 0) !important;
   border-radius: 0 !important;
+}
+
+.v-row {
+  width: 100%;
+  margin: 0 0 0 0;
 }
 </style>

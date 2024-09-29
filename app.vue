@@ -10,6 +10,9 @@
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
+  head() {
+    return {title: 'My SSR App', meta: [{hid: 'description', name: 'description', content: 'This is an SSR page'}]}
+  },
   mounted() {
     const screenStore = useScreenStore();
     screenStore.initializeScreen();
@@ -21,7 +24,7 @@ export default {
     },
     desktop() {
       const screenStore = useScreenStore();
-      return process.client ? screenStore.desktop : true; // Standardmäßig Desktop während SSR
+      return process.client ? screenStore.desktop : true;
     },
     mobile() {
       const screenStore = useScreenStore();
