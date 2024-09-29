@@ -305,7 +305,72 @@ export default {
 };
 </script>
 
+<script setup>
+import FooterComponent from "~/components/FooterComponent.vue";
+import { useScreenStore } from "~/stores/screen.js";
+import { ref, onMounted } from 'vue'; // Für reaktive Daten und Lifecycle-Methoden
 
+// Reactive Daten für Landingpage
+const landingpage1 = ref([]);
+
+// Methode zum Abrufen der Landingpage-Daten
+const getLandingpage = async () => {
+  let token = null;
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    let response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+    landingpage1.value = [response];
+    console.log(landingpage1.value);
+  } catch (e) {
+    console.error('Fehler beim Laden der Landingpage:', e);
+    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
+    landingpage1.value = [{
+      description: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      keywords: 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      text1: 'Ein Mädchen sollte zwei Sachen sein: elegant und fabelhaft.“ – Coco Chanel.',
+      text2: 'Wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
+      text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
+      text4: 'Unsere Werte & Grundsätze',
+      text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
+      text6: 'Maxi Escort Team',
+      text7: 'Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass Ihre Wünsche erfüllt werden.',
+      text8: 'Genießen Sie den Tag',
+      text9: 'Maxi Escort Service Frankfurt.',
+      text10: 'Ihre Maxi',
+    }];
+  }
+};
+
+// onMounted Lifecycle Hook zum Abrufen der Daten nach dem Mounten der Komponente
+onMounted(() => {
+  getLandingpage();
+});
+
+// Setze dynamisch den Head basierend auf den Landingpage-Daten
+useHead({
+  title: landingpage1.value.length > 0 ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  meta: [
+    {
+      name: 'description',
+      content: landingpage1.value[0]?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+    },
+    {
+      name: 'keywords',
+      content: landingpage1.value[0]?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+    },
+  ],
+});
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
