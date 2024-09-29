@@ -148,17 +148,14 @@ export default {
 
     // Methode zum Formatieren des Textes vor dem Speichern
     formattedText(text) {
-      // Ersetze doppelte und einfache Zeilenumbrüche durch <br>-Tags
-      return text
-          .replace(/\n{2,}/g, "<br><br>")  // Doppelte oder mehr Zeilenumbrüche in zwei <br>-Tags umwandeln
-          .replace(/\n/g, "<br>");         // Einzelne Zeilenumbrüche in ein <br> umwandeln
+      // Ersetze alle Zeilenumbrüche durch <br>-Tags
+      return text.replace(/\n/g, "<br>");
     },
 
-    // Methode zum Rückformatieren von HTML in Text für die Textareas
+// Methode zum Rückformatieren von HTML in Text für die Textareas
     unformattedText(text) {
-      return text
-          .replace(/<br><br>/g, "\n\n")    // Doppelte <br>-Tags zurück in doppelte Zeilenumbrüche umwandeln
-          .replace(/<br\s*\/?>/g, "\n");   // Einzelne <br>-Tags in einfache Zeilenumbrüche umwandeln
+      // Ersetze alle <br>-Tags durch Zeilenumbrüche
+      return text.replace(/<br\s*\/?>/g, "\n");
     },
 
     // Methode zum Senden der Daten an die API

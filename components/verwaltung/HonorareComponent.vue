@@ -21,12 +21,6 @@
       <v-col cols="6">
         <v-textarea v-model="textarea2" label="Textarea 2"></v-textarea>
       </v-col>
-      <v-col cols="6">
-        <v-file-input v-model="bild" label="Bild" @change="convertToBase64"></v-file-input>
-      </v-col>
-      <v-col cols="6">
-        <v-img :src="base64Image" style="width: 100%; height: auto"></v-img>
-      </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
       </v-col>
