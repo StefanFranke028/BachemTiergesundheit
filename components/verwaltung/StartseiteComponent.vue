@@ -34,8 +34,32 @@
         <v-textarea v-model="textarea10" label="Textarea 10"></v-textarea>
       </v-col>
       <v-col class="d-flex justify-center" cols="12">
-        <v-btn :loading="loading" color="white" @click="submitChanges">Änderungen abschicken</v-btn>
+        <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
       </v-col>
+
+      <v-dialog
+          v-model="dialog"
+          max-width="400"
+          persistent
+      >
+        <v-card
+            text="Möchten Sie die vorgenommenen Änderungen wirklich speichern?"
+            title="Änderungen speichern?"
+        >
+          <template v-slot:actions>
+            <v-spacer></v-spacer>
+
+            <v-btn color="white" style="background-color: red !important;" @click="dialog = false">
+              Abbrechen
+            </v-btn>
+
+            <v-btn :loading="loading" color="white" style="background-color: green !important;" @click="submitChanges">
+              Speichern
+            </v-btn>
+          </template>
+        </v-card>
+      </v-dialog>
+
     </v-row>
     <v-snackbar
         v-model="snackbar"
@@ -66,7 +90,8 @@ export default {
       loading: false,
       snackbar: false,
       snackbarText: null,
-      snackbarColor: null
+      snackbarColor: null,
+      dialog: false // Für den Dialog zum Bestätigen
     };
   },
   mounted() {
@@ -98,6 +123,11 @@ export default {
       }
     },
 
+    // Methode zum Öffnen des Bestätigungsdialogs
+    openDialog() {
+      this.dialog = true;
+    },
+
     // Methode zum Formatieren des Textes vor dem Speichern
     formattedText(text) {
       // Ersetze doppelte und einfache Zeilenumbrüche durch <br>-Tags
@@ -115,7 +145,7 @@ export default {
 
     // Methode zum Senden der Daten an die API
     async submitChanges() {
-      this.loading = true
+      this.loading = true;
       const data = {
         text1: this.formattedText(this.textarea1),
         text2: this.formattedText(this.textarea2),
@@ -137,17 +167,17 @@ export default {
 
         if (response) {
           console.log("LandingPage erfolgreich aktualisiert:", response);
+          this.snackbarText = "Änderungen erfolgreich gespeichert";
+          this.snackbarColor = "success";
         }
-        this.snackbarText = "Änderungen erfolgreich gespeichert";
-        this.snackbarColor = "success";
-        this.snackbar = true;
+        this.dialog = false;
       } catch (e) {
         console.error("Fehler beim Aktualisieren der LandingPage:", e);
         this.snackbarText = "Fehler beim Speichern der Änderungen";
         this.snackbarColor = "error";
-        this.snackbar = true;
       }
-      this.loading = false
+      this.snackbar = true;
+      this.loading = false;
     },
   }
 };
