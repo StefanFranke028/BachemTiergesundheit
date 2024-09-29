@@ -4,7 +4,7 @@ import {defineStore} from 'pinia';
 export const useScreenStore = defineStore('screen', {
     state: () => ({
         wide: false,
-        desktop: false,
+        desktop: true, // Standardmäßig auf true setzen
         tabletHorizontal: false,
         tablet: false,
         mobile: false,

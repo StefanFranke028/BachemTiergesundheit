@@ -17,25 +17,29 @@ export default {
   computed: {
     wide() {
       const screenStore = useScreenStore();
-      return screenStore.wide;
+      return process.client ? screenStore.wide : false;
     },
     desktop() {
       const screenStore = useScreenStore();
-      return screenStore.desktop;
+      return process.client ? screenStore.desktop : true; // Standardmäßig Desktop während SSR
     },
     mobile() {
       const screenStore = useScreenStore();
-      return screenStore.mobile;
+      return process.client ? screenStore.mobile : false;
     },
     tablet() {
       const screenStore = useScreenStore();
-      return screenStore.tablet;
+      return process.client ? screenStore.tablet : false;
     },
     tabletHorizontal() {
       const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
+      return process.client ? screenStore.tabletHorizontal : false;
+    },
+    isVerwaltung() {
+      return this.$route.path === '/verwaltung';
     },
   },
+
 }
 </script>
 

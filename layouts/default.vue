@@ -1,62 +1,52 @@
 <template>
-  <div v-if="desktop || tabletHorizontal">
-    <HeaderComponent v-if="!isVerwaltung"></HeaderComponent>
+  <div>
+    <HeaderComponent v-if="!isVerwaltung && (desktop || tabletHorizontal)"></HeaderComponent>
+    <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <NuxtPage></NuxtPage>
-    <FooterComponent></FooterComponent>
-  </div>
-  <div v-if="mobile || tablet">
-    <HeadermobileComponent></HeadermobileComponent>
-    <v-main>
-      <NuxtPage></NuxtPage>
-    </v-main>
     <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
-
 import HeaderComponent from "~/components/HeaderComponent.vue";
 import FooterComponent from "~/components/FooterComponent.vue";
-import {useScreenStore} from "~/stores/screen.js";
 import HeadermobileComponent from "~/components/HeadermobileComponent.vue";
+import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   components: {
     FooterComponent,
     HeaderComponent,
-    HeadermobileComponent
+    HeadermobileComponent,
   },
   computed: {
     wide() {
       const screenStore = useScreenStore();
-      return screenStore.wide;
+      return process.client ? screenStore.wide : false;
     },
     desktop() {
       const screenStore = useScreenStore();
-      return screenStore.desktop;
+      return process.client ? screenStore.desktop : true; // Standardmäßig Desktop während SSR
     },
     mobile() {
       const screenStore = useScreenStore();
-      return screenStore.mobile;
+      return process.client ? screenStore.mobile : false;
     },
     tablet() {
       const screenStore = useScreenStore();
-      return screenStore.tablet;
+      return process.client ? screenStore.tablet : false;
     },
     tabletHorizontal() {
       const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
+      return process.client ? screenStore.tabletHorizontal : false;
     },
     isVerwaltung() {
-      const route = useRoute();
-      return route.path === '/verwaltung';
-    }
+      return this.$route.path === '/verwaltung';
+    },
   },
-
-}
+};
 </script>
 
 <style scoped>
-
-
+/* Ihre Styles bleiben unverändert */
 </style>
