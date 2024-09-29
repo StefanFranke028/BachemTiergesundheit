@@ -2,11 +2,10 @@
 <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
   <div class="card">
     <div class="cardIn1 px-5">
-      <h1 style="margin-left: -90px" class="dm-serif">Unsere <br> Begleitpersonen</h1>
+      <h1 style="margin-left: -90px" class="dm-serif" v-html="escort[0].text1"></h1>
       <div class="vertical-marker">
       </div >
-      <p class="dosis" style="margin-top: -100px;">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd </p>
+      <p class="dosis" style="margin-top: -100px;" v-html="escort[0].text2"></p>
       <router-link to="kontakt"  style="position: relative; left: -14%; top:15vh">    <v-btn theme="dark" class="text-center" >Kontakt</v-btn></router-link>
     </div>
   </div>
@@ -20,7 +19,7 @@
       </v-col>
     </v-row>
   </div>
-  <div v-for="dame in damen" :key="dame"style="width: 100vw; height:1200px">
+  <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1200px">
     <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
       <v-col style="background-color: #d4e2ea" class="pa-0" cols="6">
         <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
@@ -76,10 +75,10 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-n2"> {{escort[0].text1}}</h2>
+              <h2 style="margin-left: -80px; " class="dm-serif mt-n2" v-html="escort[0].text1"> </h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
-              {{escort[0].text2}}
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="escort[0].text2">
+
             </div>
             <router-link to="kontakt"  style="position: relative; left: -8%; top:16vh">    <v-btn theme="dark" class="text-center" >Kontakt</v-btn></router-link>
           </div>
@@ -150,8 +149,6 @@ export default {
       escort:[{
         text1: 'Unsere Begleitpersonen',
         text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ',
-        text3: 'Hier Coole Überschrift',
-        text4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna r',
       }],
       damen:[
           {
@@ -192,6 +189,27 @@ export default {
       ]
 
   }
+  },
+  mounted() {
+    this.getLandingpage()
+  },
+  methods:{
+    async getLandingpage() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/escort", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+        this.escort = []
+        this.escort.push(response)
+        console.log(this.escort);
+      } catch (e) {
+        alert(e);
+      }
+    },
   },
   computed:{
 

@@ -2,17 +2,11 @@
   <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1 px-5" >
-        <h1 style="margin-left: -90px" class="dm-serif"> Meine Vita</h1>
+        <h1 style="margin-left: -90px" class="dm-serif" v-html="vita[0].text1"> </h1>
         <div class="vertical-marker">
         </div >
-        <p class="dosis" style="margin-top: -100px;">
-          Unsere Agentur wurde im Jahr 2007 unter dem Namen Maxi &amp; Friends
-          Escort gegründet, inspiriert von der Vision, außergewöhnliche
-          Begleitungen für besondere Anlässe zu bieten. Seitdem haben wir uns
-          kontinuierlich weiterentwickelt und sind stolz darauf, eine der führenden
-          Agenturen in der Branche zu sein. Heute präsentieren wir uns im neuen
-          Gewand als Maxi Escort, um Ihnen weiterhin erstklassige Erlebnisse zu
-          bieten.
+        <p class="dosis" style="margin-top: -100px;" v-html="vita[0].text2">
+
         </p>
         <router-link aria-label="Escort" to="damen" style="position: relative; left: -14%; top:13vh">  <v-btn theme="dark" class="text-center" > zum Escort</v-btn></router-link>
 
@@ -20,12 +14,10 @@
     </div>
     <div style="width: 100vw; height: 600px">
       <v-row style="width: 100%;" class="mx-0 pa-0">
-        <v-col class="pa-0" cols="6">
+        <v-col class="pa-0" cols="12">
           <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/Vita.jpeg"  alt=""></v-img>
         </v-col>
-        <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/Vita2.jpg"  alt=""></v-img>
-        </v-col>
+
       </v-row>
     </div>
     <div style="width: 100vw; height: 900px">
@@ -37,25 +29,11 @@
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
 
             <v-col cols="7">
-              <h2 style="font-size: 1.6vw" class="text-center dm-serif">Was mich dazu inspiriert hat, Maxi Escort zu gründen?</h2>
+              <h2 style="font-size: 1.6vw" class="text-center dm-serif" v-html="vita[0].text3"></h2>
               <br>
               <br>
-              <p class="dosis" style=" text-align: justify;">
-                Ich habe Maxi Escort gegründet, weil ich eine Leidenschaft für erstklassigen Service
-                und unvergessliche Erlebnisse habe. Es war mir wichtig, einen Ort zu schaffen, an
-                dem sich unsere Kunden wohl und geschätzt fühlen. Unsere Dienstleistungen sind
-                darauf ausgerichtet, höchste Ansprüche zu erfüllen und besondere Momente zu
-                kreieren.
-                <br>
-                <br>
-                Ich wollte etwas Einzigartiges schaffen, das sich durch Diskretion, Professionalität
-                und persönliche Betreuung auszeichnet. Maxi Escort ist mehr als nur ein Service –
-                es ist eine Erfahrung, die in Erinnerung bleibt.
-                <br>
-                <br>
-                Maxi Escort ist einzigartig, weil wir auf höchste Qualität und Diskretion setzen.
-                Unsere Dienstleistungen sind maßgeschneidert, um Ihre individuellen Wünsche zu
-                erfüllen. Hier sind einige Punkte, die uns besonders machen:
+              <p class="dosis" style=" text-align: justify;" v-html="vita[0].text4">
+
               </p>
 
 
@@ -74,33 +52,26 @@
 
             <v-col class="" cols="7">
 
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif">Exklusivität</h5>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif" v-html="vita[0].text5"></h5>
 
-              <p class="dosis" style=" text-align: justify;">
-                Wir bieten ausschließlich Begleitungen an, die durch uns sorgfältig ausgewählt
-                wurden, um unseren und Ihren Ansprüchen immer gerecht werden zu können.
+              <p class="dosis" style=" text-align: justify;" v-html="vita[0].text6">
+
 
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Diskretion</h5>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10" v-html="vita[0].text7"></h5>
 
-              <p class="dosis" style=" text-align: justify;">
-                Ihre Privatsphäre ist uns heilig. Wir garantieren und stehen für absolute
-                Vertraulichkeit.
+              <p class="dosis" style=" text-align: justify;" v-html="vita[0].text8">
+
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Personalisierter Service</h5>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10"  v-html="vita[0].text9"></h5>
 
-              <p class="dosis" style=" text-align: justify;">
-                Jeder Kunde erhält eine individuelle Betreuung, um
-                sicherzustellen, dass fast alle Wünsche erfüllt werden.
+              <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text10">
+
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10">Erfahrung</h5>
+              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10" v-html="vita[0].text11"></h5>
 
-              <p class="dosis" style=" text-align: justify;">
-                Mit jahrelanger Erfahrung in der Branche wissen wir genau, wie wir Ihre
-                Erwartungen übertreffen können.
-                Wir freuen uns darauf, Ihnen einen unvergesslichen Service zu bieten!
+              <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text12">
 
-                Unsere Begleitpersonen sind das Herzstück von Maxi Escort.
               </p>
 
 
@@ -127,48 +98,36 @@
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-16">
 
             <v-col cols="7">
-              <h1 style="font-size: 1.6vw" class="text-center dm-serif">Was macht sie besonders?</h1>
-              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-5">Vielfalt</h2>
+              <h1 style="font-size: 1.6vw" class="text-center dm-serif" v-html="vita[0].text13"></h1>
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-5" v-html="vita[0].text14"></h2>
 
-              <p class="dosis" style=" text-align: justify;">
-                Unsere Begleitpersonen kommen aus verschiedenen Hintergründen und
-                Kulturen, sodass wir für jeden Geschmack die passende Begleitung bieten können.
+              <p class="dosis" style=" text-align: justify;" v-html="vita[0].text15">
 
               </p>
-              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8">Professionalität</h2>
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8"  v-html="vita[0].text16"></h2>
 
-              <p class="dosis" style=" text-align: justify;">
-                Jede Begleitperson wird sorgfältig ausgewählt, um höchsten
-                Ansprüchen gerecht werden zu können, sei es Öffentlicher Auftritt, Eloquenz oder
-                Einfühlungsvermögen. Nichts ist schlimmer als eine unprofessionelle Begleitung.
+              <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text17">
+
 
               </p>
 
-              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8">Charme und Intelligenz</h2>
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8"  v-html="vita[0].text18"></h2>
 
-              <p class="dosis" style=" text-align: justify;">
-                Unsere Begleitpersonen sind nicht nur attraktiv, sondern
-                auch charmant und intelligent. Sie können sich in jeder Gesellschaft bewegen und
-                interessante Gespräche führen.
+              <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text19">
+
 
               </p>
 
-              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8">Diskretion und Vertraulichkeit</h2>
+              <h2 style="font-size: 1.2vw" class="text-center dm-serif mt-8"  v-html="vita[0].text20"></h2>
 
-              <p class="dosis" style=" text-align: justify;">
-                Ihre Privatsphäre ist uns wichtig. Unsere
-                Begleitpersonen sind diskret und respektieren Ihre Vertraulichkeit.
+              <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text21">
+
 
               </p>
-              <br><br>
-              <p>
-                Ich bin stolz darauf, ein Team zu haben, das so engagiert und professionell ist.
+              <br>
+              <p  v-html="vita[0].text22">
               </p>
-              <p>
-                Diese Kombination aus Erfahrung, Professionalität, Exklusivität und
-                Kundenzufriedenheit macht Maxi Escort zu einer herausragenden Agentur in der
-                Branche.
-              </p>
+
               <div class="d-flex justify-center mt-10" style="width: 100%;">
               </div>
             </v-col>
@@ -188,12 +147,12 @@
             </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -120px;" class="dm-serif mt-2"> {{vita[0].text1}}</h2>
+              <h2 style="margin-left: -120px;" class="dm-serif mt-2" v-html="vita[0].text1"> </h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
-              {{vita[0].text2}}
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="vita[0].text2">
+
             </div>
-             <router-link  aria-label="Escort" to="damen" >  <v-btn  theme="dark" class="text-center mt-3" >zum Escort</v-btn></router-link>
+             <router-link  aria-label="Escort" to="damen">  <v-btn  theme="dark" class="text-center mt-3" >zum Escort</v-btn></router-link>
           </div>
         </div>
 
@@ -203,36 +162,28 @@
 
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
-        <h2 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text3}}</h2>
+        <h2 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text3"></h2>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text4}}
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text4">
+
         </p>
       </div>
 
     </v-img>
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
-        <h1 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text5}}</h1>
+        <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text5"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text6}}
-        </p>
-        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text7}}</h1>
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text6"></p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text7"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text8}}
-        </p>
-        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text9}}</h1>
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text8"></p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text9"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text10}}
-        </p>
-        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text11}}</h1>
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text10"></p>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text11"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text12}}
-        </p>
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text12"></p>
       <router-link to="damen" >  <v-btn theme="dark" class="mt-5 text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
       </div>
 
@@ -241,30 +192,27 @@
 
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
-        <h1 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text13}}</h1>
-        <h1 style="font-size: 5vw" class="text-center dm-serif">{{vita[0].text14}}</h1>
+        <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text13"></h1>
+        <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text14"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text15}}
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text15">
+
         </p>
-        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text16}}</h1>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text16"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text17}}
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text17">
         </p>
-        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text18}}</h1>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text18"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text19}}
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text19">
+
         </p>
-        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif">{{vita[0].text20}}</h1>
+        <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text20"></h1>
 
-        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px">
-          {{vita[0].text21}}
+        <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text21">
+
         </p>
       </div>
-
-
     </v-img>
   </div>
 </template>
@@ -311,6 +259,27 @@ export default {
             'Diese Kombination aus Erfahrung, Professionalität, Exklusivität und Kundenzufriedenheit macht Maxi Escort zu einer herausragenden Agentur in der Branche.',
       }]
     }
+  },
+  mounted() {
+    this.getLandingpage()
+  },
+  methods:{
+    async getLandingpage() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/vita", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+        this.vita = []
+        this.vita.push(response)
+        console.log(this.vita);
+      } catch (e) {
+        alert(e);
+      }
+    },
   },
   computed:{
     wide() {

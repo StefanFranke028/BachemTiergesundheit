@@ -72,7 +72,7 @@
       </v-col>
     </v-row>
     <v-row style="width: 100%"  class="ma-0 ">
-      <v-col cols="12" v-for="stadt in staedte"  :key="stadt">
+      <v-col cols="6" v-for="stadt in staedte"  :key="stadt">
         <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.stadt">
           <p class="text-center" style="cursor:pointer">
             {{stadt.stadt}}

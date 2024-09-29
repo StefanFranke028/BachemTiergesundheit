@@ -1,12 +1,16 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
+  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3"
+
+
+
+  >
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1 style="margin-left: -90px" class="dm-serif">{{bewerben[0].text1}}</h1>
+        <h1 style="margin-left: -90px" class="dm-serif" v-html="bewerben[0].text1"></h1>
         <div class="line-with-dot">
         </div>
-        <p class="dosis"  style="margin-bottom: 100px;margin-left: 30px; ">
-         {{bewerben[0].text2}}
+        <p class="dosis"  style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
+
           </p>
       </div>
     </div>
@@ -28,17 +32,16 @@
               <div style="width: 100%; height: 300px;" class="d-flex align-center">
                 <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
                   <v-col cols="12" class="d-flex ">
-                    <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="">{{bewerben[0].telefon }}</a>  </p>
+                    <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+bewerben[0].telefon">{{bewerben[0].telefon}}</a>  </p>
                   </v-col>
                   <v-col cols="12" class="d-flex ">
-                    <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href=""> {{bewerben[0].email }}</a>  </p>
+                    <p style="cursor: pointer"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email"> {{bewerben[0].email}}</a>  </p>
                   </v-col>
                   <v-col cols="12" class="d-flex ">
                     <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
                   </v-col>
                   <v-col cols="12" class="d-flex ">
-                    <p style="">Ich freue mich darauf, <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
-                      ermöglichen zu können.</p>
+                    <p style="" v-html="bewerben[0].text3"></p>
                   </v-col>
                 </v-row>
               </div>
@@ -169,10 +172,9 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-2"> {{bewerben[0].text1}}</h2>
+              <h2 style="margin-left: -80px; " class="dm-serif mt-2" v-html="bewerben[0].text1"></h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
-              {{bewerben[0].text2}}
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="bewerben[0].text2">
             </div>
             <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-7" >zur Vita</v-btn></router-link>
           </div>
@@ -181,15 +183,14 @@
       </div>
 
     </v-img>
-
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%" class="ma-0">
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="">{{bewerben[0].telefon}}</a>  </p>
+            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+ bewerben[0].telefon" v-html="bewerben[0].telefon"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href=""> {{bewerben[0].email}}</a>  </p>
+            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+ bewerben[0].email"  v-html="bewerben[0].email"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
             <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
@@ -200,7 +201,6 @@
           </v-col>
         </v-row>
       </div>
-
     </v-img>
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 550px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
@@ -359,7 +359,27 @@ export default {
       return screenStore.tabletHorizontal;
     },
   },
+  mounted() {
+    this.getLandingpage()
+  },
+
   methods:{
+    async getLandingpage() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/bewerben", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+        this.bewerben = []
+        this.bewerben.push(response)
+        console.log(this.bewerben);
+      } catch (e) {
+        alert(e);
+      }
+    },
     dialPhoneNumber() {
       window.location.href = "tel:015167037696"; // Fügt die tatsächliche Telefonnummer hier ein
     },

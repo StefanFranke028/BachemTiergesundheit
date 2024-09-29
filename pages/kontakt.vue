@@ -2,16 +2,11 @@
 <div v-if="desktop || tabletHorizontal" style="width: 100vw;" class="mt-3">
   <div class="card">
     <div class="cardIn1 px-5">
-      <h1 style="margin-left: -90px" class="dm-serif">Unser <br> Kontakt</h1>
+      <h1 style="margin-left: -90px" class="dm-serif" v-html="kontakt[0].text1"></h1>
       <div class="line-with-dot">
       </div>
-      <p class="dosis " style="margin-bottom: 100px;">
-        Hey... wie schön, dass du hier bist! <br> <br>
-        Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit,
-        Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen
-        unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen
-        jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über
-        die folgenden Wege:
+      <p class="dosis " style="margin-bottom: 100px;" v-html="kontakt[0].text2">
+
       </p>
     </div>
   </div>
@@ -31,20 +26,19 @@
             <div style="width: 100%; height: 300px;" class="d-flex align-center">
               <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
                 <v-col cols="12" class="d-flex ">
-                  <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="">+49 151-670 376 96</a>  </p>
+                  <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon">{{kontakt[0].telefon}}</a>  </p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
-                  <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href=""> office@maxi-escort.de</a>  </p>
+                  <p style="cursor: pointer"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email"> {{kontakt[0].email}}</a>  </p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
                   <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
-                  <p style="">Ich freue mich darauf, <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
-                    ermöglichen zu können.</p>
+                  <p style="" v-html="kontakt[0].text3"></p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
-                  <p style=" ">Für Bewerbungen als Escort Modell nutze doch bitte unsere E-Mail <a href="mailto:bewerbung@maxi-escort.de">bewerbung@maxi-escort.de</a>.  Wir melden uns dann sehr gerne bei Dir.</p>
+                  <p style=" " v-html="kontakt[0].text4"></p>
                 </v-col>
               </v-row>
             </div>
@@ -82,10 +76,10 @@
       <div style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%; " class="ma-0">
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="">{{kontakt[0].telefon}}</a>  </p>
+            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="" v-html="kontakt[0].telefon"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href=""> {{kontakt[0].email}}</a>  </p>
+            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="kontakt[0].email"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
             <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
@@ -122,18 +116,41 @@ export default {
       kontakt:[{
         text1: 'Bewirb dich bei uns',
         text2: 'Hey... wie schön, dass du hier bist! Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit, Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über die folgenden Wege:',
+        text3: 'Ich freue mich darauf, euch kennenzulernen und euch ein unvergessliches Erlebnis ermöglichen zu können.',
+        text4: 'Für Bewerbungen als Escort Modell nutze doch bitte unsere E-Mail bewerbung@maxi-escort.de. Wir melden uns dann sehr gerne bei Dir.',
         telefon: '+49 151-670 376 96',
         email: 'office@maxi-escort.de',
       }]
     }
   },
+  mounted() {
+    this.getLandingpage()
+  },
+
   methods:{
+    async getLandingpage() {
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/kontakt", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+        this.kontakt = []
+        this.kontakt.push(response)
+        console.log(this.kontakt);
+      } catch (e) {
+        alert(e);
+      }
+    },
     dialPhoneNumber() {
       window.location.href = "tel:015167037696"; // Fügt die tatsächliche Telefonnummer hier ein
     },
     openEmailProgram() {
-      window.location.href = "mailto:office@maxi-escort.de"; // Fügt die tatsächliche E-Mail-Adresse hier ein
+      window.location.href = "mailto:bewerbung@maxi-escort.de"; // Fügt die tatsächliche E-Mail-Adresse hier ein
     }
+
   },
   computed:{
     wide() {
