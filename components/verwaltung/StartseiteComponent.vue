@@ -4,8 +4,15 @@
     <v-row style="height: 625px">
       <!-- Textareas mit v-model -->
       <v-col cols="6">
-        <v-text-field v-model="description" label="Header Description"></v-text-field>
+        <v-text-field
+            v-model="description"
+            :counter="155"
+            :rules="[maxLengthRule]"
+            label="Header Description"
+            maxlength="155"
+        ></v-text-field>
       </v-col>
+
       <v-col cols="6">
         <v-text-field v-model="keywords" label="Header Keywords"></v-text-field>
       </v-col>
@@ -83,6 +90,7 @@ export default {
   data() {
     return {
       description: null,
+      maxLengthRule: v => (v && v.length <= 155) || 'Die Beschreibung darf maximal 155 Zeichen lang sein.',
       keywords: null,
       textarea1: '',
       textarea2: '',
