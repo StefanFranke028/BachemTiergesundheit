@@ -1,68 +1,61 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
+  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1 class="dm-serif" style="margin-left: -90px">Unsere <br> Honorare </h1>
+        <h1 style="margin-left: -90px" class="dm-serif" v-html="honorare[0].text1"></h1>
         <div class="vertical-marker">
-        </div>
-        <p class="dosis" style="margin-top: -100px">
-          Lieber Gast, unsere Agentur präsentiert vier exklusive
-          Honorarkategorien. Dinner Date, Classic, Exklusiv und VIP.
-          Jede Dame genießt die Freiheit, das aus den Honorarkategorien frei zu
-          wählen. <br>
-          Zudem entscheidet sie selbst, ob sie ausschließlich Dinner Dates oder
-          Escort Dates anbieten möchte.
+        </div >
+        <p  class="dosis" style="margin-top: -100px" v-html="honorare[0].text2">
+
         </p>
         <div class="d-flex justify-center mt-10" style="width: 100%;">
-          <router-link style="position: relative; left: -14%; top:11vh" to="damen">
-            <v-btn class="text-center" theme="dark">ZU Unseren Begleitpersonen</v-btn>
-          </router-link>
+          <router-link to="damen" style="position: relative; left: -14%; top:11vh">    <v-btn theme="dark" class="text-center" >ZU Unseren Begleitpersonen</v-btn></router-link>
 
         </div>
       </div>
     </div>
     <div style="width: 100vw; height: 600px">
-      <v-row class="mx-0 pa-0" style="width: 100%;">
+      <v-row style="width: 100%;" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="600px" src="~/assets/federn.webp" style="z-index: 0"></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/federn.webp"  alt=""></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="600px" src="~/assets/decke.jpg" style="z-index: 0"></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/decke.jpg"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>
     <div style="width: 100vw; height: 900px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
-        <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
-          <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
+      <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
+        <v-col style="background-color: #d4e2ea" class="pa-0" cols="6">
+          <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">Maxi Dinner Date</h2>
+              <h2 style="font-size: 2vw" class="text-center dm-serif">Maxi Dinner Date</h2>
               <br>
               <br>
-              <v-row style="width: 100%; border-radius: 10px">
-                <v-col class="d-flex justify-center tabelleleft" cols="6">
-                  <h3>
-                    Dauer
-                  </h3>
-                </v-col>
-                <v-divider vertical></v-divider>
-                <v-col class="d-flex justify-center tabelleright" cols="6">
-                  <h3>
-                    Geschenk
+             <v-row style="width: 100%; border-radius: 10px">
+              <v-col  cols="6" class="d-flex justify-center tabelleleft">
+                <h3>
+                  Dauer
+                </h3>
+              </v-col>
+               <v-divider vertical></v-divider>
+               <v-col cols="6" class="d-flex justify-center tabelleright">
+                 <h3>
+                  Geschenk
 
-                  </h3>
-                </v-col>
+                 </h3>
+              </v-col>
 
 
-              </v-row>
+             </v-row>
               <v-row v-for="preis in dinnerPreise" :key="preise" style="width: 100%; ">
-                <v-col class="d-flex justify-center tabelleleftmid" cols="6">
+                <v-col  cols="6" class="d-flex justify-center tabelleleftmid">
                   <p>
                     {{ preis.dauer }}
                   </p>
                 </v-col>
-                <v-col class="d-flex justify-center tabellerightmid" cols="6">
+                <v-col cols="6" class="d-flex justify-center tabellerightmid">
                   <p>
                     {{ preis.preis }}
                   </p>
@@ -73,30 +66,30 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="900" src="~/assets/blumen.jpg" style="z-index: 0;"></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>
     <div style="width: 100vw; height: 900px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
+      <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="900" src="~/assets/blumen.jpg" style="z-index: 0;"></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
         </v-col>
-        <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
-          <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
+        <v-col style="background-color: #d4e2ea" class="pa-0" cols="6">
+          <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">Maxi Escort Date</h2>
+              <h2 style="font-size: 2vw" class="text-center dm-serif">Maxi Escort Date</h2>
               <br>
               <br>
               <v-row style="width: 100%; border-radius: 10px">
-                <v-col class="d-flex justify-center tabelleleft" cols="3">
+                <v-col  cols="3" class="d-flex justify-center tabelleleft">
                   <h3>
                     Dauer
                   </h3>
                 </v-col>
                 <v-divider vertical></v-divider>
-                <v-col class="d-flex justify-center tabelle" cols="3">
+                <v-col cols="3" class="d-flex justify-center tabelle">
                   <h3>
                     Classic
 
@@ -104,7 +97,7 @@
                 </v-col>
                 <v-divider vertical></v-divider>
 
-                <v-col class="d-flex justify-center tabelle" cols="3">
+                <v-col cols="3" class="d-flex justify-center tabelle">
                   <h3>
                     Exclusiv
 
@@ -112,7 +105,7 @@
                 </v-col>
                 <v-divider vertical></v-divider>
 
-                <v-col class="d-flex justify-center tabelleright" cols="3">
+                <v-col cols="3" class="d-flex justify-center tabelleright">
                   <h3>
                     VIP
 
@@ -121,23 +114,23 @@
 
 
               </v-row>
-              <v-row v-for="preis in escordPreise" :key="preise" style="width: 100%; ">
-                <v-col class="d-flex justify-center tabelleleftmid" cols="3">
+              <v-row v-for="preis in escordPreise" :key="preis" style="width: 100%; ">
+                <v-col  cols="3" class="d-flex justify-center tabelleleftmid">
                   <p class="text-center">
                     {{ preis.dauer }}
                   </p>
                 </v-col>
-                <v-col class="d-flex justify-center tabellerightmid" cols="3">
+                <v-col cols="3" class="d-flex justify-center tabellerightmid">
                   <p>
                     {{ preis.classic }}
                   </p>
                 </v-col>
-                <v-col class="d-flex justify-center tabellerightmid" cols="3">
+                <v-col cols="3" class="d-flex justify-center tabellerightmid">
                   <p>
                     {{ preis.exclusiv }}
                   </p>
                 </v-col>
-                <v-col class="d-flex justify-center tabellerightmid" cols="3">
+                <v-col cols="3" class="d-flex justify-center tabellerightmid">
                   <p>
                     {{ preis.vip }}
                   </p>
@@ -150,23 +143,18 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg.png"
-           style="width: 100%; height: 450px;  ">
-      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-        <div class="d-flex justify-center align-center"
-             style="width: 75%; height: 400px;    background-color: #c7dee6;">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #c7dee6;">
           <div class="vertical-marker-mobile">
-          </div>
+          </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
-            <div class="text-center dosis" style="position: relative; top:-50px">
-              <h2 class="dm-serif mt-n5" style="margin-left: -80px; "> {{ honorare[0].text1 }}</h2>
+            <div style="position: relative; top:-50px" class="text-center dosis">
+              <h2 style="margin-left: -80px; " class="dm-serif mt-n5" v-html="honorare[0].text1"> </h2>
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;">
-              {{ honorare[0].text2 }}
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="honorare[0].text2">
             </div>
-            <router-link aria-label="Vita" to="vita">
-              <v-btn class="text-center mt-3" theme="dark">zur Vita</v-btn>
-            </router-link>
+            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
           </div>
         </div>
 
@@ -174,35 +162,34 @@
 
     </v-img>
 
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/blumen.jpg" style="width: 100%; height: 450px;  ">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
 
-      <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
-        <v-col class=" " cols="12">
-          <h2 class="text-center dm-serif" style="font-size: 8vw; color: #c7dee6">Maxi Dinner Date</h2>
+      <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
+        <v-col cols="12" class=" ">
+          <h2 style="font-size: 8vw; color: #c7dee6" class="text-center dm-serif">Maxi Dinner Date</h2>
           <br>
           <br>
-          <v-row class="mx-0" style="width: 100%; border-radius: 10px">
-            <v-col class="d-flex justify-center tabelleleft" cols="6">
+          <v-row style="width: 100%; border-radius: 10px" class="mx-0">
+            <v-col  cols="6" class="d-flex justify-center tabelleleft">
               <h3>
                 Dauer
               </h3>
             </v-col>
             <v-divider vertical></v-divider>
-            <v-col class="d-flex justify-center tabelleright" cols="6">
+            <v-col cols="6" class="d-flex justify-center tabelleright">
               <h3>
                 Geschenk
 
               </h3>
             </v-col>
           </v-row>
-          <v-row v-for="preis in dinnerPreise" :key="preis" class="mx-0" style="width: 100%; ">
-            <v-col class="d-flex justify-center tabelleleftmid" cols="6">
+          <v-row v-for="preis in dinnerPreise" class="mx-0" :key="preis" style="width: 100%; ">
+            <v-col  cols="6" class="d-flex justify-center tabelleleftmid">
               <p>
                 {{ preis.dauer }}
               </p>
             </v-col>
-            <v-col class="d-flex justify-center tabellerightmid" cols="6">
+            <v-col cols="6" class="d-flex justify-center tabellerightmid">
               <p>
                 {{ preis.preis }}
               </p>
@@ -212,22 +199,21 @@
         </v-col>
       </v-row>
     </v-img>
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/blumen.jpg" style="width: 100%; height: 800px;  ">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 800px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
 
-      <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
-        <v-col class=" " cols="12">
-          <h2 class="text-center dm-serif" style="font-size: 8vw; color: #c7dee6">Maxi Escort Date</h2>
+      <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
+        <v-col cols="12" class=" ">
+          <h2 style="font-size: 8vw; color: #c7dee6" class="text-center dm-serif">Maxi Escort Date</h2>
           <br>
           <br>
-          <v-row class="ma-0" style="width: 100%; border-radius: 10px">
-            <v-col class="d-flex justify-center tabelleleft" cols="3">
+          <v-row style="width: 100%; border-radius: 10px" class="ma-0">
+            <v-col  cols="3" class="d-flex justify-center tabelleleft">
               <h3>
                 Dauer
               </h3>
             </v-col>
             <v-divider vertical></v-divider>
-            <v-col class="d-flex justify-center tabelle" cols="3">
+            <v-col cols="3" class="d-flex justify-center tabelle">
               <h3>
                 Classic
 
@@ -235,7 +221,7 @@
             </v-col>
             <v-divider vertical></v-divider>
 
-            <v-col class="d-flex justify-center tabelle" cols="3">
+            <v-col cols="3" class="d-flex justify-center tabelle">
               <h3>
                 Exclusiv
 
@@ -243,7 +229,7 @@
             </v-col>
             <v-divider vertical></v-divider>
 
-            <v-col class="d-flex justify-center tabelleright" cols="3">
+            <v-col cols="3" class="d-flex justify-center tabelleright">
               <h3>
                 VIP
 
@@ -252,23 +238,23 @@
 
 
           </v-row>
-          <v-row v-for="preis in escordPreise" :key="preise" class="ma-0" style="width: 100%; ">
-            <v-col class="d-flex justify-center tabelleleftmid" cols="3">
+          <v-row v-for="preis in escordPreise" :key="preise" style="width: 100%; " class="ma-0">
+            <v-col  cols="3" class="d-flex justify-center tabelleleftmid">
               <p class="text-center">
                 {{ preis.dauer }}
               </p>
             </v-col>
-            <v-col class="d-flex justify-center tabellerightmid" cols="3">
+            <v-col cols="3" class="d-flex justify-center tabellerightmid">
               <p>
                 {{ preis.classic }}
               </p>
             </v-col>
-            <v-col class="d-flex justify-center tabellerightmid" cols="3">
+            <v-col cols="3" class="d-flex justify-center tabellerightmid">
               <p>
                 {{ preis.exclusiv }}
               </p>
             </v-col>
-            <v-col class="d-flex justify-center tabellerightmid" cols="3">
+            <v-col cols="3" class="d-flex justify-center tabellerightmid">
               <p>
                 {{ preis.vip }}
               </p>
@@ -284,14 +270,15 @@
 </template>
 
 
-<script>
+
+<script >
 
 
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "damen",
-  computed: {
+  computed:{
     wide() {
       const screenStore = useScreenStore();
       return screenStore.wide;
@@ -313,31 +300,56 @@ export default {
       return screenStore.tabletHorizontal;
     },
   },
-  data() {
-    return {
-      honorare: [{
-        text1: 'Unsere Begleitpersonen',
-        text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasdLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd',
-        text3: 'Hier Coole Überschrift',
-        text4: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.et, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor',
+  mounted() {
+    this.getLandingpage()
+  },
+
+  methods:{
+    async getLandingpage() {
+      console.log(this.honorare);
+
+      const token = localStorage.getItem('token');
+      try {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/honorare", {
+          method: 'GET',
+          headers: {
+            Authorization: token ? `Bearer ${token}` : undefined
+          }
+        });
+        this.honorare = []
+        this.honorare.push(response)
+        console.log(this.honorare);
+      } catch (e) {
+        alert(e);
+      }
+    },
+
+
+  },
+  data(){
+    return{
+      honorare:[{
+        text1: 'Unsere Honorare',
+        text2: 'Lieber Gast, unsere Agentur präsentiert vier exklusive Honorarkategorien. Dinner Date, Classic, Exklusiv und VIP. Jede Dame genießt die Freiheit, das aus den Honorarkategorien frei zu wählen.\n' +
+            'Zudem entscheidet sie selbst, ob sie ausschließlich Dinner Dates oder Escort Dates anbieten möchte.',
       }],
-      dinnerPreise: [
-        {dauer: 'Bis zu 2 Stunden', preis: '350 €'},
-        {dauer: 'Bis zu 4 Stunden', preis: '550 €'},
-        {dauer: 'Länger als 4 Stunden', preis: 'Individuell zu vereinbaren'}
+      dinnerPreise:[
+        {dauer:'Bis zu 2 Stunden', preis:'350 €'},
+        {dauer:'Bis zu 4 Stunden', preis:'550 €'},
+        {dauer:'Länger als 4 Stunden', preis:'Individuell zu vereinbaren'}
       ],
-      escordPreise: [
-        {dauer: 'Bis zu 2 Stunden', classic: '400 €', exclusiv: '600 €', vip: '800 €'},
-        {dauer: '4 Stunden', classic: '900 €', exclusiv: '1.000 €', vip: '1.500 €'},
-        {dauer: '6 Stunden', classic: '1.200 €', exclusiv: '1.400 €', vip: '2.000 €'},
-        {dauer: '8 Stunden', classic: '1.500 €', exclusiv: '1.700 €', vip: '2.500 €'},
-        {dauer: '12 Stunden', classic: '1.800 €', exclusiv: '2.100 €', vip: '3.000 €'},
-        {dauer: '1 Tag / 24 Stunden', classic: '2.500 €', exclusiv: '3.000 €', vip: '4.500 €'},
-        {dauer: '2 Tag / 48 Stunden', classic: '4.000 €', exclusiv: '5.000€', vip: '7.000 €'},
-        {dauer: '7 Tag / 168 Stunden', classic: '6.000 €', exclusiv: '7.500 €', vip: 'Zu vereinbaren'},
-        {dauer: 'Jeder weitere Tag', classic: '1.200 €', exclusiv: '1.400 €', vip: 'Zu vereinbaren'},
+      escordPreise:[
+        {dauer:'Bis zu 2 Stunden', classic:'400 €',exclusiv:'600 €', vip:'800 €'},
+        {dauer:'4 Stunden', classic:'900 €',exclusiv:'1.000 €', vip:'1.500 €'},
+        {dauer:'6 Stunden', classic:'1.200 €',exclusiv:'1.400 €', vip:'2.000 €'},
+        {dauer:'8 Stunden', classic:'1.500 €',exclusiv:'1.700 €', vip:'2.500 €'},
+        {dauer:'12 Stunden', classic:'1.800 €',exclusiv:'2.100 €', vip:'3.000 €'},
+        {dauer:'1 Tag / 24 Stunden', classic:'2.500 €',exclusiv:'3.000 €', vip:'4.500 €'},
+        {dauer:'2 Tag / 48 Stunden', classic:'4.000 €',exclusiv:'5.000€', vip:'7.000 €'},
+        {dauer:'7 Tag / 168 Stunden', classic:'6.000 €',exclusiv:'7.500 €', vip:'Zu vereinbaren'},
+        {dauer:'Jeder weitere Tag', classic:'1.200 €',exclusiv:'1.400 €', vip:'Zu vereinbaren'},
       ]
-    }
+  }
   }
 }
 </script>
@@ -347,7 +359,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
 
-.cardIn1 {
+.cardIn1{
   height: 400px;
   width: 430px;
   background-color: white;
@@ -356,16 +368,15 @@ export default {
   top: 20%;
 }
 
-h1 {
+h1{
   font-size: 2.5vw;
 }
-
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
   height: 100px; /* Gesamthöhe des Elements */
   width: 10px; /* Breite des Elements, schmal genug für einen Punkt und Strich */
   margin: 20px; /* Optional: Abstand von anderen Elementen */
-  left: -80px;
+  left:-80px;
   top: -20vh
 }
 
@@ -392,7 +403,7 @@ h1 {
   transform: translateX(-50%); /* Zentriert den Strich horizontal */
 }
 
-.card {
+.card{
   z-index: 300;
   height: 650px;
   width: 80vw;
@@ -402,14 +413,12 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .dm-serif {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
 }
-
-.dosis {
+.dosis{
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -417,40 +426,31 @@ h1 {
   letter-spacing: 0.10em;
   line-height: 1.3;
 }
-
-p {
+p{
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
 }
-
-.tabelleleft {
-  background-color: #65c6ec;
+.tabelleleft{
+background-color: #65c6ec;
   border-radius: 10px 0px 0px 0px;
-}
+}.tabelleright{
+   background-color: #65c6ec;
+   border-radius: 0px 10px 0px 0px;
 
-.tabelleright {
-  background-color: #65c6ec;
-  border-radius: 0px 10px 0px 0px;
+ }
+ .tabelle{
+   background-color: #65c6ec;
+ }
+.tabelleleftmid{
+background-color: #b8ddec;
+}.tabellerightmid{
+   background-color: #b8ddec;
 
-}
-
-.tabelle {
-  background-color: #65c6ec;
-}
-
-.tabelleleftmid {
-  background-color: #b8ddec;
-}
-
-.tabellerightmid {
-  background-color: #b8ddec;
-
-}
-
-.dosis1 {
+ }
+.dosis1{
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;

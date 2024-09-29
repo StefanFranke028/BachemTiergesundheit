@@ -59,10 +59,10 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-2"> {{kontakt[0].text1}}</h2>
+              <h2 style="margin-left: -80px; " class="dm-serif mt-2" v-html="kontakt[0].text1"> </h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis">
-              {{kontakt[0].text2}}
+            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="kontakt[0].text2">
+
             </div>
             <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-7" >zur Vita</v-btn></router-link>
           </div>
@@ -76,10 +76,10 @@
       <div style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%; " class="ma-0">
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="dialPhoneNumber"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="" v-html="kontakt[0].telefon"></a>  </p>
+            <p style="cursor: pointer"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="" v-html="kontakt[0].telefon"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" @click="openEmailProgram"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="kontakt[0].email"></a>  </p>
+            <p style="cursor: pointer" ><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="kontakt[0].email"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
             <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
@@ -144,12 +144,7 @@ export default {
         alert(e);
       }
     },
-    dialPhoneNumber() {
-      window.location.href = "tel:015167037696"; // Fügt die tatsächliche Telefonnummer hier ein
-    },
-    openEmailProgram() {
-      window.location.href = "mailto:bewerbung@maxi-escort.de"; // Fügt die tatsächliche E-Mail-Adresse hier ein
-    }
+
 
   },
   computed:{

@@ -1,15 +1,24 @@
 <template>
   <v-app>
+    <div style="height: 100px; width: 100vw; background-color: red">
+      <h1 class="text-white text-center "> Diese Seite ist derzeit in Bearbeitung</h1>
+    </div>
     <v-main>
       <NuxtLayout></NuxtLayout>
     </v-main>
   </v-app>
 </template>
 
+
+<script setup>
+
+</script>
+
 <script>
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
+
   head() {
     return {title: 'My SSR App', meta: [{hid: 'description', name: 'description', content: 'This is an SSR page'}]}
   },
