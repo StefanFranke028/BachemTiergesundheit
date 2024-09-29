@@ -307,14 +307,10 @@ export default {
 
 <script setup>
 import FooterComponent from "~/components/FooterComponent.vue";
-import { useScreenStore } from "~/stores/screen.js";
-import { ref, onMounted } from 'vue'; // Für reaktive Daten und Lifecycle-Methoden
-
-// Reactive Daten für Landingpage
-const landingpage1 = ref([]);
+import { ref } from 'vue';
 
 // Methode zum Abrufen der Landingpage-Daten
-const getLandingpage = async () => {
+const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
   let token = null;
 
   if (process.client) {
@@ -323,18 +319,17 @@ const getLandingpage = async () => {
   }
 
   try {
-    let response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
       },
     });
-    landingpage1.value = [response];
-    console.log(landingpage1.value);
+    return response;
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
     // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
-    landingpage1.value = [{
+    return {
       description: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
       keywords: 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
       text1: 'Ein Mädchen sollte zwei Sachen sein: elegant und fabelhaft.“ – Coco Chanel.',
@@ -347,30 +342,26 @@ const getLandingpage = async () => {
       text8: 'Genießen Sie den Tag',
       text9: 'Maxi Escort Service Frankfurt.',
       text10: 'Ihre Maxi',
-    }];
+    };
   }
-};
-
-// onMounted Lifecycle Hook zum Abrufen der Daten nach dem Mounten der Komponente
-onMounted(() => {
-  getLandingpage();
 });
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
-  title: landingpage1.value.length > 0 ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {
       name: 'description',
-      content: landingpage1.value[0]?.description || 'text',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value[0]?.keywords || 'text',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
     },
   ],
 });
 </script>
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
