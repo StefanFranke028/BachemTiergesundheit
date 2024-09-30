@@ -36,12 +36,12 @@
       <v-col cols="9">
         <v-card
             style="background: rgba(250,250,250,0); background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
-          <StartseiteComponent v-if="selectedSeite === 'Startseite-Seite'"/>
-          <VitaComponent v-if="selectedSeite === 'Vita-Seite'"/>
-          <DamenComponent v-if="selectedSeite === 'Escort-Seite'"/>
-          <BewerbenComponent v-if="selectedSeite === 'Bewerben-Seite'"/>
-          <KontaktComponent v-if="selectedSeite === 'Kontakt-Seite'"/>
-          <HonorareComponent v-if="selectedSeite === 'Honorare-Seite'"/>
+          <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
+          <VitaComponent v-if="selectedSeite === 'Vita'"/>
+          <DamenComponent v-if="selectedSeite === 'Escort'"/>
+          <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
+          <KontaktComponent v-if="selectedSeite === 'Kontakt'"/>
+          <HonorareComponent v-if="selectedSeite === 'Honorare'"/>
           <BlogComponent v-if="selectedSeite === 'Blog-Seite'"/>
 
           <!-- Weitere Optionen basierend auf selectedItem -->
@@ -86,7 +86,7 @@ export default {
   },
   data() {
     return {
-      seiten: ['Startseite-Seite', 'Vita-Seite', 'Escort-Seite', 'Bewerben-Seite', 'Kontakt-Seite', 'Honorare-Seite', 'Blog-Seite'],
+      seiten: ['Startseite', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare-Seite', 'Blog'],
       items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise'],
       selectedSeite: null,  // Standardseite
       selectedItem: null
