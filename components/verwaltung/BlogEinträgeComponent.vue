@@ -63,11 +63,11 @@
           >
             <template v-slot:item="{ item }">
               <tr>
-                <td>{{ item.id }}</td>                     <!-- Id -->
-                <td>{{ item.ueberschrift }}</td>           <!-- Überschrift -->
-                <td>{{ item.unterUeberschrift }}</td>      <!-- UnterÜberschrift -->
-                <td>{{ item.text }}</td>                   <!-- Text -->
-                <td>{{ item.autor }}</td>                  <!-- Autor -->
+                <td>{{ item.id }}</td>
+                <td>{{ item.ueberschrift }}</td>
+                <td>{{ item.unterUeberschrift }}</td>
+                <td>{{ item.text }}</td>
+                <td>{{ item.autor }}</td>
                 <td>
                   <input v-model="item.datum" disabled readonly style="color: black" type="date">
                 </td>                  <!-- Datum -->

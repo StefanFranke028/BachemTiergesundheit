@@ -33,6 +33,7 @@
           <HonorareComponent v-if="selectedItem === 'Honorare'"/>
           <BlogComponent v-if="selectedItem === 'Blog'"/>
           <BlogEinträgeComponent v-if="selectedItem === 'Blog-Einträge'"/>
+          <EscortPreiseComponent v-if="selectedItem === 'Escort Preise'"/>
         </v-card>
       </v-col>
     </v-row>
@@ -52,6 +53,7 @@ import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
 import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
 import nuxtLayout from "#app/components/nuxt-layout.js";
 import nuxtLink from "#app/components/nuxt-link.js";
+import EscortPreiseComponent from "~/components/verwaltung/EscortPreiseComponent.vue";
 
 export default {
   name: "verwaltung",
@@ -59,11 +61,11 @@ export default {
     BlogComponent,
     BlogEinträgeComponent,
     HonorareComponent,
-    KontaktComponent, BewerbenComponent, DamenComponent, VitaComponent, StartseiteComponent
+    KontaktComponent, BewerbenComponent, DamenComponent, VitaComponent, StartseiteComponent, EscortPreiseComponent
   },
   data() {
     return {
-      items: ['Startseite', 'Vita', 'Damen', 'Bewerben', 'Kontakt', 'Honorare', 'Blog', 'Blog-Einträge'],
+      items: ['Startseite', 'Vita', 'Damen', 'Bewerben', 'Kontakt', 'Honorare', 'Blog', 'Blog-Einträge', 'Escort Preise'],
       selectedItem: "Startseite",
     }
   },
