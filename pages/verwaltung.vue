@@ -16,22 +16,35 @@
           Ausloggen
         </h3>
       </v-col>
-      <v-col cols="5">
-        <v-select v-model="selectedItem"
-                  :items="items"
+      <v-col cols="2">
+        <v-select v-model="selectedSeite"
+                  :items="seiten"
                   label="Wählen Sie eine Seite">
           test
         </v-select>
       </v-col>
-      <v-col cols="8">
-        <v-card style="background: rgba(250,250,250,0.4)">
-          <StartseiteComponent v-if="selectedItem === 'Startseite'"/>
-          <VitaComponent v-if="selectedItem === 'Vita'"/>
-          <DamenComponent v-if="selectedItem === 'Damen'"/>
-          <BewerbenComponent v-if="selectedItem === 'Bewerben'"/>
-          <KontaktComponent v-if="selectedItem === 'Kontakt'"/>
-          <HonorareComponent v-if="selectedItem === 'Honorare'"/>
-          <BlogComponent v-if="selectedItem === 'Blog'"/>
+      <p class="mt-7">
+        < -- >
+      </p>
+      <v-col cols="2">
+        <v-select v-model="selectedItem"
+                  :items="items"
+                  label="Wählen Sie Damen, Preise, etc.">
+          test
+        </v-select>
+      </v-col>
+      <v-col cols="9">
+        <v-card
+            style="background: rgba(250,250,250,0); background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
+          <StartseiteComponent v-if="selectedSeite === 'Startseite-Seite'"/>
+          <VitaComponent v-if="selectedSeite === 'Vita-Seite'"/>
+          <DamenComponent v-if="selectedSeite === 'Escort-Seite'"/>
+          <BewerbenComponent v-if="selectedSeite === 'Bewerben-Seite'"/>
+          <KontaktComponent v-if="selectedSeite === 'Kontakt-Seite'"/>
+          <HonorareComponent v-if="selectedSeite === 'Honorare-Seite'"/>
+          <BlogComponent v-if="selectedSeite === 'Blog-Seite'"/>
+
+          <!-- Weitere Optionen basierend auf selectedItem -->
           <BlogEinträgeComponent v-if="selectedItem === 'Blog-Einträge'"/>
           <EscortPreiseComponent v-if="selectedItem === 'Escort Preise'"/>
           <DinnerPreiseComponent v-if="selectedItem === 'Dinner Preise'"/>
@@ -73,9 +86,25 @@ export default {
   },
   data() {
     return {
-      items: ['Startseite', 'Vita', 'Damen', 'Bewerben', 'Kontakt', 'Honorare', 'Blog', 'Blog-Einträge', 'Escort Preise', 'Dinner Preise'],
-      selectedItem: "Startseite",
+      seiten: ['Startseite-Seite', 'Vita-Seite', 'Escort-Seite', 'Bewerben-Seite', 'Kontakt-Seite', 'Honorare-Seite', 'Blog-Seite'],
+      items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise'],
+      selectedSeite: null,  // Standardseite
+      selectedItem: null
     }
+  },
+  watch: {
+    // Wenn eine Seite ausgewählt wird, setze das "weitere" Dropdown zurück
+    selectedSeite(newVal) {
+      if (newVal) {
+        this.selectedItem = null; // Setze das zweite Dropdown zurück
+      }
+    },
+    // Wenn etwas im zweiten Dropdown ausgewählt wird, setze die Seite zurück
+    selectedItem(newVal) {
+      if (newVal) {
+        this.selectedSeite = null; // Setze das erste Dropdown zurück
+      }
+    },
   },
   mounted() {
   },
