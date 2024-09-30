@@ -42,7 +42,7 @@
           <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
           <KontaktComponent v-if="selectedSeite === 'Kontakt'"/>
           <HonorareComponent v-if="selectedSeite === 'Honorare'"/>
-          <BlogComponent v-if="selectedSeite === 'Blog-Seite'"/>
+          <BlogComponent v-if="selectedSeite === 'Blog'"/>
 
           <!-- Weitere Optionen basierend auf selectedItem -->
           <BlogEinträgeComponent v-if="selectedItem === 'Blog-Einträge'"/>
@@ -86,7 +86,7 @@ export default {
   },
   data() {
     return {
-      seiten: ['Startseite', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare-Seite', 'Blog'],
+      seiten: ['Startseite', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
       items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise'],
       selectedSeite: null,  // Standardseite
       selectedItem: null
