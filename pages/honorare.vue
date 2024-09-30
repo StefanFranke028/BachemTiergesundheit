@@ -57,7 +57,7 @@
                 </v-col>
                 <v-col cols="6" class="d-flex justify-center tabellerightmid">
                   <p>
-                    {{ preis.preis }}
+                    {{ preis.geschenk }}
                   </p>
                 </v-col>
               </v-row>
@@ -114,7 +114,7 @@
 
 
               </v-row>
-              <v-row v-for="preis in escordPreise" :key="preis" style="width: 100%; ">
+              <v-row v-for="preis in escortPreise" :key="preis" style="width: 100%; ">
                 <v-col  cols="3" class="d-flex justify-center tabelleleftmid">
                   <p class="text-center">
                     {{ preis.dauer }}
@@ -191,7 +191,7 @@
             </v-col>
             <v-col cols="6" class="d-flex justify-center tabellerightmid">
               <p>
-                {{ preis.preis }}
+                {{ preis.geschenk }}
               </p>
             </v-col>
           </v-row>
@@ -238,7 +238,7 @@
 
 
           </v-row>
-          <v-row v-for="preis in escordPreise" :key="preise" style="width: 100%; " class="ma-0">
+          <v-row v-for="preis in escortPreise" :key="preis" style="width: 100%; " class="ma-0">
             <v-col  cols="3" class="d-flex justify-center tabelleleftmid">
               <p class="text-center">
                 {{ preis.dauer }}
@@ -275,10 +275,13 @@ import { ref } from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const honorare = ref([]);
-
+const escortPreise = ref([])
+const dinnerPreise = ref([])
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
   let token = null;
+
+
 
   if (process.client) {
     // Zugriff auf localStorage nur auf dem Client
@@ -313,11 +316,83 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
     };
   }
 });
+const { data: escortPreise1, pending2, error2 } = await useAsyncData('escortPreise', async () => {
+  let token = null;
+
+
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/escortpreise", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der Landingpage:', e);
+    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
+    return [
+    {dauer:'Bis zu 2 Stunden', classic:'400 €',exclusiv:'600 €', vip:'800 €'},
+    {dauer:'4 Stunden', classic:'900 €',exclusiv:'1.000 €', vip:'1.500 €'},
+    {dauer:'6 Stunden', classic:'1.200 €',exclusiv:'1.400 €', vip:'2.000 €'},
+    {dauer:'8 Stunden', classic:'1.500 €',exclusiv:'1.700 €', vip:'2.500 €'},
+    {dauer:'12 Stunden', classic:'1.800 €',exclusiv:'2.100 €', vip:'3.000 €'},
+    {dauer:'1 Tag / 24 Stunden', classic:'2.500 €',exclusiv:'3.000 €', vip:'4.500 €'},
+    {dauer:'2 Tag / 48 Stunden', classic:'4.000 €',exclusiv:'5.000€', vip:'7.000 €'},
+    {dauer:'7 Tag / 168 Stunden', classic:'6.000 €',exclusiv:'7.500 €', vip:'Zu vereinbaren'},
+    {dauer:'Jeder weitere Tag', classic:'1.200 €',exclusiv:'1.400 €', vip:'Zu vereinbaren'},
+  ];
+  }
+});
+const { data: dinnerPreise1, pending3, error3 } = await useAsyncData('dinnerPreise', async () => {
+  let token = null;
+
+
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/dinnerpreise", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der Landingpage:', e);
+    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
+    return [
+      {dauer:'Bis zu 2 Stunden', geschenk:'350 €'},
+      {dauer:'Bis zu 4 Stunden', geschenk:'550 €'},
+      {dauer:'Länger als 4 Stunden', geschenk:'Individuell zu vereinbaren'}
+  ];
+  }
+});
 
 // Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
 if (landingpage1.value) {
   honorare.value.push(landingpage1.value);
   console.log(honorare.value);
+}
+if (dinnerPreise1.value) {
+  dinnerPreise.value = dinnerPreise1.value;
+  console.log(dinnerPreise.value);
+}
+if (escortPreise1.value) {
+  escortPreise.value = escortPreise1.value;
+  console.log(escortPreise.value);
 }
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
@@ -378,22 +453,6 @@ export default {
         text2: 'Lieber Gast, unsere Agentur präsentiert vier exklusive Honorarkategorien. Dinner Date, Classic, Exklusiv und VIP. Jede Dame genießt die Freiheit, das aus den Honorarkategorien frei zu wählen.\n' +
             'Zudem entscheidet sie selbst, ob sie ausschließlich Dinner Dates oder Escort Dates anbieten möchte.',
       }],
-      dinnerPreise:[
-        {dauer:'Bis zu 2 Stunden', preis:'350 €'},
-        {dauer:'Bis zu 4 Stunden', preis:'550 €'},
-        {dauer:'Länger als 4 Stunden', preis:'Individuell zu vereinbaren'}
-      ],
-      escordPreise:[
-        {dauer:'Bis zu 2 Stunden', classic:'400 €',exclusiv:'600 €', vip:'800 €'},
-        {dauer:'4 Stunden', classic:'900 €',exclusiv:'1.000 €', vip:'1.500 €'},
-        {dauer:'6 Stunden', classic:'1.200 €',exclusiv:'1.400 €', vip:'2.000 €'},
-        {dauer:'8 Stunden', classic:'1.500 €',exclusiv:'1.700 €', vip:'2.500 €'},
-        {dauer:'12 Stunden', classic:'1.800 €',exclusiv:'2.100 €', vip:'3.000 €'},
-        {dauer:'1 Tag / 24 Stunden', classic:'2.500 €',exclusiv:'3.000 €', vip:'4.500 €'},
-        {dauer:'2 Tag / 48 Stunden', classic:'4.000 €',exclusiv:'5.000€', vip:'7.000 €'},
-        {dauer:'7 Tag / 168 Stunden', classic:'6.000 €',exclusiv:'7.500 €', vip:'Zu vereinbaren'},
-        {dauer:'Jeder weitere Tag', classic:'1.200 €',exclusiv:'1.400 €', vip:'Zu vereinbaren'},
-      ]
   }
   }
 }
