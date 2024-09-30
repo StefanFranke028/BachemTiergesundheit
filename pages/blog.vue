@@ -1,9 +1,9 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal"  >
-    <img style="width: 100vw; height: 500px;" src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" />
+  <div v-if="desktop|| tabletHorizontal">
+    <img alt="schwarz-weis Hintergrundbild" src="~/assets/bg.png" style="width: 100vw; height: 500px;"/>
     <div class="card">
       <div class="cardIn1">
-        <div  class="text-center text2 dosis" v-html="blog[0].text2">
+        <div class="text-center text2 dosis" v-html="blog[0].text2">
         </div>
       </div>
       <div class="cardIn2">
@@ -13,7 +13,9 @@
         </div>
         <div class="line-with-dot">
         </div>
-          <v-img src="~/assets/blog.jpg" cover style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" alt=""></v-img>
+        <v-img alt="" cover
+               src="~/assets/blog.jpg"
+               style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></v-img>
       </div>
     </div>
 
@@ -22,23 +24,21 @@
     </div>
 
 
-
-
-
-    <div >
-      <v-row v-for="(blog, index) in blogs" :key="blog" class="ma-0 pa-0" style="width: 100%; height: 100%; min-height: 500px">
+    <div>
+      <v-row v-for="(blog, index) in blogs" :key="blog" class="ma-0 pa-0"
+             style="width: 100%; height: 100%; min-height: 500px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
-          <v-row style="width: 100%; height: 100%;" class="ma-0">
+          <v-row class="ma-0" style="width: 100%; height: 100%;">
             <v-col cols="6">
-              <v-img style="z-index: 0;" max-height="700" cover :src="blog.bild" alt=""></v-img>
+              <v-img :src="blog.bild" alt="" cover max-height="700" style="z-index: 0;"></v-img>
             </v-col>
-            <v-col cols="6" class="pa-12">
+            <v-col class="pa-12" cols="6">
               <h1 class="text-center dm-serif">{{ blog.ueberschrift }}</h1>
               <h2 class="text-center dm-serif" style="color: #8e8c8c">{{ blog.unterUeberschrift }}</h2>
               <br><br>
               <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
-              <p style="color: #8e8c8c" class="mt-10">{{ blog.autor }}</p>
-              <p style="color: #8e8c8c" class="mt-10">{{ blog.datum }}</p>
+              <p class="mt-10" style="color: #8e8c8c">{{ blog.autor }}</p>
+              <input v-model="blog.datum" class="mt-10" disabled readonly style="color: #8e8c8c" type="date"/>
             </v-col>
           </v-row>
         </v-col>
@@ -46,21 +46,24 @@
     </div>
 
 
-
   </div>
   <div v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
-      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
-        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #c7dee6;">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg.png"
+           style="width: 100%; height: 450px;  ">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div class="d-flex justify-center align-center"
+             style="width: 75%; height: 400px;    background-color: #c7dee6;">
           <div class="vertical-marker-mobile">
-          </div >
+          </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
-            <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-n5" v-html="blog[0].text1"></h2>
+            <div class="text-center dosis" style="position: relative; top:-50px">
+              <h2 class="dm-serif mt-n5" style="margin-left: -80px; " v-html="blog[0].text1"></h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="blog[0].text2">
+            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="blog[0].text2">
             </div>
-            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
+            <router-link aria-label="Vita" to="vita">
+              <v-btn class="text-center mt-3" theme="dark">zur Vita</v-btn>
+            </router-link>
           </div>
         </div>
 
@@ -68,20 +71,21 @@
 
     </v-img>
 
-    <v-img v-for="(blog, index) in blogs" :key="blog" class="d-flex justify-center align-center" cover style="width: 100%; height: 1000px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img v-for="(blog, index) in blogs" :key="blog" alt="schwarz-weis Hintergrundbild"
+           class="d-flex justify-center align-center"
+           cover src="~/assets/blumen.jpg" style="width: 100%; height: 1000px;  ">
 
-      <v-row  class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
+      <v-row class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
-          <v-row style="width: 100%; height: 100%;" class="ma-0">
+          <v-row class="ma-0" style="width: 100%; height: 100%;">
 
-            <v-col cols="12" >
-              <h1 style="font-size: 28px" class="text-center dm-serif">{{ blog.ueberschrift }}</h1>
+            <v-col cols="12">
+              <h1 class="text-center dm-serif" style="font-size: 28px">{{ blog.ueberschrift }}</h1>
               <h3 class="text-center dm-serif" style="color: #8e8c8c">{{ blog.unterUeberschrift }}</h3>
               <br><br>
               <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
-              <p style="color: #8e8c8c" class="mt-10">{{ blog.autor }}</p>
-              <p style="color: #8e8c8c" class="mt-10">{{ blog.datum }}</p>
-            </v-col>
+              <p class="mt-10" style="color: #8e8c8c">{{ blog.autor }}</p>
+              <input v-model="blog.datum" class="mt-10" disabled readonly style="color: #8e8c8c" type="date"/></v-col>
           </v-row>
         </v-col>
       </v-row>
@@ -91,15 +95,14 @@
 </template>
 
 <script setup>
-import FooterComponent from "~/components/FooterComponent.vue";
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const blog = ref([]);
 const blogs = ref([]);
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
-const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
+const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
   let token = null;
 
   if (process.client) {
@@ -136,7 +139,7 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 });
 
-const { data: blogs1, pending1, error2 } = await useAsyncData('blog', async () => {
+const {data: blogs1, pending1, error2} = await useAsyncData('blog', async () => {
   let token = null;
 
   if (process.client) {
@@ -183,7 +186,7 @@ useHead({
 });
 </script>
 
-<script >
+<script>
 
 import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
@@ -192,7 +195,7 @@ export default {
   data() {
 
     return {
-      blog:[{
+      blog: [{
         text1: 'Unsere Begleitpersonen',
         text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasdLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd',
         text3: 'Hier Coole Überschrift',
@@ -237,28 +240,28 @@ export default {
   components: {
     FooterComponent,
   },
-    computed:{
-      wide() {
-        const screenStore = useScreenStore();
-        return screenStore.wide;
-      },
-      desktop() {
-        const screenStore = useScreenStore();
-        return screenStore.desktop;
-      },
-      mobile() {
-        const screenStore = useScreenStore();
-        return screenStore.mobile;
-      },
-      tablet() {
-        const screenStore = useScreenStore();
-        return screenStore.tablet;
-      },
-      tabletHorizontal() {
-        const screenStore = useScreenStore();
-        return screenStore.tabletHorizontal;
-      },
+  computed: {
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
     },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
 }
 </script>
 
@@ -327,11 +330,15 @@ p {
   left: 28%;
   top: 40%;
 }
-.bgwithe{
+
+.bgwithe {
   background-color: #c7dee6 !important;
-}.bgblue{
+}
+
+.bgblue {
   background-color: #d4e2ea;
 }
+
 .text2 {
   color: #8e8c8c;
   position: relative;
