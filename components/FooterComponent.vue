@@ -16,7 +16,7 @@
             <p class="text-center" style="font-size: 17px; color: grey; ">
                 HABEN SIE NOCH FRAGEN? &nbsp;
               <b class="ml-n1" style="color: black">
-              RUFEN SIE UNS AN! <br> +49 151-670 376 96
+              RUFEN SIE UNS AN! <br> <a href="tel:+49 151-670 376 96">+49 151-670 376 96</a>
               </b>
             </p>
         </div>
@@ -24,12 +24,12 @@
     </v-row>
     <v-divider></v-divider>
     <v-row style="width: 100%"  class="ma-0 justify-center">
-      <v-col cols="8" class="d-flex justify-center" :key="stadt">
+      <v-col cols="8" class="d-flex justify-center" >
         <v-row style="width: 100%"  class="ma-0 pa-16">
           <v-col cols="3" v-for="stadt in staedte" class="" :key="stadt">
-            <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.stadt">
+            <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.name">
               <p style="cursor:pointer">
-                {{stadt.stadt}}
+                {{stadt.name}}
               </p>
 
             </nuxt-link>
@@ -73,9 +73,9 @@
     </v-row>
     <v-row style="width: 100%"  class="ma-0 ">
       <v-col cols="6" v-for="stadt in staedte"  :key="stadt">
-        <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.stadt">
+        <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.name">
           <p class="text-center" style="cursor:pointer">
-            {{stadt.stadt}}
+            {{stadt.name}}
           </p>
 
         </nuxt-link>
@@ -101,6 +101,61 @@
   </div>
 </template>
 
+
+<script setup>
+import FooterComponent from "~/components/FooterComponent.vue";
+import { ref } from 'vue';
+
+// Reaktives Array für Landingpage-Daten
+const staedte = ref([]);
+
+// Methode zum Abrufen der Landingpage-Daten mit useAsyncData
+const { data: landingpage1, pending, error } = await useAsyncData('landingpage1', async () => {
+  let token = null;
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/stadt/namen", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der Landingpage:', e);
+    return {
+      description: '',
+    };
+  }
+});
+
+if (landingpage1.value) {
+  staedte.value = landingpage1.value;
+  console.log(staedte.value);
+}
+
+// Setze dynamisch den Head basierend auf den Landingpage-Daten
+useHead({
+  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  meta: [
+    {
+      name: 'description',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+    },
+    {
+      name: 'keywords',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+    },
+  ],
+});
+</script>
+
 <script>
 
 import {useScreenStore} from "~/stores/screen.js";
@@ -109,24 +164,6 @@ export default {
   name: "FooterComponent",
   data(){
     return{
-      staedte:[
-        {stadt: 'Dortmund'},
-        {stadt: 'Hamburg'},
-        {stadt: 'Hanover'},
-        {stadt: 'München'},
-        {stadt: 'Berlin'},
-        {stadt: 'Amsterdam'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-        {stadt: 'Dortmund'},
-      ],
-
     }
   },
   components:{
