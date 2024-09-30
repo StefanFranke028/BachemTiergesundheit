@@ -297,6 +297,7 @@ export default {
           }
         }
 
+        this.tab = 2
         this.dialog = false;
         this.editedEntry = null; // Zurücksetzen des bearbeiteten Eintrags
         await this.getBlogEintraege()
