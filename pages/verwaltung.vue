@@ -2,7 +2,17 @@
   <!--  <div v-if="desktop || wide">-->
   <div class="background d-flex justify-center" style="width: 100vw; height: 100vh">
 
-    <v-row class="d-flex justify-center">
+    <div v-if="isLoading" class="d-flex justify-center" style="width: 100vw">
+
+      <v-col class="d-flex justify-center align-center" cols="12">
+        <v-progress-circular
+            color="primary"
+            indeterminate
+            size="70"
+        ></v-progress-circular>
+      </v-col>
+    </div>
+    <v-row v-else class="d-flex justify-center">
       <v-col class="d-flex justify-center align-center" cols="3">
         <router-link to="/">
           <h3 class="text-center">Zurück zur Startseite</h3>
@@ -11,22 +21,24 @@
       <v-col class="d-flex justify-center align-center" cols="6">
         <h1>Verwaltung von Maxi-Escort</h1>
       </v-col>
+
+
       <v-col class="d-flex justify-center align-center" cols="3">
         <h3 class="text-center">
           Ausloggen
         </h3>
       </v-col>
-      <v-col cols="2">
+      <v-col class="d-flex justify-center align-center" cols="3">
         <v-select v-model="selectedSeite"
                   :items="seiten"
                   label="Wählen Sie eine Seite">
           test
         </v-select>
       </v-col>
-      <p class="mt-7">
+      <p class="mt-12">
         < -- >
       </p>
-      <v-col cols="2">
+      <v-col class="d-flex justify-center align-center" cols="3">
         <v-select v-model="selectedItem"
                   :items="items"
                   label="Wählen Sie Damen, Preise, etc.">
@@ -35,10 +47,12 @@
       </v-col>
       <v-col cols="9">
         <v-card
-            style="background: rgba(250,250,250,0); background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
+            class="mt-n10"
+            height="625"
+            style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
           <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
           <VitaComponent v-if="selectedSeite === 'Vita'"/>
-          <DamenComponent v-if="selectedSeite === 'Escort'"/>
+          <EscordComponent v-if="selectedSeite === 'Escort'"/>
           <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
           <KontaktComponent v-if="selectedSeite === 'Kontakt'"/>
           <HonorareComponent v-if="selectedSeite === 'Honorare'"/>
@@ -48,6 +62,8 @@
           <BlogEinträgeComponent v-if="selectedItem === 'Blog-Einträge'"/>
           <EscortPreiseComponent v-if="selectedItem === 'Escort Preise'"/>
           <DinnerPreiseComponent v-if="selectedItem === 'Dinner Preise'"/>
+          <DamenComponent v-if="selectedItem === 'Damen'"/>
+          <StadtComponent v-if="selectedItem === 'Stadt'"/>
         </v-card>
       </v-col>
     </v-row>
@@ -55,11 +71,12 @@
   <!--  </div>-->
 </template>
 
+
 <script>
 import {useScreenStore} from "~/stores/screen.js";
 import StartseiteComponent from "~/components/verwaltung/StartseiteComponent.vue";
 import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
-import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
+import EscordComponent from "~/components/verwaltung/EscortComponent.vue";
 import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
 import BlogEinträgeComponent from "~/components/verwaltung/BlogEinträgeComponent.vue";
 import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
@@ -69,27 +86,32 @@ import nuxtLayout from "#app/components/nuxt-layout.js";
 import nuxtLink from "#app/components/nuxt-link.js";
 import EscortPreiseComponent from "~/components/verwaltung/EscortPreiseComponent.vue";
 import DinnerPreiseComponent from "~/components/verwaltung/DinnerPreiseComponent.vue";
+import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
+import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
 
 export default {
   name: "verwaltung",
   components: {
+    StadtComponent,
     BlogComponent,
     BlogEinträgeComponent,
     HonorareComponent,
     KontaktComponent,
     BewerbenComponent,
-    DamenComponent,
+    EscordComponent,
     VitaComponent,
     StartseiteComponent,
     EscortPreiseComponent,
-    DinnerPreiseComponent
+    DinnerPreiseComponent,
+    DamenComponent,
   },
   data() {
     return {
       seiten: ['Startseite', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
-      items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise'],
-      selectedSeite: null,  // Standardseite
-      selectedItem: null
+      items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise', 'Damen', 'Stadt'],
+      selectedSeite: null,
+      selectedItem: null,
+      isLoading: true // Initialisiere isLoading als true
     }
   },
   watch: {
@@ -107,6 +129,10 @@ export default {
     },
   },
   mounted() {
+    // Simuliere einen Ladevorgang (z.B. einen API-Call), bevor isLoading auf false gesetzt wird
+    setTimeout(() => {
+      this.isLoading = false; // Wenn alles geladen ist, setze isLoading auf false
+    }, 2000); // Hier kannst du auch eine echte Funktion wie getUser() aufrufen
   },
   methods: {
     async isUser() {

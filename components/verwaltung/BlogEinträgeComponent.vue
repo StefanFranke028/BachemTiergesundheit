@@ -8,6 +8,14 @@
     <v-tabs-window v-model="tab">
       <v-tabs-window-item :value="1">
         <div style="overflow-y: scroll">
+          <v-snackbar
+              v-model="snackbar"
+              :color="snackbarColor"
+              location="top"
+              timeout="5000"
+          >
+            {{ snackbarText }}
+          </v-snackbar>
           <v-row class="pa-0" style="height: 625px">
             <v-col cols="6">
               <v-text-field v-model="ueberschrift" label="Überschrift"></v-text-field>
@@ -18,6 +26,7 @@
             <v-col cols="12">
               <v-textarea v-model="text" auto-grow label="Text"></v-textarea>
             </v-col>
+
             <v-col cols="4">
               <v-text-field v-model="autor" label="Autor"></v-text-field>
             </v-col>
@@ -42,14 +51,6 @@
               <v-btn v-if="editedEntry" color="white" @click="resetEditMode">Bearbeiten abbrechen</v-btn>
             </v-col>
           </v-row>
-          <v-snackbar
-              v-model="snackbar"
-              :color="snackbarColor"
-              location="top"
-              timeout="5000"
-          >
-            {{ snackbarText }}
-          </v-snackbar>
         </div>
       </v-tabs-window-item>
 
