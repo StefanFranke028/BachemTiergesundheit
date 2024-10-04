@@ -54,6 +54,12 @@
              <b>Parfüm:</b>  {{dame.parfüm}}
               <br>
               <br>
+              <b>Städte: &nbsp;</b>
+              <span  v-for="stadt in dame.städte" :key="stadt">
+                  {{stadt.name}}, &nbsp;
+                </span>
+              <br>
+              <br>
              <b>Weitere Geschenkideen:</b>  {{dame.weitereGeschenkideen}}
               <br>
               <br>
@@ -134,6 +140,12 @@
                 <br>
                 <br>
                 <b>Parfüm:</b>  {{dame.parfüm}}
+                <br>
+                <br>
+                <b>Städte: &nbsp;</b>
+                <span  v-for="stadt in dame.städte" :key="stadt">
+                  {{stadt.name}}, &nbsp;
+                </span>
                 <br>
                 <br>
                 <b>Weitere Geschenkideen:</b>  {{dame.weitereGeschenkideen}}
