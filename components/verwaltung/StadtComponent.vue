@@ -6,7 +6,7 @@
         <v-row class="d-flex justify-center" style="width: 100%">
           <v-col>
             <h3 class="text-center">
-              Escort Preis erstellen
+              Städte
             </h3>
           </v-col>
           <v-col cols="12">
@@ -19,19 +19,30 @@
             <v-text-field v-model="text" label="Überschrift"/>
           </v-col>
           <v-col cols="12">
-            <v-text-field v-model="damen" label="Damen"/>
+            <v-select
+                v-model="selectedDamen"
+                :item-title="item => `${item.id} - ${item.name}`"
+                :items="damenList"
+                chips
+                clearable
+                item-key="id"
+                item-value="id" label="Wählen Sie Damen"
+                multiple
+                return-object
+            />
           </v-col>
+
           <v-col cols="12">
             <v-row>
-              <v-col :class="editEscortPreis ? 'justify-end' : 'justify-center'" :cols="editEscortPreis ? '6' : '12'"
+              <v-col :class="editStadt ? 'justify-end' : 'justify-center'" :cols="editStadt ? '6' : '12'"
                      class="d-flex">
                 <v-btn :loading="loading" color="white" @click="submitChanges">
-                  {{ editEscortPreis ? 'Speichern' : 'Eintrag speichern' }}
+                  {{ editStadt ? 'Speichern' : 'Eintrag speichern' }}
                 </v-btn>
 
               </v-col>
-              <v-col v-if="editEscortPreis" class="d-flex justify-start" cols="6">
-                <v-btn v-if="editEscortPreis" color="white" @click="resetEditMode">Neu erstellen</v-btn>
+              <v-col v-if="editStadt" class="d-flex justify-start" cols="6">
+                <v-btn v-if="editStadt" color="white" @click="resetEditMode">Neu erstellen</v-btn>
               </v-col>
             </v-row>
           </v-col>
@@ -39,74 +50,34 @@
       </v-col>
       <!-- Textareas mit v-model -->
       <v-col class="d-flex justify-center" cols="6" style="overflow-y: scroll">
-        <v-row class="ma-0 justify-cener align-center" style="width: 100%; height: 625px;">
-          <v-col cols="12">
-            <h2 class="text-center mr-16 maxiEscortÜberschrift dm-serif">Maxi Escort Date</h2>
-            <br>
-            <br>
-            <v-row class="ma-0 d-flex justify-end mt-n10" style="; width: 100%; border-radius: 10px">
-              <v-col class="d-flex justify-center tabelleleft" cols="2">
-                <h3>
-                  Dauer
-                </h3>
-              </v-col>
-              <v-divider vertical></v-divider>
-              <v-col class="d-flex justify-center tabelle" cols="3">
-                <h3>
-                  Classic
+        <div style="overflow-y: scroll">
+          <v-data-table-virtual
+              :headers="headers"
+              :items="städte"
+              color="blue"
+              no-data-text="Keine Einträge gefunden"
+              style="background-color: rgba(0,0,255,0); height: 625px"
+          >
+            <template v-slot:item="{ item }">
+              <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.text }}</td>
+                <td>{{ item.überschrift }}</td>
+                <td>
+                  <div v-for="(dame, index) in item.damen" :key="index">
+                    {{ dame.name }}<br>
+                  </div>
+                </td>
+                <td>
+                  <v-icon class="mr-2" small @click="editStadtEntität(item)">mdi-pencil</v-icon> <!-- Bearbeiten -->
+                  <v-icon color="red" small @click="deleteStadt(item)">mdi-delete</v-icon> <!-- Löschsymbol -->
+                </td>
+              </tr>
+            </template>
+          </v-data-table-virtual>
 
-                </h3>
-              </v-col>
-              <v-divider vertical></v-divider>
-
-              <v-col class="d-flex justify-center tabelle" cols="3">
-                <h3>
-                  Exclusiv
-
-                </h3>
-              </v-col>
-              <v-divider vertical></v-divider>
-
-              <v-col class="d-flex justify-center tabelleright" cols="2">
-                <h3>
-                  VIP
-
-                </h3>
-              </v-col>
-              <v-col cols="2"/>
-
-
-            </v-row>
-            <v-row v-for="preis in escortPreise" :key="id" class="ma-0 d-flex justify-end"
-                   style=" width: 100%; ">
-              <v-col class="d-flex justify-center tabelleleftmid" cols="2">
-                <p class="text-center">
-                  {{ preis.dauer }}
-                </p>
-              </v-col>
-              <v-col class="d-flex justify-center tabellerightmid" cols="3">
-                <p>
-                  {{ preis.classic }}
-                </p>
-              </v-col>
-              <v-col class="d-flex justify-center tabellerightmid" cols="3">
-                <p>
-                  {{ preis.exclusiv }}
-                </p>
-              </v-col>
-              <v-col class="d-flex justify-center tabellerightmid" cols="2">
-                <p>
-                  {{ preis.vip }}
-                </p>
-              </v-col>
-              <v-col class="d-flex justify-center " cols="2">
-                <v-icon class="mr-2" small @click="editEscortPreise(preis)">mdi-pencil</v-icon> <!-- Bearbeiten -->
-                <v-icon color="red" small @click="deleteEscortpreise(preis)">mdi-delete</v-icon> <!-- Löschsymbol -->
-              </v-col>
-            </v-row>
-
-          </v-col>
-        </v-row>
+        </div>
       </v-col>
 
     </v-row>
@@ -142,40 +113,62 @@ export default {
       name: null,
       text: null,
       überschrift: null,
-      damen: [],
+      selectedDamen: [],
+      damenList: [],
 
-      escortPreise: [],
+      headers: [
+        {title: 'ID', key: 'id'},
+        {title: 'Name', key: 'name'},
+        {title: 'Text', key: 'text'},
+        {title: 'Überschrift', key: 'überschrift'},
+        {title: 'Damen', key: 'damen'},
+        {title: 'Aktionen', key: 'actions', sortable: false}
+      ],
+
+      städte: [],
       deleteDialog: false,
-      escortPreiseToDelete: null,
-      editEscortPreis: null,
+      stadtToDelete: null,
+      editStadt: null,
 
       loading: false,
       snackbar: false,
       snackbarText: null,
       snackbarColor: null,
-      dialog: false // Für den Dialog zum Bestätigen
+      dialog: false
     };
   },
   mounted() {
-    this.getEscortPreise();
+    this.getStädte();
+    this.fetchDamen()
   },
   methods: {
-    async getEscortPreise() {
+    async fetchDamen() {
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise`, {
+        // Daten von der API abrufen
+        const response = await $fetch('https://maxi-escort.de:8443/auth/dame');
+
+        // Speichere die vollständigen Damen-Objekte in damenList
+        this.damenList = response;
+      } catch (error) {
+        console.error('Fehler beim Laden der Damen:', error);
+      }
+    },
+    async getStädte() {
+      try {
+        let response = await $fetch(`https://maxi-escort.de:8443/auth/stadt`, {
           method: 'GET',
         });
 
         if (response && Array.isArray(response)) {
-          // Speichert die Escort-Preise in einer Variable, z.B. escortPreise
-          this.escortPreise = response;
+          this.städte = response;
+          console.log(response)
 
           // Beispielhafte weitere Verarbeitung, falls nötig:
         }
       } catch (e) {
-        console.error("Fehler beim Abrufen der Escort-Preise:", e);
+        console.error("Fehler beim Abrufen der Städte:", e);
       }
-      console.log(this.escortPreise)
+      console.log(this.städte)
     },
 
 
@@ -199,42 +192,50 @@ export default {
     async submitChanges() {
       this.loading = true;
       const data = {
-        dauer: this.dauer,
-        classic: this.classic,
-        exclusiv: this.exclusiv,
-        vip: this.vip
+        name: this.name,
+        text: this.text,
+        überschrift: this.überschrift,
+        damenIds: this.selectedDamen.map(dame => dame.id) // Nur die IDs der ausgewählten Damen
       };
+
+      if (this.selectedDamen.length === 0) {
+        this.snackbar = true;
+        this.snackbarText = "Bitte wählen Sie mindestens eine Dame aus";
+        this.snackbarColor = "warning";
+        this.loading = false;
+        return;
+      }
+
 
       try {
         let response;
 
-        if (this.editEscortPreis) {
-          // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise/${this.editEscortPreis.id}`, {
+        if (this.editStadt) {
+          response = await $fetch(`https://maxi-escort.de:8443/auth/stadt/${this.editStadt.id}`, {
             method: 'PUT',
             body: data
           });
 
           if (response) {
-            console.log("Escortpreise erfolgreich bearbeitet:", response);
+            console.log("Städte erfolgreich bearbeitet:", response);
             this.snackbar = true;
-            this.snackbarText = "Escortpreise erfolgreich bearbeitet";
+            this.snackbarText = "Städte erfolgreich bearbeitet";
             this.snackbarColor = "success";
-            await this.getEscortPreise();
+            await this.getStädte();
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise`, {
+          response = await $fetch(`https://maxi-escort.de:8443/auth/stadt`, {
             method: 'POST',
             body: data
           });
 
           if (response) {
-            console.log("Escortpreise erfolgreich gespeichert:", response);
+            console.log("Städte erfolgreich gespeichert:", response);
             this.snackbar = true;
-            this.snackbarText = "Escortpreise erfolgreich gespeichert";
+            this.snackbarText = "Städte erfolgreich gespeichert";
             this.snackbarColor = "success";
-            await this.getEscortPreise();
+            await this.getStädte();
           }
         }
 
@@ -248,7 +249,7 @@ export default {
       } catch (e) {
         console.error("Fehler beim Speichern der Änderungen:", e);
         this.snackbar = true;
-        this.snackbarText = "Fehler beim Speichern der Escortpreise";
+        this.snackbarText = "Fehler beim Speichern der Städte";
         this.snackbarColor = "error";
       }
       this.loading = false;
@@ -256,52 +257,52 @@ export default {
 
 
     // Methode zum Löschen eines Eintrags
-    deleteEscortpreise(entry) {
-      this.escortPreiseToDelete = entry; // Den zu löschenden Eintrag speichern
+    deleteStadt(entry) {
+      this.stadtToDelete = entry; // Den zu löschenden Eintrag speichern
       this.deleteDialog = true; // Dialog öffnen
     },
 
     // Methode zum Löschen nach Bestätigung
     async confirmDelete() {
       this.loading = true;
-      this.deleteDialog = false; // Dialog schließen
+      this.deleteDialog = false;
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise/${this.escortPreiseToDelete.id}`, {
+        let response = await $fetch(`https://maxi-escort.de:8443/auth/stadt/${this.stadtToDelete.id}`, {
           method: 'DELETE',
         });
 
         if (response) {
           // Entferne den Eintrag aus der Liste
-          this.escortPreise = this.escortPreise.filter(e => e.id !== this.escortPreiseToDelete.id);
+          this.städte = this.städte.filter(e => e.id !== this.stadtToDelete.id);
           this.snackbar = true;
-          this.snackbarText = "Escortpreis erfolgreich gelöscht";
+          this.snackbarText = "Stadt erfolgreich gelöscht";
           this.snackbarColor = "success";
         }
       } catch (e) {
-        console.error("Fehler beim Löschen des Escortpreises:", e);
+        console.error("Fehler beim Löschen der Städte:", e);
         this.snackbar = true;
-        this.snackbarText = "Fehler beim Löschen des Escortpreises";
+        this.snackbarText = "Fehler beim Löschen des Stadt";
         this.snackbarColor = "error";
       }
       this.loading = false;
-      this.escortPreiseToDelete = null;  // Zurücksetzen
-      await this.getEscortPreise();  // Liste der Einträge neu laden
+      this.stadtToDelete = null;  // Zurücksetzen
+      await this.getStädte();  // Liste der Einträge neu laden
     },
 
-    editEscortPreise(entry) {
-      this.editEscortPreis = entry;
-      this.dauer = entry.dauer;
-      this.vip = entry.vip;
-      this.classic = entry.classic;
-      this.exclusiv = entry.exclusiv;
+    editStadtEntität(entry) {
+      this.editStadt = entry;
+      this.name = entry.name;
+      this.text = entry.text;
+      this.überschrift = entry.überschrift;
+      this.selectedDamen = entry.damen
     },
 
     resetEditMode() {
-      this.editEscortPreis = null;
-      this.dauer = null;
-      this.vip = null;
-      this.classic = null;
-      this.exclusiv = null;
+      this.editStadt = null;
+      this.text = null;
+      this.überschrift = null;
+      this.name = null;
+      this.selectedDamen = null;
     },
   }
 };

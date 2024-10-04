@@ -100,7 +100,7 @@
                 <td>{{ item.name }}</td>
                 <td>{{ item.geburtsalter }}</td>
                 <td>
-                  <div v-for="(stadt, index) in item.städte" :key="index">
+                  <div v-for="(stadt, index) in item.staedte" :key="index">
                     {{ stadt.name }}<br>
                   </div>
                 </td>
@@ -155,6 +155,8 @@
         <v-card-title class="headline">Eintrag löschen?</v-card-title>
         <v-card-text>
           Bist du sicher, dass du diesen Eintrag löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
+          <br><br>
+          <u><b>Wichtig:</b></u> Wenn dies die letzte Dame aus der Stadt ist, kann diese nicht gelöscht werden.
         </v-card-text>
         <v-card-actions>
           <v-btn style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
@@ -323,7 +325,8 @@ export default {
         parfüm: this.parfum,
         weitereGeschenkideen: this.weitereGeschenkideen,
         arrangements: this.arrangements,
-        bilder: this.bilder
+        bilder: this.bilder,
+        staedte: null
       };
 
       try {
