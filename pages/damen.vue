@@ -19,6 +19,8 @@
       </v-col>
     </v-row>
   </div>
+
+
   <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1200px">
     <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
       <v-col style="background-color: #d4e2ea" class="pa-0" cols="6">
@@ -64,8 +66,8 @@
       <v-col class="pa-0" cols="6">
         <v-carousel theme="dark"  style="height: 1200px">
           <v-carousel-item
-              v-for="bild in dame.images" :key="bild"
-              :src="bild.image"
+              v-for="bild in dame.bilder" :key="bild"
+              :src="bild.imageBase64"
               cover
           ></v-carousel-item>
 
@@ -94,14 +96,13 @@
       </div>
 
     </v-img>
-
-    <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1600px">
+    <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1400px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="12">
           <v-carousel theme="dark"  style="height: 600px">
             <v-carousel-item
-                v-for="bild in dame.images" :key="bild"
-                :src="bild.image"
+                v-for="bild in dame.bilder" :key="bild"
+                :src="bild.imageBase64"
                 cover
             ></v-carousel-item>
 
@@ -155,6 +156,7 @@ import { ref } from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const escort = ref([]);
+const damen = ref([]);
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
@@ -194,10 +196,37 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 });
 
+const { data: damen1, pending2, error2 } = await useAsyncData('damen', async () => {
+  let token = null;
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/dame", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der damen:', e);
+    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
+  }
+});
+
 // Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
 if (landingpage1.value) {
   escort.value.push(landingpage1.value);
   console.log(escort.value);
+}
+if (damen1.value) {
+  damen.value = damen1.value;
+  console.log(damen.value);
 }
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
@@ -229,32 +258,6 @@ export default {
         text1: 'Unsere Begleitpersonen',
         text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ',
       }],
-      damen:[
-          {
-            id: 1,
-            images:[
-                {image: ''},
-                {image: ''},
-                {image: ''},
-                {image: ''},
-                {image:''}
-                ],
-            name:'Alina',
-              geburtsdatum: "2024-09-24",    vita: "string",    motto: "string",    interessen: "string",    nutzungMeinerZeit: "string",    getränke: "string",    cuisine: "string",    blume: "string",    parfüm: "string",    weitereGeschenkideen: "string",   arrangements: "string"
-          },
-          {
-            id: 2,
-            images:[
-                {image: ''},
-                {image: ''},
-                {image: ''},
-                {image: ''},
-                {image:''}
-                ],
-            name:'Alina',
-              geburtsdatum: "2024-09-24",    vita: "string",    motto: "string",    interessen: "string",    nutzungMeinerZeit: "string",    getränke: "string",    cuisine: "string",    blume: "string",    parfüm: "string",    weitereGeschenkideen: "string",   arrangements: "string"
-          }
-      ]
 
   }
   },

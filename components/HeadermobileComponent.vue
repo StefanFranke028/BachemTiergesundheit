@@ -6,12 +6,20 @@
       location="right">
     <v-list density="compact" nav>
       <v-list-item
+          class="mt-2"
           v-for="item in menuItems"
           :key="item.title"
-          :prepend-icon="item.icon"
-          :title="item.title"
           :to="{ name: item.route }"
-      ></v-list-item>
+      >
+        <v-row style="width: 100%;" class="mx-0">
+          <v-col cols="2">
+            <Icon style="font-size: 25px" :icon="item.icon" />
+          </v-col>
+          <v-col>
+            {{ item.title }}
+          </v-col>
+        </v-row>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 <v-row style="width: 100%; height: 100%" class="ma-0 px-2">
@@ -61,12 +69,12 @@ export default {
     return{
       drawer:false,
       menuItems: [
-        { title: 'Startseite', icon: 'mdi-home', route: 'index' },
-        { title: 'Vita', icon: 'mdi-account', route: 'vita' },
-        { title: 'Escort', icon: 'mdi-gender-female', route: 'damen' },
-        { title: 'Bewerben', icon: 'mdi-account-box', route: 'bewerben' },
-        { title: 'Kontakt', icon: 'mdi-email', route: 'kontakt' },
-        { title: 'Honorare', icon: 'mdi-cash', route: 'honorare' },
+        { title: 'Startseite', icon: 'heroicons:home-solid', route: 'index' },
+        { title: 'Vita', icon: 'fluent:person-32-filled', route: 'vita' },
+        { title: 'Escort', icon: 'icon-park-solid:women', route: 'damen' },
+        { title: 'Bewerben', icon: 'fluent:chart-person-48-filled', route: 'bewerben' },
+        { title: 'Kontakt', icon: 'streamline:contact-phonebook-2-solid', route: 'kontakt' },
+        { title: 'Honorare', icon: 'foundation:pricetag-multiple', route: 'honorare' },
         { title: 'Blog', icon: 'mdi-book', route: 'blog' },
       ],
     }

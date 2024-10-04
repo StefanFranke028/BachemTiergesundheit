@@ -183,9 +183,10 @@
 <script>
 import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
-
+import { Icon } from '@iconify/vue';
 export default {
   components: {
+    Icon,
     FooterComponent,
   },
   data() {
