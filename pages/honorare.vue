@@ -150,7 +150,7 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-n5" v-html="honorare[0].text1"> </h2>
+              <h2 style="margin-left: -80px; " class="dm-serif " v-html="honorare[0].text1"> </h2>
             </div>
             <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="honorare[0].text2">
             </div>

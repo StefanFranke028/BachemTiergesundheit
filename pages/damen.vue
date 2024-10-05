@@ -55,7 +55,7 @@
               <br>
               <br>
               <b>Städte: &nbsp;</b>
-              <span  v-for="stadt in dame.städte" :key="stadt">
+              <span  v-for="stadt in dame.staedte" :key="stadt">
                   {{stadt.name}}, &nbsp;
                 </span>
               <br>
@@ -95,14 +95,14 @@
             <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="escort[0].text2">
 
             </div>
-            <router-link to="kontakt"  style="position: relative; left: -8%; top:16vh">    <v-btn theme="dark" class="text-center" >Kontakt</v-btn></router-link>
+            <router-link to="kontakt"  style="position: relative; left: -8%; top:5vh">    <v-btn theme="dark" class="text-center" >Kontakt</v-btn></router-link>
           </div>
         </div>
 
       </div>
 
     </v-img>
-    <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1400px">
+    <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1600px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="12">
           <v-carousel theme="dark"  style="height: 600px">
@@ -143,7 +143,7 @@
                 <br>
                 <br>
                 <b>Städte: &nbsp;</b>
-                <span  v-for="stadt in dame.städte" :key="stadt">
+                <span  v-for="stadt in dame.staedte" :key="stadt">
                   {{stadt.name}}, &nbsp;
                 </span>
                 <br>
