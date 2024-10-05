@@ -1,31 +1,30 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal" class="pa-16">
+  <div v-if="desktop|| tabletHorizontal"  style="background-color: #ffffff" class="pa-5 mt-4">
+    <v-row style="width: 100% ;" class="mx-0 justify-center">
+      <v-col cols="7">
+        <v-img src="../assets/1i.jpg" cover></v-img>
+      </v-col> <v-col cols="7">
+      <v-img src="../assets/2i.jpg" cover></v-img>
+    </v-col>
+    </v-row>
 
-  <h1>Impressum</h1>
-
-  <p>Maxi Di Benedetto<br />
-    Escortservice  Agentur<br />
-    Siemens Stra&szlig;e<br />
-    61348 Bad Homburg</p>
-
-  <h2>Kontakt</h2>
-  <p>Telefon: +49 151- 670 376 96<br />
-    E-Mail: office@maxi-escort.de</p>
-
-  <h2>Umsatzsteuer-ID</h2>
-  <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br />
-    Auf Anfrage</p>
-
-  <h2>Redaktionell verantwortlich</h2>
-  <p>Di Benedetto</p>
-
-  <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
-  <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-
-  <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
   </div>
   <div v-if="mobile || tablet">
-    Impressum
+    <v-row style="width: 100% ;" class="mx-0 justify-center">
+      <v-col cols="12">
+        <v-img src="../assets/1.jpg" cover></v-img>
+      </v-col> <v-col cols="12">
+      <v-img src="../assets/2.jpg" cover></v-img>
+    </v-col> <v-col cols="12">
+      <v-img src="../assets/3.jpg" cover></v-img>
+    </v-col> <v-col cols="12">
+      <v-img src="../assets/4.jpg" cover></v-img>
+    </v-col> <v-col cols="12">
+      <v-img src="../assets/5.jpg" cover></v-img>
+    </v-col> <v-col cols="12">
+      <v-img src="../assets/6.jpg" cover></v-img>
+    </v-col>
+    </v-row>
   </div>
 </template>
 <script>
