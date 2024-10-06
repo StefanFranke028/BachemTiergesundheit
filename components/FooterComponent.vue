@@ -1,8 +1,8 @@
 <template>
-  <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'verwaltung'" class="desktop" :class="formattedPath" >
-    <v-row style="width: 100%;" class="ma-0 justify-center">
-        <v-col class="d-flex justify-center" cols="4">
-          <div style="cursor: pointer">
+  <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'verwaltung'" :class="formattedPath" class="desktop">
+    <v-row class="ma-0 justify-center" style="width: 100%;">
+      <v-col class="d-flex justify-center" cols="4">
+        <div style="cursor: pointer">
             <span style="font-size: 22px; color: grey; ">
                 MAXI
                   <b class="ml-n1" style="color: black">
@@ -10,26 +10,26 @@
               </b>
             </span>
         </div>
-        </v-col>
+      </v-col>
       <v-col cols="6">
-          <div style="cursor: pointer">
-            <p class="text-center" style="font-size: 17px; color: grey; ">
-                HABEN SIE NOCH FRAGEN? &nbsp;
-              <b class="ml-n1" style="color: black">
+        <div style="cursor: pointer">
+          <p class="text-center" style="font-size: 17px; color: grey; ">
+            HABEN SIE NOCH FRAGEN? &nbsp;
+            <b class="ml-n1" style="color: black">
               RUFEN SIE UNS AN! <br> <a href="tel:+49 151-670 376 96">+49 151-670 376 96</a>
-              </b>
-            </p>
+            </b>
+          </p>
         </div>
-        </v-col>
+      </v-col>
     </v-row>
     <v-divider></v-divider>
-    <v-row style="width: 100%"  class="ma-0 justify-center">
-      <v-col cols="8" class="d-flex justify-center" >
-        <v-row style="width: 100%"  class="ma-0 pa-16">
-          <v-col cols="3" v-for="stadt in staedte" class="" :key="stadt">
-            <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.name">
+    <v-row class="ma-0 justify-center" style="width: 100%">
+      <v-col class="d-flex justify-center" cols="8">
+        <v-row class="ma-0 pa-16" style="width: 100%">
+          <v-col v-for="stadt in staedte" :key="stadt" class="" cols="3">
+            <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
               <p style="cursor:pointer">
-                {{stadt.name}}
+                {{ stadt.name }}
               </p>
 
             </nuxt-link>
@@ -39,18 +39,18 @@
 
       </v-col>
     </v-row>
-    <div style="position: relative;" class="d-flex justify-center ">
+    <div class="d-flex justify-center " style="position: relative;">
       <p style="font-size: 11px">
         Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
-        <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
           <span class="">Anbieterkennzeichnung</span>
         </router-link> &nbsp;
         •
-        <router-link to="/datenschutz" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
         •
-        <router-link to="/verwaltung" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/verwaltung">
           <span class="">Sitemap</span>
         </router-link> &nbsp;
 
@@ -59,41 +59,41 @@
     </div>
 
   </div>
-  <div v-if="mobile|| tablet" class="mobile" :class="formattedPath" >
-    <v-row style="width: 100%" class="justify-center ma-0">
+  <div v-if="mobile|| tablet" :class="formattedPath" class="mobile">
+    <v-row class="justify-center ma-0" style="width: 100%">
       <v-col cols="10">
         <h3 class="">ELEGANZ TRIFFT LEIDENSCHAFT </h3>
-        <p style="font-size: 12px"  >erotisch | leidenschaftlich | hautnah</p>
+        <p style="font-size: 12px">erotisch | leidenschaftlich | hautnah</p>
         <br>
 
       </v-col>
-      <v-col cols="2" class="d-flex justify-center">
+      <v-col class="d-flex justify-center" cols="2">
 
       </v-col>
     </v-row>
-    <v-row style="width: 100%"  class="ma-0 ">
-      <v-col cols="6" v-for="stadt in staedte"  :key="stadt">
-        <nuxt-link style="text-decoration: none; color: black" :to="'MaxiEscort-'+ stadt.name">
+    <v-row class="ma-0 " style="width: 100%">
+      <v-col v-for="stadt in staedte" :key="stadt" cols="6">
+        <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
           <p class="text-center" style="cursor:pointer">
-            {{stadt.name}}
+            {{ stadt.name }}
           </p>
 
         </nuxt-link>
         <v-divider></v-divider>
       </v-col>
     </v-row>
-    <div style="position: relative;" class="d-flex justify-center px-2">
+    <div class="d-flex justify-center px-2" style="position: relative;">
       <p style="font-size: 6px">
         Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
-        <router-link to="/impressum" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
           <span class="">Anbieterkennzeichnung</span>
         </router-link> &nbsp;
         •
-        <router-link to="/datenschutz" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
         •
-        <router-link to="/verwaltung" class="nav-link"  title="Impressum" aria-label="Impressum">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/verwaltung">
           <span class="">Sitemap</span>
         </router-link> &nbsp;
       </p>
@@ -103,14 +103,13 @@
 
 
 <script setup>
-import FooterComponent from "~/components/FooterComponent.vue";
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const staedte = ref([]);
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
-const { data: landingpage1, pending, error } = await useAsyncData('landingpage1', async () => {
+const {data: landingpage1, pending, error} = await useAsyncData('landingpage1', async () => {
   let token = null;
 
   if (process.client) {
@@ -137,7 +136,6 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage1'
 
 if (landingpage1.value) {
   staedte.value = landingpage1.value;
-  console.log(staedte.value);
 }
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
@@ -162,14 +160,11 @@ import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "FooterComponent",
-  data(){
-    return{
-    }
+  data() {
+    return {}
   },
-  components:{
-
-  },
-  computed:{
+  components: {},
+  computed: {
     wide() {
       const screenStore = useScreenStore();
       return screenStore.wide;
@@ -208,52 +203,67 @@ export default {
 </script>
 
 <style scoped>
-.footer{
+.footer {
 
-  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
-}.damen{
-
-  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
-}.honorare{
-
-  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
-}
-.kontakt{
-
-  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
-}
-.datenschutz{
-
-  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
-}
-.impressum{
-
-  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
-}
-.vita{
-
-  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
-}.bewerben{
-
-   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
-}.blog{
-
-    background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
-}
-.footer{
-
-     background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
-
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
-.mobile{
+.damen {
+
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
+}
+
+.honorare {
+
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
+}
+
+.kontakt {
+
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
+}
+
+.datenschutz {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+}
+
+.impressum {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+}
+
+.vita {
+
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
+}
+
+.bewerben {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+}
+
+.blog {
+
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
+}
+
+.footer {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+
+}
+
+.mobile {
   width: 100%;
   height: 110px;
 }
-.desktop{
-        width: 100%;
+
+.desktop {
+  width: 100%;
 
 }
+
 .nav-link {
   text-decoration: none;
   color: inherit;

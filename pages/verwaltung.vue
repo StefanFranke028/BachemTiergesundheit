@@ -57,8 +57,8 @@
           </v-col>
           <v-col cols="9">
             <v-card
+                :height="selectedSeite === null && selectedSeite === null ? '100%' : '70vh'"
                 class="mt-n10"
-                height="70vh"
                 style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
               <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
               <VitaComponent v-if="selectedSeite === 'Vita'"/>

@@ -1,7 +1,8 @@
 <template>
   <div class="d-flex justify-center align-center" style="width: 100vw; height: 100vh">
     <v-form @submit.prevent="login">
-      <v-card class="card">
+      <v-card class="card"
+              style="box-shadow: none; border-top: 1px solid rgba(255,255,255,0); border-left: 1px solid rgba(255,255,255,0)">
         <v-card-title class="text-center">
           <span class="text-h5 ">Einloggen</span>
         </v-card-title>
@@ -47,15 +48,16 @@
         <v-card-actions class="d-flex justify-center">
           <v-row>
             <v-col class="d-flex justify-end" cols="6">
-              <v-btn
-                  color="white"
-                  type="submit"
-                  variant="outlined">
+              <v-btn color="white"
+                     style="border: none"
+                     type="submit"
+                     variant="outlined">
                 Einloggen
               </v-btn>
             </v-col>
             <v-col class="d-flex justify-start" cols="6">
               <v-btn color="white"
+                     style="border: none"
                      variant="outlined" @click="$router.push('/')">
                 Abbrechen
               </v-btn>

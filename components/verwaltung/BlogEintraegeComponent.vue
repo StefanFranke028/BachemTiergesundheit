@@ -346,7 +346,7 @@ export default {
   margin: 0 0 0 0;
 }
 
-::v-deep .v-table.v-table--fixed-header thead th {
+:deep() .v-table.v-table--fixed-header thead th {
   background-color: rgba(74, 144, 226, 0) !important;
   color: black !important;
 }
