@@ -1,104 +1,136 @@
 <template>
-  <!--  <div v-if="desktop || wide">-->
-  <div class="background d-flex justify-center" style="width: 100vw; height: 100vh">
+  <div v-if="!mobile && !tablet && !tabletHorizontal" style="width: 100vw">
 
-    <div v-if="isLoading" class="d-flex justify-center" style="width: 100vw">
+    <div class="background d-flex justify-center" style="width: 100vw; height: 100vh">
 
-      <v-col class="d-flex justify-center align-center" cols="12">
-        <v-progress-circular
-            color="primary"
-            indeterminate
-            size="70"
-        ></v-progress-circular>
-      </v-col>
+      <div v-if="isLoading" class="d-flex justify-center" style="width: 100vw">
+        <v-col class="d-flex justify-center align-center" cols="12">
+          <v-progress-circular
+              color="primary"
+              indeterminate
+              size="70"
+          ></v-progress-circular>
+        </v-col>
+      </div>
+
+      <div v-else>
+
+        <div v-if="!user" class="d-flex justify-center align-center backgroundLogin "
+             style="width: 100vw; height: 100vh">
+          <LoginComponent/>
+        </div>
+
+        <v-row class="d-flex justify-center">
+          <v-col class="d-flex justify-center align-center" cols="3">
+            <router-link to="/">
+              <h3 class="text-center">Zurück zur Startseite</h3>
+            </router-link>
+          </v-col>
+          <v-col class="d-flex justify-center align-center" cols="6">
+            <h1>Verwaltung von Maxi-Escort</h1>
+          </v-col>
+
+
+          <v-col class="d-flex justify-center align-center" cols="3">
+            <h3 class="text-center" @click="logout">
+              Ausloggen
+            </h3>
+          </v-col>
+          <v-col class="d-flex justify-center align-center" cols="3">
+            <v-select v-model="selectedSeite"
+                      :items="seiten"
+                      label="Wählen Sie eine Seite">
+            </v-select>
+          </v-col>
+          <v-col class="d-flex justify-center align-center " cols="1">
+            <p class="mt-n5">
+              < -- >
+            </p>
+          </v-col>
+          <v-col class="d-flex justify-center align-center" cols="3">
+            <v-select v-model="selectedItem"
+                      :items="items"
+                      label="Wählen Sie Damen, Preise, etc.">
+              test
+            </v-select>
+          </v-col>
+          <v-col cols="9">
+            <v-card
+                class="mt-n10"
+                height="70vh"
+                style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
+              <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
+              <VitaComponent v-if="selectedSeite === 'Vita'"/>
+              <EscortComponent v-if="selectedSeite === 'Escort'"/>
+              <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
+              <KontaktComponent v-if="selectedSeite === 'Kontakt'"/>
+              <HonorareComponent v-if="selectedSeite === 'Honorare'"/>
+              <BlogComponent v-if="selectedSeite === 'Blog'"/>
+
+              <!-- Weitere Optionen basierend auf selectedItem -->
+              <BlogEintraegeComponent v-if="selectedItem === 'Blog-Einträge'"/>
+              <EscortPreiseComponent v-if="selectedItem === 'Escort Preise'"/>
+              <DinnerPreiseComponent v-if="selectedItem === 'Dinner Preise'"/>
+              <DamenComponent v-if="selectedItem === 'Damen'"/>
+              <StadtComponent v-if="selectedItem === 'Stadt'"/>
+            </v-card>
+          </v-col>
+        </v-row>
+
+      </div>
+
     </div>
-    <v-row v-else class="d-flex justify-center">
-      <v-col class="d-flex justify-center align-center" cols="3">
-        <router-link to="/">
-          <h3 class="text-center">Zurück zur Startseite</h3>
-        </router-link>
-      </v-col>
-      <v-col class="d-flex justify-center align-center" cols="6">
-        <h1>Verwaltung von Maxi-Escort</h1>
-      </v-col>
-
-
-      <v-col class="d-flex justify-center align-center" cols="3">
-        <h3 class="text-center">
-          Ausloggen
-        </h3>
-      </v-col>
-      <v-col class="d-flex justify-center align-center" cols="3">
-        <v-select v-model="selectedSeite"
-                  :items="seiten"
-                  label="Wählen Sie eine Seite">
-          test
-        </v-select>
-      </v-col>
-      <p class="mt-12">
-        < -- >
-      </p>
-      <v-col class="d-flex justify-center align-center" cols="3">
-        <v-select v-model="selectedItem"
-                  :items="items"
-                  label="Wählen Sie Damen, Preise, etc.">
-          test
-        </v-select>
-      </v-col>
-      <v-col cols="9">
-        <v-card
-            class="mt-n10"
-            height="625"
-            style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
-          <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
-          <VitaComponent v-if="selectedSeite === 'Vita'"/>
-          <EscordComponent v-if="selectedSeite === 'Escort'"/>
-          <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
-          <KontaktComponent v-if="selectedSeite === 'Kontakt'"/>
-          <HonorareComponent v-if="selectedSeite === 'Honorare'"/>
-          <BlogComponent v-if="selectedSeite === 'Blog'"/>
-
-          <!-- Weitere Optionen basierend auf selectedItem -->
-          <BlogEinträgeComponent v-if="selectedItem === 'Blog-Einträge'"/>
-          <EscortPreiseComponent v-if="selectedItem === 'Escort Preise'"/>
-          <DinnerPreiseComponent v-if="selectedItem === 'Dinner Preise'"/>
-          <DamenComponent v-if="selectedItem === 'Damen'"/>
-          <StadtComponent v-if="selectedItem === 'Stadt'"/>
-        </v-card>
-      </v-col>
-    </v-row>
   </div>
   <!--  </div>-->
+  <div v-if="mobile || tablet || tabletHorizontal" class="d-flex justify-center align-center pb-16"
+  >
+    <v-card class="mx-5 mt-16" color="grey">
+      <v-card-title>
+        <h1>Maxi-Escort</h1>
+      </v-card-title>
+      <v-card-item>
+        Diese Ansicht ist leider auf dem Handy nicht vefügbar. Bitte kehren Sie zur
+        <router-link style="color: blue" to="/">
+          Startseite
+        </router-link>
+        zurück.
+      </v-card-item>
+    </v-card>
+  </div>
 </template>
 
 
 <script>
-import {useScreenStore} from "~/stores/screen.js";
-import StartseiteComponent from "~/components/verwaltung/StartseiteComponent.vue";
-import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
-import EscordComponent from "~/components/verwaltung/EscortComponent.vue";
-import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
-import BlogEinträgeComponent from "~/components/verwaltung/BlogEinträgeComponent.vue";
-import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
-import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
+
+
+import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
 import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
-import nuxtLayout from "#app/components/nuxt-layout.js";
-import nuxtLink from "#app/components/nuxt-link.js";
+import BlogEintraegeComponent from "~/components/verwaltung/BlogEintraegeComponent.vue";
+import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
+import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
+import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
+import EscortComponent from "~/components/verwaltung/EscortComponent.vue";
+import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
+import StartseiteComponent from "~/components/verwaltung/StartseiteComponent.vue";
 import EscortPreiseComponent from "~/components/verwaltung/EscortPreiseComponent.vue";
 import DinnerPreiseComponent from "~/components/verwaltung/DinnerPreiseComponent.vue";
 import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
-import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
+import LoginComponent from "~/components/verwaltung/LoginComponent.vue";
+import nuxtLink from "#app/components/nuxt-link.js";
+import nuxtLayout from "#app/components/nuxt-layout.js";
+import {useUserStore} from "~/stores/user.js";
 
 export default {
   name: "verwaltung",
   components: {
+    LoginComponent,
     StadtComponent,
     BlogComponent,
-    BlogEinträgeComponent,
+    BlogEintraegeComponent,
     HonorareComponent,
     KontaktComponent,
     BewerbenComponent,
-    EscordComponent,
+    EscortComponent,
     VitaComponent,
     StartseiteComponent,
     EscortPreiseComponent,
@@ -129,15 +161,11 @@ export default {
     },
   },
   mounted() {
-    // Simuliere einen Ladevorgang (z.B. einen API-Call), bevor isLoading auf false gesetzt wird
-    setTimeout(() => {
-      this.isLoading = false; // Wenn alles geladen ist, setze isLoading auf false
-    }, 2000); // Hier kannst du auch eine echte Funktion wie getUser() aufrufen
+    this.getUser()
   },
   methods: {
     async isUser() {
       const userStore = useUserStore();
-
       if (userStore.user.status !== "user") {
         await this.$router.push('login')
       }
@@ -170,8 +198,12 @@ export default {
     },
     async getUser() {
       const token = localStorage.getItem('token');
+      if (token) {
+        console.log("token is da")
+        console.log(token)
+      }
       try {
-        let response = await $fetch("https://job-grow.de:8080/auth/user", {
+        let response = await $fetch("https://maxi-escort.de:8443/auth/user", {
           method: 'GET',
           headers: {
             Authorization: token ? `Bearer ${token}` : undefined
@@ -184,39 +216,13 @@ export default {
           userStore.setUser(response);
         }
       } catch (e) {
-        alert(e);
       }
+      this.isLoading = false;
     },
-    async updateUser() {
-      const token = localStorage.getItem('token');
-      console.log(this.user.kundennummer)
-      this.user.step1.profilBild = this.imageBase64
-      try {
-        let response = await $fetch(`https://job-grow.de:8080/auth/user/${this.user.kundennummer}`, {
-          method: 'PUT',
-          headers: {
-            Authorization: token ? `Bearer ${token}` : undefined,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.user)
-        });
-
-        console.log("Antwort auf das Update:", response);
-
-        if (response) {
-          const userStore = useUserStore();
-          userStore.setUser(response);  // Aktualisieren des Benutzers im Store, falls notwendig
-          console.log("Benutzer aktualisiert:", response);
-          const compareStore = useCompareStore()
-          compareStore.setCompareStep(response.step1)
-          compareStore.setDynamicStep1()
-          this.task.dialog = false
-        }
-      } catch (e) {
-        console.error("Fehler beim Aktualisieren des Benutzers:", e);
-        alert(e.message);  // Eine benutzerfreundlichere Fehlermeldung anzeigen
-      }
-    },
+    logout() {
+      const userStore = useUserStore();
+      userStore.logout();
+    }
   },
   computed: {
     nuxtLink() {
@@ -224,6 +230,10 @@ export default {
     },
     nuxtLayout() {
       return nuxtLayout
+    },
+    user() {
+      const userStore = useUserStore();
+      return userStore.user;
     },
     wide() {
       const screenStore = useScreenStore();
@@ -252,6 +262,12 @@ export default {
 
 <style scoped>
 .background {
+  background-image: url('../assets/verwaltungBackground.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.backgroundLogin {
   background-image: url('../assets/verwaltungBackground.jpg');
   background-size: cover;
   background-position: center;

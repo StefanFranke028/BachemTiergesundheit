@@ -16,7 +16,7 @@
           >
             {{ snackbarText }}
           </v-snackbar>
-          <v-row class="pa-0" style="height: 625px">
+          <v-row class="pa-0" style="height: 70vh">
             <v-col cols="6">
               <v-text-field v-model="ueberschrift" label="Überschrift"></v-text-field>
             </v-col>
@@ -58,9 +58,11 @@
         <div style="overflow-y: scroll">
           <v-data-table-virtual
               :items="blogEntries"
+              :loading="loading"
+              :loading-text="loading ? 'Lade Einträge...' : 'Keine Einträge gefunden'"
               color="blue"
               no-data-text="Keine Einträge gefunden"
-              style="background-color: rgba(0,0,255,0); height: 625px"
+              style="background-color: rgba(0,0,255,0); height: 70vh"
           >
             <template v-slot:item="{ item }">
               <tr>
@@ -126,7 +128,7 @@ export default {
       description: 1,
       maxLengthRule: v => (v && v.length <= 155) || 'Die Beschreibung darf maximal 155 Zeichen lang sein.',
       keywords: null,
-      tab: null,
+      tab: 2,
       textarea1: '',
       textarea2: '',
       bild: null,
@@ -186,6 +188,7 @@ export default {
     },
     // Methode zum Abrufen der Blog-Einträge
     async getBlogEintraege() {
+      this.loading = true;
       try {
         let response = await $fetch(`https://maxi-escort.de:8443/auth/blog/entries`, {
           method: 'GET',
@@ -207,6 +210,7 @@ export default {
       } catch (e) {
         console.error("Fehler beim Abrufen der Blog-Einträge:", e);
       }
+      this.loading = false;
     },
 
     // Methode zum Bearbeiten eines Eintrags

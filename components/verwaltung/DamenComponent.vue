@@ -7,7 +7,7 @@
 
     <v-tabs-window v-model="tab">
       <v-tabs-window-item :value="1">
-        <div style="overflow-y: scroll; padding-bottom: 50px; height: 625px">
+        <div style="overflow-y: scroll; padding-bottom: 50px; height: 70vh">
           <v-row class="pa-0">
             <v-col cols="4">
               <v-text-field v-model="name" label="Name"></v-text-field>
@@ -90,9 +90,11 @@
           <v-data-table-virtual
               :headers="headers"
               :items="damen"
+              :loading="loading"
+              :loading-text="loading ? 'Lade Daten...' : 'Keine Daten vorhanden'"
               color="blue"
               no-data-text="Keine Einträge gefunden"
-              style="background-color: rgba(0,0,255,0); height: 625px"
+              style="background-color: rgba(0,0,255,0); height: 70vh"
           >
             <template v-slot:item="{ item }">
               <tr>
@@ -152,9 +154,9 @@
 
     <v-dialog v-model="deleteDialog" max-width="400">
       <v-card>
-        <v-card-title class="headline">Eintrag löschen?</v-card-title>
+        <v-card-title class="headline">Dame löschen?</v-card-title>
         <v-card-text>
-          Bist du sicher, dass du diesen Eintrag löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
+          Bist du sicher, dass du diese Dame löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
           <br><br>
           <u><b>Wichtig:</b></u> Wenn dies die letzte Dame aus der Stadt ist, kann diese nicht gelöscht werden.
         </v-card-text>
@@ -198,7 +200,7 @@ export default {
       editedDame: null,
       bilder: null,
 
-      tab: 0,
+      tab: 2,
       damen: [],
 
       dameToDelete: null,
@@ -237,8 +239,10 @@ export default {
       this.parfum = null;
       this.weitereGeschenkideen = null;
       this.arrangements = null;
+      this.billder = null
     },
     async getDamen() {
+      this.loading = true
       try {
         let response = await $fetch(`https://maxi-escort.de:8443/auth/dame`, {
           method: 'GET',
@@ -251,6 +255,7 @@ export default {
       } catch (e) {
         console.error("Fehler beim Abrufen der Damen-Einträge:", e);
       }
+      this.loading = false
     },
 
     editEntry(entry) {
@@ -291,13 +296,12 @@ export default {
           method: 'DELETE',
         });
 
-        if (response) {
-          // Entferne den Eintrag aus der Liste
-          this.damen = this.damen.filter(e => e.id !== this.dameToDelete.id);
-          this.snackbar = true;
-          this.snackbarText = "Eintrag erfolgreich gelöscht";
-          this.snackbarColor = "success";
-        }
+        // Entferne den Eintrag aus der Liste
+        this.damen = this.damen.filter(e => e.id !== this.dameToDelete.id);
+        this.snackbar = true;
+        this.snackbarText = "Dame erfolgreich gelöscht";
+        this.snackbarColor = "success";
+
       } catch (e) {
         console.error("Fehler beim Löschen des Eintrags:", e);
         this.snackbar = true;
@@ -354,6 +358,7 @@ export default {
 
           if (response) {
             console.log("Eintrag erfolgreich gespeichert:", response);
+            this.tab = 2
             this.snackbar = true;
             this.snackbarText = "Dame erfolgreich gespeichert";
             this.snackbarColor = "success";
@@ -361,8 +366,8 @@ export default {
           }
         }
 
-        this.tab = 2
         this.dialog = false;
+        this.bilder = null
         this.editedDame = null; // Zurücksetzen des bearbeiteten Eintrags
         await this.getDamen()
         this.resetEditMode()

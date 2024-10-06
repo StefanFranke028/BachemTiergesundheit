@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <v-row class="pa-0" style="height: 625px">
+    <v-row class="pa-0" style="height: 70vh">
       <v-col cols="6">
         <v-row class="d-flex justify-center" style="width: 100%">
           <v-col>
@@ -50,13 +50,16 @@
       </v-col>
       <!-- Textareas mit v-model -->
       <v-col class="d-flex justify-center" cols="6" style="overflow-y: scroll">
-        <div style="overflow-y: scroll">
+        <div style="overflow-y: visible">
           <v-data-table-virtual
               :headers="headers"
               :items="städte"
+              :loading="loadingTable"
+              :loading-text="loadingTable ? 'Lade Daten...' : 'Keine Daten vorhanden'"
               color="blue"
               no-data-text="Keine Einträge gefunden"
-              style="background-color: rgba(0,0,255,0); height: 625px"
+              style="background-color: rgba(0,0,255,0); height: 70vh; overflow-y: visible"
+              width="100%"
           >
             <template v-slot:item="{ item }">
               <tr>
@@ -131,6 +134,7 @@ export default {
       editStadt: null,
 
       loading: false,
+      loadingTable: false,
       snackbar: false,
       snackbarText: null,
       snackbarColor: null,
@@ -154,6 +158,7 @@ export default {
       }
     },
     async getStädte() {
+      this.loadingTable = true;
       try {
         let response = await $fetch(`https://maxi-escort.de:8443/auth/stadt`, {
           method: 'GET',
@@ -168,6 +173,8 @@ export default {
       } catch (e) {
         console.error("Fehler beim Abrufen der Städte:", e);
       }
+      this.loadingTable = false;
+
       console.log(this.städte)
     },
 

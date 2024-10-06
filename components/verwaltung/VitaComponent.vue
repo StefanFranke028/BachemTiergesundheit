@@ -1,8 +1,7 @@
 <template>
 
   <div style="overflow-y: scroll">
-    <v-row class="pa-0" style="height: 625px">
-      <!-- Textareas mit v-model -->
+    <v-row class="pa-0" style="height: 70vh">
       <v-col cols="6">
         <v-text-field
             v-model="description"

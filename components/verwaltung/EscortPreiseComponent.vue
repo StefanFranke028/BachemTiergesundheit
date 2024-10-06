@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <v-row class="pa-0" style="height: 625px">
+    <v-row class="pa-0" style="height: 70vh">
       <v-col cols="6">
         <v-row class="d-flex justify-center" style="width: 100%">
           <v-col>
@@ -22,7 +22,7 @@
             <v-text-field v-model="vip" label="VIP"/>
           </v-col>
           <v-col cols="12">
-            <v-row>
+            <v-row class="mt-n2">
               <v-col :class="editEscortPreis ? 'justify-end' : 'justify-center'" :cols="editEscortPreis ? '6' : '12'"
                      class="d-flex">
                 <v-btn :loading="loading" color="white" @click="submitChanges">
@@ -39,7 +39,7 @@
       </v-col>
       <!-- Textareas mit v-model -->
       <v-col class="d-flex justify-center" cols="6" style="overflow-y: scroll">
-        <v-row class="ma-0 justify-cener align-center" style="width: 100%; height: 625px;">
+        <v-row class="ma-0 justify-cener align-center" style="width: 100%; height: 70vh;">
           <v-col cols="12">
             <h2 class="text-center mr-16 maxiEscortÜberschrift dm-serif">Maxi Escort Date</h2>
             <br>

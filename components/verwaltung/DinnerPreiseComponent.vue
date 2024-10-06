@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <v-row class="pa-0" style="height: 625px">
+    <v-row class="pa-0" style="height: 70vh">
       <v-col cols="6">
         <v-row class="d-flex justify-center" style="width: 100%">
           <v-col>
@@ -33,7 +33,7 @@
       </v-col>
       <!-- Textareas mit v-model -->
       <v-col class="d-flex justify-center" cols="6" style="overflow-y: scroll">
-        <v-row class="ma-0 justify-center " style="width: 100%; height: 625px;">
+        <v-row class="ma-0 justify-center " style="width: 100%; height: 70vh;">
           <v-col cols="12">
             <h2 class="text-center mr-16 maxiEscortÜberschrift dm-serif">Maxi Dinner Date</h2>
             <br>
