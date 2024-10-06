@@ -269,7 +269,7 @@ export default {
 }
 
 .backgroundLogin {
-  background-image: url('../assets/verwaltungBackground.jpg');
+  background-image: url('../assets/verwaltungBG2.jpg');
   background-size: cover;
   background-position: center;
 }
