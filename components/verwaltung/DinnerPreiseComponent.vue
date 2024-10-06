@@ -71,7 +71,8 @@
 
               <v-col class="d-flex justify-center " cols="2">
                 <v-icon class="mr-2" small @click="editEscortPreise(preis)">mdi-pencil</v-icon> <!-- Bearbeiten -->
-                <v-icon color="red" small @click="deleteEscortpreise(preis)">mdi-delete</v-icon> <!-- Löschsymbol -->
+                <v-icon small style="color: darkred" @click="deleteEscortpreise(preis)">mdi-delete</v-icon>
+                <!-- Löschsymbol -->
               </v-col>
             </v-row>
 
@@ -114,12 +115,13 @@
 
     <v-dialog v-model="deleteDialog" max-width="400">
       <v-card>
-        <v-card-title class="headline">Eintrag löschen?</v-card-title>
+        <v-card-title class="headline">Dinnerpreis löschen?</v-card-title>
         <v-card-text>
-          Bist du sicher, dass du diesen Eintrag löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
+          Bist du sicher, dass du diesen Dinnerpreis löschen möchtest? Diese Aktion kann nicht rückgängig gemacht
+          werden.
         </v-card-text>
         <v-card-actions>
-          <v-btn style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
+          <v-btn color="red" style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
           </v-btn>
           <v-btn style="background-color: white !important;" @click="confirmDelete">Löschen</v-btn>
         </v-card-actions>

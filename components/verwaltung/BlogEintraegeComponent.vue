@@ -6,8 +6,8 @@
     </v-tabs>
 
     <v-tabs-window v-model="tab">
-      <v-tabs-window-item :value="1">
-        <div style="overflow-y: scroll">
+      <v-tabs-window-item :value="1" style="overflow-y: scroll !important; padding-bottom: 80px; height: 70vh">
+        <div>
           <v-snackbar
               v-model="snackbar"
               :color="snackbarColor"
@@ -16,7 +16,7 @@
           >
             {{ snackbarText }}
           </v-snackbar>
-          <v-row class="pa-0" style="height: 70vh">
+          <v-row class="pa-0" style="; overflow-y: scroll">
             <v-col cols="6">
               <v-text-field v-model="ueberschrift" label="Überschrift"></v-text-field>
             </v-col>
@@ -81,7 +81,8 @@
                   <v-icon class="mr-2" small @click="editEntry(item)">mdi-pencil</v-icon> <!-- Bearbeiten -->
                 </td>
                 <td>
-                  <v-icon color="red" small @click="deleteEntry(item)">mdi-delete</v-icon> <!-- Löschsymbol -->
+                  <v-icon small style="color: darkred" @click="deleteEntry(item)">mdi-delete</v-icon>
+                  <!-- Löschsymbol -->
 
                 </td>
               </tr>
@@ -103,12 +104,13 @@
 
     <v-dialog v-model="deleteDialog" max-width="400">
       <v-card>
-        <v-card-title class="headline">Eintrag löschen?</v-card-title>
+        <v-card-title class="headline">Blogeintrag löschen?</v-card-title>
         <v-card-text>
-          Bist du sicher, dass du diesen Eintrag löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
+          Bist du sicher, dass du diesen Blogeintrag löschen möchtest? Diese Aktion kann nicht rückgängig gemacht
+          werden.
         </v-card-text>
         <v-card-actions>
-          <v-btn style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
+          <v-btn color="red" style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
           </v-btn>
           <v-btn style="background-color: white !important;" @click="confirmDelete">Löschen</v-btn>
         </v-card-actions>
@@ -185,6 +187,7 @@ export default {
       this.autor = null;
       this.base64Image = null;
       this.bild = null
+      this.tab = 2
     },
     // Methode zum Abrufen der Blog-Einträge
     async getBlogEintraege() {

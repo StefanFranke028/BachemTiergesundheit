@@ -20,7 +20,8 @@
           <LoginComponent/>
         </div>
 
-        <v-row class="d-flex justify-center">
+        <v-row class="d-flex justify-center ma-0"
+               style="background-color: rgba(255,255,255,0.0); width: 100vw; height: 100vh">
           <v-col class="d-flex justify-center align-center" cols="3">
             <router-link to="/">
               <h3 class="text-center">Zurück zur Startseite</h3>
@@ -262,7 +263,7 @@ export default {
 
 <style scoped>
 .background {
-  background-image: url('../assets/verwaltungBackground.jpg');
+  background-image: url('../assets/verwaltungBG2.jpg');
   background-size: cover;
   background-position: center;
 }

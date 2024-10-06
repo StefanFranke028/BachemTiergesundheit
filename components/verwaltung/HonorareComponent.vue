@@ -37,11 +37,12 @@
           <template v-slot:actions>
             <v-spacer></v-spacer>
 
-            <v-btn color="white" style="background-color: red !important;" @click="dialog = false">
+            <v-btn color="red" style="background-color: white !important;" @click="dialog = false">
               Abbrechen
             </v-btn>
 
-            <v-btn :loading="loading" color="white" style="background-color: green !important;" @click="submitChanges">
+            <v-btn :loading="loading" style="background-color: white !important;"
+                   @click="submitChanges">
               Speichern
             </v-btn>
           </template>

@@ -47,8 +47,9 @@
             </v-col>
             <v-col cols="12">
               <v-file-input
+                  v-model="file"
                   counter
-                  label="File input"
+                  label="Bitte wählen Sie ein oder mehrere Bilder aus"
                   multiple
                   show-size
                   @change="onFilesSelected"
@@ -59,18 +60,18 @@
               <v-row>
                 <v-col v-for="(bild, index) in bilder" :key="index" class="mt-2">
                   <v-img :src="bild.imageBase64" max-height="100" max-width="100"></v-img>
-                  <v-icon color="red" small @click="removeImage(index)">mdi-delete</v-icon>
+                  <v-icon small style="color: darkred" @click="removeImage(index)">mdi-delete</v-icon>
                 </v-col>
               </v-row>
             </v-col>
-            <v-col :class="editedDame ? 'justify-end' : 'justify-center'" :cols="editedDame ? '6' : '12'"
+            <v-col :class="tempEditedDame ? 'justify-end' : 'justify-center'" :cols="tempEditedDame ? '6' : '12'"
                    class="d-flex">
               <v-btn :loading="loading" color="white" @click="submitChanges">
-                {{ editedDame ? 'Änderungen speichern' : 'Eintrag speichern' }}
+                {{ tempEditedDame ? 'Änderungen speichern' : 'Eintrag speichern' }}
               </v-btn>
             </v-col>
-            <v-col v-if="editedDame" class="d-flex justify-start" cols="6">
-              <v-btn v-if="editedDame" color="white" @click="resetEditMode">Bearbeiten abbrechen</v-btn>
+            <v-col v-if="tempEditedDame" class="d-flex justify-start" cols="6">
+              <v-btn v-if="tempEditedDame" color="white" @click="resetEditMode">Bearbeiten abbrechen</v-btn>
             </v-col>
 
           </v-row>
@@ -116,23 +117,24 @@
                       hide-delimiters
                       interval="3000"
                   >
-                    <v-carousel-item
-                        v-for="(bild, i) in item.bilder"
-                        :key="i"
-                    >
+                    <v-carousel-item v-for="(bild, i) in item.bilder" :key="i">
                       <v-sheet height="100%" style="background-color: transparent;">
-                        <!-- Hintergrund auf transparent setzen -->
-                        <div class="d-flex fill-height justify-center align-center">
-                          <v-img :src="bild.imageBase64" max-height="100%" max-width="100%"></v-img>
+                        <!-- Ladezustand: Spinner bis das Bild geladen ist -->
+                        <div v-if="!bild.loaded" class="d-flex fill-height justify-center align-center">
+                          <v-progress-circular indeterminate></v-progress-circular>
                         </div>
+                        <!-- Das Bild wird angezeigt, sobald es geladen ist -->
+                        <v-img :src="bild.imageBase64" max-height="100%" max-width="100%"
+                               @load="bild.loaded = true"></v-img>
                       </v-sheet>
                     </v-carousel-item>
                   </v-carousel>
+
                   <span v-else>Keine Bilder vorhanden</span>
                 </td>
                 <td>
                   <v-icon class="mr-2" small @click="editEntry(item)">mdi-pencil</v-icon>
-                  <v-icon color="red" small @click="deleteEntry(item)">mdi-delete</v-icon>
+                  <v-icon small style="color: darkred" @click="deleteEntry(item)">mdi-delete</v-icon>
                 </td>
               </tr>
             </template>
@@ -161,7 +163,7 @@
           <u><b>Wichtig:</b></u> Wenn dies die letzte Dame aus der Stadt ist, kann diese nicht gelöscht werden.
         </v-card-text>
         <v-card-actions>
-          <v-btn style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
+          <v-btn color="red" style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
           </v-btn>
           <v-btn style="background-color: white !important;" @click="confirmDelete">Löschen</v-btn>
         </v-card-actions>
@@ -198,10 +200,12 @@ export default {
       dialog: false,
 
       editedDame: null,
+      tempEditedDame: null,
       bilder: null,
 
       tab: 2,
       damen: [],
+      file: null,
 
       dameToDelete: null,
 
@@ -225,7 +229,7 @@ export default {
   },
   methods: {
     resetEditMode() {
-      this.tab = 2
+      this.tempEditedDame = null; // Temporäre Änderungen verwerfen
       this.editedDame = null;
       this.name = null;
       this.getraenke = null;
@@ -239,46 +243,54 @@ export default {
       this.parfum = null;
       this.weitereGeschenkideen = null;
       this.arrangements = null;
-      this.billder = null
+      this.bilder = null;
+      this.tab = 2; // Wechsel zurück zum Löschen-Tab
     },
     async getDamen() {
-      this.loading = true
+      this.loading = true;
       try {
         let response = await $fetch(`https://maxi-escort.de:8443/auth/dame`, {
           method: 'GET',
         });
 
         if (response && Array.isArray(response)) {
-          this.damen = response
+          this.damen = response.map(dame => {
+            // Füge das `loaded`-Flag für jedes Bild hinzu
+            if (dame.bilder) {
+              dame.bilder = dame.bilder.map(bild => ({
+                ...bild,
+                loaded: false, // Anfangszustand für das Laden der Bilder
+              }));
+            }
+            return dame;
+          });
         }
-        console.log(this.damen)
+        console.log(this.damen);
       } catch (e) {
         console.error("Fehler beim Abrufen der Damen-Einträge:", e);
       }
-      this.loading = false
-    },
+      this.loading = false;
+    }
+    ,
 
     editEntry(entry) {
-      // Speichere den zu bearbeitenden Eintrag und öffne ggf. ein Formular oder setze die Felder
-      this.editedDame = entry;
+      this.tempEditedDame = JSON.parse(JSON.stringify(entry));  // Tiefes Klonen des Objekts für temporäre Bearbeitung
       this.tab = 1; // Wechsel zum "Erstellen"-Tab für das Bearbeiten
 
-      // Zuordnung der Felder
-      this.name = entry.name;
-      this.getraenke = entry.getränke; // Achtung: andere Schreibweise
-      this.geburtsalter = entry.geburtsalter;
-      this.vita = entry.vita;
-      this.motto = entry.motto;
-      this.cuisine = entry.cuisine;
-      this.nutzungMeinerZeit = entry.nutzungMeinerZeit; // Schreibweise korrekt
-      this.interesse = entry.interessen; // Plural im Item
-      this.blumen = entry.blume; // Singular im Item
-      this.parfum = entry.parfüm; // Andere Schreibweise
-      this.weitereGeschenkideen = entry.weitereGeschenkideen;
-      this.arrangements = entry.arrangements;
-      this.bilder = entry.bilder;
-
-      // Falls du noch weitere Felder hast, die man beim Bearbeiten ausfüllen soll, füge sie hier hinzu
+      // Zuordnung der Felder für die Bearbeitung
+      this.name = this.tempEditedDame.name;
+      this.getraenke = this.tempEditedDame.getränke;
+      this.geburtsalter = this.tempEditedDame.geburtsalter;
+      this.vita = this.tempEditedDame.vita;
+      this.motto = this.tempEditedDame.motto;
+      this.cuisine = this.tempEditedDame.cuisine;
+      this.nutzungMeinerZeit = this.tempEditedDame.nutzungMeinerZeit;
+      this.interesse = this.tempEditedDame.interessen;
+      this.blumen = this.tempEditedDame.blume;
+      this.parfum = this.tempEditedDame.parfüm;
+      this.weitereGeschenkideen = this.tempEditedDame.weitereGeschenkideen;
+      this.arrangements = this.tempEditedDame.arrangements;
+      this.bilder = this.tempEditedDame.bilder;
     },
 
     // Methode zum Löschen eines Eintrags
@@ -316,6 +328,8 @@ export default {
     // Methode zum Senden der Daten an die API (für das Erstellen oder Bearbeiten)
     async submitChanges() {
       this.loading = true;
+
+      // Überprüfen, ob eine bearbeitete Dame vorhanden ist (edit mode) oder es sich um eine neue Dame handelt
       const data = {
         name: this.name,
         getränke: this.getraenke,
@@ -329,31 +343,33 @@ export default {
         parfüm: this.parfum,
         weitereGeschenkideen: this.weitereGeschenkideen,
         arrangements: this.arrangements,
-        bilder: this.bilder,
-        staedte: null
+        bilder: this.tempEditedDame ? this.tempEditedDame.bilder || [] : this.bilder || [], // Bilder logik
       };
+
 
       try {
         let response;
-
-        if (this.editedDame) {
-          response = await $fetch(`https://maxi-escort.de:8443/auth/dame/${this.editedDame.id}`, {
+        if (this.tempEditedDame) {
+          // Bearbeiten einer bestehenden Dame
+          response = await $fetch(`https://maxi-escort.de:8443/auth/dame/${this.tempEditedDame.id}`, {
             method: 'PUT',
-            body: data
+            body: data,
           });
 
           if (response) {
             console.log("Eintrag erfolgreich bearbeitet:", response);
+            this.tab = 2
             this.snackbar = true;
             this.snackbarText = "Dame erfolgreich bearbeitet";
             this.snackbarColor = "success";
             await this.getDamen();
           }
         } else {
-          // Erstellen eines neuen Eintrags
+          console.log("edit dame")
+          // Erstellen einer neuen Dame
           response = await $fetch(`https://maxi-escort.de:8443/auth/dame`, {
             method: 'POST',
-            body: data
+            body: data,
           });
 
           if (response) {
@@ -366,20 +382,17 @@ export default {
           }
         }
 
-        this.dialog = false;
-        this.bilder = null
-        this.editedDame = null; // Zurücksetzen des bearbeiteten Eintrags
-        await this.getDamen()
-        this.resetEditMode()
+        this.resetEditMode(); // Zurücksetzen des Bearbeitungsmodus
       } catch (e) {
         console.error("Fehler beim Speichern der Änderungen:", e);
         this.snackbar = true;
         this.snackbarText = "Fehler beim Speichern der Änderungen";
         this.snackbarColor = "error";
       }
-      this.loading = false;
-    },
 
+      this.loading = false;
+    }
+    ,
     onFilesSelected(event) {
       const files = event.target.files;
 
@@ -387,20 +400,31 @@ export default {
         Array.from(files).forEach((file) => {
           const reader = new FileReader();
           reader.onload = (e) => {
-            // Füge das Bild dem Array hinzu, wenn es existiert
-            this.bilder = this.bilder || []; // Stelle sicher, dass bilder nicht null ist
-            this.bilder.push({imageBase64: e.target.result});
+            const imageData = {imageBase64: e.target.result};
+
+            // Wenn wir einen Eintrag bearbeiten, fügen wir die Bilder zu tempEditedDame.bilder hinzu
+            if (this.tempEditedDame) {
+              this.tempEditedDame.bilder = this.tempEditedDame.bilder || []; // Stelle sicher, dass das Bild-Array existiert
+              this.tempEditedDame.bilder.push(imageData);
+            } else {
+              // Bei einer neuen Dame fügen wir die Bilder zu bilder hinzu
+              this.bilder = this.bilder || [];
+              this.bilder.push(imageData);
+            }
           };
           reader.readAsDataURL(file);
         });
       }
+      this.file = null;
     },
 
     // Methode zum Entfernen eines Bildes
     removeImage(index) {
       this.bilder.splice(index, 1); // Entferne das Bild aus dem Array
     },
-  }
+  },
+
+
 };
 </script>
 

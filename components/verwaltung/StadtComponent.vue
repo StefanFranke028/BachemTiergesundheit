@@ -74,7 +74,8 @@
                 </td>
                 <td>
                   <v-icon class="mr-2" small @click="editStadtEntität(item)">mdi-pencil</v-icon> <!-- Bearbeiten -->
-                  <v-icon color="red" small @click="deleteStadt(item)">mdi-delete</v-icon> <!-- Löschsymbol -->
+                  <v-icon small style="color: darkred" @click="deleteStadt(item)">mdi-delete</v-icon>
+                  <!-- Löschsymbol -->
                 </td>
               </tr>
             </template>
@@ -95,12 +96,12 @@
 
     <v-dialog v-model="deleteDialog" max-width="400">
       <v-card>
-        <v-card-title class="headline">Eintrag löschen?</v-card-title>
+        <v-card-title class="headline">Stadt löschen?</v-card-title>
         <v-card-text>
-          Bist du sicher, dass du diesen Eintrag löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
+          Bist du sicher, dass du diese Stadt löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden.
         </v-card-text>
         <v-card-actions>
-          <v-btn style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
+          <v-btn color="red" style="background-color: white !important;" @click="deleteDialog = false">Abbrechen
           </v-btn>
           <v-btn style="background-color: white !important;" @click="confirmDelete">Löschen</v-btn>
         </v-card-actions>
