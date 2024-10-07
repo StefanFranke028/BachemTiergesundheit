@@ -1,6 +1,7 @@
 <template>
   <div v-if="desktop || tabletHorizontal">
-    <img alt="schwarz-weis Hintergrundbild" src="~/assets/startseite_bg_komprimiert.webp" cover  style="width: 100vw; height: auto;"/>
+    <img alt="schwarz-weis Hintergrundbild" src="~/assets/startseite_bg_komprimiert.webp"
+         style="width: 100vw; height: auto;"/>
     <div class="card">
       <div class="cardIn1">
         <div class="text-center text2 dosis">
@@ -10,12 +11,12 @@
           <br>
 
           <div class="d-flex justify-center mt-10" style="width: 100%;">
-            <router-link to="vita" style="display: inline-block;">
+            <router-link style="display: inline-block;" to="vita">
               <v-btn
                   aria-label="Zur Vita"
                   class="text-center"
-                  theme="dark"
                   style="min-width: 48px; min-height: 48px; padding: 12px 24px;"
+                  theme="dark"
               >
                 Zur Vita
               </v-btn>
@@ -42,8 +43,8 @@
         </div>
         <div class="mt-n2" style=" width: 100%; height: 100%;  ">
           <v-img alt="Frau und Mann"
-                cover
-               src="~/assets/startseite_klein_komprimiert.webp"
+                 cover
+                 src="~/assets/startseite_klein_komprimiert.webp"
                  style="min-width:100%; height: 310px; width: 260px; min-height: 100%; ">
 
           </v-img>
@@ -70,7 +71,9 @@
 
               <div class="d-flex justify-center mt-10" style="width: 100%;">
                 <router-link to="damen">
-                  <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> ZU Unseren Escoertmodels</v-btn>
+                  <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> ZU Unseren
+                    Escoertmodels
+                  </v-btn>
                 </router-link>
               </div>
             </v-col>
@@ -90,7 +93,8 @@
         <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
           <v-col class="d-flex justify-center" cols="6">
 
-            <v-img alt="frau uns mann" cover src="~/assets/startseite_2_komprimiert.webp" style="height: 80%; box-shadow: 2px 2px 5px black">
+            <v-img alt="frau uns mann" cover src="~/assets/startseite_2_komprimiert.webp"
+                   style="height: 80%; box-shadow: 2px 2px 5px black">
 
             </v-img>
           </v-col>
@@ -127,7 +131,8 @@
 
   </div>
   <div v-if="mobile || tablet" style="width: 100vw; ">
-    <v-img alt="Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/startseite_bg_komprimiert_mobile.webp"
+    <v-img alt="Hintergrundbild" class="d-flex justify-center align-center" cover
+           src="~/assets/startseite_bg_komprimiert_mobile.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div style="width: 75%; height: 400px;  background-color: #e5dbdc;">
@@ -157,7 +162,8 @@
           <v-row class="ma-0" style="width: 100%;">
             <v-col cols="6">
               <div>
-                <v-img alt="frau und mann" class="mt-n10" cover src="~/assets/startseite_2_komprimiert.webp" style="width: 100%; height: 170%;">
+                <v-img alt="frau und mann" class="mt-n10" cover src="~/assets/startseite_2_komprimiert.webp"
+                       style="width: 100%; height: 170%;">
 
                 </v-img>
                 <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text8"></p>
@@ -192,16 +198,15 @@
 <script>
 import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
-import { Icon } from '@iconify/vue';
+import {Icon} from '@iconify/vue';
+
 export default {
   components: {
     Icon,
     FooterComponent,
   },
   data() {
-    return {
-
-    };
+    return {};
   },
   computed: {
     wide() {
@@ -229,21 +234,19 @@ export default {
   mounted() {
 
   },
-  methods: {
-
-  },
+  methods: {},
 };
 </script>
 
 <script setup>
 import FooterComponent from "~/components/FooterComponent.vue";
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const landingpage = ref([]);
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
-const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
+const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
   let token = null;
 
   if (process.client) {
