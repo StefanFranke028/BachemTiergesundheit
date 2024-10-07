@@ -17,7 +17,7 @@
           <v-img alt="" cover max-height="600px" src="~/assets/federn.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="600px" src="~/assets/decke.jpg" style="z-index: 0"></v-img>
+          <v-img alt="" cover max-height="600px" src="~/assets/decke_1_komprimiert.webp" style="z-index: 0"></v-img>
         </v-col>
       </v-row>
     </div>
@@ -26,7 +26,7 @@
     <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1200px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
-          <v-row class="ma-0 align-center mt-10" style="width: 100%; height: 100%">
+          <v-row class="ma-0 align-center mt-5" style="width: 100%; height: 100%">
             <v-col cols="4"></v-col>
             <v-col cols="7">
               <h2 class="text-center dm-serif mt-16" style="font-size: 2vw">{{ dame.name }}</h2>
@@ -85,7 +85,7 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg.png"
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg_komprimiert.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div class="d-flex justify-center align-center"

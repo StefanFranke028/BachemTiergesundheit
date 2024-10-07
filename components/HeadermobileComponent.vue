@@ -71,6 +71,7 @@ export default {
       menuItems: [
         { title: 'Startseite', icon: 'heroicons:home-solid', route: 'index' },
         { title: 'Vita', icon: 'fluent:person-32-filled', route: 'vita' },
+        { title: 'Team', icon: 'fluent:people-team-16-filled', route: 'team' },
         { title: 'Escort', icon: 'icon-park-solid:women', route: 'damen' },
         { title: 'Bewerben', icon: 'fluent:chart-person-48-filled', route: 'bewerben' },
         { title: 'Kontakt', icon: 'streamline:contact-phonebook-2-solid', route: 'kontakt' },

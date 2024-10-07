@@ -20,7 +20,7 @@
           <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/federn.webp"  alt=""></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/decke.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/decke_1_komprimiert.webp"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>
@@ -143,7 +143,7 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #c7dee6;">
           <div class="vertical-marker-mobile">
@@ -166,7 +166,7 @@
 
       <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
         <v-col cols="12" class=" ">
-          <h2 style="font-size: 8vw; color: #c7dee6" class="text-center dm-serif">Maxi Dinner Date</h2>
+          <h2 style="font-size: 8vw; " class="text-center text-white dm-serif">Maxi Dinner Date</h2>
           <br>
           <br>
           <v-row style="width: 100%; border-radius: 10px" class="mx-0">
@@ -203,7 +203,7 @@
 
       <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
         <v-col cols="12" class=" ">
-          <h2 style="font-size: 8vw; color: #c7dee6" class="text-center dm-serif">Maxi Escort Date</h2>
+          <h2 style="font-size: 8vw; " class="text-center dm-serif">Maxi Escort Date</h2>
           <br>
           <br>
           <v-row style="width: 100%; border-radius: 10px" class="ma-0">

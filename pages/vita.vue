@@ -140,7 +140,7 @@
 
   </div>
   <div v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #d1e3d3;">
             <div class="vertical-marker-mobile">
