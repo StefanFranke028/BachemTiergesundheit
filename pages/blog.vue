@@ -73,7 +73,7 @@
 
     <v-img v-for="(blog, index) in blogs" :key="blog" alt="schwarz-weis Hintergrundbild"
            class="d-flex justify-center align-center"
-           cover src="~/assets/blumen.jpg" style="width: 100%; height: 1000px;  ">
+           cover :src="blog.bild" style="width: 100%; height: 1000px;  ">
 
       <v-row class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
