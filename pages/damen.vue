@@ -26,10 +26,10 @@
     <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1200px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
-          <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
+          <v-row class="ma-0 align-center mt-10" style="width: 100%; height: 100%">
             <v-col cols="4"></v-col>
             <v-col cols="7">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">{{ dame.name }}</h2>
+              <h2 class="text-center dm-serif mt-16" style="font-size: 2vw">{{ dame.name }}</h2>
               <br>
               <br>
               <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
