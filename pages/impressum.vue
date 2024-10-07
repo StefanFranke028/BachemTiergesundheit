@@ -10,18 +10,8 @@
   <div v-if="mobile || tablet">
     <v-row style="width: 100% ;" class="mx-0 justify-center">
       <v-col cols="12">
-        <v-img src="../assets/1.jpg" cover></v-img>
-      </v-col> <v-col cols="12">
-      <v-img src="../assets/2.jpg" cover></v-img>
-    </v-col> <v-col cols="12">
-      <v-img src="../assets/3.jpg" cover></v-img>
-    </v-col> <v-col cols="12">
-      <v-img src="../assets/4.jpg" cover></v-img>
-    </v-col> <v-col cols="12">
-      <v-img src="../assets/5.jpg" cover></v-img>
-    </v-col> <v-col cols="12">
-      <v-img src="../assets/6.jpg" cover></v-img>
-    </v-col>
+        <v-img src="../assets/1i.jpg" cover></v-img>
+      </v-col>
     </v-row>
   </div>
 </template>
