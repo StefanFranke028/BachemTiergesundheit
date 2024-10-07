@@ -30,7 +30,7 @@
             <v-col cols="4"></v-col>
             <v-col cols="7">
               <h2 class="text-center dm-serif mt-16" style="font-size: 2vw">{{ dame.name }}</h2>
-              <br>
+              <br>1
               <br>
               <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
                 <br>
