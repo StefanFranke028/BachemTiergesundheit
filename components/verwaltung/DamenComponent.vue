@@ -88,12 +88,14 @@
 
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
-          <v-data-table-virtual
+          <v-data-table
               :headers="headers"
+              :hide-default-header="false"
               :items="damen"
               :loading="loading"
               :loading-text="loading ? 'Lade Daten...' : 'Keine Daten vorhanden'"
               color="blue"
+              hide-default-footer
               no-data-text="Keine Einträge gefunden"
               style="background-color: rgba(0,0,255,0); height: 70vh"
           >
@@ -118,14 +120,20 @@
                       interval="3000"
                   >
                     <v-carousel-item v-for="(bild, i) in item.bilder" :key="i">
-                      <v-sheet height="100%" style="background-color: transparent;">
-                        <!-- Ladezustand: Spinner bis das Bild geladen ist -->
-                        <div v-if="!bild.loaded" class="d-flex fill-height justify-center align-center">
-                          <v-progress-circular indeterminate></v-progress-circular>
-                        </div>
-                        <!-- Das Bild wird angezeigt, sobald es geladen ist -->
-                        <v-img :src="bild.imageBase64" max-height="100%" max-width="100%"
-                               @load="bild.loaded = true"></v-img>
+                      <v-sheet class="d-flex align-center" height="100%" style="background-color: transparent;">
+                        <v-img
+                            :aspect-ratio="1"
+                            :src="bild.imageBase64"
+                            max-height="100%"
+                            max-width="100%"
+                        >
+                          <template v-slot:placeholder>
+                            <div class="d-flex fill-height justify-center align-center">
+                              <v-progress-circular indeterminate></v-progress-circular>
+                            </div>
+                          </template>
+                        </v-img>
+
                       </v-sheet>
                     </v-carousel-item>
                   </v-carousel>
@@ -138,7 +146,7 @@
                 </td>
               </tr>
             </template>
-          </v-data-table-virtual>
+          </v-data-table>
 
 
         </div>
@@ -259,7 +267,7 @@ export default {
             if (dame.bilder) {
               dame.bilder = dame.bilder.map(bild => ({
                 ...bild,
-                loaded: false, // Anfangszustand für das Laden der Bilder
+                loaded: true, // Anfangszustand für das Laden der Bilder
               }));
             }
             return dame;

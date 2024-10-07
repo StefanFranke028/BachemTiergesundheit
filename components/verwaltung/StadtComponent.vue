@@ -47,7 +47,7 @@
         <div style="overflow-y: visible">
           <v-data-table-virtual
               :headers="headers"
-              :items="städte"
+              :items="staedte"
               :loading="loadingTable"
               :loading-text="loadingTable ? 'Lade Daten...' : 'Keine Daten vorhanden'"
               color="blue"
@@ -117,7 +117,7 @@ export default {
         {title: 'Aktionen', key: 'actions', sortable: false}
       ],
 
-      städte: [],
+      staedte: [],
       deleteDialog: false,
       stadtToDelete: null,
       editStadt: null,
@@ -131,7 +131,7 @@ export default {
     };
   },
   mounted() {
-    this.getStädte();
+    this.getStaedte();
     this.fetchDamen()
   },
   methods: {
@@ -146,7 +146,7 @@ export default {
         console.error('Fehler beim Laden der Damen:', error);
       }
     },
-    async getStädte() {
+    async getStaedte() {
       this.loadingTable = true;
       try {
         let response = await $fetch(`https://maxi-escort.de:8443/auth/stadt`, {
@@ -154,7 +154,7 @@ export default {
         });
 
         if (response && Array.isArray(response)) {
-          this.städte = response;
+          this.staedte = response;
           console.log(response)
 
           // Beispielhafte weitere Verarbeitung, falls nötig:
@@ -164,13 +164,7 @@ export default {
       }
       this.loadingTable = false;
 
-      console.log(this.städte)
-    },
-
-
-    // Methode zum Öffnen des Bestätigungsdialogs
-    openDialog() {
-      this.dialog = true;
+      console.log(this.staedte)
     },
 
     formattedText(text) {
@@ -189,8 +183,6 @@ export default {
       this.loading = true;
       const data = {
         name: this.name,
-        text: this.text,
-        überschrift: this.überschrift,
         damenIds: this.selectedDamen.map(dame => dame.id) // Nur die IDs der ausgewählten Damen
       };
 
@@ -217,7 +209,7 @@ export default {
             this.snackbar = true;
             this.snackbarText = "Städte erfolgreich bearbeitet";
             this.snackbarColor = "success";
-            await this.getStädte();
+            await this.getStaedte();
           }
         } else {
           // Erstellen eines neuen Eintrags
@@ -231,13 +223,13 @@ export default {
             this.snackbar = true;
             this.snackbarText = "Städte erfolgreich gespeichert";
             this.snackbarColor = "success";
-            await this.getStädte();
+            await this.getStaedte();
           }
         }
 
         this.dialog = false;
-        this.editedEntry = null; // Zurücksetzen des bearbeiteten Eintrags
-        this.resetEditMode(); // Modus zurücksetzen, falls du das nutzt
+        this.editedEntry = null;
+        this.resetEditMode();
         this.dauer = null;
         this.classic = null;
         this.exclusiv = null;
@@ -269,7 +261,7 @@ export default {
 
         if (response) {
           // Entferne den Eintrag aus der Liste
-          this.städte = this.städte.filter(e => e.id !== this.stadtToDelete.id);
+          this.staedte = this.staedte.filter(e => e.id !== this.stadtToDelete.id);
           this.snackbar = true;
           this.snackbarText = "Stadt erfolgreich gelöscht";
           this.snackbarColor = "success";
@@ -282,21 +274,17 @@ export default {
       }
       this.loading = false;
       this.stadtToDelete = null;  // Zurücksetzen
-      await this.getStädte();  // Liste der Einträge neu laden
+      await this.getStaedte();  // Liste der Einträge neu laden
     },
 
     editStadtEntität(entry) {
       this.editStadt = entry;
       this.name = entry.name;
-      this.text = entry.text;
-      this.überschrift = entry.überschrift;
       this.selectedDamen = entry.damen
     },
 
     resetEditMode() {
       this.editStadt = null;
-      this.text = null;
-      this.überschrift = null;
       this.name = null;
       this.selectedDamen = null;
     },
