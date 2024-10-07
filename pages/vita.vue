@@ -15,7 +15,7 @@
     <div style="width: 100vw; height: 600px">
       <v-row style="width: 100%;" class="mx-0 pa-0">
         <v-col class="pa-0" cols="12">
-          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/Vita.jpeg"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/vita_bg_komprimiert.webp"  alt=""></v-img>
         </v-col>
 
       </v-row>
@@ -23,7 +23,7 @@
     <div style="width: 100vw; height: 900px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita.jpeg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/vita_1_komprimiert.webp"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
@@ -83,7 +83,7 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita2.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/vita_2_komprimiert.webp"  alt=""></v-img>
         </v-col>
 
 
@@ -92,7 +92,7 @@
     <div style="width: 100vw; height: 900px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita3.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/vita_3_komprimiert.webp"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-16">
@@ -160,7 +160,7 @@
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/Vita.jpeg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/vita_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <h2 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text3"></h2>
 
@@ -170,7 +170,7 @@
       </div>
 
     </v-img>
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/Vita2.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/vita_2_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
         <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text5"></h1>
 
@@ -190,7 +190,7 @@
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/Vita3.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/vita_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgba(215,232,215,0.85); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
         <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text13"></h1>
         <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text14"></h1>
