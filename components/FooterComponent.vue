@@ -3,7 +3,7 @@
     <v-row style="width: 100%;" class="ma-0 justify-center">
         <v-col class="d-flex justify-center" cols="4">
           <div style="cursor: pointer">
-            <span style="font-size: 22px; color: grey; ">
+            <span style="font-size: 22px; color: #4e4e4e; ">
                 MAXI
                   <b class="ml-n1" style="color: black">
                 ESCORT
@@ -53,7 +53,7 @@
   <div v-if="mobile|| tablet" class="mobile" :class="formattedPath" >
     <v-row style="width: 100%" class="justify-center ma-0">
       <v-col cols="10">
-        <h3 class="">ELEGANZ TRIFFT LEIDENSCHAFT </h3>
+        <h1 style="font-size: 20px" class="">ELEGANZ TRIFFT LEIDENSCHAFT </h1>
         <p style="font-size: 12px"  >erotisch | leidenschaftlich | hautnah</p>
         <br>
 

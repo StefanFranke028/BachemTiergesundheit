@@ -14,10 +14,10 @@
     <div style="width: 100vw; height: 600px">
       <v-row class="mx-0 pa-0" style="width: 100%;">
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="600px" src="~/assets/federn.webp" style="z-index: 0"></v-img>
+          <v-img alt="Federn" cover max-height="600px" src="~/assets/federn.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="600px" src="~/assets/decke_1_komprimiert.webp" style="z-index: 0"></v-img>
+          <v-img alt="Decke" cover max-height="600px" src="~/assets/decke_1_komprimiert.webp" style="z-index: 0"></v-img>
         </v-col>
       </v-row>
     </div>
@@ -85,7 +85,7 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
+    <v-img alt="Hintergrundbild" class="d-flex justify-center align-center" cover
            src="~/assets/bg_komprimiert.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
@@ -114,6 +114,7 @@
         <v-col class="pa-0" cols="12">
           <v-carousel style="height: 600px" theme="dark">
             <v-carousel-item
+                alt="Damenbild"
                 v-for="bild in dame.bilder" :key="bild"
                 :src="bild.imageBase64"
                 cover
@@ -249,6 +250,9 @@ if (damen1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {

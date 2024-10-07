@@ -152,7 +152,7 @@
             <div style="position: relative; top:-50px" class="text-center dosis">
               <h2 style="margin-left: -80px; " class="dm-serif " v-html="honorare[0].text1"> </h2>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="honorare[0].text2">
+            <div style="font-size: 12px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="honorare[0].text2">
             </div>
             <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-3" >zur Vita</v-btn></router-link>
           </div>
@@ -397,6 +397,9 @@ if (escortPreise1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {

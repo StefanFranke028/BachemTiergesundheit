@@ -76,7 +76,7 @@
 
             <v-col class="" cols="9">
 
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif">Das Herz und die Seele unserer Agentur</h5>
+              <h1 style="font-size: 1.2vw" class="text-center dm-serif">Das Herz und die Seele unserer Agentur</h1>
 
               <p class="dosis mt-5" style=" text-align: justify;" >
                 Paul ist nicht nur unser stellvertretender Agenturvertreter und Webadministrator – er
@@ -207,7 +207,7 @@
     </v-img>
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 930px;  " src="~/assets/team_2_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
-        <h4  class="text-center dm-serif">Das Herz und die Seele unserer Agentur</h4>
+        <h1 style="font-size: 18px"  class="text-center dm-serif">Das Herz und die Seele unserer Agentur</h1>
 
         <p class="dosis mt-5" style=" text-align: justify;  font-size: 12px" >
           Paul ist nicht nur unser stellvertretender Agenturvertreter und Webadministrator – er
@@ -318,6 +318,9 @@ if (landingpage1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {

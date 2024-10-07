@@ -4,7 +4,7 @@
   <v-row style="width: 100%; height: 100%" class="pa-0">
     <v-col cols="2" @click="navigateTo('/')" class="pa-0 d-flex justify-center align-center">
     <div style="cursor: pointer">
-      <span style="font-size: 22px; color: grey; ">
+      <span style="font-size: 22px; color: #4e4e4e; ">
           MAXI
         <b class="ml-n1" style="color: black">
         ESCORT

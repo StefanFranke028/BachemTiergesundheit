@@ -32,7 +32,7 @@
                   <p style="cursor: pointer"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email"> {{kontakt[0].email}}</a>  </p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
-                  <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
+                  <p  style="cursor: pointer; color: #2c2cda"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
                   <p style="" v-html="kontakt[0].text3"></p>
@@ -82,7 +82,7 @@
             <p style="cursor: pointer" ><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="kontakt[0].email"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
-            <p  style="cursor: pointer; color: #8585d6"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
+            <p  style="cursor: pointer; color: #2d2de1"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
           </v-col>
           <v-col cols="12"  class="d-flex ">
             <p style=" font-size: 14px">Ich freue mich darauf, <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
@@ -210,6 +210,9 @@ if (landingpage1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {

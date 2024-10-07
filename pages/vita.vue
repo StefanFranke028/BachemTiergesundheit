@@ -271,6 +271,9 @@ if (landingpage1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
+  htmlAttrs: {
+    lang: 'de' // Setzt die Sprache auf Deutsch
+  },
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {

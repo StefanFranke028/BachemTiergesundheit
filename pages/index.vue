@@ -11,7 +11,7 @@
 
           <div class="d-flex justify-center mt-10" style="width: 100%;">
             <router-link to="vita">
-              <v-btn class="text-center" theme="dark"> Zur Vita</v-btn>
+              <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> Zur Vita</v-btn>
             </router-link>
 
           </div>
@@ -34,9 +34,8 @@
         <div class="line-with-dot">
         </div>
         <div class="mt-n2" style=" width: 100%; height: 100%;  ">
-          <v-img alt=""
+          <v-img alt="Frau und Mann"
                 cover
-
                src="~/assets/startseite_klein_komprimiert.webp"
                  style="min-width:100%; height: 310px; width: 260px; min-height: 100%; ">
 
@@ -50,7 +49,7 @@
     <div>
       <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6" style="background-color: black">
-          <v-img alt="" src="~/assets/startseite_1_komprimiert.webp" style="z-index: 0"></v-img>
+          <v-img alt="frau und mann" src="~/assets/startseite_1_komprimiert.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #f1edec">
           <v-row class="d-flex justify-center align-end" style="width: 50%; height: 30%; position: absolute;">
@@ -64,7 +63,7 @@
 
               <div class="d-flex justify-center mt-10" style="width: 100%;">
                 <router-link to="damen">
-                  <v-btn class="text-center" theme="dark"> ZU Unseren Escoertmodels</v-btn>
+                  <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> ZU Unseren Escoertmodels</v-btn>
                 </router-link>
               </div>
             </v-col>
@@ -84,7 +83,7 @@
         <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
           <v-col class="d-flex justify-center" cols="6">
 
-            <v-img cover src="~/assets/startseite_2_komprimiert.webp" style="height: 80%; box-shadow: 2px 2px 5px black">
+            <v-img alt="frau uns mann" cover src="~/assets/startseite_2_komprimiert.webp" style="height: 80%; box-shadow: 2px 2px 5px black">
 
             </v-img>
           </v-col>
@@ -121,7 +120,7 @@
 
   </div>
   <div v-if="mobile || tablet" style="width: 100vw; ">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/startseite_bg_komprimiert_mobile.webp"
+    <v-img alt="Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/startseite_bg_komprimiert_mobile.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div style="width: 75%; height: 400px;  background-color: #e5dbdc;">
@@ -131,7 +130,7 @@
 
             </div>
           </div>
-          <v-img cover src="~/assets/startseite_klein_komprimiert.webp"
+          <v-img alt="Frau und Mann" cover src="~/assets/startseite_klein_komprimiert.webp"
                  style="height: 200px; width: 50%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
           </v-img>
         </div>
@@ -151,17 +150,17 @@
           <v-row class="ma-0" style="width: 100%;">
             <v-col cols="6">
               <div>
-                <v-img class="mt-n10" cover src="~/assets/startseite_2_komprimiert.webp" style="width: 100%; height: 170%;">
+                <v-img alt="frau und mann" class="mt-n10" cover src="~/assets/startseite_2_komprimiert.webp" style="width: 100%; height: 170%;">
 
                 </v-img>
-                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text8"></p>
-                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text9"></p>
-                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text10"></p>
+                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text8"></p>
+                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text9"></p>
+                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text10"></p>
               </div>
             </v-col>
             <v-col cols="6">
               <h1 class="dosis1" style="color: #615f5f;font-size: 15px" v-html="landingpage[0].text6"></h1>
-              <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text7"></p>
+              <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text7"></p>
 
             </v-col>
           </v-row>
@@ -282,6 +281,9 @@ if (landingpage1.value) {
 
 
 useHead({
+  htmlAttrs: {
+    lang: 'de' // Setzt die Sprache auf Deutsch
+  },
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   link: [
     {
@@ -368,7 +370,7 @@ p {
 }
 
 .text2 {
-  color: #8e8c8c;
+  color: #5a5959;
   position: relative;
   left: 50%;
   top: 10%;
@@ -377,7 +379,7 @@ p {
 }
 
 .text5 {
-  color: #8e8c8c;
+  color: #4c4c4c;
   position: relative;
   left: 0%;
   top: 10%;
