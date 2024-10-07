@@ -17,10 +17,10 @@
     <div style="width: 100vw; height: 600px">
       <v-row style="width: 100%;" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/bewerben3.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/bewerben_2_komprimiert.webp"  alt=""></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/bewerben.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover src="~/assets/bewerben_1_komprimiert.webp"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>
@@ -30,7 +30,7 @@
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
             <v-col cols="7">
               <div style="width: 100%; height: 300px;" class="d-flex">
-                <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
+                <v-row style="width: 100%; height: 30%" class="ma-0">
                   <v-col cols="12" class="d-flex ">
                     <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+bewerben[0].telefon">{{bewerben[0].telefon}}</a>  </p>
                   </v-col>
@@ -165,7 +165,7 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bewerben_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #e5dbdc;">
           <div class="vertical-marker-mobile">
@@ -183,7 +183,7 @@
       </div>
 
     </v-img>
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/bewerben_2_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%" class="ma-0">
           <v-col cols="12" class="d-flex ">
@@ -202,7 +202,7 @@
         </v-row>
       </div>
     </v-img>
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 550px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 550px;  " src="~/assets/bewerben_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <div style="width: 100%; height: 2100px;" >
           <h4 >Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu

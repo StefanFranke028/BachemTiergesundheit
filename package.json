@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "nuxt": "^3.13.0",
     "pinia": "^2.2.2",
     "vue": "latest"

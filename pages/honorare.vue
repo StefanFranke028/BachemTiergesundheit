@@ -9,7 +9,7 @@
 
         </p>
         <div class="d-flex justify-center mt-10" style="width: 100%;">
-          <router-link to="damen" style="position: relative; left: -14%; top:11vh">    <v-btn theme="dark" class="text-center" >ZU Unseren Begleitpersonen</v-btn></router-link>
+          <router-link to="damen" style="position: relative; left: -14%; top:11vh">    <v-btn theme="dark" class="text-center" >ZU Unseren Escortmodels</v-btn></router-link>
 
         </div>
       </div>
@@ -66,14 +66,14 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Honorar1.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/honorar_3_komprimiert.webp"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>
     <div style="width: 100vw; height: 900px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/honorar_1_komprimiert.webp"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: #d4e2ea" class="pa-0" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
@@ -162,7 +162,7 @@
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/honorar_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
 
       <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
         <v-col cols="12" class=" ">
@@ -199,7 +199,7 @@
         </v-col>
       </v-row>
     </v-img>
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 800px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 800px;  " src="~/assets/honorar_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
 
       <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
         <v-col cols="12" class=" ">
