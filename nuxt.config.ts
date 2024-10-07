@@ -5,11 +5,8 @@ export default defineNuxtConfig({
     target: 'server',
     serverHandlers: [
         {
-            route: '/api', // Stelle sicher, dass alle API-Routen die Komprimierung verwenden
-            handler: compression({
-                threshold: 10240, // Mindestgröße in Bytes, ab der Dateien komprimiert werden (z.B. 10 KB)
-                level: 6,         // Kompressionslevel (zwischen 1 und 9, wobei 9 das stärkste ist)
-            }),
+            route: '/*', // Anwenden auf alle Routen
+            handler: (req, res, next) => compression()(req, res, next), // Sicherstellen, dass der Handler korrekt als Funktion definiert ist
         },
     ],
     vite: {
