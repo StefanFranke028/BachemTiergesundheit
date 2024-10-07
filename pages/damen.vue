@@ -30,7 +30,7 @@
             <v-col cols="4"></v-col>
             <v-col cols="7">
               <h2 class="text-center dm-serif mt-16" style="font-size: 2vw">{{ dame.name }}</h2>
-              <br>1
+              <br>
               <br>
               <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
                 <br>
@@ -85,7 +85,8 @@
     </div>
   </div>
   <div v-if="mobile || tablet">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg_komprimiert.webp"
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
+           src="~/assets/bg_komprimiert.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div class="d-flex justify-center align-center"
