@@ -9,9 +9,31 @@
 
 
 <script setup>
+import {useHead} from '#app'
 
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      href: 'https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap',
+      as: 'style',
+      onload: "this.rel='stylesheet'"
+    },
+    {
+      rel: 'preload',
+      href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap',
+      as: 'style',
+      onload: "this.rel='stylesheet'"
+    },
+    {
+      rel: 'preload',
+      href: '/_nuxt/index.fNBpe6BQ.css',
+      as: 'style',
+      onload: "this.rel='stylesheet'"
+    }
+  ]
+})
 </script>
-
 <script>
 import {useScreenStore} from "~/stores/screen.js";
 
