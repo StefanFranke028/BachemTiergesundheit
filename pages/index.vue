@@ -283,6 +283,13 @@ if (landingpage1.value) {
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
   title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  link: [
+    {
+      rel: 'preload',
+      href: '/startseite_bg_komprimiert.webp', // Bildpfad angepasst
+      as: 'image',
+    },
+  ],
   meta: [
     {
       name: 'description',

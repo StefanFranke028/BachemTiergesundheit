@@ -3,7 +3,7 @@ import compression from 'compression';
 export default defineNuxtConfig({
     ssr: true,
     serverMiddleware: [
-        compression()
+        compression({ threshold: 0 })
     ],
     target: 'server',
     vite: {
