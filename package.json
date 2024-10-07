@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^1.8.1",
     "compression": "^1.7.4",
     "nuxt": "^3.13.0",
     "pinia": "^2.2.2",
