@@ -13,12 +13,6 @@
             <v-text-field v-model="name" label="Name"/>
           </v-col>
           <v-col cols="12">
-            <v-text-field v-model="überschrift" label="Text"/>
-          </v-col>
-          <v-col cols="12">
-            <v-text-field v-model="text" label="Überschrift"/>
-          </v-col>
-          <v-col cols="12">
             <v-select
                 v-model="selectedDamen"
                 :item-title="item => `${item.id} - ${item.name}`"
@@ -65,8 +59,6 @@
               <tr>
                 <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
-                <td>{{ item.text }}</td>
-                <td>{{ item.überschrift }}</td>
                 <td>
                   <div v-for="(dame, index) in item.damen" :key="index">
                     {{ dame.name }}<br>
@@ -115,16 +107,12 @@ export default {
   data() {
     return {
       name: null,
-      text: null,
-      überschrift: null,
       selectedDamen: [],
       damenList: [],
 
       headers: [
         {title: 'ID', key: 'id'},
         {title: 'Name', key: 'name'},
-        {title: 'Text', key: 'text'},
-        {title: 'Überschrift', key: 'überschrift'},
         {title: 'Damen', key: 'damen'},
         {title: 'Aktionen', key: 'actions', sortable: false}
       ],
