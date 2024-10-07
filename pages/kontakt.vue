@@ -13,7 +13,7 @@
   <div style="width: 100vw; height: 600px">
     <v-row style="width: 100%;" class="mx-0 pa-0">
       <v-col class="pa-0" cols="12">
-        <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/kontakt.jpg"  alt=""></v-img>
+        <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/kontakt_1_komprimiert.webp"  alt=""></v-img>
       </v-col>
 
     </v-row>
@@ -24,7 +24,7 @@
         <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
           <v-col cols="7">
             <div style="width: 100%; height: 270px;" class="d-flex mt-n16">
-              <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
+              <v-row style="width: 100%; height: 30%" class="  ma-0">
                 <v-col cols="12" class="d-flex ">
                   <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon">{{kontakt[0].telefon}}</a>  </p>
                 </v-col>
@@ -52,7 +52,7 @@
   </div>
 </div>
   <div v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/bg.png" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/kontakt_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #d1e3d3;">
           <div class="vertical-marker-mobile">
@@ -72,7 +72,7 @@
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/vita_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%; " class="ma-0">
           <v-col cols="12" class="d-flex ">
