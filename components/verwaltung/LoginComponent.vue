@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-center align-center" style="width: 100vw; height: 100vh">
     <v-form @submit.prevent="login">
-      <v-card class="card"
+      <v-card class="card1"
               style="box-shadow: none; border-top: 1px solid rgba(255,255,255,0); border-left: 1px solid rgba(255,255,255,0)">
         <v-card-title class="text-center">
           <span class="text-h5 ">Einloggen</span>
@@ -141,7 +141,7 @@ export default {
 </script>
 
 <style>
-.card {
+.card1 {
   background-color: rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.75);
   border-left: 1px solid rgba(255, 255, 255, 0.75);

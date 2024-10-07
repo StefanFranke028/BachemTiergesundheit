@@ -121,7 +121,7 @@
 
   </div>
   <div v-if="mobile || tablet" style="width: 100vw; ">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg.png"
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/startseite_bg_komprimiert_mobile.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div style="width: 75%; height: 400px;  background-color: #e5dbdc;">
@@ -151,7 +151,7 @@
           <v-row class="ma-0" style="width: 100%;">
             <v-col cols="6">
               <div>
-                <v-img class="mt-n10" cover src="~/assets/frau-unten.jpg" style="width: 100%; height: 170%;">
+                <v-img class="mt-n10" cover src="~/assets/startseite_2_komprimiert.webp" style="width: 100%; height: 170%;">
 
                 </v-img>
                 <p class="dosis1 mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text8"></p>
