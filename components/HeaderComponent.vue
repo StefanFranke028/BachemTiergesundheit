@@ -65,7 +65,7 @@ export default {
   box-shadow: 2px 2px 4px black;
 }
 span{
-  color: #8e8c8c;
+  color: #494848;
   font-size: 13px;
   cursor: pointer;
 }

@@ -1,6 +1,6 @@
 <template>
   <div v-if="desktop|| tabletHorizontal">
-    <img alt="schwarz-weis Hintergrundbild" src="~/assets/bg_komprimiert.webp" style="width: 100vw; height: 500px;"/>
+    <v-img alt="schwarz-weis Hintergrundbild" src="~/assets/bg_komprimiert.webp"   cover  style="width: 100vw; height: 500px;"/>
     <div class="card">
       <div class="cardIn1">
         <div class="text-center text2 dosis" v-html="blog[0].text2">
@@ -49,8 +49,11 @@
 
   </div>
   <div v-if="mobile || tablet">
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover src="~/assets/bg_komprimiert.webp"
-           style="width: 100%; height: 450px;  ">
+    <v-img   alt="Schwarz-Weiß-Hintergrundbild"
+             class="d-flex justify-center align-center"
+             src="~/assets/bg_komprimiert.webp"
+             aspect-ratio="1.78"
+             style="width: 100%; height: auto; object-fit: contain;">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div class="d-flex justify-center align-center"
              style="width: 75%; height: 400px;    background-color: #c7dee6;">
@@ -344,7 +347,7 @@ p {
 }
 
 .text2 {
-  color: #8e8c8c;
+  color: #5e5d5d;
   position: relative;
   left: 50%;
   top: 10%;
