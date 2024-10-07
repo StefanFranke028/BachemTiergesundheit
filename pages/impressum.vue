@@ -3,9 +3,7 @@
     <v-row style="width: 100% ;" class="mx-0 justify-center">
       <v-col cols="7">
         <v-img src="../assets/1i.jpg" cover></v-img>
-      </v-col> <v-col cols="7">
-      <v-img src="../assets/2i.jpg" cover></v-img>
-    </v-col>
+      </v-col>
     </v-row>
 
   </div>

@@ -23,7 +23,7 @@
       <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0" cols="12">
         <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
           <v-col cols="7">
-            <div style="width: 100%; height: 300px;" class="d-flex align-center">
+            <div style="width: 100%; height: 270px;" class="d-flex mt-n16">
               <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
                 <v-col cols="12" class="d-flex ">
                   <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon">{{kontakt[0].telefon}}</a>  </p>

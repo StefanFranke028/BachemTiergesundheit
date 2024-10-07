@@ -29,7 +29,7 @@
         <v-col style="background-color:  #f1edec" class="pa-0" cols="12">
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
             <v-col cols="7">
-              <div style="width: 100%; height: 300px;" class="d-flex align-center">
+              <div style="width: 100%; height: 300px;" class="d-flex">
                 <v-row style="width: 100%; height: 30%" class="mt-n16  ma-0">
                   <v-col cols="12" class="d-flex ">
                     <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+bewerben[0].telefon">{{bewerben[0].telefon}}</a>  </p>
@@ -56,7 +56,7 @@
         <v-col style="background-color: #ede6e7; padding-top: 120px"  cols="12">
           <v-row style="width: 100%; height: 100% " class="ma-0 mt-10 justify-center ">
             <v-col cols="10">
-              <div style="width: 100%; height: 300px;" class=" ">
+              <div style="width: 100%; height: 300px;" class="mt-n16 ">
                 <h3>Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
                   werden!</h3> <br>
                 <p>
@@ -204,8 +204,8 @@
     </v-img>
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 550px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
-        <div style="width: 100%; height: 2100px;" class=" ">
-          <h4>Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
+        <div style="width: 100%; height: 2100px;" >
+          <h4 >Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
             werden!</h4> <br>
           <p class="textsize">
             Willkommen bei Maxi Escort, wo Leidenschaft und Authentizität im Mittelpunkt

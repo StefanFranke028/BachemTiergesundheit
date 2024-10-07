@@ -1,6 +1,6 @@
 <template>
   <div v-if="desktop || tabletHorizontal">
-    <img alt="schwarz-weis Hintergrundbild" src="~/assets/bg.png" style="width: 100vw; height: 500px;"/>
+    <img alt="schwarz-weis Hintergrundbild" src="~/assets/startseite_bg_komprimiert.webp" style="width: 100vw; height: 500px;"/>
     <div class="card">
       <div class="cardIn1">
         <div class="text-center text2 dosis">
@@ -33,10 +33,14 @@
         </div>
         <div class="line-with-dot">
         </div>
-        <div style="width: 100%; height: 100%; overflow: hidden; position: relative; ">
-          <img alt=""
-               src="~/assets/frau.webp"
-               style="min-width: 90%; min-height: 90%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="mt-n2" style=" width: 100%; height: 100%;  ">
+          <v-img alt=""
+                cover
+
+               src="~/assets/startseite_klein_komprimiert.webp"
+                 style="min-width:100%; height: 310px; width: 260px; min-height: 100%; ">
+
+          </v-img>
         </div>
       </div>
     </div>
@@ -46,7 +50,7 @@
     <div>
       <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6" style="background-color: black">
-          <v-img alt="" src="~/assets/bild-links.webp" style="z-index: 0"></v-img>
+          <v-img alt="" src="~/assets/startseite_1_komprimiert.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #f1edec">
           <v-row class="d-flex justify-center align-end" style="width: 50%; height: 30%; position: absolute;">
@@ -60,9 +64,8 @@
 
               <div class="d-flex justify-center mt-10" style="width: 100%;">
                 <router-link to="damen">
-                  <v-btn class="text-center" theme="dark"> ZU Unseren Begleitpersonen</v-btn>
+                  <v-btn class="text-center" theme="dark"> ZU Unseren Escoertmodels</v-btn>
                 </router-link>
-
               </div>
             </v-col>
 
@@ -81,7 +84,7 @@
         <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
           <v-col class="d-flex justify-center" cols="6">
 
-            <v-img cover src="~/assets/frau-unten.jpg" style="height: 80%; box-shadow: 2px 2px 5px black">
+            <v-img cover src="~/assets/startseite_2_komprimiert.webp" style="height: 80%; box-shadow: 2px 2px 5px black">
 
             </v-img>
           </v-col>
@@ -128,7 +131,7 @@
 
             </div>
           </div>
-          <v-img cover src="~/assets/frau.webp"
+          <v-img cover src="~/assets/startseite_klein_komprimiert.webp"
                  style="height: 200px; width: 50%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
           </v-img>
         </div>
@@ -351,7 +354,6 @@ p {
 .cardIn2 {
   height: 300px;
   width: 250px;
-  background-color: black;
   box-shadow: 2px -2px 5px rgba(67, 67, 67, 0.87);
   position: absolute;
   left: 28%;

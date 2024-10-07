@@ -66,7 +66,7 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/blumen.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Honorar1.jpg"  alt=""></v-img>
         </v-col>
       </v-row>
     </div>

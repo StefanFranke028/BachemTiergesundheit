@@ -8,7 +8,7 @@
         <p class="dosis" style="margin-top: -100px;" v-html="vita[0].text2">
 
         </p>
-        <router-link aria-label="Escort" to="damen" style="position: relative; left: -14%; top:13vh">  <v-btn theme="dark" class="text-center" > zum Escort</v-btn></router-link>
+        <router-link aria-label="Escort" to="damen" style="position: relative; left: -14%; top:13vh">  <v-btn theme="dark" class="text-center" > zu unseren escortdamen</v-btn></router-link>
 
       </div>
     </div>
@@ -23,7 +23,7 @@
     <div style="width: 100vw; height: 900px">
       <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita3.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita.jpeg"  alt=""></v-img>
         </v-col>
         <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 pl-16" cols="6">
           <v-row style="width: 100%; height: 100%" class="ma-0 align-center">
@@ -76,14 +76,14 @@
 
 
               <div class="d-flex justify-center mt-16" style="width: 100%;">
-                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
+                <router-link to="damen">  <v-btn theme="dark" class="text-center" >  Zu unseren Escortmodels</v-btn></router-link>
 
               </div>
             </v-col>
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita3.jpg"  alt=""></v-img>
+          <v-img style="z-index: 0;" max-height="900"  cover src="~/assets/Vita2.jpg"  alt=""></v-img>
         </v-col>
 
 
@@ -125,7 +125,7 @@
 
               </p>
               <br>
-              <p  v-html="vita[0].text22">
+              <p  class="dosis" v-html="vita[0].text22">
               </p>
 
               <div class="d-flex justify-center mt-10" style="width: 100%;">
@@ -152,7 +152,7 @@
             <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="vita[0].text2">
 
             </div>
-             <router-link  aria-label="Escort" to="damen">  <v-btn  theme="dark" class="text-center mt-3" >zum Escort</v-btn></router-link>
+             <router-link  aria-label="Escort" to="damen">  <v-btn  theme="dark" class="text-center mt-3" >zu unseren Escortdamen</v-btn></router-link>
           </div>
         </div>
 
@@ -160,8 +160,8 @@
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
-      <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/Vita.jpeg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <h2 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text3"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text4">
@@ -170,8 +170,8 @@
       </div>
 
     </v-img>
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
-      <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/Vita2.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
         <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text5"></h1>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text6"></p>
@@ -184,14 +184,14 @@
         <h1  style="font-size: 5vw" class="text-center mt-4 dm-serif" v-html="vita[0].text11"></h1>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text12"></p>
-      <router-link to="damen" >  <v-btn theme="dark" class="mt-5 text-center" >  Zu unseren Begleitpersonen</v-btn></router-link>
+      <router-link to="damen" >  <v-btn theme="dark" class="mt-5 text-center" >  Zu unseren Escortmodels</v-btn></router-link>
       </div>
 
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/blumen.jpg" alt="schwarz-weis Hintergrundbild" >
-      <div style="background-color: rgb(215,232,215); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/Vita3.jpg" alt="schwarz-weis Hintergrundbild" >
+      <div style="background-color: rgba(215,232,215,0.85); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
         <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text13"></h1>
         <h1 style="font-size: 5vw" class="text-center dm-serif" v-html="vita[0].text14"></h1>
 
