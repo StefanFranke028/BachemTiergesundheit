@@ -39,7 +39,7 @@
               <br><br>
               <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
               <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
-              <input v-model="blog.datum" class="mt-10" disabled readonly style="color: #8e8c8c" type="date"/>
+              <input aria-label="test" v-model="blog.datum" class="mt-10" disabled readonly style="color: #8e8c8c" type="date"/>
             </v-col>
           </v-row>
         </v-col>
@@ -82,11 +82,11 @@
 
             <v-col cols="12">
               <h1 class="text-center dm-serif" style="font-size: 28px">{{ blog.ueberschrift }}</h1>
-              <h3 class="text-center dm-serif" style="color: #4a4949">{{ blog.unterUeberschrift }}</h3>
+              <h2 class="text-center dm-serif" style="color: #4a4949">{{ blog.unterUeberschrift }}</h2>
               <br><br>
               <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
               <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
-              <input v-model="blog.datum" class="mt-10" disabled readonly style="color: #4a4949" type="date"/></v-col>
+              <input aria-label="test" v-model="blog.datum" class="mt-10" disabled readonly style="color: #4a4949" type="date"/></v-col>
           </v-row>
         </v-col>
       </v-row>
