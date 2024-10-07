@@ -1,6 +1,6 @@
 <template>
   <div v-if="desktop || tabletHorizontal">
-    <img alt="schwarz-weis Hintergrundbild" src="~/assets/startseite_bg_komprimiert.webp" style="width: 100vw; height: 500px;"/>
+    <img alt="schwarz-weis Hintergrundbild" src="~/assets/startseite_bg_komprimiert.webp" cover  style="width: 100vw; height: auto;"/>
     <div class="card">
       <div class="cardIn1">
         <div class="text-center text2 dosis">
@@ -10,8 +10,15 @@
           <br>
 
           <div class="d-flex justify-center mt-10" style="width: 100%;">
-            <router-link to="vita">
-              <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> Zur Vita</v-btn>
+            <router-link to="vita" style="display: inline-block;">
+              <v-btn
+                  aria-label="Zur Vita"
+                  class="text-center"
+                  theme="dark"
+                  style="min-width: 48px; min-height: 48px; padding: 12px 24px;"
+              >
+                Zur Vita
+              </v-btn>
             </router-link>
 
           </div>

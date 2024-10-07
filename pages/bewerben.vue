@@ -1,9 +1,5 @@
 <template>
-  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3"
-
-
-
-  >
+  <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1 px-5">
         <h1 style="margin-left: -90px" class="dm-serif" v-html="bewerben[0].text1"></h1>
@@ -57,8 +53,8 @@
           <v-row style="width: 100%; height: 100% " class="ma-0 mt-10 justify-center ">
             <v-col cols="10">
               <div style="width: 100%; height: 300px;" class="mt-n16 ">
-                <h3>Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
-                  werden!</h3> <br>
+                <h1 style="font-size: 23px">Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
+                  werden!</h1> <br>
                 <p>
                   Willkommen bei Maxi Escort, wo Leidenschaft und Authentizität im Mittelpunkt
                   stehen. Ich bin Maxi Di Benedetto, die Gründerin und ehemalige erfolgreiche Escort-

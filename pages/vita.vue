@@ -15,7 +15,7 @@
     <div style="width: 100vw; height: 600px">
       <v-row style="width: 100%;" class="mx-0 pa-0">
         <v-col class="pa-0" cols="12">
-          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/vita_bg_komprimiert.webp"  alt=""></v-img>
+          <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/vita_bg_komprimiert.webp"  alt="Hintergrundbild"></v-img>
         </v-col>
 
       </v-row>
@@ -52,23 +52,23 @@
 
             <v-col class="" cols="7">
 
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif" v-html="vita[0].text5"></h5>
+              <h1 style="font-size: 1.2vw" class="text-center dm-serif" v-html="vita[0].text5"></h1>
 
               <p class="dosis" style=" text-align: justify;" v-html="vita[0].text6">
 
 
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10" v-html="vita[0].text7"></h5>
+              <h1 style="font-size: 1.2vw" class="text-center dm-serif mt-10" v-html="vita[0].text7"></h1>
 
               <p class="dosis" style=" text-align: justify;" v-html="vita[0].text8">
 
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10"  v-html="vita[0].text9"></h5>
+              <h1 style="font-size: 1.2vw" class="text-center dm-serif mt-10"  v-html="vita[0].text9"></h1>
 
               <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text10">
 
               </p>
-              <h5 style="font-size: 1.2vw" class="text-center dm-serif mt-10" v-html="vita[0].text11"></h5>
+              <h1 style="font-size: 1.2vw" class="text-center dm-serif mt-10" v-html="vita[0].text11"></h1>
 
               <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text12">
 

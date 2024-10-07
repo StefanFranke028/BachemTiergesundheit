@@ -74,6 +74,7 @@
         <v-col class="pa-0" cols="6">
           <v-carousel style="height: 1200px" theme="dark">
             <v-carousel-item
+                alt="bild der Dame"
                 v-for="bild in dame.bilder" :key="bild"
                 :src="bild.imageBase64"
                 cover
