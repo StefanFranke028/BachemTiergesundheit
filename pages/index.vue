@@ -286,7 +286,6 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
 // Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
 if (landingpage1.value) {
   landingpage.value.push(landingpage1.value);
-  console.log(landingpage.value);
 }
 
 
