@@ -434,7 +434,7 @@ p {
 }
 
 h1 {
-  font-size: 3vw;
+  font-size: 2.3vw;
 }
 
 .h1mobile {
