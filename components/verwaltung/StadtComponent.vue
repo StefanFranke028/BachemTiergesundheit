@@ -2,7 +2,7 @@
 
   <div>
     <v-row class="pa-0" style="height: 70vh">
-      <v-col cols="6">
+      <v-col cols="6" style="overflow-y: scroll !important; height: 100%">
         <v-row class="d-flex justify-center" style="width: 100%">
           <v-col>
             <h3 class="text-center">
@@ -11,6 +11,12 @@
           </v-col>
           <v-col cols="12">
             <v-text-field v-model="name" label="Name"/>
+          </v-col>
+          <v-col cols="12">
+            <v-text-field v-model="überschrift" label="Überschrift"/>
+          </v-col>
+          <v-col cols="12">
+            <v-textarea v-model="text" auto-grow label="Text"/>
           </v-col>
           <v-col cols="12">
             <v-select
@@ -59,6 +65,7 @@
               <tr>
                 <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
+                <td>{{ item.überschrift }}</td>
                 <td>
                   <div v-for="(dame, index) in item.damen" :key="index">
                     {{ dame.name }}<br>
@@ -107,12 +114,15 @@ export default {
   data() {
     return {
       name: null,
+      überschrift: null,
+      text: null,
       selectedDamen: [],
       damenList: [],
 
       headers: [
         {title: 'ID', key: 'id'},
         {title: 'Name', key: 'name'},
+        {title: 'Überschrift', key: 'überschrift'},
         {title: 'Damen', key: 'damen'},
         {title: 'Aktionen', key: 'actions', sortable: false}
       ],
@@ -183,6 +193,8 @@ export default {
       this.loading = true;
       const data = {
         name: this.name,
+        überschrift: this.überschrift,
+        text: this.text,
         damenIds: this.selectedDamen.map(dame => dame.id) // Nur die IDs der ausgewählten Damen
       };
 
@@ -273,18 +285,22 @@ export default {
         this.snackbarColor = "error";
       }
       this.loading = false;
-      this.stadtToDelete = null;  // Zurücksetzen
-      await this.getStaedte();  // Liste der Einträge neu laden
+      this.stadtToDelete = null;
+      await this.getStaedte();
     },
 
     editStadtEntität(entry) {
       this.editStadt = entry;
       this.name = entry.name;
+      this.überschrift = entry.name;
+      this.text = entry.text;
       this.selectedDamen = entry.damen
     },
 
     resetEditMode() {
       this.editStadt = null;
+      this.überschrift = null;
+      this.text = null;
       this.name = null;
       this.selectedDamen = null;
     },

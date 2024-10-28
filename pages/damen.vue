@@ -130,37 +130,37 @@
           <p class="dosis mt-n10" style=" text-align: justify; font-size: 13px">{{ dame.vita }}
             <br>
             <br>
-            <b>Mein Motto:</b> {{ dame.motto }}
+            <b v-if="dame.motto">Mein Motto:</b> {{ dame.motto }}
             <br>
             <br>
-            <b>Meine Interessen:</b> {{ dame.interessen }}
+            <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
             <br>
             <br>
-            <b>Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
+            <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
             <br>
             <br>
-            <b>Getränke:</b> {{ dame.getränke }}
+            <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
             <br>
             <br>
-            <b>Cuisine:</b> {{ dame.cuisine }}
+            <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
             <br>
             <br>
-            <b>Blume:</b> {{ dame.blume }}
+            <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
             <br>
             <br>
-            <b>Parfüm:</b> {{ dame.parfüm }}
+            <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
             <br>
             <br>
-            <b>Städte: &nbsp;</b>
+            <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
             <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
             <br>
             <br>
-            <b>Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
+            <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
             <br>
             <br>
-            <b>Arrangements:</b> {{ dame.arrangements }}
+            <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
           </p>
 
         </v-col>

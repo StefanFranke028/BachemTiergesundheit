@@ -61,6 +61,7 @@
                 class="mt-n10"
                 style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
               <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
+              <TeamComponent v-if="selectedSeite === 'Team'"/>
               <VitaComponent v-if="selectedSeite === 'Vita'"/>
               <EscortComponent v-if="selectedSeite === 'Escort'"/>
               <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
@@ -120,6 +121,7 @@ import LoginComponent from "~/components/verwaltung/LoginComponent.vue";
 import nuxtLink from "#app/components/nuxt-link.js";
 import nuxtLayout from "#app/components/nuxt-layout.js";
 import {useUserStore} from "~/stores/user.js";
+import TeamComponent from "~/components/verwaltung/TeamComponent.vue";
 
 export default {
   name: "verwaltung",
@@ -137,10 +139,11 @@ export default {
     EscortPreiseComponent,
     DinnerPreiseComponent,
     DamenComponent,
+    TeamComponent
   },
   data() {
     return {
-      seiten: ['Startseite', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
+      seiten: ['Startseite', 'Team', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
       items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise', 'Damen', 'Stadt'],
       selectedSeite: null,
       selectedItem: null,
