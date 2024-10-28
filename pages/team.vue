@@ -2,12 +2,11 @@
   <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1 px-5" >
-        <h1 style="margin-left: -90px" class="dm-serif">Unser Team </h1>
+        <h1 style="margin-left: -90px" class="dm-serif" v-html="landingpage1.text1"></h1>
         <div class="vertical-marker">
         </div >
-        <p class="dosis" style="margin-top: -100px;">
-          Willkommen in der Welt von Maxi Escort – Wo Eleganz und Stil zu einem
-          unvergesslichen Erlebnis verschmelzen.
+        <p class="dosis" style="margin-top: -100px;" v-html="landingpage1.text2">
+
         </p>
         <router-link aria-label="Escort" to="damen" style="position: relative; left: -14%; top:28vh">  <v-btn theme="dark" class="text-center" > zu unseren escortdamen</v-btn></router-link>
 
@@ -33,31 +32,8 @@
               <h2 style="font-size: 1.6vw" class="text-center dm-serif"></h2>
               <br>
               <br>
-              <p class="dosis" style=" text-align: justify;" >
-                Stell dir vor, du betrittst einen Raum, der von Anmut und Raffinesse erfüllt ist, geleitet
-                von einer Frau, die die Geheimnisse der Verführung und des Charmes kennt. Ich bin
-                Maxi Di Benedetto, die Gründerin von Maxi Escort, und meine Reise begann als
-                erfolgreiche Escort-Dame. Heute lade ich dich ein, Teil dieser außergewöhnlichen
-                Welt zu werden.
-                In meiner Agentur, ehemals bekannt als Maxi &amp; Friends Escort, schaffen wir einen
-                Raum, in dem Sicherheit und Anonymität an erster Stelle stehen. Hier kannst du dich
-                fallen lassen, während ich dich zu glamourösen Fotoshootings begleite und dir bei
-                der Auswahl stilvoller Outfits helfe, die deine einzigartige Persönlichkeit zum Strahlen
-                bringen.
-                Wir sind mehr als nur ein Team – wir sind eine Familie, die auf Augenhöhe
-                zusammenarbeitet. Ich habe immer ein offenes Ohr für dich, denn ich glaube daran,
-                dass jeder Mensch eine Geschichte zu erzählen hat. Lass uns gemeinsam träumen,
-                lachen und die Welt der Eleganz und des Stils entdecken.
-                In der Welt von Maxi Escort verschmelzen Träume und Realität zu einem
-                einzigartigen Erlebnis. Hier findest du nicht nur eine Agentur, sondern ein Zuhause,
-                in dem du dich entfalten kannst. Jeder Moment, den wir teilen, wird zu einer
-                kostbaren Erinnerung, die in deinem Herzen bleibt.
-                Ich freue mich darauf, dich persönlich kennenzulernen und mit dir unvergessliche
-                Momente zu erleben. Lass uns gemeinsam die Magie der Eleganz und des Stils
-                erleben. Diese Reise wird nicht nur deine Sinne betören, sondern auch deine Seele
-                berühren. 
-                Begleite mich auf dieser wunderbaren Reise, und lass uns gemeinsam die Welt
-                erobern. Ich kann es kaum erwarten, all die zauberhaften Erlebnisse mit dir zu teilen.
+              <p class="dosis" style=" text-align: justify;" v-html="landingpage1.text4">
+
               </p>
 
 
@@ -76,54 +52,13 @@
 
             <v-col class="" cols="9">
 
-              <h1 style="font-size: 1.2vw" class="text-center dm-serif">Das Herz und die Seele unserer Agentur</h1>
+              <h1 style="font-size: 1.2vw" class="text-center dm-serif" v-html="landingpage1.text5"></h1>
 
-              <p class="dosis mt-5" style=" text-align: justify;" >
-                Paul ist nicht nur unser stellvertretender Agenturvertreter und Webadministrator – er
-                ist das pulsierende Herz von Maxi Escort. Seit wir uns 2018 begegnet sind, hat er
-                nicht nur seine beeindruckenden Erfahrungen aus aller Welt mitgebracht, sondern
-                auch eine Leidenschaft, die unsere Agentur zum Leben erweckt.
-                Mit unermüdlichem Engagement sorgt Paul dafür, dass alles reibungslos abläuft. Er
-                hält unsere Website nicht nur auf dem neuesten Stand, sondern gestaltet sie mit
-                einer Liebe zum Detail, die die Essenz unserer Agentur widerspiegelt. Sein
-                einfühlsamer Telefondienst und die sorgfältige Pflege der Profile unserer Damen
-                zeigen, wie sehr er sich für die Menschen in unserem Team und für unsere Kunden
-                einsetzt.
-                Doch Paul ist weit mehr als ein Verwalter. Er ist das Licht, das unsere Agentur erhellt.
-                Mit seiner positiven Ausstrahlung und seinem ansteckenden Lächeln schafft er eine
-                warme und einladende Atmosphäre, in der sich jeder wohlfühlt. Seine Fähigkeit,
-                zuzuhören und Verständnis zu zeigen, macht ihn zu einem wertvollen Freund und
-                Unterstützer für alle im Team. 
-                In seinen Augen spiegelt sich die Überzeugung wider, dass wir gemeinsam Großes
-                erreichen können. Er fördert die Zusammenarbeit und inspiriert uns alle, unser
-                Bestes zu geben. Pauls Zuverlässigkeit und sein unerschütterliches Vertrauen
-                stärken nicht nur das Team, sondern schaffen auch eine Familie, in der jeder
-                Einzelne zählt.
-                Wir sind unendlich dankbar, Paul an unserer Seite zu haben. Seine Hingabe, seine
-                Professionalität und sein Herzblut machen ihn zu einem unverzichtbaren Teil von
-                Maxi Escort. Gemeinsam werden wir unvergessliche Momente schaffen, die in den
-                Herzen unserer Kunden und in unserer Agentur weiterleben.
+              <p class="dosis mt-5" style=" text-align: justify;" v-html="landingpage1.text6">
+
 
               </p>
-              <p class="mt-3">
-                <b>
-                  Paul von Falkenstein
-                </b>
-              </p>
-              <p>
-                Stellvertretender Agenturmanagement
-                <br><br>
-                In Vorfreude auf unsere Begegnung,
-              </p>
-              <p class="mt-3">
-                <b>
-                  Maxi Di Benedetto &amp; Paul Falkenstein
-                </b>
-              </p>
-              <p>
-                Agenturmanagement
 
-              </p>
 
 
 
@@ -282,7 +217,7 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/vita", {
+    const response = await $fetch("https://maxi-escort.de:8443/auth/team", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

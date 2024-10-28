@@ -236,6 +236,11 @@ export default {
      background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
 
 }
+.team{
+
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
+
+}
 
 .mobile{
   width: 100%;
