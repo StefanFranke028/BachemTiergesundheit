@@ -6,7 +6,6 @@
         <div class="vertical-marker">
         </div >
         <p  class="dosis" style="margin-top: -100px" v-html="honorare[0].text2">
-
         </p>
         <div class="d-flex justify-center mt-10" style="width: 100%;">
           <router-link to="damen" style="position: relative; left: -14%; top:11vh">    <v-btn theme="dark" class="text-center" >ZU Unseren Escortmodels</v-btn></router-link>

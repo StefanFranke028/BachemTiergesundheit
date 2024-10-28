@@ -29,13 +29,13 @@
              style="width: 100%; height: 100%; min-height: 500px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
           <v-row class="ma-0" style="width: 100%; height: 100%;">
-            <v-col cols="6">
+            <v-col cols="6" class="d-flex align-center">
               <v-img :src="blog.bild" alt="" cover max-height="700" style="z-index: 0;"></v-img>
             </v-col>
             <v-col class="pa-12" cols="6">
-              <h1 class="text-center dm-serif">{{ blog.ueberschrift }}</h1>
+              <h1 class="text-center  dm-serif" style="font-size: 1.9vw">{{ blog.ueberschrift }}</h1>
               <h2 class="text-center dm-serif" style="
-              color: #4a4949">{{ blog.unterUeberschrift }}</h2>
+              color: #4a4949" >{{ blog.unterUeberschrift }}</h2>
               <br><br>
               <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
               <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
@@ -77,7 +77,7 @@
 
     <v-img v-for="(blog, index) in blogs" :key="blog" alt="schwarz-weis Hintergrundbild"
            class="d-flex justify-center align-center"
-           cover :src="blog.bild" style="width: 100%; height: 1000px;  ">
+           cover :src="blog.bild" style="width: 100%; padding-top: 20px  ">
 
       <v-row class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
