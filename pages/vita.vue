@@ -152,7 +152,7 @@
             <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="vita[0].text2">
 
             </div>
-             <router-link  aria-label="Escort" to="damen">  <v-btn  theme="dark" class="text-center mt-3" >zu unseren Escortdamen</v-btn></router-link>
+             <router-link  aria-label="Escort" to="damen">  <v-btn  theme="dark" class="text-center mt-3" >Unsere Escortdamen</v-btn></router-link>
           </div>
         </div>
 

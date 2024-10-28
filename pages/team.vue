@@ -82,24 +82,22 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h2 class="dm-serif mt-2" style="margin-left: -120px;">
-                Unser Team
+              <h2 class="dm-serif mt-2" style="margin-left: -120px;" v-html="team[0].text1">
               </h2>
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;">
-              Willkommen in der Welt von Maxi Escort – Wo Eleganz und Stil zu einem
-              unvergesslichen Erlebnis verschmelzen.
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br><br><br>
-              <br><br><br>
-              <br>
+            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;"  v-html="team[0].text2">
+
+
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
             <router-link aria-label="Escort" to="damen">
-              <v-btn class="text-center mt-3" theme="dark">zu unseren Escortdamen</v-btn>
+              <v-btn class="text-center mt-3 " theme="dark"> Unseren Escortdamen</v-btn>
             </router-link>
           </div>
         </div>
@@ -114,31 +112,8 @@
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
         <h2 class="text-center dm-serif" style="font-size: 5vw"></h2>
 
-        <p class="dosis mt-2" style=" text-align: justify; font-size: 12px">
-          Stell dir vor, du betrittst einen Raum, der von Anmut und Raffinesse erfüllt ist, geleitet
-          von einer Frau, die die Geheimnisse der Verführung und des Charmes kennt. Ich bin
-          Maxi Di Benedetto, die Gründerin von Maxi Escort, und meine Reise begann als
-          erfolgreiche Escort-Dame. Heute lade ich dich ein, Teil dieser außergewöhnlichen
-          Welt zu werden.
-          In meiner Agentur, ehemals bekannt als Maxi &amp; Friends Escort, schaffen wir einen
-          Raum, in dem Sicherheit und Anonymität an erster Stelle stehen. Hier kannst du dich
-          fallen lassen, während ich dich zu glamourösen Fotoshootings begleite und dir bei
-          der Auswahl stilvoller Outfits helfe, die deine einzigartige Persönlichkeit zum Strahlen
-          bringen.
-          Wir sind mehr als nur ein Team – wir sind eine Familie, die auf Augenhöhe
-          zusammenarbeitet. Ich habe immer ein offenes Ohr für dich, denn ich glaube daran,
-          dass jeder Mensch eine Geschichte zu erzählen hat. Lass uns gemeinsam träumen,
-          lachen und die Welt der Eleganz und des Stils entdecken.
-          In der Welt von Maxi Escort verschmelzen Träume und Realität zu einem
-          einzigartigen Erlebnis. Hier findest du nicht nur eine Agentur, sondern ein Zuhause,
-          in dem du dich entfalten kannst. Jeder Moment, den wir teilen, wird zu einer
-          kostbaren Erinnerung, die in deinem Herzen bleibt.
-          Ich freue mich darauf, dich persönlich kennenzulernen und mit dir unvergessliche
-          Momente zu erleben. Lass uns gemeinsam die Magie der Eleganz und des Stils
-          erleben. Diese Reise wird nicht nur deine Sinne betören, sondern auch deine Seele
-          berühren. 
-          Begleite mich auf dieser wunderbaren Reise, und lass uns gemeinsam die Welt
-          erobern. Ich kann es kaum erwarten, all die zauberhaften Erlebnisse mit dir zu teilen.
+        <p class="dosis mt-2" style=" text-align: justify; font-size: 12px" v-html="team[0].text4">
+
         </p>
       </div>
 
@@ -147,54 +122,13 @@
            src="~/assets/team_2_komprimiert.webp" style="width: 100%; height: 930px;  ">
       <div class="mx-auto pa-7"
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h1 class="text-center dm-serif" style="font-size: 18px">Das Herz und die Seele unserer Agentur</h1>
+        <h1 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text5"></h1>
 
-        <p class="dosis mt-5" style=" text-align: justify;  font-size: 12px">
-          Paul ist nicht nur unser stellvertretender Agenturvertreter und Webadministrator – er
-          ist das pulsierende Herz von Maxi Escort. Seit wir uns 2018 begegnet sind, hat er
-          nicht nur seine beeindruckenden Erfahrungen aus aller Welt mitgebracht, sondern
-          auch eine Leidenschaft, die unsere Agentur zum Leben erweckt.
-          Mit unermüdlichem Engagement sorgt Paul dafür, dass alles reibungslos abläuft. Er
-          hält unsere Website nicht nur auf dem neuesten Stand, sondern gestaltet sie mit
-          einer Liebe zum Detail, die die Essenz unserer Agentur widerspiegelt. Sein
-          einfühlsamer Telefondienst und die sorgfältige Pflege der Profile unserer Damen
-          zeigen, wie sehr er sich für die Menschen in unserem Team und für unsere Kunden
-          einsetzt.
-          Doch Paul ist weit mehr als ein Verwalter. Er ist das Licht, das unsere Agentur erhellt.
-          Mit seiner positiven Ausstrahlung und seinem ansteckenden Lächeln schafft er eine
-          warme und einladende Atmosphäre, in der sich jeder wohlfühlt. Seine Fähigkeit,
-          zuzuhören und Verständnis zu zeigen, macht ihn zu einem wertvollen Freund und
-          Unterstützer für alle im Team. 
-          In seinen Augen spiegelt sich die Überzeugung wider, dass wir gemeinsam Großes
-          erreichen können. Er fördert die Zusammenarbeit und inspiriert uns alle, unser
-          Bestes zu geben. Pauls Zuverlässigkeit und sein unerschütterliches Vertrauen
-          stärken nicht nur das Team, sondern schaffen auch eine Familie, in der jeder
-          Einzelne zählt.
-          Wir sind unendlich dankbar, Paul an unserer Seite zu haben. Seine Hingabe, seine
-          Professionalität und sein Herzblut machen ihn zu einem unverzichtbaren Teil von
-          Maxi Escort. Gemeinsam werden wir unvergessliche Momente schaffen, die in den
-          Herzen unserer Kunden und in unserer Agentur weiterleben.
+        <p class="dosis mt-5" style=" text-align: justify;  font-size: 12px" v-html="team[0].text6">
+
 
         </p>
-        <p class="mt-3">
-          <b>
-            Paul von Falkenstein
-          </b>
-        </p>
-        <p>
-          Stellvertretender Agenturmanagement
-          <br><br>
-          In Vorfreude auf unsere Begegnung,
-        </p>
-        <p class="mt-3">
-          <b>
-            Maxi Di Benedetto &amp; Paul Falkenstein
-          </b>
-        </p>
-        <p>
-          Agenturmanagement
 
-        </p>
       </div>
 
 
@@ -208,7 +142,6 @@
 <script setup>
 import {ref} from 'vue';
 
-// Reaktives Array für Team-Daten
 const team = ref([]);
 
 // Methode zum Abrufen der Team-Daten mit useAsyncData
@@ -227,6 +160,7 @@ const {data: teamData, pending, error} = await useAsyncData('team', async () => 
         Authorization: token ? `Bearer ${token}` : undefined,
       },
     });
+    console.log(response);
 
     return response;
   } catch (e) {
