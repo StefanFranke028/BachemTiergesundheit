@@ -33,7 +33,8 @@
               <v-img :src="blog.bild" alt="" cover max-height="700" style="z-index: 0;"></v-img>
             </v-col>
             <v-col class="pa-12" cols="6">
-              <h1 class="text-center  dm-serif" style="font-size: 1.9vw">{{ blog.ueberschrift }}</h1>
+              <h1 class="text-center mt-4 dm-serif" style="font-size: 1.9vw">{{ blog.ueberschrift }}</h1>
+              <h1 class="text-center mt-4 dm-serif" style="font-size: 1.9vw">{{ blog.ueberschrift }}</h1>
               <h2 class="text-center dm-serif" style="
               color: #4a4949" >{{ blog.unterUeberschrift }}</h2>
               <br><br>
