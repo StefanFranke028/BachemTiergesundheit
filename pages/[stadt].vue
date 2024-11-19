@@ -17,47 +17,15 @@
             <v-divider class="mx-12"></v-divider>
             <v-card-text>
               <h3 class="text-center">
-                <!--                Hier finden Sie einige unserer Escort Begleitservice Ladies-->
                 {{ stadt?.überschrift }}
                 <br>
 
               </h3>
               <p :style="mobile ? 'font-size: 12px':'' " class="mt-3" style="text-align: justify; ">
                 {{ stadt?.text }}
-                <!--                Willkommen in der Welt von Maxi Escort Frankfurt, Ihrem High Class Escortservice
-                für Frankfurt. Lassen Sie sich von unseren exklusiven Vorzügen verzaubern und
-                erleben Sie, was wahre Eleganz und Anmut bedeuten.
-                Wir suchen attraktive und selbstbewusste Escort-Damen aus Frankfurt, die mit
-                Charme und Stil überzeugen. (Bewerbung-mail verlinken)
 
-                Das Zuhause der Escort Agentur Maxi Escort und das unserer Escort Damen ist
-                Metropolregion Frankfurt.
-
-                Wir spezialisieren uns auf die Vermittlung von eleganten Escort-Damen in den
-                Städten Frankfurt, Mainz, Wiesbaden, Bad Homburg, Taunus, Köln, Düsseldorf,
-                München, Berlin und Hamburg. Unsere Damen verkörpern Stil und Klasse und sind
-                bereit, unvergessliche Erlebnisse zu schaffen-->
 
               </p>
-              <!--              <h3 class="text-center mt-6">
-                              Willkommen bei unserer exklusiven Maxi Escort-Agentur Frankfurt und Bad
-                              Homburg!
-                            </h3>
-                            <p :style="mobile ? 'font-size: 12px':'' " class="mt-3" style="text-align: justify;">
-                              Willkommen bei unserer exklusiven Maxi Escort-Agentur Frankfurt und Bad
-                              Homburg!
-                              Wir vermitteln charmante und attraktive Escort-Damen in Frankfurt und Bad
-                              Homburg. Unser Ziel ist es, Ihnen unvergessliche Erlebnisse zu bieten, die Ihre
-                              Erwartungen übertreffen.
-                              Darüber hinaus stehen wir Ihnen gerne persönlich zur Verfügung, um Empfehlungen
-                              für die besten Restaurants, Hotels, Bars und das aufregende Nachtleben in der
-                              Region zu geben. Lassen Sie uns helfen, Ihren Abend zu einem besonderen Ereignis
-                              zu machen!
-                              Kontaktieren Sie uns, um mehr über unsere Escort-Damen und die vielfältigen
-                              Möglichkeiten zu erfahren, die wir für Sie bereithalten.
-
-                            </p>-->
-
             </v-card-text>
           </v-card>
         </v-col>

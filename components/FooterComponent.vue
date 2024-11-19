@@ -53,7 +53,7 @@
   <div v-if="mobile|| tablet" :class="formattedPath" class="mobile">
     <v-row class="justify-center ma-0" style="width: 100%">
       <v-col cols="10">
-        <h1 class="" style="font-size: 20px">ELEGANZ TRIFFT LEIDENSCHAFT </h1>
+        <h1 class="" style="font-size: 15px">ELEGANZ TRIFFT LEIDENSCHAFT </h1>
         <p style="font-size: 12px">erotisch | leidenschaftlich | hautnah</p>
         <br>
 

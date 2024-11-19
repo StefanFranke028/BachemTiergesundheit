@@ -2,12 +2,12 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1 class="dm-serif" style="margin-left: -90px" v-html="team[0].text1"></h1>
+        <h2 class="dm-serif" style="margin-left: -90px" v-html="team[0].text1"></h2>
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="team[0].text2">
         </p>
-        <router-link aria-label="Escort" style="position: relative; left: -14%; top:28vh" to="damen">
+        <router-link aria-label="Escort" style="position: absolute; left: -5%; top:46vh" to="damen">
           <v-btn class="text-center" theme="dark"> zu unseren escortdamen</v-btn>
         </router-link>
 
@@ -23,8 +23,8 @@
     </div>
     <div style="width: 100vw; height: 900px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
-        <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="900" src="~/assets/team_1_komprimiert.webp" style="z-index: 0;"></v-img>
+        <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 d-flex align-center" cols="6">
+          <v-img   max-height="500" src="~/assets/team_1_komprimiert.webp" style="z-index: 0;"></v-img>
         </v-col>
         <v-col class="pa-0 pl-16" cols="6" style="background-color: rgba(215,232,215,0.56)">
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
@@ -32,7 +32,7 @@
             <v-col class="mt-16" cols="9">
               <br>
               <br>
-              <h2 class="text-center dm-serif" style="font-size: 1.6vw" v-html="team[0].text3"></h2>
+              <h2 class="text-center dm-serif" style="font-size: 1vw" v-html="team[0].text3"></h2>
               <br>
               <br>
               <p class="dosis" style=" text-align: justify;" v-html="team[0].text4">
@@ -43,18 +43,19 @@
             <v-col cols="5"></v-col>
           </v-row>
         </v-col>
-
       </v-row>
     </div>
-    <div style="width: 100vw; height: 900px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
+    <div style="width: 100vw; height: 900px" >
+      <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
+        <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 d-flex align-center" cols="6">
+          <v-img alt=""  max-height="500" src="~/assets/team_2_komprimiert.webp" style="z-index: 0; "></v-img>
+        </v-col>
         <v-col class="pa-0 pl-16" cols="6" style="background-color: rgba(215,232,215,0.56)">
           <v-row class="ma-0 mt-16" style="width: 100%; height: 100%">
-            <v-col cols="2"></v-col>
 
             <v-col class="" cols="9">
 
-              <h1 class="text-center dm-serif" style="font-size: 1.2vw" v-html="team[0].text5"></h1>
+              <h1 class="text-center dm-serif" style="font-size: 1vw" v-html="team[0].text5"></h1>
 
               <p class="dosis mt-5" style=" text-align: justify;" v-html="team[0].text6">
               </p>
@@ -62,10 +63,6 @@
             </v-col>
           </v-row>
         </v-col>
-        <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="900" src="~/assets/team_2_komprimiert.webp" style="z-index: 0;"></v-img>
-        </v-col>
-
 
       </v-row>
     </div>
@@ -82,8 +79,8 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h2 class="dm-serif mt-2" style="margin-left: -120px;" v-html="team[0].text1">
-              </h2>
+              <h3 class="dm-serif mt-2" style="margin-left: -120px; " v-html="team[0].text1">
+              </h3>
             </div>
             <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;"  v-html="team[0].text2">
 
@@ -372,13 +369,13 @@ h1 {
 }
 
 .dm-serif {
-  font-family: "DM Serif Text", serif;
+  font-family: "Engravers MT", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .dosis {
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;

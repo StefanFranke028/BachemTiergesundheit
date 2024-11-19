@@ -191,8 +191,10 @@ export default {
 
     async submitChanges() {
       this.loading = true;
+      var test = this.name
+
       const data = {
-        name: this.name,
+        name: test.trim(),
         überschrift: this.überschrift,
         text: this.text,
         damenIds: this.selectedDamen.map(dame => dame.id) // Nur die IDs der ausgewählten Damen

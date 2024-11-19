@@ -80,7 +80,7 @@
 
           </v-row>
           <div style="position: relative; top: 20% ; left:-40%">
-            <h1 class=" text-center dm-serif" v-html="landingpage[0].text4"></h1>
+            <h1 class=" text-center dm-serif" style="font-size: 30px" v-html="landingpage[0].text4"></h1>
             <div class="vertical-marker">
             </div>
           </div>
@@ -100,8 +100,8 @@
           </v-col>
           <v-col class="d-flex justify-center" cols="6" style="margin-top: 15%">
             <div class="ml-16" style="height: 80%">
-              <h1 class="dosis1" style="color: #615f5f" v-html="landingpage[0].text6"></h1>
-              <p style="color: #615f5f" v-html="landingpage[0].text7">
+              <h1 class="dosis1" style="color: #615f5f ;font-size: 26px" v-html="landingpage[0].text6"></h1>
+              <p class="mt-2" style="color: #615f5f" v-html="landingpage[0].text7">
 
               </p>
               <br>
@@ -149,7 +149,7 @@
       </div>
     </v-img>
     <div class="pa-6" style="background-color:  #e5dbdc; width: 100vw; height: 130px">
-      <h1 class="mt-n2 text-center h1mobile dm-serif">Willkommen bei Maxi Escort,</h1>
+      <h1 class="mt-n2 text-center h1mobile dm-serif" style="font-size: 15px">Willkommen bei Maxi Escort,</h1>
       <p class="text-center mt-3" style="font-size: 12px" v-html="landingpage[0].text2+' ' + landingpage[0].text3">
 
 
@@ -166,14 +166,14 @@
                        style="width: 100%; height: 170%;">
 
                 </v-img>
-                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text8"></p>
-                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text9"></p>
-                <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text10"></p>
+                <p class="dosis mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text8"></p>
+                <p class="dosis mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text9"></p>
+                <p class="dosis mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text10"></p>
               </div>
             </v-col>
             <v-col cols="6">
-              <h1 class="dosis1" style="color: #615f5f;font-size: 15px" v-html="landingpage[0].text6"></h1>
-              <p class="dosis1 mt-2" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text7"></p>
+              <h1 class="dosis1" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text6"></h1>
+              <p class="dosis mt-2" style="color: #615f5f;font-size: 10px" v-html="landingpage[0].text7"></p>
 
             </v-col>
           </v-row>
@@ -183,7 +183,7 @@
     </div>
     <div class="" style="background-color:  #f1edec; width: 100vw; height: 200px">
       <div class="pt-5">
-        <h1 class="mt-3 text-center h1mobile dm-serif" v-html="landingpage[0].text4"></h1>
+        <h1 class="mt-3 text-center h1mobile dm-serif" style="font-size: 13px" v-html="landingpage[0].text4"></h1>
 
       </div>
       <div class="px-10 mt-4">
@@ -330,22 +330,22 @@ useHead({
 }
 
 .dm-serif {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
+  font-family: "Engravers MT", serif;
+  font-weight: 100;
   font-style: normal;
 }
 
 .dosis {
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
-  line-height: 1.3;
+
 }
 
 p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -353,11 +353,10 @@ p {
 }
 
 .dosis1 {
-  font-family: "Dosis", sans-serif;
+  font-family: "Engravers MT", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 200;
   font-style: normal;
-  line-height: 1.3;
 }
 
 .cardIn1 {
