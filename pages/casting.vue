@@ -6,7 +6,7 @@
 
         <p class="dosis mt-7"  style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
 
-          </p>
+        </p>
       </div>
     </div>
     <div style="width: 100vw; height: 600px">
