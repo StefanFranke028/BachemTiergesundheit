@@ -62,11 +62,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: city.slice(11),
+      content:'maxi-escort in '+ city.slice(11),
     },
     {
       name: 'keywords',
-      content: city.slice(11),
+      content:'Escort '+ city.slice(11),
     },
   ],
   link: [

@@ -2,10 +2,9 @@
 <div v-if="desktop || tabletHorizontal" style="width: 100vw;" class="mt-3">
   <div class="card">
     <div class="cardIn1 px-5">
-      <h1 style="margin-left: -90px" class="dm-serif" v-html="kontakt[0].text1"></h1>
-      <div class="line-with-dot">
-      </div>
-      <p class="dosis " style="margin-bottom: 100px;" v-html="kontakt[0].text2">
+      <h1 style=" font-size: 22px " class="dm-serif mt-2 text-center" v-html="kontakt[0].text1"></h1>
+
+      <p class="dosis mt-7" style="margin-bottom: 100px;" v-html="kontakt[0].text2">
 
       </p>
     </div>
@@ -35,10 +34,10 @@
                   <p  style="cursor: pointer; color: #2c2cda"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
-                  <p style="" v-html="kontakt[0].text3"></p>
+                  <p style="" class="dosis" v-html="kontakt[0].text3"></p>
                 </v-col>
                 <v-col cols="12" class="d-flex ">
-                  <p style=" " v-html="kontakt[0].text4"></p>
+                  <p style=" " class="dosis" v-html="kontakt[0].text4"></p>
                 </v-col>
               </v-row>
             </div>
@@ -59,7 +58,7 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-2" v-html="kontakt[0].text1"> </h2>
+              <h1 style="margin-left: -80px; " class="dm-serif mt-2" v-html="kontakt[0].text1"> </h1>
             </div>
             <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="kontakt[0].text2">
 
@@ -76,23 +75,19 @@
       <div style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <v-row style="width: 100%; height: 30%; " class="ma-0">
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a href="" v-html="kontakt[0].telefon"></a>  </p>
+            <p style="cursor: pointer"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon" v-html="kontakt[0].telefon"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" ><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a href="" v-html="kontakt[0].email"></a>  </p>
+            <p style="cursor: pointer" ><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email" v-html="kontakt[0].email"></a>  </p>
           </v-col>
           <v-col cols="12" class="d-flex ">
             <p  style="cursor: pointer; color: #2d2de1"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
           </v-col>
-          <v-col cols="12"  class="d-flex ">
-            <p style=" font-size: 14px">Ich freue mich darauf, <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
-              ermöglichen zu können.</p><br> <br>
-
+          <v-col cols="12" class="d-flex mt-n3 ">
+            <p style="font-size: 12px" class="dosis" v-html="kontakt[0].text3"></p>
           </v-col>
-          <v-col cols="12" class="d-flex ">
-
-            <p style=" font-size: 14px ">Für Bewerbungen als Escort Modell nutze doch bitte unsere E-Mail <a href="mailto:bewerbung@maxi-escort.de">bewerbung@maxi-escort.de</a>.  Wir melden uns dann sehr gerne bei Dir.</p>
-
+          <v-col cols="12" class="d-flex mt-n7 ">
+            <p style=" font-size: 12px" class="dosis" v-html="kontakt[0].text4"></p>
           </v-col>
         </v-row>
       </div>
@@ -286,12 +281,12 @@ h1{
   transform: translateX(-50%);
 }
 .dm-serif {
-  font-family: "DM Serif Text", serif;
+  font-family: "Engravers MT", serif;
   font-weight: 400;
   font-style: normal;
 }
 .dosis{
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;

@@ -2,10 +2,9 @@
   <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1 style="margin-left: -90px" class="dm-serif" v-html="bewerben[0].text1"></h1>
-        <div class="line-with-dot">
-        </div>
-        <p class="dosis"  style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
+        <h1 style="font-size: 22px" class="dm-serif mt-2 text-center" v-html="bewerben[0].text1"></h1>
+
+        <p class="dosis mt-7"  style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
 
           </p>
       </div>
@@ -53,8 +52,8 @@
           <v-row style="width: 100%; height: 100% " class="ma-0 mt-10 justify-center ">
             <v-col cols="10">
               <div style="width: 100%; height: 300px;" class="mt-n16 ">
-                <h1 style="font-size: 23px">Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
-                  werden!</h1> <br>
+                <h2 class="dm-serif" style="font-size: 23px">Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
+                  werden!</h2> <br>
                 <p>
                   Willkommen bei Maxi Escort, wo Leidenschaft und Authentizität im Mittelpunkt
                   stehen. Ich bin Maxi Di Benedetto, die Gründerin und ehemalige erfolgreiche Escort-
@@ -168,7 +167,7 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif mt-2" v-html="bewerben[0].text1"></h2>
+              <h1 style="margin-left: -80px; " class="dm-serif mt-2" v-html="bewerben[0].text1"></h1>
             </div>
             <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="bewerben[0].text2">
             </div>
@@ -201,8 +200,8 @@
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 550px;  " src="~/assets/bewerben_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
         <div style="width: 100%; height: 2100px;" >
-          <h1 style="font-size: 17px" >Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
-            werden!</h1> <br>
+          <h2 style="font-size: 17px" >Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
+            werden!</h2> <br>
           <p class="textsize">
             Willkommen bei Maxi Escort, wo Leidenschaft und Authentizität im Mittelpunkt
             stehen. Ich bin Maxi Di Benedetto, die Gründerin und ehemalige erfolgreiche Escort-
@@ -496,12 +495,12 @@ h1{
   transform: translateX(-50%);
 }
 .dm-serif {
-  font-family: "DM Serif Text", serif;
+  font-family: "Engravers MT", serif;
   font-weight: 400;
   font-style: normal;
 }
 .dosis{
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -523,24 +522,5 @@ p{
   line-height: 1.3;
 }
 
-.line-with-dot {
-  position: relative;
-  width: 50%; /* Breite des Striches anpassen */
-  height: 2px; /* Höhe des Striches */
-  background-color: black; /* Farbe des Striches */
-  top: -12%;
-  left: 50%;
-}
 
-.line-with-dot::after {
-  content: '';
-  position: absolute;
-  right: 0; /* Positioniert den Punkt rechts */
-  top: 50%; /* Zentriert den Punkt vertikal */
-  width: 10px; /* Größe des Punktes */
-  height: 10px; /* Größe des Punktes */
-  background-color: black; /* Farbe des Punktes */
-  border-radius: 50%; /* Macht den Punkt rund */
-  transform: translate(50%, -50%); /* Zentriert den Punkt richtig auf der Linie */
-}
 </style>
