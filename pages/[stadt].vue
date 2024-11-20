@@ -72,7 +72,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://www.maxi-escort-service.de/${city}`,
+      href: `https://maxi-escort.de/${route.params.stadt}`,
     },
   ],
 });
