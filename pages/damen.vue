@@ -98,7 +98,7 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif mt-n2" style="margin-left: -80px; " v-html="escort[0].text1"></h1>
+              <h1 class="dm-serif mt-2" style="margin-left: -80px; " v-html="escort[0].text1"></h1>
             </div>
             <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
 
@@ -365,7 +365,7 @@ export default {
 }
 
 h1 {
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 
 .vertical-marker {
@@ -434,11 +434,5 @@ p {
   line-height: 1.3;
 }
 
-.dosis1 {
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
-}
+
 </style>

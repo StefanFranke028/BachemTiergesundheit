@@ -2,7 +2,7 @@
   <div v-if="desktop|| tabletHorizontal" style="width: 100vw;" class="mt-3">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1 style="margin-left: -90px" class="dm-serif" v-html="honorare[0].text1"></h1>
+        <h1 style="margin-left: -90px; font-size: 22px" class="dm-serif" v-html="honorare[0].text1"></h1>
         <div class="vertical-marker">
         </div >
         <p  class="dosis" style="margin-top: -100px" v-html="honorare[0].text2">
@@ -149,7 +149,7 @@
           </div >
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div style="position: relative; top:-50px" class="text-center dosis">
-              <h2 style="margin-left: -80px; " class="dm-serif " v-html="honorare[0].text1"> </h2>
+              <h1 style="margin-left: -80px; " class="dm-serif " v-html="honorare[0].text1"> </h1>
             </div>
             <div style="font-size: 12px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="honorare[0].text2">
             </div>
@@ -165,7 +165,7 @@
 
       <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
         <v-col cols="12" class=" ">
-          <h2 style="font-size: 8vw; " class="text-center text-white dm-serif">Maxi Dinner Date</h2>
+          <h2 style="font-size: 5vw; " class="text-center text-white dm-serif">Maxi Dinner Date</h2>
           <br>
           <br>
           <v-row style="width: 100%; border-radius: 10px" class="mx-0">
@@ -198,11 +198,11 @@
         </v-col>
       </v-row>
     </v-img>
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 800px;  " src="~/assets/honorar_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
+    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 80%;  " src="~/assets/honorar_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
 
       <v-row style="width: 100%; height: 100%" class="ma-0 justify-center align-center">
         <v-col cols="12" class=" ">
-          <h2 style="font-size: 8vw; " class="text-center dm-serif">Maxi Escort Date</h2>
+          <h2 style="font-size: 5vw; " class="text-center dm-serif">Maxi Escort Date</h2>
           <br>
           <br>
           <v-row style="width: 100%; border-radius: 10px" class="ma-0">
@@ -475,7 +475,7 @@ export default {
 }
 
 h1{
-  font-size: 2.5vw;
+  font-size: 4vw;
 }
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
@@ -520,25 +520,19 @@ h1{
   transform: translateX(-50%);
 }
 .dm-serif {
-  font-family: "DM Serif Text", serif;
+  font-family: "Engravers MT", serif;
   font-weight: 400;
   font-style: normal;
 }
 .dosis{
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
   line-height: 1.3;
 }
-p{
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
-}
+
 .tabelleleft{
 background-color: #65c6ec;
   border-radius: 10px 0px 0px 0px;
@@ -556,11 +550,5 @@ background-color: #b8ddec;
    background-color: #b8ddec;
 
  }
-.dosis1{
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
-}
+
 </style>

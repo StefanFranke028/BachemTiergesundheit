@@ -241,7 +241,7 @@ useHead({
 }
 
 h1{
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
@@ -306,31 +306,5 @@ p{
   font-size: 16px;
   line-height: 1.3;
 }
-.dosis1{
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
-}
-.line-with-dot {
-  position: relative;
-  width: 50%; /* Breite des Striches anpassen */
-  height: 2px; /* Höhe des Striches */
-  background-color: black; /* Farbe des Striches */
-  top: -12%;
-  left: 50%;
-}
 
-.line-with-dot::after {
-  content: '';
-  position: absolute;
-  right: 0; /* Positioniert den Punkt rechts */
-  top: 50%; /* Zentriert den Punkt vertikal */
-  width: 10px; /* Größe des Punktes */
-  height: 10px; /* Größe des Punktes */
-  background-color: black; /* Farbe des Punktes */
-  border-radius: 50%; /* Macht den Punkt rund */
-  transform: translate(50%, -50%); /* Zentriert den Punkt richtig auf der Linie */
-}
 </style>
