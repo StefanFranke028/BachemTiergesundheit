@@ -52,24 +52,32 @@
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
+const city = route.params.stadt || '';
 
 useHead({
   htmlAttrs: {
     lang: 'de',
   },
-  title: 'Maxi Escort Service',
+  title: `Maxi Escort Service - ${city.slice(11)}`,
   meta: [
     {
       name: 'description',
-      content: route.params.stadt ? route.params.stadt.slice(11) : 'Escort Service in deiner stadt',
+      content: city.slice(11),
     },
     {
       name: 'keywords',
-      content: route.params.stadt ? route.params.stadt.slice(11) : 'Escort Service in deiner stadt',
+      content: city.slice(11),
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://www.maxi-escort-service.de/${city}`,
     },
   ],
 });
 </script>
+
 
 <script>
 import {useScreenStore} from "~/stores/screen.js";
