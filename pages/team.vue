@@ -2,7 +2,7 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h2 class="dm-serif" style="margin-left: -90px" v-html="team[0].text1"></h2>
+        <h1  class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="team[0].text1"></h1>
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="team[0].text2">
@@ -55,7 +55,7 @@
 
             <v-col class="" cols="9">
 
-              <h1 class="text-center dm-serif" style="font-size: 1vw" v-html="team[0].text5"></h1>
+              <h2 class="text-center dm-serif" style="font-size: 1vw" v-html="team[0].text5"></h2>
 
               <p class="dosis mt-5" style=" text-align: justify;" v-html="team[0].text6">
               </p>
@@ -79,10 +79,10 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h3 class="dm-serif mt-2" style="margin-left: -120px; " v-html="team[0].text1">
-              </h3>
+              <h1 class="dm-serif mt-2" style="margin-left: -90px; " v-html="team[0].text1">
+              </h1>
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;"  v-html="team[0].text2">
+            <div class="pa-3 mt-n11 dosis" style="font-size: 11px; text-align: justify;"  v-html="team[0].text2">
 
 
             </div>
@@ -103,11 +103,11 @@
 
     </v-img>
 
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/team_1_komprimiert.webp" style="width: 100%; height: 750px;  ">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-3 justify-center align-center" cover
+           src="~/assets/team_1_komprimiert.webp" style="width: 100%;   ">
       <div class="mx-auto pa-4"
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h2 class="text-center dm-serif" style="font-size: 5vw"></h2>
+        <h2 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text3" ></h2>
 
         <p class="dosis mt-2" style=" text-align: justify; font-size: 12px" v-html="team[0].text4">
 
@@ -119,7 +119,7 @@
            src="~/assets/team_2_komprimiert.webp" style="width: 100%; height: 930px;  ">
       <div class="mx-auto pa-7"
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h1 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text5"></h1>
+        <h2 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text5"></h2>
 
         <p class="dosis mt-5" style=" text-align: justify;  font-size: 12px" v-html="team[0].text6">
 

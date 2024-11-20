@@ -2,7 +2,7 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1 class="dm-serif" style="margin-left: -90px" v-html="escort[0].text1"></h1>
+        <h1 class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="escort[0].text1"></h1>
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="escort[0].text2"></p>
@@ -29,13 +29,15 @@
           <v-row class="ma-0 align-center mt-5" style="width: 100%; height: 100%">
             <v-col cols="4"></v-col>
             <v-col cols="7">
-              <h2 class="text-center dm-serif mt-16" style="font-size: 2vw">{{ dame.name }}</h2>
+              <h2 class="text-center  mt-16" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{ dame.name }}</h2>
               <br>
               <br>
               <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
                 <br>
                 <br>
-                <b v-if="dame.motto">Mein Motto:</b> {{ dame.motto }}
+                <b v-if="dame.motto">Mein Motto:</b> <span  style="font-family: 'Zapfino', Serif">
+                  {{ dame.motto }}
+                </span>
                 <br>
                 <br>
                 <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
@@ -96,7 +98,7 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h2 class="dm-serif mt-n2" style="margin-left: -80px; " v-html="escort[0].text1"></h2>
+              <h1 class="dm-serif mt-n2" style="margin-left: -80px; " v-html="escort[0].text1"></h1>
             </div>
             <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
 
@@ -124,13 +126,16 @@
           </v-carousel>
         </v-col>
         <v-col class="mx-auto" cols="11">
-          <h2 class="text-center dm-serif mt-n2" style="font-size: 8vw">{{ dame.name }}</h2>
+          <h2 class="text-center dm-serif mt-n2" style="font-size: 8vw; font-family: 'Edwardian Script ITC', Serif">{{ dame.name }}</h2>
           <br>
           <br>
           <p class="dosis mt-n10" style=" text-align: justify; font-size: 13px">{{ dame.vita }}
             <br>
             <br>
-            <b v-if="dame.motto">Mein Motto:</b> {{ dame.motto }}
+            <b v-if="dame.motto">Mein Motto:</b>
+            <span style="font-family: 'Zapfino', Serif">
+                {{ dame.motto }}
+            </span>
             <br>
             <br>
             <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
@@ -407,13 +412,13 @@ h1 {
 }
 
 .dm-serif {
-  font-family: "DM Serif Text", serif;
+  font-family: "Engravers MT", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .dosis {
-  font-family: "Dosis", sans-serif;
+  font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;

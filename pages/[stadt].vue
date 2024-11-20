@@ -48,6 +48,28 @@
   </div>
 </template>
 
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+  },
+  title: 'Maxi Escort Service',
+  meta: [
+    {
+      name: 'description',
+      content: route.params.stadt ? route.params.stadt.slice(11) : 'Escort Service in deiner stadt',
+    },
+    {
+      name: 'keywords',
+      content: route.params.stadt ? route.params.stadt.slice(11) : 'Escort Service in deiner stadt',
+    },
+  ],
+});
+</script>
 
 <script>
 import {useScreenStore} from "~/stores/screen.js";

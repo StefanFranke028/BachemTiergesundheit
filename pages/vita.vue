@@ -58,17 +58,17 @@
 
 
               </p>
-              <h1 style="font-size: 0.9vw" class="text-center dm-serif mt-10" v-html="vita[0].text7"></h1>
+              <h2 style="font-size: 0.9vw" class="text-center dm-serif mt-10" v-html="vita[0].text7"></h2>
 
               <p class="dosis" style=" text-align: justify;" v-html="vita[0].text8">
 
               </p>
-              <h1 style="font-size: 0.9vw" class="text-center dm-serif mt-10"  v-html="vita[0].text9"></h1>
+              <h2 style="font-size: 0.9vw" class="text-center dm-serif mt-10"  v-html="vita[0].text9"></h2>
 
               <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text10">
 
               </p>
-              <h1 style="font-size: 0.9vw" class="text-center dm-serif mt-10" v-html="vita[0].text11"></h1>
+              <h2 style="font-size: 0.9vw" class="text-center dm-serif mt-10" v-html="vita[0].text11"></h2>
 
               <p class="dosis" style=" text-align: justify;"  v-html="vita[0].text12">
 
@@ -98,7 +98,7 @@
           <v-row style="width: 100%; height: 100%" class="ma-0 mt-16">
 
             <v-col cols="7">
-              <h1 style="font-size: 1vw" class="text-center dm-serif" v-html="vita[0].text13"></h1>
+              <h2 style="font-size: 1vw" class="text-center dm-serif" v-html="vita[0].text13"></h2>
               <h2 style="font-size: 0.9vw" class="text-center dm-serif mt-5" v-html="vita[0].text14"></h2>
 
               <p class="dosis" style=" text-align: justify;" v-html="vita[0].text15">
@@ -172,16 +172,16 @@
     </v-img>
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 630px;  " src="~/assets/vita_2_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
-        <h1 style="font-size: 3vw" class="text-center dm-serif" v-html="vita[0].text5"></h1>
+        <h2 style="font-size: 3vw" class="text-center dm-serif" v-html="vita[0].text5"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text6"></p>
-        <h1  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text7"></h1>
+        <h2  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text7"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text8"></p>
-        <h1  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text9"></h1>
+        <h2  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text9"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text10"></p>
-        <h1  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text11"></h1>
+        <h2  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text11"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text12"></p>
       <router-link to="damen" >  <v-btn theme="dark" class="mt-5 text-center" >  Zu unseren Escortmodels</v-btn></router-link>
@@ -193,21 +193,21 @@
     <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 600px;  " src="~/assets/vita_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
       <div style="background-color: rgba(215,232,215,0.85); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-7">
         <h1 style="font-size: 4vw" class="text-center dm-serif" v-html="vita[0].text13"></h1>
-        <h1 style="font-size: 3vw" class="text-center mt-2 dm-serif" v-html="vita[0].text14"></h1>
+        <h2 style="font-size: 3vw" class="text-center mt-2 dm-serif" v-html="vita[0].text14"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text15">
 
         </p>
-        <h1  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text16"></h1>
+        <h2  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text16"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text17">
         </p>
-        <h1  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text18"></h1>
+        <h2  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text18"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text19">
 
         </p>
-        <h1  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text20"></h1>
+        <h2  style="font-size: 3vw" class="text-center mt-4 dm-serif" v-html="vita[0].text20"></h2>
 
         <p class="dosis mt-2"  style=" text-align: justify; font-size: 12px" v-html="vita[0].text21">
 
