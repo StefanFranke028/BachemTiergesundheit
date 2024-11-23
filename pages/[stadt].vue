@@ -68,7 +68,7 @@ useHead({
       content: city.slice(11),
     },
   ],
-  title: `Maxi Escort Service - ${city.slice(11)}`,
+  title: `Maxi Escort in ${city.slice(11)}`,
   link: [
     {
       rel: 'canonical',
