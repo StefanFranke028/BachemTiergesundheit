@@ -77,7 +77,7 @@
             </v-col>
 
           </v-row>
-          <div style="position: relative; top: 15vw ; left:-40%">
+          <div class="pt-16" style="position: relative; top: 10vw ; left:-40%">
             <h2 class=" text-center dm-serif" style="font-size: 30px" v-html="landingpage[0].text4"></h2>
             <div class="vertical-marker">
             </div>
