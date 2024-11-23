@@ -23,69 +23,69 @@
     </div>
 
 
-    <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1200px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
-        <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
-          <v-row class="ma-0 align-center mt-5" style="width: 100%; height: 100%">
-            <v-col cols="4"></v-col>
-            <v-col cols="7">
-              <h2 class="text-center  mt-16" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{ dame.name }}</h2>
-              <br>
-              <br>
-              <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
-                <br>
-                <br>
-                <b v-if="dame.motto">Mein Motto:</b> <span  style="font-family: 'Zapfino', Serif">
+
+    <div style="width: 100vw; padding-top: 7%" >
+<v-row>
+  <v-col  v-for="dame in damen" cols="4">
+    <v-row  :key="dame"  class="ma-0  mt-5" style="width: 100%; height: 100%">
+      <v-col cols="12"><v-carousel style="height: 700px" theme="dark">
+        <v-carousel-item
+            alt="bild der Dame"
+            v-for="bild in dame.bilder" :key="bild"
+            :src="bild.imageBase64"
+            cover
+        ></v-carousel-item>
+
+      </v-carousel></v-col>
+      <v-col class="px-10 pb-12" cols="12">
+        <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{ dame.name }}</h2>
+        <br>
+        <br>
+        <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
+          <br>
+          <br>
+          <b v-if="dame.motto">Mein Motto:</b> <span  style="font-family: 'Zapfino', Serif">
                   {{ dame.motto }}
                 </span>
-                <br>
-                <br>
-                <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
-                <br>
-                <br>
-                <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
-                <br>
-                <br>
-                <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
-                <br>
-                <br>
-                <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
-                <br>
-                <br>
-                <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
-                <br>
-                <br>
-                <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
-                <br>
-                <br>
-                <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
-                <span v-for="stadt in dame.staedte" :key="stadt">
+          <br>
+          <br>
+          <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
+          <br>
+          <br>
+          <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
+          <br>
+          <br>
+          <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
+          <br>
+          <br>
+          <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
+          <br>
+          <br>
+          <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
+          <br>
+          <br>
+          <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
+          <br>
+          <br>
+          <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
+          <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
-                <br>
-                <br>
-                <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
-                <br>
-                <br>
-                <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
-              </p>
+          <br>
+          <br>
+          <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
+          <br>
+          <br>
+          <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
+        </p>
 
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col class="pa-0" cols="6">
-          <v-carousel style="height: 1200px" theme="dark">
-            <v-carousel-item
-                alt="bild der Dame"
-                v-for="bild in dame.bilder" :key="bild"
-                :src="bild.imageBase64"
-                cover
-            ></v-carousel-item>
+      </v-col>
+    </v-row>
+  </v-col>
+</v-row>
 
-          </v-carousel>
-        </v-col>
-      </v-row>
     </div>
+
   </div>
   <div v-if="mobile || tablet">
     <v-img alt="Hintergrundbild" class="d-flex justify-center align-center" cover
@@ -428,8 +428,7 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  letter-spacing: 0.10em;
-  line-height: 1.3;
+
 }
 
 p {
