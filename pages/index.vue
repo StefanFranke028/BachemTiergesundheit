@@ -60,11 +60,9 @@
           <v-img alt="frau und mann" src="~/assets/startseite_1_komprimiert.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #f1edec">
-          <v-row class="d-flex justify-center align-end" style="width: 50%; height: 30%; position: absolute;">
+          <v-row class="d-flex justify-center align-end" style="width: 50%; height: 25%; position: absolute;">
             <v-col cols="6">
               <p style="font-size: 2vh" v-html="landingpage[0].text5">
-
-
               </p>
               <br>
               <br>
@@ -79,7 +77,7 @@
             </v-col>
 
           </v-row>
-          <div style="position: relative; top: 20% ; left:-40%">
+          <div style="position: relative; top: 15vw ; left:-40%">
             <h2 class=" text-center dm-serif" style="font-size: 30px" v-html="landingpage[0].text4"></h2>
             <div class="vertical-marker">
             </div>
@@ -455,7 +453,7 @@ style >
 .vertical-marker::before {
   content: '';
   position: absolute;
-  top: 20vh; /* Positioniert den Punkt ganz oben */
+  top:8vw; /* Positioniert den Punkt ganz oben */
   left: 50%; /* Zentriert den Punkt horizontal */
   width: 10px; /* Größe des Punktes */
   height: 10px; /* Größe des Punktes */
@@ -467,10 +465,10 @@ style >
 .vertical-marker::after {
   content: '';
   position: absolute;
-  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  top: 8vw; /* Beginnt direkt unter dem Punkt */
   left: 50%; /* Zentriert den Strich horizontal */
   width: 2px; /* Breite des Striches */
-  height: 50vh; /* Höhe des Striches */
+  height: 25vw; /* Höhe des Striches */
   background-color: black; /* Farbe des Striches */
   transform: translateX(-50%); /* Zentriert den Strich horizontal */
 }
