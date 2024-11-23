@@ -180,12 +180,10 @@ const {data: teamData, pending, error} = await useAsyncData('team', async () => 
   }
 });
 
-// Aktualisiere das `team`-Array, wenn die Daten verfügbar sind
 if (teamData.value) {
   team.value.push(teamData.value);
 }
 
-// Setze dynamisch den Head basierend auf den Team-Daten
 useHead({
   htmlAttrs: {
     lang: 'de'
