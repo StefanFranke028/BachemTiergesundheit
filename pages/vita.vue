@@ -274,7 +274,13 @@ useHead({
   htmlAttrs: {
     lang: 'de' // Setzt die Sprache auf Deutsch
   },
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title:  'Maxi Escort Vita',
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de/vita}`,
+    },
+  ],
   meta: [
     {
       name: 'description',

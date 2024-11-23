@@ -213,7 +213,13 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title: 'Maxi Escort Kontakt' ,
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de/kontakt}`,
+    },
+  ],
   meta: [
     {
       name: 'description',

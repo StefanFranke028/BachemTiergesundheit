@@ -293,12 +293,16 @@ useHead({
   htmlAttrs: {
     lang: 'de' // Setzt die Sprache auf Deutsch
   },
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title: 'Maxi Escort Service',
   link: [
     {
       rel: 'preload',
       href: '/startseite_bg_komprimiert.webp',
       as: 'image',
+    },
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de}`,
     },
   ],
   meta: [

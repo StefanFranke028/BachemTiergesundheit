@@ -190,7 +190,14 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Service',
+  title: 'Maxi Escort Team',
+  link: [
+
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de/team}`,
+    },
+  ],
   meta: [
     {
       name: 'description',

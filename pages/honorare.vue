@@ -399,7 +399,13 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title: 'Maxi Escort honorare',
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de/honorare}`,
+    },
+  ],
   meta: [
     {
       name: 'description',

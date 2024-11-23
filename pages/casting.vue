@@ -166,7 +166,13 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title: 'Maxi Escort Casting' ,
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de/casting}`,
+    },
+  ],
   meta: [
     {
       name: 'description',

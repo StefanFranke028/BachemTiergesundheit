@@ -177,7 +177,13 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://maxi-escort.de/blog}`,
+    },
+  ],
+  title: 'Maxi-Escort Blog',
   meta: [
     {
       name: 'description',
@@ -187,6 +193,7 @@ useHead({
       name: 'keywords',
       content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
     },
+
   ],
 });
 </script>
