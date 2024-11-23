@@ -112,8 +112,8 @@
       </div>
 
     </v-img>
-    <div v-for="dame in damen" :key="dame" style="width: 100vw; height:1600px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
+    <div v-for="dame in damen" :key="dame" style="width: 100vw; " class="pb-8">
+      <v-row class="mx-0 pa-0" style="width: 100%; ">
         <v-col class="pa-0" cols="12">
           <v-carousel style="height: 600px" theme="dark">
             <v-carousel-item
