@@ -53,14 +53,11 @@
   <div v-if="mobile|| tablet" :class="formattedPath" class="mobile">
     <v-row class="justify-center ma-0" style="width: 100%">
       <v-col cols="10">
-        <h1 class="" style="font-size: 15px">ELEGANZ TRIFFT LEIDENSCHAFT </h1>
-        <p style="font-size: 12px">erotisch | leidenschaftlich | hautnah</p>
+        <p class="text-center" style="font-size: 14px">Luxusbegleitung für besondere Momente</p>
         <br>
 
       </v-col>
-      <v-col class="d-flex justify-center" cols="2">
 
-      </v-col>
     </v-row>
     <v-row class="ma-0 " style="width: 100%">
       <v-col v-for="stadt in staedte" :key="stadt" cols="6">

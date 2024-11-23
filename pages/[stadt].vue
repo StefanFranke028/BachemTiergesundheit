@@ -4,16 +4,16 @@
            src="~/assets/Stadt.jpg" style="width: 100%; height: 450px;  ">
       <div class="d-flex justify-center align-center"
            style="height: 450px; width: 100vw; background-color: rgba(0,0,0,0.6); z-index: 9000;">
-        <h1 class="text-white text-center dm-serif">Eleganz trifft Leidenschaft<br> in <br> {{ stadtparam }}</h1>
+        <h1 class="text-white text-center dm-serif">Luxusbegleitung für besondere Momente<br> in <br> {{ stadtparam }}</h1>
 
 
       </div>
     </v-img>
     <div class="d-flex align-center" style="background-color: #f1f0f0; min-height: 750px">
       <v-row class="mx-0 justify-center" style="width: 100%; min-height: 500px">
-        <v-col class="d-flex align-center" cols="12" md="10" style="width: 100%; min-height: 500px">
-          <v-card style="min-height: 300px ; width: 100%">
-            <v-card-title class="text-center"> Eleganz trifft Leidenschaft in {{ stadtparam }}</v-card-title>
+        <v-col class="d-flex align-center py-8" cols="12" md="10" style="width: 100%; min-height: 500px">
+          <v-card  style="min-height: 300px ; width: 100%">
+            <v-card-title class="text-center"> Luxusbegleitung für besondere Momente {{ stadtparam }}</v-card-title>
             <v-divider class="mx-12"></v-divider>
             <v-card-text>
               <h3 class="text-center">
