@@ -102,7 +102,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/kontakt`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/kontakt`, {
           method: 'GET',
         });
 
@@ -156,7 +156,7 @@ export default {
       };
 
       try {
-        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/kontakt`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/kontakt`, {
           method: 'PUT',
           body: data
         });

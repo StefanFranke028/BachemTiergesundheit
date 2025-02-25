@@ -151,7 +151,7 @@ const {data: teamData, pending, error} = await useAsyncData('team', async () => 
   }
 
   try {
-    const response = await $fetch("http://bubbletea-werl.de:8080/auth/team", {
+    const response = await $fetch("http://5.45.97.75:8080/auth/team", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

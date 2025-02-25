@@ -148,7 +148,7 @@ export default {
     async fetchDamen() {
       try {
         // Daten von der API abrufen
-        const response = await $fetch('http://bubbletea-werl.de:8080/auth/dame');
+        const response = await $fetch('http://5.45.97.75:8080/auth/dame');
 
         // Speichere die vollständigen Damen-Objekte in damenList
         this.damenList = response;
@@ -159,7 +159,7 @@ export default {
     async getStaedte() {
       this.loadingTable = true;
       try {
-        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/stadt`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/stadt`, {
           method: 'GET',
         });
 
@@ -213,7 +213,7 @@ export default {
         let response;
 
         if (this.editStadt) {
-          response = await $fetch(`http://bubbletea-werl.de:8080/auth/stadt/${this.editStadt.id}`, {
+          response = await $fetch(`http://5.45.97.75:8080/auth/stadt/${this.editStadt.id}`, {
             method: 'PUT',
             body: data
           });
@@ -227,7 +227,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`http://bubbletea-werl.de:8080/auth/stadt`, {
+          response = await $fetch(`http://5.45.97.75:8080/auth/stadt`, {
             method: 'POST',
             body: data
           });
@@ -269,7 +269,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/stadt/${this.stadtToDelete.id}`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/stadt/${this.stadtToDelete.id}`, {
           method: 'DELETE',
         });
 

@@ -41,7 +41,7 @@
             </v-col>
             <v-col class="px-10 pb-12" cols="12">
               <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{
-                  dame.name
+                dame.name
                 }}</h2>
               <br>
               <br>
@@ -198,7 +198,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://bubbletea-werl.de:8080/auth/escort", {
+    const response = await $fetch("http://5.45.97.75:8080/auth/escort", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -235,7 +235,7 @@ const {data: damen1, pending2, error2} = await useAsyncData('damen', async () =>
   }
 
   try {
-    const response = await $fetch("http://bubbletea-werl.de:8080/auth/dame", {
+    const response = await $fetch("http://5.45.97.75:8080/auth/dame", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

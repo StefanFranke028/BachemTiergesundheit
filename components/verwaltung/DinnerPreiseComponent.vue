@@ -160,7 +160,7 @@ export default {
   methods: {
     async getDinnerPreise() {
       try {
-        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/dinnerpreise`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/dinnerpreise`, {
           method: 'GET',
         });
 
@@ -189,7 +189,7 @@ export default {
 
         if (this.editDinnerPreis) {
           // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`http://bubbletea-werl.de:8080/auth/dinnerpreise/${this.editDinnerPreis.id}`, {
+          response = await $fetch(`http://5.45.97.75:8080/auth/dinnerpreise/${this.editDinnerPreis.id}`, {
             method: 'PUT',
             body: data
           });
@@ -203,7 +203,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`http://bubbletea-werl.de:8080/auth/dinnerpreise`, {
+          response = await $fetch(`http://5.45.97.75:8080/auth/dinnerpreise`, {
             method: 'POST',
             body: data
           });
@@ -243,7 +243,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/dinnerpreise/${this.dinnerPreisToDelete.id}`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/dinnerpreise/${this.dinnerPreisToDelete.id}`, {
           method: 'DELETE',
         });
 

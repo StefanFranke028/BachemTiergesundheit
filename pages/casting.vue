@@ -37,8 +37,10 @@
                       {{ bewerben[0].email }}</a></p>
                   </v-col>
                   <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer; color: #2a2ae4"><a href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" style="text-decoration: none"
-                                                                  target="_blank">#GerneperDu</a>
+                    <p style="cursor: pointer; color: #2a2ae4"><a
+                        href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+                        style="text-decoration: none"
+                        target="_blank">#GerneperDu</a>
                     </p>
                   </v-col>
                   <v-col class="d-flex " cols="12">
@@ -106,8 +108,10 @@
                                                                      v-html="bewerben[0].email"></a></p>
           </v-col>
           <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer; color: #1e1eda"><a href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" style="text-decoration: none"
-                                                          target="_blank">#GerneperDu</a>
+            <p style="cursor: pointer; color: #1e1eda"><a
+                href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+                style="text-decoration: none"
+                target="_blank">#GerneperDu</a>
             </p>
           </v-col>
           <v-col class="d-flex " cols="12">
@@ -148,7 +152,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://bubbletea-werl.de:8080/auth/bewerben", {
+    const response = await $fetch("http://5.45.97.75:8080/auth/bewerben", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

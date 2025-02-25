@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     async getStadt() {
-      let response = await $fetch('http://bubbletea-werl.de:8080/auth/stadt/' + this.stadtparam)
+      let response = await $fetch('http://5.45.97.75:8080/auth/stadt/' + this.stadtparam)
       this.damen = await response.damen
       this.stadt = await response
       console.log(this.damen)
