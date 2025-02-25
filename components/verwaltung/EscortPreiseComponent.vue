@@ -41,7 +41,7 @@
       <v-col class="d-flex justify-center" cols="6" style="overflow-y: scroll">
         <v-row class="ma-0 justify-cener align-center" style="width: 100%; height: 70vh;">
           <v-col cols="12">
-            <h2 class="text-center mr-16 maxiEscortÜberschrift dm-serif">Maxi Escort Date</h2>
+            <h2 class="text-center mr-16 maxiEscortÜberschrift dm-serif">Tabelle 2</h2>
             <br>
             <br>
             <v-row class="ma-0 d-flex justify-end mt-n10" style="; width: 100%; border-radius: 10px">
@@ -187,7 +187,7 @@ export default {
   methods: {
     async getEscortPreise() {
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/escortpreise`, {
           method: 'GET',
         });
 
@@ -235,7 +235,7 @@ export default {
 
         if (this.editEscortPreis) {
           // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise/${this.editEscortPreis.id}`, {
+          response = await $fetch(`http://bubbletea-werl.de:8080/auth/escortpreise/${this.editEscortPreis.id}`, {
             method: 'PUT',
             body: data
           });
@@ -249,7 +249,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise`, {
+          response = await $fetch(`http://bubbletea-werl.de:8080/auth/escortpreise`, {
             method: 'POST',
             body: data
           });
@@ -291,7 +291,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/escortpreise/${this.escortPreiseToDelete.id}`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/escortpreise/${this.escortPreiseToDelete.id}`, {
           method: 'DELETE',
         });
 

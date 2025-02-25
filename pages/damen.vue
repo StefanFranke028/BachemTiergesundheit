@@ -17,72 +17,76 @@
           <v-img alt="Federn" cover max-height="600px" src="~/assets/federn.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="Decke" cover max-height="600px" src="~/assets/decke_1_komprimiert.webp" style="z-index: 0"></v-img>
+          <v-img alt="Decke" cover max-height="600px" src="~/assets/decke_1_komprimiert.webp"
+                 style="z-index: 0"></v-img>
         </v-col>
       </v-row>
     </div>
 
 
+    <div style="width: 100vw; padding-top: 7%">
+      <v-row>
+        <v-col v-for="dame in damen" cols="4">
+          <v-row :key="dame" class="ma-0  mt-5" style="width: 100%; height: 100%">
+            <v-col cols="12">
+              <v-carousel style="height: 700px" theme="dark">
+                <v-carousel-item
+                    v-for="bild in dame.bilder"
+                    :key="bild" :src="bild.imageBase64"
+                    alt="bild der Dame"
+                    cover
+                ></v-carousel-item>
 
-    <div style="width: 100vw; padding-top: 7%" >
-<v-row>
-  <v-col  v-for="dame in damen" cols="4">
-    <v-row  :key="dame"  class="ma-0  mt-5" style="width: 100%; height: 100%">
-      <v-col cols="12"><v-carousel style="height: 700px" theme="dark">
-        <v-carousel-item
-            alt="bild der Dame"
-            v-for="bild in dame.bilder" :key="bild"
-            :src="bild.imageBase64"
-            cover
-        ></v-carousel-item>
-
-      </v-carousel></v-col>
-      <v-col class="px-10 pb-12" cols="12">
-        <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{ dame.name }}</h2>
-        <br>
-        <br>
-        <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
-          <br>
-          <br>
-          <b v-if="dame.motto">Mein Motto:</b> <span  style="font-family: 'Zapfino', Serif">
+              </v-carousel>
+            </v-col>
+            <v-col class="px-10 pb-12" cols="12">
+              <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{
+                  dame.name
+                }}</h2>
+              <br>
+              <br>
+              <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
+                <br>
+                <br>
+                <b v-if="dame.motto">Mein Motto:</b> <span style="font-family: 'Zapfino', Serif">
                   {{ dame.motto }}
                 </span>
-          <br>
-          <br>
-          <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
-          <br>
-          <br>
-          <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
-          <br>
-          <br>
-          <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
-          <br>
-          <br>
-          <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
-          <br>
-          <br>
-          <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
-          <br>
-          <br>
-          <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
-          <br>
-          <br>
-          <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
-          <span v-for="stadt in dame.staedte" :key="stadt">
+                <br>
+                <br>
+                <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
+                <br>
+                <br>
+                <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
+                <br>
+                <br>
+                <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
+                <br>
+                <br>
+                <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
+                <br>
+                <br>
+                <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
+                <br>
+                <br>
+                <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
+                <br>
+                <br>
+                <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
+                <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
-          <br>
-          <br>
-          <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
-          <br>
-          <br>
-          <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
-        </p>
+                <br>
+                <br>
+                <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
+                <br>
+                <br>
+                <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
+              </p>
 
-      </v-col>
-    </v-row>
-  </v-col>
-</v-row>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
 
     </div>
 
@@ -112,21 +116,22 @@
       </div>
 
     </v-img>
-    <div v-for="dame in damen" :key="dame" style="width: 100vw; " class="pb-8">
+    <div v-for="dame in damen" :key="dame" class="pb-8" style="width: 100vw; ">
       <v-row class="mx-0 pa-0" style="width: 100%; ">
         <v-col class="pa-0" cols="12">
           <v-carousel style="height: 600px" theme="dark">
             <v-carousel-item
+                v-for="bild in dame.bilder"
+                :key="bild" :src="bild.imageBase64"
                 alt="Damenbild"
-                v-for="bild in dame.bilder" :key="bild"
-                :src="bild.imageBase64"
                 cover
             ></v-carousel-item>
 
           </v-carousel>
         </v-col>
         <v-col class="mx-auto" cols="11">
-          <h2 class="text-center dm-serif mt-n2" style="font-size: 8vw; font-family: 'Edwardian Script ITC', Serif">{{ dame.name }}</h2>
+          <h2 class="text-center dm-serif mt-n2" style="font-size: 8vw; font-family: 'Edwardian Script ITC', Serif">
+            {{ dame.name }}</h2>
           <br>
           <br>
           <p class="dosis mt-n10" style=" text-align: justify; font-size: 13px">{{ dame.vita }}
@@ -193,7 +198,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/escort", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/escort", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -230,7 +235,7 @@ const {data: damen1, pending2, error2} = await useAsyncData('damen', async () =>
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/dame", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/dame", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -259,11 +264,11 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title:  'Maxi Escort Damen',
+  title: 'Maxi Escort Damen',
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/damen}`,
+      href: `https://maxi-escort.de/damen`,
     },
   ],
   meta: [

@@ -16,7 +16,7 @@
           >
             {{ snackbarText }}
           </v-snackbar>
-          <v-row class="pa-0" style="; overflow-y: scroll">
+          <v-row class="pa-0" style="overflow-y: scroll">
             <v-col cols="6">
               <v-text-field v-model="ueberschrift" label="Überschrift"></v-text-field>
             </v-col>
@@ -34,11 +34,24 @@
               <v-file-input
                   v-model="bild"
                   :label="editedEntry && bild === null ? 'Wählen Sie ein neues Bild aus' : 'Bild auswählen'"
-                  @change="onFileSelected"
+                  @change="onFileSelected($event, 'bild')"
+                  @click:clear="base64Image = null"
               ></v-file-input>
             </v-col>
             <v-col cols="4">
+              <v-file-input
+                  v-model="bild2"
+                  :label="editedEntry && bild === null ? 'Wählen Sie ein neues Bild aus' : 'Bild auswählen'"
+                  @change="onFileSelected($event, 'bild2')"
+                  @click:clear="base64Image2 = null"
+              ></v-file-input>
+            </v-col>
+            <v-col cols="4"></v-col>
+            <v-col cols="4">
               <v-img v-if="base64Image" :src="base64Image" max-width="100%"></v-img>
+            </v-col>
+            <v-col cols="4">
+              <v-img v-if="base64Image2" :src="base64Image2" max-width="100%"></v-img>
             </v-col>
             <v-col :class="editedEntry ? 'justify-end' : 'justify-center'" :cols="editedEntry ? '6' : '12'"
                    class="d-flex">
@@ -57,6 +70,7 @@
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
           <v-data-table-virtual
+              :headers="headers"
               :items="blogEntries"
               :loading="loading"
               :loading-text="loading ? 'Lade Einträge...' : 'Keine Einträge gefunden'"
@@ -69,13 +83,15 @@
                 <td>{{ item.id }}</td>
                 <td>{{ item.ueberschrift }}</td>
                 <td>{{ item.unterUeberschrift }}</td>
-                <td>{{ item.text }}</td>
                 <td>{{ item.autor }}</td>
                 <td>
                   <input v-model="item.datum" disabled readonly style="color: black" type="date">
                 </td>                  <!-- Datum -->
                 <td>
                   <v-img :src="item.bild" max-height="50" max-width="50"></v-img>  <!-- Bild -->
+                </td>
+                <td>
+                  <v-img :src="item.bild2" max-height="50" max-width="50"></v-img>  <!-- Bild -->
                 </td>
                 <td>
                   <v-icon class="mr-2" small @click="editEntry(item)">mdi-pencil</v-icon> <!-- Bearbeiten -->
@@ -134,34 +150,26 @@ export default {
       textarea1: '',
       textarea2: '',
       bild: null,
+      bild2: null,
       base64Image: null,
+      base64Image2: null,
       loading: false,
       snackbar: false,
       snackbarText: null,
       snackbarColor: null,
       dialog: false,
-      blogEntries: [
-        {
-          id: 1,
-          ueberschrift: "Überschrift",
-          unterUeberschrift: "Unterüberschrift",
-          text: "Text",
-          autor: "Autor",
-          datum: "Datum",
-          bild: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-        }
-      ],
+      blogEntries: [],
       editedEntry: null,
       deleteDialog: false,
       headers: [
-        {text: 'Id', value: 'id'},
-        {text: 'Überschrift', value: 'ueberschrift'},
-        {text: 'UnterÜberschrift', value: 'unterUeberschrift'},
-        {text: 'Text', value: 'text'},
-        {text: 'Autor', value: 'autor'},
-        {text: 'Datum', value: 'datum'},
-        {text: 'Bild', value: 'bild'},
-        {text: 'Aktionen', value: 'actions', sortable: false}
+        {title: 'Id', value: 'id'},
+        {title: 'Überschrift', value: 'ueberschrift'},
+        {title: 'UnterÜberschrift', value: 'unterUeberschrift'},
+        {title: 'Autor', value: 'autor'},
+        {title: 'Datum', value: 'datum'},
+        {title: 'Bild', value: 'bild'},
+        {title: 'Bild', value: 'bild2'},
+        {title: 'Aktionen', value: 'actions', sortable: false}
       ],
 
       ueberschrift: null,
@@ -193,7 +201,7 @@ export default {
     async getBlogEintraege() {
       this.loading = true;
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/blog/entries`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/blog/entries`, {
           method: 'GET',
         });
 
@@ -207,6 +215,7 @@ export default {
             autor: entry.autor,
             datum: entry.datum,
             bild: entry.bild,
+            bild2: entry.bild2
           }));
         }
         console.log(this.blogEntries)
@@ -225,6 +234,9 @@ export default {
       this.unterUeberschrift = entry.unterUeberschrift;
       this.text = entry.text;
       this.base64Image = entry.bild;
+      this.base64Image2 = entry.bild2;
+      this.bild = "Bild"
+      this.bild2 = "Bild"
       this.autor = entry.autor;
     },
 
@@ -239,7 +251,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/blog/entries/${this.entryToDelete.id}`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/blog/entries/${this.entryToDelete.id}`, {
           method: 'DELETE',
         });
 
@@ -269,6 +281,7 @@ export default {
         unterUeberschrift: this.unterUeberschrift,
         text: this.text,
         bild: this.base64Image,
+        bild2: this.base64Image2,
         autor: this.autor
       };
 
@@ -277,7 +290,7 @@ export default {
 
         if (this.editedEntry) {
           // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`https://maxi-escort.de:8443/auth/blog/entries/${this.editedEntry.id}`, {
+          response = await $fetch(`http://bubbletea-werl.de:8080/auth/blog/entries/${this.editedEntry.id}`, {
             method: 'PUT',
             body: data
           });
@@ -291,7 +304,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`https://maxi-escort.de:8443/auth/blog/entries`, {
+          response = await $fetch(`http://bubbletea-werl.de:8080/auth/blog/entries`, {
             method: 'POST',
             body: data
           });
@@ -320,12 +333,16 @@ export default {
     },
 
     // Methode zum Auswählen einer Bilddatei und Konvertieren in Base64
-    onFileSelected(event) {
+    onFileSelected(event, target) {
       const file = event.target.files[0];
       if (file) {
         const reader = new FileReader();
         reader.onload = (e) => {
-          this.base64Image = e.target.result;
+          if (target === 'bild') {
+            this.base64Image = e.target.result;
+          } else if (target === 'bild2') {
+            this.base64Image2 = e.target.result;
+          }
         };
         reader.readAsDataURL(file);
       }

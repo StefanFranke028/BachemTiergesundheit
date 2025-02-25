@@ -1,69 +1,79 @@
 <template>
-<div v-if="desktop || tabletHorizontal" style="width: 100vw;" class="mt-3">
-  <div class="card">
-    <div class="cardIn1 px-5">
-      <h1 style=" font-size: 22px " class="dm-serif mt-2 text-center" v-html="kontakt[0].text1"></h1>
+  <div v-if="desktop || tabletHorizontal" class="mt-3" style="width: 100vw;">
+    <div class="card">
+      <div class="cardIn1 px-5">
+        <h1 class="dm-serif mt-2 text-center" style=" font-size: 22px " v-html="kontakt[0].text1"></h1>
 
-      <p class="dosis mt-7" style="margin-bottom: 100px;" v-html="kontakt[0].text2">
+        <p class="dosis mt-7" style="margin-bottom: 100px;" v-html="kontakt[0].text2">
 
-      </p>
+        </p>
+      </div>
+    </div>
+    <div style="width: 100vw; height: 600px">
+      <v-row class="mx-0 pa-0" style="width: 100%;">
+        <v-col class="pa-0" cols="12">
+          <v-img alt="" cover max-height="600px" src="~/assets/kontakt_1_komprimiert.webp" style="z-index: 0"></v-img>
+        </v-col>
+
+      </v-row>
+    </div>
+    <div style="width: 100vw; height: 600px">
+      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
+        <v-col class="pa-0" cols="12" style="background-color: rgba(215,232,215,0.56)">
+          <v-row class="ma-0 mt-10 justify-center align-center" style="width: 100%; height: 100%">
+            <v-col cols="7">
+              <div class="d-flex mt-n16" style="width: 100%; height: 270px;">
+                <v-row class="  ma-0" style="width: 100%; height: 30%">
+                  <v-col class="d-flex " cols="12">
+                    <p style="cursor: pointer">
+                      <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a
+                        :href="'tel:'+kontakt[0].telefon">{{ kontakt[0].telefon }}</a></p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p style="cursor: pointer">
+                      <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email">
+                      {{ kontakt[0].email }}</a></p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p style="cursor: pointer; color: #2c2cda"><a href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" style="text-decoration: none"
+                                                                  target="_blank">#GerneperDu</a>
+                    </p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p class="dosis" style="" v-html="kontakt[0].text3"></p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p class="dosis" style=" " v-html="kontakt[0].text4"></p>
+                  </v-col>
+                </v-row>
+              </div>
+
+            </v-col>
+          </v-row>
+        </v-col>
+
+
+      </v-row>
     </div>
   </div>
-  <div style="width: 100vw; height: 600px">
-    <v-row style="width: 100%;" class="mx-0 pa-0">
-      <v-col class="pa-0" cols="12">
-        <v-img style="z-index: 0" max-height="600px" cover  src="~/assets/kontakt_1_komprimiert.webp"  alt=""></v-img>
-      </v-col>
-
-    </v-row>
-  </div>
-  <div style="width: 100vw; height: 600px">
-    <v-row style="width: 100%; height: 100%" class="mx-0 pa-0">
-      <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0" cols="12">
-        <v-row style="width: 100%; height: 100%" class="ma-0 mt-10 justify-center align-center">
-          <v-col cols="7">
-            <div style="width: 100%; height: 270px;" class="d-flex mt-n16">
-              <v-row style="width: 100%; height: 30%" class="  ma-0">
-                <v-col cols="12" class="d-flex ">
-                  <p style="cursor: pointer" ><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon">{{kontakt[0].telefon}}</a>  </p>
-                </v-col>
-                <v-col cols="12" class="d-flex ">
-                  <p style="cursor: pointer"><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email"> {{kontakt[0].email}}</a>  </p>
-                </v-col>
-                <v-col cols="12" class="d-flex ">
-                  <p  style="cursor: pointer; color: #2c2cda"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
-                </v-col>
-                <v-col cols="12" class="d-flex ">
-                  <p style="" class="dosis" v-html="kontakt[0].text3"></p>
-                </v-col>
-                <v-col cols="12" class="d-flex ">
-                  <p style=" " class="dosis" v-html="kontakt[0].text4"></p>
-                </v-col>
-              </v-row>
-            </div>
-
-          </v-col>
-        </v-row>
-      </v-col>
-
-
-    </v-row>
-  </div>
-</div>
   <div v-if="mobile || tablet">
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 450px;  " src="~/assets/kontakt_1_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
-      <div  style="display: flex; justify-content: center; align-items: center; height: 100%;">
-        <div  class="d-flex justify-center align-center" style="width: 75%; height: 400px;    background-color: #d1e3d3;">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
+           src="~/assets/kontakt_1_komprimiert.webp" style="width: 100%; height: 450px;  ">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div class="d-flex justify-center align-center"
+             style="width: 75%; height: 400px;    background-color: #d1e3d3;">
           <div class="vertical-marker-mobile">
-          </div >
+          </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
-            <div style="position: relative; top:-50px" class="text-center dosis">
-              <h1 style="margin-left: -80px; " class="dm-serif mt-2" v-html="kontakt[0].text1"> </h1>
+            <div class="text-center dosis" style="position: relative; top:-50px">
+              <h1 class="dm-serif mt-2" style="margin-left: -80px; " v-html="kontakt[0].text1"></h1>
             </div>
-            <div style="font-size: 11px; text-align: justify;" class="pa-3 mt-n7 dosis" v-html="kontakt[0].text2">
+            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="kontakt[0].text2">
 
             </div>
-            <router-link  aria-label="Vita" to="vita" >  <v-btn  theme="dark" class="text-center mt-7" >zur Vita</v-btn></router-link>
+            <router-link aria-label="Vita" to="vita">
+              <v-btn class="text-center mt-7" theme="dark">zur Vita</v-btn>
+            </router-link>
           </div>
         </div>
 
@@ -71,23 +81,32 @@
 
     </v-img>
 
-    <v-img  class="d-flex justify-center align-center" cover style="width: 100%; height: 400px;  " src="~/assets/vita_3_komprimiert.webp" alt="schwarz-weis Hintergrundbild" >
-      <div style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) " class="mx-auto pa-4">
-        <v-row style="width: 100%; height: 30%; " class="ma-0">
-          <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer"><Icon icon="ic:baseline-phone" />  &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon" v-html="kontakt[0].telefon"></a>  </p>
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
+           src="~/assets/vita_3_komprimiert.webp" style="width: 100%; height: 400px;  ">
+      <div
+          class="mx-auto pa-4"
+          style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
+        <v-row class="ma-0" style="width: 100%; height: 30%; ">
+          <v-col class="d-flex " cols="12">
+            <p style="cursor: pointer">
+              <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon"
+                                                                  v-html="kontakt[0].telefon"></a></p>
           </v-col>
-          <v-col cols="12" class="d-flex ">
-            <p style="cursor: pointer" ><Icon icon="fluent-mdl2:edit-mail" /> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email" v-html="kontakt[0].email"></a>  </p>
+          <v-col class="d-flex " cols="12">
+            <p style="cursor: pointer">
+              <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email"
+                                                                     v-html="kontakt[0].email"></a></p>
           </v-col>
-          <v-col cols="12" class="d-flex ">
-            <p  style="cursor: pointer; color: #2d2de1"><a style="text-decoration: none" target="_blank" href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">#GerneperDu</a> </p>
+          <v-col class="d-flex " cols="12">
+            <p style="cursor: pointer; color: #2d2de1"><a href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" style="text-decoration: none"
+                                                          target="_blank">#GerneperDu</a>
+            </p>
           </v-col>
-          <v-col cols="12" class="d-flex mt-n3 ">
-            <p style="font-size: 12px" class="dosis" v-html="kontakt[0].text3"></p>
+          <v-col class="d-flex mt-n3 " cols="12">
+            <p class="dosis" style="font-size: 12px" v-html="kontakt[0].text3"></p>
           </v-col>
-          <v-col cols="12" class="d-flex mt-n7 ">
-            <p style=" font-size: 12px" class="dosis" v-html="kontakt[0].text4"></p>
+          <v-col class="d-flex mt-n7 " cols="12">
+            <p class="dosis" style=" font-size: 12px" v-html="kontakt[0].text4"></p>
           </v-col>
         </v-row>
       </div>
@@ -97,18 +116,18 @@
   </div>
 </template>
 
-<script >
-import { Icon } from '@iconify/vue';
+<script>
+import {Icon} from '@iconify/vue';
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
   name: "kontakt",
-  components:{
+  components: {
     Icon
   },
-  data(){
-    return{
-      kontakt:[{
+  data() {
+    return {
+      kontakt: [{
         text1: 'Bewirb dich bei uns',
         text2: 'Hey... wie schön, dass du hier bist! Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit, Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über die folgenden Wege:',
         text3: 'Ich freue mich darauf, euch kennenzulernen und euch ein unvergessliches Erlebnis ermöglichen zu können.',
@@ -122,12 +141,8 @@ export default {
 
   },
 
-  methods:{
-
-
-
-  },
-  computed:{
+  methods: {},
+  computed: {
     wide() {
       const screenStore = useScreenStore();
       return screenStore.wide;
@@ -154,13 +169,13 @@ export default {
 
 <script setup>
 import FooterComponent from "~/components/FooterComponent.vue";
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const kontakt = ref([]);
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
-const { data: landingpage1, pending, error } = await useAsyncData('landingpage', async () => {
+const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
   let token = null;
 
   if (process.client) {
@@ -169,7 +184,7 @@ const { data: landingpage1, pending, error } = await useAsyncData('landingpage',
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/kontakt", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/kontakt", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -208,7 +223,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Kontakt' ,
+  title: 'Maxi Escort Kontakt',
   link: [
     {
       rel: 'canonical',
@@ -232,7 +247,7 @@ useHead({
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
 
-.cardIn1{
+.cardIn1 {
   height: 400px;
   width: 400px;
   background-color: white;
@@ -241,15 +256,16 @@ useHead({
   top: 10%;
 }
 
-h1{
+h1 {
   font-size: 3vw;
 }
+
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
   height: 100px; /* Gesamthöhe des Elements */
   width: 10px; /* Breite des Elements, schmal genug für einen Punkt und Strich */
   margin: 20px; /* Optional: Abstand von anderen Elementen */
-  left:-80px;
+  left: -80px;
   top: -20vh
 }
 
@@ -276,7 +292,7 @@ h1{
   transform: translateX(-50%); /* Zentriert den Strich horizontal */
 }
 
-.card{
+.card {
   z-index: 300;
   height: 650px;
   width: 80vw;
@@ -286,12 +302,14 @@ h1{
   left: 50%;
   transform: translateX(-50%);
 }
+
 .dm-serif {
   font-family: "Engravers MT", serif;
   font-weight: 400;
   font-style: normal;
 }
-.dosis{
+
+.dosis {
   font-family: "Apple Chancery", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -299,7 +317,8 @@ h1{
   letter-spacing: 0.10em;
   line-height: 1.3;
 }
-p{
+
+p {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;

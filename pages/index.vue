@@ -253,7 +253,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/landingpage", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/landingpage", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -453,7 +453,7 @@ style >
 .vertical-marker::before {
   content: '';
   position: absolute;
-  top:8vw; /* Positioniert den Punkt ganz oben */
+  top: 8vw; /* Positioniert den Punkt ganz oben */
   left: 50%; /* Zentriert den Punkt horizontal */
   width: 10px; /* Größe des Punktes */
   height: 10px; /* Größe des Punktes */

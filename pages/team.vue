@@ -2,7 +2,7 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h1  class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="team[0].text1"></h1>
+        <h1 class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="team[0].text1"></h1>
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="team[0].text2">
@@ -23,8 +23,8 @@
     </div>
     <div style="width: 100vw; height: 900px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
-        <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 d-flex align-center" cols="6">
-          <v-img   max-height="500" src="~/assets/team_1_komprimiert.webp" style="z-index: 0;"></v-img>
+        <v-col class="pa-0 d-flex align-center" cols="6" style="background-color: rgba(215,232,215,0.56)">
+          <v-img max-height="500" src="~/assets/team_1_komprimiert.webp" style="z-index: 0;"></v-img>
         </v-col>
         <v-col class="pa-0 pl-16" cols="6" style="background-color: rgba(215,232,215,0.56)">
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
@@ -45,10 +45,10 @@
         </v-col>
       </v-row>
     </div>
-    <div style="width: 100vw; height: 900px" >
+    <div style="width: 100vw; height: 900px">
       <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
-        <v-col style="background-color: rgba(215,232,215,0.56)" class="pa-0 d-flex align-center" cols="6">
-          <v-img alt=""  max-height="500" src="~/assets/team_2_komprimiert.webp" style="z-index: 0; "></v-img>
+        <v-col class="pa-0 d-flex align-center" cols="6" style="background-color: rgba(215,232,215,0.56)">
+          <v-img alt="" max-height="500" src="~/assets/team_2_komprimiert.webp" style="z-index: 0; "></v-img>
         </v-col>
         <v-col class="pa-0 pl-16" cols="6" style="background-color: rgba(215,232,215,0.56)">
           <v-row class="ma-0 mt-16" style="width: 100%; height: 100%">
@@ -82,7 +82,7 @@
               <h1 class="dm-serif mt-2" style="margin-left: -90px; " v-html="team[0].text1">
               </h1>
             </div>
-            <div class="pa-3 mt-n11 dosis" style="font-size: 11px; text-align: justify;"  v-html="team[0].text2">
+            <div class="pa-3 mt-n11 dosis" style="font-size: 11px; text-align: justify;" v-html="team[0].text2">
 
 
             </div>
@@ -107,7 +107,7 @@
            src="~/assets/team_1_komprimiert.webp" style="width: 100%;   ">
       <div class="mx-auto pa-4"
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h2 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text3" ></h2>
+        <h2 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text3"></h2>
 
         <p class="dosis mt-2" style=" text-align: justify; font-size: 12px" v-html="team[0].text4">
 
@@ -151,7 +151,7 @@ const {data: teamData, pending, error} = await useAsyncData('team', async () => 
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/team", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/team", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

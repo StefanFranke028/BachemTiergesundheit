@@ -87,7 +87,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/blog`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/blog`, {
           method: 'GET',
         });
 
@@ -133,7 +133,7 @@ export default {
       };
 
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/blog`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/blog`, {
           method: 'PUT',
           body: data
         });

@@ -106,7 +106,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage1', 
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/stadt/namen", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/stadt/namen", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -241,9 +241,10 @@ export default {
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 
 }
-.team{
 
-  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
+.team {
+
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 
 }
 

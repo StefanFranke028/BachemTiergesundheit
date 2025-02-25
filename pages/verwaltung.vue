@@ -71,8 +71,8 @@
 
               <!-- Weitere Optionen basierend auf selectedItem -->
               <BlogEintraegeComponent v-if="selectedItem === 'Blog-Einträge'"/>
-              <EscortPreiseComponent v-if="selectedItem === 'Escort Preise'"/>
-              <DinnerPreiseComponent v-if="selectedItem === 'Dinner Preise'"/>
+              <DinnerPreiseComponent v-if="selectedItem === 'Honorare Tabelle 1'"/>
+              <EscortPreiseComponent v-if="selectedItem === 'Honorare Tabelle 2'"/>
               <DamenComponent v-if="selectedItem === 'Damen'"/>
               <StadtComponent v-if="selectedItem === 'Stadt'"/>
             </v-card>
@@ -144,7 +144,7 @@ export default {
   data() {
     return {
       seiten: ['Startseite', 'Team', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
-      items: ['Blog-Einträge', 'Escort Preise', 'Dinner Preise', 'Damen', 'Stadt'],
+      items: ['Blog-Einträge', 'Honorare Tabelle 1', 'Honorare Tabelle 2', 'Damen', 'Stadt'],
       selectedSeite: null,
       selectedItem: null,
       isLoading: true // Initialisiere isLoading als true
@@ -207,7 +207,7 @@ export default {
         console.log(token)
       }
       try {
-        let response = await $fetch("https://maxi-escort.de:8443/auth/user", {
+        let response = await $fetch("http://bubbletea-werl.de:8080/auth/user", {
           method: 'GET',
           headers: {
             Authorization: token ? `Bearer ${token}` : undefined

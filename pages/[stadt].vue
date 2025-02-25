@@ -4,7 +4,8 @@
            src="~/assets/Stadt.jpg" style="width: 100%; height: 450px;  ">
       <div class="d-flex justify-center align-center"
            style="height: 450px; width: 100vw; background-color: rgba(0,0,0,0.6); z-index: 9000;">
-        <h1 class="text-white text-center dm-serif">Luxusbegleitung für besondere Momente<br> in <br> {{ stadtparam }}</h1>
+        <h1 class="text-white text-center dm-serif">Luxusbegleitung für besondere Momente<br> in <br> {{ stadtparam }}
+        </h1>
 
 
       </div>
@@ -12,7 +13,7 @@
     <div class="d-flex align-center" style="background-color: #f1f0f0; min-height: 750px">
       <v-row class="mx-0 justify-center" style="width: 100%; min-height: 500px">
         <v-col class="d-flex align-center py-8" cols="12" md="10" style="width: 100%; min-height: 500px">
-          <v-card  style="min-height: 300px ; width: 100%">
+          <v-card style="min-height: 300px ; width: 100%">
             <v-card-title class="text-center"> Luxusbegleitung für besondere Momente {{ stadtparam }}</v-card-title>
             <v-divider class="mx-12"></v-divider>
             <v-card-text>
@@ -49,7 +50,7 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
+import {useRoute} from 'vue-router';
 
 const route = useRoute();
 const city = route.params.stadt || '';
@@ -61,11 +62,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content:'maxi-escort in '+ city.slice(11),
+      content: 'maxi-escort in ' + city.slice(11),
     },
     {
       name: 'keywords',
-      content:'Escort '+ city.slice(11),
+      content: 'Escort ' + city.slice(11),
     },
   ],
   title: `Maxi Escort in ${city.slice(11)}`,
@@ -92,7 +93,7 @@ export default {
   },
   methods: {
     async getStadt() {
-      let response = await $fetch('https://maxi-escort.de:8443/auth/stadt/' + this.stadtparam)
+      let response = await $fetch('http://bubbletea-werl.de:8080/auth/stadt/' + this.stadtparam)
       this.damen = await response.damen
       this.stadt = await response
       console.log(this.damen)

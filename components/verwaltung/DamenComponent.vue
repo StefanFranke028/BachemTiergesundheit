@@ -257,7 +257,7 @@ export default {
     async getDamen() {
       this.loading = true;
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/dame`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/dame`, {
           method: 'GET',
         });
 
@@ -312,7 +312,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/dame/${this.dameToDelete.id}`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/dame/${this.dameToDelete.id}`, {
           method: 'DELETE',
         });
 
@@ -359,7 +359,7 @@ export default {
         let response;
         if (this.tempEditedDame) {
           // Bearbeiten einer bestehenden Dame
-          response = await $fetch(`https://maxi-escort.de:8443/auth/dame/${this.tempEditedDame.id}`, {
+          response = await $fetch(`http://bubbletea-werl.de:8080/auth/dame/${this.tempEditedDame.id}`, {
             method: 'PUT',
             body: data,
           });
@@ -375,7 +375,7 @@ export default {
         } else {
           console.log("edit dame")
           // Erstellen einer neuen Dame
-          response = await $fetch(`https://maxi-escort.de:8443/auth/dame`, {
+          response = await $fetch(`http://bubbletea-werl.de:8080/auth/dame`, {
             method: 'POST',
             body: data,
           });

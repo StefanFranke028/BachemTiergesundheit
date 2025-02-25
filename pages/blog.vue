@@ -1,6 +1,7 @@
 <template>
   <div v-if="desktop|| tabletHorizontal">
-    <v-img alt="schwarz-weis Hintergrundbild" src="~/assets/bg_komprimiert.webp"   cover  style="width: 100vw; height: 500px;"/>
+    <v-img alt="schwarz-weis Hintergrundbild" cover src="~/assets/bg_komprimiert.webp"
+           style="width: 100vw; height: 500px;"/>
     <div class="card">
       <div class="cardIn1">
         <div class="text-center text2 dosis" v-html="blog[0].text2">
@@ -29,17 +30,18 @@
              style="width: 100%; height: 100%; min-height: 500px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
           <v-row class="ma-0" style="width: 100%; height: 100%;">
-            <v-col cols="6" class="d-flex align-center">
+            <v-col class="d-flex align-center" cols="6">
               <v-img :src="blog.bild" alt="" cover max-height="700" style="z-index: 0;"></v-img>
             </v-col>
             <v-col class="pa-12" cols="6">
               <h2 class="text-center mt-4 dm-serif" style="font-size: 1.1vw">{{ blog.ueberschrift }}</h2>
               <h3 class="text-center dm-serif" style="
-              color: #4a4949; font-size: 0.9vw" >{{ blog.unterUeberschrift }}</h3>
+              color: #4a4949; font-size: 0.9vw">{{ blog.unterUeberschrift }}</h3>
               <br><br>
               <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
               <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
-              <input aria-label="test" v-model="blog.datum" class="mt-10" disabled readonly style="color: #8e8c8c" type="date"/>
+              <input v-model="blog.datum" aria-label="test" class="mt-10" disabled readonly style="color: #8e8c8c"
+                     type="date"/>
             </v-col>
           </v-row>
         </v-col>
@@ -49,11 +51,11 @@
 
   </div>
   <div v-if="mobile || tablet">
-    <v-img   alt="Schwarz-Weiß-Hintergrundbild"
-             class="d-flex justify-center align-center"
-             src="~/assets/bg_komprimiert.webp"
-             aspect-ratio="1.78"
-             style="width: 100%; height: auto; object-fit: contain;">
+    <v-img alt="Schwarz-Weiß-Hintergrundbild"
+           aspect-ratio="1.78"
+           class="d-flex justify-center align-center"
+           src="~/assets/bg_komprimiert.webp"
+           style="width: 100%; height: auto; object-fit: contain;">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div class="d-flex justify-center align-center"
              style="width: 75%; height: 400px;    background-color: #c7dee6;">
@@ -75,9 +77,9 @@
 
     </v-img>
 
-    <v-img v-for="(blog, index) in blogs" :key="blog" alt="schwarz-weis Hintergrundbild"
-           class="d-flex justify-center align-center"
-           cover :src="blog.bild" style="width: 100%; padding-top: 20px  ">
+    <v-img v-for="(blog, index) in blogs" :key="blog" :src="blog.bild"
+           alt="schwarz-weis Hintergrundbild"
+           class="d-flex justify-center align-center" cover style="width: 100%; padding-top: 20px  ">
 
       <v-row class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
@@ -89,7 +91,8 @@
               <br><br>
               <p class="dosis" style="text-align: justify; font-size: 11px">{{ blog.text }}</p>
               <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
-              <input aria-label="test" v-model="blog.datum" class="mt-10" disabled readonly style="color: #4a4949" type="date"/></v-col>
+              <input v-model="blog.datum" aria-label="test" class="mt-10" disabled readonly style="color: #4a4949"
+                     type="date"/></v-col>
           </v-row>
         </v-col>
       </v-row>
@@ -115,7 +118,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/blog", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/blog", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -152,7 +155,7 @@ const {data: blogs1, pending1, error2} = await useAsyncData('blog', async () => 
   }
 
   try {
-    const response = await $fetch("https://maxi-escort.de:8443/auth/blog/entries", {
+    const response = await $fetch("http://bubbletea-werl.de:8080/auth/blog/entries", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -315,7 +318,6 @@ p {
   font-style: normal;
   line-height: 1.3;
 }
-
 
 
 .cardIn1 {

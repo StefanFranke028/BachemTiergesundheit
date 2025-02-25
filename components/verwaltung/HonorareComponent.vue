@@ -21,6 +21,12 @@
       <v-col cols="6">
         <v-textarea v-model="textarea2" auto-grow label="Textarea 2"></v-textarea>
       </v-col>
+      <v-col cols="6">
+        <v-text-field v-model="tabelle1" label="Tabelle 1"></v-text-field>
+      </v-col>
+      <v-col cols="6">
+        <v-text-field v-model="tabelle2" label="Tabelle 2"></v-text-field>
+      </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
       </v-col>
@@ -72,6 +78,8 @@ export default {
       base64Image: null,
       textarea1: '',
       textarea2: '',
+      tabelle1: '',
+      tabelle2: '',
 
       loading: false,
       snackbar: false,
@@ -105,7 +113,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/honorare`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/honorare`, {
           method: 'GET',
         });
 
@@ -115,8 +123,10 @@ export default {
           this.keywords = response.keywords
           this.textarea1 = this.unformattedText(response.text1);
           this.textarea2 = this.unformattedText(response.text2);
+          this.tabelle1 = response.tabelle1;
+          this.tabelle2 = response.tabelle2;
           this.base64Image = response.bild;
-
+          console.log(response)
 
         }
       } catch (e) {
@@ -150,10 +160,12 @@ export default {
         text1: this.formattedText(this.textarea1),
         text2: this.formattedText(this.textarea2),
         bild: this.base64Image,
+        tabelle1: this.tabelle1,
+        tabelle2: this.tabelle2,
       };
 
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/honorare`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/honorare`, {
           method: 'PUT',
           body: data
         });

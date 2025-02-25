@@ -26,10 +26,20 @@
         <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-text-field v-model="email" label="Email" type="email"></v-text-field>
+        <v-row style="width: 100%">
+          <v-col class="pa-0" cols="12">
+            <v-text-field v-model="email" label="Email" type="email"></v-text-field>
+          </v-col>
+          <v-col class="pa-0" cols="12">
+            <v-text-field v-model="tel" label="Telefonnummer" type="tel"></v-text-field>
+          </v-col>
+        </v-row>
       </v-col>
       <v-col cols="6">
-        <v-text-field v-model="tel" label="Telefonnummer" type="tel"></v-text-field>
+        <v-textarea v-model="textarea4" auto-grow label="Textarea 4"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea5" auto-grow label="Textarea 5"></v-textarea>
       </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
@@ -81,6 +91,8 @@ export default {
       textarea1: '',
       textarea2: '',
       textarea3: '',
+      textarea4: '',
+      textarea5: '',
       email: null,
       tel: null,
 
@@ -98,7 +110,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/bewerben`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/bewerben`, {
           method: 'GET',
         });
 
@@ -109,6 +121,8 @@ export default {
           this.textarea1 = this.unformattedText(response.text1);
           this.textarea2 = this.unformattedText(response.text2);
           this.textarea3 = this.unformattedText(response.text3);
+          this.textarea4 = this.unformattedText(response.text4);
+          this.textarea5 = this.unformattedText(response.text5);
           this.email = response.email;
           this.tel = response.telefon;
 
@@ -144,13 +158,15 @@ export default {
         text1: this.formattedText(this.textarea1),
         text2: this.formattedText(this.textarea2),
         text3: this.formattedText(this.textarea3),
+        text4: this.formattedText(this.textarea4),
+        text5: this.formattedText(this.textarea5),
         email: this.email,
         telefon: this.tel
 
       };
 
       try {
-        let response = await $fetch(`https://maxi-escort.de:8443/auth/bewerben`, {
+        let response = await $fetch(`http://bubbletea-werl.de:8080/auth/bewerben`, {
           method: 'PUT',
           body: data
         });
