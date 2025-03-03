@@ -3,9 +3,7 @@
     <div class="card">
       <div class="cardIn1 px-5">
         <h1 class="dm-serif mt-2 text-center" style="font-size: 22px" v-html="bewerben[0].text1"></h1>
-
         <p class="dosis mt-7" style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
-
         </p>
       </div>
     </div>
@@ -522,13 +520,13 @@ h1 {
 }
 
 .dm-serif {
-  font-family: "Engravers MT", serif;
+  font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .dosis {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -537,7 +535,7 @@ h1 {
 }
 
 p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -545,7 +543,7 @@ p {
 }
 
 .dosis1 {
-  font-family: "Dosis", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;

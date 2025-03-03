@@ -338,7 +338,7 @@ useHead({
 }
 
 .dosis {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -347,7 +347,7 @@ useHead({
 }
 
 p {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;

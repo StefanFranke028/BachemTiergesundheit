@@ -137,7 +137,7 @@ export default {
 </script>
 <style scoped>
 .dm-serif {
-  font-family: "DM Serif Text", serif;
+  font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;
 }

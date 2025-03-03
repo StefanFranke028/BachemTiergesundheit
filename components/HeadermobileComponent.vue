@@ -30,12 +30,12 @@
 
 <v-row style="width: 100%; height: 100%" class="ma-0 px-2">
   <v-col cols="4" style="height: 100%" class="d-flex align-center">
-    <v-img class="mb-n4" @click="navigateTo('/')" style="height: 80px; width: 80px; cursor: pointer" src="~/assets/logo.png"  alt=""></v-img>
+    <v-img class="" @click="navigateTo('/')" style="height: 80px; width: 80px; cursor: pointer" src="~/assets/LogoNew.svg"  alt=""></v-img>
   </v-col>
-  <v-col cols="4" class="d-flex align-center ">
+  <v-col cols="5" class="d-flex align-center ">
     <div style="cursor: pointer">
       <span style="font-size: 16px; color: #4e4e4e; ">
-          MAXI
+          Mila - &nbsp;
         <b class="ml-n1" style="color: black">
         ESCORT
         </b>
@@ -43,7 +43,7 @@
     </div>
 
   </v-col>
-  <v-col cols="4" style="height: 100%" class="d-flex justify-end align-center">
+  <v-col cols="3" style="height: 100%" class="d-flex justify-end align-center">
     <Icon @click.stop="drawer = !drawer" style="font-size: 30px" aria-label="Menü öffnen" icon="pajamas:hamburger" />
   </v-col>
 </v-row>

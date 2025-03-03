@@ -74,13 +74,13 @@ export default {
 
 <style>
 @font-face {
-  font-family: "Apple Chancery";
-  src: url("assets/fonts/Apple_Chancery.ttf") format("truetype");
+  font-family: "Aptos";
+  src: url("assets/fonts/Aptos.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 body {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
 }
 .vertical-marker-mobile {
   position: relative;

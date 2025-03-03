@@ -31,7 +31,8 @@
                   </v-col>
                   <v-col class="d-flex " cols="12">
                     <p style="cursor: pointer">
-                      <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email">
+                      <Icon icon="fluent-mdl2:edit-mail"/>
+                      &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email">
                       {{ kontakt[0].email }}</a></p>
                   </v-col>
                   <v-col class="d-flex " cols="12">
@@ -308,13 +309,13 @@ h1 {
 }
 
 .dm-serif {
-  font-family: "Engravers MT", serif;
+  font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .dosis {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -323,7 +324,7 @@ h1 {
 }
 
 p {
-  font-family: "Dosis", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;

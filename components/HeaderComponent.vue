@@ -14,23 +14,23 @@
     </v-col>
     <v-col cols="8" class="pa-0 d-flex justify-center align-center">
       <v-row class="d-flex justify-center">
-        <v-col class="d-flex justify-center" cols="1">
-          <span  @click="navigateTo('vita')">VITA</span>
+        <v-col class="d-flex justify-center" cols="2">
+          <span  @click="navigateTo('vita')">Unsere Vita</span>
+        </v-col>
+        <v-col class="d-flex justify-center" cols="2">
+          <span  @click="navigateTo('team')">Team</span>
+        </v-col>
+        <v-col class="d-flex justify-center" cols="2">
+          <span  @click="navigateTo('damen')">High-Class Begleitungen</span>
         </v-col>
         <v-col class="d-flex justify-center" cols="1">
-          <span  @click="navigateTo('team')">TEAM</span>
+          <span  @click="navigateTo('bewerben')">Preview</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="1">
-          <span  @click="navigateTo('damen')">ESCORT</span>
+        <v-col class="d-flex justify-center" cols="2">
+          <span @click="navigateTo('kontakt')">Get in Touch</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="1">
-          <span  @click="navigateTo('bewerben')">CASTING</span>
-        </v-col>
-        <v-col class="d-flex justify-center" cols="1">
-          <span @click="navigateTo('kontakt')">KONTAKT</span>
-        </v-col>
-        <v-col class="d-flex justify-center" cols="1">
-          <span @click="navigateTo('honorare')">HONORARE</span>
+        <v-col class="d-flex justify-center" cols="2">
+          <span @click="navigateTo('honorare')">Konditionen</span>
         </v-col>
         <v-col class="d-flex justify-center" cols="1">
           <span @click="navigateTo('blog')">BLOG</span>
@@ -39,7 +39,7 @@
 
     </v-col>
     <v-col cols="2" class="pa-0 d-flex justify-center align-center">
-      <v-img class="mb-n4" @click="navigateTo('/')" style="height: 130px; width: 130px; cursor: pointer" src="~/assets/logo.png"  alt=""></v-img>
+      <v-img class="" @click="navigateTo('/')" style="height: 130px; width: 130px; cursor: pointer" src="~/assets/LogoNew.Svg"  alt=""></v-img>
     </v-col>
   </v-row>
 </div>

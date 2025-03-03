@@ -4,7 +4,7 @@
       <v-col class="d-flex justify-center" cols="4">
         <div style="cursor: pointer">
             <span style="font-size: 22px; color: #4e4e4e; ">
-                MAXI
+                MILA
                   <b class="ml-n1" style="color: black">
                 ESCORT
               </b>
@@ -15,16 +15,116 @@
     </v-row>
     <v-divider></v-divider>
     <v-row class="ma-0 justify-center" style="width: 100%">
-      <v-col class="d-flex justify-center" cols="8">
-        <v-row class="ma-0 pa-16" style="width: 100%">
-          <v-col v-for="stadt in staedte" :key="stadt" class="" cols="3">
+      <v-col cols="3">
+        <p>
+          <b>
+          Get in Touch:
+
+          </b>
+
+        </p>
+        <p>
+        Fon: +49 151- 670 376 96
+
+        </p>
+        <p>
+          E-Mail:
+        </p>
+        <p class="mt-2">
+          <b>
+
+          Office Zeiten:
+          </b>
+
+        </p>
+        <p>
+          Montag-Freitag von 10:00 bis 18.00 Uhr
+
+        </p>
+          <p>
+            Bitte beachte: An Sonn- und Feiertagen haben wir geschlossen.
+
+          </p>
+        <p class="mt-2">
+        Wir freuen uns darauf, dich an Werktagen wiederzusehen!
+
+        </p>
+<p>
+        Für Buchungsanfragen bitten wir um eine Kontaktaufnahme ausschließlich per E-Mail.
+
+</p>
+
+      </v-col>
+      <v-col cols="3">
+        <p class="text-center">
+          <b>
+            MILA ESCORT SERVICE
+          </b>
+        </p>
+        <p @click="navigateTo('blog')" class="text-center mt-2">
+
+        Magazin
+        </p>
+        <p class="text-center mt-2">
+        <a href="">Mila's Escort Philosophie</a>
+
+        </p>
+        <p class="text-center mt-2">
+        <a href="">Feminine Finesse</a>
+
+        </p>
+        <p class="text-center mt-2">
+          Anbieterkennzeichnung
+
+        </p>
+        <p class="text-center mt-2">
+          Vertragsbedingungen
+
+        </p>
+        <p class="text-center mt-2">
+          Ihre Privatsphäre
+
+        </p>
+
+      </v-col>
+      <v-col cols="3">
+        <p>
+          <b>
+            Preview& High-Class Escort Service Jobs:
+          </b>
+        </p>
+        <p class="mt-2" @click="navigateTo('bewerben')">
+
+          Entdecke spannende Karrieremöglichkeiten.
+        </p>
+        <p class="mt-2">
+          Dein Weg zu einer erfolgreichen Escort Karriere
+
+        </p>
+        <p class="mt-2" @click="navigateTo('bewerben')">
+          Werde ein Teil unseres exklusiven Escort Agency Teams
+
+        </p>
+        <p class="mt-2">
+          Antworten auf häufige Fragen für neue Escort Talente
+
+        </p>
+      </v-col>
+      <v-col class=" " cols="3">
+            <p class="text-center">
+              <b>
+                Escort Service Metropolen:
+
+              </b>
+            </p>
+        <v-row class="ma-0 " style="width: 100%">
+          <v-col v-for="stadt in staedte" :key="stadt" class="pa-0 d-flex justify-center" cols="6">
             <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
-              <p style="cursor:pointer">
+              <p class=" mt-1" style="cursor:pointer">
                 {{ stadt.name }}
               </p>
 
             </nuxt-link>
-            <v-divider></v-divider>
           </v-col>
         </v-row>
 
@@ -247,7 +347,10 @@ export default {
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 
 }
-
+p{
+  font-size: 13px;
+  cursor: pointer;
+}
 .mobile {
   width: 100%;
   height: 110px;

@@ -331,13 +331,13 @@ h1 {
 }
 
 .dm-serif {
-  font-family: "Engravers MT", serif;
+  font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .dosis {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -346,7 +346,7 @@ h1 {
 }
 
 p {
-  font-family: "Apple Chancery", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
