@@ -251,7 +251,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://bubbletea-werl.de:8080/auth/vita", {
+    const response = await $fetch("http://5.45.97.75:8080/auth/vita", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

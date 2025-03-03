@@ -22,11 +22,22 @@
         <v-textarea v-model="textarea2" auto-grow label="Textarea 2"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-text-field v-model="tabelle1" label="Tabelle 1"></v-text-field>
+        <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-text-field v-model="tabelle2" label="Tabelle 2"></v-text-field>
+        <v-row>
+          <v-col class="pa-0" cols="12">
+            <v-text-field v-model="tabelle1" label="Tabelle 1"></v-text-field>
+
+          </v-col>
+          <v-col class="pa-0" cols="12">
+            <v-text-field v-model="tabelle2" label="Tabelle 2"></v-text-field>
+
+          </v-col>
+        </v-row>
       </v-col>
+
+
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
       </v-col>
@@ -78,6 +89,7 @@ export default {
       base64Image: null,
       textarea1: '',
       textarea2: '',
+      textarea3: '',
       tabelle1: '',
       tabelle2: '',
 
@@ -123,6 +135,7 @@ export default {
           this.keywords = response.keywords
           this.textarea1 = this.unformattedText(response.text1);
           this.textarea2 = this.unformattedText(response.text2);
+          this.textarea3 = this.unformattedText(response.text3);
           this.tabelle1 = response.tabelle1;
           this.tabelle2 = response.tabelle2;
           this.base64Image = response.bild;
@@ -159,6 +172,7 @@ export default {
         keywords: this.keywords,
         text1: this.formattedText(this.textarea1),
         text2: this.formattedText(this.textarea2),
+        text3: this.formattedText(this.textarea3),
         bild: this.base64Image,
         tabelle1: this.tabelle1,
         tabelle2: this.tabelle2,

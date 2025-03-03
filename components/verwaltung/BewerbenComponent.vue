@@ -26,20 +26,37 @@
         <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-row style="width: 100%">
-          <v-col class="pa-0" cols="12">
-            <v-text-field v-model="email" label="Email" type="email"></v-text-field>
-          </v-col>
-          <v-col class="pa-0" cols="12">
-            <v-text-field v-model="tel" label="Telefonnummer" type="tel"></v-text-field>
-          </v-col>
-        </v-row>
+        <v-textarea v-model="textarea4" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea4" auto-grow label="Textarea 4"></v-textarea>
+        <v-textarea v-model="textarea5" auto-grow label="Textarea 3"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea5" auto-grow label="Textarea 5"></v-textarea>
+        <v-textarea v-model="textarea6" auto-grow label="Textarea 6"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea7" auto-grow label="Textarea 7"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea8" auto-grow label="Textarea 8"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea9" auto-grow label="Textarea 9"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea10" auto-grow label="Textarea 10"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea11" auto-grow label="Textarea 11"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-textarea v-model="textarea12" auto-grow label="Textarea 12"></v-textarea>
+      </v-col>
+      <v-col cols="6">
+        <v-text-field v-model="email" label="Email" type="email"></v-text-field>
+      </v-col>
+      <v-col cols="6">
+        <v-text-field v-model="tel" label="Telefonnummer" type="tel"></v-text-field>
       </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
@@ -93,6 +110,13 @@ export default {
       textarea3: '',
       textarea4: '',
       textarea5: '',
+      textarea6: '',
+      textarea7: '',
+      textarea8: '',
+      textarea9: '',
+      textarea10: '',
+      textarea11: '',
+      textarea12: '',
       email: null,
       tel: null,
 
@@ -123,6 +147,13 @@ export default {
           this.textarea3 = this.unformattedText(response.text3);
           this.textarea4 = this.unformattedText(response.text4);
           this.textarea5 = this.unformattedText(response.text5);
+          this.textarea6 = this.unformattedText(response.text6);
+          this.textarea7 = this.unformattedText(response.text7);
+          this.textarea8 = this.unformattedText(response.text8);
+          this.textarea9 = this.unformattedText(response.text9);
+          this.textarea10 = this.unformattedText(response.text10);
+          this.textarea11 = this.unformattedText(response.text11);
+          this.textarea12 = this.unformattedText(response.text12);
           this.email = response.email;
           this.tel = response.telefon;
 
@@ -160,6 +191,13 @@ export default {
         text3: this.formattedText(this.textarea3),
         text4: this.formattedText(this.textarea4),
         text5: this.formattedText(this.textarea5),
+        text6: this.formattedText(this.textarea6),
+        text7: this.formattedText(this.textarea7),
+        text8: this.formattedText(this.textarea8),
+        text9: this.formattedText(this.textarea9),
+        text10: this.formattedText(this.textarea10),
+        text11: this.formattedText(this.textarea11),
+        text12: this.formattedText(this.textarea12),
         email: this.email,
         telefon: this.tel
 
