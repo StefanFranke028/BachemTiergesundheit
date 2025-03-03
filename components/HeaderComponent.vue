@@ -37,7 +37,7 @@
 
     </v-col>
     <v-col cols="2" class="pa-0 d-flex justify-center align-center">
-      <v-img class="" @click="navigateTo('/')" style="height: 130px; width: 130px; cursor: pointer" src="~/assets/LogoNew.Svg"  alt=""></v-img>
+      <v-img class="" @click="navigateTo('/')" style="height: 130px; width: 130px; cursor: pointer" src="~/assets/LogoNew.svg"  alt=""></v-img>
     </v-col>
   </v-row>
 </div>
