@@ -47,6 +47,8 @@
                   </v-col>
                   <v-col class="d-flex " cols="12">
                     <p class="dosis" style=" " v-html="kontakt[0].text4"></p>
+                  </v-col>  <v-col class="d-flex " cols="12">
+                    <p class="dosis" style=" " v-html="kontakt[0].text5"></p>
                   </v-col>
                 </v-row>
               </div>
@@ -112,6 +114,9 @@
           </v-col>
           <v-col class="d-flex mt-n7 " cols="12">
             <p class="dosis" style=" font-size: 12px" v-html="kontakt[0].text4"></p>
+          </v-col>
+          <v-col class="d-flex mt-n7 " cols="12">
+            <p class="dosis" style=" font-size: 12px" v-html="kontakt[0].text5"></p>
           </v-col>
         </v-row>
       </div>

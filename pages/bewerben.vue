@@ -44,6 +44,12 @@
                   <v-col class="d-flex " cols="12">
                     <p style="" v-html="bewerben[0].text3"></p>
                   </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p style="" v-html="bewerben[0].text4"></p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p style="" v-html="bewerben[0].text5"></p>
+                  </v-col>
                 </v-row>
               </div>
             </v-col>

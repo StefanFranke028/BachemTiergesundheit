@@ -14,27 +14,25 @@
     </v-col>
     <v-col cols="8" class="pa-0 d-flex justify-center align-center">
       <v-row class="d-flex justify-center">
-        <v-col class="d-flex justify-center" cols="2">
+        <v-col class="d-flex justify-center align-center" cols="2">
           <span  @click="navigateTo('vita')">Unsere Vita</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="2">
+        <v-col class="d-flex justify-center  align-center" cols="2">
           <span  @click="navigateTo('team')">Team</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="2">
+        <v-col class="d-flex justify-center  align-center align-center" cols="2">
           <span  @click="navigateTo('damen')">High-Class Begleitungen</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="1">
+        <v-col class="d-flex justify-center  align-center" cols="2">
           <span  @click="navigateTo('bewerben')">Preview</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="2">
+        <v-col class="d-flex justify-center  align-center" cols="2">
           <span @click="navigateTo('kontakt')">Get in Touch</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="2">
+        <v-col class="d-flex justify-center  align-center" cols="2">
           <span @click="navigateTo('honorare')">Konditionen</span>
         </v-col>
-        <v-col class="d-flex justify-center" cols="1">
-          <span @click="navigateTo('blog')">BLOG</span>
-        </v-col>
+
       </v-row>
 
     </v-col>
