@@ -34,13 +34,7 @@
                       <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email">
                       {{ bewerben[0].email }}</a></p>
                   </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer; color: #2a2ae4"><a
-                        href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-                        style="text-decoration: none"
-                        target="_blank">#GerneperDu</a>
-                    </p>
-                  </v-col>
+
                   <v-col class="d-flex " cols="12">
                     <p style="" v-html="bewerben[0].text3"></p>
                   </v-col>
@@ -210,13 +204,7 @@
               <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+ bewerben[0].email"
                                                                      v-html="bewerben[0].email"></a></p>
           </v-col>
-          <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer; color: #1e1eda"><a
-                href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-                style="text-decoration: none"
-                target="_blank">#GerneperDu</a>
-            </p>
-          </v-col>
+
           <v-col class="d-flex " cols="12">
             <p style="">Ich freue mich darauf, <br> <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
               ermöglichen zu können.</p>
