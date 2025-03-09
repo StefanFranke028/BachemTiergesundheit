@@ -28,7 +28,7 @@
 
         </p>
         <p>
-          E-Mail:
+          E-Mail: Team@Mila-escort.de
         </p>
         <p class="mt-2">
           <b>
@@ -65,23 +65,23 @@
 
         Magazin
         </p>
-        <p class="text-center mt-2">
-        <a href="">Mila's Escort Philosophie</a>
+        <p  @click="navigateTo('/')" class="text-center mt-2">
+          Mila's Escort Philosophie
 
         </p>
         <p class="text-center mt-2">
-        <a href="">Feminine Finesse</a>
+        Feminine Finesse
 
         </p>
-        <p class="text-center mt-2">
+        <p @click="navigateTo('/')" class="text-center mt-2">
           Anbieterkennzeichnung
 
         </p>
-        <p class="text-center mt-2">
+        <p @click="navigateTo('/impressum')" class="text-center mt-2">
           Vertragsbedingungen
 
         </p>
-        <p class="text-center mt-2">
+        <p @click="navigateTo('/datenschutz')" class="text-center mt-2">
           Ihre Privatsphäre
 
         </p>
@@ -97,7 +97,7 @@
 
           Entdecke spannende Karrieremöglichkeiten.
         </p>
-        <p class="mt-2">
+        <p @click="navigateTo('bewerben')" class="mt-2">
           Dein Weg zu einer erfolgreichen Escort Karriere
 
         </p>
@@ -105,7 +105,7 @@
           Werde ein Teil unseres exklusiven Escort Agency Teams
 
         </p>
-        <p class="mt-2">
+        <p @click="navigateTo('bewerben')" class="mt-2">
           Antworten auf häufige Fragen für neue Escort Talente
 
         </p>

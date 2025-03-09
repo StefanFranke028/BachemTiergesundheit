@@ -332,7 +332,7 @@ useHead({
 }
 
 .dm-serif {
-  font-family: "Engravers MT", serif;
+  font-family: "Aptos", serif;
   font-weight: 100;
   font-style: normal;
 }
@@ -355,7 +355,7 @@ p {
 }
 
 .dosis1 {
-  font-family: "Engravers MT", sans-serif;
+  font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;

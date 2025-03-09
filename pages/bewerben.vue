@@ -52,112 +52,31 @@
       </v-row>
     </div>
 
-    <div style="width: 100vw; height: 1400px">
+    <div style="width: 100vw; " class="">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col cols="12" style="background-color: #ede6e7; padding-top: 120px">
           <v-row class="ma-0 mt-10 justify-center " style="width: 100%; height: 100% ">
             <v-col cols="10">
-              <div class="mt-n16 " style="width: 100%; height: 300px;">
-                <h2 class="dm-serif" style="font-size: 23px">Casting für MAXI ESCORT – Ihre Chance, Teil eines
-                  exklusiven Teams zu
-                  werden!</h2> <br>
-                <p>
-                  Willkommen bei Maxi Escort, wo Leidenschaft und Authentizität im Mittelpunkt
-                  stehen. Ich bin Maxi Di Benedetto, die Gründerin und ehemalige erfolgreiche Escort-
-                  Dame. Mit Herz und Hingabe suche ich nach Damen, die nicht nur Teil meines
-                  Teams werden möchten, sondern auch die Kunst der Begegnung schätzen.
-                  Gemeinsam schaffen wir unvergessliche Momente voller Emotionen und Echtheit.
-                  Wir freuen uns, talentierte und charmante Damen für unsere Escort-Agentur zu
-                  suchen. Bei uns stehen Eleganz, Professionalität und ein unvergesslicher Service im
-                  Vordergrund. Um unseren Kunden den bestmöglichen Service bieten zu können,
-                  nehmen wir bewusst nur eine ausgewählte Anzahl von 20 bis 30 Damen auf.
+              <div class="mt-n16 pb-10" style="width: 100%; ">
+                <h2 style="font-size: 23px"  v-html="bewerben[0].text6"></h2>
+                <br>
+                <p v-html="bewerben[0].text7">
 
-                  „Kandidatinnen, die nicht unseren Anforderungen entsprechen“
-                  Ich suche nicht nach Barbiepuppen oder ungepflegten Seelen. Keine, die von
-                  Arbeitslosigkeit geprägt sind, keine Arroganz, und keine, die in der Vergangenheit mit
-                  Insolvenzen oder rechtlichen Problemen zu kämpfen hatten.
                 </p> <br>
-                <p>
-                  Träumen Sie davon, in einer Welt voller Eleganz und Anmut zu leben? Bei MAXI
-                  ESCORT, unserer neu gegründeten Escort-Agentur, die ehemals unter dem Namen
-                  MAXI &amp; FRIENDS ESCORT bekannt war, haben Sie jetzt die Möglichkeit, Teil eines
-                  exklusiven Teams zu werden, das nicht nur Schönheit, sondern auch Herz und Seele
-                  verkörpert.
-                </p> <br>
-                <p>
-                  Was ich dir mit absoluter Sicherheit bieten kann: <br>
-                  • Diskretion: Schutz Ihrer Privatsphäre. <br>
-                  • Professionalität: Hoher Standard der Dienstleistungen. <br>
-                  • Zuverlässigkeit: Verlässliche Terminvereinbarungen. <br>
-                  • Sicherheit: Sicheres Umfeld für alle Beteiligten. <br>
-                </p> <br>
-                <p>
-                  Überzeug Dich von unseren Service bei Maxi Escort:
-                  In einer Welt, die niemals schläft, sind wir stets an deiner Seite. Meine Escort
-                  Agentur wird geleitet von einer erfahrenen Escort Dame, bieten wir dir nicht nur
-                  Unterstützung, sondern auch ein Gefühl von Sicherheit und Geborgenheit. Unsere
-                  zahlreichen Stammkunden und die hohe Zahl an Buchungsanfragen sind ein Beweis
-                  für unser Vertrauen und unsere Qualität.
-                  Egal, ob du neu in der Branche bist oder bereits Erfahrung hast, wir stehen dir mit
-                  Rat und Tat zur Seite. Unsere Agentur ist nicht nur seriös und diskret, sondern auch
-                  ein Ort, an dem du dich entfalten kannst. Bei uns arbeitest du selbstständig und
-                  selbstbestimmt. Ein professionelles Fotoshooting und eine offizielle
-                  Provisionsrechnung für deine Steuererklärung sind selbstverständlich.
-                  Unsere Zusammenarbeit basiert auf Fairplay, Ehrlichkeit und Wertschätzung. Du hast
-                  die Freiheit, deine Zeit flexibel zu gestalten. Als deutsche Agentur erfüllen wir alle
-                  Pflichten und Rechte und arbeiten als Team auf Augenhöhe. Lass uns gemeinsam
-                  unvergessliche Momente schaffen.
-                </p> <br>
-                <p>
-                  Erforderliche Persönlichkeitsmerkmale <br> <br>
-                  1) Wir können es kaum erwarten, dich persönlich kennenzulernen. In der Wärme
-                  des gegenseitigen Vertrauens entsteht eine respektvolle, harmonische und
-                  erfolgreiche Zusammenarbeit. Du kannst dich immer auf uns verlassen – wir sind Tag
-                  und Nacht, das ganze Jahr über für dich da. Wann immer du uns brauchst, sei es
-                  während deiner Dates oder in anderen Momenten, stehen wir dir zur Seite. Du bist
-                  ein geschätzter Teil unseres Teams, das mit Herz und Seele für dich da ist!<br><br>
+                <p  v-html="bewerben[0].text8">
 
-                  2) In meiner Agentur haben nur die Besten eine Chance.
-
-                  Was ich suche, sind die charmanten, authentischen Mädels von nebenan – Frauen,
-                  die durch ihre natürliche Schönheit und ihren gepflegten Stil bestechen. Du bist
-                  hübsch, achtest auf dein Äußeres und hast ein Gespür für elegante Kleidung und
-                  ansprechendes Styling. Ein eigenes Auto und ein geregelter Job sind für dich
-                  selbstverständlich. <br>
-                  Du hast Freude daran, verschiedene nette Business-Leute zu treffen und bist bereit,
-                  in schöne Bilder zu investieren. Deine Hände sind gepflegt, und dein Lächeln hat die
-                  Kraft, Herzen zu erobern. Regelmäßige Besuche beim Friseur, in der Kosmetik und
-                  im Nagelstudio sind für dich Teil deines Lebensstils. <br> <br>
-
-                  Du liebst es, Begleitung zu bieten und bist offen für Reisen außerhalb deines
-                  Wohnorts. Zuverlässigkeit und Pünktlichkeit sind für dich keine leeren Worte,
-                  sondern eine Lebenseinstellung. Kommunikationsfähigkeit, Flexibilität und Empathie
-                  sind die Schlüssel zu einer erfolgreichen und harmonischen Zusammenarbeit.
-                  Positiv, cool, charmant und mit einem Hauch von Sexappeal – das bist du!
-                  Wir suchen talentierte und charmante Damen, die bereit sind, unvergessliche
-                  Momente zu schaffen und die Herzen unserer Kunden zu erobern. In unserer
-                  Agentur stehen Professionalität und ein einfühlsamer Service an oberster Stelle. Wir
-                  glauben daran, dass jede Begegnung eine Geschichte erzählt und dass es die
-                  kleinen, besonderen Augenblicke sind, die im Gedächtnis bleiben.
-                  Um unseren geschätzten Escort-Damen und unseren wunderbaren Kunden den
-                  bestmöglichen Service zu bieten, wählen wir bewusst nur eine handverlesene Anzahl
-                  von 20 bis 30 Damen aus. Jede „Escort-Perle“ in unserem Team erhält die
-                  Aufmerksamkeit und Unterstützung, die sie verdient, sowie ein offenes Ohr für ihre
-                  Wünsche und Bedürfnisse.  <br> <br>
-                  Wenn Sie sich in einer Atmosphäre von Respekt und Wertschätzung entfalten
-                  möchten, in der Ihre Individualität geschätzt wird, dann sind Sie bei uns genau
-                  richtig.  <br>
-                  Lassen Sie uns gemeinsam unvergessliche Erlebnisse kreieren und die Welt
-                  verzaubern. Wenn Sie bereit sind, Ihre Reise in eine neue Dimension der Eleganz
-                  und des Charmes zu beginnen, freuen wir uns auf Ihre Bewerbung!
                 </p> <br>
-                <p>
-                  Wenn du bereit bist, dich in einem inspirierenden Umfeld weiterzuentwickeln und Teil
-                  eines Teams zu werden, das Wert auf Eleganz und Professionalität legt, dann freue
-                  ich mich darauf, dich kennenzulernen. <br>
-                  Ich freue mich darauf, von dir zu hören und gemeinsam neue Wege zu beschreiten.
-                  Bis bald! <br> <br>
-                  Deine Maxi Di Benedetto
+                <p  v-html="bewerben[0].text9">
+
+                </p> <br>
+                <p  v-html="bewerben[0].text10">
+
+                </p> <br>
+                <p v-html="bewerben[0].text11">
+
+                </p> <br>
+                <p v-html="bewerben[0].text12">
+
                 </p>
               </div>
             </v-col>
@@ -217,106 +136,26 @@
       <div
           class="mx-auto pa-4"
           style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <div style="width: 100%; height: 2100px;">
-          <h2 style="font-size: 17px">Casting für MAXI ESCORT – Ihre Chance, Teil eines exklusiven Teams zu
-            werden!</h2> <br>
-          <p class="textsize">
-            Willkommen bei Maxi Escort, wo Leidenschaft und Authentizität im Mittelpunkt
-            stehen. Ich bin Maxi Di Benedetto, die Gründerin und ehemalige erfolgreiche Escort-
-            Dame. Mit Herz und Hingabe suche ich nach Damen, die nicht nur Teil meines
-            Teams werden möchten, sondern auch die Kunst der Begegnung schätzen.
-            Gemeinsam schaffen wir unvergessliche Momente voller Emotionen und Echtheit.
-            Wir freuen uns, talentierte und charmante Damen für unsere Escort-Agentur zu
-            suchen. Bei uns stehen Eleganz, Professionalität und ein unvergesslicher Service im
-            Vordergrund. Um unseren Kunden den bestmöglichen Service bieten zu können,
-            nehmen wir bewusst nur eine ausgewählte Anzahl von 20 bis 30 Damen auf.
+        <div class="mt-n16 pb-10" style="width: 100%; ">
+          <h2 style="font-size: 23px" class="mt-13" v-html="bewerben[0].text6"></h2>
+          <br>
+          <p v-html="bewerben[0].text7">
 
-            „Kandidatinnen, die nicht unseren Anforderungen entsprechen“
-            Ich suche nicht nach Barbiepuppen oder ungepflegten Seelen. Keine, die von
-            Arbeitslosigkeit geprägt sind, keine Arroganz, und keine, die in der Vergangenheit mit
-            Insolvenzen oder rechtlichen Problemen zu kämpfen hatten.
           </p> <br>
-          <p class="textsize">
-            Träumen Sie davon, in einer Welt voller Eleganz und Anmut zu leben? Bei MAXI
-            ESCORT, unserer neu gegründeten Escort-Agentur, die ehemals unter dem Namen
-            MAXI &amp; FRIENDS ESCORT bekannt war, haben Sie jetzt die Möglichkeit, Teil eines
-            exklusiven Teams zu werden, das nicht nur Schönheit, sondern auch Herz und Seele
-            verkörpert.
-          </p> <br>
-          <p class="textsize">
-            Was ich dir mit absoluter Sicherheit bieten kann: <br>
-            • Diskretion: Schutz Ihrer Privatsphäre. <br>
-            • Professionalität: Hoher Standard der Dienstleistungen. <br>
-            • Zuverlässigkeit: Verlässliche Terminvereinbarungen. <br>
-            • Sicherheit: Sicheres Umfeld für alle Beteiligten. <br>
-          </p> <br>
-          <p class="textsize">
-            Überzeug Dich von unseren Service bei Maxi Escort:
-            In einer Welt, die niemals schläft, sind wir stets an deiner Seite. Meine Escort
-            Agentur wird geleitet von einer erfahrenen Escort Dame, bieten wir dir nicht nur
-            Unterstützung, sondern auch ein Gefühl von Sicherheit und Geborgenheit. Unsere
-            zahlreichen Stammkunden und die hohe Zahl an Buchungsanfragen sind ein Beweis
-            für unser Vertrauen und unsere Qualität.
-            Egal, ob du neu in der Branche bist oder bereits Erfahrung hast, wir stehen dir mit
-            Rat und Tat zur Seite. Unsere Agentur ist nicht nur seriös und diskret, sondern auch
-            ein Ort, an dem du dich entfalten kannst. Bei uns arbeitest du selbstständig und
-            selbstbestimmt. Ein professionelles Fotoshooting und eine offizielle
-            Provisionsrechnung für deine Steuererklärung sind selbstverständlich.
-            Unsere Zusammenarbeit basiert auf Fairplay, Ehrlichkeit und Wertschätzung. Du hast
-            die Freiheit, deine Zeit flexibel zu gestalten. Als deutsche Agentur erfüllen wir alle
-            Pflichten und Rechte und arbeiten als Team auf Augenhöhe. Lass uns gemeinsam
-            unvergessliche Momente schaffen.
-          </p> <br>
-          <p class="textsize">
-            Erforderliche Persönlichkeitsmerkmale <br> <br>
-            1) Wir können es kaum erwarten, dich persönlich kennenzulernen. In der Wärme
-            des gegenseitigen Vertrauens entsteht eine respektvolle, harmonische und
-            erfolgreiche Zusammenarbeit. Du kannst dich immer auf uns verlassen – wir sind Tag
-            und Nacht, das ganze Jahr über für dich da. Wann immer du uns brauchst, sei es
-            während deiner Dates oder in anderen Momenten, stehen wir dir zur Seite. Du bist
-            ein geschätzter Teil unseres Teams, das mit Herz und Seele für dich da ist!<br><br>
+          <p  v-html="bewerben[0].text8">
 
-            2) In meiner Agentur haben nur die Besten eine Chance.
-
-            Was ich suche, sind die charmanten, authentischen Mädels von nebenan – Frauen,
-            die durch ihre natürliche Schönheit und ihren gepflegten Stil bestechen. Du bist
-            hübsch, achtest auf dein Äußeres und hast ein Gespür für elegante Kleidung und
-            ansprechendes Styling. Ein eigenes Auto und ein geregelter Job sind für dich
-            selbstverständlich. <br>
-            Du hast Freude daran, verschiedene nette Business-Leute zu treffen und bist bereit,
-            in schöne Bilder zu investieren. Deine Hände sind gepflegt, und dein Lächeln hat die
-            Kraft, Herzen zu erobern. Regelmäßige Besuche beim Friseur, in der Kosmetik und
-            im Nagelstudio sind für dich Teil deines Lebensstils. <br> <br>
-
-            Du liebst es, Begleitung zu bieten und bist offen für Reisen außerhalb deines
-            Wohnorts. Zuverlässigkeit und Pünktlichkeit sind für dich keine leeren Worte,
-            sondern eine Lebenseinstellung. Kommunikationsfähigkeit, Flexibilität und Empathie
-            sind die Schlüssel zu einer erfolgreichen und harmonischen Zusammenarbeit.
-            Positiv, cool, charmant und mit einem Hauch von Sexappeal – das bist du!
-            Wir suchen talentierte und charmante Damen, die bereit sind, unvergessliche
-            Momente zu schaffen und die Herzen unserer Kunden zu erobern. In unserer
-            Agentur stehen Professionalität und ein einfühlsamer Service an oberster Stelle. Wir
-            glauben daran, dass jede Begegnung eine Geschichte erzählt und dass es die
-            kleinen, besonderen Augenblicke sind, die im Gedächtnis bleiben.
-            Um unseren geschätzten Escort-Damen und unseren wunderbaren Kunden den
-            bestmöglichen Service zu bieten, wählen wir bewusst nur eine handverlesene Anzahl
-            von 20 bis 30 Damen aus. Jede „Escort-Perle“ in unserem Team erhält die
-            Aufmerksamkeit und Unterstützung, die sie verdient, sowie ein offenes Ohr für ihre
-            Wünsche und Bedürfnisse.  <br> <br>
-            Wenn Sie sich in einer Atmosphäre von Respekt und Wertschätzung entfalten
-            möchten, in der Ihre Individualität geschätzt wird, dann sind Sie bei uns genau
-            richtig.  <br>
-            Lassen Sie uns gemeinsam unvergessliche Erlebnisse kreieren und die Welt
-            verzaubern. Wenn Sie bereit sind, Ihre Reise in eine neue Dimension der Eleganz
-            und des Charmes zu beginnen, freuen wir uns auf Ihre Bewerbung!
           </p> <br>
-          <p class="textsize">
-            Wenn du bereit bist, dich in einem inspirierenden Umfeld weiterzuentwickeln und Teil
-            eines Teams zu werden, das Wert auf Eleganz und Professionalität legt, dann freue
-            ich mich darauf, dich kennenzulernen. <br>
-            Ich freue mich darauf, von dir zu hören und gemeinsam neue Wege zu beschreiten.
-            Bis bald! <br> <br>
-            Deine Maxi Di Benedetto
+          <p  v-html="bewerben[0].text9">
+
+          </p> <br>
+          <p  v-html="bewerben[0].text10">
+
+          </p> <br>
+          <p v-html="bewerben[0].text11">
+
+          </p> <br>
+          <p v-html="bewerben[0].text12">
+
           </p>
         </div>
       </div>

@@ -24,12 +24,12 @@
     </div>
 
 
-    <div style="width: 100vw; padding-top: 7%">
-      <v-row>
-        <v-col v-for="dame in damen" cols="4">
+    <div class="d-flex justify-center" style="width: 100vw; padding-top: 7%">
+      <v-row style="width: 70%;" class="d-flex justify-center">
+        <v-col class="damencard mb-4 mt-10 py-0 px-4" v-for="dame in damen" cols="3">
           <v-row :key="dame" class="ma-0  mt-5" style="width: 100%; height: 100%">
-            <v-col cols="12">
-              <v-carousel style="height: 700px" theme="dark">
+            <v-col class="pa-0" cols="12">
+              <v-carousel style="height: 500px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -39,46 +39,48 @@
 
               </v-carousel>
             </v-col>
-            <v-col class="px-10 pb-12" cols="12">
+            <v-col class="px-2 pb-12" cols="12">
               <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{
                 dame.name
                 }}</h2>
-              <br>
-              <br>
-              <p class="dosis" style=" text-align: justify;">{{ dame.vita }}
+
+
+              <p style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
+
+              <p  class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.vita }}
                 <br>
-                <br>
+
                 <b v-if="dame.motto">Mein Motto:</b> <span style="font-family: 'Zapfino', Serif">
                   {{ dame.motto }}
                 </span>
-                <br>
+
                 <br>
                 <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
-                <br>
+
                 <br>
                 <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
-                <br>
+
                 <br>
                 <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
-                <br>
+
                 <br>
                 <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
-                <br>
+
                 <br>
                 <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
-                <br>
+
                 <br>
                 <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
-                <br>
+
                 <br>
                 <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
                 <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
-                <br>
+
                 <br>
                 <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
-                <br>
+
                 <br>
                 <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
               </p>
@@ -87,7 +89,6 @@
           </v-row>
         </v-col>
       </v-row>
-
     </div>
 
   </div>
@@ -134,41 +135,42 @@
             {{ dame.name }}</h2>
           <br>
           <br>
+          <p @click="navigateTo('hinweis')">Rechtlicher Hinweis</p>
           <p class="dosis mt-n10" style=" text-align: justify; font-size: 13px">{{ dame.vita }}
             <br>
-            <br>
+
             <b v-if="dame.motto">Mein Motto:</b>
             <span style="font-family: 'Zapfino', Serif">
                 {{ dame.motto }}
             </span>
             <br>
-            <br>
+
             <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
             <br>
-            <br>
+
             <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
             <br>
-            <br>
+
             <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
-            <br>
+
             <br>
             <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
-            <br>
+
             <br>
             <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
-            <br>
+
             <br>
             <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
-            <br>
+
             <br>
             <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
             <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
-            <br>
+
             <br>
             <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
-            <br>
+
             <br>
             <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
           </p>
@@ -287,12 +289,14 @@ useHead({
 
 
 import {useScreenStore} from "~/stores/screen.js";
-import {da} from "vuetify/locale";
+import { useUserStore } from '@/stores/user';
+import { mapActions } from 'pinia';
 
 export default {
   name: "damen",
   data() {
     return {
+      dameInput: '',
       escort: [{
         text1: 'Unsere Begleitpersonen',
         text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ',
@@ -302,7 +306,21 @@ export default {
   },
   mounted() {
   },
-  methods: {},
+  methods: {
+    ...mapActions(useUserStore, ['setDame']),
+    setDameInStore(dame) {
+      if (dame && dame.trim() !== '') {
+        this.setDame(dame);
+        console.log('Dame gesetzt:', useUserStore().dame); // Korrekte Zugriffsmethode in Pinia
+      }
+    },
+
+    gotoHinweis(dame) {
+      this.setDameInStore(dame.name);
+      navigateTo('/hinweis'); // Sicherstellen, dass die Route existiert
+    },
+
+  },
   computed: {
 
     wide() {
@@ -443,6 +461,9 @@ p {
   font-style: normal;
   line-height: 1.3;
 }
-
+.damencard{
+  border-radius: 7px;
+border:2px solid black;
+}
 
 </style>

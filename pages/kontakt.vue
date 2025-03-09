@@ -17,7 +17,7 @@
 
       </v-row>
     </div>
-    <div style="width: 100vw; height: 600px">
+    <div style="width: 100vw; height: 700px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="12" style="background-color: rgba(215,232,215,0.56)">
           <v-row class="ma-0 mt-10 justify-center align-center" style="width: 100%; height: 100%">

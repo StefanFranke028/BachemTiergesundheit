@@ -35,7 +35,7 @@
   <v-col cols="5" class="d-flex align-center ">
     <div style="cursor: pointer">
       <span style="font-size: 16px; color: #4e4e4e; ">
-          Mila - &nbsp;
+          MILA - &nbsp;
         <b class="ml-n1" style="color: black">
         ESCORT
         </b>
@@ -76,12 +76,12 @@ export default {
       drawer:false,
       menuItems: [
         { title: 'Startseite', icon: 'heroicons:home-solid', route: 'index' },
-        { title: 'Vita', icon: 'fluent:person-32-filled', route: 'vita' },
-        { title: 'Team', icon: 'fluent:people-team-16-filled', route: 'team' },
-        { title: 'Escort', icon: 'icon-park-solid:women', route: 'damen' },
-        { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'casting' },
-        { title: 'Kontakt', icon: 'streamline:contact-phonebook-2-solid', route: 'kontakt' },
-        { title: 'Honorare', icon: 'foundation:pricetag-multiple', route: 'honorare' },
+        { title: 'Unsere Vita', icon: 'fluent:person-32-filled', route: 'vita' },
+        { title: 'Arragement ', icon: 'fluent:people-team-16-filled', route: 'team' },
+        { title: 'High-Class Begleitungen', icon: 'icon-park-solid:women', route: 'damen' },
+        { title: 'Preview', icon: 'fluent:chart-person-48-filled', route: 'casting' },
+        { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'kontakt' },
+        { title: 'Konditionen', icon: 'foundation:pricetag-multiple', route: 'honorare' },
         { title: 'Blog', icon: 'mdi-book', route: 'blog' },
       ],
     }

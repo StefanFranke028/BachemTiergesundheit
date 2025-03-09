@@ -5,7 +5,7 @@
         <h1 class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="honorare[0].text1"></h1>
         <div class="vertical-marker">
         </div>
-        <p class="dosis" style="margin-top: -100px" v-html="honorare[0].text2">
+        <p class="dosis " style="margin-top: -200px"  v-html="honorare[0].text2">
         </p>
         <div class="d-flex justify-center mt-10" style="width: 100%;">
           <router-link style="position: relative; left: -14%; top:11vh" to="damen">
@@ -499,7 +499,7 @@ h1 {
 .vertical-marker::before {
   content: '';
   position: absolute;
-  top: 20vh; /* Positioniert den Punkt ganz oben */
+  top: 10vh; /* Positioniert den Punkt ganz oben */
   left: 50%; /* Zentriert den Punkt horizontal */
   width: 10px; /* Größe des Punktes */
   height: 10px; /* Größe des Punktes */
@@ -511,7 +511,7 @@ h1 {
 .vertical-marker::after {
   content: '';
   position: absolute;
-  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  top: 10vh; /* Beginnt direkt unter dem Punkt */
   left: 50%; /* Zentriert den Strich horizontal */
   width: 2px; /* Breite des Striches */
   height: 330%; /* Höhe des Striches */
