@@ -25,8 +25,8 @@
 
 
     <div class="d-flex justify-center" style="width: 100vw; padding-top: 7%">
-      <v-row style="width: 70%;" class="d-flex justify-center">
-        <v-col class="damencard mb-4 mt-10 py-0 px-4" v-for="dame in damen" cols="3">
+      <v-row class="d-flex justify-center" style="width: 70%;">
+        <v-col v-for="dame in damen" class="damencard mb-4 mt-10 py-0 px-4" cols="3">
           <v-row :key="dame" class="ma-0  mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0" cols="12">
               <v-carousel style="height: 500px" theme="dark">
@@ -41,13 +41,14 @@
             </v-col>
             <v-col class="px-2 pb-12" cols="12">
               <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{
-                dame.name
+                  dame.name
                 }}</h2>
 
 
-              <p style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
+              <p style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher
+                Hinweis!</p>
 
-              <p  class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.beschreibung }}
+              <p class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.beschreibung }}
                 <br>
 
                 <b v-if="dame.geburtsalter">Alter:</b> <span style="font-family: 'Zapfino', Serif">
@@ -73,9 +74,9 @@
 
                 <br>
                 <br>
-                  <b>
-                    DATING &amp; MORE:
-                  </b>
+                <b>
+                  DATING &amp; MORE:
+                </b>
                 <br>
                 <b v-if="dame.paarchenBegleitung">Pärchen Begleitung:</b>
                 <span v-if="dame.paarchenBegleitung">
@@ -97,11 +98,12 @@
                     Nein
                 </span>
                 <br>
-                <b v-if="dame.praesentation">Präsentation:</b>  {{ dame.praesentation }}
+                <b v-if="dame.praesentation">Präsentation:</b> {{ dame.praesentation }}
                 <br>
                 <b v-if="dame.staedte && dame.staedte.length > 0">Ich begleite Sie gerne in Städte wie: &nbsp;</b>
-                <span v-for="stadt in dame.staedte" :key="stadt">
-                  {{ stadt.name }}, &nbsp;
+
+                <span>
+                  {{ formatCities(dame.staedte) }}
                 </span>
 
               </p>
@@ -310,8 +312,8 @@ useHead({
 
 
 import {useScreenStore} from "~/stores/screen.js";
-import { useUserStore } from '@/stores/user';
-import { mapActions } from 'pinia';
+import {useUserStore} from '@/stores/user';
+import {mapActions} from 'pinia';
 
 export default {
   name: "damen",
@@ -328,6 +330,16 @@ export default {
   mounted() {
   },
   methods: {
+    formatCities(staedte) {
+      const arr = Array.isArray(staedte) ? staedte : Array.from(staedte);
+      const len = arr.length;
+      if (len === 0) return "";
+      if (len === 1) return arr[0].name;
+      if (len === 2) return `${arr[0].name} und ${arr[1].name}`;
+      // Bei mehr als 2 Einträgen: Alle bis zur vorletzten mit Komma trennen, dann " und " vor die letzte setzen
+      const firstPart = arr.slice(0, len - 1).map(stadt => stadt.name).join(", ");
+      return `${firstPart} und ${arr[len - 1].name}`;
+    },
     ...mapActions(useUserStore, ['setDame']),
     setDameInStore(dame) {
       if (dame && dame.trim() !== '') {
@@ -482,9 +494,10 @@ p {
   font-style: normal;
   line-height: 1.3;
 }
-.damencard{
+
+.damencard {
   border-radius: 7px;
-border:2px solid black;
+  border: 2px solid black;
 }
 
 </style>
