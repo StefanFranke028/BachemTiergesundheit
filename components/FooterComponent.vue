@@ -73,7 +73,7 @@
         Feminine Finesse
 
         </p>
-        <p @click="navigateTo('/')" class="text-center mt-2">
+        <p @click="navigateTo('/impressum')" class="text-center mt-2">
           Anbieterkennzeichnung
 
         </p>

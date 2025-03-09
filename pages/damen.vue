@@ -47,42 +47,56 @@
 
               <p style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
 
-              <p  class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.vita }}
+              <p  class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.beschreibung }}
                 <br>
 
-                <b v-if="dame.motto">Mein Motto:</b> <span style="font-family: 'Zapfino', Serif">
-                  {{ dame.motto }}
+                <b v-if="dame.geburtsalter">Alter:</b> <span style="font-family: 'Zapfino', Serif">
+                  {{ dame.geburtsalter }}
                 </span>
 
                 <br>
-                <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
+                <b v-if="dame.groesse">Größe:</b> {{ dame.groesse }}
 
                 <br>
-                <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
+                <b v-if="dame.haarfarbe">Haarfarbe:</b> {{ dame.haarfarbe }}
 
                 <br>
-                <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
+                <b v-if="dame.augenfarbe">Interessen und Hobbys:</b> {{ dame.augenfarbe }}
 
                 <br>
-                <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
+                <b v-if="dame.dienstleistungen">Dienstleistungen:</b> {{ dame.dienstleistungen }}
 
                 <br>
-                <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
+                <b v-if="dame.reiseverfuegbarkeit">Ich begleite Sie gerne in Städte wie:</b> {{ dame.reiseverfuegbarkeit }}
 
                 <br>
-                <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
+                <b v-if="dame.paarchenBegleitung">Pärchen Begleitung:</b>
+                <span v-if="dame.paarchenBegleitung">
+                Ja
+                </span>
+                <b v-if="!dame.paarchenBegleitung">Pärchen Begleitung:</b>
+                <span v-if="!dame.paarchenBegleitung">
+                  Nein
 
+                </span>
+                <br>
+                <b v-if="dame.damenBegleitung">Damen Begleitung:</b>
+                <span v-if="dame.damenBegleitung">
+
+                Ja
+                </span>
+                <b v-if="!dame.damenBegleitung">Damen Begleitung:</b>
+                <span v-if="!dame.damenBegleitung">
+                    Nein
+                </span>
+                <br>
+                <b v-if="dame.praesentation">Damen Begleitung:</b>  {{ dame.praesentation }}
                 <br>
                 <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
                 <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
 
-                <br>
-                <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
-
-                <br>
-                <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
               </p>
 
             </v-col>

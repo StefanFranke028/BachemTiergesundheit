@@ -191,6 +191,27 @@
           <div>
             <p>
               <b>
+                Mila Escort Service Frankfurt
+              </b> <br>
+              Bitte beachten Sie, dass bei Abschluss einer Buchung der Vertrag ausschließlich mit
+              der Escort Dame zustande kommt. Mila Escort fungiert als Vermittler und bringt Sie
+              mit Ihrer Wunschbegleitung zusammen. Um die Anonymität sowohl des Kunden als
+              auch der Begleitperson zu wahren, erfolgt die bargeldlose Bezahlung an die Agentur. <br> <br>
+              Die Mila Escort Agentur verfügt über eine Geldempfangsvollmacht der
+              Begleitpersonen und leitet das Geld an diese weiter. Unsere Aufgabe ist lediglich die
+              Vermittlung eines passenden Termins mit der von Ihnen gewünschten Dame. Der
+              Vertragsabschluss erfolgt im Namen und auf Rechnung der Escort Dame. <br> <br>
+              Die Bandbreite des Services, den unsere Begleitpersonen – auch in Bad Homburg –
+              auf Reisen oder bei besonderen Anlässen bieten, richtet sich sowohl nach Ihren
+              Vorstellungen als auch nach den vor Ort geltenden Bestimmungen.
+              Länderspezifische Anordnungen und etwaige Einschränkungen werden von den
+              selbstständigen High-Class Begleitpersonen selbstverständlich beachtet.
+            </p>
+            <br>
+          </div>
+          <div>
+            <p>
+              <b>
                 Ihre Privatsphäre – (Rechtliche Hinweis) <br>
                 Mila Escort – Ihre professionelle Vermittlungsagentur
               </b> <br> <br>
