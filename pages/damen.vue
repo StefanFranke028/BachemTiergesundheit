@@ -69,7 +69,7 @@
                 <b v-if="dame.dienstleistungen">Dienstleistungen:</b> {{ dame.dienstleistungen }}
 
                 <br>
-                <b v-if="dame.reiseverfuegbarkeit">Ich begleite Sie gerne in Städte wie:</b> {{ dame.reiseverfuegbarkeit }}
+                <b v-if="dame.reiseverfuegbarkeit">Reiseverfügbarkeit:</b> {{ dame.reiseverfuegbarkeit }}
 
                 <br>
                 <br>
@@ -99,7 +99,7 @@
                 <br>
                 <b v-if="dame.praesentation">Präsentation:</b>  {{ dame.praesentation }}
                 <br>
-                <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
+                <b v-if="dame.staedte && dame.staedte.length > 0">Ich begleite Sie gerne in Städte wie: &nbsp;</b>
                 <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
