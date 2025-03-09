@@ -34,12 +34,13 @@
               <v-img :src="blog.bild" alt="" cover max-height="700" style="z-index: 0;"></v-img>
             </v-col>
             <v-col class="pa-12" cols="6">
-              <h2 class="text-center mt-4 dm-serif" style="font-size: 1.1vw">{{ blog.ueberschrift }}</h2>
+              <h2 class="text-center mt-4 dm-serif" style="font-size: 1.1vw" v-html="blog.ueberschrift"></h2>
+
               <h3 class="text-center dm-serif" style="
-              color: #4a4949; font-size: 0.9vw">{{ blog.unterUeberschrift }}</h3>
+              color: #4a4949; font-size: 0.9vw" v-html="blog.unterUeberschrift"></h3>
               <br><br>
-              <p class="dosis" style="text-align: justify;">{{ blog.text }}</p>
-              <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
+              <p class="dosis" style=""  v-html="blog.text"></p>
+              <p class="mt-10" style="color: #4a4949" v-html="blog.autor"></p>
               <input v-model="blog.datum" aria-label="test" class="mt-10" disabled readonly style="color: #8e8c8c"
                      type="date"/>
             </v-col>
