@@ -61,7 +61,9 @@
                 <b v-if="dame.haarfarbe">Haarfarbe:</b> {{ dame.haarfarbe }}
 
                 <br>
-                <b v-if="dame.augenfarbe">Interessen und Hobbys:</b> {{ dame.augenfarbe }}
+                <b v-if="dame.augenfarbe">Augenfarbe:</b> {{ dame.augenfarbe }}
+                <br>
+                <b v-if="dame.augenfarbe">Interessen und Hobbys:</b> {{ dame.interessenHobbys }}
 
                 <br>
                 <b v-if="dame.dienstleistungen">Dienstleistungen:</b> {{ dame.dienstleistungen }}
@@ -70,7 +72,7 @@
                 <b v-if="dame.reiseverfuegbarkeit">Ich begleite Sie gerne in Städte wie:</b> {{ dame.reiseverfuegbarkeit }}
 
                 <br>
-
+                <br>
                   <b>
                     DATING &amp; MORE:
                   </b>
@@ -95,7 +97,7 @@
                     Nein
                 </span>
                 <br>
-                <b v-if="dame.praesentation">Damen Begleitung:</b>  {{ dame.praesentation }}
+                <b v-if="dame.praesentation">Präsentation:</b>  {{ dame.praesentation }}
                 <br>
                 <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
                 <span v-for="stadt in dame.staedte" :key="stadt">
