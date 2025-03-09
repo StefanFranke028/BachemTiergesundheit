@@ -26,7 +26,6 @@
             <v-col cols="12">
               <v-textarea v-model="text" auto-grow label="Text"></v-textarea>
             </v-col>
-
             <v-col cols="4">
               <v-text-field v-model="autor" label="Autor"></v-text-field>
             </v-col>
@@ -187,6 +186,15 @@ export default {
     Icon
   },
   methods: {
+    formattedText(text) {
+      // Ersetze alle Zeilenumbrüche durch <br>-Tags
+      return text.replace(/\n/g, "<br>");
+    },
+
+// Methode zum Rückformatieren von HTML in Text für die Textareas
+    unformattedText(text) {
+      return text ? text.replace(/<br\s*\/?>/g, "\n") : "";
+    },
     resetEditMode() {
       this.editedEntry = null;
       this.ueberschrift = null;
@@ -209,9 +217,9 @@ export default {
           // Hier wird die Blog-Einträge-Liste verarbeitet
           this.blogEntries = response.map(entry => ({
             id: entry.id,
-            ueberschrift: entry.ueberschrift,
-            unterUeberschrift: entry.unterUeberschrift,
-            text: entry.text,
+            ueberschrift: this.unformattedText(entry.ueberschrift),
+            unterUeberschrift: this.unformattedText(entry.unterUeberschrift),
+            text: this.unformattedText(entry.text),
             autor: entry.autor,
             datum: entry.datum,
             bild: entry.bild,
@@ -277,9 +285,9 @@ export default {
     async submitChanges() {
       this.loading = true;
       const data = {
-        ueberschrift: this.ueberschrift,
-        unterUeberschrift: this.unterUeberschrift,
-        text: this.text,
+        ueberschrift: this.formattedText(this.ueberschrift),
+        unterUeberschrift: this.formattedText(this.unterUeberschrift),
+        text: this.formattedText(this.text),
         bild: this.base64Image,
         bild2: this.base64Image2,
         autor: this.autor
