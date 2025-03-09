@@ -87,11 +87,11 @@
           <v-row class="ma-0" style="width: 100%; height: 100%;">
 
             <v-col cols="12">
-              <h2 class="text-center dm-serif" style="font-size: 12px">{{ blog.ueberschrift }}</h2>
-              <h2 class="text-center dm-serif" style="color: #4a4949; font-size: 11px">{{ blog.unterUeberschrift }}</h2>
+              <h2 class="text-center dm-serif" style="font-size: 12px" v-html="blog.ueberschrift"></h2>
+              <h2 class="text-center dm-serif" style="color: #4a4949; font-size: 11px" v-html="blog.unterUeberschrift"></h2>
               <br><br>
-              <p class="dosis" style="text-align: justify; font-size: 11px">{{ blog.text }}</p>
-              <p class="mt-10" style="color: #4a4949">{{ blog.autor }}</p>
+              <p class="dosis" style="text-align: justify; font-size: 11px"  v-html="blog.text"></p>
+              <p class="mt-10" style="color: #4a4949" v-html="blog.autor"></p>
               <input v-model="blog.datum" aria-label="test" class="mt-10" disabled readonly style="color: #4a4949"
                      type="date"/></v-col>
           </v-row>
