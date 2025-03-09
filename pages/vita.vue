@@ -293,7 +293,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/vita}`,
+      href: `https://maxi-escort.de/vita`,
     },
   ],
   meta: [

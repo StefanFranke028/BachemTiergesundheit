@@ -184,7 +184,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/blog}`,
+      href: `https://maxi-escort.de/blog`,
     },
   ],
   title: 'Maxi-Escort Blog',

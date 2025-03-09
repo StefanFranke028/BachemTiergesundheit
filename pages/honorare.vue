@@ -407,7 +407,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/honorare}`,
+      href: `https://maxi-escort.de/honorare`,
     },
   ],
   meta: [

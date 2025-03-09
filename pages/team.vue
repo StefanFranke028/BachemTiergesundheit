@@ -193,7 +193,7 @@ useHead({
 
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/team}`,
+      href: `https://maxi-escort.de/team`,
     },
   ],
   meta: [

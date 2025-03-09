@@ -300,7 +300,7 @@ useHead({
     },
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de}`,
+      href: `https://maxi-escort.de`,
     },
   ],
   meta: [
