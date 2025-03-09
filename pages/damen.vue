@@ -70,6 +70,11 @@
                 <b v-if="dame.reiseverfuegbarkeit">Ich begleite Sie gerne in Städte wie:</b> {{ dame.reiseverfuegbarkeit }}
 
                 <br>
+
+                  <b>
+                    DATING &amp; MORE:
+                  </b>
+                <br>
                 <b v-if="dame.paarchenBegleitung">Pärchen Begleitung:</b>
                 <span v-if="dame.paarchenBegleitung">
                 Ja
