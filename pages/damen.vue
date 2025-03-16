@@ -162,7 +162,7 @@
             <br>
 
             <b v-if="dame.motto">Mein Motto:</b>
-            <span style="font-family: 'Zapfino', Serif">
+            <span>
                 {{ dame.motto }}
             </span>
             <br>
@@ -329,6 +329,16 @@ export default {
   mounted() {
   },
   methods: {
+    formatCities(staedte) {
+      const arr = Array.isArray(staedte) ? staedte : Array.from(staedte);
+      const len = arr.length;
+      if (len === 0) return "";
+      if (len === 1) return arr[0].name;
+      if (len === 2) return `${arr[0].name} und ${arr[1].name}`;
+      // Bei mehr als 2 Einträgen: Alle bis zur vorletzten mit Komma trennen, dann " und " vor die letzte setzen
+      const firstPart = arr.slice(0, len - 1).map(stadt => stadt.name).join(", ");
+      return `${firstPart} und ${arr[len - 1].name}`;
+    },
     ...mapActions(useUserStore, ['setDame']),
     setDameInStore(dame) {
       if (dame && dame.trim() !== '') {
@@ -483,9 +493,10 @@ p {
   font-style: normal;
   line-height: 1.3;
 }
-.damencard{
+
+.damencard {
   border-radius: 7px;
-border:2px solid black;
+  border: 2px solid black;
 }
 
 </style>
