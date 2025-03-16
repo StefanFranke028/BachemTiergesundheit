@@ -35,7 +35,7 @@
               <h3 class="text-center dm-serif" style="font-size: 1vw" v-html="vita[0].text3"></h3>
               <br>
               <br>
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text4">
+              <p class="dm-serif text-center"  v-html="vita[0].text4">
 
               </p>
 
@@ -57,23 +57,23 @@
 
               <h2 class="text-center dm-serif" style="font-size: 0.9vw" v-html="vita[0].text5"></h2>
 
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text6">
+              <p class="dm-serif text-center"  v-html="vita[0].text6">
 
 
               </p>
               <h2 class="text-center dm-serif mt-10" style="font-size: 0.9vw" v-html="vita[0].text7"></h2>
 
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text8">
+              <p class="dm-serif text-center" v-html="vita[0].text8">
 
               </p>
               <h2 class="text-center dm-serif mt-10" style="font-size: 0.9vw" v-html="vita[0].text9"></h2>
 
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text10">
+              <p class="dm-serif text-center" style=" " v-html="vita[0].text10">
 
               </p>
               <h2 class="text-center dm-serif mt-10" style="font-size: 0.9vw" v-html="vita[0].text11"></h2>
 
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text12">
+              <p class="dm-serif text-center"  v-html="vita[0].text12">
 
               </p>
 
@@ -105,26 +105,26 @@
             <v-col cols="7">
               <h2 class="text-center dm-serif" style="font-size: 1vw" v-html="vita[0].text13"></h2>
               <h2 class="text-center dm-serif mt-5" style="font-size: 0.9vw" v-html="vita[0].text14"></h2>
-              <p class="dm-serif " style=" text-align: justify;" v-html="vita[0].text15">
+              <p class="dm-serif text-center"  v-html="vita[0].text15">
 
               </p>
               <h2 class="text-center dm-serif mt-8" style="font-size: 0.9vw" v-html="vita[0].text16"></h2>
               <br>
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text17">
+              <p class="dm-serif text-center"  v-html="vita[0].text17">
 
 
               </p>
 
               <h2 class="text-center dm-serif mt-8" style="font-size: 0.9vw" v-html="vita[0].text18"></h2>
 <br>
-              <p class="dm-serif" style=" text-align: justify;" v-html="vita[0].text19">
+              <p class="dm-serif text-center"  v-html="vita[0].text19">
 
 
               </p>
 
               <h2 class="text-center dm-serif mt-8" style="font-size: 0.9vw" v-html="vita[0].text20"></h2>
 
-              <p class="dm-serif" style=" " v-html="vita[0].text21">
+              <p class="dm-serif text-center" style=" " v-html="vita[0].text21">
 
 
               </p>
@@ -225,7 +225,7 @@
         </p>
         <h2 class="text-center mt-4 dm-serif" style="font-size: 3vw" v-html="vita[0].text20"></h2>
 
-        <p class="dosis mt-2" style=" text-align: justify; font-size: 12px" v-html="vita[0].text21">
+        <p class="dosis mt-2" style="  font-size: 12px" v-html="vita[0].text21">
 
         </p>
       </div>

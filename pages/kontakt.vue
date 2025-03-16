@@ -24,6 +24,17 @@
             <v-col cols="7">
               <div class="d-flex mt-n16" style="width: 100%; height: 270px;">
                 <v-row class="  ma-0" style="width: 100%; height: 30%">
+
+
+                  <v-col class="d-flex " cols="12">
+                    <p class="dosis" style="" v-html="kontakt[0].text3"></p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p class="dosis" style=" " v-html="kontakt[0].text4"></p>
+                  </v-col>  <v-col class="d-flex " cols="12">
+                    <p class="dosis" style=" " v-html="kontakt[0].text5"></p>
+
+                  </v-col>
                   <v-col class="d-flex " cols="12">
                     <p style="cursor: pointer">
                       <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a
@@ -34,15 +45,6 @@
                       <Icon icon="fluent-mdl2:edit-mail"/>
                       &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email">
                       {{ kontakt[0].email }}</a></p>
-                  </v-col>
-
-                  <v-col class="d-flex " cols="12">
-                    <p class="dosis" style="" v-html="kontakt[0].text3"></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p class="dosis" style=" " v-html="kontakt[0].text4"></p>
-                  </v-col>  <v-col class="d-flex " cols="12">
-                    <p class="dosis" style=" " v-html="kontakt[0].text5"></p>
                   </v-col>
                 </v-row>
               </div>

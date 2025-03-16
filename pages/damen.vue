@@ -26,7 +26,7 @@
 
     <div class="d-flex justify-center" style="width: 100vw; padding-top: 7%">
       <v-row style="width: 70%;" class="d-flex justify-center">
-        <v-col class="damencard mb-4 mt-10 py-0 px-4" v-for="dame in damen" cols="3">
+        <v-col class="damencard mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3">
           <v-row :key="dame" class="ma-0  mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0" cols="12">
               <v-carousel style="height: 500px" theme="dark">
@@ -39,18 +39,18 @@
 
               </v-carousel>
             </v-col>
-            <v-col class="px-2 pb-12" cols="12">
-              <h2 class="text-center" style="font-size: 2vw; font-family: 'Edwardian Script ITC', Serif">{{
+            <v-col class="px-2 pb-8" cols="12">
+              <h2 class="text-center dosis" style="font-size: 2vw;">{{
                 dame.name
                 }}</h2>
 
 
-              <p style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
+
 
               <p  class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.beschreibung }}
                 <br>
-
-                <b v-if="dame.geburtsalter">Alter:</b> <span style="font-family: 'Zapfino', Serif">
+                <br>
+                <b v-if="dame.geburtsalter">Alter:</b> <span >
                   {{ dame.geburtsalter }}
                 </span>
 
@@ -74,8 +74,9 @@
                 <br>
                 <br>
                   <b>
-                    DATING &amp; MORE:
+                    Dating &amp; more
                   </b>
+                <br>
                 <br>
                 <b v-if="dame.paarchenBegleitung">Pärchen Begleitung:</b>
                 <span v-if="dame.paarchenBegleitung">
@@ -105,7 +106,7 @@
                 </span>
 
               </p>
-
+              <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
             </v-col>
           </v-row>
         </v-col>
@@ -138,9 +139,9 @@
       </div>
 
     </v-img>
-    <div v-for="dame in damen" :key="dame" class="pb-8" style="width: 100vw; ">
+    <div v-for="dame in damen" :key="dame" class="pb-8 " style="width: 100vw; ">
       <v-row class="mx-0 pa-0" style="width: 100%; ">
-        <v-col class="pa-0" cols="12">
+        <v-col class="pa-0 " cols="12">
           <v-carousel style="height: 600px" theme="dark">
             <v-carousel-item
                 v-for="bild in dame.bilder"
@@ -287,7 +288,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Damen',
+  title: 'Mila Escort High-Class Begleitungen',
   link: [
     {
       rel: 'canonical',

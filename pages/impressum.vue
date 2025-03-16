@@ -31,7 +31,12 @@
               <b>
                 Mila Concepts
               </b> <br>
-              c/o ….
+
+              <p>
+                Röderbergweg 126 <br>
+                60385 <br>
+                Frankfurt am Main
+              </p>
             </p>
             <br>
 
@@ -50,8 +55,8 @@
               <b>
                 Erreichbarkeiten:
               </b> <br>
-              +49… <br>
-              E-Mail: …
+              Tel: +49 151 - 670 376 96<br>
+              E-Mail: Team@Mila-escort.de
             </p>
             <br>
           </div>

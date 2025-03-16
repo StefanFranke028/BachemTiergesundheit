@@ -32,10 +32,10 @@
             <v-col class="mt-16" cols="9">
               <br>
               <br>
-              <h2 class="text-center dm-serif" style="font-size: 1vw" v-html="team[0].text3"></h2>
+              <h2 class="text-center dm-serif" style="font-size: 16px" v-html="team[0].text3"></h2>
               <br>
               <br>
-              <p class="dosis" style=" text-align: justify;" v-html="team[0].text4">
+              <p class="dm-serif text-center" style="font-size: 16px"  v-html="team[0].text4">
               </p>
 
 
@@ -55,9 +55,9 @@
 
             <v-col class="" cols="9">
 
-              <h2 class="text-center dm-serif" style="font-size: 1vw" v-html="team[0].text5"></h2>
+              <h2 class="text-center dm-serif" style="font-size: 16px" v-html="team[0].text5"></h2>
 
-              <p class="dosis mt-5" style=" text-align: justify;" v-html="team[0].text6">
+              <p class="dm-serif mt-5 text-center" style="font-size: 16px" v-html="team[0].text6">
               </p>
 
             </v-col>

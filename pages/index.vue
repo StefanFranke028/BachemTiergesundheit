@@ -27,9 +27,7 @@
       </div>
       <div class="cardIn2">
         <div class="text3 ">
-          <p class="">
-            Willkommen bei Maxi Escort,
-          </p>
+
           <p v-html="landingpage[0].text2">
 
 
@@ -62,7 +60,7 @@
         <v-col class="pa-0" cols="6" style="background-color: #f1edec">
           <v-row class="d-flex justify-center align-end" style="width: 50%; height: 25%; position: absolute;">
             <v-col cols="6">
-              <p style="font-size: 2vh" v-html="landingpage[0].text5">
+              <p  v-html="landingpage[0].text5">
               </p>
               <br>
               <br>
@@ -70,7 +68,7 @@
               <div class="d-flex justify-center mt-10" style="width: 100%;">
                 <router-link to="damen">
                   <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> ZU Unseren
-                    Escoertmodels
+                    Escortmodels
                   </v-btn>
                 </router-link>
               </div>
@@ -78,7 +76,7 @@
 
           </v-row>
           <div class="pt-16" style="position: relative; top: 10vw ; left:-40%">
-            <h2 class=" text-center dm-serif" style="font-size: 30px" v-html="landingpage[0].text4"></h2>
+            <h2 class=" text-center dm-serif" style="font-size: 22px" v-html="landingpage[0].text4"></h2>
             <div class="vertical-marker">
             </div>
           </div>
@@ -98,8 +96,8 @@
           </v-col>
           <v-col class="d-flex justify-center" cols="6" style="margin-top: 15%">
             <div class="ml-16" style="height: 80%">
-              <h2 class="dosis1" style="color: #615f5f ;font-size: 26px" v-html="landingpage[0].text6"></h2>
-              <p class="mt-2" style="color: #615f5f" v-html="landingpage[0].text7">
+              <h2 class="dosis1" style="color: #000000 ;font-size: 26px" v-html="landingpage[0].text6"></h2>
+              <p class="mt-2" style="color: #000000" v-html="landingpage[0].text7">
 
               </p>
               <br>

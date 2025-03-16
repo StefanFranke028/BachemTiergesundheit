@@ -12,13 +12,13 @@
           <span  @click="navigateTo('vita')">Unsere Vita</span>
         </v-col>
         <v-col class="d-flex justify-center  align-center" cols="2">
-          <span  @click="navigateTo('team')">Arragement</span>
+          <span  @click="navigateTo('team')">Arrangement</span>
         </v-col>
         <v-col class="d-flex justify-center  align-center align-center" cols="2">
           <span  @click="navigateTo('damen')">High-Class Begleitungen</span>
         </v-col>
         <v-col class="d-flex justify-center  align-center" cols="2">
-          <span  @click="navigateTo('bewerben')">Preview</span>
+          <span  @click="navigateTo('bewerben')">Casting</span>
         </v-col>
         <v-col class="d-flex justify-center  align-center" cols="2">
           <span @click="navigateTo('kontakt')">Get in Touch</span>

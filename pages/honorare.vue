@@ -31,7 +31,7 @@
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">Maxi Dinner Date</h2>
+              <h2 class="text-center dm-serif" style="font-size: 2vw">Mila Dinner Date</h2>
               <br>
               <br>
               <v-row style="width: 100%; border-radius: 10px">
@@ -80,7 +80,7 @@
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">Maxi Escort Date</h2>
+              <h2 class="text-center dm-serif" style="font-size: 2vw">Mila Escort Date</h2>
               <br>
               <br>
               <v-row style="width: 100%; border-radius: 10px">
@@ -115,6 +115,7 @@
 
 
               </v-row>
+
               <v-row v-for="preis in escortPreise" :key="preis" style="width: 100%; ">
                 <v-col class="d-flex justify-center tabelleleftmid" cols="3">
                   <p class="text-center">
@@ -136,7 +137,9 @@
                     {{ preis.vip }}
                   </p>
                 </v-col>
+
               </v-row>
+              <p  class=" text-center mt-5">Für längere Buchungen kommen Sie vertrauensvoll auf uns für eine individuelle Absprache zu.</p>
             </v-col>
           </v-row>
         </v-col>
@@ -172,7 +175,7 @@
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
-          <h2 class="text-center text-white dm-serif" style="font-size: 5vw; ">Maxi Dinner Date</h2>
+          <h2 class="text-center text-white dm-serif" style="font-size: 5vw; ">Mila Dinner Date</h2>
           <br>
           <br>
           <v-row class="mx-0" style="width: 100%; border-radius: 10px">

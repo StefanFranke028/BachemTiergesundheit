@@ -18,7 +18,7 @@
       <v-col cols="3">
         <p>
           <b>
-          Get in Touch:
+          Get in Touch
 
           </b>
 
@@ -33,7 +33,7 @@
         <p class="mt-2">
           <b>
 
-          Office Zeiten:
+          Office Zeiten
           </b>
 
         </p>
@@ -41,24 +41,24 @@
           Montag-Freitag von 10:00 bis 18.00 Uhr
 
         </p>
-          <p>
-            Bitte beachte: An Sonn- und Feiertagen haben wir geschlossen.
-
-          </p>
-        <p class="mt-2">
-        Wir freuen uns darauf, dich an Werktagen wiederzusehen!
+        <p>
+          Bitte beachten: An Sonn- und Feiertagen haben wir geschlossen.
 
         </p>
-<p>
-        Für Buchungsanfragen bitten wir um eine Kontaktaufnahme ausschließlich per E-Mail.
+        <p class="mt-2">
+          Wir freuen uns darauf, Dich an Werktagen wiederzusehen!
 
-</p>
+        </p>
+        <p>
+         Für Buchungsanfragen bitten wir um eine Kontaktaufnahme ausschließlich per E-Mail.
+
+        </p>
 
       </v-col>
       <v-col cols="3">
         <p class="text-center">
           <b>
-            MILA ESCORT SERVICE
+            Mila Escord Service
           </b>
         </p>
         <p @click="navigateTo('blog')" class="text-center mt-2">
@@ -90,7 +90,7 @@
       <v-col cols="3">
         <p>
           <b>
-            Preview& High-Class Escort Service Jobs:
+            Preview & High-Class Escort Service Jobs
           </b>
         </p>
         <p class="mt-2" @click="navigateTo('bewerben')">
@@ -113,14 +113,14 @@
       <v-col class=" " cols="3">
             <p class="text-center">
               <b>
-                Escort Service Metropolen:
+                Escort Service Metropolen
 
               </b>
             </p>
-        <v-row class="ma-0 " style="width: 100%">
-          <v-col v-for="stadt in staedte" :key="stadt" class="pa-0 d-flex justify-center" cols="6">
+        <v-row class="ma-0 d-flex justify-center " style="width: 100%">
+          <v-col v-for="(stadt,index) in staedte" :key="stadt" class="pa-0 d-flex justify-center" cols="5">
             <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
-              <p class=" mt-1" style="cursor:pointer">
+              <p class=" mt-1 ml-2" style="cursor:pointer">
                 {{ stadt.name }}
               </p>
 
@@ -132,7 +132,7 @@
     </v-row>
     <div class="d-flex justify-center " style="position: relative;">
       <p style="font-size: 11px">
-        Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
+        Copyright © 2025 Mila Escort ® • Alle Rechte vorbehalten •
         <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
           <span class="">Anbieterkennzeichnung</span>
         </router-link> &nbsp;
@@ -142,7 +142,7 @@
         </router-link> &nbsp;
         •
         <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/verwaltung">
-          <span class="">Sitemap</span>
+          <span class="">Admin</span>
         </router-link> &nbsp;
 
 
@@ -172,7 +172,7 @@
     </v-row>
     <div class="d-flex justify-center px-2" style="position: relative;">
       <p style="font-size: 6px">
-        Copyright © 2024 Maxi Escort ® • Alle Rechte vorbehalten •
+        Copyright © 2025 Mila Escort ® • Alle Rechte vorbehalten •
         <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
           <span class="">Anbieterkennzeichnung</span>
         </router-link> &nbsp;
@@ -182,7 +182,7 @@
         </router-link> &nbsp;
         •
         <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/verwaltung">
-          <span class="">Sitemap</span>
+          <span class="">Admin</span>
         </router-link> &nbsp;
       </p>
     </div>

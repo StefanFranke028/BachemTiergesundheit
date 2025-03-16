@@ -79,7 +79,7 @@ export default {
         { title: 'Unsere Vita', icon: 'fluent:person-32-filled', route: 'vita' },
         { title: 'Arragement ', icon: 'fluent:people-team-16-filled', route: 'team' },
         { title: 'High-Class Begleitungen', icon: 'icon-park-solid:women', route: 'damen' },
-        { title: 'Preview', icon: 'fluent:chart-person-48-filled', route: 'casting' },
+        { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'casting' },
         { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'kontakt' },
         { title: 'Konditionen', icon: 'foundation:pricetag-multiple', route: 'honorare' },
         { title: 'Blog', icon: 'mdi-book', route: 'blog' },
