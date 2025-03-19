@@ -5,6 +5,7 @@
         <v-img alt="" class="" src="~/assets/LogoNew.svg"
                style="height: 130px; width: 130px; cursor: pointer" @click="navigateTo('/')"></v-img>
       </v-col>
+      -
 
       <v-col class="pa-0 d-flex justify-center align-center" cols="8">
         <v-row class="d-flex justify-center">
