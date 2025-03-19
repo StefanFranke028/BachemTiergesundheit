@@ -1,5 +1,5 @@
 <template>
-  <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'verwaltung'" :class="formattedPath" class="desktop">
+  <div v-if="(desktop|| tabletHorizontal) && formattedPath !== 'admin'" :class="formattedPath" class="desktop">
     <v-row class="ma-0 justify-center" style="width: 100%;">
       <v-col class="d-flex justify-center" cols="4">
         <div style="cursor: pointer">
@@ -18,13 +18,13 @@
       <v-col cols="3">
         <p>
           <b>
-          Get in Touch
+            Get in Touch
 
           </b>
 
         </p>
         <p>
-        Fon: +49 151- 670 376 96
+          Fon: +49 151- 670 376 96
 
         </p>
         <p>
@@ -33,7 +33,7 @@
         <p class="mt-2">
           <b>
 
-          Office Zeiten
+            Office Zeiten
           </b>
 
         </p>
@@ -50,7 +50,7 @@
 
         </p>
         <p>
-         Für Buchungsanfragen bitten wir um eine Kontaktaufnahme ausschließlich per E-Mail.
+          Für Buchungsanfragen bitten wir um eine Kontaktaufnahme ausschließlich per E-Mail.
 
         </p>
 
@@ -61,27 +61,27 @@
             Mila Escord Service
           </b>
         </p>
-        <p @click="navigateTo('blog')" class="text-center mt-2">
+        <p class="text-center mt-2" @click="navigateTo('blog')">
 
-        Magazin
+          Magazin
         </p>
-        <p  @click="navigateTo('/')" class="text-center mt-2">
+        <p class="text-center mt-2" @click="navigateTo('/')">
           Mila's Escort Philosophie
 
         </p>
         <p class="text-center mt-2">
-        Feminine Finesse
+          Feminine Finesse
 
         </p>
-        <p @click="navigateTo('/impressum')" class="text-center mt-2">
+        <p class="text-center mt-2" @click="navigateTo('/impressum')">
           Anbieterkennzeichnung
 
         </p>
-        <p @click="navigateTo('/impressum')" class="text-center mt-2">
+        <p class="text-center mt-2" @click="navigateTo('/vertragsbedingungen')">
           Vertragsbedingungen
 
         </p>
-        <p @click="navigateTo('/datenschutz')" class="text-center mt-2">
+        <p class="text-center mt-2" @click="navigateTo('/datenschutz')">
           Ihre Privatsphäre
 
         </p>
@@ -97,7 +97,7 @@
 
           Entdecke spannende Karrieremöglichkeiten.
         </p>
-        <p @click="navigateTo('bewerben')" class="mt-2">
+        <p class="mt-2" @click="navigateTo('bewerben')">
           Dein Weg zu einer erfolgreichen Escort Karriere
 
         </p>
@@ -105,18 +105,18 @@
           Werde ein Teil unseres exklusiven Escort Agency Teams
 
         </p>
-        <p @click="navigateTo('bewerben')" class="mt-2">
+        <p class="mt-2" @click="navigateTo('bewerben')">
           Antworten auf häufige Fragen für neue Escort Talente
 
         </p>
       </v-col>
       <v-col class=" " cols="3">
-            <p class="text-center">
-              <b>
-                Escort Service Metropolen
+        <p class="text-center">
+          <b>
+            Escort Service Metropolen
 
-              </b>
-            </p>
+          </b>
+        </p>
         <v-row class="ma-0 d-flex justify-center " style="width: 100%">
           <v-col v-for="(stadt,index) in staedte" :key="stadt" class="pa-0 d-flex justify-center" cols="5">
             <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
@@ -141,7 +141,7 @@
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
         •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/verwaltung">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
           <span class="">Admin</span>
         </router-link> &nbsp;
 
@@ -181,7 +181,7 @@
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
         •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/verwaltung">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/pages/admin">
           <span class="">Admin</span>
         </router-link> &nbsp;
       </p>
@@ -347,10 +347,12 @@ export default {
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 
 }
-p{
+
+p {
   font-size: 13px;
   cursor: pointer;
 }
+
 .mobile {
   width: 100%;
   height: 110px;

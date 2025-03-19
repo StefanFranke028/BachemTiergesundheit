@@ -34,12 +34,15 @@
       <v-col cols="6">
         <v-row>
           <v-col class="pa-0" cols="12">
-            <v-text-field v-model="email" label="Email" type="email"></v-text-field>
+            <v-text-field v-model="email" label="Email Kontakt" type="email"></v-text-field>
           </v-col>
           <v-col class="pa-0" cols="12">
             <v-text-field v-model="tel" label="Telefonnummer" type="tel"></v-text-field>
           </v-col>
         </v-row>
+      </v-col>
+      <v-col cols="12">
+        <v-text-field v-model="emailBewerber" label="Email Bewerber" type="email"></v-text-field>
       </v-col>
       <v-col class="d-flex justify-center" cols="12">
         <v-btn color="white" @click="openDialog">Änderungen abschicken</v-btn>
@@ -94,6 +97,7 @@ export default {
       textarea4: '',
       textarea5: '',
       email: null,
+      emailBewerber: null,
       tel: null,
 
       loading: false,
@@ -124,6 +128,7 @@ export default {
           this.textarea4 = this.unformattedText(response.text4);
           this.textarea5 = this.unformattedText(response.text5);
           this.email = response.email;
+          this.emailBewerber = response.emailBewerber;
           this.tel = response.telefon;
 
         }
@@ -161,6 +166,7 @@ export default {
         text4: this.formattedText(this.textarea4),
         text5: this.formattedText(this.textarea5),
         email: this.email,
+        emailBewerber: this.emailBewerber,
         telefon: this.tel
 
       };

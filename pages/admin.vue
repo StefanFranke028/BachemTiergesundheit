@@ -50,17 +50,18 @@
                 class="mt-n10"
                 style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
               <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
-              <TeamComponent v-if="selectedSeite === 'Team'"/>
+              <TeamComponent v-if="selectedSeite === 'Arrangement'"/>
               <VitaComponent v-if="selectedSeite === 'Vita'"/>
-              <EscortComponent v-if="selectedSeite === 'Escort'"/>
-              <BewerbenComponent v-if="selectedSeite === 'Bewerben'"/>
-              <KontaktComponent v-if="selectedSeite === 'Kontakt'"/>
-              <HonorareComponent v-if="selectedSeite === 'Honorare'"/>
-              <BlogComponent v-if="selectedSeite === 'Blog'"/>
+              <EscortComponent v-if="selectedSeite === 'High Class Begleitungen'"/>
+              <BewerbenComponent v-if="selectedSeite === 'Escort'"/>
+              <KontaktComponent v-if="selectedSeite === 'Get in touch'"/>
+              <HonorareComponent v-if="selectedSeite === 'Konditionen'"/>
+              <BlogComponent v-if="selectedSeite === 'Magazin'"/>
+              <VertragsbedingungenComponent v-if="selectedSeite === 'Vertragsbedingungen'"/>
               <!-- Weitere Optionen basierend auf selectedItem -->
               <BlogEintraegeComponent v-if="selectedItem === 'Blog-Einträge'"/>
-              <DinnerPreiseComponent v-if="selectedItem === 'Honorare Tabelle 1'"/>
-              <EscortPreiseComponent v-if="selectedItem === 'Honorare Tabelle 2'"/>
+              <DinnerPreiseComponent v-if="selectedItem === 'Konditionen Tabelle 1'"/>
+              <EscortPreiseComponent v-if="selectedItem === 'Konditionen Tabelle 2'"/>
               <DamenComponent v-if="selectedItem === 'Damen'"/>
               <StadtComponent v-if="selectedItem === 'Stadt'"/>
             </v-card>
@@ -91,7 +92,7 @@ import TeamComponent from "~/components/verwaltung/TeamComponent.vue";
 import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
 import EscortComponent from "~/components/verwaltung/EscortComponent.vue";
 import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
-import KontaktComponent from "~/components/verwaltung/KontaktComponent.vue";
+import KontaktComponent from "~/components/verwaltung/kontaktComponent.vue";
 import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
 import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
 import BlogEintraegeComponent from "~/components/verwaltung/BlogEintraegeComponent.vue";
@@ -100,6 +101,7 @@ import EscortPreiseComponent from "~/components/verwaltung/EscortPreiseComponent
 import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
 import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
 import LoginComponent from "~/components/verwaltung/LoginComponent.vue";
+import VertragsbedingungenComponent from "~/components/verwaltung/VertragsbedinungenComponent.vue";
 
 export default {
   name: "verwaltung",
@@ -109,7 +111,7 @@ export default {
     VitaComponent,
     EscortComponent,
     BewerbenComponent,
-    KontaktComponent,
+    KontaktComponent: KontaktComponent,
     HonorareComponent,
     BlogComponent,
     BlogEintraegeComponent,
@@ -118,11 +120,12 @@ export default {
     DamenComponent,
     StadtComponent,
     LoginComponent,
+    VertragsbedingungenComponent
   },
   data() {
     return {
-      seiten: ['Startseite', 'Team', 'Vita', 'Escort', 'Bewerben', 'Kontakt', 'Honorare', 'Blog'],
-      items: ['Blog-Einträge', 'Honorare Tabelle 1', 'Honorare Tabelle 2', 'Damen', 'Stadt'],
+      seiten: ['Startseite', 'Arrangement', 'Vita', 'High Class Begleitungen', 'Escort', 'Get in touch', 'Konditionen', 'Magazin', 'Vertragsbedingungen'],
+      items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Stadt'],
       selectedSeite: null,
       selectedItem: null,
       isLoading: true,
@@ -131,6 +134,8 @@ export default {
   watch: {
     // Wenn im ersten Dropdown eine Seite ausgewählt wird:
     selectedSeite(newVal) {
+      console.log('selectedItem:', newVal);  // Füge dies hinzu
+
       if (newVal) {
         this.selectedItem = null; // Zweites Dropdown zurücksetzen
         this.updateHashForSeite();
@@ -198,10 +203,12 @@ export default {
     // Liest beim Laden der Seite den Hash aus und setzt entweder selectedSeite oder selectedItem anhand des slugified Values
     setComponentFromHash() {
       const hash = window.location.hash.slice(1);
+      console.log("Hash from URL:", hash);
       const seitenSlugs = this.seiten.reduce((acc, s) => {
         acc[this.slugify(s)] = s;
         return acc;
       }, {});
+      console.log("Generated seitenSlugs:", seitenSlugs);
       const itemsSlugs = this.items.reduce((acc, i) => {
         acc[this.slugify(i)] = i;
         return acc;

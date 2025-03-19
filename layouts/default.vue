@@ -41,7 +41,7 @@ export default {
       return process.client ? screenStore.tabletHorizontal : false;
     },
     isVerwaltung() {
-      return this.$route.path === '/verwaltung';
+      return this.$route.path === '/admin';
     },
   },
 };

@@ -3,9 +3,7 @@
     <div class="card">
       <div class="cardIn1 px-5">
         <h1 class="dm-serif mt-2 text-center" style="font-size: 22px" v-html="bewerben[0].text1"></h1>
-
         <p class="dosis mt-7" style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
-
         </p>
       </div>
     </div>
@@ -36,15 +34,15 @@
                       <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email">
                       {{ bewerben[0].email }}</a></p>
                   </v-col>
+
                   <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer; color: #2a2ae4"><a
-                        href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-                        style="text-decoration: none"
-                        target="_blank">#GerneperDu</a>
-                    </p>
+                    <p style="" v-html="bewerben[0].text3"></p>
                   </v-col>
                   <v-col class="d-flex " cols="12">
-                    <p class="dosis" style="" v-html="bewerben[0].text3"></p>
+                    <p style="" v-html="bewerben[0].text4"></p>
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p style="" v-html="bewerben[0].text5"></p>
                   </v-col>
                 </v-row>
               </div>
@@ -54,14 +52,32 @@
       </v-row>
     </div>
 
-    <div style="width: 100vw; height: 1400px">
+    <div style="width: 100vw; " class="">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col cols="12" style="background-color: #ede6e7; padding-top: 120px">
           <v-row class="ma-0 mt-10 justify-center " style="width: 100%; height: 100% ">
             <v-col cols="10">
-              <div class="mt-n16 " style="width: 100%; height: 300px;">
-                <h2 style="font-size: 17px" v-html="bewerben[0].text4"></h2> <br>
-                <div class="textsize" v-html="bewerben[0].text5"></div>
+              <div class="mt-n16 pb-10" style="width: 100%; ">
+                <h2 style="font-size: 23px"  v-html="bewerben[0].text6"></h2>
+                <br>
+                <p v-html="bewerben[0].text7">
+
+                </p> <br>
+                <p  v-html="bewerben[0].text8">
+
+                </p> <br>
+                <p  v-html="bewerben[0].text9">
+
+                </p> <br>
+                <p  v-html="bewerben[0].text10">
+
+                </p> <br>
+                <p v-html="bewerben[0].text11">
+
+                </p> <br>
+                <p v-html="bewerben[0].text12">
+
+                </p>
               </div>
             </v-col>
           </v-row>
@@ -107,15 +123,10 @@
               <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+ bewerben[0].email"
                                                                      v-html="bewerben[0].email"></a></p>
           </v-col>
+
           <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer; color: #1e1eda"><a
-                href="https://www.google.com/search?q=gerneperdu&rlz=1C1CHBF_deDE1080DE1080&oq=gerneperdu&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIICAYQABgKGB4yBggHEAAYHjIGCAgQABgeMgYICRAAGB7SAQgyOTAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-                style="text-decoration: none"
-                target="_blank">#GerneperDu</a>
-            </p>
-          </v-col>
-          <v-col class="d-flex " cols="12">
-            <p class="dosis" style="" v-html="bewerben[0].text3"></p>
+            <p style="">Ich freue mich darauf, <br> <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
+              ermöglichen zu können.</p>
           </v-col>
         </v-row>
       </div>
@@ -125,9 +136,26 @@
       <div
           class="mx-auto pa-4"
           style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <div style="width: 100%; height: 2100px;">
-          <h2 style="font-size: 17px" v-html="bewerben[0].text4"></h2> <br>
-          <p class="textsize" v-html="bewerben[0].text5">
+        <div class="mt-n16 pb-10" style="width: 100%; ">
+          <h2 style="font-size: 23px" class="mt-13" v-html="bewerben[0].text6"></h2>
+          <br>
+          <p v-html="bewerben[0].text7">
+
+          </p> <br>
+          <p  v-html="bewerben[0].text8">
+
+          </p> <br>
+          <p  v-html="bewerben[0].text9">
+
+          </p> <br>
+          <p  v-html="bewerben[0].text10">
+
+          </p> <br>
+          <p v-html="bewerben[0].text11">
+
+          </p> <br>
+          <p v-html="bewerben[0].text12">
+
           </p>
         </div>
       </div>
@@ -191,13 +219,13 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Casting',
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/casting`,
+      href: `https://maxi-escort.de/bewerben`,
     },
   ],
+  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
   meta: [
     {
       name: 'description',
@@ -284,7 +312,7 @@ export default {
 }
 
 h1 {
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 .vertical-marker {
@@ -346,6 +374,14 @@ h1 {
 }
 
 p {
+  font-family: "Aptos", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.3;
+}
+
+.dosis1 {
   font-family: "Aptos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
