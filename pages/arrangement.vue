@@ -7,7 +7,7 @@
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="team[0].text2">
         </p>
-        <router-link aria-label="Escort" style="position: absolute; left: -5%; top:46vh" to="damen">
+        <router-link aria-label="Escort" style="position: absolute; left: -5%; top:46vh" to="highClassBegleitungen">
           <v-btn class="text-center" theme="dark"> zu unseren escortdamen</v-btn>
         </router-link>
 
@@ -93,7 +93,7 @@
             <br>
             <br>
 
-            <router-link aria-label="Escort" to="damen">
+            <router-link aria-label="Escort" to="highClassBegleitungen">
               <v-btn class="text-center mt-3 " theme="dark"> Unseren Escortdamen</v-btn>
             </router-link>
           </div>
@@ -188,7 +188,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Team',
+  title: 'Mila Escort Arrangement',
   link: [
 
     {

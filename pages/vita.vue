@@ -8,7 +8,7 @@
         <p class="dosis" style="margin-top: -100px;" v-html="vita[0].text2">
 
         </p>
-        <router-link aria-label="Escort" style="position: relative; left: -14%; top:13vh" to="damen">
+        <router-link aria-label="Escort" style="position: relative; left: -14%; top:13vh" to="highClassBegleitungen">
           <v-btn class="text-center" theme="dark"> zu unseren escortdamen</v-btn>
         </router-link>
 
@@ -79,7 +79,7 @@
 
 
               <div class="d-flex justify-center mt-16" style="width: 100%;">
-                <router-link to="damen">
+                <router-link to="highClassBegleitungen">
                   <v-btn class="text-center" theme="dark"> Zu unseren Escortmodels</v-btn>
                 </router-link>
 
@@ -158,7 +158,7 @@
             <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="vita[0].text2">
 
             </div>
-            <router-link aria-label="Escort" to="damen">
+            <router-link aria-label="Escort" to="highClassBegleitungen">
               <v-btn class="text-center mt-3" theme="dark">Unsere Escortdamen</v-btn>
             </router-link>
           </div>
@@ -196,7 +196,7 @@
         <h2 class="text-center mt-4 dm-serif" style="font-size: 3vw" v-html="vita[0].text11"></h2>
 
         <p class="dosis mt-2" style=" text-align: justify; font-size: 12px" v-html="vita[0].text12"></p>
-        <router-link to="damen">
+        <router-link to="highClassBegleitungen">
           <v-btn class="mt-5 text-center" theme="dark"> Zu unseren Escortmodels</v-btn>
         </router-link>
       </div>
@@ -289,7 +289,7 @@ useHead({
   htmlAttrs: {
     lang: 'de' // Setzt die Sprache auf Deutsch
   },
-  title: 'Maxi Escort Vita',
+  title: 'Mila Escort Vita',
   link: [
     {
       rel: 'canonical',

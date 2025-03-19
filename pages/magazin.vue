@@ -18,6 +18,17 @@
                src="~/assets/blog_1_komprimiert.webp"
                style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></v-img>
       </div>
+      <div style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 142%; left: 90%; transform: translate(-50%, -50%);">
+        <span
+            v-for="(category, index) in categories"
+            :key="index"
+            :class="{ 'active-category': selectedCategory === category.value }"
+            class="category"
+            @click="selectedCategory = category.value"
+        >
+          {{ category.label }}
+        </span>
+      </div>
     </div>
 
     <div class="mt-n2" style="width: 100vw; height:150px; background-color: #c7dee6">
@@ -26,8 +37,15 @@
 
 
     <div>
-      <v-row v-for="(blog, index) in blogs" :key="blog" class="ma-0 pa-0"
-             style="width: 100%; height: 100%; min-height: 500px">
+      <v-row
+          v-for="(blog, index) in blogs
+    .slice()
+    .reverse()
+    .filter(blog => blog.magazin === selectedCategory)"
+          :key="blog"
+          class="ma-0 pa-0"
+          style="width: 100%; height: 100%; min-height: 500px"
+      >
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
           <v-row class="ma-0" style="width: 100%; height: 100%;">
             <v-col class="d-flex align-center" cols="6">
@@ -35,11 +53,9 @@
             </v-col>
             <v-col class="pa-12" cols="6">
               <h2 class="text-center mt-4 dm-serif" style="font-size: 1.1vw" v-html="blog.ueberschrift"></h2>
-
-              <h3 class="text-center dm-serif" style="
-              color: #4a4949; font-size: 0.9vw" v-html="blog.unterUeberschrift"></h3>
+              <h3 class="text-center dm-serif" style="color: #4a4949; font-size: 0.9vw" v-html="blog.unterUeberschrift"></h3>
               <br><br>
-              <p class="dosis" style=""  v-html="blog.text"></p>
+              <p class="dosis" v-html="blog.text"></p>
               <p class="mt-10" style="color: #4a4949" v-html="blog.autor"></p>
               <input v-model="blog.datum" aria-label="test" class="mt-10" disabled readonly style="color: #8e8c8c"
                      type="date"/>
@@ -47,6 +63,7 @@
           </v-row>
         </v-col>
       </v-row>
+
     </div>
 
 
@@ -78,26 +95,34 @@
 
     </v-img>
 
-    <v-img v-for="(blog, index) in blogs" :key="blog" :src="blog.bild"
-           alt="schwarz-weis Hintergrundbild"
-           class="d-flex justify-center align-center" cover style="width: 100%; padding-top: 20px  ">
+    <v-img v-for="(blog, index) in blogs
+    .slice()
+    .reverse()
+    .filter(blog => blog.magazin === selectedCategory)"
+           :key="blog"
+           :src="blog.bild"
+           alt="schwarz-weiß Hintergrundbild"
+           class="d-flex justify-center align-center"
+           cover
+           style="width: 100%; padding-top: 20px;">
 
       <v-row class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
         <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
           <v-row class="ma-0" style="width: 100%; height: 100%;">
-
             <v-col cols="12">
               <h2 class="text-center dm-serif" style="font-size: 12px" v-html="blog.ueberschrift"></h2>
               <h2 class="text-center dm-serif" style="color: #4a4949; font-size: 11px" v-html="blog.unterUeberschrift"></h2>
               <br><br>
-              <p class="dosis" style="text-align: justify; font-size: 11px"  v-html="blog.text"></p>
+              <p class="dosis" style="text-align: justify; font-size: 11px" v-html="blog.text"></p>
               <p class="mt-10" style="color: #4a4949" v-html="blog.autor"></p>
               <input v-model="blog.datum" aria-label="test" class="mt-10" disabled readonly style="color: #4a4949"
-                     type="date"/></v-col>
+                     type="date"/>
+            </v-col>
           </v-row>
         </v-col>
       </v-row>
     </v-img>
+
 
   </div>
 </template>
@@ -107,8 +132,16 @@ import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const blog = ref([]);
-const blogs = ref([]);
+const blogs = ref([])
+const { proxy } = getCurrentInstance()
 
+
+const selectedCategory = ref(true); // Standardwert
+
+const categories = [
+  { label: "Blog Beiträge", value: true },
+  { label: "Feminine Finesse", value: false }
+];
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
   let token = null;
@@ -167,14 +200,20 @@ const {data: blogs1, pending1, error2} = await useAsyncData('blog', async () => 
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
   }
-});
+})
+
+blogs1.value
+
 // Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
 if (landingpage1.value) {
   blog.value.push(landingpage1.value);
 }
 if (blogs1.value) {
-  blogs.value = blogs1.value;
+  blogs.value = blogs1.value
+  blogs.value
+
 }
+
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
@@ -419,5 +458,22 @@ style >
   height: 50vh; /* Höhe des Striches */
   background-color: black; /* Farbe des Striches */
   transform: translateX(-50%); /* Zentriert den Strich horizontal */
+}
+.category {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.category:hover {
+  color: #343fc5; /* Lila-Farbton als Highlight */
+}
+
+.active-category {
+  font-weight: bold;
+  color: #343fc5;
 }
 </style>

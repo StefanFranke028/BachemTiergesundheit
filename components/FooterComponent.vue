@@ -61,7 +61,7 @@
             Mila Escord Service
           </b>
         </p>
-        <p class="text-center mt-2" @click="navigateTo('blog')">
+        <p class="text-center mt-2" @click="navigateTo('magazin')">
 
           Magazin
         </p>
@@ -117,15 +117,27 @@
 
           </b>
         </p>
-        <v-row class="ma-0 d-flex justify-center " style="width: 100%">
-          <v-col v-for="(stadt,index) in staedte" :key="stadt" class="pa-0 d-flex justify-center" cols="5">
-            <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
-              <p class=" mt-1 ml-2" style="cursor:pointer">
+        <v-row class="ma-0 d-flex  " style="width: 100%">
+          <v-col
+              v-for="(stadt, index) in staedte"
+              :key="stadt"
+              class="pa-0 d-flex justify-center"
+              cols="6"
+          >
+            <nuxt-link
+                :to="'MilaEscort-' + stadt.name"
+                style="text-decoration: none; color: black"
+            >
+              <p
+                  class="mt-1"
+                  :class="index % 2 === 0 ? 'ml-20' : 'mr-20'"
+                  style="cursor: pointer"
+              >
                 {{ stadt.name }}
               </p>
-
             </nuxt-link>
           </v-col>
+
         </v-row>
 
       </v-col>
@@ -161,7 +173,7 @@
     </v-row>
     <v-row class="ma-0 " style="width: 100%">
       <v-col v-for="stadt in staedte" :key="stadt" cols="6">
-        <nuxt-link :to="'MaxiEscort-'+ stadt.name" style="text-decoration: none; color: black">
+        <nuxt-link :to="'MilaEscort-'+ stadt.name" style="text-decoration: none; color: black">
           <p class="text-center" style="cursor:pointer">
             {{ stadt.name }}
           </p>
@@ -227,19 +239,7 @@ if (landingpage1.value) {
 }
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
-useHead({
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
-  meta: [
-    {
-      name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
-    },
-    {
-      name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
-    },
-  ],
-});
+
 </script>
 
 <script>
@@ -276,14 +276,11 @@ export default {
     formattedPath() {
       // Überprüfe, ob der Pfad mehr als nur ein "/" enthält
       if (this.$route.path !== '/') {
-        // Überprüfe, ob der Pfad mit "maxi" beginnt
-        if (this.$route.path.startsWith('/Maxi')) {
+        if (this.$route.path.startsWith('/Mila')) {
           return 'footer';
         }
-        // Entferne das führende "/" vom Pfad
         return this.$route.path.substring(1);
       }
-      // Wenn der Pfad nur aus "/" besteht, gib ihn unverändert zurück
       return 'footer';
     }
   }
@@ -296,17 +293,17 @@ export default {
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
-.damen {
+.highClassBegleitungen {
 
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
 
-.honorare {
+.konditionen {
 
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
 
-.kontakt {
+.getInTouch {
 
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 }
@@ -326,12 +323,12 @@ export default {
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 }
 
-.bewerben {
+.casting {
 
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
-.blog {
+.magazin {
 
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
@@ -342,7 +339,7 @@ export default {
 
 }
 
-.team {
+.arrangement {
 
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 
@@ -366,5 +363,11 @@ p {
 .nav-link {
   text-decoration: none;
   color: inherit;
+}
+.ml-20{
+  margin-left: 100px
+}
+.mr-20{
+  margin-right: 100px
 }
 </style>

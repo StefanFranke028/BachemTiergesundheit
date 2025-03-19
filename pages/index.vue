@@ -66,7 +66,7 @@
               <br>
 
               <div class="d-flex justify-center mt-10" style="width: 100%;">
-                <router-link to="damen">
+                <router-link to="highClassBegleitungen">
                   <v-btn aria-label="Zu unseren Escortmodels" class="text-center" theme="dark"> ZU Unseren
                     Escortmodels
                   </v-btn>
@@ -289,7 +289,7 @@ useHead({
   htmlAttrs: {
     lang: 'de' // Setzt die Sprache auf Deutsch
   },
-  title: 'Maxi Escort Service',
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'preload',

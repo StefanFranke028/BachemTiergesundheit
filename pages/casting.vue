@@ -219,13 +219,14 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
+
   link: [
     {
       rel: 'canonical',
       href: `https://maxi-escort.de/bewerben`,
     },
   ],
-  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  title: 'Mila Escort Casting',
   meta: [
     {
       name: 'description',

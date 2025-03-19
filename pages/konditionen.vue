@@ -8,7 +8,7 @@
         <p class="dosis " style="margin-top: -200px"  v-html="honorare[0].text2">
         </p>
         <div class="d-flex justify-center mt-10" style="width: 100%;">
-          <router-link style="position: relative; left: -14%; top:11vh" to="damen">
+          <router-link style="position: relative; left: -14%; top:11vh" to="highClassBegleitungen">
             <v-btn class="text-center" theme="dark">ZU Unseren Escortmodels</v-btn>
           </router-link>
 
@@ -31,7 +31,7 @@
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">Mila Dinner Date</h2>
+              <h2 class="text-center dm-serif" style="font-size: 2vw" v-html="honorare[0].tabelle1" ></h2>
               <br>
               <br>
               <v-row style="width: 100%; border-radius: 10px">
@@ -80,7 +80,7 @@
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
             <v-col cols="2"></v-col>
             <v-col cols="8">
-              <h2 class="text-center dm-serif" style="font-size: 2vw">Mila Escort Date</h2>
+              <h2 class="text-center dm-serif" style="font-size: 2vw" v-html="honorare[0].tabelle2"></h2>
               <br>
               <br>
               <v-row style="width: 100%; border-radius: 10px">
@@ -175,7 +175,7 @@
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
-          <h2 class="text-center text-white dm-serif" style="font-size: 5vw; ">Mila Dinner Date</h2>
+          <h2 class="text-center text-white dm-serif" style="font-size: 5vw; " v-html="honorare[0].tabelle1"></h2>
           <br>
           <br>
           <v-row class="mx-0" style="width: 100%; border-radius: 10px">
@@ -213,7 +213,7 @@
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
-          <h2 class="text-center dm-serif" style="font-size: 5vw; ">Maxi Escort Date</h2>
+          <h2 class="text-center dm-serif" style="font-size: 5vw; " v-html="honorare[0].tabelle2"></h2>
           <br>
           <br>
           <v-row class="ma-0" style="width: 100%; border-radius: 10px">
@@ -406,7 +406,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort honorare',
+  title: 'Mila Escort Konditionen',
   link: [
     {
       rel: 'canonical',
@@ -432,7 +432,7 @@ useHead({
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "damen",
+  name: "highClassBegleitungen",
   computed: {
     wide() {
       const screenStore = useScreenStore();
