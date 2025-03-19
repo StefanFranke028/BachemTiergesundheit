@@ -52,6 +52,15 @@
             <v-col cols="4">
               <v-img v-if="base64Image2" :src="base64Image2" max-width="100%"></v-img>
             </v-col>
+            <v-col cols="4">
+              <v-switch
+                  v-model="magazin"
+                  :false-value="false"
+                  :label="magazin === true ? 'Ist ein Magazin-Eintrag' : 'Ist ein Femininefinesse-Eintrag'"
+                  :true-value="true"
+                  hide-details
+              ></v-switch>
+            </v-col>
             <v-col :class="editedEntry ? 'justify-end' : 'justify-center'" :cols="editedEntry ? '6' : '12'"
                    class="d-flex">
               <v-btn :loading="loading" color="white" @click="submitChanges">
@@ -160,6 +169,7 @@ export default {
       blogEntries: [],
       editedEntry: null,
       deleteDialog: false,
+      magazin: false,
       headers: [
         {title: 'Id', value: 'id'},
         {title: 'Überschrift', value: 'ueberschrift'},
@@ -222,6 +232,7 @@ export default {
             text: this.unformattedText(entry.text),
             autor: entry.autor,
             datum: entry.datum,
+            magazin: entry.magazin,
             bild: entry.bild,
             bild2: entry.bild2
           }));
@@ -243,7 +254,8 @@ export default {
       this.text = entry.text;
       this.base64Image = entry.bild;
       this.base64Image2 = entry.bild2;
-      this.bild = "Bild"
+      this.magazin = entry.magazin,
+          this.bild = "Bild"
       this.bild2 = "Bild"
       this.autor = entry.autor;
     },
@@ -290,7 +302,8 @@ export default {
         text: this.formattedText(this.text),
         bild: this.base64Image,
         bild2: this.base64Image2,
-        autor: this.autor
+        autor: this.autor,
+        magazin: this.magazin
       };
 
       try {
