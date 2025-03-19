@@ -24,8 +24,6 @@
             <v-col cols="7">
               <div class="d-flex mt-n16" style="width: 100%; height: 270px;">
                 <v-row class="  ma-0" style="width: 100%; height: 30%">
-
-
                   <v-col class="d-flex " cols="12">
                     <p class="dosis" style="" v-html="kontakt[0].text3"></p>
                   </v-col>
