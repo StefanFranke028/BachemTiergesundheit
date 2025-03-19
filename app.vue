@@ -65,7 +65,7 @@ export default {
       return process.client ? screenStore.tabletHorizontal : false;
     },
     isVerwaltung() {
-      return this.$route.path === '/verwaltung';
+      return this.$route.path === '/admin';
     },
   },
 
@@ -79,9 +79,11 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+
 body {
   font-family: "Aptos", sans-serif;
 }
+
 .vertical-marker-mobile {
   position: relative;
   height: 84px;

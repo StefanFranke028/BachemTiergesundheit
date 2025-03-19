@@ -17,10 +17,10 @@
 
       </v-row>
     </div>
-    <div style="width: 100vw; height: 700px">
+    <div style="width: 100vw; height: 800px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="12" style="background-color: rgba(215,232,215,0.56)">
-          <v-row class="ma-0 mt-10 justify-center align-center" style="width: 100%; height: 100%">
+          <v-row class="ma-0 mt-n16 justify-center align-center" style="width: 100%; height: 100%">
             <v-col cols="7">
               <div class="d-flex mt-n16" style="width: 100%; height: 270px;">
                 <v-row class="  ma-0" style="width: 100%; height: 30%">
@@ -31,7 +31,8 @@
                   </v-col>
                   <v-col class="d-flex " cols="12">
                     <p class="dosis" style=" " v-html="kontakt[0].text4"></p>
-                  </v-col>  <v-col class="d-flex " cols="12">
+                  </v-col>
+                  <v-col class="d-flex " cols="12">
                     <p class="dosis" style=" " v-html="kontakt[0].text5"></p>
 
                   </v-col>
@@ -43,9 +44,17 @@
                   <v-col class="d-flex " cols="12">
                     <p style="cursor: pointer">
                       <Icon icon="fluent-mdl2:edit-mail"/>
-                      &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email">
+                      &nbsp; E-Mail Kontakt: <a :href="'mailto:'+kontakt[0].email">
                       {{ kontakt[0].email }}</a></p>
                   </v-col>
+                  <v-col class="d-flex " cols="12">
+                    <p style="cursor: pointer">
+                      <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail Bewerber: <a
+                        :href="'mailto:'+kontakt[0].emailBewerber"
+                        v-html="kontakt[0].emailBewerber"></a></p>
+                  </v-col>
+
+
                 </v-row>
               </div>
 
@@ -95,8 +104,13 @@
           </v-col>
           <v-col class="d-flex " cols="12">
             <p style="cursor: pointer">
-              <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+kontakt[0].email"
-                                                                     v-html="kontakt[0].email"></a></p>
+              <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail Kontakt: <a :href="'mailto:'+kontakt[0].email"
+                                                                             v-html="kontakt[0].email"></a></p>
+          </v-col>
+          <v-col class="d-flex " cols="12">
+            <p style="cursor: pointer">
+              <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail Bewerber: <a :href="'mailto:'+kontakt[0].emailBewerber"
+                                                                              v-html="kontakt[0].emailBewerber"></a></p>
           </v-col>
 
           <v-col class="d-flex mt-n3 " cols="12">
