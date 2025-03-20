@@ -1,5 +1,5 @@
 <template>
-<div class="header">
+<div class="header1">
   <v-navigation-drawer
       v-model="drawer"
       temporary
@@ -92,7 +92,7 @@ export default {
 
 
 <style scoped>
-.header{
+.header1{
   height: 90px;
   box-shadow: 1px 1px 5px black;
 }
