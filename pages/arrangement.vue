@@ -7,7 +7,7 @@
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="team[0].text2">
         </p>
-        <router-link aria-label="Escort" style="position: absolute; left: -5%; top:46vh" to="damen">
+        <router-link aria-label="Escort" style="position: absolute; left: -5%; top:46vh" to="highClassBegleitungen">
           <v-btn class="text-center" theme="dark"> zu unseren escortdamen</v-btn>
         </router-link>
 
@@ -79,21 +79,13 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif mt-2" style="margin-left: -90px; " v-html="team[0].text1">
+              <h1 class="text-center  text5 dosis" v-html="team[0].text1">
               </h1>
+
             </div>
             <div class="pa-3 mt-n11 dosis" style="font-size: 11px; text-align: justify;" v-html="team[0].text2">
-
-
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <router-link aria-label="Escort" to="damen">
+            <router-link aria-label="Escort" to="highClassBegleitungen">
               <v-btn class="text-center mt-3 " theme="dark"> Unseren Escortdamen</v-btn>
             </router-link>
           </div>
@@ -104,24 +96,24 @@
     </v-img>
 
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-3 justify-center align-center" cover
-           src="~/assets/team_1_komprimiert.webp" style="width: 100%;   ">
+           src="~/assets/team_1_komprimiert.webp" style="width: 100%;">
+
       <div class="mx-auto pa-4"
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h2 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text3"></h2>
+        <p class="text-center dm-serif" style=" font-size: 12px" v-html="team[0].text3"></p>
 
-        <p class="dosis mt-2" style=" text-align: justify; font-size: 12px" v-html="team[0].text4">
+        <p class="dm-serif text-center mt-2" style=" font-size: 12px" v-html="team[0].text4">
 
         </p>
       </div>
-
     </v-img>
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/team_2_komprimiert.webp" style="width: 100%; height: 930px;  ">
+           src="~/assets/team_2_komprimiert.webp" style="width: 100%;  ">
       <div class="mx-auto pa-7"
            style="background-color: rgba(215,232,215,0.87); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h2 class="text-center dm-serif" style="font-size: 18px" v-html="team[0].text5"></h2>
+        <p class="text-center dm-serif" style="font-size: 12px" v-html="team[0].text5"></p>
 
-        <p class="dosis mt-5" style=" text-align: justify;  font-size: 12px" v-html="team[0].text6">
+        <p class="dm-serif text-center mt-5" style="  font-size: 12px" v-html="team[0].text6">
 
 
         </p>
@@ -188,7 +180,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Team',
+  title: 'Mila Escort Arrangement',
   link: [
 
     {
@@ -385,7 +377,7 @@ h1 {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
-  line-height: 1.3;
+
 }
 
 p {
@@ -396,11 +388,13 @@ p {
   line-height: 1.3;
 }
 
-.dosis1 {
-  font-family: "Aptos", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
+
+.text5 {
+  color: #4c4c4c;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  font-size: 15px;
+
 }
 </style>

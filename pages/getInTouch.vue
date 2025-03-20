@@ -235,7 +235,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Maxi Escort Kontakt',
+  title: 'Mila Escort get in touch',
   link: [
     {
       rel: 'canonical',

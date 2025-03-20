@@ -3,6 +3,7 @@
     <div class="card">
       <div class="cardIn1 px-5">
         <h1 class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="escort[0].text1"></h1>
+
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="escort[0].text2"></p>
@@ -123,14 +124,15 @@
              style="width: 75%; height: 400px;    background-color: #c7dee6;">
           <div class="vertical-marker-mobile">
           </div>
-          <div style="height: 250px; width: 70%; background-color: white; ">
-            <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif mt-2" style="margin-left: -80px; " v-html="escort[0].text1"></h1>
+          <div style="height: 250px; width: 75%; background-color: white; ">
+            <div class="text-center " style="position: relative; top:-50px">
+              <h1 class="text-center text5 dosis" v-html="escort[0].text1">
+              </h1>
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
+            <div class="pa-3 mt-n16 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
 
             </div>
-            <router-link style="position: relative; left: -8%; top:5vh" to="kontakt">
+            <router-link style="position: relative; left: -8%; " to="getInTouch">
               <v-btn class="text-center" theme="dark">Kontakt</v-btn>
             </router-link>
           </div>
@@ -471,8 +473,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 }
-
-.dm-serif {
+dm-serif {
   font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;
@@ -483,6 +484,7 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  letter-spacing: 0.10em;
 
 }
 
@@ -492,6 +494,16 @@ p {
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
+}
+
+
+.text5 {
+  color: #4c4c4c;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  font-size: 14px;
+
 }
 
 .damencard {
