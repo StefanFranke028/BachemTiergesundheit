@@ -239,7 +239,19 @@ if (landingpage1.value) {
 }
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
-
+useHead({
+  title: landingpage1.value ? 'Maxi Escort Service' : 'Maxi Escort Service',
+  meta: [
+    {
+      name: 'description',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+    },
+    {
+      name: 'keywords',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+    },
+  ],
+});
 </script>
 
 <script>
