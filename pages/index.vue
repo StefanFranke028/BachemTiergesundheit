@@ -6,10 +6,8 @@
       <div class="cardIn1">
         <div class="text-center text2 dosis">
           <p v-html="landingpage[0].text1">
-
           </p>
           <br>
-
           <div class="d-flex justify-center mt-10" style="width: 100%;">
             <router-link style="display: inline-block;" to="vita">
               <v-btn
@@ -21,7 +19,6 @@
                 Zur Vita
               </v-btn>
             </router-link>
-
           </div>
         </div>
       </div>
@@ -152,7 +149,7 @@
       </p>
     </div>
 
-    <div class="" style="background-color:  white; width: 100vw; height: 350px">
+    <div class="" style="background-color:  white; width: 100vw; margin-top: 50px; margin-bottom: 40px">
       <v-row class="ma-0 justify-center align-center" style="width: 100%;height: 100%">
         <v-col cols="10" style="background-color: #f1edec; height: 80%">
           <v-row class="ma-0" style="width: 100%;">
@@ -162,14 +159,14 @@
                        style="width: 100%; height: 170%;">
 
                 </v-img>
-                <p class="dosis mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text8"></p>
-                <p class="dosis mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text9"></p>
-                <p class="dosis mt-2" style="color: #615f5f;font-size: 11px" v-html="landingpage[0].text10"></p>
+                <p class="dm-serif mt-2" style="color: #000000;font-size: 12px" v-html="landingpage[0].text8"></p>
+                <p class="dm-serif mt-2" style="color: #000000;font-size: 12px" v-html="landingpage[0].text9"></p>
+                <p class="dm-serif mt-2" style="color: #000000;font-size: 12px" v-html="landingpage[0].text10"></p>
               </div>
             </v-col>
             <v-col cols="6">
-              <h2 class="dosis1" style="color: #615f5f;font-size: 12px" v-html="landingpage[0].text6"></h2>
-              <p class="dosis mt-2" style="color: #615f5f;font-size: 10px" v-html="landingpage[0].text7"></p>
+              <h2 class="dm-serif" style="color: #000000;font-size: 12px" v-html="landingpage[0].text6"></h2>
+              <p class="dm-serif mt-2" style="color: #000000;font-size: 12px" v-html="landingpage[0].text7"></p>
 
             </v-col>
           </v-row>
@@ -177,9 +174,9 @@
 
       </v-row>
     </div>
-    <div class="" style="background-color:  #f1edec; width: 100vw; height: 200px">
+    <div class="" style="background-color:  #f1edec; width: 100vw; padding-bottom: 20px">
       <div class="pt-5">
-        <h1 class="mt-3 text-center h1mobile dm-serif" style="font-size: 13px" v-html="landingpage[0].text4"></h1>
+        <h1 class="mt-3 text-center  dm-serif" style="font-size: 13px" v-html="landingpage[0].text4"></h1>
 
       </div>
       <div class="px-10 mt-4">
