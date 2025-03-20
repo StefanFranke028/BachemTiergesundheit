@@ -74,6 +74,7 @@
           </v-row>
         </div>
       </v-tabs-window-item>
+      3
 
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
