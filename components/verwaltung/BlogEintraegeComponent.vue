@@ -63,7 +63,7 @@
             </v-col>
             <v-col :class="editedEntry ? 'justify-end' : 'justify-center'" :cols="editedEntry ? '6' : '12'"
                    class="d-flex">
-              <v-btn :loading="loading" color="white" @click="submitChanges">
+              <v-btn :disabled="allesAusgefüllt" :loading="loading" color="white" @click="submitChanges">
                 {{ editedEntry ? 'Änderungen speichern' : 'Eintrag speichern' }}
               </v-btn>
 
@@ -74,6 +74,7 @@
           </v-row>
         </div>
       </v-tabs-window-item>
+      3
 
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
@@ -194,6 +195,11 @@ export default {
   },
   components: {
     Icon
+  },
+  computed: {
+    allesAusgefüllt() {
+      return !this.ueberschrift || !this.unterUeberschrift || !this.text || !this.autor || !this.base64Image
+    }
   },
   methods: {
     formattedText(text) {
