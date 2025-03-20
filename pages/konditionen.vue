@@ -156,12 +156,12 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif " style="margin-left: -80px; " v-html="honorare[0].text1"></h1>
+              <h1 class="text-center text5 dosis" v-html="honorare[0].text1"></h1>
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 12px; text-align: justify;" v-html="honorare[0].text2">
-            </div>
+            <p class="pa-3 mt-n16 dosis" style="font-size: 12px; text-align: justify;" v-html="honorare[0].text2">
+            </p>
             <router-link aria-label="Vita" to="vita">
-              <v-btn class="text-center mt-3" theme="dark">zur Vita</v-btn>
+              <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">zur Vita</v-btn>
             </router-link>
           </div>
         </div>
@@ -171,14 +171,14 @@
     </v-img>
 
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/honorar_3_komprimiert.webp" style="width: 100%; height: 450px;  ">
+           src="~/assets/honorar_3_komprimiert.webp" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
-          <h2 class="text-center text-white dm-serif" style="font-size: 5vw; " v-html="honorare[0].tabelle1"></h2>
-          <br>
-          <br>
-          <v-row class="mx-0" style="width: 100%; border-radius: 10px">
+          <h2 class="text-center text-white dm-serif" style="font-size: 30px; " v-html="honorare[0].tabelle1"></h2>
+
+
+          <v-row class="mx-0 mt-6" style="width: 100%; border-radius: 10px">
             <v-col class="d-flex justify-center tabelleleft" cols="6">
               <h3>
                 Dauer
@@ -192,6 +192,7 @@
               </h3>
             </v-col>
           </v-row>
+
           <v-row v-for="preis in dinnerPreise" :key="preis" class="mx-0" style="width: 100%; ">
             <v-col class="d-flex justify-center tabelleleftmid" cols="6">
               <p>
@@ -208,15 +209,14 @@
         </v-col>
       </v-row>
     </v-img>
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/honorar_1_komprimiert.webp" style="width: 100%; height: 80%;  ">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-6 justify-center align-center" cover
+           src="~/assets/honorar_1_komprimiert.webp" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
-          <h2 class="text-center dm-serif" style="font-size: 5vw; " v-html="honorare[0].tabelle2"></h2>
-          <br>
-          <br>
-          <v-row class="ma-0" style="width: 100%; border-radius: 10px">
+          <h2 class="text-center dm-serif" style="font-size: 30px; " v-html="honorare[0].tabelle2"></h2>
+
+          <v-row class="ma-0 mt-6" style="width: 100%; border-radius: 10px">
             <v-col class="d-flex justify-center tabelleleft" cols="3">
               <h3>
                 Dauer
@@ -242,7 +242,6 @@
             <v-col class="d-flex justify-center tabelleright" cols="3">
               <h3>
                 VIP
-
               </h3>
             </v-col>
 
@@ -545,7 +544,28 @@ h1 {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
+
+}
+
+p {
+  font-family: "Aptos", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   line-height: 1.3;
+}
+
+
+.text5 {
+  color: #4c4c4c;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  font-size: 12px;
+
+}
+.text4{
+  font-size: 12px;
 }
 
 .tabelleleft {
