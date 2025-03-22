@@ -95,12 +95,13 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif mt-2" style="margin-left: -80px; " v-html="bewerben[0].text1"></h1>
+              <h1 class="text-center text5 dosis" v-html="bewerben[0].text1">
+              </h1>
             </div>
             <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="bewerben[0].text2">
             </div>
             <router-link aria-label="Vita" to="vita">
-              <v-btn class="text-center mt-7" theme="dark">zur Vita</v-btn>
+              <v-btn class="text-center mt-3" theme="dark">zur Vita</v-btn>
             </router-link>
           </div>
         </div>
@@ -108,53 +109,53 @@
       </div>
 
     </v-img>
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/bewerben_2_komprimiert.webp" style="width: 100%; height: 400px;  ">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-5 justify-center align-center" cover
+           src="~/assets/bewerben_2_komprimiert.webp"  style="width: 100%;">
       <div class="mx-auto pa-4"
-           style="background-color: #f1edec; width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <v-row class="ma-0" style="width: 100%; height: 30%">
-          <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer" @click="dialPhoneNumber">
+           style="background-color: rgba(241,237,236,0.89); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
+        <div class="ma-0" style="width: 100%;">
+          <div class="" >
+            <p style="cursor: pointer" >
               <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a :href="'tel:'+ bewerben[0].telefon"
                                                                   v-html="bewerben[0].telefon"></a></p>
-          </v-col>
-          <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer" @click="openEmailProgram">
+          </div>
+          <div class="d-flex ">
+            <p style="cursor: pointer">
               <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+ bewerben[0].email"
                                                                      v-html="bewerben[0].email"></a></p>
-          </v-col>
+          </div>
 
-          <v-col class="d-flex " cols="12">
-            <p style="">Ich freue mich darauf, <br> <br> euch kennenzulernen und euch ein unvergessliches Erlebnis
-              ermöglichen zu können.</p>
-          </v-col>
-        </v-row>
+          <div class=" mt-5  pa-0" >
+            <p style="" class="dm-serif  text4" v-html="bewerben[0].text3"></p>
+            <p style="" class="dm-serif text4" v-html="bewerben[0].text4"></p>
+            <p style="" class="dm-serif text4" v-html="bewerben[0].text5"></p>
+          </div>
+        </div>
       </div>
     </v-img>
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/bewerben_3_komprimiert.webp" style="width: 100%; height: 550px;  ">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-5 justify-center align-center" cover
+           src="~/assets/bewerben_3_komprimiert.webp" style="width: 100%;" >
       <div
-          class="mx-auto pa-4"
-          style="background-color: #f1edec; width: 85vw; height: 400px; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <div class="mt-n16 pb-10" style="width: 100%; ">
-          <h2 style="font-size: 23px" class="mt-13" v-html="bewerben[0].text6"></h2>
-          <br>
-          <p v-html="bewerben[0].text7">
+          class="mx-auto px-4"
+          style="background-color: rgba(241,237,236,0.85); width: 85vw; overflow: scroll; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
+        <div  style="width: 100%;">
+          <h2 style="font-size: 20px" class="mt-4 text-center" v-html="bewerben[0].text6"></h2>
+          <p class="text4 dm-serif" v-html="bewerben[0].text7">
 
           </p> <br>
-          <p  v-html="bewerben[0].text8">
+          <p class="text4 dm-serif" v-html="bewerben[0].text8">
 
           </p> <br>
-          <p  v-html="bewerben[0].text9">
+          <p class="text4 dm-serif" v-html="bewerben[0].text9">
 
           </p> <br>
-          <p  v-html="bewerben[0].text10">
+          <p class="text4 dm-serif" v-html="bewerben[0].text10">
 
           </p> <br>
-          <p v-html="bewerben[0].text11">
+          <p class="text4 dm-serif" v-html="bewerben[0].text11">
 
           </p> <br>
-          <p v-html="bewerben[0].text12">
+          <p class="text4 dm-serif" v-html="bewerben[0].text12">
 
           </p>
         </div>
@@ -358,7 +359,6 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .dm-serif {
   font-family: "Aptos", serif;
   font-weight: 400;
@@ -371,7 +371,7 @@ h1 {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
-  line-height: 1.3;
+
 }
 
 p {
@@ -382,13 +382,16 @@ p {
   line-height: 1.3;
 }
 
-.dosis1 {
-  font-family: "Aptos", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
+
+.text5 {
+  color: #4c4c4c;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  font-size: 12px;
+
 }
-
-
+.text4{
+  font-size: 12px;
+}
 </style>

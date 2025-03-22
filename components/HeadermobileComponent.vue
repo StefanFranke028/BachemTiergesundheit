@@ -1,5 +1,5 @@
 <template>
-<div class="header">
+<div class="header1">
   <v-navigation-drawer
       v-model="drawer"
       temporary
@@ -82,7 +82,7 @@ export default {
         { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'casting' },
         { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'getInTouch' },
         { title: 'Konditionen', icon: 'foundation:pricetag-multiple', route: 'konditionen' },
-        { title: 'Blog', icon: 'mdi-book', route: 'magazin' },
+        { title: 'Magazin', icon: 'mdi-book', route: 'magazin' },
       ],
     }
   }
@@ -92,39 +92,64 @@ export default {
 
 
 <style scoped>
-.header{
+.header1{
   height: 90px;
   box-shadow: 1px 1px 5px black;
 }
-.footer{
+.footer {
 
-  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
-}.damen{
-
-   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
- }.honorare{
-
-    background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
-  }
-.kontakt{
-
-  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
-.datenschutz{
 
-  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
+.highClassBegleitungen {
+
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
-.impressum{
 
-  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
+.konditionen {
+
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
-.vita{
 
-  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100% );
-}.bewerben{
+.getInTouch {
 
-   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100% );
- }.blog{
-    background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100% );
-  }
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
+}
+
+.datenschutz {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+}
+
+.impressum {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+}
+
+.vita {
+
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
+}
+
+.casting {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+}
+
+.magazin {
+
+  background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
+}
+
+.footer {
+
+  background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
+
+}
+
+.arrangement {
+
+  background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
+
+}
 </style>

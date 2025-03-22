@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header1">
     <v-row class="pa-0" style="width: 100%; height: 100%">
       <v-col class="pa-0 d-flex justify-center align-center" cols="2">
         <v-img alt="" class="" src="~/assets/LogoNew.svg"
@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: "header"
+  name: "header1"
 }
 </script>
 

@@ -132,8 +132,8 @@
             <div class="pa-3 mt-n16 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
 
             </div>
-            <router-link style="position: relative; left: -8%; " to="getInTouch">
-              <v-btn class="text-center" theme="dark">Kontakt</v-btn>
+            <router-link style=" " to="getInTouch">
+              <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">Kontakt</v-btn>
             </router-link>
           </div>
         </div>
@@ -473,7 +473,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 }
-dm-serif {
+.dm-serif {
   font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;

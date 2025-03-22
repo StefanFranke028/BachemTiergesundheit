@@ -160,7 +160,8 @@
 
             </div>
             <router-link aria-label="Escort" to="highClassBegleitungen">
-              <v-btn class="text-center mt-3" theme="dark">Unsere Escortdamen</v-btn>
+              <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">Unsere Escortdamen</v-btn>
+
             </router-link>
           </div>
         </div>

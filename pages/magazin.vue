@@ -69,11 +69,8 @@
 
   </div>
   <div v-if="mobile || tablet">
-    <v-img alt="Schwarz-Weiß-Hintergrundbild"
-           aspect-ratio="1.78"
-           class="d-flex justify-center align-center"
-           src="~/assets/bg_komprimiert.webp"
-           style="width: 100%; height: auto; object-fit: contain;">
+      <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
+             src="~/assets/bg_komprimiert.webp" style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div class="d-flex justify-center align-center"
              style="width: 75%; height: 400px;    background-color: #c7dee6;">
@@ -81,12 +78,13 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif " style="margin-left: -80px; " v-html="blog[0].text1"></h1>
+              <h1 class="text-center text5 dosis" v-html="blog[0].text1"></h1>
+
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="blog[0].text2">
-            </div>
+            <p class="pa-3  dosis" style="font-size: 12px; text-align: justify;" v-html="blog[0].text2">
+            </p>
             <router-link aria-label="Vita" to="vita">
-              <v-btn class="text-center mt-3" theme="dark">zur Vita</v-btn>
+              <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">zur Vita</v-btn>
             </router-link>
           </div>
         </div>
@@ -336,6 +334,7 @@ export default {
   transform: translateX(-50%);
 }
 
+
 .dm-serif {
   font-family: "Aptos", serif;
   font-weight: 400;
@@ -348,7 +347,7 @@ export default {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
-  line-height: 1.3;
+
 }
 
 p {
@@ -357,6 +356,19 @@ p {
   font-weight: 500;
   font-style: normal;
   line-height: 1.3;
+}
+
+
+.text5 {
+  color: #4c4c4c;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  font-size: 12px;
+
+}
+.text4{
+  font-size: 12px;
 }
 
 

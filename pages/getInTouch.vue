@@ -74,13 +74,14 @@
           </div>
           <div style="height: 250px; width: 70%; background-color: white; ">
             <div class="text-center dosis" style="position: relative; top:-50px">
-              <h1 class="dm-serif mt-2" style="margin-left: -80px; " v-html="kontakt[0].text1"></h1>
+              <h1 class="text-center text5 dosis" v-html="kontakt[0].text1"></h1>
             </div>
-            <div class="pa-3 mt-n7 dosis" style="font-size: 11px; text-align: justify;" v-html="kontakt[0].text2">
+            <div class="pa-3 mt-5 dm-serif" style="font-size: 11px; text-align: justify;" v-html="kontakt[0].text2">
 
             </div>
             <router-link aria-label="Vita" to="vita">
-              <v-btn class="text-center mt-7" theme="dark">zur Vita</v-btn>
+              <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">zur Vita</v-btn>
+
             </router-link>
           </div>
         </div>
@@ -89,36 +90,36 @@
 
     </v-img>
 
-    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/vita_3_komprimiert.webp" style="width: 100%; height: 400px;  ">
+    <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-4 justify-center align-center" cover
+           src="~/assets/vita_3_komprimiert.webp" style="width: 100%;   ">
       <div
           class="mx-auto pa-4"
-          style="background-color: rgb(215,232,215); width: 85vw; height: 320px; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
+          style="background-color: rgb(215,232,215); width: 85vw;  box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
         <v-row class="ma-0" style="width: 100%; height: 30%; ">
           <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer">
+            <p class="text4 dm-serif" style="cursor: pointer">
               <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a :href="'tel:'+kontakt[0].telefon"
                                                                   v-html="kontakt[0].telefon"></a></p>
           </v-col>
           <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer">
+            <p class="text4 dm-serif mt-n4" style="cursor: pointer">
               <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail Kontakt: <a :href="'mailto:'+kontakt[0].email"
                                                                              v-html="kontakt[0].email"></a></p>
           </v-col>
           <v-col class="d-flex " cols="12">
-            <p style="cursor: pointer">
+            <p class="text4 dm-serif mt-n4" style="cursor: pointer">
               <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail Bewerber: <a :href="'mailto:'+kontakt[0].emailBewerber"
                                                                               v-html="kontakt[0].emailBewerber"></a></p>
           </v-col>
 
           <v-col class="d-flex mt-n3 " cols="12">
-            <p class="dosis" style="font-size: 12px" v-html="kontakt[0].text3"></p>
+            <p class="text4 dm-serif" style="font-size: 12px" v-html="kontakt[0].text3"></p>
           </v-col>
           <v-col class="d-flex mt-n7 " cols="12">
-            <p class="dosis" style=" font-size: 12px" v-html="kontakt[0].text4"></p>
+            <p class="text4 dm-serif" style=" font-size: 12px" v-html="kontakt[0].text4"></p>
           </v-col>
           <v-col class="d-flex mt-n7 " cols="12">
-            <p class="dosis" style=" font-size: 12px" v-html="kontakt[0].text5"></p>
+            <p class="text4 dm-serif" style=" font-size: 12px" v-html="kontakt[0].text5"></p>
           </v-col>
         </v-row>
       </div>
@@ -327,7 +328,7 @@ h1 {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.10em;
-  line-height: 1.3;
+
 }
 
 p {
@@ -335,8 +336,20 @@ p {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 16px;
   line-height: 1.3;
+}
+
+
+.text5 {
+  color: #4c4c4c;
+  position: relative;
+  left: 0%;
+  top: 10%;
+  font-size: 12px;
+
+}
+.text4{
+  font-size: 12px;
 }
 
 </style>
