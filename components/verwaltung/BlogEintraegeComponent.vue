@@ -74,7 +74,7 @@
           </v-row>
         </div>
       </v-tabs-window-item>
-      3
+
 
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
@@ -198,7 +198,7 @@ export default {
   },
   computed: {
     allesAusgefüllt() {
-      return !this.ueberschrift || !this.unterUeberschrift || !this.text || !this.autor || !this.base64Image
+      return !this.ueberschrift || !this.unterUeberschrift || !this.text || !this.base64Image
     }
   },
   methods: {
