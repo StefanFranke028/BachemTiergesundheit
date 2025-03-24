@@ -178,7 +178,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort get in touch',
+  title: 'Mila Escort Vertragsbedingungen',
   link: [
     {
       rel: 'canonical',
@@ -188,11 +188,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
+      content:  'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Mila Escort Service',
+      content: 'Escort, Frankfurt, Diskretion, Exklusivität, Mila Escort Service',
     },
   ],
 });
