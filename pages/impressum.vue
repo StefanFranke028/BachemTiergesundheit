@@ -259,7 +259,7 @@
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "KontaktView",
+  name: "Impressum",
   computed:{
     wide() {
       const screenStore = useScreenStore();
