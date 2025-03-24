@@ -91,10 +91,7 @@
 
     </v-img>
 
-    <v-img v-for="(blog, index) in blogs
-    .slice()
-    .reverse()
-    .filter(blog => blog.magazin === selectedCategory)"
+    <v-img v-for="(blog, index) in blogs"
            :key="blog"
            :src="blog.bild"
            alt="schwarz-weiß Hintergrundbild"
