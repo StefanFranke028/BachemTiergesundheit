@@ -71,7 +71,7 @@
 
         </p>
 
-        <p class="text-center mt-2" @click="navigateTo('/vertragsbedingungen')">
+        <p class="text-center mt-2" @click="navigateTo('vertragsbedingungen')">
           Vertragsbedingungen
 
         </p>
@@ -79,24 +79,24 @@
 
       </v-col>
       <v-col cols="3">
-        <p @click="navigateTo('/casting')">
+        <p @click="navigateTo('casting')">
           <b>
             Casting & High-Class Escort Service Jobs
           </b>
         </p>
-        <p class="mt-2" @click="navigateTo('/casting')">
+        <p class="mt-2" @click="navigateTo('casting')">
 
           Entdecke spannende Karrieremöglichkeiten.
         </p>
-        <p class="mt-2" @click="navigateTo('/casting')">
+        <p class="mt-2" @click="navigateTo('casting')">
           Dein Weg zu einer erfolgreichen Escort Karriere
 
         </p>
-        <p class="mt-2" @click="navigateTo('/casting')">
+        <p class="mt-2" @click="navigateTo('casting')">
           Werde ein Teil unseres exklusiven Escort Agency Teams
 
         </p>
-        <p class="mt-2" @click="navigateTo('/magazin')">
+        <p class="mt-2" @click="navigateTo('magazin')">
           Antworten auf häufige Fragen für neue Escort Talente
 
         </p>
