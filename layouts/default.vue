@@ -3,7 +3,7 @@
     <HeaderComponent v-if="!isVerwaltung && (desktop || tabletHorizontal)"></HeaderComponent>
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <NuxtPage></NuxtPage>
-
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 

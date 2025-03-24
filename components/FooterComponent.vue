@@ -184,7 +184,7 @@
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
         •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/pages/admin">
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
           <span class="">Admin</span>
         </router-link> &nbsp;
       </p>
