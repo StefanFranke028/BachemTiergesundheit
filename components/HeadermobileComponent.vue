@@ -105,51 +105,40 @@ export default {
 
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
-
 .konditionen {
 
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
 
 .getInTouch {
-
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 }
 
 .datenschutz {
-
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
 .impressum {
-
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
 .vita {
-
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 }
 
 .casting {
-
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
 .magazin {
-
   background-image: linear-gradient(to bottom, #c7dee6 50%, #ffffff 100%);
 }
 
 .footer {
-
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
-
 }
 
 .arrangement {
-
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
-
 }
 </style>
