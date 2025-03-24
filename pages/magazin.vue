@@ -221,10 +221,10 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/blog`,
+      href: `https://mila-escort.de/magazin`,
     },
   ],
-  title: 'Maxi-Escort Blog',
+  title: 'Mila-Escort Blog',
   meta: [
     {
       name: 'description',

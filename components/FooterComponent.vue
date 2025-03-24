@@ -58,54 +58,45 @@
       <v-col cols="3">
         <p class="text-center">
           <b>
-            Mila Escord Service
+            Mila Escort Service
           </b>
         </p>
         <p class="text-center mt-2" @click="navigateTo('magazin')">
 
           Magazin
         </p>
-        <p class="text-center mt-2" @click="navigateTo('/')">
-          Mila's Escort Philosophie
 
-        </p>
-        <p class="text-center mt-2">
+        <p class="text-center mt-2 " @click="navigateTo('magazin')">
           Feminine Finesse
 
         </p>
-        <p class="text-center mt-2" @click="navigateTo('/impressum')">
-          Anbieterkennzeichnung
 
-        </p>
         <p class="text-center mt-2" @click="navigateTo('/vertragsbedingungen')">
           Vertragsbedingungen
 
         </p>
-        <p class="text-center mt-2" @click="navigateTo('/datenschutz')">
-          Ihre Privatsphäre
 
-        </p>
 
       </v-col>
       <v-col cols="3">
-        <p>
+        <p @click="navigateTo('/casting')">
           <b>
-            Preview & High-Class Escort Service Jobs
+            Casting & High-Class Escort Service Jobs
           </b>
         </p>
-        <p class="mt-2" @click="navigateTo('bewerben')">
+        <p class="mt-2" @click="navigateTo('/casting')">
 
           Entdecke spannende Karrieremöglichkeiten.
         </p>
-        <p class="mt-2" @click="navigateTo('bewerben')">
+        <p class="mt-2" @click="navigateTo('/casting')">
           Dein Weg zu einer erfolgreichen Escort Karriere
 
         </p>
-        <p class="mt-2" @click="navigateTo('bewerben')">
+        <p class="mt-2" @click="navigateTo('/casting')">
           Werde ein Teil unseres exklusiven Escort Agency Teams
 
         </p>
-        <p class="mt-2" @click="navigateTo('bewerben')">
+        <p class="mt-2" @click="navigateTo('/magazin')">
           Antworten auf häufige Fragen für neue Escort Talente
 
         </p>
