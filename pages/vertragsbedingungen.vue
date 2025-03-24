@@ -182,17 +182,17 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/kontakt`,
+      href: `https://mila-escort.de/vertragsbedingungen`,
     },
   ],
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Mila Escort Service',
     },
   ],
 });

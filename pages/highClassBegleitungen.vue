@@ -294,7 +294,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/damen`,
+      href: `https://mila-escort.de/highClassBegleitungen`,
     },
   ],
   meta: [

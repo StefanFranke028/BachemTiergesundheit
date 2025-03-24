@@ -186,7 +186,7 @@ useHead({
 
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/team`,
+      href: `https://mila-escort.de/arrangement`,
     },
   ],
   meta: [

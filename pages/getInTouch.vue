@@ -216,7 +216,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
       text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
       text4: 'Unsere Werte & Grundsätze',
       text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
-      text6: 'Maxi Escort Team',
+      text6: 'Maxi Escort  Team',
       text7: 'Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass Ihre Wünsche erfüllt werden.',
       text8: 'Genießen Sie den Tag',
       text9: 'Maxi Escort Service Frankfurt.',
@@ -240,7 +240,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/kontakt`,
+      href: `https://mila-escort.de/getInTouch`,
     },
   ],
   meta: [

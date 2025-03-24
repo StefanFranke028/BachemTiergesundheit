@@ -295,7 +295,7 @@ useHead({
     },
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de`,
+      href: `https://mila-escort.de`,
     },
   ],
   meta: [

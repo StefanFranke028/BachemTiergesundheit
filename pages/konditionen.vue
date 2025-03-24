@@ -409,7 +409,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://maxi-escort.de/honorare`,
+      href: `https://mila-escort.de/konditionen`,
     },
   ],
   meta: [
