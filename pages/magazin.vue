@@ -39,7 +39,9 @@
     <div>
       <v-row
           v-for="(blog, index) in blogs
-   "
+    .slice()
+    .reverse()
+    .filter(blog => blog.magazin === selectedCategory)"
           :key="blog"
           class="ma-0 pa-0"
           style="width: 100%; height: 100%; min-height: 500px"
@@ -91,7 +93,10 @@
 
     </v-img>
 
-    <v-img v-for="(blog, index) in blogs"
+    <v-img v-for="(blog, index) in blogs
+    .slice()
+    .reverse()
+    .filter(blog => blog.magazin === selectedCategory)"
            :key="blog"
            :src="blog.bild"
            alt="schwarz-weiß Hintergrundbild"
@@ -285,8 +290,7 @@ export default {
       ]
     }
   },
-  components: {
-  },
+  components: {},
   computed: {
     wide() {
       const screenStore = useScreenStore();
@@ -435,7 +439,7 @@ h1 {
   font-size: 3vw;
 }
 
-style >
+
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
   height: 30vh; /* Gesamthöhe des Elements */
