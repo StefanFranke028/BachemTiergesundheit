@@ -217,7 +217,7 @@ export default {
       this.unterUeberschrift = null;
       this.text = null;
       this.autor = null;
-      this.base64Image = null;
+      this.base64Image = null
       this.bild = null
       this.tab = 2
     },
@@ -229,7 +229,20 @@ export default {
           method: 'GET',
         });
 
-
+        if (response && Array.isArray(response)) {
+          // Hier wird die Blog-Einträge-Liste verarbeitet
+          this.blogEntries = response.map(entry => ({
+            id: entry.id,
+            ueberschrift: this.unformattedText(entry.ueberschrift),
+            unterUeberschrift: this.unformattedText(entry.unterUeberschrift),
+            text: this.unformattedText(entry.text),
+            autor: entry.autor,
+            datum: entry.datum,
+            magazin: entry.magazin,
+            bild: entry.bild,
+            bild2: entry.bild2
+          }));
+        }
         console.log(this.blogEntries)
       } catch (e) {
         console.error("Fehler beim Abrufen der Blog-Einträge:", e);
@@ -248,7 +261,7 @@ export default {
       this.base64Image = entry.bild;
       this.base64Image2 = entry.bild2;
       this.magazin = entry.magazin;
-          this.bild = "Bild";
+      this.bild = "Bild";
       this.bild2 = "Bild";
       this.autor = entry.autor;
     },
