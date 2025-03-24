@@ -242,7 +242,6 @@ useHead({
 
 <script>
 
-import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
@@ -292,7 +291,6 @@ export default {
     }
   },
   components: {
-    FooterComponent,
   },
   computed: {
     wide() {

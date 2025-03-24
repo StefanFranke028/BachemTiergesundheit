@@ -24,14 +24,11 @@
               </h3>
               <p :style="mobile ? 'font-size: 12px':'' " class="mt-3" style="text-align: justify; ">
                 {{ stadt?.text }}
-
-
               </p>
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
-
     </div>
     <div class="pb-10" style="background-color: #ffffff; min-height: 400px">
       <v-row class="mx-0 mt-4 justify-center" style="width: 100%; height: 100%">
