@@ -231,7 +231,7 @@ if (landingpage1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
-
+  title: landingpage1.value ? 'Mila Escort Service' : 'Mila Escort Service',
   meta: [
     {
       name: 'description',
