@@ -189,14 +189,12 @@
 </template>
 
 <script>
-import FooterComponent from "~/components/FooterComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
 import {Icon} from '@iconify/vue';
 
 export default {
   components: {
     Icon,
-    FooterComponent,
   },
   data() {
     return {};
@@ -232,7 +230,6 @@ export default {
 </script>
 
 <script setup>
-import FooterComponent from "~/components/FooterComponent.vue";
 import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten

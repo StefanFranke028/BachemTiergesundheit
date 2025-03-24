@@ -181,7 +181,6 @@ export default {
 </script>
 
 <script setup>
-import FooterComponent from "~/components/FooterComponent.vue";
 import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
