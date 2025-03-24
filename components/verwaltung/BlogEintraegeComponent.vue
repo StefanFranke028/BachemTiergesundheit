@@ -260,9 +260,9 @@ export default {
       this.text = entry.text;
       this.base64Image = entry.bild;
       this.base64Image2 = entry.bild2;
-      this.magazin = entry.magazin,
-          this.bild = "Bild"
-      this.bild2 = "Bild"
+      this.magazin = entry.magazin;
+          this.bild = "Bild";
+      this.bild2 = "Bild";
       this.autor = entry.autor;
     },
 
