@@ -140,6 +140,7 @@ const categories = [
   { label: "Blog Beiträge", value: true },
   { label: "Feminine Finesse", value: false }
 ];
+
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
   let token = null;
@@ -209,7 +210,7 @@ if (landingpage1.value) {
 if (blogs1.value) {
   blogs.value = blogs1.value
   blogs.value
-
+console.log(blogs.value)
 }
 
 

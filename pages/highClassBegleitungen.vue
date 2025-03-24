@@ -7,7 +7,7 @@
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="escort[0].text2"></p>
-        <router-link style="position: relative; left: -14%; top:15vh" to="kontakt">
+        <router-link style="position: relative; left: -14%; top:15vh" to="getInTouch">
           <v-btn class="text-center" theme="dark">Kontakt</v-btn>
         </router-link>
       </div>
