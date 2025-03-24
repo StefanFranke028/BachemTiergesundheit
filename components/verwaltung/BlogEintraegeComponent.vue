@@ -229,20 +229,7 @@ export default {
           method: 'GET',
         });
 
-        if (response && Array.isArray(response)) {
-          // Hier wird die Blog-Einträge-Liste verarbeitet
-          this.blogEntries = response.map(entry => ({
-            id: entry.id,
-            ueberschrift: this.unformattedText(entry.ueberschrift),
-            unterUeberschrift: this.unformattedText(entry.unterUeberschrift),
-            text: this.unformattedText(entry.text),
-            autor: entry.autor,
-            datum: entry.datum,
-            magazin: entry.magazin,
-            bild: entry.bild,
-            bild2: entry.bild2
-          }));
-        }
+
         console.log(this.blogEntries)
       } catch (e) {
         console.error("Fehler beim Abrufen der Blog-Einträge:", e);
