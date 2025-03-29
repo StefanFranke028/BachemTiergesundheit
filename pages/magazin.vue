@@ -134,12 +134,25 @@ const blogs = ref([])
 const { proxy } = getCurrentInstance()
 
 
-const selectedCategory = ref(true); // Standardwert
+const route = useRoute()
 
-const categories = [
+const selectedCategory = ref(true) // Startwert für Blog Beiträge
+
+const categories = ref([
   { label: "Blog Beiträge", value: true },
   { label: "Feminine Finesse", value: false }
-];
+])
+
+onMounted(() => {
+  if (route.query.special === 'true') {
+    categories.value = categories.value.map(cat => ({
+      ...cat,
+      value: cat.label === 'Feminine Finesse'
+    }))
+    selectedCategory.value = true // Falls du auch das Tracking brauchst
+    console.log('Feminine Finesse wurde aktiviert')
+  }
+})
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {

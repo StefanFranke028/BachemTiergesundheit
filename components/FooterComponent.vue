@@ -23,12 +23,13 @@
           </b>
 
         </p>
-        <p>
-          Fon: +49 151- 670 376 96
 
-        </p>
         <p>
-          E-Mail: Team@Mila-escort.de
+          Fon: <a href="tel:+4915167037696">+49 151 670 376 96</a>
+        </p>
+
+        <p>
+          E-Mail: <a href="mailto:Team@Mila-escort.de">Team@Mila-escort.de</a>
         </p>
         <p class="mt-2">
           <b>
@@ -66,7 +67,7 @@
           Magazin
         </p>
 
-        <p class="text-center mt-2 " @click="navigateTo('magazin')">
+        <p class="text-center mt-2 "  @click="navigateToMagazin">
           Feminine Finesse
 
         </p>
@@ -195,7 +196,11 @@
 
 <script setup>
 import {ref} from 'vue';
+const router = useRouter()
 
+const navigateToMagazin = () => {
+  router.push({ path: '/magazin', query: { special: 'true' } })
+}
 // Reaktives Array für Landingpage-Daten
 const staedte = ref([]);
 
