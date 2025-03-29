@@ -25,12 +25,12 @@
     </div>
 
 
-    <div class="d-flex justify-center" style="width: 100vw; padding-top: 7%">
+    <div class="d-flex justify-center pb-5"  style="width: 100vw; padding-top: 7%">
       <v-row style="width: 70%;" class="d-flex justify-center">
-        <v-col class="damencard mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3">
-          <v-row :key="dame" class="ma-0  mt-5" style="width: 100%; height: 100%">
-            <v-col class="pa-0" cols="12">
-              <v-carousel style="height: 500px" theme="dark">
+        <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3"  :key="dame">
+          <v-row  class="ma-0 px-5 damencard mt-5" style="width: 100%; height: 100%">
+            <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
+              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -41,70 +41,79 @@
               </v-carousel>
             </v-col>
             <v-col class="px-2 pb-8" cols="12">
-              <h2 class="text-center dosis" style="font-size: 2vw;">{{
+              <h2 class="text-center dosis" style="font-size: 1vw;">{{
                 dame.name
                 }}</h2>
 
 
+              <p class="dosis mt-2" style="font-size: 12px;" v-html=" dame.beschreibung ">
 
+              </p>
+              <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
+                <b >Alter:</b> {{ dame.geburtsalter }}
+              </p>
+              <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
+                <b >Größe:</b> {{ dame.groesse }}
 
-              <p  class="dosis mt-2" style=" font-size: 14px; text-align: justify;">{{ dame.beschreibung }}
-                <br>
-                <br>
-                <b v-if="dame.geburtsalter">Alter:</b> <span >
-                  {{ dame.geburtsalter }}
-                </span>
-
-                <br>
-                <b v-if="dame.groesse">Größe:</b> {{ dame.groesse }}
-
-                <br>
-                <b v-if="dame.haarfarbe">Haarfarbe:</b> {{ dame.haarfarbe }}
-
-                <br>
-                <b v-if="dame.augenfarbe">Augenfarbe:</b> {{ dame.augenfarbe }}
-                <br>
-                <b v-if="dame.augenfarbe">Interessen und Hobbys:</b> {{ dame.interessenHobbys }}
-
-                <br>
-                <b v-if="dame.dienstleistungen">Dienstleistungen:</b> {{ dame.dienstleistungen }}
-
-                <br>
-                <b v-if="dame.reiseverfuegbarkeit">Reiseverfügbarkeit:</b> {{ dame.reiseverfuegbarkeit }}
-
-                <br>
-                <br>
-                  <b>
-                    Dating &amp; more
-                  </b>
-                <br>
-                <br>
-                <b v-if="dame.paarchenBegleitung">Pärchen Begleitung:</b>
+              </p>
+              <p v-if="dame.haarfarbe" class="dosis " style="font-size: 12px;">
+                <b >Haarfarbe:</b> {{ dame.haarfarbe }}
+              </p>
+              <p v-if="dame.augenfarbe" class="dosis " style="font-size: 12px;">
+                <b >Augenfarbe:</b> {{ dame.augenfarbe }}
+              </p>
+              <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
+                <b >Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
+              </p>
+              <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
+                <b >Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+              </p>
+              <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
+                <b >Reiseverfügbarkeit:</b>  {{ dame.reiseverfuegbarkeit }}
+              </p>
+              <p class="dosis mt-1" style="font-size: 13px;">
+                <b>
+                  Dating &amp; more
+                </b>
+              </p>
+              <p v-if="dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Pärchen Begleitung:</b>
                 <span v-if="dame.paarchenBegleitung">
                 Ja
                 </span>
-                <b v-if="!dame.paarchenBegleitung">Pärchen Begleitung:</b>
+              </p>
+              <p v-if="!dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Pärchen Begleitung:</b>
                 <span v-if="!dame.paarchenBegleitung">
-                  Nein
-
+                Nein
                 </span>
-                <br>
-                <b v-if="dame.damenBegleitung">Damen Begleitung:</b>
-                <span v-if="dame.damenBegleitung">
+              </p>
 
+              <p v-if="dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Damen Begleitung:</b>
+                <span v-if="dame.damenBegleitung">
                 Ja
                 </span>
-                <b v-if="!dame.damenBegleitung">Damen Begleitung:</b>
+              </p>
+              <p v-if="!dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Damen Begleitung:</b>
                 <span v-if="!dame.damenBegleitung">
-                    Nein
+                Nein
                 </span>
-                <br>
-                <b v-if="dame.praesentation">Präsentation:</b>  {{ dame.praesentation }}
-                <br>
-                <b v-if="dame.staedte && dame.staedte.length > 0">Ich begleite Sie gerne in Städte wie: &nbsp;</b>
+              </p>
+              <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
+                <b >Präsentation:</b> <br> {{ dame.praesentation }}
+              </p>
+              <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
+                <b >Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
+              </p>
+
+              <p>
+
+
 
               </p>
               <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
@@ -141,64 +150,100 @@
       </div>
 
     </v-img>
-    <div v-for="dame in damen" :key="dame" class="pb-8 " style="width: 100vw; ">
-      <v-row class="mx-0 pa-0" style="width: 100%; ">
-        <v-col class="pa-0 " cols="12">
-          <v-carousel style="height: 600px" theme="dark">
-            <v-carousel-item
-                v-for="bild in dame.bilder"
-                :key="bild" :src="bild.imageBase64"
-                alt="Damenbild"
-                cover
-            ></v-carousel-item>
+    <div class="d-flex justify-center" style="width: 100vw; padding-top: 7%">
+      <v-row style="width: 70%;" class="d-flex justify-center">
+        <v-col class="damencard mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="10"  :key="dame">
+          <v-row class="ma-0  mt-5" style="width: 100%; height: 100%">
+            <v-col class="pa-0" cols="12">
+              <v-carousel style="height: 390px; border-radius: 4px" theme="dark">
+                <v-carousel-item
+                    v-for="bild in dame.bilder"
+                    :key="bild" :src="bild.imageBase64"
+                    alt="bild der Dame"
+                    cover
+                ></v-carousel-item>
 
-          </v-carousel>
-        </v-col>
-        <v-col class="mx-auto" cols="11">
-          <h2 class="text-center dm-serif mt-n2" style="font-size: 8vw; font-family: 'Edwardian Script ITC', Serif">
-            {{ dame.name }}</h2>
-          <br>
-          <br>
-          <p @click="navigateTo('hinweis')">Rechtlicher Hinweis</p>
-          <p class="dosis mt-n10" style=" text-align: justify; font-size: 13px">{{ dame.vita }}
-            <br>
+              </v-carousel>
+            </v-col>
+            <v-col class="px-2 pb-8" cols="12">
+              <h2 class="text-center dosis" style="font-size: 16px;">{{
+                  dame.name
+                }}</h2>
 
-            <b v-if="dame.motto">Mein Motto:</b>
-            <span>
-                {{ dame.motto }}
-            </span>
-            <br>
 
-            <b v-if="dame.interessen">Meine Interessen:</b> {{ dame.interessen }}
-            <br>
+              <p class="dosis mt-2" style="font-size: 12px;" v-html=" dame.beschreibung ">
 
-            <b v-if="dame.nutzungMeinerZeit">Nutzung meiner Zeit:</b> {{ dame.nutzungMeinerZeit }}
-            <br>
+              </p>
+              <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
+                <b >Alter:</b> {{ dame.geburtsalter }}
+              </p>
+              <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
+                <b >Größe:</b> {{ dame.groesse }}
 
-            <b v-if="dame.getränke">Getränke:</b> {{ dame.getränke }}
+              </p>
+              <p v-if="dame.haarfarbe" class="dosis " style="font-size: 12px;">
+                <b >Haarfarbe:</b> {{ dame.haarfarbe }}
+              </p>
+              <p v-if="dame.augenfarbe" class="dosis " style="font-size: 12px;">
+                <b >Augenfarbe:</b> {{ dame.augenfarbe }}
+              </p>
+              <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
+                <b >Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
+              </p>
+              <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
+                <b >Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+              </p>
+              <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
+                <b >Reiseverfügbarkeit:</b>  {{ dame.reiseverfuegbarkeit }}
+              </p>
+              <p class="dosis mt-1" style="font-size: 13px;">
+                <b>
+                  Dating &amp; more
+                </b>
+              </p>
+              <p v-if="dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Pärchen Begleitung:</b>
+                <span v-if="dame.paarchenBegleitung">
+                Ja
+                </span>
+              </p>
+              <p v-if="!dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Pärchen Begleitung:</b>
+                <span v-if="!dame.paarchenBegleitung">
+                Nein
+                </span>
+              </p>
 
-            <br>
-            <b v-if="dame.cuisine">Cuisine:</b> {{ dame.cuisine }}
-
-            <br>
-            <b v-if="dame.blume">Blume:</b> {{ dame.blume }}
-
-            <br>
-            <b v-if="dame.parfüm">Parfüm:</b> {{ dame.parfüm }}
-
-            <br>
-            <b v-if="dame.staedte && dame.staedte.length > 0">Städte: &nbsp;</b>
-            <span v-for="stadt in dame.staedte" :key="stadt">
+              <p v-if="dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Damen Begleitung:</b>
+                <span v-if="dame.damenBegleitung">
+                Ja
+                </span>
+              </p>
+              <p v-if="!dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
+                <b >Damen Begleitung:</b>
+                <span v-if="!dame.damenBegleitung">
+                Nein
+                </span>
+              </p>
+              <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
+                <b >Präsentation:</b> <br> {{ dame.praesentation }}
+              </p>
+              <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
+                <b >Ich begleite Sie gerne in Städte wie:</b> <br>
+                <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
+              </p>
 
-            <br>
-            <b v-if="dame.weitereGeschenkideen">Weitere Geschenkideen:</b> {{ dame.weitereGeschenkideen }}
+              <p>
 
-            <br>
-            <b v-if="dame.arrangements">Arrangements:</b> {{ dame.arrangements }}
-          </p>
 
+
+              </p>
+              <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </div>
@@ -509,6 +554,8 @@ p {
 .damencard {
   border-radius: 7px;
   border: 2px solid black;
+  box-shadow: 1px 1px 6px #7a7979;
+
 }
 
 </style>
