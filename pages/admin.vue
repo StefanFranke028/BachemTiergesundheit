@@ -50,7 +50,7 @@
                 class="mt-n10"
                 style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
               <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
-              <TeamComponent v-if="selectedSeite === 'Arrangement'"/>
+              <TeamComponent v-if="selectedSeite === 'Vision'"/>
               <VitaComponent v-if="selectedSeite === 'Vita'"/>
               <EscortComponent v-if="selectedSeite === 'High Class Begleitungen'"/>
               <BewerbenComponent v-if="selectedSeite === 'Escort'"/>
@@ -124,7 +124,7 @@ export default {
   },
   data() {
     return {
-      seiten: ['Startseite', 'Arrangement', 'Vita', 'High Class Begleitungen', 'Escort', 'Get in touch', 'Konditionen', 'Magazin', 'Vertragsbedingungen'],
+      seiten: ['Startseite', 'Vision', 'Vita', 'High Class Begleitungen', 'Escort', 'Get in touch', 'Konditionen', 'Magazin', 'Vertragsbedingungen'],
       items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Stadt'],
       selectedSeite: null,
       selectedItem: null,

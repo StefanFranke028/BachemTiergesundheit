@@ -47,7 +47,7 @@
     </div>
     <div style="width: 100vw; height: 900px">
       <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
-        <v-col class="pa-0 d-flex align-center" cols="6" style="background-color: rgba(215,232,215,0.56)">
+        <v-col class="pa-0 d-flex " cols="6" style="background-color: rgba(215,232,215,0.56)">
           <v-img alt="" max-height="500" src="~/assets/team_2_komprimiert.webp" style="z-index: 0; "></v-img>
         </v-col>
         <v-col class="pa-0 pl-16" cols="6" style="background-color: rgba(215,232,215,0.56)">
@@ -181,12 +181,12 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort Arrangement',
+  title: 'Mila Escort Visiont',
   link: [
 
     {
       rel: 'canonical',
-      href: `https://mila-escort.de/arrangement`,
+      href: `https://mila-escort.de/visiont`,
     },
   ],
   meta: [

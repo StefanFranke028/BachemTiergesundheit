@@ -77,7 +77,7 @@ export default {
       menuItems: [
         { title: 'Startseite', icon: 'heroicons:home-solid', route: 'index' },
         { title: 'Unsere Vita', icon: 'fluent:person-32-filled', route: 'vita' },
-        { title: 'Arragement ', icon: 'fluent:people-team-16-filled', route: 'arrangement' },
+        { title: 'Arragement ', icon: 'fluent:people-team-16-filled', route: 'vision' },
         { title: 'High-Class Begleitungen', icon: 'icon-park-solid:women', route: 'highClassBegleitungen' },
         { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'casting' },
         { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'getInTouch' },
@@ -138,7 +138,7 @@ export default {
   background-image: linear-gradient(to bottom, #e5dbdc 50%, #fafafa 100%);
 }
 
-.arrangement {
+.vision {
   background-image: linear-gradient(to bottom, #d1e3d3 50%, #ffffff 100%);
 }
 </style>

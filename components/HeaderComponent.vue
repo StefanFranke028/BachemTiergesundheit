@@ -12,7 +12,7 @@
             <span @click="navigateTo('vita')">Unsere Vita</span>
           </v-col>
           <v-col class="d-flex justify-center  align-center" cols="2">
-            <span @click="navigateTo('arrangement')">Arrangement</span>
+            <span @click="navigateTo('vision')">Vision</span>
           </v-col>
           <v-col class="d-flex justify-center  align-center align-center" cols="2">
             <span @click="navigateTo('highClassBegleitungen')">High-Class Begleitungen</span>

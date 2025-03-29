@@ -367,13 +367,10 @@ export default {
 }
 
 .maxiEscortÜberschrift {
-  font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
   font-style: normal;
   line-height: 1.3;
   font-family: "DM Serif Text", serif;
   font-weight: 400;
-  font-style: normal;
 }
 </style>

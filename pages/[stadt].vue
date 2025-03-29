@@ -22,8 +22,8 @@
                 <br>
 
               </h3>
-              <p :style="mobile ? 'font-size: 12px':'' " class="mt-3" style="text-align: justify; ">
-                {{ stadt?.text }}
+              <p :style="mobile ? 'font-size: 12px':'' " class="mt-3" style="text-align: justify;   " v-html="stadt?.text ">
+
               </p>
             </v-card-text>
           </v-card>
