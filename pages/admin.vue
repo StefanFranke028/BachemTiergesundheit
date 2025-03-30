@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!mobile && !tablet && !tabletHorizontal" style="width: 100vw">
+  <div v-if="!mobile && !tablet " style="width: 100vw">
     <div class="background d-flex justify-center" style="width: 100vw; height: 100vh">
       <div v-if="isLoading" class="d-flex justify-center" style="width: 100vw">
         <v-col class="d-flex justify-center align-center" cols="12">
@@ -71,7 +71,7 @@
     </div>
   </div>
   <!-- Für mobile Geräte -->
-  <div v-if="mobile || tablet || tabletHorizontal" class="d-flex justify-center align-center pb-16">
+  <div v-if="mobile || tablet " class="d-flex justify-center align-center pb-16">
     <v-card class="mx-5 mt-16" color="grey">
       <v-card-title>
         <h1>Maxi-Escort</h1>

@@ -298,7 +298,28 @@ export default {
       this.entryToDelete = null;  // Zurücksetzen
       await this.getBlogEintraege();  // Liste der Einträge neu laden
     },
+    compressImage(base64, maxWidth , quality ) {
+      if (!base64) return Promise.resolve(null);
 
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = base64;
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+
+          const scale = maxWidth / img.width;
+          canvas.width = maxWidth;
+          canvas.height = img.height * scale;
+
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            const compressedBase64 = canvas.toDataURL("image/jpeg", quality);
+            resolve(compressedBase64);
+          }
+        };
+      });
+    },
     // Methode zum Senden der Daten an die API (für das Erstellen oder Bearbeiten)
     async submitChanges() {
       this.loading = true;
@@ -306,8 +327,8 @@ export default {
         ueberschrift: this.formattedText(this.ueberschrift),
         unterUeberschrift: this.formattedText(this.unterUeberschrift),
         text: this.formattedText(this.text),
-        bild: this.base64Image,
-        bild2: this.base64Image2,
+        bild:  await this.compressImage(this.base64Image, 800, 0.8) ,
+        bild2: await this.compressImage(this.base64Image2, 800, 0.8) ,
         autor: this.autor,
         magazin: this.magazin
       };

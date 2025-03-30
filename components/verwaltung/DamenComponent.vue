@@ -108,7 +108,7 @@
               color="blue"
               hide-default-footer
               no-data-text="Keine Einträge gefunden"
-              style="background-color: transparent; height: 70vh"
+              style="background-color: transparent; height: 63vh"
           >
             <template v-slot:item="{ item }">
               <tr>
@@ -241,6 +241,29 @@ export default {
     Icon
   },
   methods: {
+    compressImage(base64, maxWidth , quality ) {
+      if (!base64) return Promise.resolve(null);
+
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = base64;
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+
+          const scale = maxWidth / img.width;
+          canvas.width = maxWidth;
+          canvas.height = img.height * scale;
+
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            const compressedBase64 = canvas.toDataURL("image/jpeg", quality);
+            resolve(compressedBase64);
+          }
+        };
+      });
+    },
+
     resetEditMode() {
       this.tempEditedDame = null;
       this.dame = {
@@ -345,19 +368,21 @@ export default {
       }
       this.loading = false;
     },
-    onFilesSelected(event) {
+   async onFilesSelected(event) {
       const files = event.target.files;
       if (files && files.length) {
         Array.from(files).forEach((file) => {
           const reader = new FileReader();
-          reader.onload = (e) => {
+          reader.onload =   async (e) => {
             const imageData = {imageBase64: e.target.result};
             if (this.tempEditedDame) {
               this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
               this.tempEditedDame.bilder.push(imageData);
             } else {
               this.dame.bilder = this.dame.bilder || [];
+
               this.dame.bilder.push(imageData);
+              console.log( )
             }
           };
           reader.readAsDataURL(file);

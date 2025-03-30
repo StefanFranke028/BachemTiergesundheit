@@ -171,11 +171,11 @@
     </v-img>
 
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/honorar_3_komprimiert.webp" style="width: 100%;  ">
+           src="~/assets/honorareBild2.jpeg" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
-          <h2 class="text-center text-white dm-serif" style="font-size: 30px; " v-html="honorare[0].tabelle1"></h2>
+          <h2 class="text-center dm-serif" style="font-size: 30px; " v-html="honorare[0].tabelle1"></h2>
 
 
           <v-row class="mx-0 mt-6" style="width: 100%; border-radius: 10px">
@@ -210,7 +210,7 @@
       </v-row>
     </v-img>
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-6 justify-center align-center" cover
-           src="~/assets/honorar_1_komprimiert.webp" style="width: 100%;  ">
+           src="~/assets/honorareBild1.jpeg" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
