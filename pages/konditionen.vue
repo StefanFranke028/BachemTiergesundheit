@@ -25,7 +25,7 @@
         </v-col>
       </v-row>
     </div>
-    <div style="width: 100vw; height: 900px">
+    <div style="width: 100vw; height: 870px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
@@ -67,14 +67,14 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="900" src="~/assets/honorar_3_komprimiert.webp" style="z-index: 0;"></v-img>
+          <v-img alt="" cover  src="~/assets/honorareBild2.jpeg" style="z-index: 0; height: 860px"></v-img>
         </v-col>
       </v-row>
     </div>
-    <div style="width: 100vw; height: 900px">
+    <div style="width: 100vw; height: 870px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover max-height="900" src="~/assets/honorar_1_komprimiert.webp" style="z-index: 0;"></v-img>
+          <v-img alt="" cover height="870" src="~/assets/honorareBild1.jpeg" style="z-index: 0;"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">

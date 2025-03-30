@@ -36,11 +36,11 @@
         </div>
         <div class="line-with-dot">
         </div>
-        <div class="mt-n2" style=" width: 100%; height: 100%;  ">
+        <div class="mt-n3" style=" width: 400px ;margin-left: -140px">
           <v-img alt="Frau und Mann"
                  cover
-                 src="~/assets/startseite_klein_komprimiert.webp"
-                 style="min-width:100%; height: 310px; width: 260px; min-height: 100%; ">
+                 src="~/assets/startseiteBild2.jpeg"
+                 style="min-width:100%; height: 310px; width: 560px; min-height: 100%; ">
 
           </v-img>
         </div>
@@ -86,7 +86,7 @@
         <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
           <v-col class="d-flex justify-center" cols="6">
 
-            <v-img alt="frau uns mann" cover src="~/assets/startseite_2_komprimiert.webp"
+            <v-img alt="frau uns mann" cover src="~/assets/startseiteBild1.jpeg"
                    style="height: 80%; box-shadow: 2px 2px 5px black">
 
             </v-img>
@@ -135,8 +135,8 @@
 
             </div>
           </div>
-          <v-img alt="Frau und Mann" cover src="~/assets/startseite_klein_komprimiert.webp"
-                 style="height: 200px; width: 50%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
+          <v-img alt="Frau und Mann" cover src="~/assets/startseiteBild2.jpeg"
+                 style="height: 180px; width: 70%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
           </v-img>
         </div>
       </div>
@@ -155,8 +155,8 @@
           <v-row class="ma-0" style="width: 100%;">
             <v-col cols="6">
               <div>
-                <v-img alt="frau und mann" class="mt-n10" cover src="~/assets/startseite_2_komprimiert.webp"
-                       style="width: 100%; height: 170%;">
+                <v-img alt="frau und mann" class="mt-n10" cover src="~/assets/startseiteBild1.jpeg"
+                       style=" height: 120px;">
 
                 </v-img>
                 <p class="dm-serif mt-2" style="color: #000000;font-size: 12px" v-html="landingpage[0].text8"></p>

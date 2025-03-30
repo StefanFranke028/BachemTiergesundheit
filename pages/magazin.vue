@@ -100,12 +100,12 @@
            :key="blog"
            :src="blog.bild"
            alt="schwarz-weiß Hintergrundbild"
-           class="d-flex justify-center align-center"
+           class="d-flex justify-center pb-5 align-center"
            cover
            style="width: 100%; padding-top: 20px;">
 
       <v-row class="ma-0 pa-0 mx-auto" style="width: 90%; height: 90%; min-height: 800px">
-        <v-col :class="{'bgwithe': index % 2 === 1}" class="bgblue" cols="12">
+        <v-col :class="{'bgwitheMobile': index % 2 === 1}" class="bgblueMobile" cols="12">
           <v-row class="ma-0" style="width: 100%; height: 100%;">
             <v-col cols="12">
               <h2 class="text-center dm-serif" style="font-size: 12px" v-html="blog.ueberschrift"></h2>
@@ -409,7 +409,13 @@ p {
 .bgblue {
   background-color: #d4e2ea;
 }
+.bgwitheMobile {
+  background-color: rgba(199, 222, 230, 0.86) !important;
+}
 
+.bgblueMobile {
+  background-color: rgba(212, 226, 234, 0.86);
+}
 .text2 {
   color: #5e5d5d;
   position: relative;

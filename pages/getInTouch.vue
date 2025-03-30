@@ -94,7 +94,7 @@
            src="~/assets/vita_3_komprimiert.webp" style="width: 100%;   ">
       <div
           class="mx-auto pa-4"
-          style="background-color: rgb(215,232,215); width: 85vw;  box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
+          style="background-color: rgba(215,232,215,0.89); width: 85vw;  box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
         <v-row class="ma-0" style="width: 100%; height: 30%; ">
           <v-col class="d-flex " cols="12">
             <p class="text4 dm-serif" style="cursor: pointer">

@@ -155,41 +155,144 @@
 
   </div>
   <div v-if="mobile|| tablet" :class="formattedPath" class="mobile">
-    <v-row class="justify-center ma-0" style="width: 100%">
-      <v-col cols="10">
-        <p class="text-center" style="font-size: 14px">Luxusbegleitung für besondere Momente</p>
-        <br>
+    <v-row class="justify-center  ma-0" style="width: 100%">
+      <v-col class="d-flex justify-center"  cols="10">
+        <div style="cursor: pointer">
+            <span  style="font-size: 22px; color: #4e4e4e; ">
+                MILA
+                  <b class="ml-n1" style="color: black">
+                ESCORT
+              </b>
+            </span>
+        </div>
 
       </v-col>
 
     </v-row>
-    <v-row class="ma-0 " style="width: 100%">
-      <v-col v-for="stadt in staedte" :key="stadt" cols="6">
-        <nuxt-link :to="'MilaEscort-'+ stadt.name" style="text-decoration: none; color: black">
-          <p class="text-center" style="cursor:pointer">
-            {{ stadt.name }}
-          </p>
+    <v-divider></v-divider>
+    <v-row class="ma-0 justify-center" style="width: 100%">
+      <v-col cols="12">
+        <p>
+          <b>
+            Get in Touch
 
-        </nuxt-link>
-        <v-divider></v-divider>
+          </b>
+
+        </p>
+
+        <p>
+          Fon: <a href="tel:+4915167037696">+49 151 670 376 96</a>
+        </p>
+
+        <p>
+          E-Mail: <a href="mailto:Team@Mila-escort.de">Team@Mila-escort.de</a>
+        </p>
+        <p class="mt-2">
+          <b>
+
+            Office Zeiten
+          </b>
+
+        </p>
+        <p>
+          Montag-Freitag von 10:00 bis 18.00 Uhr
+
+        </p>
+        <p>
+          Bitte beachten: An Sonn- und Feiertagen haben wir geschlossen.
+
+        </p>
+        <p class="mt-2">
+          Wir freuen uns darauf, Dich an Werktagen wiederzusehen!
+
+        </p>
+        <p>
+          Für Buchungsanfragen bitten wir um eine Kontaktaufnahme ausschließlich per E-Mail.
+
+        </p>
+
+      </v-col>
+      <v-col cols="12">
+        <p class="">
+          <b>
+            Mila Escort Service
+          </b>
+        </p>
+        <p class=" mt-2" @click="navigateTo('magazin')">
+
+          Magazin
+        </p>
+
+        <p class=" mt-2 "  @click="navigateToMagazin">
+          Feminine Finesse
+
+        </p>
+
+        <p class=" mt-2" @click="navigateTo('vertragsbedingungen')">
+          Vertragsbedingungen
+
+        </p>
+
+
+      </v-col>
+      <v-col cols="12">
+        <p @click="navigateTo('casting')">
+          <b>
+            Casting & High-Class Escort Service Jobs
+          </b>
+        </p>
+        <p class="mt-2" @click="navigateTo('casting')">
+
+          Entdecke spannende Karrieremöglichkeiten.
+        </p>
+        <p class="mt-2" @click="navigateTo('casting')">
+          Dein Weg zu einer erfolgreichen Escort Karriere
+
+        </p>
+        <p class="mt-2" @click="navigateTo('casting')">
+          Werde ein Teil unseres exklusiven Escort Agency Teams
+
+        </p>
+        <p class="mt-2" @click="navigateTo('magazin')">
+          Antworten auf häufige Fragen für neue Escort Talente
+
+        </p>
+      </v-col>
+      <v-col class=" " cols="12">
+        <p class="">
+          <b>
+            Escort Service Metropolen
+
+          </b>
+        </p>
+        <v-row class="ma-0 d-flex  mt-2" style="width: 100%">
+          <v-col
+              v-for="(stadt, index) in staedte"
+              :key="stadt"
+              class="pa-0 "
+              cols="6"
+          >
+            <nuxt-link
+                :to="'MilaEscort-' + stadt.name"
+                style="text-decoration: none; color: black"
+            >
+              <p
+                  class="mt-1"
+
+                  style="cursor: pointer"
+              >
+                {{ stadt.name }}
+              </p>
+            </nuxt-link>
+          </v-col>
+
+        </v-row>
+
       </v-col>
     </v-row>
-    <div class="d-flex justify-center px-2" style="position: relative;">
-      <p style="font-size: 6px">
-        Copyright © 2025 Mila Escort ® • Alle Rechte vorbehalten •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
-          <span class="">Anbieterkennzeichnung</span>
-        </router-link> &nbsp;
-        •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
-          <span class=""> Disclaimer & Datenschutzerklärung </span>
-        </router-link> &nbsp;
-        •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
-          <span class="">Admin</span>
-        </router-link> &nbsp;
-      </p>
-    </div>
+
+
+
   </div>
 </template>
 
