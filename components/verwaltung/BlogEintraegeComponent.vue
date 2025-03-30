@@ -242,7 +242,7 @@ export default {
     async getBlogEintraege() {
       this.loading = true;
       try {
-        let response = await $fetch(`http://localhost:8080/auth/blog/entries`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries`, {
           method: 'GET',
         });
 
@@ -296,7 +296,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`http://localhost:8080/auth/blog/entries/${this.entryToDelete.id}`, {
+        let response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries/${this.entryToDelete.id}`, {
           method: 'DELETE',
         });
 
@@ -337,7 +337,7 @@ export default {
 
         if (this.editedEntry) {
           // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`http://localhost:8080/auth/blog/entries/${this.editedEntry.id}`, {
+          response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries/${this.editedEntry.id}`, {
             method: 'PUT',
             body: data
           });
@@ -351,7 +351,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`http://localhost:8080/auth/blog/entries`, {
+          response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries`, {
             method: 'POST',
             body: data
           });
