@@ -67,11 +67,14 @@
           Magazin
         </p>
 
-        <p class="text-center mt-2 "  @click="navigateToMagazin">
+        <p class="text-center mt-2 "  @click="navigateToMagazin('feminine')">
           Feminine Finesse
 
         </p>
+        <p class="text-center mt-2 "  @click="navigateToMagazin('herren')">
+          1 x 1 für unsere Herren
 
+        </p>
         <p class="text-center mt-2" @click="navigateTo('vertragsbedingungen')">
           Vertragsbedingungen
 
@@ -223,11 +226,15 @@
           Magazin
         </p>
 
-        <p class=" mt-2 "  @click="navigateToMagazin">
+        <p class=" mt-2 "  @click="navigateToMagazin('feminine')">
           Feminine Finesse
 
         </p>
 
+        <p class="text-center mt-2 "  @click="navigateToMagazin('herren')">
+          1 x 1 für unsere Herren
+
+        </p>
         <p class=" mt-2" @click="navigateTo('vertragsbedingungen')">
           Vertragsbedingungen
 
@@ -301,9 +308,10 @@
 import {ref} from 'vue';
 const router = useRouter()
 
-const navigateToMagazin = () => {
-  router.push({ path: '/magazin', query: { special: 'true' } })
+const navigateToMagazin = (category = 'feminine') => {
+  router.push({ path: '/magazin', query: { special: category } })
 }
+
 // Reaktives Array für Landingpage-Daten
 const staedte = ref([]);
 

@@ -18,20 +18,20 @@
                src="~/assets/blog_1_komprimiert.webp"
                style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></v-img>
       </div>
-      <div style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 142%; left: 90%; transform: translate(-50%, -50%);">
-        <span
-            v-for="(category, index) in categories"
-            :key="index"
-            :class="{ 'active-category': selectedCategory === category.value }"
-            class="category"
-            @click="selectedCategory = category.value"
-        >
-          {{ category.label }}
-        </span>
+      <div style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 142%; left: 80%; transform: translate(-50%, -50%);">
+       <span
+           v-for="(category, index) in categories"
+           :key="index"
+           :class="{ 'active-category': selectedCategory === category.value }"
+           class="category"
+           @click="selectedCategory = category.value"
+       >
+  {{ category.label }}
+</span>
       </div>
     </div>
 
-    <div class="mt-n2" style="width: 100vw; height:150px; background-color: #c7dee6">
+    <div class="mt-n2" style="width: 100vw; height:250px; background-color: #c7dee6">
 
     </div>
 
@@ -136,23 +136,26 @@ const { proxy } = getCurrentInstance()
 
 const route = useRoute()
 
-const selectedCategory = ref(true) // Startwert für Blog Beiträge
+const selectedCategory = ref("blog" ) // Startwert für Blog Beiträge
 
 const categories = ref([
-  { label: "Blog Beiträge", value: true },
-  { label: "Feminine Finesse", value: false }
+  { label: "Blog Beiträge", value:  "blog" },
+  { label: "Feminine Finesse", value: "feminine" },
+  { label: "1 x 1 für unsere Herren", value: "herren" }
 ])
 
 onMounted(() => {
-  if (route.query.special === 'true') {
-    categories.value = categories.value.map(cat => ({
-      ...cat,
-      value: cat.label === 'Feminine Finesse'
-    }))
-    selectedCategory.value = true // Falls du auch das Tracking brauchst
-    console.log('Feminine Finesse wurde aktiviert')
+  if (route.query.special) {
+    const special = route.query.special
+    const isValid = categories.value.some(cat => cat.value === special)
+
+    if (isValid) {
+      selectedCategory.value = special
+      console.log(`${special} wurde aktiviert`)
+    }
   }
 })
+
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
