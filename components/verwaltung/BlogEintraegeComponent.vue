@@ -53,21 +53,25 @@
               <v-img v-if="base64Image2" :src="base64Image2" max-width="100%"></v-img>
             </v-col>
             <v-col cols="4">
-              <v-switch
-                  v-model="magazin"
-                  :false-value="false"
-                  :label="magazin === true ? 'Ist ein Magazin-Eintrag' : 'Ist ein Femininefinesse-Eintrag'"
-                  :true-value="true"
-                  hide-details
-              ></v-switch>
+              <v-select
+                  v-model="category"
+                  :items="categories"
+                  label="Blogeintrag Kategorie"
+              ></v-select>
+            </v-col>
+            <v-col cols=4>
+              <v-text-field v-model="blogIndex" label="Blog Index" type="number">
+
+              </v-text-field>
             </v-col>
             <v-col :class="editedEntry ? 'justify-end' : 'justify-center'" :cols="editedEntry ? '6' : '12'"
                    class="d-flex">
-              <v-btn :disabled="allesAusgefüllt" :loading="loading" color="white" @click="submitChanges">
+              <v-btn :disabled="isIncomplete" :loading="loading" color="white" @click="submitChanges">
                 {{ editedEntry ? 'Änderungen speichern' : 'Eintrag speichern' }}
               </v-btn>
 
             </v-col>
+
             <v-col v-if="editedEntry" class="d-flex justify-start" cols="6">
               <v-btn v-if="editedEntry" color="white" @click="resetEditMode">Bearbeiten abbrechen</v-btn>
             </v-col>
@@ -170,7 +174,11 @@ export default {
       blogEntries: [],
       editedEntry: null,
       deleteDialog: false,
-      magazin: false,
+      category: null,
+      blogIndex: null,
+      categories: [
+        'Magazin', 'Feminine_Finesse', 'Herren1x1'
+      ],
       headers: [
         {title: 'Id', value: 'id'},
         {title: 'Überschrift', value: 'ueberschrift'},
@@ -197,9 +205,15 @@ export default {
     Icon
   },
   computed: {
-    allesAusgefüllt() {
-      return !this.ueberschrift || !this.unterUeberschrift || !this.text || !this.base64Image
+    isIncomplete() {
+      return !this.ueberschrift ||
+          !this.unterUeberschrift ||
+          !this.text ||
+          !this.base64Image ||
+          !this.category ||
+          (this.blogIndex === null || this.blogIndex === undefined);
     }
+
   },
   methods: {
     formattedText(text) {
@@ -217,8 +231,11 @@ export default {
       this.unterUeberschrift = null;
       this.text = null;
       this.autor = null;
-      this.base64Image = null
+      this.base64Image = null;
       this.bild = null
+      this.bild2 = null
+      this.category = null
+      this.blogIndex = null
       this.tab = 2
     },
     // Methode zum Abrufen der Blog-Einträge
@@ -238,7 +255,8 @@ export default {
             text: this.unformattedText(entry.text),
             autor: entry.autor,
             datum: entry.datum,
-            magazin: entry.magazin,
+            blogEntryCategory: entry.blogEntryCategory,
+            entryIndex: entry.entryIndex,
             bild: entry.bild,
             bild2: entry.bild2
           }));
@@ -260,9 +278,10 @@ export default {
       this.text = entry.text;
       this.base64Image = entry.bild;
       this.base64Image2 = entry.bild2;
-      this.magazin = entry.magazin;
-      this.bild = "Bild";
-      this.bild2 = "Bild";
+      this.category = entry.blogEntryCategory
+      this.blogIndex = entry.entryIndex
+      this.bild = {name: "Hier können Sie das Bild löschen"}
+      this.bild2 = {name: "Hier können Sie das Bild löschen"}
       this.autor = entry.autor;
     },
 
@@ -298,28 +317,7 @@ export default {
       this.entryToDelete = null;  // Zurücksetzen
       await this.getBlogEintraege();  // Liste der Einträge neu laden
     },
-    compressImage(base64, maxWidth , quality ) {
-      if (!base64) return Promise.resolve(null);
 
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.src = base64;
-        img.onload = () => {
-          const canvas = document.createElement("canvas");
-
-          const scale = maxWidth / img.width;
-          canvas.width = maxWidth;
-          canvas.height = img.height * scale;
-
-          const ctx = canvas.getContext("2d");
-          if (ctx) {
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            const compressedBase64 = canvas.toDataURL("image/jpeg", quality);
-            resolve(compressedBase64);
-          }
-        };
-      });
-    },
     // Methode zum Senden der Daten an die API (für das Erstellen oder Bearbeiten)
     async submitChanges() {
       this.loading = true;
@@ -327,10 +325,11 @@ export default {
         ueberschrift: this.formattedText(this.ueberschrift),
         unterUeberschrift: this.formattedText(this.unterUeberschrift),
         text: this.formattedText(this.text),
-        bild:  await this.compressImage(this.base64Image, 800, 0.8) ,
-        bild2: await this.compressImage(this.base64Image2, 800, 0.8) ,
+        bild: this.base64Image,
+        bild2: this.base64Image2,
         autor: this.autor,
-        magazin: this.magazin
+        blogEntryCategory: this.category,
+        entryIndex: this.blogIndex
       };
 
       try {
