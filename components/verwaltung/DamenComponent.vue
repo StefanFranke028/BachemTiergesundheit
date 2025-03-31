@@ -42,7 +42,7 @@
 
             <!-- Weitere Angaben -->
             <v-col cols="4">
-              <v-text-field v-model="dame.reiseverfuegbarkeit" label="Reiseverfügbarkeit"></v-text-field>
+              <v-text-field v-model="dame.reiseverfuegbarkeit" label="Geschenke Tipps"></v-text-field>
             </v-col>
             <v-col cols="4">
               <v-checkbox v-model="dame.paarchenBegleitung" label="Pärchen Begleitung"></v-checkbox>
@@ -227,7 +227,7 @@ export default {
         {title: 'Größe', key: 'groesse'},
         {title: 'Haarfarbe', key: 'haarfarbe'},
         {title: 'Augenfarbe', key: 'augenfarbe'},
-        {title: 'Reiseverfügbarkeit', key: 'reiseverfuegbarkeit'},
+        {title: 'Geschenke Tipps', key: 'reiseverfuegbarkeit'},
         {title: 'Städte', key: 'staedte'},
         {title: 'Bilder', key: 'bilder'},
         {title: 'Aktionen', key: 'actions', sortable: false}

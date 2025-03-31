@@ -69,7 +69,7 @@
                 <b >Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
-                <b >Reiseverfügbarkeit:</b>  {{ dame.reiseverfuegbarkeit }}
+                <b >Geschenke Tipps:</b>  {{ dame.reiseverfuegbarkeit }}
               </p>
               <p class="dosis mt-1" style="font-size: 13px;">
                 <b>
@@ -104,7 +104,18 @@
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
                 <b >Präsentation:</b> <br> {{ dame.praesentation }}
               </p>
+              <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
+                <b >Ich begleite Sie gerne in Städte wie:</b> <br>
+                <span v-for="stadt in dame.staedte" :key="stadt">
+                  {{ stadt.name }}, &nbsp;
+                </span>
+              </p>
 
+              <p>
+
+
+
+              </p>
               <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
             </v-col>
           </v-row>
@@ -183,7 +194,7 @@
                 <b >Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
-                <b >Reiseverfügbarkeit:</b>  {{ dame.reiseverfuegbarkeit }}
+                <b >Geschenke Tipps:</b>  {{ dame.reiseverfuegbarkeit }}
               </p>
               <p class="dosis mt-1" style="font-size: 13px;">
                 <b>
@@ -218,12 +229,19 @@
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
                 <b >Präsentation:</b> <br> {{ dame.praesentation }}
               </p>
+              <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
+                <b >Ich begleite Sie gerne in Städte wie:</b> <br>
+                <span v-for="stadt in dame.staedte" :key="stadt">
+                  {{ stadt.name }}, &nbsp;
+                </span>
+              </p>
 
               <p>
 
 
 
               </p>
+
               <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
             </v-col>
           </v-row>
