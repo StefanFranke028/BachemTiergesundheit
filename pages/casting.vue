@@ -17,6 +17,77 @@
         </v-col>
       </v-row>
     </div>
+    <div style="height: 70px">
+
+    </div>
+    <div class="d-flex justify-center  py-10"  style="width: 100vw;">
+      <v-row style="width: 70%;" class="d-flex justify-center">
+        <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3"  :key="dame">
+          <v-row  class="ma-0 px-5 damencard " style="width: 100%; height: 100%">
+            <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
+              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+                <v-carousel-item
+                    v-for="bild in dame.bilder"
+                    :key="bild" :src="bild.imageBase64"
+                    alt="bild der Dame"
+                    cover
+                ></v-carousel-item>
+
+              </v-carousel>
+            </v-col>
+            <v-col class="px-2 pb-8" cols="12">
+              <h2 class="text-center dosis" style="font-size: 1vw;">{{
+                  dame.name
+                }}</h2>
+
+
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                {{ dame.ueberschrift1}}
+                </b>
+              </p>
+              <p class="dosis " style="font-size: 12px;" v-html=" dame.text1 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift2}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text2 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift3}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text3 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift4}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text4 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift5}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text5 ">
+
+              </p>
+
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </div>
+
     <div style="width: 100vw; height: 600px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="12" style="background-color:  #f1edec">
@@ -170,6 +241,32 @@ import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
 const bewerben = ref([]);
+const damen = ref([]);
+
+
+const {data: damen1, pending2, error2} = await useAsyncData('damen', async () => {
+  let token = null;
+
+  if (process.client) {
+    // Zugriff auf localStorage nur auf dem Client
+    token = localStorage.getItem('token');
+  }
+
+  try {
+    const response = await $fetch("http://5.45.97.75:8080/auth/casting", {
+      method: 'GET',
+      headers: {
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    });
+    console.log(response);
+    return response;
+  } catch (e) {
+    console.error('Fehler beim Laden der damen:', e);
+    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
+  }
+});
+
 
 // Methode zum Abrufen der Landingpage-Daten mit useAsyncData
 const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
@@ -198,6 +295,11 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 });
 
+
+if (damen1.value) {
+  damen.value = damen1.value;
+  console.log(damen.value);
+}
 // Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
 if (landingpage1.value) {
   bewerben.value.push(landingpage1.value);
@@ -382,5 +484,11 @@ p {
 }
 .text4{
   font-size: 12px;
+}
+.damencard {
+  border-radius: 7px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 6px #7a7979;
+
 }
 </style>

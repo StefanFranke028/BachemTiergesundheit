@@ -39,9 +39,8 @@
     <div>
       <v-row
           v-for="(blog, index) in blogs
-    .slice()
-    .reverse()
-    .filter(blog => blog.magazin === selectedCategory)"
+
+    .filter(blog => blog.blogEntryCategory === selectedCategory)"
           :key="blog"
           class="ma-0 pa-0"
           style="width: 100%; height: 100%; min-height: 500px"
@@ -86,17 +85,28 @@
             <router-link aria-label="Vita" to="vita">
               <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">zur Vita</v-btn>
             </router-link>
+
           </div>
         </div>
 
       </div>
 
     </v-img>
+    <div  class="d-flex justify-center  align-center" style="   width: 100%; height: 30px; background-color: #c7dee6 ">
+       <span
+           style="font-size: 13px;"
+           v-for="(category, index) in categories"
+           :key="index"
+           :class="{ 'active-category': selectedCategory === category.value }"
+           class="category text-center"
+           @click="selectedCategory = category.value"
+       >
+  {{ category.label }}
+</span>
+    </div>
 
     <v-img v-for="(blog, index) in blogs
-    .slice()
-    .reverse()
-    .filter(blog => blog.magazin === selectedCategory)"
+    .filter(blog => blog.blogEntryCategory === selectedCategory)"
            :key="blog"
            :src="blog.bild"
            alt="schwarz-weiß Hintergrundbild"
@@ -136,12 +146,12 @@ const { proxy } = getCurrentInstance()
 
 const route = useRoute()
 
-const selectedCategory = ref("blog" ) // Startwert für Blog Beiträge
+const selectedCategory = ref("Magazin" )
 
 const categories = ref([
-  { label: "Blog Beiträge", value:  "blog" },
-  { label: "Feminine Finesse", value: "feminine" },
-  { label: "1 x 1 für unsere Herren", value: "herren" }
+  { label: "Blog Beiträge", value:  "Magazin" },
+  { label: "Feminine Finesse", value: "Feminine_Finesse" },
+  { label: "1 x 1 für unsere Herren", value: "Herren1x1" }
 ])
 
 onMounted(() => {

@@ -62,16 +62,16 @@
             Mila Escort Service
           </b>
         </p>
-        <p class="text-center mt-2" @click="navigateTo('magazin')">
+        <p class="text-center mt-2" @click="navigateTo('Magazin')">
 
           Magazin
         </p>
 
-        <p class="text-center mt-2 "  @click="navigateToMagazin('feminine')">
+        <p class="text-center mt-2 "  @click="navigateToMagazin('Feminine_Finesse')">
           Feminine Finesse
 
         </p>
-        <p class="text-center mt-2 "  @click="navigateToMagazin('herren')">
+        <p class="text-center mt-2 "  @click="navigateToMagazin('Herren1x1')">
           1 x 1 für unsere Herren
 
         </p>
@@ -221,17 +221,17 @@
             Mila Escort Service
           </b>
         </p>
-        <p class=" mt-2" @click="navigateTo('magazin')">
+        <p class=" mt-2" @click="navigateTo('Magazin')">
 
           Magazin
         </p>
 
-        <p class=" mt-2 "  @click="navigateToMagazin('feminine')">
+        <p class=" mt-2 "  @click="navigateToMagazin('Feminine_Finesse')">
           Feminine Finesse
 
         </p>
 
-        <p class="text-center mt-2 "  @click="navigateToMagazin('herren')">
+        <p class="text-center mt-2 "  @click="navigateToMagazin('Herren1x1')">
           1 x 1 für unsere Herren
 
         </p>
