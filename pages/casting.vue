@@ -36,10 +36,6 @@
               </v-carousel>
             </v-col>
             <v-col class="px-2 pb-8" cols="12">
-              <h2 class="text-center dosis" style="font-size: 1vw;">{{
-                  dame.name
-                }}</h2>
-
 
               <p class="dosis mt-2" style="font-size: 15px;">
                 <b>
@@ -180,6 +176,69 @@
       </div>
 
     </v-img>
+    <div class="d-flex justify-center  py-10"  style="width: 100vw;">
+      <v-row style="width: 70%;" class="d-flex justify-center">
+        <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="10"  :key="dame">
+          <v-row  class="ma-0 px-5 damencard " style="width: 100%; height: 100%">
+            <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
+              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+                <v-carousel-item
+                    v-for="bild in dame.bilder"
+                    :key="bild" :src="bild.imageBase64"
+                    alt="bild der Dame"
+                    cover
+                ></v-carousel-item>
+
+              </v-carousel>
+            </v-col>
+            <v-col class="px-2 pb-8" cols="12">
+
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift1}}
+                </b>
+              </p>
+              <p class="dosis " style="font-size: 12px;" v-html=" dame.text1 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift2}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text2 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift3}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text3 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift4}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text4 ">
+
+              </p>
+              <p class="dosis mt-2" style="font-size: 15px;">
+                <b>
+                  {{ dame.ueberschrift5}}
+                </b>
+              </p>
+              <p class="dosis" style="font-size: 12px;" v-html=" dame.text5 ">
+
+              </p>
+
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </div>
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-5 justify-center align-center" cover
            src="~/assets/bewerben_2_komprimiert.webp"  style="width: 100%;">
       <div class="mx-auto pa-4"

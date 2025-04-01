@@ -231,7 +231,7 @@
 
         </p>
 
-        <p class="text-center mt-2 "  @click="navigateToMagazin('Herren1x1')">
+        <p class="mt-2 "  @click="navigateToMagazin('Herren1x1')">
           1 x 1 für unsere Herren
 
         </p>
