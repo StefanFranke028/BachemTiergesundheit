@@ -63,6 +63,7 @@
               <DinnerPreiseComponent v-if="selectedItem === 'Konditionen Tabelle 1'"/>
               <EscortPreiseComponent v-if="selectedItem === 'Konditionen Tabelle 2'"/>
               <DamenComponent v-if="selectedItem === 'Damen'"/>
+              <CastingComponent v-if="selectedItem === 'Casting'"/>
               <StadtComponent v-if="selectedItem === 'Stadt'"/>
             </v-card>
           </v-col>
@@ -102,6 +103,7 @@ import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
 import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
 import LoginComponent from "~/components/verwaltung/LoginComponent.vue";
 import VertragsbedingungenComponent from "~/components/verwaltung/VertragsbedinungenComponent.vue";
+import CastingComponent from "~/components/verwaltung/CastingComponent.vue";
 
 export default {
   name: "verwaltung",
@@ -117,6 +119,7 @@ export default {
     BlogEintraegeComponent,
     DinnerPreiseComponent,
     EscortPreiseComponent,
+    CastingComponent,
     DamenComponent,
     StadtComponent,
     LoginComponent,
@@ -125,7 +128,7 @@ export default {
   data() {
     return {
       seiten: ['Startseite', 'Vision', 'Vita', 'High Class Begleitungen', 'Escort', 'Get in touch', 'Konditionen', 'Magazin', 'Vertragsbedingungen'],
-      items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Stadt'],
+      items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Casting', 'Stadt'],
       selectedSeite: null,
       selectedItem: null,
       isLoading: true,

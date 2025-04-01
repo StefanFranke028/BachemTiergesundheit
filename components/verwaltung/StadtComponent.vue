@@ -31,6 +31,7 @@
                 return-object
             />
           </v-col>
+          {{ selectedDamen }}
 
           <v-col cols="12">
             <v-row>
@@ -165,6 +166,11 @@ export default {
 
         if (response && Array.isArray(response)) {
           this.staedte = response;
+          for (this.stadt of this.staedte) {
+            // Wandelt HTML-Format zurück in normalen Text für Textareas
+            this.stadt.text = this.unformattedText(this.stadt.text);
+            this.stadt.überschrift = this.unformattedText(this.stadt.überschrift);
+          }
           console.log(response)
 
           // Beispielhafte weitere Verarbeitung, falls nötig:
@@ -193,11 +199,12 @@ export default {
       this.loading = true;
       var test = this.name
 
+
       const data = {
         name: test.trim(),
         überschrift: this.überschrift,
-        text: this.text,
-        damenIds: this.selectedDamen.map(dame => dame.id) // Nur die IDs der ausgewählten Damen
+        text: this.formattedText(this.text),
+        damenIds: this.selectedDamen.map(dame => dame.id)
       };
 
       if (this.selectedDamen.length === 0) {
@@ -297,6 +304,7 @@ export default {
       this.überschrift = entry.name;
       this.text = entry.text;
       this.selectedDamen = entry.damen
+      console.log(entry.damen);
     },
 
     resetEditMode() {
