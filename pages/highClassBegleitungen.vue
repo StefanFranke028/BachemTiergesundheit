@@ -25,10 +25,10 @@
     </div>
 
 
-    <div class="d-flex justify-center pb-5"  style="width: 100vw; padding-top: 7%">
-      <v-row style="width: 70%;" class="d-flex justify-center">
-        <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3"  :key="dame">
-          <v-row  class="ma-0 px-5 damencard mt-5" style="width: 100%; height: 100%">
+    <div class="d-flex justify-center pb-5" style="width: 100vw; padding-top: 7%">
+      <v-row class="d-flex justify-center" style="width: 70%;">
+        <v-col v-for="dame in damen" :key="dame" class=" mb-4 mt-10 py-0 px-4 mx-2" cols="3">
+          <v-row class="ma-0 px-5 damencard mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
               <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
@@ -42,7 +42,7 @@
             </v-col>
             <v-col class="px-2 pb-8" cols="12">
               <h2 class="text-center dosis" style="font-size: 1vw;">{{
-                dame.name
+                  dame.name
                 }}</h2>
 
 
@@ -50,26 +50,26 @@
 
               </p>
               <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
-                <b >Alter:</b> {{ dame.geburtsalter }}
+                <b>Alter:</b> {{ dame.geburtsalter }}
               </p>
               <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
-                <b >Größe:</b> {{ dame.groesse }}
+                <b>Größe:</b> {{ dame.groesse }}
 
               </p>
               <p v-if="dame.haarfarbe" class="dosis " style="font-size: 12px;">
-                <b >Haarfarbe:</b> {{ dame.haarfarbe }}
+                <b>Haarfarbe:</b> {{ dame.haarfarbe }}
               </p>
               <p v-if="dame.augenfarbe" class="dosis " style="font-size: 12px;">
-                <b >Augenfarbe:</b> {{ dame.augenfarbe }}
+                <b>Augenfarbe:</b> {{ dame.augenfarbe }}
               </p>
               <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
-                <b >Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
+                <b>Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b >Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+                <b>Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
-                <b >Geschenke Tipps:</b>  {{ dame.reiseverfuegbarkeit }}
+                <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}
               </p>
               <p class="dosis mt-1" style="font-size: 13px;">
                 <b>
@@ -77,35 +77,35 @@
                 </b>
               </p>
               <p v-if="dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Pärchen Begleitung:</b>
+                <b>Pärchen Begleitung:</b>
                 <span v-if="dame.paarchenBegleitung">
                 Ja
                 </span>
               </p>
               <p v-if="!dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Pärchen Begleitung:</b>
+                <b>Pärchen Begleitung:</b>
                 <span v-if="!dame.paarchenBegleitung">
                 Nein
                 </span>
               </p>
 
               <p v-if="dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Damen Begleitung:</b>
+                <b>Damen Begleitung:</b>
                 <span v-if="dame.damenBegleitung">
                 Ja
                 </span>
               </p>
               <p v-if="!dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Damen Begleitung:</b>
+                <b>Damen Begleitung:</b>
                 <span v-if="!dame.damenBegleitung">
                 Nein
                 </span>
               </p>
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
-                <b >Präsentation:</b> <br> {{ dame.praesentation }}
+                <b>Präsentation:</b> <br> {{ dame.praesentation }}
               </p>
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
-                <b >Ich begleite Sie gerne in Städte wie:</b> <br>
+                <b>Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
@@ -114,9 +114,9 @@
               <p>
 
 
-
               </p>
-              <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
+              <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">
+                Rechtlicher Hinweis!</p>
             </v-col>
           </v-row>
         </v-col>
@@ -151,8 +151,8 @@
 
     </v-img>
     <div class="d-flex justify-center" style="width: 100vw; padding-top: 7%">
-      <v-row style="width: 70%;" class="d-flex justify-center">
-        <v-col class="damencard mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="10"  :key="dame">
+      <v-row class="d-flex justify-center" style="width: 70%;">
+        <v-col v-for="dame in damen" :key="dame" class="damencard mb-4 mt-10 py-0 px-4 mx-2" cols="10">
           <v-row class="ma-0  mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0" cols="12">
               <v-carousel style="height: 390px; border-radius: 4px" theme="dark">
@@ -175,26 +175,26 @@
 
               </p>
               <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
-                <b >Alter:</b> {{ dame.geburtsalter }}
+                <b>Alter:</b> {{ dame.geburtsalter }}
               </p>
               <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
-                <b >Größe:</b> {{ dame.groesse }}
+                <b>Größe:</b> {{ dame.groesse }}
 
               </p>
               <p v-if="dame.haarfarbe" class="dosis " style="font-size: 12px;">
-                <b >Haarfarbe:</b> {{ dame.haarfarbe }}
+                <b>Haarfarbe:</b> {{ dame.haarfarbe }}
               </p>
               <p v-if="dame.augenfarbe" class="dosis " style="font-size: 12px;">
-                <b >Augenfarbe:</b> {{ dame.augenfarbe }}
+                <b>Augenfarbe:</b> {{ dame.augenfarbe }}
               </p>
               <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
-                <b >Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
+                <b>Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b >Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+                <b>Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
-                <b >Geschenke Tipps:</b>  {{ dame.reiseverfuegbarkeit }}
+                <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}
               </p>
               <p class="dosis mt-1" style="font-size: 13px;">
                 <b>
@@ -202,35 +202,35 @@
                 </b>
               </p>
               <p v-if="dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Pärchen Begleitung:</b>
+                <b>Pärchen Begleitung:</b>
                 <span v-if="dame.paarchenBegleitung">
                 Ja
                 </span>
               </p>
               <p v-if="!dame.paarchenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Pärchen Begleitung:</b>
+                <b>Pärchen Begleitung:</b>
                 <span v-if="!dame.paarchenBegleitung">
                 Nein
                 </span>
               </p>
 
               <p v-if="dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Damen Begleitung:</b>
+                <b>Damen Begleitung:</b>
                 <span v-if="dame.damenBegleitung">
                 Ja
                 </span>
               </p>
               <p v-if="!dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
-                <b >Damen Begleitung:</b>
+                <b>Damen Begleitung:</b>
                 <span v-if="!dame.damenBegleitung">
                 Nein
                 </span>
               </p>
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
-                <b >Präsentation:</b> <br> {{ dame.praesentation }}
+                <b>Präsentation:</b> <br> {{ dame.praesentation }}
               </p>
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
-                <b >Ich begleite Sie gerne in Städte wie:</b> <br>
+                <b>Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
                   {{ stadt.name }}, &nbsp;
                 </span>
@@ -239,10 +239,10 @@
               <p>
 
 
-
               </p>
 
-              <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">Rechtlicher Hinweis!</p>
+              <p class="mt-3" style="cursor: pointer; font-size: 12px; color: #d62f2f" @click="gotoHinweis(dame) ">
+                Rechtlicher Hinweis!</p>
             </v-col>
           </v-row>
         </v-col>
@@ -281,9 +281,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
     // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
-    return {
-
-    };
+    return {};
   }
 });
 
@@ -348,8 +346,8 @@ useHead({
 
 
 import {useScreenStore} from "~/stores/screen.js";
-import { useUserStore } from '@/stores/user';
-import { mapActions } from 'pinia';
+import {useUserStore} from '@/stores/user';
+import {mapActions} from 'pinia';
 
 export default {
   name: "damen",
@@ -508,6 +506,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .dm-serif {
   font-family: "Aptos", serif;
   font-weight: 400;

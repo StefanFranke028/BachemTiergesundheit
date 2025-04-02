@@ -26,6 +26,9 @@
             <v-col cols="4">
               <v-text-field v-model="dame.augenfarbe" label="Augenfarbe"></v-text-field>
             </v-col>
+            <v-col cols="4">
+              <v-text-field v-model="dame.damenIndex" label="Damen Index" type="number"></v-text-field>
+            </v-col>
 
             <!-- Persönliche Angaben -->
             <v-col cols="12">
@@ -197,6 +200,7 @@ export default {
       dame: {
         name: null,
         geburtsalter: null,
+        damenIndex: null,
         groesse: null,
         haarfarbe: null,
         augenfarbe: null,
@@ -241,7 +245,7 @@ export default {
     Icon
   },
   methods: {
-    compressImage(base64, maxWidth , quality ) {
+    compressImage(base64, maxWidth, quality) {
       if (!base64) return Promise.resolve(null);
 
       return new Promise((resolve) => {
@@ -331,13 +335,21 @@ export default {
     },
     async submitChanges() {
       this.loading = true;
-      const data = {...this.dame};
+      // Erstelle ein Payload-Objekt, in dem das Feld "staedte" durch ein Array von IDs ersetzt wird.
+      const payload = {
+        ...this.dame,
+        // Falls staedte noch ein Array von Objekten ist, mappe es auf deren IDs.
+        staedte: this.dame.staedte && this.dame.staedte.length
+            ? this.dame.staedte.map(stadt => stadt.id)
+            : []
+      };
+
       try {
         let response;
         if (this.tempEditedDame) {
           response = await $fetch(`http://5.45.97.75:8080/auth/dame/${this.tempEditedDame.id}`, {
             method: 'PUT',
-            body: data,
+            body: payload,
           });
           if (response) {
             this.tab = 2;
@@ -349,7 +361,7 @@ export default {
         } else {
           response = await $fetch(`http://5.45.97.75:8080/auth/dame`, {
             method: 'POST',
-            body: data,
+            body: payload,
           });
           if (response) {
             this.tab = 2;
@@ -368,12 +380,12 @@ export default {
       }
       this.loading = false;
     },
-   async onFilesSelected(event) {
+    async onFilesSelected(event) {
       const files = event.target.files;
       if (files && files.length) {
         Array.from(files).forEach((file) => {
           const reader = new FileReader();
-          reader.onload =   async (e) => {
+          reader.onload = async (e) => {
             const imageData = {imageBase64: e.target.result};
             if (this.tempEditedDame) {
               this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
@@ -382,7 +394,7 @@ export default {
               this.dame.bilder = this.dame.bilder || [];
 
               this.dame.bilder.push(imageData);
-              console.log( )
+              console.log()
             }
           };
           reader.readAsDataURL(file);
