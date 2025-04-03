@@ -148,7 +148,7 @@ export default {
     async fetchDamen() {
       try {
         // Daten von der API abrufen
-        const response = await $fetch('http://5.45.97.75:8080/auth/dame');
+        const response = await $fetch('http://localhost:8080/auth/dame');
 
         // Speichere die vollständigen Damen-Objekte in damenList
         this.damenList = response;
@@ -159,7 +159,7 @@ export default {
     async getStaedte() {
       this.loadingTable = true;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/stadt`, {
+        let response = await $fetch(`http://localhost:8080/auth/stadt`, {
           method: 'GET',
         });
 
@@ -219,7 +219,7 @@ export default {
         let response;
 
         if (this.editStadt) {
-          response = await $fetch(`http://5.45.97.75:8080/auth/stadt/${this.editStadt.id}`, {
+          response = await $fetch(`http://localhost:8080/auth/stadt/${this.editStadt.id}`, {
             method: 'PUT',
             body: data
           });
@@ -233,7 +233,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`http://5.45.97.75:8080/auth/stadt`, {
+          response = await $fetch(`http://localhost:8080/auth/stadt`, {
             method: 'POST',
             body: data
           });
@@ -275,7 +275,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/stadt/${this.stadtToDelete.id}`, {
+        let response = await $fetch(`http://localhost:8080/auth/stadt/${this.stadtToDelete.id}`, {
           method: 'DELETE',
         });
 
@@ -300,9 +300,11 @@ export default {
     editStadtEntität(entry) {
       this.editStadt = entry;
       this.name = entry.name;
-      this.überschrift = entry.name;
+      // Hier korrekt überschrift setzen:
+      this.überschrift = entry.überschrift;
       this.text = entry.text;
-      this.selectedDamen = entry.damen
+      // Stelle sicher, dass selectedDamen ein Array von Objekten ist.
+      this.selectedDamen = Array.isArray(entry.damen) ? entry.damen : [];
       console.log(entry.damen);
     },
 
@@ -311,8 +313,10 @@ export default {
       this.überschrift = null;
       this.text = null;
       this.name = null;
-      this.selectedDamen = null;
+      // Setze selectedDamen auf ein leeres Array statt null
+      this.selectedDamen = [];
     },
+
   }
 };
 </script>

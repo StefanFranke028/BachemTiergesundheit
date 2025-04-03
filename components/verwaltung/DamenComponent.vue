@@ -60,6 +60,7 @@
             <!-- Bilder Upload -->
             <v-col cols="12">
               <v-file-input
+                  ref="fileInput"
                   v-model="file"
                   counter
                   label="Bilder auswählen"
@@ -67,7 +68,8 @@
                   show-size
                   @change="onFilesSelected"
                   @click:clear="dame.bilder = []"
-              ></v-file-input>
+              />
+
             </v-col>
             <v-col v-if="dame.bilder && dame.bilder.length" cols="12">
               <v-row>
@@ -291,7 +293,7 @@ export default {
     async getDamen() {
       this.loading = true;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/dame`, {method: 'GET'});
+        let response = await $fetch(`http://localhost:8080/auth/dame`, {method: 'GET'});
         if (response && Array.isArray(response)) {
           this.damen = response.map(dame => {
             if (dame.bilder) {
@@ -318,7 +320,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/dame/${this.dameToDelete.id}`, {method: 'DELETE'});
+        let response = await $fetch(`http://localhost:8080/auth/dame/${this.dameToDelete.id}`, {method: 'DELETE'});
         this.damen = this.damen.filter(e => e.id !== this.dameToDelete.id);
         this.snackbar = true;
         this.snackbarText = "Dame erfolgreich gelöscht";
@@ -347,7 +349,7 @@ export default {
       try {
         let response;
         if (this.tempEditedDame) {
-          response = await $fetch(`http://5.45.97.75:8080/auth/dame/${this.tempEditedDame.id}`, {
+          response = await $fetch(`http://localhost:8080/auth/dame/${this.tempEditedDame.id}`, {
             method: 'PUT',
             body: payload,
           });
@@ -359,7 +361,7 @@ export default {
             await this.getDamen();
           }
         } else {
-          response = await $fetch(`http://5.45.97.75:8080/auth/dame`, {
+          response = await $fetch(`http://localhost:8080/auth/dame`, {
             method: 'POST',
             body: payload,
           });
@@ -388,27 +390,36 @@ export default {
           reader.onload = async (e) => {
             const imageData = {imageBase64: e.target.result};
             if (this.tempEditedDame) {
+              // Falls wir im Bearbeitungsmodus sind, aktualisiere beide Objekte:
               this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
               this.tempEditedDame.bilder.push(imageData);
+              // Damit die Vorschau auch in "dame" erscheint:
+              this.dame.bilder = [...this.tempEditedDame.bilder];
             } else {
               this.dame.bilder = this.dame.bilder || [];
-
               this.dame.bilder.push(imageData);
-              console.log()
             }
           };
           reader.readAsDataURL(file);
         });
       }
       this.file = null;
-    },
+      if (this.$refs.fileInput) {
+        await this.$refs.fileInput.reset();
+      }
+    }
+
+    ,
     removeImage(index) {
       if (this.tempEditedDame) {
         this.tempEditedDame.bilder.splice(index, 1);
+        // Synchronisiere auch die dame.bilder-Liste:
+        this.dame.bilder = [...this.tempEditedDame.bilder];
       } else {
         this.dame.bilder.splice(index, 1);
       }
-    },
+    }
+    ,
   },
 };
 </script>
