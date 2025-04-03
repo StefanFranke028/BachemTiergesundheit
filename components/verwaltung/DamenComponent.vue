@@ -293,7 +293,7 @@ export default {
     async getDamen() {
       this.loading = true;
       try {
-        let response = await $fetch(`http://localhost:8080/auth/dame`, {method: 'GET'});
+        let response = await $fetch(`http://5.45.97.75/auth/dame`, {method: 'GET'});
         if (response && Array.isArray(response)) {
           this.damen = response.map(dame => {
             if (dame.bilder) {
@@ -320,7 +320,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        let response = await $fetch(`http://localhost:8080/auth/dame/${this.dameToDelete.id}`, {method: 'DELETE'});
+        let response = await $fetch(`http://5.45.97.75/auth/dame/${this.dameToDelete.id}`, {method: 'DELETE'});
         this.damen = this.damen.filter(e => e.id !== this.dameToDelete.id);
         this.snackbar = true;
         this.snackbarText = "Dame erfolgreich gelöscht";
@@ -349,7 +349,7 @@ export default {
       try {
         let response;
         if (this.tempEditedDame) {
-          response = await $fetch(`http://localhost:8080/auth/dame/${this.tempEditedDame.id}`, {
+          response = await $fetch(`http://5.45.97.75/auth/dame/${this.tempEditedDame.id}`, {
             method: 'PUT',
             body: payload,
           });
@@ -361,7 +361,7 @@ export default {
             await this.getDamen();
           }
         } else {
-          response = await $fetch(`http://localhost:8080/auth/dame`, {
+          response = await $fetch(`http://5.45.97.75/auth/dame`, {
             method: 'POST',
             body: payload,
           });
