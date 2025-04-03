@@ -31,7 +31,6 @@
                 return-object
             />
           </v-col>
-          {{ selectedDamen }}
 
           <v-col cols="12">
             <v-row>
