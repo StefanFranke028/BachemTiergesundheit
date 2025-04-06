@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-n2" style="width: 100vw; height:150px; background-color: #e5dbdc">
+    <div class="mt-n2" style="width: 100vw; height:250px; background-color: #e5dbdc">
 
     </div>
     <div>

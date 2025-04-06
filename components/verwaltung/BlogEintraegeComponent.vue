@@ -220,7 +220,28 @@ export default {
       // Ersetze alle Zeilenumbrüche durch <br>-Tags
       return text.replace(/\n/g, "<br>");
     },
+    compressImage(base64, maxWidth , quality ) {
+      if (!base64) return Promise.resolve(null);
 
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = base64;
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+
+          const scale = maxWidth / img.width;
+          canvas.width = maxWidth;
+          canvas.height = img.height * scale;
+
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            const compressedBase64 = canvas.toDataURL("image/jpeg", quality);
+            resolve(compressedBase64);
+          }
+        };
+      });
+    },
 // Methode zum Rückformatieren von HTML in Text für die Textareas
     unformattedText(text) {
       return text ? text.replace(/<br\s*\/?>/g, "\n") : "";
