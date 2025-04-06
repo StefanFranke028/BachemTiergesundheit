@@ -17,9 +17,6 @@
           :aria-label="item.title"
       >
         <v-row style="width: 100%;" class="mx-0">
-          <v-col cols="2">
-            <Icon style="font-size: 25px" :icon="item.icon" />
-          </v-col>
           <v-col>
             {{ item.title }}
           </v-col>

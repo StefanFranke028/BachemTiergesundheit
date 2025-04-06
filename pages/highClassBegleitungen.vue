@@ -30,7 +30,7 @@
         <v-col v-for="dame in damen" :key="dame" class=" mb-4 mt-10 py-0 px-4 mx-2" cols="3">
           <v-row class="ma-0 px-5 damencard mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
-              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+              <v-carousel hide-delimiters style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -107,7 +107,7 @@
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
-                  {{ stadt.name }}, &nbsp;
+                  {{ stadt.name }},
                 </span>
               </p>
 
@@ -155,7 +155,7 @@
         <v-col v-for="dame in damen" :key="dame" class="damencard mb-4 mt-10 py-0 px-4 mx-2" cols="10">
           <v-row class="ma-0  mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0" cols="12">
-              <v-carousel style="height: 390px; border-radius: 4px" theme="dark">
+              <v-carousel hide-delimiters style="height: 390px; border-radius: 4px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -232,7 +232,7 @@
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
-                  {{ stadt.name }}, &nbsp;
+                  {{ stadt.name }},
                 </span>
               </p>
 

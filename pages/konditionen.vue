@@ -248,7 +248,7 @@
 
           </v-row>
           <v-row v-for="preis in escortPreise" :key="preis" class="ma-0" style="width: 100%; ">
-            <v-col class="d-flex justify-center tabelleleftmid" cols="3">
+            <v-col class="d-flex justify-center tabelleleftmid px-1" cols="3">
               <p class="text-center">
                 {{ preis.dauer }}
               </p>
@@ -269,7 +269,9 @@
               </p>
             </v-col>
           </v-row>
-
+          <div style="background-color: #b8ddec " class="pa-2">
+            <p class=" text-center mt-5">Für längere Buchungen kommen Sie vertrauensvoll auf uns für eine individuelle Absprache zu.</p>
+          </div>
         </v-col>
       </v-row>
     </v-img>
@@ -569,18 +571,18 @@ p {
 }
 
 .tabelleleft {
-  background-color: #65c6ec;
+  background-color: #8fcee6;
   border-radius: 10px 0px 0px 0px;
 }
 
 .tabelleright {
-  background-color: #65c6ec;
+  background-color: #8fcee6;
   border-radius: 0px 10px 0px 0px;
 
 }
 
 .tabelle {
-  background-color: #65c6ec;
+  background-color: #8fcee6;
 }
 
 .tabelleleftmid {

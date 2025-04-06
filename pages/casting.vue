@@ -25,7 +25,7 @@
         <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3"  :key="dame">
           <v-row  class="ma-0 px-5 damencard " style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
-              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+              <v-carousel hide-delimiters style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -181,7 +181,7 @@
         <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="10"  :key="dame">
           <v-row  class="ma-0 px-5 damencard " style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
-              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+              <v-carousel hide-delimiters style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
