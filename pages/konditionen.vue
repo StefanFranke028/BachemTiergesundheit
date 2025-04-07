@@ -280,7 +280,7 @@
 
 </template>
 
-<script setup>
+<!--<script setup>
 import {ref} from 'vue';
 
 // Reaktives Array für Landingpage-Daten
@@ -425,7 +425,7 @@ useHead({
     },
   ],
 });
-</script>
+</script>-->
 
 <script>
 
