@@ -298,6 +298,27 @@
       </v-col>
     </v-row>
 
+    <div class="d-flex pl-3 mt-3 " style="position: relative;">
+      <p style="font-size: 12px">
+        <b>
+          Copyright © 2025 Mila Escort ®
+        </b>
+       <br>  Alle Rechte vorbehalten  <br>
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
+          <span class="">Anbieterkennzeichnung</span> <br>
+        </router-link>
+
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
+          <span class=""> Disclaimer & Datenschutzerklärung </span> <br>
+        </router-link>
+
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
+          <span class="">Admin</span>
+        </router-link>
+
+
+      </p>
+    </div>
 
 
   </div>

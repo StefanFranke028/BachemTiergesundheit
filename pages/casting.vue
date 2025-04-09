@@ -2,7 +2,12 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
+
         <h1 class="dm-serif mt-2 text-center" style="font-size: 22px" v-html="bewerben[0].text1"></h1>
+
+        <div class="vertical-marker">
+        </div>
+
         <p class="dosis mt-7" style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
         </p>
       </div>
@@ -479,7 +484,7 @@ h1 {
 .vertical-marker::before {
   content: '';
   position: absolute;
-  top: 20vh; /* Positioniert den Punkt ganz oben */
+  top: 0vh; /* Positioniert den Punkt ganz oben */
   left: 50%; /* Zentriert den Punkt horizontal */
   width: 10px; /* Größe des Punktes */
   height: 10px; /* Größe des Punktes */
@@ -491,7 +496,7 @@ h1 {
 .vertical-marker::after {
   content: '';
   position: absolute;
-  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  top: 0vh; /* Beginnt direkt unter dem Punkt */
   left: 50%; /* Zentriert den Strich horizontal */
   width: 2px; /* Breite des Striches */
   height: 330%; /* Höhe des Striches */

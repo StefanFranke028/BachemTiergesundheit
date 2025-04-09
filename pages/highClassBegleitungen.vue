@@ -1,11 +1,14 @@
 <template>
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
+
       <div class="cardIn1 px-5">
         <h1 class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="escort[0].text1"></h1>
 
         <div class="vertical-marker">
         </div>
+
+
         <p class="dosis" style="margin-top: -100px;" v-html="escort[0].text2"></p>
         <router-link style="position: relative; left: -14%; top:15vh" to="getInTouch">
           <v-btn class="text-center" theme="dark">Kontakt</v-btn>

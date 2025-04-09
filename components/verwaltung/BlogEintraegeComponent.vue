@@ -291,9 +291,8 @@ export default {
 
     // Methode zum Bearbeiten eines Eintrags
     editEntry(entry) {
-      // Speichere den zu bearbeitenden Eintrag und öffne ggf. ein Formular oder setze die Felder
       this.editedEntry = entry;
-      this.tab = 1; // Wechsel zum "Erstellen"-Tab für das Bearbeiten
+      this.tab = 1;
       this.ueberschrift = entry.ueberschrift;
       this.unterUeberschrift = entry.unterUeberschrift;
       this.text = entry.text;
@@ -306,7 +305,7 @@ export default {
       this.autor = entry.autor;
     },
 
-    // Methode zum Löschen eines Eintrags
+
     deleteEntry(entry) {
       this.entryToDelete = entry; // Den zu löschenden Eintrag speichern
       this.deleteDialog = true; // Dialog öffnen
@@ -346,8 +345,8 @@ export default {
         ueberschrift: this.formattedText(this.ueberschrift),
         unterUeberschrift: this.formattedText(this.unterUeberschrift),
         text: this.formattedText(this.text),
-        bild: this.base64Image,
-        bild2: this.base64Image2,
+        bild:  await this.compressImage(this.base64Image, 600, 0.7),
+        bild2: await this.compressImage(this.base64Image2, 600, 0.7) ,
         autor: this.autor,
         blogEntryCategory: this.category,
         entryIndex: this.blogIndex
