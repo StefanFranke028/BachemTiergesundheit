@@ -93,7 +93,7 @@
           >
             <template v-slot:item="{ item }">
               <tr>
-                <td>{{ item.id }}</td>
+                <td>{{ item.entryIndex }}</td>
                 <td>{{ item.ueberschrift }}</td>
                 <td>{{ item.unterUeberschrift }}</td>
                 <td>{{ item.autor }}</td>
