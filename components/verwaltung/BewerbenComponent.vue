@@ -134,7 +134,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/bewerben`, {
+        let response = await $fetch(`http://85.215.175.241:8080/auth/bewerben`, {
           method: 'GET',
         });
 
@@ -204,7 +204,7 @@ export default {
       };
 
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/bewerben`, {
+        let response = await $fetch(`http://85.215.175.241:8080/auth/bewerben`, {
           method: 'PUT',
           body: data
         });

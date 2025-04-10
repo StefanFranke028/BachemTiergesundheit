@@ -298,7 +298,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/honorare", {
+    const response = await $fetch("http://85.215.175.241:8080/auth/honorare", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -335,7 +335,7 @@ const {data: escortPreise1, pending2, error2} = await useAsyncData('escortPreise
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/escortpreise", {
+    const response = await $fetch("http://85.215.175.241:8080/auth/escortpreise", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -369,7 +369,7 @@ const {data: dinnerPreise1, pending3, error3} = await useAsyncData('dinnerPreise
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/dinnerpreise", {
+    const response = await $fetch("http://85.215.175.241:8080/auth/dinnerpreise", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

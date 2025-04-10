@@ -317,7 +317,7 @@ const {data: damen1, pending2, error2} = await useAsyncData('damen', async () =>
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/casting", {
+    const response = await $fetch("http://85.215.175.241:8080/auth/casting", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -342,7 +342,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/bewerben", {
+    const response = await $fetch("http://85.215.175.241:8080/auth/bewerben", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

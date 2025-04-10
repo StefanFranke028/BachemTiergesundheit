@@ -230,7 +230,7 @@ export default {
     async getCastings() {
       this.loading = true;
       try {
-        let response = await $fetch("http://5.45.97.75:8080/auth/casting", {method: "GET"});
+        let response = await $fetch("http://85.215.175.241:8080/auth/casting", {method: "GET"});
         if (response && Array.isArray(response)) {
           this.castings = response.map(casting => {
             if (casting.bilder) {
@@ -257,7 +257,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        await $fetch(`http://5.45.97.75:8080/auth/casting/${this.castingToDelete.id}`, {method: "DELETE"});
+        await $fetch(`http://85.215.175.241:8080/auth/casting/${this.castingToDelete.id}`, {method: "DELETE"});
         this.castings = this.castings.filter(x => x.id !== this.castingToDelete.id);
         this.snackbar = true;
         this.snackbarText = "Casting erfolgreich gelöscht";
@@ -300,7 +300,7 @@ export default {
       try {
         let response;
         if (this.tempEditedCasting) {
-          response = await $fetch(`http://5.45.97.75:8080/auth/casting/${this.tempEditedCasting.id}`, {
+          response = await $fetch(`http://85.215.175.241:8080/auth/casting/${this.tempEditedCasting.id}`, {
             method: "PUT",
             body: data
           });
@@ -312,7 +312,7 @@ export default {
             await this.getCastings();
           }
         } else {
-          response = await $fetch("http://5.45.97.75:8080/auth/casting", {
+          response = await $fetch("http://85.215.175.241:8080/auth/casting", {
             method: "POST",
             body: data
           });

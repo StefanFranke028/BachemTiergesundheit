@@ -346,7 +346,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage1', 
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/stadt/namen", {
+    const response = await $fetch("http://85.215.175.241:8080/auth/stadt/namen", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
