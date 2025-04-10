@@ -67,14 +67,14 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover  src="~/assets/honorareBild2.jpeg" style="z-index: 0; height: 860px"></v-img>
+          <v-img alt="" cover  src="~/assets/honorareBild12.jpg" style="z-index: 0; height: 860px"></v-img>
         </v-col>
       </v-row>
     </div>
     <div style="width: 100vw; height: 870px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover height="870" src="~/assets/honorareBild1.jpeg" style="z-index: 0;"></v-img>
+          <v-img alt="" cover height="870" src="~/assets/honorareBild22.jpg" style="z-index: 0;"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
@@ -171,7 +171,7 @@
     </v-img>
 
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/honorareBild2.jpeg" style="width: 100%;  ">
+           src="~/assets/honorareBild12.jpg" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
@@ -210,7 +210,7 @@
       </v-row>
     </v-img>
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-6 justify-center align-center" cover
-           src="~/assets/honorareBild1.jpeg" style="width: 100%;  ">
+           src="~/assets/honorareBild22.jpg" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">

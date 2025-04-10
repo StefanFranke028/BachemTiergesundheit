@@ -382,32 +382,41 @@ export default {
       }
       this.loading = false;
     },
+    readFileAsBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    },
+
     async onFilesSelected(event) {
       const files = event.target.files;
       if (files && files.length) {
-        Array.from(files).forEach((file) => {
-          const reader = new FileReader();
-          reader.onload = async (e) => {
-            const imageData = {imageBase64: e.target.result};
-            if (this.tempEditedDame) {
-              // Falls wir im Bearbeitungsmodus sind, aktualisiere beide Objekte:
-              this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
-              this.tempEditedDame.bilder.push(imageData);
-              // Damit die Vorschau auch in "dame" erscheint:
-              this.dame.bilder = [...this.tempEditedDame.bilder];
-            } else {
-              this.dame.bilder = this.dame.bilder || [];
-              this.dame.bilder.push(imageData);
-            }
-          };
-          reader.readAsDataURL(file);
-        });
+        for (const file of files) {
+          const base64 = await this.readFileAsBase64(file); // 1. Bild einlesen
+          const compressed = await this.compressImage(base64, 800, 0.7); // 2. Komprimieren
+          const imageData = { imageBase64: compressed }; // 3. Ab in die Datenstruktur
+
+          if (this.tempEditedDame) {
+            this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
+            this.tempEditedDame.bilder.push(imageData);
+            this.dame.bilder = [...this.tempEditedDame.bilder];
+          } else {
+            this.dame.bilder = this.dame.bilder || [];
+            this.dame.bilder.push(imageData);
+          }
+        }
       }
+
       this.file = null;
       if (this.$refs.fileInput) {
         await this.$refs.fileInput.reset();
       }
     }
+
+
 
     ,
     removeImage(index) {

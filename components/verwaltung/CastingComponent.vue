@@ -339,7 +339,13 @@ export default {
         Array.from(files).forEach((file) => {
           const reader = new FileReader();
           reader.onload = async (e) => {
-            const imageData = {imageBase64: e.target.result};
+            const base64 = e.target.result;
+
+            // Komprimiere das Bild
+            const compressedBase64 = await this.compressImage(base64, 800, 0.7);
+            const imageData = { imageBase64: compressedBase64 };
+
+            // Behalte deine Logik 1:1 bei
             if (this.tempEditedCasting) {
               this.tempEditedCasting.bilder = this.tempEditedCasting.bilder || [];
               this.tempEditedCasting.bilder.push(imageData);
@@ -350,6 +356,11 @@ export default {
           };
           reader.readAsDataURL(file);
         });
+      }
+
+      // Input leeren (auch gleiche Datei nochmal möglich machen)
+      if (event.target) {
+        event.target.value = '';
       }
       this.file = null;
     },
