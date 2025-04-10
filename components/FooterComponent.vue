@@ -505,9 +505,9 @@ p {
   color: inherit;
 }
 .ml-20{
-  margin-left: 100px
+  margin-left: 3.8vw
 }
 .mr-20{
-  margin-right: 100px
+  margin-right: 3.8vw
 }
 </style>

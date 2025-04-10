@@ -351,7 +351,6 @@ export default {
         blogEntryCategory: this.category,
         entryIndex: this.blogIndex
       };
-
       try {
         let response;
 
