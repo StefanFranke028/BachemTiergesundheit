@@ -142,7 +142,7 @@
       </div>
     </v-img>
     <div class="pa-6" style="background-color:  #e5dbdc; width: 100vw; height: 130px">
-      <h2 class="mt-n2 text-center h1mobile dm-serif" style="font-size: 15px">Willkommen bei Maxi Escort,</h2>
+      <h2 class="mt-n2 text-center h1mobile dm-serif" style="font-size: 15px">Willkommen bei Mila Escort,</h2>
       <p class="text-center mt-3" style="font-size: 12px" v-html="landingpage[0].text2+' ' + landingpage[0].text3">
 
 
@@ -257,18 +257,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
     console.error('Fehler beim Laden der Landingpage:', e);
     // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
     return {
-      description: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
-      keywords: 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
-      text1: 'Ein Mädchen sollte zwei Sachen sein: elegant und fabelhaft.“ – Coco Chanel.',
-      text2: 'Wo Exklusivität und Diskretion auf höchstem Niveau garantiert sind.',
-      text3: 'Unsere Mission ist es, Ihnen unvergessliche Erlebnisse zu bieten, die durch Eleganz und Professionalität geprägt sind.',
-      text4: 'Unsere Werte & Grundsätze',
-      text5: 'Unsere Kernwerte sind Diskretion, Professionalität, Eleganz und Kundenzufriedenheit. Diese Werte sind in jedem Aspekt unseres Betriebs verankert und leiten uns bei der Auswahl unserer Begleitungen sowie im Umgang mit unseren Kunden.',
-      text6: 'Maxi Escort Team',
-      text7: 'Unser Team besteht aus erfahrenen und diskreten Profis, die sich darauf konzentrieren, Ihnen den besten Service zu bieten. Jeder von uns bringt einzigartige Fähigkeiten und Erfahrungen mit, um sicherzustellen, dass Ihre Wünsche erfüllt werden.',
-      text8: 'Genießen Sie den Tag',
-      text9: 'Maxi Escort Service Frankfurt.',
-      text10: 'Ihre Maxi',
+
     };
   }
 });
