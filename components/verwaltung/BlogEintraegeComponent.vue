@@ -345,8 +345,8 @@ export default {
         ueberschrift: this.formattedText(this.ueberschrift),
         unterUeberschrift: this.formattedText(this.unterUeberschrift),
         text: this.formattedText(this.text),
-        bild:  await this.compressImage(this.base64Image, 600, 0.7),
-        bild2: await this.compressImage(this.base64Image2, 600, 0.7) ,
+        bild:  await this.compressImage(this.base64Image, 900, 0.8),
+        bild2: await this.compressImage(this.base64Image2, 900, 0.8),
         autor: this.autor,
         blogEntryCategory: this.category,
         entryIndex: this.blogIndex
