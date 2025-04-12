@@ -11,7 +11,7 @@
              style="width: 100vw; height: 100vh">
           <LoginComponent/>
         </div>
-        <v-row class="d-flex justify-center ma-0"
+        <v-row v-else class="d-flex justify-center ma-0"
                style="background-color: rgba(255,255,255,0.0); width: 100vw; height: 100vh">
           <v-col class="d-flex justify-center align-center" cols="3">
             <router-link to="/">
