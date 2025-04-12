@@ -165,7 +165,7 @@ export default {
         console.log("token is da");
       }
       try {
-        let response = await $fetch("http://85.215.175.241:8080/auth/user", {
+        let response = await $fetch("https://mila-escort.de:8443/auth/user", {
           method: "GET",
           headers: {
             Authorization: token ? `Bearer ${token}` : undefined,

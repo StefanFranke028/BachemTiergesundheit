@@ -187,7 +187,7 @@ export default {
   methods: {
     async getEscortPreise() {
       try {
-        let response = await $fetch(`http://85.215.175.241:8080/auth/escortpreise`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/escortpreise`, {
           method: 'GET',
         });
 
@@ -235,7 +235,7 @@ export default {
 
         if (this.editEscortPreis) {
           // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`http://85.215.175.241:8080/auth/escortpreise/${this.editEscortPreis.id}`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/escortpreise/${this.editEscortPreis.id}`, {
             method: 'PUT',
             body: data
           });
@@ -249,7 +249,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`http://85.215.175.241:8080/auth/escortpreise`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/escortpreise`, {
             method: 'POST',
             body: data
           });
@@ -291,7 +291,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`http://85.215.175.241:8080/auth/escortpreise/${this.escortPreiseToDelete.id}`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/escortpreise/${this.escortPreiseToDelete.id}`, {
           method: 'DELETE',
         });
 

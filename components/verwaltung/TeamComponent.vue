@@ -102,7 +102,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`http://85.215.175.241:8080/auth/team`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/team`, {
           method: 'GET',
         });
 
@@ -156,7 +156,7 @@ export default {
       };
 
       try {
-        let response = await $fetch(`http://85.215.175.241:8080/auth/team`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/team`, {
           method: 'PUT',
           body: data
         });

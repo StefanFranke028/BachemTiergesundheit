@@ -256,7 +256,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://85.215.175.241:8080/auth/vita", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/vita", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

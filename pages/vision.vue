@@ -144,7 +144,7 @@ const {data: teamData, pending, error} = await useAsyncData('team', async () => 
   }
 
   try {
-    const response = await $fetch("http://85.215.175.241:8080/auth/team", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/team", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
