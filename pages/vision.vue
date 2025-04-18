@@ -83,7 +83,7 @@
               </h1>
 
             </div>
-            <div class="pa-3 mt-n11 dosis" style="font-size: 11px; text-align: justify;" v-html="team[0].text2">
+            <div class="pa-3 mt-n11 dosis" style="font-size: 11px; " v-html="team[0].text2">
             </div>
             <router-link aria-label="Escort" to="highClassBegleitungen">
               <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">Unseren Escortdamen</v-btn>

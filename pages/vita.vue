@@ -156,7 +156,7 @@
               <h1 class="text-center  text5 dosis" v-html="vita[0].text1">
               </h1>
               </div>
-            <div class="pa-3 mt-n12 dm-serif" style="font-size: 12px; text-align: justify;" v-html="vita[0].text2">
+            <div class="pa-3 mt-n12 dm-serif" style="font-size: 12px; " v-html="vita[0].text2">
 
             </div>
             <router-link aria-label="Escort" to="highClassBegleitungen">

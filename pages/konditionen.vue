@@ -158,7 +158,7 @@
             <div class="text-center dosis" style="position: relative; top:-50px">
               <h1 class="text-center text5 dosis" v-html="honorare[0].text1"></h1>
             </div>
-            <p class="pa-3 mt-n16 dosis" style="font-size: 12px; text-align: justify;" v-html="honorare[0].text2">
+            <p class="pa-3 mt-n16 dosis" style="font-size: 12px; " v-html="honorare[0].text2">
             </p>
             <router-link aria-label="Vita" to="vita">
               <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">zur Vita</v-btn>

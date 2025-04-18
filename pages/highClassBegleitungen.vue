@@ -156,7 +156,7 @@
               <h1 class="text-center text5 dosis" v-html="escort[0].text1">
               </h1>
             </div>
-            <div class="pa-3 mt-n16 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
+            <div class="pa-3 mt-n16 dosis" style="font-size: 11px; " v-html="escort[0].text2">
 
             </div>
             <router-link style=" " to="getInTouch">

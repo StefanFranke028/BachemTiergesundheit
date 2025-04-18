@@ -74,7 +74,7 @@ export default {
       menuItems: [
         { title: 'Startseite', icon: 'heroicons:home-solid', route: 'index' },
         { title: 'Unsere Vita', icon: 'fluent:person-32-filled', route: 'vita' },
-        { title: 'Arragement ', icon: 'fluent:people-team-16-filled', route: 'vision' },
+        { title: 'Vision', icon: 'fluent:people-team-16-filled', route: 'vision' },
         { title: 'High-Class Begleitungen', icon: 'icon-park-solid:women', route: 'highClassBegleitungen' },
         { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'casting' },
         { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'getInTouch' },

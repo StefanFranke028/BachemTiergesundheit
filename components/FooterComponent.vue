@@ -112,12 +112,12 @@
 
           </b>
         </p>
-        <v-row class="ma-0 d-flex  " style="width: 100%">
+        <v-row class="ma-0 d-flex justify-center" style="width: 100%">
           <v-col
               v-for="(stadt, index) in staedte"
               :key="stadt"
               class="pa-0 d-flex justify-center"
-              cols="6"
+              cols="5"
           >
             <nuxt-link
                 :to="'MilaEscort-' + stadt.name"
@@ -272,12 +272,12 @@
 
           </b>
         </p>
-        <v-row class="ma-0 d-flex  mt-2" style="width: 100%">
+        <v-row class="ma-0 d-flex  mt-2" style="width: 60%">
           <v-col
               v-for="(stadt, index) in staedte"
               :key="stadt"
               class="pa-0 "
-              cols="6"
+              cols="5"
           >
             <nuxt-link
                 :to="'MilaEscort-' + stadt.name"
