@@ -52,7 +52,10 @@
               <p class="dosis mt-2" style="font-size: 12px;" v-html=" dame.beschreibung ">
 
               </p>
-              <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
+              <p v-if="dame.preisKategorie" class="dosis mt-2" style="font-size: 12px;">
+                <b>Preiskategorie:</b> {{ dame.preisKategorie }}
+              </p>
+              <p v-if="dame.geburtsalter" class="dosis " style="font-size: 12px;">
                 <b>Alter:</b> {{ dame.geburtsalter }}
               </p>
               <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
@@ -101,6 +104,18 @@
               <p v-if="!dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
                 <b>Damen Begleitung:</b>
                 <span v-if="!dame.damenBegleitung">
+                Nein
+                </span>
+              </p>
+              <p v-if="dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="dame.dinnerDate">
+                Ja
+                </span>
+              </p>
+              <p v-if="!dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="!dame.dinnerDate">
                 Nein
                 </span>
               </p>
@@ -177,7 +192,10 @@
               <p class="dosis mt-2" style="font-size: 12px;" v-html=" dame.beschreibung ">
 
               </p>
-              <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
+              <p v-if="dame.preisKategorie" class="dosis mt-2" style="font-size: 12px;">
+                <b>Preiskategorie:</b> {{ dame.preisKategorie }}
+              </p>
+              <p v-if="dame.geburtsalter" class="dosis" style="font-size: 12px;">
                 <b>Alter:</b> {{ dame.geburtsalter }}
               </p>
               <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
@@ -227,6 +245,18 @@
               <p v-if="!dame.damenBegleitung" class="dosis mt-1" style="font-size: 12px;">
                 <b>Damen Begleitung:</b>
                 <span v-if="!dame.damenBegleitung">
+                Nein
+                </span>
+              </p>
+              <p v-if="dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="dame.dinnerDate">
+                Ja
+                </span>
+              </p>
+              <p v-if="!dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="!dame.dinnerDate">
                 Nein
                 </span>
               </p>

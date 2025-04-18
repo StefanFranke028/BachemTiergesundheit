@@ -188,7 +188,7 @@
         </p>
 
         <p>
-          E-Mail: <a href="mailto:Team@Mila-escort.de">Team@Mila-escort.de</a>
+          E-Mail: <a href="mailto:team@Mila-escort.de">Team@Mila-escort.de</a>
         </p>
         <p class="mt-2">
           <b>
