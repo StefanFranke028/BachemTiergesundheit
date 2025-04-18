@@ -23,15 +23,6 @@
         <v-textarea v-model="textarea2" auto-grow label="Textarea 2"></v-textarea>
       </v-col>
       <v-col cols="6">
-        <v-textarea v-model="textarea3" auto-grow label="Textarea 3"></v-textarea>
-      </v-col>
-      <v-col cols="6">
-        <v-textarea v-model="textarea4" auto-grow label="Textarea 3"></v-textarea>
-      </v-col>
-      <v-col cols="6">
-        <v-textarea v-model="textarea5" auto-grow label="Textarea 3"></v-textarea>
-      </v-col>
-      <v-col cols="6">
         <v-textarea v-model="textarea6" auto-grow label="Textarea 6"></v-textarea>
       </v-col>
       <v-col cols="6">
@@ -144,9 +135,9 @@ export default {
           this.keywords = response.keywords
           this.textarea1 = this.unformattedText(response.text1);
           this.textarea2 = this.unformattedText(response.text2);
-          this.textarea3 = this.unformattedText(response.text3);
-          this.textarea4 = this.unformattedText(response.text4);
-          this.textarea5 = this.unformattedText(response.text5);
+          this.textarea3 = ''
+          this.textarea4 = ''
+          this.textarea5 = ''
           this.textarea6 = this.unformattedText(response.text6);
           this.textarea7 = this.unformattedText(response.text7);
           this.textarea8 = this.unformattedText(response.text8);

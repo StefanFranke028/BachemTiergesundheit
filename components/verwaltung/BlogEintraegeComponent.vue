@@ -82,21 +82,32 @@
 
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
-          <v-data-table-virtual
+          <v-text-field
+              v-model="search"
+              append-icon="mdi-magnify"
+              label="Suche"
+              single-line
+              hide-details
+              class="mb-4 mt-5"
+          ></v-text-field>
+          <v-data-table
               :headers="headers"
               :items="blogEntries"
+              :search="search"
               :loading="loading"
+              :items-per-page="-1"
+              :hide-default-footer="true"
               :loading-text="loading ? 'Lade Einträge...' : 'Keine Einträge gefunden'"
               color="blue"
               no-data-text="Keine Einträge gefunden"
-              style="background-color: rgba(0,0,255,0); height: 70vh"
+              style="background-color: rgba(0,0,255,0); height: 70vh; padding-bottom: 200px"
           >
             <template v-slot:item="{ item }">
               <tr>
                 <td>{{ item.entryIndex }}</td>
                 <td>{{ item.ueberschrift }}</td>
                 <td>{{ item.unterUeberschrift }}</td>
-                <td>{{ item.autor }}</td>
+                <td>{{ item.blogEntryCategory }}</td>
                 <td>
                   <input v-model="item.datum" disabled readonly style="color: black" type="date">
                 </td>                  <!-- Datum -->
@@ -116,7 +127,7 @@
                 </td>
               </tr>
             </template>
-          </v-data-table-virtual>
+          </v-data-table>
 
         </div>
       </v-tabs-window-item>
@@ -172,6 +183,7 @@ export default {
       snackbarColor: null,
       dialog: false,
       blogEntries: [],
+      search: '',
       editedEntry: null,
       deleteDialog: false,
       category: null,
@@ -183,8 +195,8 @@ export default {
         {title: 'Id', value: 'id'},
         {title: 'Überschrift', value: 'ueberschrift'},
         {title: 'UnterÜberschrift', value: 'unterUeberschrift'},
-        {title: 'Autor', value: 'autor'},
-        {title: 'Datum', value: 'datum'},
+        {title: 'Kategorie', value: 'blogEntryCategory', sortable: true},
+        {title: 'Datum', value: 'datum', sortable: true},
         {title: 'Bild', value: 'bild'},
         {title: 'Bild', value: 'bild2'},
         {title: 'Aktionen', value: 'actions', sortable: false}

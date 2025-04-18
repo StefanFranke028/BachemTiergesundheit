@@ -44,14 +44,26 @@
             </v-col>
 
             <!-- Weitere Angaben -->
-            <v-col cols="4">
-              <v-text-field v-model="dame.reiseverfuegbarkeit" label="Geschenke Tipps"></v-text-field>
-            </v-col>
+
             <v-col cols="4">
               <v-checkbox v-model="dame.paarchenBegleitung" label="Pärchen Begleitung"></v-checkbox>
             </v-col>
             <v-col cols="4">
+              <v-checkbox v-model="dame.dinnerDate" label="Dinner Date"></v-checkbox>
+            </v-col>
+            <v-col cols="4">
               <v-checkbox v-model="dame.damenBegleitung" label="Damen Begleitung"></v-checkbox>
+            </v-col>
+            <v-col cols="8">
+              <v-textarea auto-grow v-model="dame.reiseverfuegbarkeit" label="Geschenke Tipps"></v-textarea>
+            </v-col>
+            <v-col cols="4">
+              <v-select v-model="dame.preisKategorie"
+                        :items="preisKategorie"
+                        item-text="key"
+                        item-value="value"
+                        label="Preis Kategorie"
+              />
             </v-col>
             <v-col cols="12">
               <v-textarea v-model="dame.praesentation" auto-grow label="Präsentation"></v-textarea>
@@ -214,13 +226,18 @@ export default {
         damenBegleitung: false,
         praesentation: null,
         bilder: [],
-        staedte: []
+        staedte: [],
       },
       loading: false,
       snackbar: false,
       snackbarText: null,
       snackbarColor: null,
       tempEditedDame: null,
+      preisKategorie: [
+        { title: 'Classic', value: 'Classic' },
+        { title: 'Exclusiv', value: 'Exclusiv' },
+        { title: 'VIP', value: 'VIP' },
+      ],
       tab: 2,
       damen: [],
       file: null,
@@ -299,7 +316,7 @@ export default {
             if (dame.bilder) {
               dame.bilder = dame.bilder.map(bild => ({...bild, loaded: true}));
             }
-            return dame;
+            return this.formatDame(dame);
           });
         }
       } catch (e) {
@@ -335,16 +352,45 @@ export default {
       this.dameToDelete = null;
       await this.getDamen();
     },
+    formattedText(text) {
+      // Ersetze alle Zeilenumbrüche durch <br>-Tags
+      return text.replace(/\n/g, "<br>");
+    },
+
+    formatDame(dame) {
+      dame.dienstleistungen = this.unformattedText(dame.dienstleistungen)
+      dame.beschreibung = this.unformattedText(dame.beschreibung)
+      dame.praesentation = this.unformattedText(dame.praesentation)
+      dame.interessenHobbys = this.unformattedText(dame.interessenHobbys)
+      return dame
+    },
+
+    unformatDame(dame){
+      dame.dienstleistungen = this.formattedText(dame.dienstleistungen)
+      dame.beschreibung = this.formattedText(dame.beschreibung)
+      dame.praesentation = this.formattedText(dame.praesentation)
+      dame.interessenHobbys = this.formattedText(dame.interessenHobbys)
+      return dame
+    },
+
+// Methode zum Rückformatieren von HTML in Text für die Textareas
+    unformattedText(text) {
+      // Ersetze alle <br>-Tags durch Zeilenumbrüche
+      return text.replace(/<br\s*\/?>/g, "\n");
+    },
     async submitChanges() {
       this.loading = true;
+
       // Erstelle ein Payload-Objekt, in dem das Feld "staedte" durch ein Array von IDs ersetzt wird.
-      const payload = {
+      let payload = {
         ...this.dame,
         // Falls staedte noch ein Array von Objekten ist, mappe es auf deren IDs.
         staedte: this.dame.staedte && this.dame.staedte.length
             ? this.dame.staedte.map(stadt => stadt.id)
             : []
       };
+
+      payload = this.unformatDame(payload)
 
       try {
         let response;

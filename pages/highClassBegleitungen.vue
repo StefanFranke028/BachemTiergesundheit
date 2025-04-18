@@ -66,10 +66,10 @@
                 <b>Augenfarbe:</b> {{ dame.augenfarbe }}
               </p>
               <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
-                <b>Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
+                <b>Interessen und Hobbys:</b> <br><p v-html="dame.interessenHobbys"/>
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b>Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+                <b>Dienstleistungen:</b> <br> <p v-html="dame.dienstleistungen"/>
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
                 <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}
@@ -105,7 +105,7 @@
                 </span>
               </p>
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
-                <b>Präsentation:</b> <br> {{ dame.praesentation }}
+                <b>Präsentation:</b> <br> <p v-html="dame.praesentation"/>
               </p>
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b> <br>
@@ -194,7 +194,8 @@
                 <b>Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b>Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+                <b>Dienstleistungen:</b> <br> <span v-html="dame.dienstleistungen"/>
+
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
                 <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}

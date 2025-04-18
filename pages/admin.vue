@@ -19,7 +19,7 @@
             </router-link>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="6">
-            <h1>Verwaltung von Maxi-Escort</h1>
+            <h1>Verwaltung von Mila-Escort</h1>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="3">
             <h3 class="text-center" @click="logout">Ausloggen</h3>
@@ -75,7 +75,7 @@
   <div v-if="mobile || tablet " class="d-flex justify-center align-center pb-16">
     <v-card class="mx-5 mt-16" color="grey">
       <v-card-title>
-        <h1>Maxi-Escort</h1>
+        <h1>Mila-Escort</h1>
       </v-card-title>
       <v-card-item>
         Diese Ansicht ist leider auf dem Handy nicht verfügbar. Bitte kehren Sie zur

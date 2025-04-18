@@ -89,40 +89,9 @@
       </v-row>
     </div>
 
-    <div style="width: 100vw; height: 600px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
-        <v-col class="pa-0" cols="12" style="background-color:  #f1edec">
-          <v-row class="ma-0 mt-10 justify-center align-center" style="width: 100%; height: 100%">
-            <v-col cols="7">
-              <div class="d-flex" style="width: 100%; height: 300px;">
-                <v-row class="ma-0" style="width: 100%; height: 30%">
-                  <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer">
-                      <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a
-                        :href="'tel:'+bewerben[0].telefon">{{ bewerben[0].telefon }}</a></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer">
-                      <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email">
-                      {{ bewerben[0].email }}</a></p>
-                  </v-col>
-
-                  <v-col class="d-flex " cols="12">
-                    <p style="" v-html="bewerben[0].text3"></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="" v-html="bewerben[0].text4"></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="" v-html="bewerben[0].text5"></p>
-                  </v-col>
-                </v-row>
-              </div>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </div>
+<!--
+   bewerben.text3, 4 und 5
+-->
 
     <div style="width: 100vw; " class="">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
@@ -148,8 +117,14 @@
 
                 </p> <br>
                 <p v-html="bewerben[0].text12">
-
                 </p>
+                <p style="cursor: pointer">
+                  <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a
+                    :href="'tel:'+bewerben[0].telefon">{{ bewerben[0].telefon }}</a></p>
+                <br>
+                <p style="cursor: pointer">
+                  <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email">
+                  {{ bewerben[0].email }}</a></p>
               </div>
             </v-col>
           </v-row>
