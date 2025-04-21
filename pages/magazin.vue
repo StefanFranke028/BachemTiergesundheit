@@ -15,7 +15,7 @@
         <div class="line-with-dot">
         </div>
         <v-img alt="" cover
-               src="~/assets/blog_1_komprimiert.webp"
+               src="~/assets/Magazin_Bild_Neu.jpg"
                style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></v-img>
       </div>
       <div style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 142%; left: 80%; transform: translate(-50%, -50%);">
