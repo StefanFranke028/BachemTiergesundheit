@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /verwaltung
+Disallow: /admin
+Disallow: /_nuxt
 
