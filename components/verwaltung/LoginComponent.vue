@@ -96,7 +96,7 @@ export default {
   methods: {
     async login() {
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/login`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/login`, {
           method: 'POST',
           body: {
             email: this.email,

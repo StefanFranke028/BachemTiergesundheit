@@ -156,7 +156,7 @@
               <h1 class="text-center  text5 dosis" v-html="vita[0].text1">
               </h1>
               </div>
-            <div class="pa-3 mt-n12 dm-serif" style="font-size: 12px; text-align: justify;" v-html="vita[0].text2">
+            <div class="pa-3 mt-n12 dm-serif" style="font-size: 12px; " v-html="vita[0].text2">
 
             </div>
             <router-link aria-label="Escort" to="highClassBegleitungen">
@@ -256,7 +256,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/vita", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/vita", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

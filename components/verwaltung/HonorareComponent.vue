@@ -125,7 +125,7 @@ export default {
     // Methode zum Abrufen der LandingPage-Daten
     async getLandingPageData() {
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/honorare`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/honorare`, {
           method: 'GET',
         });
 
@@ -179,7 +179,7 @@ export default {
       };
 
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/honorare`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/honorare`, {
           method: 'PUT',
           body: data
         });

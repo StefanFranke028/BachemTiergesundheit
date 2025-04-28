@@ -230,7 +230,7 @@ export default {
     async getCastings() {
       this.loading = true;
       try {
-        let response = await $fetch("http://5.45.97.75:8080/auth/casting", {method: "GET"});
+        let response = await $fetch("https://mila-escort.de:8443/auth/casting", {method: "GET"});
         if (response && Array.isArray(response)) {
           this.castings = response.map(casting => {
             if (casting.bilder) {
@@ -257,7 +257,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        await $fetch(`http://5.45.97.75:8080/auth/casting/${this.castingToDelete.id}`, {method: "DELETE"});
+        await $fetch(`https://mila-escort.de:8443/auth/casting/${this.castingToDelete.id}`, {method: "DELETE"});
         this.castings = this.castings.filter(x => x.id !== this.castingToDelete.id);
         this.snackbar = true;
         this.snackbarText = "Casting erfolgreich gelöscht";
@@ -271,13 +271,36 @@ export default {
       this.loading = false;
       this.castingToDelete = null;
     },
+    compressImage(base64, maxWidth , quality ) {
+      if (!base64) return Promise.resolve(null);
+
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = base64;
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+
+          const scale = maxWidth / img.width;
+          canvas.width = maxWidth;
+          canvas.height = img.height * scale;
+
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            const compressedBase64 = canvas.toDataURL("image/jpeg", quality);
+            resolve(compressedBase64);
+          }
+        };
+      });
+    },
+
     async submitChanges() {
       this.loading = true;
       const data = {...this.casting};
       try {
         let response;
         if (this.tempEditedCasting) {
-          response = await $fetch(`http://5.45.97.75:8080/auth/casting/${this.tempEditedCasting.id}`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/casting/${this.tempEditedCasting.id}`, {
             method: "PUT",
             body: data
           });
@@ -289,7 +312,7 @@ export default {
             await this.getCastings();
           }
         } else {
-          response = await $fetch("http://5.45.97.75:8080/auth/casting", {
+          response = await $fetch("https://mila-escort.de:8443/auth/casting", {
             method: "POST",
             body: data
           });
@@ -316,7 +339,13 @@ export default {
         Array.from(files).forEach((file) => {
           const reader = new FileReader();
           reader.onload = async (e) => {
-            const imageData = {imageBase64: e.target.result};
+            const base64 = e.target.result;
+
+            // Komprimiere das Bild
+            const compressedBase64 = await this.compressImage(base64, 800, 0.7);
+            const imageData = { imageBase64: compressedBase64 };
+
+            // Behalte deine Logik 1:1 bei
             if (this.tempEditedCasting) {
               this.tempEditedCasting.bilder = this.tempEditedCasting.bilder || [];
               this.tempEditedCasting.bilder.push(imageData);
@@ -327,6 +356,11 @@ export default {
           };
           reader.readAsDataURL(file);
         });
+      }
+
+      // Input leeren (auch gleiche Datei nochmal möglich machen)
+      if (event.target) {
+        event.target.value = '';
       }
       this.file = null;
     },

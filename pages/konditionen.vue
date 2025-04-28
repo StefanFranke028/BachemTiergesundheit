@@ -67,14 +67,14 @@
           </v-row>
         </v-col>
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover  src="~/assets/honorareBild2.jpeg" style="z-index: 0; height: 860px"></v-img>
+          <v-img alt="" cover  src="~/assets/honorareBild12.jpg" style="z-index: 0; height: 860px"></v-img>
         </v-col>
       </v-row>
     </div>
     <div style="width: 100vw; height: 870px">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6">
-          <v-img alt="" cover height="870" src="~/assets/honorareBild1.jpeg" style="z-index: 0;"></v-img>
+          <v-img alt="" cover height="870" src="~/assets/honorareBild22.jpg" style="z-index: 0;"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #d4e2ea">
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
@@ -158,7 +158,7 @@
             <div class="text-center dosis" style="position: relative; top:-50px">
               <h1 class="text-center text5 dosis" v-html="honorare[0].text1"></h1>
             </div>
-            <p class="pa-3 mt-n16 dosis" style="font-size: 12px; text-align: justify;" v-html="honorare[0].text2">
+            <p class="pa-3 mt-n16 dosis" style="font-size: 12px; " v-html="honorare[0].text2">
             </p>
             <router-link aria-label="Vita" to="vita">
               <v-btn class="text-center mt-3" style="position:absolute; top:80%" theme="dark">zur Vita</v-btn>
@@ -171,7 +171,7 @@
     </v-img>
 
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex justify-center align-center" cover
-           src="~/assets/honorareBild2.jpeg" style="width: 100%;  ">
+           src="~/assets/honorareBild12.jpg" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
@@ -210,7 +210,7 @@
       </v-row>
     </v-img>
     <v-img alt="schwarz-weis Hintergrundbild" class="d-flex py-6 justify-center align-center" cover
-           src="~/assets/honorareBild1.jpeg" style="width: 100%;  ">
+           src="~/assets/honorareBild22.jpg" style="width: 100%;  ">
 
       <v-row class="ma-0 justify-center align-center" style="width: 100%; height: 100%">
         <v-col class=" " cols="12">
@@ -248,7 +248,7 @@
 
           </v-row>
           <v-row v-for="preis in escortPreise" :key="preis" class="ma-0" style="width: 100%; ">
-            <v-col class="d-flex justify-center tabelleleftmid" cols="3">
+            <v-col class="d-flex justify-center tabelleleftmid px-1" cols="3">
               <p class="text-center">
                 {{ preis.dauer }}
               </p>
@@ -269,7 +269,9 @@
               </p>
             </v-col>
           </v-row>
-
+          <div style="background-color: #b8ddec " class="pa-2">
+            <p class=" text-center mt-5">Für längere Buchungen kommen Sie vertrauensvoll auf uns für eine individuelle Absprache zu.</p>
+          </div>
         </v-col>
       </v-row>
     </v-img>
@@ -296,7 +298,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/honorare", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/honorare", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -333,7 +335,7 @@ const {data: escortPreise1, pending2, error2} = await useAsyncData('escortPreise
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/escortpreise", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/escortpreise", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -367,7 +369,7 @@ const {data: dinnerPreise1, pending3, error3} = await useAsyncData('dinnerPreise
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/dinnerpreise", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/dinnerpreise", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -569,18 +571,18 @@ p {
 }
 
 .tabelleleft {
-  background-color: #65c6ec;
+  background-color: #8fcee6;
   border-radius: 10px 0px 0px 0px;
 }
 
 .tabelleright {
-  background-color: #65c6ec;
+  background-color: #8fcee6;
   border-radius: 0px 10px 0px 0px;
 
 }
 
 .tabelle {
-  background-color: #65c6ec;
+  background-color: #8fcee6;
 }
 
 .tabelleleftmid {

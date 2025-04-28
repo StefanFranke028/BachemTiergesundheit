@@ -11,7 +11,7 @@
              style="width: 100vw; height: 100vh">
           <LoginComponent/>
         </div>
-        <v-row class="d-flex justify-center ma-0"
+        <v-row v-else class="d-flex justify-center ma-0"
                style="background-color: rgba(255,255,255,0.0); width: 100vw; height: 100vh">
           <v-col class="d-flex justify-center align-center" cols="3">
             <router-link to="/">
@@ -19,7 +19,7 @@
             </router-link>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="6">
-            <h1>Verwaltung von Maxi-Escort</h1>
+            <h1>Verwaltung von Mila-Escort</h1>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="3">
             <h3 class="text-center" @click="logout">Ausloggen</h3>
@@ -75,7 +75,7 @@
   <div v-if="mobile || tablet " class="d-flex justify-center align-center pb-16">
     <v-card class="mx-5 mt-16" color="grey">
       <v-card-title>
-        <h1>Maxi-Escort</h1>
+        <h1>Mila-Escort</h1>
       </v-card-title>
       <v-card-item>
         Diese Ansicht ist leider auf dem Handy nicht verfügbar. Bitte kehren Sie zur
@@ -165,7 +165,7 @@ export default {
         console.log("token is da");
       }
       try {
-        let response = await $fetch("http://5.45.97.75:8080/auth/user", {
+        let response = await $fetch("https://mila-escort.de:8443/auth/user", {
           method: "GET",
           headers: {
             Authorization: token ? `Bearer ${token}` : undefined,

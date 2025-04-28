@@ -1,11 +1,14 @@
 <template>
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
+
       <div class="cardIn1 px-5">
         <h1 class="dm-serif" style="margin-left: -90px; font-size: 22px" v-html="escort[0].text1"></h1>
 
         <div class="vertical-marker">
         </div>
+
+
         <p class="dosis" style="margin-top: -100px;" v-html="escort[0].text2"></p>
         <router-link style="position: relative; left: -14%; top:15vh" to="getInTouch">
           <v-btn class="text-center" theme="dark">Kontakt</v-btn>
@@ -30,7 +33,7 @@
         <v-col v-for="dame in damen" :key="dame" class=" mb-4 mt-10 py-0 px-4 mx-2" cols="3">
           <v-row class="ma-0 px-5 damencard mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
-              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+              <v-carousel hide-delimiters style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -49,7 +52,10 @@
               <p class="dosis mt-2" style="font-size: 12px;" v-html=" dame.beschreibung ">
 
               </p>
-              <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
+              <p v-if="dame.preisKategorie" class="dosis mt-2" style="font-size: 12px;">
+                <b>Preiskategorie:</b> {{ dame.preisKategorie }}
+              </p>
+              <p v-if="dame.geburtsalter" class="dosis " style="font-size: 12px;">
                 <b>Alter:</b> {{ dame.geburtsalter }}
               </p>
               <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
@@ -63,10 +69,10 @@
                 <b>Augenfarbe:</b> {{ dame.augenfarbe }}
               </p>
               <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
-                <b>Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
+                <b>Interessen und Hobbys:</b> <br><p v-html="dame.interessenHobbys"/>
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b>Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+                <b>Dienstleistungen:</b> <br> <p v-html="dame.dienstleistungen"/>
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
                 <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}
@@ -101,13 +107,25 @@
                 Nein
                 </span>
               </p>
+              <p v-if="dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="dame.dinnerDate">
+                Ja
+                </span>
+              </p>
+              <p v-if="!dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="!dame.dinnerDate">
+                Nein
+                </span>
+              </p>
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
-                <b>Präsentation:</b> <br> {{ dame.praesentation }}
+                <b>Präsentation:</b> <br> <p v-html="dame.praesentation"/>
               </p>
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
-                  {{ stadt.name }}, &nbsp;
+                  {{ stadt.name }},
                 </span>
               </p>
 
@@ -138,7 +156,7 @@
               <h1 class="text-center text5 dosis" v-html="escort[0].text1">
               </h1>
             </div>
-            <div class="pa-3 mt-n16 dosis" style="font-size: 11px; text-align: justify;" v-html="escort[0].text2">
+            <div class="pa-3 mt-n16 dosis" style="font-size: 11px; " v-html="escort[0].text2">
 
             </div>
             <router-link style=" " to="getInTouch">
@@ -155,7 +173,7 @@
         <v-col v-for="dame in damen" :key="dame" class="damencard mb-4 mt-10 py-0 px-4 mx-2" cols="10">
           <v-row class="ma-0  mt-5" style="width: 100%; height: 100%">
             <v-col class="pa-0" cols="12">
-              <v-carousel style="height: 390px; border-radius: 4px" theme="dark">
+              <v-carousel hide-delimiters style="height: 390px; border-radius: 4px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -174,7 +192,10 @@
               <p class="dosis mt-2" style="font-size: 12px;" v-html=" dame.beschreibung ">
 
               </p>
-              <p v-if="dame.geburtsalter" class="dosis mt-2" style="font-size: 12px;">
+              <p v-if="dame.preisKategorie" class="dosis mt-2" style="font-size: 12px;">
+                <b>Preiskategorie:</b> {{ dame.preisKategorie }}
+              </p>
+              <p v-if="dame.geburtsalter" class="dosis" style="font-size: 12px;">
                 <b>Alter:</b> {{ dame.geburtsalter }}
               </p>
               <p v-if="dame.groesse" class="dosis " style="font-size: 12px;">
@@ -191,7 +212,8 @@
                 <b>Interessen und Hobbys:</b> <br> {{ dame.interessenHobbys }}
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b>Dienstleistungen:</b> <br> {{ dame.dienstleistungen }}
+                <b>Dienstleistungen:</b> <br> <span v-html="dame.dienstleistungen"/>
+
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
                 <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}
@@ -226,13 +248,25 @@
                 Nein
                 </span>
               </p>
+              <p v-if="dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="dame.dinnerDate">
+                Ja
+                </span>
+              </p>
+              <p v-if="!dame.dinnerDate" class="dosis mt-1" style="font-size: 12px;">
+                <b>Dinner Date:</b>
+                <span v-if="!dame.dinnerDate">
+                Nein
+                </span>
+              </p>
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
                 <b>Präsentation:</b> <br> {{ dame.praesentation }}
               </p>
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b> <br>
                 <span v-for="stadt in dame.staedte" :key="stadt">
-                  {{ stadt.name }}, &nbsp;
+                  {{ stadt.name }},
                 </span>
               </p>
 
@@ -270,7 +304,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/escort", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/escort", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -294,7 +328,7 @@ const {data: damen1, pending2, error2} = await useAsyncData('damen', async () =>
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/dame", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/dame", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

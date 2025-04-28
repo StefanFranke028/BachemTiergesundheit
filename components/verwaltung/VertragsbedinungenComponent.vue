@@ -159,7 +159,7 @@ export default {
     async getVertragsbedingungen() {
       try {
         // Passe die URL und das Protokoll (z.B. GET /auth/vertragsbedingungen) an deine API an.
-        let response = await $fetch(`http://5.45.97.75:8080/auth/vertragsbedingungen`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/vertragsbedingungen`, {
           method: 'GET'
         });
         console.log(response)
@@ -226,7 +226,7 @@ export default {
       };
       try {
         // Passe die URL und Methode an deine API an (PUT /auth/vertragsbedingungen)
-        let response = await $fetch(`http://5.45.97.75:8080/auth/vertragsbedingungen`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/vertragsbedingungen`, {
           method: 'PUT',
           body: data
         });

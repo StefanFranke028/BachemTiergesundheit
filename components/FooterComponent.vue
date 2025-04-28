@@ -112,12 +112,12 @@
 
           </b>
         </p>
-        <v-row class="ma-0 d-flex  " style="width: 100%">
+        <v-row class="ma-0 d-flex justify-center" style="width: 100%">
           <v-col
               v-for="(stadt, index) in staedte"
               :key="stadt"
               class="pa-0 d-flex justify-center"
-              cols="6"
+              cols="5"
           >
             <nuxt-link
                 :to="'MilaEscort-' + stadt.name"
@@ -188,7 +188,7 @@
         </p>
 
         <p>
-          E-Mail: <a href="mailto:Team@Mila-escort.de">Team@Mila-escort.de</a>
+          E-Mail: <a href="mailto:team@Mila-escort.de">Team@Mila-escort.de</a>
         </p>
         <p class="mt-2">
           <b>
@@ -272,12 +272,12 @@
 
           </b>
         </p>
-        <v-row class="ma-0 d-flex  mt-2" style="width: 100%">
+        <v-row class="ma-0 d-flex  mt-2" style="width: 60%">
           <v-col
               v-for="(stadt, index) in staedte"
               :key="stadt"
               class="pa-0 "
-              cols="6"
+              cols="5"
           >
             <nuxt-link
                 :to="'MilaEscort-' + stadt.name"
@@ -298,6 +298,27 @@
       </v-col>
     </v-row>
 
+    <div class="d-flex pl-3 mt-3 " style="position: relative;">
+      <p style="font-size: 12px">
+        <b>
+          Copyright © 2025 Mila Escort ®
+        </b>
+       <br>  Alle Rechte vorbehalten  <br>
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
+          <span class="">Anbieterkennzeichnung</span> <br>
+        </router-link>
+
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
+          <span class=""> Disclaimer & Datenschutzerklärung </span> <br>
+        </router-link>
+
+        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
+          <span class="">Admin</span>
+        </router-link>
+
+
+      </p>
+    </div>
 
 
   </div>
@@ -325,7 +346,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage1', 
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/stadt/namen", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/stadt/namen", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -484,9 +505,9 @@ p {
   color: inherit;
 }
 .ml-20{
-  margin-left: 100px
+  margin-left: 3.8vw
 }
 .mr-20{
-  margin-right: 100px
+  margin-right: 3.8vw
 }
 </style>

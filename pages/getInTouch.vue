@@ -4,9 +4,10 @@
       <div class="cardIn1 px-5">
         <h1 class="dm-serif mt-2 text-center" style=" font-size: 22px " v-html="kontakt[0].text1"></h1>
 
-        <p class="dosis mt-7" style="margin-bottom: 100px;" v-html="kontakt[0].text2">
-
+        <p class="dosis " style="margin-bottom: 100px;" v-html="kontakt[0].text2">
         </p>
+        <div class="vertical-marker">
+        </div>
       </div>
     </div>
     <div style="width: 100vw; height: 600px">
@@ -76,7 +77,7 @@
             <div class="text-center dosis" style="position: relative; top:-50px">
               <h1 class="text-center text5 dosis" v-html="kontakt[0].text1"></h1>
             </div>
-            <div class="pa-3 mt-5 dm-serif" style="font-size: 11px; text-align: justify;" v-html="kontakt[0].text2">
+            <div class="pa-3 mt-n12 dm-serif" style="font-size: 11px; text-align: justify;" v-html="kontakt[0].text2">
 
             </div>
             <router-link aria-label="Vita" to="vita">
@@ -196,7 +197,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/kontakt", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/kontakt", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -284,7 +285,7 @@ h1 {
 .vertical-marker::before {
   content: '';
   position: absolute;
-  top: 20vh; /* Positioniert den Punkt ganz oben */
+  top: -25vh; /* Positioniert den Punkt ganz oben */
   left: 50%; /* Zentriert den Punkt horizontal */
   width: 10px; /* Größe des Punktes */
   height: 10px; /* Größe des Punktes */
@@ -296,7 +297,7 @@ h1 {
 .vertical-marker::after {
   content: '';
   position: absolute;
-  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  top: -25vh; /* Beginnt direkt unter dem Punkt */
   left: 50%; /* Zentriert den Strich horizontal */
   width: 2px; /* Breite des Striches */
   height: 330%; /* Höhe des Striches */

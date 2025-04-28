@@ -44,14 +44,26 @@
             </v-col>
 
             <!-- Weitere Angaben -->
-            <v-col cols="4">
-              <v-text-field v-model="dame.reiseverfuegbarkeit" label="Geschenke Tipps"></v-text-field>
-            </v-col>
+
             <v-col cols="4">
               <v-checkbox v-model="dame.paarchenBegleitung" label="Pärchen Begleitung"></v-checkbox>
             </v-col>
             <v-col cols="4">
+              <v-checkbox v-model="dame.dinnerDate" label="Dinner Date"></v-checkbox>
+            </v-col>
+            <v-col cols="4">
               <v-checkbox v-model="dame.damenBegleitung" label="Damen Begleitung"></v-checkbox>
+            </v-col>
+            <v-col cols="8">
+              <v-textarea auto-grow v-model="dame.reiseverfuegbarkeit" label="Geschenke Tipps"></v-textarea>
+            </v-col>
+            <v-col cols="4">
+              <v-select v-model="dame.preisKategorie"
+                        :items="preisKategorie"
+                        item-text="key"
+                        item-value="value"
+                        label="Preis Kategorie"
+              />
             </v-col>
             <v-col cols="12">
               <v-textarea v-model="dame.praesentation" auto-grow label="Präsentation"></v-textarea>
@@ -214,13 +226,18 @@ export default {
         damenBegleitung: false,
         praesentation: null,
         bilder: [],
-        staedte: []
+        staedte: [],
       },
       loading: false,
       snackbar: false,
       snackbarText: null,
       snackbarColor: null,
       tempEditedDame: null,
+      preisKategorie: [
+        { title: 'Classic', value: 'Classic' },
+        { title: 'Exclusiv', value: 'Exclusiv' },
+        { title: 'VIP', value: 'VIP' },
+      ],
       tab: 2,
       damen: [],
       file: null,
@@ -293,13 +310,13 @@ export default {
     async getDamen() {
       this.loading = true;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/dame`, {method: 'GET'});
+        let response = await $fetch(`https://mila-escort.de:8443/auth/dame`, {method: 'GET'});
         if (response && Array.isArray(response)) {
           this.damen = response.map(dame => {
             if (dame.bilder) {
               dame.bilder = dame.bilder.map(bild => ({...bild, loaded: true}));
             }
-            return dame;
+            return this.formatDame(dame);
           });
         }
       } catch (e) {
@@ -320,7 +337,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/dame/${this.dameToDelete.id}`, {method: 'DELETE'});
+        let response = await $fetch(`https://mila-escort.de:8443/auth/dame/${this.dameToDelete.id}`, {method: 'DELETE'});
         this.damen = this.damen.filter(e => e.id !== this.dameToDelete.id);
         this.snackbar = true;
         this.snackbarText = "Dame erfolgreich gelöscht";
@@ -335,10 +352,37 @@ export default {
       this.dameToDelete = null;
       await this.getDamen();
     },
+    formattedText(text) {
+      // Ersetze alle Zeilenumbrüche durch <br>-Tags
+      return text.replace(/\n/g, "<br>");
+    },
+
+    formatDame(dame) {
+      dame.dienstleistungen = this.unformattedText(dame.dienstleistungen)
+      dame.beschreibung = this.unformattedText(dame.beschreibung)
+      dame.praesentation = this.unformattedText(dame.praesentation)
+      dame.interessenHobbys = this.unformattedText(dame.interessenHobbys)
+      return dame
+    },
+
+    unformatDame(dame){
+      dame.dienstleistungen = this.formattedText(dame.dienstleistungen)
+      dame.beschreibung = this.formattedText(dame.beschreibung)
+      dame.praesentation = this.formattedText(dame.praesentation)
+      dame.interessenHobbys = this.formattedText(dame.interessenHobbys)
+      return dame
+    },
+
+// Methode zum Rückformatieren von HTML in Text für die Textareas
+    unformattedText(text) {
+      // Ersetze alle <br>-Tags durch Zeilenumbrüche
+      return text.replace(/<br\s*\/?>/g, "\n");
+    },
     async submitChanges() {
       this.loading = true;
+
       // Erstelle ein Payload-Objekt, in dem das Feld "staedte" durch ein Array von IDs ersetzt wird.
-      const payload = {
+      let payload = {
         ...this.dame,
         // Falls staedte noch ein Array von Objekten ist, mappe es auf deren IDs.
         staedte: this.dame.staedte && this.dame.staedte.length
@@ -346,10 +390,12 @@ export default {
             : []
       };
 
+      payload = this.unformatDame(payload)
+
       try {
         let response;
         if (this.tempEditedDame) {
-          response = await $fetch(`http://5.45.97.75:8080/auth/dame/${this.tempEditedDame.id}`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/dame/${this.tempEditedDame.id}`, {
             method: 'PUT',
             body: payload,
           });
@@ -361,7 +407,7 @@ export default {
             await this.getDamen();
           }
         } else {
-          response = await $fetch(`http://5.45.97.75:8080/auth/dame`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/dame`, {
             method: 'POST',
             body: payload,
           });
@@ -382,32 +428,41 @@ export default {
       }
       this.loading = false;
     },
+    readFileAsBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    },
+
     async onFilesSelected(event) {
       const files = event.target.files;
       if (files && files.length) {
-        Array.from(files).forEach((file) => {
-          const reader = new FileReader();
-          reader.onload = async (e) => {
-            const imageData = {imageBase64: e.target.result};
-            if (this.tempEditedDame) {
-              // Falls wir im Bearbeitungsmodus sind, aktualisiere beide Objekte:
-              this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
-              this.tempEditedDame.bilder.push(imageData);
-              // Damit die Vorschau auch in "dame" erscheint:
-              this.dame.bilder = [...this.tempEditedDame.bilder];
-            } else {
-              this.dame.bilder = this.dame.bilder || [];
-              this.dame.bilder.push(imageData);
-            }
-          };
-          reader.readAsDataURL(file);
-        });
+        for (const file of files) {
+          const base64 = await this.readFileAsBase64(file); // 1. Bild einlesen
+          const compressed = await this.compressImage(base64, 800, 0.7); // 2. Komprimieren
+          const imageData = { imageBase64: compressed }; // 3. Ab in die Datenstruktur
+
+          if (this.tempEditedDame) {
+            this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
+            this.tempEditedDame.bilder.push(imageData);
+            this.dame.bilder = [...this.tempEditedDame.bilder];
+          } else {
+            this.dame.bilder = this.dame.bilder || [];
+            this.dame.bilder.push(imageData);
+          }
+        }
       }
+
       this.file = null;
       if (this.$refs.fileInput) {
         await this.$refs.fileInput.reset();
       }
     }
+
+
 
     ,
     removeImage(index) {

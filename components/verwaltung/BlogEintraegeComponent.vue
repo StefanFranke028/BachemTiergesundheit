@@ -82,21 +82,32 @@
 
       <v-tabs-window-item :value="2">
         <div style="overflow-y: scroll">
-          <v-data-table-virtual
+          <v-text-field
+              v-model="search"
+              append-icon="mdi-magnify"
+              label="Suche"
+              single-line
+              hide-details
+              class="mb-4 mt-5"
+          ></v-text-field>
+          <v-data-table
               :headers="headers"
               :items="blogEntries"
+              :search="search"
               :loading="loading"
+              :items-per-page="-1"
+              :hide-default-footer="true"
               :loading-text="loading ? 'Lade Einträge...' : 'Keine Einträge gefunden'"
               color="blue"
               no-data-text="Keine Einträge gefunden"
-              style="background-color: rgba(0,0,255,0); height: 70vh"
+              style="background-color: rgba(0,0,255,0); height: 70vh; padding-bottom: 200px"
           >
             <template v-slot:item="{ item }">
               <tr>
-                <td>{{ item.id }}</td>
+                <td>{{ item.entryIndex }}</td>
                 <td>{{ item.ueberschrift }}</td>
                 <td>{{ item.unterUeberschrift }}</td>
-                <td>{{ item.autor }}</td>
+                <td>{{ item.blogEntryCategory }}</td>
                 <td>
                   <input v-model="item.datum" disabled readonly style="color: black" type="date">
                 </td>                  <!-- Datum -->
@@ -116,7 +127,7 @@
                 </td>
               </tr>
             </template>
-          </v-data-table-virtual>
+          </v-data-table>
 
         </div>
       </v-tabs-window-item>
@@ -172,6 +183,7 @@ export default {
       snackbarColor: null,
       dialog: false,
       blogEntries: [],
+      search: '',
       editedEntry: null,
       deleteDialog: false,
       category: null,
@@ -183,8 +195,8 @@ export default {
         {title: 'Id', value: 'id'},
         {title: 'Überschrift', value: 'ueberschrift'},
         {title: 'UnterÜberschrift', value: 'unterUeberschrift'},
-        {title: 'Autor', value: 'autor'},
-        {title: 'Datum', value: 'datum'},
+        {title: 'Kategorie', value: 'blogEntryCategory', sortable: true},
+        {title: 'Datum', value: 'datum', sortable: true},
         {title: 'Bild', value: 'bild'},
         {title: 'Bild', value: 'bild2'},
         {title: 'Aktionen', value: 'actions', sortable: false}
@@ -220,7 +232,28 @@ export default {
       // Ersetze alle Zeilenumbrüche durch <br>-Tags
       return text.replace(/\n/g, "<br>");
     },
+    compressImage(base64, maxWidth , quality ) {
+      if (!base64) return Promise.resolve(null);
 
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = base64;
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+
+          const scale = maxWidth / img.width;
+          canvas.width = maxWidth;
+          canvas.height = img.height * scale;
+
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            const compressedBase64 = canvas.toDataURL("image/jpeg", quality);
+            resolve(compressedBase64);
+          }
+        };
+      });
+    },
 // Methode zum Rückformatieren von HTML in Text für die Textareas
     unformattedText(text) {
       return text ? text.replace(/<br\s*\/?>/g, "\n") : "";
@@ -242,7 +275,7 @@ export default {
     async getBlogEintraege() {
       this.loading = true;
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/blog/entries`, {
           method: 'GET',
         });
 
@@ -270,9 +303,8 @@ export default {
 
     // Methode zum Bearbeiten eines Eintrags
     editEntry(entry) {
-      // Speichere den zu bearbeitenden Eintrag und öffne ggf. ein Formular oder setze die Felder
       this.editedEntry = entry;
-      this.tab = 1; // Wechsel zum "Erstellen"-Tab für das Bearbeiten
+      this.tab = 1;
       this.ueberschrift = entry.ueberschrift;
       this.unterUeberschrift = entry.unterUeberschrift;
       this.text = entry.text;
@@ -285,7 +317,7 @@ export default {
       this.autor = entry.autor;
     },
 
-    // Methode zum Löschen eines Eintrags
+
     deleteEntry(entry) {
       this.entryToDelete = entry; // Den zu löschenden Eintrag speichern
       this.deleteDialog = true; // Dialog öffnen
@@ -296,7 +328,7 @@ export default {
       this.loading = true;
       this.deleteDialog = false; // Dialog schließen
       try {
-        let response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries/${this.entryToDelete.id}`, {
+        let response = await $fetch(`https://mila-escort.de:8443/auth/blog/entries/${this.entryToDelete.id}`, {
           method: 'DELETE',
         });
 
@@ -325,19 +357,18 @@ export default {
         ueberschrift: this.formattedText(this.ueberschrift),
         unterUeberschrift: this.formattedText(this.unterUeberschrift),
         text: this.formattedText(this.text),
-        bild: this.base64Image,
-        bild2: this.base64Image2,
+        bild:  await this.compressImage(this.base64Image, 900, 0.8),
+        bild2: await this.compressImage(this.base64Image2, 900, 0.8),
         autor: this.autor,
         blogEntryCategory: this.category,
         entryIndex: this.blogIndex
       };
-
       try {
         let response;
 
         if (this.editedEntry) {
           // Wenn ein Eintrag bearbeitet wird, nutze PUT
-          response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries/${this.editedEntry.id}`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/blog/entries/${this.editedEntry.id}`, {
             method: 'PUT',
             body: data
           });
@@ -351,7 +382,7 @@ export default {
           }
         } else {
           // Erstellen eines neuen Eintrags
-          response = await $fetch(`http://5.45.97.75:8080/auth/blog/entries`, {
+          response = await $fetch(`https://mila-escort.de:8443/auth/blog/entries`, {
             method: 'POST',
             body: data
           });

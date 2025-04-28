@@ -459,7 +459,7 @@ import {useScreenStore} from "~/stores/screen.js";
 export default {
   name: "KontaktView",
   computed: {
-    wide() {
+    wiVde() {
       const screenStore = useScreenStore();
       return screenStore.wide;
     },

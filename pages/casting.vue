@@ -2,7 +2,12 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
+
         <h1 class="dm-serif mt-2 text-center" style="font-size: 22px" v-html="bewerben[0].text1"></h1>
+
+        <div class="vertical-marker">
+        </div>
+
         <p class="dosis mt-7" style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
         </p>
       </div>
@@ -25,7 +30,7 @@
         <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="3"  :key="dame">
           <v-row  class="ma-0 px-5 damencard " style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
-              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+              <v-carousel hide-delimiters style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -84,40 +89,9 @@
       </v-row>
     </div>
 
-    <div style="width: 100vw; height: 600px">
-      <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
-        <v-col class="pa-0" cols="12" style="background-color:  #f1edec">
-          <v-row class="ma-0 mt-10 justify-center align-center" style="width: 100%; height: 100%">
-            <v-col cols="7">
-              <div class="d-flex" style="width: 100%; height: 300px;">
-                <v-row class="ma-0" style="width: 100%; height: 30%">
-                  <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer">
-                      <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a
-                        :href="'tel:'+bewerben[0].telefon">{{ bewerben[0].telefon }}</a></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="cursor: pointer">
-                      <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email">
-                      {{ bewerben[0].email }}</a></p>
-                  </v-col>
-
-                  <v-col class="d-flex " cols="12">
-                    <p style="" v-html="bewerben[0].text3"></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="" v-html="bewerben[0].text4"></p>
-                  </v-col>
-                  <v-col class="d-flex " cols="12">
-                    <p style="" v-html="bewerben[0].text5"></p>
-                  </v-col>
-                </v-row>
-              </div>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </div>
+<!--
+   bewerben.text3, 4 und 5
+-->
 
     <div style="width: 100vw; " class="">
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
@@ -143,8 +117,14 @@
 
                 </p> <br>
                 <p v-html="bewerben[0].text12">
-
                 </p>
+                <p style="cursor: pointer">
+                  <Icon icon="ic:baseline-phone"/> &nbsp; Telefon: <a
+                    :href="'tel:'+bewerben[0].telefon">{{ bewerben[0].telefon }}</a></p>
+                <br>
+                <p style="cursor: pointer">
+                  <Icon icon="fluent-mdl2:edit-mail"/> &nbsp; E-Mail: <a :href="'mailto:'+bewerben[0].email">
+                  {{ bewerben[0].email }}</a></p>
               </div>
             </v-col>
           </v-row>
@@ -181,7 +161,7 @@
         <v-col  class=" mb-4 mt-10 py-0 px-4 mx-2" v-for="dame in damen" cols="10"  :key="dame">
           <v-row  class="ma-0 px-5 damencard " style="width: 100%; height: 100%">
             <v-col class="pa-0 d-flex justify-center pt-5" cols="12">
-              <v-carousel style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
+              <v-carousel hide-delimiters style="height: 420px; width: 350px; border-radius: 5px" theme="dark">
                 <v-carousel-item
                     v-for="bild in dame.bilder"
                     :key="bild" :src="bild.imageBase64"
@@ -312,7 +292,7 @@ const {data: damen1, pending2, error2} = await useAsyncData('damen', async () =>
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/casting", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/casting", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -337,7 +317,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/bewerben", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/bewerben", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -479,7 +459,7 @@ h1 {
 .vertical-marker::before {
   content: '';
   position: absolute;
-  top: 20vh; /* Positioniert den Punkt ganz oben */
+  top: 0vh; /* Positioniert den Punkt ganz oben */
   left: 50%; /* Zentriert den Punkt horizontal */
   width: 10px; /* Größe des Punktes */
   height: 10px; /* Größe des Punktes */
@@ -491,7 +471,7 @@ h1 {
 .vertical-marker::after {
   content: '';
   position: absolute;
-  top: 20vh; /* Beginnt direkt unter dem Punkt */
+  top: 0vh; /* Beginnt direkt unter dem Punkt */
   left: 50%; /* Zentriert den Strich horizontal */
   width: 2px; /* Breite des Striches */
   height: 330%; /* Höhe des Striches */

@@ -139,7 +139,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/vertragsbedingungen", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/vertragsbedingungen", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,

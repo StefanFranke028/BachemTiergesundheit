@@ -15,7 +15,7 @@
         <div class="line-with-dot">
         </div>
         <v-img alt="" cover
-               src="~/assets/blog_1_komprimiert.webp"
+               src="~/assets/Magazin_Bild_Neu.jpg"
                style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></v-img>
       </div>
       <div style="min-width: 100%; min-height: 100%; width: auto; height: auto; position: absolute; top: 142%; left: 80%; transform: translate(-50%, -50%);">
@@ -177,7 +177,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/blog", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/blog", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
@@ -214,7 +214,7 @@ const {data: blogs1, pending1, error2} = await useAsyncData('blog', async () => 
   }
 
   try {
-    const response = await $fetch("http://5.45.97.75:8080/auth/blog/entries", {
+    const response = await $fetch("https://mila-escort.de:8443/auth/blog/entries", {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
