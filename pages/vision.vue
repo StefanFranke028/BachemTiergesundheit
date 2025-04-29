@@ -183,10 +183,9 @@ useHead({
   },
   title: 'Mila Escort Service',
   link: [
-
     {
       rel: 'canonical',
-      href: `https://mila-escort.de/visiont`,
+      href: `https://mila-escort.de/vision`,
     },
   ],
   meta: [
