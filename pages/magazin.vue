@@ -251,7 +251,7 @@ useHead({
       href: `https://mila-escort.de/magazin`,
     },
   ],
-  title: 'Mila-Escort Blog',
+  title: 'Mila Escort Service',
   meta: [
     {
       name: 'description',

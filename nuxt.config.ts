@@ -1,7 +1,17 @@
 export default defineNuxtConfig({
     ssr: true,
     target: 'server',
+    build: {
+        extend(config, ctx) {
+            if (ctx.isClient) {
+                config.devtool = 'source-map'
+            }
+        }
+    },
     vite: {
+        build: {
+            sourcemap: true
+        },
         define: {
             global: 'window',
         },

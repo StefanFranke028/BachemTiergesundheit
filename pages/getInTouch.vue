@@ -236,7 +236,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort get in touch',
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'canonical',
@@ -246,11 +246,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      content: landingpage1.value?.description ?? 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords ?? 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
     },
   ],
 });

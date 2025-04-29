@@ -357,7 +357,7 @@ useHead({
       href: `https://mila-escort.de/casting`,
     },
   ],
-  title: 'Mila Escort Casting',
+  title: 'Mila Escort Service',
   meta: [
     {
       name: 'description',

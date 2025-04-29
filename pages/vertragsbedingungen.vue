@@ -178,7 +178,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort Vertragsbedingungen',
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'canonical',

@@ -72,7 +72,7 @@ useHead({
       content: 'Escort ' + city.slice(11),
     },
   ],
-  title: `Mila Escort in ${city.slice(11)}`,
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'canonical',

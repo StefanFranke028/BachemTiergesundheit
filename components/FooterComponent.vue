@@ -280,11 +280,12 @@
               cols="5"
           >
             <nuxt-link
+                class=""
                 :to="'MilaEscort-' + stadt.name"
                 style="text-decoration: none; color: black"
             >
               <p
-                  class="mt-1"
+                  class="mt-2"
 
                   style="cursor: pointer"
               >
@@ -299,25 +300,27 @@
     </v-row>
 
     <div class="d-flex pl-3 mt-3 " style="position: relative;">
-      <p style="font-size: 12px">
+      <div style="font-size: 12px">
         <b>
           Copyright © 2025 Mila Escort ®
         </b>
-       <br>  Alle Rechte vorbehalten  <br>
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/impressum">
-          <span class="">Anbieterkennzeichnung</span> <br>
+       <br >
+        <p class="mt-1">
+        Alle Rechte vorbehalten
+
+        </p>
+        <router-link   aria-label="Impressum" class="nav-link " title="Impressum" to="/impressum">
+          <p class="mt-1">Anbieterkennzeichnung</p>
         </router-link>
 
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
-          <span class=""> Disclaimer & Datenschutzerklärung </span> <br>
-        </router-link>
-
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
-          <span class="">Admin</span>
+        <router-link   aria-label="Impressum" class="nav-link " title="Impressum" to="/datenschutz">
+          <p class=" mt-1"> Disclaimer & Datenschutzerklärung </p> <br>
         </router-link>
 
 
-      </p>
+
+
+      </div>
     </div>
 
 
@@ -368,7 +371,7 @@ if (landingpage1.value) {
 
 // Setze dynamisch den Head basierend auf den Landingpage-Daten
 useHead({
-  title: landingpage1.value ? 'Mila Escort Service' : 'Mila Escort Service',
+  title: 'Mila Escort Service',
   meta: [
     {
       name: 'description',

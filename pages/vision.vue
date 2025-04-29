@@ -181,7 +181,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort Visiont',
+  title: 'Mila Escort Service',
   link: [
 
     {
