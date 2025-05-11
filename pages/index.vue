@@ -38,6 +38,7 @@
         </div>
         <div class="mt-n3" style=" width: 400px ;margin-left: -140px">
           <v-img alt="Frau und Mann"
+                 fetchpriority="high"
                  cover
                  src="~/assets/startseiteBild2.jpeg"
                  style="min-width:100%; height: 310px; width: 560px; min-height: 100%; ">
@@ -52,7 +53,7 @@
     <div>
       <v-row class="ma-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="6" style="background-color: black">
-          <v-img alt="frau und mann" src="~/assets/startseite_1_komprimiert.webp" style="z-index: 0"></v-img>
+          <v-img alt="frau und mann" fetchpriority="high" src="~/assets/startseite_1_komprimiert.webp" style="z-index: 0"></v-img>
         </v-col>
         <v-col class="pa-0" cols="6" style="background-color: #f1edec">
           <v-row class="d-flex justify-center align-end" style="width: 50%; height: 25%; position: absolute;">
@@ -86,7 +87,7 @@
         <v-row style=" width: 130%; margin-top: -15%; margin-left: 70px">
           <v-col class="d-flex justify-center" cols="6">
 
-            <v-img alt="frau uns mann" cover src="~/assets/startseiteBild1.jpeg"
+            <v-img fetchpriority="high" alt="frau uns mann" cover src="~/assets/startseiteBild1.jpeg"
                    style="height: 80%; box-shadow: 2px 2px 5px black">
 
             </v-img>
@@ -124,7 +125,7 @@
 
   </div>
   <div v-if="mobile || tablet" style="width: 100vw; ">
-    <v-img alt="Hintergrundbild" class="d-flex justify-center align-center" cover
+    <v-img fetchpriority="high" alt="Hintergrundbild" class="d-flex justify-center align-center" cover
            src="~/assets/startseite_bg_komprimiert_mobile.webp"
            style="width: 100%; height: 450px;  ">
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
@@ -135,7 +136,7 @@
 
             </div>
           </div>
-          <v-img alt="Frau und Mann" cover src="~/assets/startseiteBild2.jpeg"
+          <v-img fetchpriority="high" alt="Frau und Mann" cover src="~/assets/startseiteBild2.jpeg"
                  style="height: 180px; width: 70%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
           </v-img>
         </div>
@@ -155,7 +156,7 @@
           <v-row class="ma-0" style="width: 100%;">
             <v-col cols="6">
               <div>
-                <v-img alt="frau und mann" class="mt-n10" cover src="~/assets/startseiteBild1.jpeg"
+                <v-img fetchpriority="high" alt="frau und mann" class="mt-n10" cover src="~/assets/startseiteBild1.jpeg"
                        style=" height: 120px;">
 
                 </v-img>
@@ -247,6 +248,8 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   try {
     const response = await $fetch("https://mila-escort.de:8443/auth/landingpage", {
       method: 'GET',
+      server: true,
+      lazy: true,
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
       },
@@ -274,6 +277,18 @@ useHead({
   link: [
     {
       rel: 'preload',
+      href: '/_nuxt/assets/startseite_bg_komprimiert_mobile.webp',
+      as: 'image',
+      media: '(max-width: 600px)', // Optional: nur bei kleinen Screens
+    },
+    {
+      rel: 'preload',
+      href: '/startseite_bg_komprimiert.webp',
+      as: 'image',
+      media: '(min-width: 601px)', // Optional
+    },
+    {
+      rel: 'preload',
       href: '/startseite_bg_komprimiert.webp',
       as: 'image',
     },
@@ -285,11 +300,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      content: landingpage1.value?.description ?? 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords ?? 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
     },
   ],
 });

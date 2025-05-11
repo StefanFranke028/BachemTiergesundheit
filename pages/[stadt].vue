@@ -52,6 +52,12 @@ import {useRoute} from 'vue-router';
 
 const route = useRoute();
 const city = route.params.stadt || '';
+console.log('City:', city);
+
+if (!city.startsWith('MilaEscort')) {
+  navigateTo('/');
+}
+
 
 useHead({
   htmlAttrs: {
@@ -67,7 +73,7 @@ useHead({
       content: 'Escort ' + city.slice(11),
     },
   ],
-  title: `Mila Escort in ${city.slice(11)}`,
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'canonical',

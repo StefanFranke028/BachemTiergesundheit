@@ -11,6 +11,7 @@
 import {useHead} from '#app'
 
 useHead({
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'preload',
@@ -30,7 +31,17 @@ useHead({
       as: 'style',
       onload: "this.rel='stylesheet'"
     }
-  ]
+  ],
+  meta: [
+    {
+      name: 'description',
+      content: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
+    },
+    {
+      name: 'keywords',
+      content: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
+    },
+  ],
 })
 </script>
 <script>

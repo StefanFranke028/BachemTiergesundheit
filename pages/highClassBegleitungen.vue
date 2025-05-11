@@ -69,10 +69,14 @@
                 <b>Augenfarbe:</b> {{ dame.augenfarbe }}
               </p>
               <p v-if="dame.interessenHobbys" class="dosis mt-1" style="font-size: 12px;">
-                <b>Interessen und Hobbys:</b> <br><p v-html="dame.interessenHobbys"/>
+                <b>Interessen und Hobbys:</b>
+                <br>
+                <span v-html="dame.interessenHobbys"/>
               </p>
               <p v-if="dame.dienstleistungen" class="dosis mt-1" style="font-size: 12px;">
-                <b>Dienstleistungen:</b> <br> <p v-html="dame.dienstleistungen"/>
+                <b>Dienstleistungen:</b>
+                <br>
+                <span v-html="dame.dienstleistungen"/>
               </p>
               <p v-if="dame.reiseverfuegbarkeit" class="dosis mt-1" style="font-size: 12px;">
                 <b>Geschenke Tipps:</b> {{ dame.reiseverfuegbarkeit }}
@@ -120,7 +124,7 @@
                 </span>
               </p>
               <p v-if="dame.praesentation" class="dosis mt-1" style="font-size: 12px;">
-                <b>Präsentation:</b> <br> <p v-html="dame.praesentation"/>
+                <b>Präsentation:</b> <br> <span v-html="dame.praesentation"/>
               </p>
               <p v-if="dame.staedte && dame.staedte.length > 0" class="dosis mt-1" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b> <br>
@@ -357,7 +361,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort High-Class Begleitungen',
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'canonical',
@@ -367,11 +371,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      content: landingpage1.value?.description ?? 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords ?? 'Escort, Frankfurt, Diskretion, Exklusivität, Mila Escort Service',
     },
   ],
 });

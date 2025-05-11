@@ -295,7 +295,7 @@ useHead({
   htmlAttrs: {
     lang: 'de' // Setzt die Sprache auf Deutsch
   },
-  title: 'Mila Escort Vita',
+  title: 'Mila Escort Service',
   link: [
     {
       rel: 'canonical',
