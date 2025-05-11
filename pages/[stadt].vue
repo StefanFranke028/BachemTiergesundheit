@@ -97,8 +97,8 @@ export default {
   },
   methods: {
     async getStadt() {
-      //let response = await $fetch('https://mila-escort.de:8443/auth/stadt/' + this.stadtparam)
-      let response = await $fetch('http://localhost:8443/auth/stadt/' + this.stadtparam)
+      let response = await $fetch('https://mila-escort.de:8443/auth/stadt/' + this.stadtparam)
+      //let response = await $fetch('http://localhost:8443/auth/stadt/' + this.stadtparam)
       this.damen = await response.damen
       this.stadt = await response
       console.log(this.damen)
