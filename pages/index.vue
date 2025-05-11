@@ -57,7 +57,7 @@
         <v-col class="pa-0" cols="6" style="background-color: #f1edec">
           <v-row class="d-flex justify-center align-end" style="width: 50%; height: 25%; position: absolute;">
             <v-col cols="6">
-              <p  v-html="landingpage[0].text5">
+              <p v-html="landingpage[0].text5">
               </p>
               <br>
               <br>
@@ -256,9 +256,7 @@ const {data: landingpage1, pending, error} = await useAsyncData('landingpage', a
   } catch (e) {
     console.error('Fehler beim Laden der Landingpage:', e);
     // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
-    return {
-
-    };
+    return {};
   }
 });
 
@@ -423,7 +421,6 @@ h1 {
   font-size: 6vw;
 }
 
-style >
 .vertical-marker {
   position: relative; /* Basis für absolute Positionierung des Punktes und des Striches */
   height: 30vh; /* Gesamthöhe des Elements */
