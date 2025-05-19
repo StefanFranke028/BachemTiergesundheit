@@ -114,6 +114,11 @@
                 <span v-html="dame.geschenkeTipps"></span>
               </p>
 
+              <p v-if="dame.preisKategorie" class="dosis mt-2" style="font-size: 12px;">
+                <b>Preiskategorie:</b>&nbsp;
+                <span v-html="dame.preisKategorie"></span>
+              </p>
+
               <!-- Optional: Städte-Liste mit "und" vor der letzten -->
               <p v-if="dame.staedte?.length" class="dosis mt-3" style="font-size: 12px;">
                 <b>Ich begleite Sie gerne in Städte wie:</b><br>
@@ -248,6 +253,11 @@
               <p v-if="dame.geschenkeTipps" class="dosis mt-2" style="font-size: 12px;">
                 <b>Geschenke Tipps:</b>&nbsp;
                 <span v-html="dame.geschenkeTipps"></span>
+              </p>
+
+              <p v-if="dame.preisKategorie" class="dosis mt-2" style="font-size: 12px;">
+                <b>Preiskategorie:</b>&nbsp;
+                <span v-html="dame.preisKategorie"></span>
               </p>
 
               <!-- Optional: Städte-Liste mit "und" vor der letzten -->
