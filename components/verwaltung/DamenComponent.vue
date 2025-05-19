@@ -131,7 +131,6 @@
                 <td>{{ item.groesse }}</td>
                 <td>{{ item.haarfarbe }}</td>
                 <td>{{ item.augenfarbe }}</td>
-                <td>{{ item.reiseverfuegbarkeit }}</td>
                 <td>
                   <div v-if="item.staedte && item.staedte.length">
                     <div v-for="(stadt, idx) in item.staedte" :key="idx">
@@ -247,7 +246,6 @@ export default {
         {title: 'Größe', key: 'groesse'},
         {title: 'Haarfarbe', key: 'haarfarbe'},
         {title: 'Augenfarbe', key: 'augenfarbe'},
-        {title: 'Geschenke Tipps', key: 'reiseverfuegbarkeit'},
         {title: 'Städte', key: 'staedte'},
         {title: 'Bilder', key: 'bilder'},
         {title: 'Aktionen', key: 'actions', sortable: false}
