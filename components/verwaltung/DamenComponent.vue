@@ -15,10 +15,25 @@
               <v-text-field v-model="dame.name" label="Name"></v-text-field>
             </v-col>
             <v-col cols="4">
+              <v-textarea v-model="dame.beschreibung" label="Beschreibung"></v-textarea>
+            </v-col>
+            <v-col cols="4">
+              <v-textarea v-model="dame.angebot" label="Angebot"></v-textarea>
+            </v-col>
+            <v-col cols="4">
+              <v-textarea v-model="dame.wasIchAnbiete" label="Was ich Anbiete"></v-textarea>
+            </v-col>
+            <v-col cols="4">
+              <v-textarea v-model="dame.reiseverfuegbarkeit" label="Reiseverfügbarkeit"></v-textarea>
+            </v-col>
+            <v-col cols="4">
               <v-text-field v-model="dame.geburtsalter" label="Geburtsalter"></v-text-field>
             </v-col>
             <v-col cols="4">
               <v-text-field v-model="dame.groesse" label="Größe"></v-text-field>
+            </v-col>
+            <v-col cols="4">
+              <v-text-field v-model="dame.figur" label="Figur"></v-text-field>
             </v-col>
             <v-col cols="4">
               <v-text-field v-model="dame.haarfarbe" label="Haarfarbe"></v-text-field>
@@ -27,36 +42,20 @@
               <v-text-field v-model="dame.augenfarbe" label="Augenfarbe"></v-text-field>
             </v-col>
             <v-col cols="4">
+              <v-text-field v-model="dame.nationalitaet" label="Nationalität"></v-text-field>
+            </v-col>
+
+            <v-col cols="4">
+              <v-text-field v-model="dame.sprachen" label="Sprachen"></v-text-field>
+            </v-col>
+            <v-col cols="4">
+              <v-textarea v-model="dame.geschenkeTipps" label="Geschenke Tipps"></v-textarea>
+            </v-col>
+
+            <v-col cols="4">
               <v-text-field v-model="dame.damenIndex" label="Damen Index" type="number"></v-text-field>
             </v-col>
 
-            <!-- Persönliche Angaben -->
-            <v-col cols="12">
-              <v-textarea v-model="dame.beschreibung" auto-grow label="Beschreibung"></v-textarea>
-            </v-col>
-            <v-col cols="12">
-              <v-textarea v-model="dame.interessenHobbys" auto-grow label="Interessen & Hobbys"></v-textarea>
-            </v-col>
-
-            <!-- Dienstleistungen -->
-            <v-col cols="12">
-              <v-textarea v-model="dame.dienstleistungen" auto-grow label="Dienstleistungen"></v-textarea>
-            </v-col>
-
-            <!-- Weitere Angaben -->
-
-            <v-col cols="4">
-              <v-checkbox v-model="dame.paarchenBegleitung" label="Pärchen Begleitung"></v-checkbox>
-            </v-col>
-            <v-col cols="4">
-              <v-checkbox v-model="dame.dinnerDate" label="Dinner Date"></v-checkbox>
-            </v-col>
-            <v-col cols="4">
-              <v-checkbox v-model="dame.damenBegleitung" label="Damen Begleitung"></v-checkbox>
-            </v-col>
-            <v-col cols="8">
-              <v-textarea auto-grow v-model="dame.reiseverfuegbarkeit" label="Geschenke Tipps"></v-textarea>
-            </v-col>
             <v-col cols="4">
               <v-select v-model="dame.preisKategorie"
                         :items="preisKategorie"
@@ -64,9 +63,6 @@
                         item-value="value"
                         label="Preis Kategorie"
               />
-            </v-col>
-            <v-col cols="12">
-              <v-textarea v-model="dame.praesentation" auto-grow label="Präsentation"></v-textarea>
             </v-col>
 
             <!-- Bilder Upload -->
@@ -213,18 +209,19 @@ export default {
       // Initialisiere das dame-Objekt mit allen neuen Feldern
       dame: {
         name: null,
-        geburtsalter: null,
-        damenIndex: null,
-        groesse: null,
-        haarfarbe: null,
-        augenfarbe: null,
         beschreibung: null,
-        interessenHobbys: null,
-        dienstleistungen: null,
-        reiseverfuegbarkeit: null,
-        paarchenBegleitung: false,
-        damenBegleitung: false,
-        praesentation: null,
+        damenIndex: null,
+        angebot: null,
+        wasIchAnbiete: null,
+        reiserverfuegbarkeit: null,
+        geburtsalter: null,
+        groesse: null,
+        figur: null,
+        haarfarbe: null,
+        augenfarbe: false,
+        nationalitaet: false,
+        sprachen: null,
+        geschenkeTipps: null,
         bilder: [],
         staedte: [],
       },
@@ -234,9 +231,9 @@ export default {
       snackbarColor: null,
       tempEditedDame: null,
       preisKategorie: [
-        { title: 'Classic', value: 'Classic' },
-        { title: 'Exclusiv', value: 'Exclusiv' },
-        { title: 'VIP', value: 'VIP' },
+        {title: 'Classic', value: 'Classic'},
+        {title: 'Exclusiv', value: 'Exclusiv'},
+        {title: 'VIP', value: 'VIP'},
       ],
       tab: 2,
       damen: [],
@@ -291,17 +288,20 @@ export default {
       this.tempEditedDame = null;
       this.dame = {
         name: null,
+        beschreibung: null,
+        angebot: null,
+        wasIchAnbiete: null,
+        reiseverfuegbarkeit: null,
         geburtsalter: null,
         groesse: null,
+        figur: null,
         haarfarbe: null,
         augenfarbe: null,
-        beschreibung: null,
-        interessenHobbys: null,
-        dienstleistungen: null,
-        reiseverfuegbarkeit: null,
-        paarchenBegleitung: false,
-        damenBegleitung: false,
-        praesentation: null,
+        nationalitaet: null,
+        sprachen: null,
+        geschenkeTipps: null,
+        preisKategorie: null,
+        damenIndex: null,
         bilder: [],
         staedte: []
       };
@@ -358,19 +358,27 @@ export default {
     },
 
     formatDame(dame) {
-      dame.dienstleistungen = this.unformattedText(dame.dienstleistungen)
-      dame.beschreibung = this.unformattedText(dame.beschreibung)
-      dame.praesentation = this.unformattedText(dame.praesentation)
-      dame.interessenHobbys = this.unformattedText(dame.interessenHobbys)
-      return dame
+      const htmlToText = str => str?.replace(/<br\s*\/?>/g, "\n") ?? "";
+      dame.beschreibung = htmlToText(dame.beschreibung);
+      dame.angebot = htmlToText(dame.angebot);
+      dame.wasIchAnbiete = htmlToText(dame.wasIchAnbiete);
+      dame.reiseverfuegbarkeit = htmlToText(dame.reiseverfuegbarkeit);
+      dame.geschenkeTipps = htmlToText(dame.geschenkeTipps);
+      return dame;
     },
 
-    unformatDame(dame){
-      dame.dienstleistungen = this.formattedText(dame.dienstleistungen)
-      dame.beschreibung = this.formattedText(dame.beschreibung)
-      dame.praesentation = this.formattedText(dame.praesentation)
-      dame.interessenHobbys = this.formattedText(dame.interessenHobbys)
-      return dame
+    /**
+     * Wandelt alle Zeilenumbrüche in Textareas zurück in HTML-<br>-Tags,
+     * damit sie beim Absenden korrekt als HTML gespeichert werden.
+     */
+    unformatDame(dame) {
+      const textToHtml = str => str?.replace(/\n/g, "<br>") ?? "";
+      dame.beschreibung = textToHtml(dame.beschreibung);
+      dame.angebot = textToHtml(dame.angebot);
+      dame.wasIchAnbiete = textToHtml(dame.wasIchAnbiete);
+      dame.reiseverfuegbarkeit = textToHtml(dame.reiseverfuegbarkeit);
+      dame.geschenkeTipps = textToHtml(dame.geschenkeTipps);
+      return dame;
     },
 
 // Methode zum Rückformatieren von HTML in Text für die Textareas
@@ -443,7 +451,7 @@ export default {
         for (const file of files) {
           const base64 = await this.readFileAsBase64(file); // 1. Bild einlesen
           const compressed = await this.compressImage(base64, 800, 0.7); // 2. Komprimieren
-          const imageData = { imageBase64: compressed }; // 3. Ab in die Datenstruktur
+          const imageData = {imageBase64: compressed}; // 3. Ab in die Datenstruktur
 
           if (this.tempEditedDame) {
             this.tempEditedDame.bilder = this.tempEditedDame.bilder || [];
@@ -461,7 +469,6 @@ export default {
         await this.$refs.fileInput.reset();
       }
     }
-
 
 
     ,
