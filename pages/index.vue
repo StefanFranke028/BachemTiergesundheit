@@ -189,46 +189,7 @@
   </div>
 </template>
 
-<script>
-import {useScreenStore} from "~/stores/screen.js";
-import {Icon} from '@iconify/vue';
 
-export default {
-  components: {
-    Icon,
-  },
-  data() {
-    return {};
-  },
-  computed: {
-    wide() {
-      const screenStore = useScreenStore();
-      return screenStore.wide;
-    },
-    desktop() {
-      const screenStore = useScreenStore();
-      return screenStore.desktop;
-    },
-    mobile() {
-      const screenStore = useScreenStore();
-      return screenStore.mobile;
-    },
-    tablet() {
-      const screenStore = useScreenStore();
-      return screenStore.tablet;
-    },
-    tabletHorizontal() {
-      const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
-    },
-  },
-
-  mounted() {
-
-  },
-  methods: {},
-};
-</script>
 
 <script setup>
 import {ref} from 'vue';
@@ -309,7 +270,46 @@ useHead({
   ],
 });
 </script>
+<script>
+import {useScreenStore} from "~/stores/screen.js";
+import {Icon} from '@iconify/vue';
 
+export default {
+  components: {
+    Icon,
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
+
+  mounted() {
+
+  },
+  methods: {},
+};
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
