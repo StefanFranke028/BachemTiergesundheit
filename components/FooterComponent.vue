@@ -79,7 +79,10 @@
           Vertragsbedingungen
 
         </p>
+        <p class=" text-center mt-2" @click="navigateTo('werbepartner')">
+          Werbepartner
 
+        </p>
 
       </v-col>
       <v-col cols="3">
@@ -239,7 +242,10 @@
           Vertragsbedingungen
 
         </p>
+        <p class=" mt-2" @click="navigateTo('werbepartner')">
+          Werbepartner
 
+        </p>
 
       </v-col>
       <v-col cols="12">

@@ -250,7 +250,7 @@ useHead({
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords ?? 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords ?? 'Escort, Frankfurt, Diskretion, Exklusivität, Mila Escort Service',
     },
   ],
 });

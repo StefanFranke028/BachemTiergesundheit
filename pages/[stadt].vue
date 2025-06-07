@@ -66,7 +66,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'maxi-escort in ' + city.slice(11),
+      content: 'mila-escort in ' + city.slice(11),
     },
     {
       name: 'keywords',
