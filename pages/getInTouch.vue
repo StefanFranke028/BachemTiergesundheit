@@ -130,56 +130,7 @@
   </div>
 </template>
 
-<script>
-import {Icon} from '@iconify/vue';
-import {useScreenStore} from "~/stores/screen.js";
 
-export default {
-  name: "kontakt",
-  components: {
-    Icon
-  },
-  data() {
-    return {
-      kontakt: [{
-        text1: 'Bewirb dich bei uns',
-        text2: 'Hey... wie schön, dass du hier bist! Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit, Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über die folgenden Wege:',
-        text3: 'Ich freue mich darauf, euch kennenzulernen und euch ein unvergessliches Erlebnis ermöglichen zu können.',
-        text4: 'Für Bewerbungen als Escort Modell nutze doch bitte unsere E-Mail bewerbung@maxi-escort.de. Wir melden uns dann sehr gerne bei Dir.',
-        telefon: '+49 151-670 376 96',
-        email: 'office@maxi-escort.de',
-      }]
-    }
-  },
-  mounted() {
-
-  },
-
-  methods: {},
-  computed: {
-    wide() {
-      const screenStore = useScreenStore();
-      return screenStore.wide;
-    },
-    desktop() {
-      const screenStore = useScreenStore();
-      return screenStore.desktop;
-    },
-    mobile() {
-      const screenStore = useScreenStore();
-      return screenStore.mobile;
-    },
-    tablet() {
-      const screenStore = useScreenStore();
-      return screenStore.tablet;
-    },
-    tabletHorizontal() {
-      const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
-    },
-  },
-}
-</script>
 
 <script setup>
 import {ref} from 'vue';
@@ -254,6 +205,56 @@ useHead({
     },
   ],
 });
+</script>
+<script>
+import {Icon} from '@iconify/vue';
+import {useScreenStore} from "~/stores/screen.js";
+
+export default {
+  name: "kontakt",
+  components: {
+    Icon
+  },
+  data() {
+    return {
+      kontakt: [{
+        text1: 'Bewirb dich bei uns',
+        text2: 'Hey... wie schön, dass du hier bist! Ich bin Maxi, die Gründerin von Maxi Escort. Es ist mir eine Herzensangelegenheit, Ihnen unsere exklusiven Dienstleistungen anzubieten. Unser Ziel ist es, Ihnen unvergessliche Momente zu bereiten. Für Buchungen oder Fragen stehe ich Ihnen jederzeit gerne zur Verfügung. Kontaktieren Sie uns diskret und unkompliziert über die folgenden Wege:',
+        text3: 'Ich freue mich darauf, euch kennenzulernen und euch ein unvergessliches Erlebnis ermöglichen zu können.',
+        text4: 'Für Bewerbungen als Escort Modell nutze doch bitte unsere E-Mail bewerbung@maxi-escort.de. Wir melden uns dann sehr gerne bei Dir.',
+        telefon: '+49 151-670 376 96',
+        email: 'office@maxi-escort.de',
+      }]
+    }
+  },
+  mounted() {
+
+  },
+
+  methods: {},
+  computed: {
+    wide() {
+      const screenStore = useScreenStore();
+      return screenStore.wide;
+    },
+    desktop() {
+      const screenStore = useScreenStore();
+      return screenStore.desktop;
+    },
+    mobile() {
+      const screenStore = useScreenStore();
+      return screenStore.mobile;
+    },
+    tablet() {
+      const screenStore = useScreenStore();
+      return screenStore.tablet;
+    },
+    tabletHorizontal() {
+      const screenStore = useScreenStore();
+      return screenStore.tabletHorizontal;
+    },
+  },
+}
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
