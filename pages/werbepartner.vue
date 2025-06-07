@@ -23,7 +23,7 @@
 
       </v-row>
     </div>
-    <div style="width: 100vw; height: 800px">
+    <div style="width: 100vw; height: 800px; margin-top: 150px" >
       <v-row class="mx-0 pa-0" style="width: 100%; height: 100%">
         <v-col class="pa-0" cols="12"
                style="background-color: rgba(215,232,215,0.56)">
@@ -145,6 +145,22 @@ export default {
 
           <a href="https://sexdo.com" target="_blank">
           <img src="https://banner.sexdo.com/intern/Websiegel/siegel_web_1.png" alt="Sexdo.de - Huren, Clubs und Hobbyhuren" border="0"></a>
+
+            `
+        },
+        {
+          html: `
+
+            <div style="width: 100%; max-width: 200px; height: 200px; text-align: center; margin: 0 auto;">
+      <a href="https://www.instagram.com/milamoretti2025/" target="_blank" style="text-decoration: none;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+               alt="Instagram"
+               style="width: 200px; height: 200px;">
+
+        </div>
+      </a>
+    </div>
 
             `
         },
