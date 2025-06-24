@@ -65,6 +65,7 @@
               <DamenComponent v-if="selectedItem === 'Damen'"/>
               <CastingComponent v-if="selectedItem === 'Casting'"/>
               <StadtComponent v-if="selectedItem === 'Stadt'"/>
+              <RechnungComponent v-if="selectedItem === 'Rechnung'"/>
             </v-card>
           </v-col>
         </v-row>
@@ -104,10 +105,12 @@ import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
 import LoginComponent from "~/components/verwaltung/LoginComponent.vue";
 import VertragsbedingungenComponent from "~/components/verwaltung/VertragsbedinungenComponent.vue";
 import CastingComponent from "~/components/verwaltung/CastingComponent.vue";
+import RechnungComponent from "~/components/verwaltung/RechnungComponent.vue";
 
 export default {
   name: "verwaltung",
   components: {
+    RechnungComponent,
     StartseiteComponent,
     TeamComponent,
     VitaComponent,
@@ -128,7 +131,7 @@ export default {
   data() {
     return {
       seiten: ['Startseite', 'Vision', 'Vita', 'High Class Begleitungen', 'Escort', 'Get in touch', 'Konditionen', 'Magazin', 'Vertragsbedingungen'],
-      items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Casting', 'Stadt'],
+      items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Casting', 'Stadt', 'Rechnung'],
       selectedSeite: null,
       selectedItem: null,
       isLoading: true,
