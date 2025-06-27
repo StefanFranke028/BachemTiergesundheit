@@ -14,19 +14,23 @@ import HeadermobileComponent from "~/components/HeadermobileComponent.vue";
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  components: {
-    FooterComponent,
-    HeaderComponent,
-    HeadermobileComponent,
+  data() {
+    return {
+      isVerwaltung: false,
+    };
+  },
+  watch: {
+    '$route.path'(newPath) {
+      this.isVerwaltung = newPath === '/admin' || newPath === '/rechnung';
+    }
+  },
+  mounted() {
+    this.isVerwaltung = this.$route.path === '/admin' || this.$route.path === '/rechnung';
   },
   computed: {
-    wide() {
-      const screenStore = useScreenStore();
-      return process.client ? screenStore.wide : false;
-    },
     desktop() {
       const screenStore = useScreenStore();
-      return process.client ? screenStore.desktop : true; // Standardmäßig Desktop während SSR
+      return process.client ? screenStore.desktop : true;
     },
     mobile() {
       const screenStore = useScreenStore();
@@ -40,9 +44,11 @@ export default {
       const screenStore = useScreenStore();
       return process.client ? screenStore.tabletHorizontal : false;
     },
-    isVerwaltung() {
-      return this.$route.path === '/admin' || this.$route.path === '/rechnung';
-    },
+  },
+  components: {
+    FooterComponent,
+    HeaderComponent,
+    HeadermobileComponent,
   },
 };
 </script>
