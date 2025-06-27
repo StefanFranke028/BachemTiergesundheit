@@ -3,7 +3,7 @@
     <HeaderComponent v-if="!isVerwaltung && (desktop || tabletHorizontal)"></HeaderComponent>
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <NuxtPage></NuxtPage>
-    <FooterComponent v-if="!$router.path === '/rechnung'"></FooterComponent>
+    <FooterComponent v-if="$route.path !== '/rechnung'"></FooterComponent>
   </div>
 </template>
 
