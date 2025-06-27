@@ -32,7 +32,7 @@
                       <v-text-field v-model="strasse" label="Straße" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
-                      <v-text-field v-model="hausnummer" label="Hausnummer" variant="outlined"/>
+                      <v-text-field v-model="hausnummer" label="Hausnummer" type="number" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="plz" label="PLZ" type="number" variant="outlined"/>
@@ -47,7 +47,8 @@
                       <v-text-field v-model="text" label="Leistung" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
-                      <v-text-field v-model="preis" label="Preis" variant="outlined" @input="updatePreis"/>
+                      <v-text-field v-model="preis" label="Preis" type="number" variant="outlined"
+                                    @input="updatePreis"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="menge" label="Anzahl" type="number" variant="outlined"/>
@@ -155,7 +156,7 @@
               <v-text-field
                   v-model="search"
                   hide-details
-                  label="Search"
+                  label="Suche"
                   prepend-inner-icon="mdi-magnify"
                   single-line
                   variant="outlined"
