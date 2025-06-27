@@ -78,7 +78,7 @@
                       </v-btn>
                     </v-col>
                     <v-col cols="2">
-                      <v-btn variant="outlined" @click="logout">LOGOUT</v-btn>
+                      <v-btn variant="outlined" @click="Startseite">STARTSEITE</v-btn>
                     </v-col>
                   </v-row>
                 </v-card-actions>
@@ -118,29 +118,42 @@
         </v-window-item>
         <v-window-item value="1">
           <v-card border="10" flat min-width="1000" theme="dark" title="Rechnungen">
-            <v-row class="justify-center">
-              <v-col cols="3">
-                <v-btn variant="text" @click="resetFilter">
-                  zurücksetzen
+            <v-row class="justify-center align-center" dense>
+              <v-col class="d-flex justify-center" cols="12" md="3">
+                <v-btn color="primary" variant="outlined" @click="resetFilter">
+                  <v-icon start>mdi-filter-remove</v-icon>
+                  Filter zurücksetzen
                 </v-btn>
               </v-col>
-              <v-col class="d-flex align-center" cols="2">
-                <input v-model="startDate" class="custom-date-input" type="date"
-                       @change="calculateFilteredTotal">
-              </v-col>
-              <v-col class="d-flex align-center" cols="2">
-                <input v-model="endDate" class="custom-date-input" type="date"
-                       @change="calculateFilteredTotal">
-              </v-col>
-              <v-col cols="3">
-                <p>Gesamtsumme: {{ totalSum }}€</p>
 
+              <v-col class="d-flex align-center justify-end" cols="12" md="4">
+                <v-label class="mr-2">Vom</v-label>
+                <v-text-field
+                    v-model="startDate"
+                    density="compact"
+                    hide-details
+                    type="date"
+                    variant="outlined"
+                    @change="calculateFilteredTotal"
+                ></v-text-field>
+              </v-col>
+
+              <v-col class="d-flex align-center justify-start" cols="12" md="4">
+                <v-label class="mr-2">bis</v-label>
+                <v-text-field
+                    v-model="endDate"
+                    density="compact"
+                    hide-details
+                    type="date"
+                    variant="outlined"
+                    @change="calculateFilteredTotal"
+                ></v-text-field>
               </v-col>
             </v-row>
+
             <template v-slot:text>
               <v-text-field
                   v-model="search"
-                  clearable
                   hide-details
                   label="Search"
                   prepend-inner-icon="mdi-magnify"
@@ -157,6 +170,7 @@
                 class="elevation-1"
                 fixed-header
                 height="600"
+                no-data-text="Keine Rechnungen gefunden – bitte Filter überprüfen"
             >
               <template v-slot:item="{ item }">
                 <tr>
@@ -522,6 +536,7 @@
 
 <script>
 import {Icon} from '@iconify/vue'
+import {useUserStore} from "~/stores/user.js";
 
 export default {
   components: {Icon},
@@ -644,14 +659,42 @@ export default {
         alert("Es sind nur 10 Leistungen zulässig.")
       }
     },
-    async logout() {
-      localStorage.removeItem('token')
-      await this.$store.dispatch('user', false)
+    async Startseite() {
       this.$router.push('/')
     },
 
-    async umleitung() {
-      this.$router.push('/rechnung')
+    async checkUserAndRedirect() {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        this.$router.push('/admin');
+        return;
+      }
+
+      try {
+        const response = await $fetch("https://mila-escort.de:8443/auth/user", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (response) {
+          const userStore = useUserStore();
+          userStore.setUser(response);
+          // Wenn ein valider User gespeichert wurde – nichts tun
+          if (!userStore.user) {
+            this.$router.push('/admin');
+          }
+        } else {
+          this.$router.push('/admin');
+        }
+
+      } catch (error) {
+        console.error("Fehler beim Abrufen des Users:", error);
+        this.$router.push('/admin');
+      } finally {
+        this.isLoading = false;
+      }
     },
 
     async loadRechnungen() {
@@ -732,6 +775,8 @@ export default {
     },
 
     resetFilter() {
+
+      this.search = null
       this.startDate = null
       this.endDate = null
       this.customFilter()
@@ -891,7 +936,9 @@ export default {
   },
 
   mounted() {
-    this.umleitung()
+    this.checkUserAndRedirect()
+    this.loadRechnungen()
+    this.calculateFilteredTotal()
   }
 }
 </script>

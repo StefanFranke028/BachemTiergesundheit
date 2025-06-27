@@ -3,7 +3,7 @@
     <HeaderComponent v-if="!isVerwaltung && (desktop || tabletHorizontal)"></HeaderComponent>
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <NuxtPage></NuxtPage>
-    <FooterComponent></FooterComponent>
+    <FooterComponent v-if="!$router.path === '/rechnung'"></FooterComponent>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
       return process.client ? screenStore.tabletHorizontal : false;
     },
     isVerwaltung() {
-      return this.$route.path === '/admin';
+      return this.$route.path === '/admin' || this.$route.path === '/rechnung';
     },
   },
 };
