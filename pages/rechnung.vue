@@ -128,7 +128,7 @@
               </v-col>
 
               <v-col class="d-flex align-center justify-end" cols="12" md="4">
-                <v-label class="mr-2">Vom</v-label>
+                <v-label class="mr-2">von</v-label>
                 <v-text-field
                     v-model="startDate"
                     density="compact"
