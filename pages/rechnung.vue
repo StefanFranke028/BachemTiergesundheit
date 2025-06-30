@@ -32,7 +32,7 @@
                       <v-text-field v-model="strasse" label="Straße" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
-                      <v-text-field v-model="hausnummer" label="Hausnummer" type="number" variant="outlined"/>
+                      <v-text-field v-model="hausnummer" label="Hausnummer" type="text" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="plz" label="PLZ" type="number" variant="outlined"/>
@@ -47,8 +47,17 @@
                       <v-text-field v-model="text" label="Leistung" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
-                      <v-text-field v-model="preis" label="Preis" type="number" variant="outlined"
-                                    @input="updatePreis"/>
+                      <v-text-field
+                          v-model.number="preis"
+                          label="Preis"
+                          type="number"
+                          variant="outlined"
+                      >
+                        <template #append-inner>
+                          €
+                        </template>
+                      </v-text-field>
+
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="menge" label="Anzahl" type="number" variant="outlined"/>
@@ -294,7 +303,7 @@
           </v-col>
           <v-col class="d-flex justify-end" cols="2">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
-              {{ x.preis }}
+              {{ x.preis }} €
 
             </p>
           </v-col>
@@ -449,7 +458,7 @@
           </v-col>
           <v-col class="d-flex justify-end" cols="2">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
-              {{ x.preis }}
+              {{ x.preis }} €
 
             </p>
           </v-col>
@@ -602,16 +611,15 @@ export default {
 
     calculatedPreis() {
       const sum = this.leistungen.reduce((acc, cur) => {
-        const p = parseFloat(
-            cur.preis.replace('€', '').replace(',', '.')
-        ) || 0
-        const m = parseInt(cur.anzahl) || 1
-        return acc + p * m
-      }, 0)
+        const p = parseFloat(cur.preis) || 0; // cur.preis ist jetzt eine Zahl oder ein stringifizierter Zahlwert
+        const m = parseInt(cur.anzahl) || 1;
+        return acc + p * m;
+      }, 0);
+
       return sum.toLocaleString('de-DE', {
         style: 'currency',
         currency: 'EUR'
-      })
+      });
     },
 
     bereinigtestLeistungsArray() {
@@ -842,14 +850,6 @@ export default {
         await this.loadRechnungen();
         await this.customFilter();
         this.tab = 1;
-      }
-    },
-    updatePreis() {
-      // Entfernt alle vorhandenen Euro-Zeichen
-      this.preis = this.preis.replace(/€/g, '').trim();
-      // Hängt ein € an, falls noch keins dransteht
-      if (!this.preis.endsWith('€')) {
-        this.preis += '€';
       }
     },
 
