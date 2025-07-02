@@ -29,7 +29,7 @@
                       <v-text-field v-model="name" label="Name" type="name" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
-                      <v-text-field v-model="strasse" label="Straße" variant="outlined"/>
+                      <v-text-field v-model="straße" label="Straße" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="hausnummer" label="Hausnummer" type="text" variant="outlined"/>
@@ -231,7 +231,7 @@
           <p style="font-size: 14px">Rechnungsempfänger:</p>
           <p class="mt-n1" style="font-size: 13px">{{ vorname }} {{ name }}</p>
           <p style="font-size: 14px">Straße, Hausnummer:</p>
-          <p class="mt-n1" style="font-size: 13px">{{ strasse }} {{ hausnummer }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ straße }} {{ hausnummer }}</p>
           <p style="font-size: 14px">PLZ, Ort:</p>
           <p class="mt-n1" style="font-size: 13px">{{ plz }} {{ ort }}</p>
         </v-col>
@@ -477,7 +477,7 @@
           <p style="font-size: 14px">Rechnungsempfänger:</p>
           <p class="mt-n1" style="font-size: 13px">{{ vorname }} {{ name }}</p>
           <p style="font-size: 14px">Straße, Hausnummer:</p>
-          <p class="mt-n1" style="font-size: 13px">{{ strasse }} {{ hausnummer }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ straße }} {{ hausnummer }}</p>
           <p style="font-size: 14px">PLZ, Ort:</p>
           <p class="mt-n1" style="font-size: 13px">{{ plz }} {{ ort }}</p>
         </v-col>
@@ -738,7 +738,7 @@ export default {
       currentDate: Date.now(),
       name: '',
       vorname: '',
-      strasse: '',
+      straße: '',
       hausnummer: '',
       plz: '',
       ort: '',
@@ -1111,7 +1111,7 @@ export default {
       Object.assign(this, {
         name: item.name,
         vorname: item.vorname,
-        strasse: item.strasse,
+        straße: item.straße,
         hausnummer: item.hausnummer,
         plz: item.plz,
         mwstActive: item.mwstActive,
