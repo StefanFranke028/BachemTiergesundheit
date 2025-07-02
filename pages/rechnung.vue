@@ -6,7 +6,7 @@
           align-tabs="center"
           color="white"
       >
-        <v-tab :value="0" color="deep-purple-accent-4"  style="background-color: white!important;">Erstellen</v-tab>
+        <v-tab :value="0" color="deep-purple-accent-4" style="background-color: white!important;">Erstellen</v-tab>
         <v-tab :value="1" color="deep-purple-accent-4" style="background-color: white!important;">Löschen</v-tab>
       </v-tabs>
       <v-window v-model="tab" class="mt-5 ma-3" transition="none">
@@ -44,7 +44,8 @@
                       <v-textarea v-model="infoText" auto-grow label="Info Text" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-start" cols="12">
-                      <v-switch v-model="mwstActive" auto-grow :label="mwstActive? 'Mit Mehrwertsteuer':'Ohne Mehrwertsteuer'" variant="outlined"/>
+                      <v-switch v-model="mwstActive" :label="mwstActive? 'Mit Mehrwertsteuer':'Ohne Mehrwertsteuer'"
+                                auto-grow variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="text" label="Leistung" variant="outlined"/>
@@ -196,6 +197,7 @@
                   <td>{{ item.vorname }}</td>
                   <td><input v-model="item.datum" disabled style="color: white" type="date"></td>
                   <td>{{ item.preis }}</td>
+                  <td class="text-center">{{ item.mwstActive ? '✓' : 'х' }}</td>
                   <td>
                     <p v-for="leistung in item.leistungen" :key="leistung">
                       {{ leistung.titel }}: {{ leistung.anzahl }}x{{ leistung.preis }} <br>
@@ -227,21 +229,20 @@
       <v-row justify="start">
         <v-col cols="9">
           <p style="font-size: 14px">Rechnungsempfänger:</p>
-          <p style="font-size: 13px" class="mt-n1">{{ vorname }} {{ name }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ vorname }} {{ name }}</p>
           <p style="font-size: 14px">Straße, Hausnummer:</p>
-          <p style="font-size: 13px" class="mt-n1">{{ strasse }} {{ hausnummer }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ strasse }} {{ hausnummer }}</p>
           <p style="font-size: 14px">PLZ, Ort:</p>
-          <p style="font-size: 13px" class="mt-n1">{{ plz }} {{ ort }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ plz }} {{ ort }}</p>
         </v-col>
         <v-col class="d-flex justify-end" cols="2">
           <img alt="Bildbeschreibung"
                src="@/assets/FugenLogo-removebg-preview.png"
                style="width: 130px"
           >
-      </v-col>
+        </v-col>
 
       </v-row>
-
 
 
       <v-row class="">
@@ -251,13 +252,13 @@
           <p class="text-end mt-n1">Pfarrer Keutner Str. 6</p>
           <p class="text-end mt-n1">D- 61350 Bad Homburg v.d.H</p> <br>
           <p class="text-end mt-n1">Datum: {{ formattedDate }}</p>
-          <p class="text-end mt-n1">Rechnungsnummer: {{rechnungsnummer}} </p>
-          <p style="font-size: 11px" class="text-end mt-n1">Rechnungsdatum entspricht Liefer-/Leistungsdatum </p>
+          <p class="text-end mt-n1">Rechnungsnummer: {{ rechnungsnummer }} </p>
+          <p class="text-end mt-n1" style="font-size: 11px">Rechnungsdatum entspricht Liefer-/Leistungsdatum </p>
         </v-col>
 
       </v-row>
       <v-row class="mt-n12">
-        <v-col >
+        <v-col>
           <h1 style="color: #509fa6">Kostenvoranschlag</h1>
         </v-col>
       </v-row>
@@ -322,8 +323,8 @@
 
 
         <!---Leere zeilen für bessere Übersichtlichkeit--->
-        <v-row  class="mx-0"
-                style="width: 100%; background-color: rgba(232,230,230,0.75)">
+        <v-row class="mx-0"
+               style="width: 100%; background-color: rgba(232,230,230,0.75)">
           <v-col cols="12">
 
           </v-col>
@@ -333,7 +334,7 @@
         </v-row>
 
         <!-------------- Netto--->
-        <v-row  class="mx-0"
+        <v-row class="mx-0"
                style="width: 100%; background-color: rgba(232,230,230,0.75)">
           <v-col class="py-0" cols="10">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
@@ -350,8 +351,8 @@
         </v-row>
 
         <v-row v-if="mwstActive" class="mx-0"
-                style="width: 100%; background-color: rgba(186,184,184,0.75)">
-          <v-col cols="10" class="py-1 ">
+               style="width: 100%; background-color: rgba(186,184,184,0.75)">
+          <v-col class="py-1 " cols="10">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
               <b>
                 zzgl. 19% USt
@@ -369,12 +370,12 @@
         </v-row>
 
         <!------------------ Brutto--->
-        <v-row  class="mx-0"
-                style="width: 100%; background-color: rgba(186,184,184,0.75)">
-          <v-col cols="10" class="py-1 ">
+        <v-row class="mx-0"
+               style="width: 100%; background-color: rgba(186,184,184,0.75)">
+          <v-col class="py-1 " cols="10">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
               <b>
-              Rechnungsbetrag:
+                Rechnungsbetrag:
 
               </b>
             </p>
@@ -474,11 +475,11 @@
       <v-row justify="start">
         <v-col cols="9">
           <p style="font-size: 14px">Rechnungsempfänger:</p>
-          <p style="font-size: 13px" class="mt-n1">{{ vorname }} {{ name }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ vorname }} {{ name }}</p>
           <p style="font-size: 14px">Straße, Hausnummer:</p>
-          <p style="font-size: 13px" class="mt-n1">{{ strasse }} {{ hausnummer }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ strasse }} {{ hausnummer }}</p>
           <p style="font-size: 14px">PLZ, Ort:</p>
-          <p style="font-size: 13px" class="mt-n1">{{ plz }} {{ ort }}</p>
+          <p class="mt-n1" style="font-size: 13px">{{ plz }} {{ ort }}</p>
         </v-col>
         <v-col class="d-flex justify-end" cols="2">
           <img alt="Bildbeschreibung"
@@ -488,7 +489,6 @@
       </v-row>
 
 
-
       <v-row class="">
         <v-col cols="7"></v-col>
         <v-col class=" " cols="4">
@@ -496,19 +496,16 @@
           <p class="text-end mt-n1">Pfarrer Keutner Str. 6</p>
           <p class="text-end mt-n1">D- 61350 Bad Homburg v.d.H</p> <br>
           <p class="text-end mt-n1">Datum: {{ formattedDate }}</p>
-          <p class="text-end mt-n1">Rechnungsnummer: {{rechnungsnummer}} </p>
-          <p style="font-size: 11px" class="text-end mt-n1">Rechnungsdatum entspricht Liefer-/Leistungsdatum </p>
+          <p class="text-end mt-n1">Rechnungsnummer: {{ rechnungsnummer }} </p>
+          <p class="text-end mt-n1" style="font-size: 11px">Rechnungsdatum entspricht Liefer-/Leistungsdatum </p>
         </v-col>
 
       </v-row>
       <v-row class="mt-n12">
-        <v-col >
+        <v-col>
           <h1 style="color: #509fa6">Rechnung</h1>
         </v-col>
       </v-row>
-
-
-
 
 
       <v-row class="mt-n5">
@@ -571,8 +568,8 @@
 
 
         <!---Leere zeilen für bessere Übersichtlichkeit--->
-        <v-row  class="mx-0"
-                style="width: 100%; background-color: rgba(232,230,230,0.75)">
+        <v-row class="mx-0"
+               style="width: 100%; background-color: rgba(232,230,230,0.75)">
           <v-col cols="12">
 
           </v-col>
@@ -582,8 +579,8 @@
         </v-row>
 
         <!-------------- Netto--->
-        <v-row  class="mx-0"
-                style="width: 100%; background-color: rgba(232,230,230,0.75)">
+        <v-row class="mx-0"
+               style="width: 100%; background-color: rgba(232,230,230,0.75)">
           <v-col class="py-0" cols="10">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
               Nettopreis
@@ -600,7 +597,7 @@
 
         <v-row v-if="mwstActive" class="mx-0"
                style="width: 100%; background-color: rgba(186,184,184,0.75)">
-          <v-col cols="10" class="py-1 ">
+          <v-col class="py-1 " cols="10">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
               <b>
                 zzgl. 19% USt
@@ -618,9 +615,9 @@
         </v-row>
 
         <!------------------ Brutto--->
-        <v-row  class="mx-0"
-                style="width: 100%; background-color: rgba(186,184,184,0.75)">
-          <v-col cols="10" class="py-1 ">
+        <v-row class="mx-0"
+               style="width: 100%; background-color: rgba(186,184,184,0.75)">
+          <v-col class="py-1 " cols="10">
             <p class="text-black" style="color: #f2f2f2; margin-bottom: 6px">
               <b>
                 Rechnungsbetrag:
@@ -697,7 +694,8 @@
       <v-row class="align-content-end">
         <v-col cols="12">
           <p class="ml-5 mt-16">
-            Zahlungsbedingungen: Zahlung innerhalb von 7 Tagen ab Rechnungseingang ohne Abzüge. <br> Nach § 13b Abs. 1 und 2 UStG sind Sie als Leistungsempfänger Schuldner der Umsatzsteuer
+            Zahlungsbedingungen: Zahlung innerhalb von 7 Tagen ab Rechnungseingang ohne Abzüge. <br> Nach § 13b Abs. 1
+            und 2 UStG sind Sie als Leistungsempfänger Schuldner der Umsatzsteuer
             <br> (Hinweis nach 14a Abs. 5 Satz 2 UStG)..
           </p>
 
@@ -706,7 +704,8 @@
 
           <br>
           <p class="ml-5">
-            Sollten Sie weitere Fragen haben oder zusätzliche Informationen  benötigen, <br> stehen wir Ihnen jederzeit gerne
+            Sollten Sie weitere Fragen haben oder zusätzliche Informationen benötigen, <br> stehen wir Ihnen jederzeit
+            gerne
             zur Verfügung.
           </p>
           <br>
@@ -716,7 +715,6 @@
           </p>
         </v-col>
       </v-row>
-
 
 
     </div>
@@ -733,7 +731,7 @@ export default {
 
   data() {
     return {
-      mwstActive:true,
+      mwstActive: true,
       rechnungsArray: '',
       user: true,
       handy: false,
@@ -769,6 +767,7 @@ export default {
         {title: 'Vorname', key: 'vorname'},
         {title: 'Datum', key: 'datum'},
         {title: 'Preis', key: 'preis'},
+        {title: 'Mehrwertsteuer', key: 'mwstActive'},
         {title: 'Leistungen', key: 'leistungen'},
         {title: 'Aktionen', key: 'actions', sortable: false}
       ],
@@ -805,7 +804,7 @@ export default {
       });
     },
 
-    bruttopereis(){
+    bruttopereis() {
       return this.preisWert + this.mwstNumber;
     },
 
@@ -1016,6 +1015,7 @@ export default {
           ort: this.ort,
           leistungen: this.leistungen,
           datum: isoDate,
+          mwstActive: this.mwstActive,
           preis: this.calculatedPreis,
           rechnungsnummer: this.rechnungsnummer,
           text: this.infoText,
@@ -1072,6 +1072,7 @@ export default {
         this.straße = item.straße;
         this.hausnummer = item.hausnummer;
         this.plz = item.plz;
+        this.mwstActive = item.mwstActive;
         this.date = item.datum;
         this.ort = item.ort;
         this.leistungen = item.leistungen;
@@ -1113,6 +1114,7 @@ export default {
         strasse: item.strasse,
         hausnummer: item.hausnummer,
         plz: item.plz,
+        mwstActive: item.mwstActive,
         ort: item.ort,
         rechnungsnummer: item.rechnungsnummer,
         infoText: item.text,
