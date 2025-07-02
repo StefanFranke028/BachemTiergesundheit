@@ -196,7 +196,7 @@
                   <td>{{ item.name }}</td>
                   <td>{{ item.vorname }}</td>
                   <td><input v-model="item.datum" disabled style="color: white" type="date"></td>
-                  <td>{{ item.preis }}</td>
+                  <td >{{ item.preis }}</td>
                   <td class="text-center">{{ item.mwstActive ? '✓' : 'х' }}</td>
                   <td>
                     <p v-for="leistung in item.leistungen" :key="leistung">
