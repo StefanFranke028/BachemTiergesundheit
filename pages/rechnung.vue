@@ -696,7 +696,7 @@
           <p class="ml-5 mt-16">
             Zahlungsbedingungen: Zahlung innerhalb von 7 Tagen ab Rechnungseingang ohne Abzüge. <br> Nach § 13b Abs. 1
             und 2 UStG sind Sie als Leistungsempfänger Schuldner der Umsatzsteuer
-            <br> (Hinweis nach 14a Abs. 5 Satz 2 UStG)..
+            <br> (Hinweis nach 14a Abs. 5 Satz 2 UStG).
           </p>
 
           <br v-if="infoText != null">
