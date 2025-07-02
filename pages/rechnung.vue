@@ -44,7 +44,7 @@
                       <v-textarea v-model="infoText" auto-grow label="Info Text" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-start" cols="12">
-                      <v-switch v-model="mwstActive" auto-grow :label="mwstActive? 'Mit mehrwertsteuer':'Ohne mehrwertsteuer'" variant="outlined"/>
+                      <v-switch v-model="mwstActive" auto-grow :label="mwstActive? 'Mit Mehrwertsteuer':'Ohne Mehrwertsteuer'" variant="outlined"/>
                     </v-col>
                     <v-col class="d-flex justify-center" cols="3">
                       <v-text-field v-model="text" label="Leistung" variant="outlined"/>
