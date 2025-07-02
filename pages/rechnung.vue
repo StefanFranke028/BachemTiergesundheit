@@ -263,13 +263,13 @@
         </v-col>
       </v-row>
 
-      <v-row class="mt-n5">
+      <v-row class="mt-n7">
         <v-col>
           <p>Sehr geehrte Damen und Herren, </p>
           <p>vielen Dank für Ihren Auftrag. Vereinbarungsgemäß berechnen wir Ihnen hiermit folgende Leistungen:</p>
         </v-col>
       </v-row>
-      <div style="height: 500px">
+      <div class="mt-n3 " style="height: 500px">
         <v-row class="mx-0 mt-5" style="width: 100%; background-color: #509fa6">
           <v-col cols="1">
             <p style="color: #f2f2f2; margin-bottom: 6px">Position</p>
@@ -394,7 +394,7 @@
 
 
       </div>
-      <v-row class="ma-0" style="width: 100%;">
+      <v-row class="ma-0 mt-3" style="width: 100%;">
 
         <v-col cols="4">
           <p style="font-size: 12px; color: #434343">
@@ -508,13 +508,13 @@
       </v-row>
 
 
-      <v-row class="mt-n5">
+      <v-row class="mt-n7">
         <v-col>
           <p>Sehr geehrte Damen und Herren, </p>
           <p>vielen Dank für Ihren Auftrag. Vereinbarungsgemäß berechnen wir Ihnen hiermit folgende Leistungen:</p>
         </v-col>
       </v-row>
-      <div style="height: 500px">
+      <div class="mt-n3" style="height: 500px">
         <v-row class="mx-0 mt-5" style="width: 100%; background-color: #509fa6">
           <v-col cols="1">
             <p style="color: #f2f2f2; margin-bottom: 6px">Position</p>
@@ -639,7 +639,7 @@
 
 
       </div>
-      <v-row class="ma-0" style="width: 100%;">
+      <v-row class="ma-0 mt-3" style="width: 100%;">
 
         <v-col cols="4">
           <p style="font-size: 12px; color: #434343">
