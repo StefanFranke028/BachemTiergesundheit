@@ -52,7 +52,7 @@ import {useRoute} from 'vue-router';
 
 const route = useRoute();
 const city = route.params.stadt || '';
-console.log('City:', city);
+
 
 if (!city.startsWith('MilaEscort')) {
   navigateTo('/');

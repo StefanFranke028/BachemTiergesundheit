@@ -236,23 +236,8 @@ useHead({
   },
   title: 'Mila Escort Frankfurt – Luxus Begleitservice mit Niveau',
   link: [
-    {
-      rel: 'preload',
-      href: '/_nuxt/assets/startseite_bg_komprimiert_mobile.webp',
-      as: 'image',
-      media: '(max-width: 600px)', // Optional: nur bei kleinen Screens
-    },
-    {
-      rel: 'preload',
-      href: '/startseite_bg_komprimiert.webp',
-      as: 'image',
-      media: '(min-width: 601px)', // Optional
-    },
-    {
-      rel: 'preload',
-      href: '/startseite_bg_komprimiert.webp',
-      as: 'image',
-    },
+
+
     {
       rel: 'canonical',
       href: `https://mila-escort.de`,
