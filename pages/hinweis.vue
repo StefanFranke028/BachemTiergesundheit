@@ -123,6 +123,7 @@
 import { useUserStore } from '@/stores/user';
 
 export default {
+  name: "highClassBegleitungen",
   computed: {
     dame() {
       return useUserStore().dame; // Zugriff auf den Pinia Store

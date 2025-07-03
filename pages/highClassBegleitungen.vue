@@ -384,7 +384,7 @@ import {useUserStore} from '@/stores/user';
 import {mapActions} from 'pinia';
 
 export default {
-  name: "damen",
+  name: "highClassBegleitungen",
   data() {
     return {
       dameInput: '',

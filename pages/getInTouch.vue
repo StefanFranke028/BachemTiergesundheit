@@ -211,7 +211,7 @@ import {Icon} from '@iconify/vue';
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "kontakt",
+  name: "getInTouch",
   components: {
     Icon
   },

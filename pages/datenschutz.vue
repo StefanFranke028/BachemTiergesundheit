@@ -457,7 +457,7 @@
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "KontaktView",
+  name: "Datenschutz",
   computed: {
     wiVde() {
       const screenStore = useScreenStore();

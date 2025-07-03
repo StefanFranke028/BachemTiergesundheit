@@ -275,6 +275,8 @@ import {useScreenStore} from "~/stores/screen.js";
 import {Icon} from '@iconify/vue';
 
 export default {
+  name: "Mila-Escort",
+
   components: {
     Icon,
   },

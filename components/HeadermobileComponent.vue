@@ -75,13 +75,13 @@ export default {
       drawer:false,
       menuItems: [
         { title: 'Startseite', icon: 'heroicons:home-solid', route: 'index' },
-        { title: 'Unsere Vita', icon: 'fluent:person-32-filled', route: 'vita' },
-        { title: 'Vision', icon: 'fluent:people-team-16-filled', route: 'vision' },
-        { title: 'High-Class Begleitungen', icon: 'icon-park-solid:women', route: 'highClassBegleitungen' },
-        { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'casting' },
-        { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'getInTouch' },
-        { title: 'Konditionen', icon: 'foundation:pricetag-multiple', route: 'konditionen' },
-        { title: 'Magazin', icon: 'mdi-book', route: 'magazin' },
+        { title: 'Unsere Vita', icon: 'fluent:person-32-filled', route: 'Vita' },
+        { title: 'Vision', icon: 'fluent:people-team-16-filled', route: 'Vision' },
+        { title: 'High-Class Begleitungen', icon: 'icon-park-solid:women', route: 'HighClassBegleitungen' },
+        { title: 'Casting', icon: 'fluent:chart-person-48-filled', route: 'Casting' },
+        { title: 'Get in Touch', icon: 'streamline:contact-phonebook-2-solid', route: 'GetInTouch' },
+        { title: 'Konditionen', icon: 'foundation:pricetag-multiple', route: 'Konditionen' },
+        { title: 'Magazin', icon: 'mdi-book', route: 'Magazin' },
       ],
     }
   }

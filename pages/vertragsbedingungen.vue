@@ -203,7 +203,7 @@ useHead({
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "KontaktView",
+  name: "Vertragsbedingungen",
   computed: {
     wide() {
       const screenStore = useScreenStore();

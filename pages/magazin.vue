@@ -271,8 +271,8 @@ useHead({
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
+  name: "Magazin",
   data() {
-
     return {
       blog: [{
         text1: 'Unsere Begleitpersonen',

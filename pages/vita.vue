@@ -276,7 +276,7 @@ useHead({
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "damen",
+  name: "Vita",
   data() {
     return {
       vita: [{

@@ -727,6 +727,8 @@ import {Icon} from '@iconify/vue'
 import {useUserStore} from "~/stores/user.js";
 
 export default {
+  name: "Rechnung",
+
   components: {Icon},
 
   data() {
