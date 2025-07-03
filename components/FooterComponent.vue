@@ -62,27 +62,30 @@
             Mila Escort Service
           </b>
         </p>
-        <p class="text-center mt-2" @click="navigateTo('Magazin')">
-
+        <NuxtLink to="/magazin" class="text-center mt-2" style="display: block; text-decoration: none; color: inherit;">
           Magazin
-        </p>
+        </NuxtLink>
 
-        <p class="text-center mt-2 "  @click="navigateToMagazin('Feminine_Finesse')">
+        <NuxtLink :to="{ path: '/magazin', query: { special: 'Feminine_Finesse' } }"
+                  class="text-center mt-2"
+                  style="display: block; text-decoration: none; color: inherit;">
           Feminine Finesse
+        </NuxtLink>
 
-        </p>
-        <p class="text-center mt-2 "  @click="navigateToMagazin('Herren1x1')">
+        <NuxtLink :to="{ path: '/magazin', query: { special: 'Herren1x1' } }"
+                  class="text-center mt-2"
+                  style="display: block; text-decoration: none; color: inherit;">
           1 x 1 für unsere Herren
+        </NuxtLink>
 
-        </p>
-        <p class="text-center mt-2" @click="navigateTo('vertragsbedingungen')">
+        <NuxtLink to="/vertragsbedingungen" class="text-center mt-2" style="display: block; text-decoration: none; color: inherit;">
           Vertragsbedingungen
+        </NuxtLink>
 
-        </p>
-        <p class=" text-center mt-2" @click="navigateTo('werbepartner')">
+        <NuxtLink to="/werbepartner" class="text-center mt-2" style="display: block; text-decoration: none; color: inherit;">
           Werbepartner
+        </NuxtLink>
 
-        </p>
 
       </v-col>
       <v-col cols="3">
@@ -91,22 +94,22 @@
             Casting & High-Class Escort Service Jobs
           </b>
         </p>
-        <p class="mt-2" @click="navigateTo('casting')">
-
+        <NuxtLink to="/casting" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Entdecke spannende Karrieremöglichkeiten.
-        </p>
-        <p class="mt-2" @click="navigateTo('casting')">
+        </NuxtLink>
+
+        <NuxtLink to="/casting" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Dein Weg zu einer erfolgreichen Escort Karriere
+        </NuxtLink>
 
-        </p>
-        <p class="mt-2" @click="navigateTo('casting')">
+        <NuxtLink to="/casting" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Werde ein Teil unseres exklusiven Escort Agency Teams
+        </NuxtLink>
 
-        </p>
-        <p class="mt-2" @click="navigateTo('magazin')">
+        <NuxtLink to="/magazin" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Antworten auf häufige Fragen für neue Escort Talente
+        </NuxtLink>
 
-        </p>
       </v-col>
       <v-col class=" " cols="3">
         <p class="text-center">
@@ -148,11 +151,11 @@
           <span class="">Anbieterkennzeichnung</span>
         </router-link> &nbsp;
         •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/datenschutz">
+        <router-link aria-label="Impressum" class="nav-link" title="DAtenschutz" to="/datenschutz">
           <span class=""> Disclaimer & Datenschutzerklärung </span>
         </router-link> &nbsp;
         •
-        <router-link aria-label="Impressum" class="nav-link" title="Impressum" to="/admin">
+        <router-link aria-label="Impressum" class="nav-link" title="Verwaltung" to="/admin">
           <span class="">Admin</span>
         </router-link> &nbsp;
 
@@ -225,28 +228,26 @@
             Mila Escort Service
           </b>
         </p>
-        <p class=" mt-2" @click="navigateTo('Magazin')">
-
+        <NuxtLink to="/magazin" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Magazin
-        </p>
+        </NuxtLink>
 
-        <p class=" mt-2 "  @click="navigateToMagazin('Feminine_Finesse')">
+        <NuxtLink :to="{ path: '/magazin', query: { special: 'Feminine_Finesse' } }" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Feminine Finesse
+        </NuxtLink>
 
-        </p>
-
-        <p class="mt-2 "  @click="navigateToMagazin('Herren1x1')">
+        <NuxtLink :to="{ path: '/magazin', query: { special: 'Herren1x1' } }" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           1 x 1 für unsere Herren
+        </NuxtLink>
 
-        </p>
-        <p class=" mt-2" @click="navigateTo('vertragsbedingungen')">
+        <NuxtLink to="/vertragsbedingungen" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Vertragsbedingungen
+        </NuxtLink>
 
-        </p>
-        <p class=" mt-2" @click="navigateTo('werbepartner')">
+        <NuxtLink to="/werbepartner" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
           Werbepartner
+        </NuxtLink>
 
-        </p>
 
       </v-col>
       <v-col cols="12">
@@ -255,22 +256,28 @@
             Casting & High-Class Escort Service Jobs
           </b>
         </p>
-        <p class="mt-2" @click="navigateTo('casting')">
+        <NuxtLink to="/casting" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
+          <b>
+            Casting & High-Class Escort Service Jobs
+          </b>
+        </NuxtLink>
 
+        <NuxtLink to="/casting" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
           Entdecke spannende Karrieremöglichkeiten.
-        </p>
-        <p class="mt-2" @click="navigateTo('casting')">
+        </NuxtLink>
+
+        <NuxtLink to="/casting" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
           Dein Weg zu einer erfolgreichen Escort Karriere
+        </NuxtLink>
 
-        </p>
-        <p class="mt-2" @click="navigateTo('casting')">
+        <NuxtLink to="/casting" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
           Werde ein Teil unseres exklusiven Escort Agency Teams
+        </NuxtLink>
 
-        </p>
-        <p class="mt-2" @click="navigateTo('magazin')">
+        <NuxtLink to="/magazin" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
           Antworten auf häufige Fragen für neue Escort Talente
+        </NuxtLink>
 
-        </p>
       </v-col>
       <v-col class=" " cols="12">
         <p class="">
