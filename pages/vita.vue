@@ -249,7 +249,7 @@ const { data: landingpage1 } = await useAsyncData('landingpage1', () =>
 console.log(landingpage1)
 useHead({
   htmlAttrs: { lang: 'de' },
-      titleTemplate: () => `Vita - Mila Escort Service`,
+      titleTemplate: () => `Unsere Vita - Mila Escort Service`,
   meta: [
     {
       name: 'description',

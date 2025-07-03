@@ -357,7 +357,7 @@ useHead({
       href: `https://mila-escort.de/casting`,
     },
   ],
-  title: 'Casting - Mila Escort Service',
+  title: 'Casting - Mila Escort Service Frankfurt',
   meta: [
     {
       name: 'description',
