@@ -94,19 +94,20 @@
             Casting & High-Class Escort Service Jobs
           </b>
         </p>
-        <NuxtLink to="/casting" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
+
+        <NuxtLink to="/casting" class="mt-2" style="display: block; font-size: 14px; text-decoration: none; color: inherit;">
           Entdecke spannende Karrieremöglichkeiten.
         </NuxtLink>
 
-        <NuxtLink to="/casting" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
+        <NuxtLink to="/casting" class="mt-2" style="display: block; font-size: 14px; text-decoration: none; color: inherit;">
           Dein Weg zu einer erfolgreichen Escort Karriere
         </NuxtLink>
 
-        <NuxtLink to="/casting" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
+        <NuxtLink to="/casting" class="mt-2" style="display: block; font-size: 14px; text-decoration: none; color: inherit;">
           Werde ein Teil unseres exklusiven Escort Agency Teams
         </NuxtLink>
 
-        <NuxtLink to="/magazin" class="mt-2" style="display: block; text-decoration: none; color: inherit;">
+        <NuxtLink to="/magazin" class="mt-2" style="display: block; font-size: 14px; text-decoration: none; color: inherit;">
           Antworten auf häufige Fragen für neue Escort Talente
         </NuxtLink>
 
@@ -256,11 +257,7 @@
             Casting & High-Class Escort Service Jobs
           </b>
         </p>
-        <NuxtLink to="/casting" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
-          <b>
-            Casting & High-Class Escort Service Jobs
-          </b>
-        </NuxtLink>
+
 
         <NuxtLink to="/casting" style="display: block; text-decoration: none; color: inherit;" class="mt-2">
           Entdecke spannende Karrieremöglichkeiten.
