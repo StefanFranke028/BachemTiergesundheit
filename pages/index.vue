@@ -5,14 +5,14 @@
     <div class="card">
       <div class="cardIn1">
         <div class="text-center text2 dosis">
-          <p v-html="landingpage[0].text1">
-          </p>
+          <h1 style="font-size: 25px" v-html="landingpage[0].text1 ">
+          </h1>
           <br>
           <div class="d-flex justify-center mt-10" style="width: 100%;">
             <router-link style="display: inline-block;" to="vita">
               <v-btn
                   aria-label="Zur Vita"
-                  class="text-center"
+                  class="text-center mt-n12"
                   style="min-width: 48px; min-height: 48px; padding: 12px 24px;"
                   theme="dark"
               >
@@ -25,10 +25,10 @@
       <div class="cardIn2">
         <div class="text3 ">
 
-          <p v-html="landingpage[0].text2">
+          <h2 style="font-size: 14px" v-html="landingpage[0].text2">
 
 
-          </p>
+          </h2>
         </div>
         <div class="text4 ">
           <p class="" v-html="landingpage[0].text3">
@@ -74,7 +74,7 @@
 
           </v-row>
           <div class="pt-16" style="position: relative; top: 10vw ; left:-40%">
-            <h2 class=" text-center dm-serif" style="font-size: 22px" v-html="landingpage[0].text4"></h2>
+            <h3 class=" text-center dm-serif" style="font-size: 22px" v-html="landingpage[0].text4"></h3>
             <div class="vertical-marker">
             </div>
           </div>
@@ -131,10 +131,10 @@
       <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <div style="width: 75%; height: 400px;  background-color: #e5dbdc;">
           <div style="height: 250px; width: 70%; background-color: white; position: relative; left:21%; top: 10%">
-            <div class="text-center px-4 text5 dosis" v-html="landingpage[0].text1">
+            <h1 class="text-center px-4 text5 dosis" v-html="landingpage[0].text1">
 
 
-            </div>
+            </h1>
           </div>
           <v-img fetchpriority="high" alt="Frau und Mann" cover src="~/assets/startseiteBild2.jpeg"
                  style="height: 180px; width: 70%; background-color: black; position: relative; left:5%; top: -15%; box-shadow: 2px -3px 5px rgba(0,0,0,0.75)">
@@ -177,7 +177,7 @@
     </div>
     <div class="" style="background-color:  #f1edec; width: 100vw; padding-bottom: 20px">
       <div class="pt-5">
-        <h1 class="mt-3 text-center  dm-serif" style="font-size: 13px" v-html="landingpage[0].text4"></h1>
+        <h3  class="mt-3 text-center  dm-serif" style="font-size: 13px" v-html="landingpage[0].text4"></h3>
 
       </div>
       <div class="px-10 mt-4">
