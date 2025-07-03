@@ -286,20 +286,24 @@
               class="pa-0 "
               cols="5"
           >
-            <NuxtLink
-                :to="'/MilaEscort-' + stadt.name"
+            <nuxt-link
+                class=""
+                :to="'MilaEscort-' + stadt.name"
                 style="text-decoration: none; color: black"
             >
               <p
-                  class="mt-1"
-                  :class="index % 2 === 0 ? 'ml-20' : 'mr-20'"
+                  class="mt-2"
+
                   style="cursor: pointer"
               >
                 {{ stadt.name }}
               </p>
-            </NuxtLink>
+            </nuxt-link>
+
           </v-col>
+
         </v-row>
+
       </v-col>
     </v-row>
 
@@ -320,8 +324,14 @@
         <router-link   aria-label="Impressum" class="nav-link " title="Impressum" to="/datenschutz">
           <p class=" mt-1"> Disclaimer & Datenschutzerklärung </p> <br>
         </router-link>
+
+
+
+
       </div>
     </div>
+
+
   </div>
 </template>
 
