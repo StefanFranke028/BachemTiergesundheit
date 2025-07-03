@@ -14,7 +14,7 @@
       <v-row class="mx-0 justify-center" style="width: 100%; min-height: 500px">
         <v-col class="d-flex align-center py-8" cols="12" md="10" style="width: 100%; min-height: 500px">
           <v-card style="min-height: 300px ; width: 100%">
-            <v-card-title class="text-center"> Luxusbegleitung für besondere Momente {{ stadtparam }}</v-card-title>
+            <h2 class="text-center"> Unsere Damen aus {{ stadtparam }}</h2>
             <v-divider class="mx-12"></v-divider>
             <v-card-text>
               <h3 class="text-center">
@@ -64,16 +64,10 @@ useHead({
     lang: 'de',
   },
   meta: [
-    {
-      name: 'description',
-      content: 'mila-escort in ' + city.slice(11),
-    },
-    {
-      name: 'keywords',
-      content: 'Escort ' + city.slice(11),
-    },
+    { name: 'description', content: `Erleben Sie luxuriöse Escort-Begleitung in ${city.slice(11)}. Unsere Damen bieten niveauvolle Gesellschaft für besondere Anlässe.` },
+    { name: 'keywords', content: `Escort, Begleitservice, ${city.slice(11)}, Luxus Escort, Mila` }
   ],
-  title: 'Mila Escort Service',
+  title: `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
   link: [
     {
       rel: 'canonical',
