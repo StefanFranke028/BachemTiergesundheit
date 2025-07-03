@@ -433,7 +433,7 @@ useHead({
 import {useScreenStore} from "~/stores/screen.js";
 
 export default {
-  name: "highClassBegleitungen",
+  name: "Konditionen",
   computed: {
     wide() {
       const screenStore = useScreenStore();

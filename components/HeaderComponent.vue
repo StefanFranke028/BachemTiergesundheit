@@ -2,29 +2,33 @@
   <div class="header1">
     <v-row class="pa-0" style="width: 100%; height: 100%">
       <v-col class="pa-0 d-flex justify-center align-center" cols="2">
-        <v-img alt="" class="" src="~/assets/LogoNew.svg"
+        <v-img alt="Mila Escort Logo" class="" src="~/assets/LogoNew.svg"
                style="height: 130px; width: 130px; cursor: pointer" @click="navigateTo('/')"></v-img>
       </v-col>
 
       <v-col class="pa-0 d-flex justify-center align-center" cols="8">
         <v-row class="d-flex justify-center">
           <v-col class="d-flex justify-center align-center" cols="2">
-            <span @click="navigateTo('vita')">Unsere Vita</span>
+            <NuxtLink to="/vita">Unsere Vita</NuxtLink>
+
           </v-col>
           <v-col class="d-flex justify-center  align-center" cols="2">
-            <span @click="navigateTo('vision')">Vision</span>
+            <NuxtLink to="/vision">Vision</NuxtLink>
           </v-col>
           <v-col class="d-flex justify-center  align-center align-center" cols="2">
-            <span @click="navigateTo('highClassBegleitungen')">High-Class Begleitungen</span>
+            <NuxtLink to="/highClassBegleitungen">High-Class Begleitungen</NuxtLink>
           </v-col>
           <v-col class="d-flex justify-center  align-center" cols="2">
-            <span @click="navigateTo('casting')">Casting</span>
+            <NuxtLink to="/casting">Casting</NuxtLink>
+
           </v-col>
           <v-col class="d-flex justify-center  align-center" cols="2">
-            <span @click="navigateTo('getInTouch')">Get in Touch</span>
+            <NuxtLink to="/getInTouch">Get in Touch</NuxtLink>
+
           </v-col>
           <v-col class="d-flex justify-center  align-center" cols="2">
-            <span @click="navigateTo('konditionen')">Konditionen</span>
+            <NuxtLink to="/konditionen">Konditionen</NuxtLink>
+
           </v-col>
 
         </v-row>

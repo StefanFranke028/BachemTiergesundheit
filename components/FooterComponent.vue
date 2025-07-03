@@ -122,8 +122,8 @@
               class="pa-0 d-flex justify-center"
               cols="5"
           >
-            <nuxt-link
-                :to="'MilaEscort-' + stadt.name"
+            <NuxtLink
+                :to="'/MilaEscort-' + stadt.name"
                 style="text-decoration: none; color: black"
             >
               <p
@@ -133,7 +133,8 @@
               >
                 {{ stadt.name }}
               </p>
-            </nuxt-link>
+            </NuxtLink>
+
           </v-col>
 
         </v-row>
@@ -285,23 +286,20 @@
               class="pa-0 "
               cols="5"
           >
-            <nuxt-link
-                class=""
-                :to="'MilaEscort-' + stadt.name"
+            <NuxtLink
+                :to="'/MilaEscort-' + stadt.name"
                 style="text-decoration: none; color: black"
             >
               <p
-                  class="mt-2"
-
+                  class="mt-1"
+                  :class="index % 2 === 0 ? 'ml-20' : 'mr-20'"
                   style="cursor: pointer"
               >
                 {{ stadt.name }}
               </p>
-            </nuxt-link>
+            </NuxtLink>
           </v-col>
-
         </v-row>
-
       </v-col>
     </v-row>
 
@@ -322,21 +320,15 @@
         <router-link   aria-label="Impressum" class="nav-link " title="Impressum" to="/datenschutz">
           <p class=" mt-1"> Disclaimer & Datenschutzerklärung </p> <br>
         </router-link>
-
-
-
-
       </div>
     </div>
-
-
   </div>
 </template>
 
 
 <script setup>
-import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 
 const router = useRouter()
 
@@ -344,26 +336,21 @@ const navigateToMagazin = (category = 'feminine') => {
   router.push({ path: '/magazin', query: { special: category } })
 }
 
-// Städte-Liste für den Footer
-const staedte = ref([])
-
-onMounted(async () => {
-  try {
-    const token = localStorage.getItem('token')
-
-    const response = await $fetch('https://mila-escort.de:8443/auth/stadt/namen', {
-      method: 'GET',
-      headers: {
-        Authorization: token ? `Bearer ${token}` : undefined,
-      },
-    })
-
-    staedte.value = response
-  } catch (e) {
-    console.error('Fehler beim Laden der Städte:', e)
-  }
+// SSR-fähig geladen mit useFetch
+const { data: staedte, error } = await useFetch('https://mila-escort.de:8443/auth/stadt/namen', {
+  method: 'GET',
+  // Nur wenn public zugänglich! Falls nicht, Auth über Server-Token oder API-Key einbauen
+  headers: {
+    // Authorization: 'Bearer xxx' // Nur wenn nötig
+  },
+  server: true, // explizit serverseitig
 })
+
+if (error.value) {
+  console.error('Fehler beim Laden der Städte:', error.value)
+}
 </script>
+
 
 
 <script>

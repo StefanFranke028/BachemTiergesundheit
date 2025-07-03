@@ -15,6 +15,8 @@
           :to="{ name: item.route }"
           role="option"
           :aria-label="item.title"
+          nav
+          link
       >
         <v-row style="width: 100%;" class="mx-0">
           <v-col>
@@ -27,7 +29,7 @@
 
 <v-row style="width: 100%; height: 100%" class="ma-0 px-2">
   <v-col cols="4" style="height: 100%" class="d-flex align-center">
-    <v-img class="" @click="navigateTo('/')" style="height: 80px; width: 80px; cursor: pointer" src="~/assets/LogoNew.svg"  alt=""></v-img>
+    <v-img class="Mila Escort Logo" @click="navigateTo('/')" style="height: 80px; width: 80px; cursor: pointer" src="~/assets/LogoNew.svg"  alt=""></v-img>
   </v-col>
   <v-col cols="5" class="d-flex align-center ">
     <div style="cursor: pointer">
