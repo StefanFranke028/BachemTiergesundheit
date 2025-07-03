@@ -63,6 +63,30 @@ useHead({
   htmlAttrs: {
     lang: 'de',
   },
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Mila Escort",
+        "image": "https://mila-escort.de/logo.png",
+        "url": `https://mila-escort.de/${route.params.stadt}`,
+        "description": `Luxus Escort Service in ${city.slice(11)}`,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": city.slice(11),
+          "addressCountry": "DE"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": city.slice(11)
+        },
+        "serviceType": "Begleitservice, Escort",
+        "priceRange": "$$$"
+      })
+    }
+  ],
   meta: [
     { name: 'description', content: `Erleben Sie luxuriöse Escort-Begleitung in ${city.slice(11)}. Unsere Damen bieten niveauvolle Gesellschaft für besondere Anlässe.` },
     { name: 'keywords', content: `Escort, Begleitservice, ${city.slice(11)}, Luxus Escort, Mila` }
