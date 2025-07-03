@@ -57,7 +57,11 @@ console.log('City:', city);
 if (!city.startsWith('MilaEscort')) {
   navigateTo('/');
 }
-
+useSeoMeta({
+  title: `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
+  description: `Erleben Sie luxuriöse Escort-Begleitung in ${city.slice(11)}. Unsere Damen bieten niveauvolle Gesellschaft für besondere Anlässe.`,
+  keywords: `Escort, Begleitservice, ${city.slice(11)}, Luxus Escort, Mila`,
+});
 
 useHead({
   htmlAttrs: {
@@ -92,6 +96,7 @@ useHead({
     { name: 'keywords', content: `Escort, Begleitservice, ${city.slice(11)}, Luxus Escort, Mila` }
   ],
   title: `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
+  titleTemplate: () => `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
   link: [
     {
       rel: 'canonical',
