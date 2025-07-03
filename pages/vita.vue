@@ -2,7 +2,7 @@
   <div v-if="desktop|| tabletHorizontal" class="mt-3" style="width: 100vw;">
     <div class="card">
       <div class="cardIn1 px-5">
-        <h2 class="dm-serif" style="margin-left: -90px" v-html="vita[0].text1"></h2>
+        <h1  class="dm-serif" style="margin-left: -90px; font-size: 30px" v-html="vita[0].text1"></h1>
         <div class="vertical-marker">
         </div>
         <p class="dosis" style="margin-top: -100px;" v-html="vita[0].text2">
@@ -32,7 +32,7 @@
           <v-row class="ma-0 align-center" style="width: 100%; height: 100%">
 
             <v-col cols="7">
-              <h3 class="text-center dm-serif" style="font-size: 1vw" v-html="vita[0].text3"></h3>
+              <h2 class="text-center dm-serif" style="font-size: 1vw" v-html="vita[0].text3"></h2>
               <br>
               <br>
               <p class="dm-serif text-center"  v-html="vita[0].text4">
@@ -55,7 +55,7 @@
 
             <v-col class="" cols="7">
 
-              <h2 class="text-center dm-serif" style="font-size: 0.9vw" v-html="vita[0].text5"></h2>
+              <h3 class="text-center dm-serif" style="font-size: 0.9vw" v-html="vita[0].text5"></h3>
 
               <p class="dm-serif text-center"  v-html="vita[0].text6">
 
@@ -214,7 +214,7 @@
            src="~/assets/vita_3_komprimiert.webp" style="width: 100%; height: 600px;  ">
       <div class="mx-auto pa-7"
            style="background-color: rgba(215,232,215,0.85); width: 85vw; box-shadow: 2px 2px 5px rgba(0,0,0,0.82) ">
-        <h1 class="text-center dm-serif" style="font-size: 4vw" v-html="vita[0].text13"></h1>
+        <h3 class="text-center dm-serif" style="font-size: 4vw" v-html="vita[0].text13"></h3>
         <h2 class="text-center mt-2 dm-serif" style="font-size: 3vw" v-html="vita[0].text14"></h2>
 
         <p class="dm-serif mt-2" style=" text-align: justify; font-size: 12px" v-html="vita[0].text15">
