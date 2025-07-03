@@ -4,21 +4,23 @@
       <v-row style="width: 100%;" class="d-flex justify-center ma-0 mt-10">
         <v-col class="d-flex justify-center" cols="8">
           <div style="width: 100%;">
-            <h2>
+            <h1>
               Datenschutz auf einen Blick
+            </h1>
+            <h2>
+              Allgemeine Hinweise
             </h2>
             <p class="mt-2">
-              <b>Allgemeine Hinweise</b> <br> <br>
               Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
               personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
               Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert
               werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie
               unserer unter diesem Text aufgeführten Datenschutzerklärung.
             </p>
-            <p class="mt-3">
+            <h3 class="mt-3">
               <b>Datenerfassung auf dieser Website <br>
                 Wer ist verantwortlich für die Datenerfassung auf dieser Website?</b>
-            </p>
+            </h3>
             <div>
               <p>
                 Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
@@ -29,9 +31,11 @@
 
             </div>
             <div>
+              <h3>
+                Wie erfassen wir Ihre Daten?
+              </h3>
               <p>
                 <b>
-                  Wie erfassen wir Ihre Daten?
                 </b> <br>
                 Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei
                 kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. <br> <br>

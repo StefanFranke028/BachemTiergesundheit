@@ -4,81 +4,79 @@
       <v-row style="width: 100%;" class="d-flex justify-center ma-0 mt-10">
         <v-col class="d-flex justify-center" cols="8">
           <div style="width: 100%;">
-            <h2>
+            <h1>
               Vertragsbedingungen
-            </h2>
+            </h1>
             <div>
-              <p style="font-size: 14px">
-              <b v-html="kontakt[0].überschrift1">
 
-              </b>
-              </p>
+              <h2 v-html="kontakt[0].überschrift1">
+
+              </h2>
+
                 <br>
               <p v-html="kontakt[0].text1">
               </p>
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
+              <h3 style="font-size: 14px">
                 <b v-html="kontakt[0].überschrift2">
 
                 </b>
-              </p>
+              </h3>
               <br>
               <p v-html="kontakt[0].text2">
               </p>
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
+              <h3 style="font-size: 14px">
                 <b v-html="kontakt[0].überschrift3">
 
                 </b>
-              </p>
+              </h3>
               <br>
               <p v-html="kontakt[0].text3">
               </p>
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
+              <h3 style="font-size: 14px">
                 <b v-html="kontakt[0].überschrift4">
 
                 </b>
-              </p>
+              </h3>
               <br>
               <p v-html="kontakt[0].text4">
               </p>
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
+              <h3 style="font-size: 14px">
                 <b v-html="kontakt[0].überschrift5">
 
                 </b>
-              </p>
+              </h3>
               <br>
               <p v-html="kontakt[0].text5">
               </p>
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
-                <b v-html="kontakt[0].überschrift6">
+                <h3 v-html="kontakt[0].überschrift6">
 
-                </b>
-              </p>
+                </h3>
               <br>
               <p v-html="kontakt[0].text6">
               </p>
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
+              <h3 style="font-size: 14px">
                 <b v-html="kontakt[0].überschrift7">
 
                 </b>
-              </p>
+              </h3>
               <br>
               <p v-html="kontakt[0].text7">
               </p>
@@ -107,11 +105,11 @@
               <br>
             </div>
             <div>
-              <p style="font-size: 14px">
+              <h3 style="font-size: 14px">
                 <b v-html="kontakt[0].überschrift10">
 
                 </b>
-              </p>
+              </h3>
               <br>
               <p v-html="kontakt[0].text10">
               </p>

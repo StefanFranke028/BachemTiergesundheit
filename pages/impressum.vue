@@ -4,11 +4,14 @@
     <v-row style="width: 100%;" class="d-flex justify-center ma-0 mt-10">
       <v-col class="d-flex justify-center" cols="8">
         <div style="width: 100%;">
-          <h2>
+          <h1>
           Impressum
+          </h1>
+          <h2>
+            Mila Escort Service Frankfurt
           </h2>
           <p class="mt-2">
-            Mila Escort Service Frankfurt <br> <br>
+
             Bitte beachten Sie, dass bei Abschluss einer Buchung der Vertrag ausschließlich mit
             der Escort Dame zustande kommt. Mila Escort fungiert als Vermittler und bringt Sie
             mit Ihrer Wunschbegleitung zusammen. Um die Anonymität sowohl des Kunden als
@@ -26,18 +29,19 @@
           <p class="mt-3">
             Verantwortlich für den Inhalt dieser Website Angaben gemäß § 5 DDG
           </p>
-          <div>
-            <p>
+          <div class="mt-3">
+            <h3>
               <b>
                 Mila Concepts
               </b> <br>
 
-              <p>
+
+            </h3>
+            <p>
                 Röderbergweg 126 <br>
                 60385 <br>
                 Frankfurt am Main
               </p>
-            </p>
             <br>
 
           </div>
