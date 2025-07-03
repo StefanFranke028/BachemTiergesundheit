@@ -234,7 +234,7 @@ useHead({
   htmlAttrs: {
     lang: 'de' // Setzt die Sprache auf Deutsch
   },
-  title: 'Mila Escort Frankfurt – Luxus Begleitservice mit Niveau & Diskretion',
+  title: 'Mila Escort Frankfurt – Luxus Begleitservice mit Niveau',
   link: [
     {
       rel: 'preload',
