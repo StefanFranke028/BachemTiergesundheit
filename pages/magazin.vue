@@ -248,7 +248,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: `https://mila-escort.de/magazin`,
+      href: `https://mila-escort.de${route.path}`, // query wird ignoriert
     },
   ],
   title: 'Magazin - Mila Escort Service Frankfurt',
