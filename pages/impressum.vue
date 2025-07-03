@@ -254,6 +254,36 @@
   </div>
 </div>
 </template>
+
+
+<script setup>
+import {ref} from 'vue';
+
+
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Impressum - Mila Escort Service Frankfurt',
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://mila-escort.de/impressum`,
+    },
+  ],
+  meta: [
+    {
+      name: 'description',
+      content: 'Impressum von Mila Escort – rechtliche Angaben, Kontaktinformationen und Verantwortlichkeiten auf einen Blick.',
+    },
+    {
+      name: 'keywords',
+      content: 'Impressum, Mila Escort, Kontakt, Anbieterkennzeichnung, rechtliche Informationen, Frankfurt, Escortagentur',
+    }
+
+  ],
+});
+</script>
 <script>
 
 import {useScreenStore} from "~/stores/screen.js";

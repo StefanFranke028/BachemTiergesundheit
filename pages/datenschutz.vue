@@ -452,6 +452,37 @@
     </div>
   </div>
 </template>
+
+
+<script setup>
+import {ref} from 'vue';
+
+
+useHead({
+  htmlAttrs: {
+    lang: 'de'
+  },
+  title: 'Datenschutz - Mila Escort Service Frankfurt',
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://mila-escort.de/datenschutz`,
+    },
+  ],
+  meta: [
+    {
+      name: 'description',
+      content: 'Erfahren Sie alles über den Datenschutz bei Mila Escort – wie wir Ihre persönlichen Daten schützen und verarbeiten.',
+    },
+    {
+      name: 'keywords',
+      content: 'Datenschutz, Datenschutzrichtlinie, personenbezogene Daten, DSGVO, Mila Escort, Frankfurt, Escortagentur, Privatsphäre, Sicherheit',
+    }
+
+
+  ],
+});
+</script>
 <script>
 
 import {useScreenStore} from "~/stores/screen.js";
