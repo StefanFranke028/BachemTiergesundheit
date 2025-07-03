@@ -7,43 +7,6 @@
 </template>
 
 
-<script setup>
-import {useHead} from '#app'
-
-useHead({
-  title: 'Mila Escort Service',
-  link: [
-    {
-      rel: 'preload',
-      href: 'https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap',
-      as: 'style',
-      onload: "this.rel='stylesheet'"
-    },
-    {
-      rel: 'preload',
-      href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap',
-      as: 'style',
-      onload: "this.rel='stylesheet'"
-    },
-    {
-      rel: 'preload',
-      href: '/_nuxt/index.fNBpe6BQ.css',
-      as: 'style',
-      onload: "this.rel='stylesheet'"
-    }
-  ],
-  meta: [
-    {
-      name: 'description',
-      content: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
-    },
-    {
-      name: 'keywords',
-      content: 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Mila Escort Service in Frankfurt.',
-    },
-  ],
-})
-</script>
 <script>
 import {useScreenStore} from "~/stores/screen.js";
 

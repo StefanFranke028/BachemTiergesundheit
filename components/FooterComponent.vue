@@ -335,61 +335,36 @@
 
 
 <script setup>
-import {ref} from 'vue';
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
 const router = useRouter()
 
 const navigateToMagazin = (category = 'feminine') => {
   router.push({ path: '/magazin', query: { special: category } })
 }
 
-// Reaktives Array für Landingpage-Daten
-const staedte = ref([]);
+// Städte-Liste für den Footer
+const staedte = ref([])
 
-// Methode zum Abrufen der Landingpage-Daten mit useAsyncData
-const {data: landingpage1, pending, error} = await useAsyncData('landingpage1', async () => {
-  let token = null;
-
-  if (process.client) {
-    // Zugriff auf localStorage nur auf dem Client
-    token = localStorage.getItem('token');
-  }
-
+onMounted(async () => {
   try {
-    const response = await $fetch("https://mila-escort.de:8443/auth/stadt/namen", {
+    const token = localStorage.getItem('token')
+
+    const response = await $fetch('https://mila-escort.de:8443/auth/stadt/namen', {
       method: 'GET',
       headers: {
         Authorization: token ? `Bearer ${token}` : undefined,
       },
-    });
+    })
 
-    return response;
+    staedte.value = response
   } catch (e) {
-    console.error('Fehler beim Laden der Landingpage:', e);
-    return {
-      description: '',
-    };
+    console.error('Fehler beim Laden der Städte:', e)
   }
-});
-
-if (landingpage1.value) {
-  staedte.value = landingpage1.value;
-}
-
-// Setze dynamisch den Head basierend auf den Landingpage-Daten
-useHead({
-  title: 'Mila Escort Service',
-  meta: [
-    {
-      name: 'description',
-      content: landingpage1.value?.description ,
-    },
-    {
-      name: 'keywords',
-      content: landingpage1.value?.keywords ,
-    },
-  ],
-});
+})
 </script>
+
 
 <script>
 

@@ -187,7 +187,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort Service',
+  title: 'Get in touch - Mila Escort Service',
   link: [
     {
       rel: 'canonical',

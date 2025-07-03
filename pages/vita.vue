@@ -241,79 +241,34 @@
 
 
 <script setup>
-import {ref} from 'vue';
+const { data: landingpage1 } = await useAsyncData('landingpage1', () =>
+        $fetch('https://mila-escort.de:8443/auth/vita'),
+    { lazy: false, server: true }
+);
 
-// Reaktives Array für Landingpage-Daten
-const vita = ref([]);
-
-// Methode zum Abrufen der Landingpage-Daten mit useAsyncData
-const {data: landingpage1, pending, error} = await useAsyncData('landingpage', async () => {
-  let token = null;
-
-  if (process.client) {
-    // Zugriff auf localStorage nur auf dem Client
-    token = localStorage.getItem('token');
-  }
-
-  try {
-    const response = await $fetch("https://mila-escort.de:8443/auth/vita", {
-      method: 'GET',
-      headers: {
-        Authorization: token ? `Bearer ${token}` : undefined,
-      },
-    });
-
-    return response;
-  } catch (e) {
-    console.error('Fehler beim Laden der Landingpage:', e);
-    // Optional: Setzen von Fallback-Daten oder Fehlerbehandlung
-    return {
-      description: '',
-      keywords: '',
-      text1: '',
-      text2: '',
-      text3: '',
-      text4: '',
-      text5: '',
-      text6: '',
-      text7: '',
-      text8: '',
-      text9: '',
-      text10: '',
-    };
-  }
-});
-
-// Aktualisiere das `landingpage`-Array, wenn die Daten verfügbar sind
-if (landingpage1.value) {
-  vita.value.push(landingpage1.value);
-  console.log(vita.value);
-}
-
-// Setze dynamisch den Head basierend auf den Landingpage-Daten
+console.log(landingpage1)
 useHead({
-  htmlAttrs: {
-    lang: 'de' // Setzt die Sprache auf Deutsch
-  },
-  title: 'Mila Escort Service',
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://mila-escort.de/vita`,
-    },
-  ],
+  htmlAttrs: { lang: 'de' },
+      titleTemplate: () => `Vita - Mila Escort Service`,
   meta: [
     {
       name: 'description',
-      content: landingpage1.value?.description || 'Exklusivität und Diskretion auf höchstem Niveau – Ihr Maxi Escort Service in Frankfurt.',
+      content: landingpage1.value?.description || 'Fallback Beschreibung',
     },
     {
       name: 'keywords',
-      content: landingpage1.value?.keywords || 'Escort, Frankfurt, Diskretion, Exklusivität, Maxi Escort Service',
+      content: landingpage1.value?.keywords || 'Escort, Mila, Vita',
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://mila-escort.de/vita',
     },
   ],
 });
 </script>
+
 
 <script>
 

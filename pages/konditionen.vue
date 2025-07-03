@@ -407,7 +407,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort Service',
+  title: 'Konditionen - Mila Escort Service',
   link: [
     {
       rel: 'canonical',

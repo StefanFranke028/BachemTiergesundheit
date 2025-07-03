@@ -181,7 +181,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Mila Escort Service',
+  title: 'Vision - Mila Escort Service',
   link: [
     {
       rel: 'canonical',
