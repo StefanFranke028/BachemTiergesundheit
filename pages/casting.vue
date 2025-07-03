@@ -8,8 +8,8 @@
         <div class="vertical-marker">
         </div>
 
-        <p class="dosis mt-7" style="margin-bottom: 100px;margin-left: 30px; " v-html="bewerben[0].text2">
-        </p>
+        <h2 class="dosis mt-7" style="margin-bottom: 100px;margin-left: 30px; font-size: 15px" v-html="bewerben[0].text2">
+        </h2>
       </div>
     </div>
     <div style="width: 100vw; height: 600px">

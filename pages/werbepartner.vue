@@ -4,13 +4,13 @@
       <div class="cardIn1 px-5">
         <h1 class="dm-serif mt-2 text-center" style=" font-size: 22px " >Unsere Werbepartner</h1>
 
-        <p class="dosis " style="margin-bottom: 100px;" >
+        <h2 class="dosis " style="margin-bottom: 100px; font-size: 15px" >
           <br>
           <br>
           <br>
           <br>
           Wir arbeiten mit ausgewählten Partnern zusammen, die unser Angebot im Escort-Bereich sinnvoll ergänzen. Hier findest du eine Übersicht unserer Kooperationspartner mit einem Klick gelangst du direkt zu deren Webseiten. Vielen Dank für das Vertrauen und die gute Zusammenarbeit.
-        </p>
+        </h2>
         <div class="vertical-marker">
         </div>
       </div>

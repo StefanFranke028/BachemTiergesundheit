@@ -4,8 +4,8 @@
       <div class="cardIn1 px-5">
         <h1 class="dm-serif mt-2 text-center" style=" font-size: 22px " v-html="kontakt[0].text1"></h1>
 
-        <p class="dosis " style="margin-bottom: 100px;" v-html="kontakt[0].text2">
-        </p>
+        <h2 class="dosis " style="margin-bottom: 100px; font-size: 15px" v-html="kontakt[0].text2">
+        </h2>
         <div class="vertical-marker">
         </div>
       </div>
