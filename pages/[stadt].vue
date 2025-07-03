@@ -35,7 +35,7 @@
       <v-row class="mx-0 mt-4 justify-center" style="width: 100%; height: 100%">
         <v-col v-for="dame in stadtDamen" :key="dame" class="d-flex justify-center" cols="11" md="3" xl="3">
           <v-card style="width: 350px">
-            <v-img :src="dame.bilder[0].imageBase64" class="d-flex justify-center align-center" cover
+            <v-img :src="dame.bilder[0].imageBase64" alt="Bilder der Damen" class="d-flex justify-center align-center" cover
                    style="width: 100%; height: 450px;  ">
             </v-img>
             <v-card-title class="text-center">{{ dame.name }}</v-card-title>
@@ -48,11 +48,25 @@
 </template>
 
 <script setup>
-import {useRoute} from 'vue-router';
+
 
 const route = useRoute();
+import { useRoute, navigateTo } from '#imports';
+import { useAsyncData } from '#app';
 const city = route.params.stadt || '';
 
+if (!city.startsWith('MilaEscort')) {
+  navigateTo('/');
+}
+
+const stadtparam = city.slice(11);
+
+const { data: stadtData } = await useAsyncData(`stadt-${stadtparam}`, () =>
+    $fetch(`https://mila-escort.de:8443/auth/stadt/${stadtparam}`)
+);
+
+const stadt = computed(() => stadtData.value || null);
+const stadtDamen = computed(() => stadt.value?.damen || []);
 
 if (!city.startsWith('MilaEscort')) {
   navigateTo('/');
@@ -63,7 +77,7 @@ useHead({
   htmlAttrs: {
     lang: 'de',
   },
-  titleTemplate: () => `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
+  title:  `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
   meta: [
     {
       hid: 'description',
@@ -123,24 +137,9 @@ export default {
       stadt: null
     }
   },
-  methods: {
-    async getStadt() {
-      let response = await $fetch('https://mila-escort.de:8443/auth/stadt/' + this.stadtparam)
-      //let response = await $fetch('https://mila-escort.de:8443/auth/stadt/' + this.stadtparam)
-      this.damen = await response.damen
-      this.stadt = await response
-      console.log(this.damen)
-    }
-  },
-  mounted() {
-    const route = useRoute()
-    this.stadtparam = route.params.stadt.slice(11)
-    this.getStadt()
-  },
+
   computed: {
-    stadtDamen: function () {
-      return this.damen
-    },
+
 
     wide() {
       const screenStore = useScreenStore();
