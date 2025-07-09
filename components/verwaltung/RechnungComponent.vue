@@ -262,7 +262,7 @@
 </template>
 
 <script>
-import {Icon} from "@iconify/vue/dist/iconify";
+import {Icon} from "@iconify/vue";
 
 export default {
   name:'RechnungComponent',
