@@ -199,10 +199,15 @@
         <NuxtLink to="/datenschutz" class="mx-2 footer-link text-white link" >
           Datenschutz
         </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+
+        <NuxtLink to="/ueberUns" class="mx-2 footer-link text-white link" >
+          Über Uns
+        </NuxtLink>
       </nav>
 
       <!-- YouTube-Link als echter externer Link -->
-      <a href="/Video" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
+      <a href="https://www.youtube.com/results?search_query=andrea+bachem" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
         <Icon icon="grommet-icons:youtube" />
       </a>
 

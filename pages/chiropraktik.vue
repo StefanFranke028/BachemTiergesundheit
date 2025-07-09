@@ -259,14 +259,6 @@ export default {
 }
 
 
-.chirosiegel {
-  background-image: url("@/assets/chiroSiegel.webp");
-  background-size: cover;
-  height: 170px;
-  width: 170px;
-  margin-top: -50px;
-
-}
 
 
 .line {
@@ -303,6 +295,7 @@ a {
 .chirosiegel {
   background-image: url("@/assets/chiroSiegel.webp");
   background-size: cover;
+  margin-top: 30px;
   height: 70px;
   width: 70px;
 }
