@@ -15,7 +15,7 @@
         <v-row class="mx-0 justify-center">
           <v-col cols="11" md="8" class="d-flex align-center py-8">
 
-            <v-card class="background-impressum" style="height: 600px; width: 100%;">
+            <v-card class="background-impressum" style="height: 600px; width: 100%; overflow-y: scroll">
               <h2 itemprop="alternateName" class="text-center line">{{stadt?.unterUeberschrift}}</h2>
               <v-divider class="mx-12" />
               <v-card-text>

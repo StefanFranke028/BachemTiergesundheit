@@ -147,6 +147,11 @@ export default {
       });
     }
   },
+  watch: {
+    url(newVal) {
+      this.url = newVal.toLowerCase().replace(/\s+/g, '-');
+    }
+  },
   methods: {
     reset() {
       this.url = ''

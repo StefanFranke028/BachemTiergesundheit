@@ -25,7 +25,7 @@
               >
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-text-field v-model="name" label="Name" variant="outlined" />
+                    <v-text-field v-model="name"  label="Name" variant="outlined" />
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
                     <v-text-field v-model="ueberschrift" label="Überschrift" variant="outlined" />
@@ -122,7 +122,7 @@ export default {
       unterUeberschrift: '',
       miniUnterUeberschrift: '',
       name: '',
-      autor: '',
+      autor: 'Andrea Bachem',
       image:'',
       ueberschrift: '',
       text: '',
@@ -141,6 +141,7 @@ export default {
     }
   },
   computed: {
+
     bereinigtesBerichteArray() {
       return this.berichteArray.map(item => {
         const newObj = Object.assign({...item, icon: 'fluent:delete-16-regular'}, item);
@@ -150,13 +151,19 @@ export default {
       });
     }
   },
+  watch: {
+    name(newVal) {
+      this.name = newVal.toLowerCase().replace(/\s+/g, '-');
+    }
+  },
   methods: {
+
     reset() {
       this.name = ''
       this.text = ''
       this.ueberschrift = ''
       this.image = ''
-      this.autor = ''
+      this.autor = 'Andrea Bachem'
       this.datum = ''
       this.unterUeberschrift = ''
       this.miniUnterUeberschrift = ''
@@ -241,9 +248,9 @@ export default {
 
           this.name = ''
           this.text = ''
-          this.überschrift = ''
+          this.ueberschrift = ''
           this.image = ''
-          this.autor = ''
+          this.autor = 'Andrea Bachem'
           this.unterUeberschrift = ''
           this.miniUnterUeberschrift = ''
         } catch (e) {
