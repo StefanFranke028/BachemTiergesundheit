@@ -236,10 +236,7 @@
           <p class="mt-n1" style="font-size: 13px">{{ plz }} {{ ort }}</p>
         </v-col>
         <v-col class="d-flex justify-end" cols="2">
-          <img alt="Bildbeschreibung"
-               src="@/assets/FugenLogo-removebg-preview.png"
-               style="width: 130px"
-          >
+
         </v-col>
 
       </v-row>
@@ -482,9 +479,7 @@
           <p class="mt-n1" style="font-size: 13px">{{ plz }} {{ ort }}</p>
         </v-col>
         <v-col class="d-flex justify-end" cols="2">
-          <img alt="Bildbeschreibung"
-               src="@/assets/FugenLogo-removebg-preview.png"
-               style="width: 130px">
+
         </v-col>
       </v-row>
 

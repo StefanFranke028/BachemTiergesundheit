@@ -9,8 +9,17 @@ export default defineNuxtConfig({
         }
     },
     vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@import "@/assets/variables.scss";'
+                }
+            }
+        },
         build: {
-            sourcemap: true
+            sourcemap: true,
+            extractCSS: true,
+            cssMinify: true
         },
         define: {
             global: 'window',

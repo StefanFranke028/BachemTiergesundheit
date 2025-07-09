@@ -1,39 +1,25 @@
 <template>
+<div class="background" >
+  <HeaderComponent v-if="desktop || tabletHorizontal"></HeaderComponent>
+  <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
   <article>
-    <!-- Header mit Bild und H1 -->
-    <v-img
-        alt="Schwarz-Weiß-Hintergrundbild"
-        class="d-flex justify-center align-center"
-        cover
-        src="~/assets/Stadt.jpg"
-        style="width: 100%; height: 450px;"
-    >
-      <div
-          class="d-flex justify-center align-center"
-          style="height: 450px; width: 100vw; background-color: rgba(0,0,0,0.6); z-index: 9000;"
-      >
-        <h1 class="text-white text-center dm-serif">
-          Luxusbegleitung für besondere Momente in {{ stadtparam }}
-        </h1>
-      </div>
-    </v-img>
-
     <!-- Einleitungstext (optional für SEO) -->
     <section class="text-center py-6">
-      <p style="max-width: 800px; margin: auto; font-size: 18px;">
-        Entdecken Sie unsere stilvollen Damen in {{ stadtparam }} – für niveauvolle Begegnungen und unvergessliche Erlebnisse voller Diskretion.
-      </p>
+      <h1 class="line text-white" style="max-width: 800px; margin: auto; font-size: 35px ">
+        {{stadt?.überschrift}}
+      </h1>
     </section>
 
     <!-- Stadtbeschreibung -->
-    <section style="background-color: #f1f0f0; min-height: 750px;">
+    <section style=" min-height: 750px;">
       <v-row class="mx-0 justify-center">
-        <v-col cols="12" md="10" class="d-flex align-center py-8">
-          <v-card style="min-height: 300px; width: 100%;">
-            <h2 class="text-center">Unsere Damen aus {{ stadtparam }}</h2>
+        <v-col cols="11" md="8" class="d-flex align-center py-8">
+
+          <v-card class="background-impressum" style="height: 600px; width: 100%;overflow-y: scroll">
+            <h2 class="text-center line">{{stadt?.unterUeberschrift}}</h2>
             <v-divider class="mx-12" />
             <v-card-text>
-              <h3 class="text-center">{{ stadt?.überschrift }}</h3>
+              <h3 class="text-center line">{{ stadt?.miniUnterUeberschrift }}</h3>
               <div
                   class="mt-3"
                   style="text-align: justify;"
@@ -43,37 +29,20 @@
             </v-card-text>
           </v-card>
         </v-col>
-      </v-row>
-    </section>
+        <v-col cols="11" md="4" class="d-flex align-center py-8">
+          <v-card class="background-impressum" style="height: 600px; width: 100%;">
+            <v-img :alt="stadt.unterUeberschrift" style="height: 600px" cover  :src="stadt.image">
 
-    <!-- Damenliste -->
-    <section class="pb-10" style="background-color: #ffffff;">
-      <v-row class="mx-0 mt-4 justify-center">
-        <v-col
-            v-for="dame in stadtDamen"
-            :key="dame.name"
-            class="d-flex justify-center"
-            cols="11"
-            md="3"
-            xl="3"
-        >
-          <v-card style="width: 350px">
-            <v-img
-                :src="dame.bilder?.[0]?.imageBase64"
-                :alt="`Bild von ${dame.name}`"
-                class="d-flex justify-center align-center"
-                cover
-                style="width: 100%; height: 450px;"
-            />
-            <v-card-title class="text-center">{{ dame.name }}</v-card-title>
-            <v-card-subtitle class="text-center">
-              Aus {{ stadtparam }} | {{ dame.geburtsalter }}
-            </v-card-subtitle>
+            </v-img>
+
           </v-card>
         </v-col>
       </v-row>
     </section>
+
   </article>
+</div>
+
 </template>
 
 
@@ -85,39 +54,64 @@ import { useRoute, navigateTo } from '#imports';
 import { useAsyncData } from '#app';
 const city = route.params.stadt || '';
 
-if (!city.startsWith('MilaEscort')) {
+if (!city.startsWith('tiergesundheit')) {
   navigateTo('/');
+
 }
 
-const stadtparam = city.slice(11);
+const stadtparam = city.slice(15);
 
 const { data: stadtData } = await useAsyncData(`stadt-${stadtparam}`, () =>
-    $fetch(`https://mila-escort.de:8443/auth/stadt/${stadtparam}`)
+    $fetch(`https://tier-gesundheitszentrum.com:8080/auth/stadt/name/${stadtparam}`)
 );
 
 const stadt = computed(() => stadtData.value || null);
-const stadtDamen = computed(() => stadt.value?.damen || []);
+onMounted(() => {
+  console.log('stadt:', stadt.value);
+});
 
-if (!city.startsWith('MilaEscort')) {
+if (!city.startsWith('tiergesundheit')) {
   navigateTo('/');
 }
-
-
-useHead({
+useHead(() => ({
   htmlAttrs: {
     lang: 'de',
   },
-  title:  `Luxus Escort in ${city.slice(11)} - Mila Escort Service`,
+  title: `${stadt.value?.überschrift} – Tiergesundheitszentrum Andrea Bachem`,
   meta: [
     {
-      hid: 'description',
       name: 'description',
-      content: `Erleben Sie luxuriöse Escort-Begleitung in ${city.slice(11)}. Unsere Damen bieten niveauvolle Gesellschaft für besondere Anlässe.`,
+      content: stadt.value?.miniUnterUeberschrift || 'Erfahren Sie mehr über ganzheitliche Tiergesundheit in Ihrer Stadt.',
     },
     {
-      hid: 'keywords',
       name: 'keywords',
-      content: `Escort, Begleitservice, ${city.slice(11)}, Luxus Escort, Mila`,
+      content: `Tiergesundheit, Bericht, ${stadtparam}, Andrea Bachem, Tierosteopathie, Chiropraktik, Naturheilkunde`,
+    },
+    {
+      property: 'og:title',
+      content: `${stadt.value?.überschrift} – Tiergesundheitszentrum`,
+    },
+    {
+      property: 'og:description',
+      content: stadt.value?.miniUnterUeberschrift || '',
+    },
+    {
+      property: 'og:image',
+      content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
+    },
+    {
+      property: 'og:url',
+      content: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
+    },
+    {
+      property: 'og:type',
+      content: 'article',
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
     },
   ],
   script: [
@@ -125,34 +119,31 @@ useHead({
       type: 'application/ld+json',
       children: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Mila Escort",
-        "image": "https://mila-escort.de/logo.png",
-        "url": `https://mila-escort.de/${route.params.stadt}`,
-        "description": `Luxus Escort Service in ${city.slice(11)}`,
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": city.slice(11),
-          "addressCountry": "DE"
+        "@type": "Article",
+        "headline": stadt.value?.überschrift,
+        "description": stadt.value?.miniUnterUeberschrift,
+        "author": {
+          "@type": "Person",
+          "name": "Andrea Bachem"
         },
-        "areaServed": {
-          "@type": "Place",
-          "name": city.slice(11)
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tiergesundheitszentrum Andrea Bachem",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://tier-gesundheitszentrum.com/logo.png"
+          }
         },
-        "serviceType": "Begleitservice, Escort",
-        "priceRange": "$$$"
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://tier-gesundheitszentrum.com/${route.params.stadt}`
+        }
       })
     }
-  ],
+  ]
+}));
 
 
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://mila-escort.de/${route.params.stadt}`,
-    },
-  ],
-});
 </script>
 
 
@@ -202,5 +193,24 @@ export default {
   font-family: "Aptos", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.background {
+  background-image: url("@/assets/black.webp");
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+
+  width: 100vw;
+}
+.background-impressum {
+
+  background-image: url("@/assets/paper.webp");
+  background-size: cover;
+
+}
+.line {
+  font-family: "Dancing Script", cursive;
+  color: #2c2a2a;
 }
 </style>

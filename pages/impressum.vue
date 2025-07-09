@@ -1,331 +1,255 @@
 <template>
-<div>
-  <div>
-    <v-row style="width: 100%;" class="d-flex justify-center ma-0 mt-10">
-      <v-col class="d-flex justify-center" cols="8">
-        <div style="width: 100%;">
-          <h1>
-          Impressum
-          </h1>
-          <h2>
-            Mila Escort Service Frankfurt
-          </h2>
-          <p class="mt-2">
+  <div  class="background">
+        <HeaderComponent></HeaderComponent>
+    <div style="overflow: scroll; height: 100%; padding-bottom: 210px">
+      <v-row class="justify-center">
+        <v-col cols="6">
+          <v-row class="mx-0" style="width: 100%">
+            <v-col class="d-flex mt-10" cols="12">
+              <h1 class="line">
+                Impressum Tier-Gesundheitszentrum Andrea Bachem
+              </h1>
+            </v-col>
 
-            Bitte beachten Sie, dass bei Abschluss einer Buchung der Vertrag ausschließlich mit
-            der Escort Dame zustande kommt. Mila Escort fungiert als Vermittler und bringt Sie
-            mit Ihrer Wunschbegleitung zusammen. Um die Anonymität sowohl des Kunden als
-            auch der Begleitperson zu wahren, erfolgt die bargeldlose Bezahlung an die Agentur.
-            Die Mila Escort Agentur verfügt über eine Geldempfangsvollmacht der
-            Begleitpersonen und leitet das Geld an diese weiter. Unsere Aufgabe ist lediglich die
-            Vermittlung eines passenden Termins mit der von Ihnen gewünschten Dame. Der
-            Vertragsabschluss erfolgt im Namen und auf Rechnung der Escort Dame.
-            Die Bandbreite des Services, den unsere Begleitpersonen – auch in Bad Homburg –
-            auf Reisen oder bei besonderen Anlässen bieten, richtet sich sowohl nach Ihren
-            Vorstellungen als auch nach den vor Ort geltenden Bestimmungen.
-            Länderspezifische Anordnungen und etwaige Einschränkungen werden von den
-            selbstständigen High-Class Begleitpersonen selbstverständlich beachtet.
-          </p>
-          <p class="mt-3">
-            Verantwortlich für den Inhalt dieser Website Angaben gemäß § 5 DDG
-          </p>
-          <div class="mt-3">
-            <h3>
-              <b>
-                Mila Concepts
-              </b> <br>
-
-
-            </h3>
-            <p>
-                Röderbergweg 126 <br>
-                60385 <br>
-                Frankfurt am Main
+            <v-col cols="12">
+              <p>
+                Ein Hinweis aufgrund des Heilmittelwerbegesetzes:<br>
+                Grundsätzlich soll bei den aufgeführten Therapien nicht der Eindruck erweckt werden, dass diesen ein
+                Heilversprechen zugrunde liegt. Ebenso wenig kann aus den Ausführungen abgeleitet werden, dass Linderung
+                oder Verbesserung eines Krankheitszustandes garantiert oder versprochen werden. Homöopathie und
+                Magnetfeldtherapie werden schulmedizinisch nicht anerkannt.
               </p>
-            <br>
+            </v-col>
 
-          </div>
-          <div>
-            <p>
-              <b>
-                Steuernummer:
-              </b> <br>
-              Auf schriftliche Anfrage
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Erreichbarkeiten:
-              </b> <br>
-              Tel: +49 151 - 670 376 96<br>
-              E-Mail: Team@Mila-escort.de
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Erlaubnis zum Betrieb einer Escort Agentur
-              </b> <br>
-              Der Begleit- &amp; Escort Agentur „Mila Escort“ wurde gemäß § 12 ProstSchG die
-              Erlaubnis zum Betreiben einer Escort Agentur erteilt.
-            </p>
-            <br>
-          </div>
-         <div>
-            <p>
-              <b>
-                Aufsichtsbehörde:
-              </b> <br>
-              Auf schriftliche Anfrage
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Jugendschutzbeauftragte*r:
-              </b> <br>
-              Auf schriftliche Anfrage
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Inhalt des Onlineangebotes
-              </b> <br>
-              Die Informationen auf dieser Website werden mit größter Sorgfalt erstellt. Dennoch
-              übernimmt der Autor keine Gewähr für die Aktualität, Richtigkeit oder Vollständigkeit
-              der bereitgestellten Inhalte. Haftungsansprüche gegen den Autor, die sich auf
-              Schäden materieller oder immaterieller Art beziehen, die durch die Nutzung oder
-              Nichtnutzung der dargebotenen Informationen verursacht werden, sind
-              ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges
-              Verhalten vorliegt. Alle Angebote sind unverbindlich. Der Autor behält sich das Recht
-              vor, Teile der Seiten oder das gesamte Angebot ohne vorherige Ankündigung zu
-              verändern oder zu löschen.
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Verwendung des Begriffs „unsere“
-              </b> <br>
-              Die Verwendung des Begriffs „unsere“ in Bezug auf Damen, Escort Damen usw.
-              bezieht sich ausschließlich auf die selbstständigen Damen, mit denen wir einen
-              Werbe- und Vermittlungsvertrag haben und die nicht in einem Arbeitsverhältnis zu
-              uns stehen.
-              Die Mila Escort Agentur fungiert als Plattform für Escort Damen, die in eigener
-              Verantwortung und gewerblich selbstständig tätig sind. Diese Damen haben uns die
-              Vollmacht erteilt, in ihrem Namen zu kommunizieren und Honorare für ihre
-              Dienstleistungen anzunehmen und weiterzuleiten. Die Entscheidung über die
-              Annahme oder Ablehnung einer Buchung liegt ausschließlich bei den Damen.
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Links zu externen Webseiten
-              </b> <br>
-              Bei direkten oder indirekten Verweisen auf externe Webseiten, die außerhalb des
-              Verantwortungsbereiches des Autors liegen, haftet der Autor nur, wenn er von den
-              Inhalten Kenntnis hatte und es ihm technisch möglich und zumutbar war, die Nutzung
-              im Falle rechtswidriger Inhalte zu verhindern. Der Autor hat zum Zeitpunkt der
-              Linksetzung keine illegalen Inhalte auf den verlinkten Seiten erkannt. Auf die
-              zukünftige Gestaltung der verlinkten Seiten hat der Autor keinen Einfluss und
-              distanziert sich daher ausdrücklich von allen Inhalten, die nach der Linksetzung
-              verändert wurden.
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Urheber- und Kennzeichenrecht
-              </b> <br>
-              Die Inhalte dieser Webseite unterliegen dem Urheberrecht. Der Autor ist bestrebt, in
-              allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente und
-              Texte zu beachten. Alle genannten Marken und Warenzeichen unterliegen dem
-              jeweiligen Eigentumsrecht der Inhaber. Eine Vervielfältigung oder Verwendung
-              solcher Inhalte in anderen Publikationen ist ohne ausdrückliche Zustimmung des
-              Autors nicht gestattet.
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Hinweis zu Bildmaterial und Grafiken
-              </b> <br>
-              Alle auf dieser Website verwendeten Bilder und Grafiken sind entweder
-              urheberrechtlich geschützt oder stammen aus lizenzierten Quellen. Die Rechte an
-              den Bildern der Escort Damen liegen bei den jeweiligen Damen. Eine
-              Vervielfältigung, Verwendung oder Bearbeitung dieser Bilder ist ohne ausdrückliche
-              schriftliche Genehmigung der jeweiligen Urheber nicht gestattet.
-              Zusätzlich unterliegen die Texte und Inhalte dieser Website dem Urheberrecht von
-              Mila Escort. Jegliche Form der Vervielfältigung, Verbreitung oder sonstigen
-              Verwendung dieser Inhalte ist ohne vorherige schriftliche Zustimmung von Mila
-              Escort untersagt.
-              Für Fragen zu den verwendeten Bildern oder zur Lizenzierung kontaktieren Sie uns
-              bitte unter: E-Mail: Support@Mila-Escort.de
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Quellenangaben für die verwendeten Bilder
-              </b> <br>
-              https://unsplash.com/de
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Rechtswirksamkeit dieses Haftungsausschlusses
-              </b> <br>
-              Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem
-              aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen
-              dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig
-              entsprechen, bleiben die übrigen Teile des Dokuments in ihrem Inhalt und ihrer
-              Gültigkeit davon unberührt.
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Mila Escort Service Frankfurt
-              </b> <br>
-              Bitte beachten Sie, dass bei Abschluss einer Buchung der Vertrag ausschließlich mit
-              der Escort Dame zustande kommt. Mila Escort fungiert als Vermittler und bringt Sie
-              mit Ihrer Wunschbegleitung zusammen. Um die Anonymität sowohl des Kunden als
-              auch der Begleitperson zu wahren, erfolgt die bargeldlose Bezahlung an die Agentur. <br> <br>
-              Die Mila Escort Agentur verfügt über eine Geldempfangsvollmacht der
-              Begleitpersonen und leitet das Geld an diese weiter. Unsere Aufgabe ist lediglich die
-              Vermittlung eines passenden Termins mit der von Ihnen gewünschten Dame. Der
-              Vertragsabschluss erfolgt im Namen und auf Rechnung der Escort Dame. <br> <br>
-              Die Bandbreite des Services, den unsere Begleitpersonen – auch in Bad Homburg –
-              auf Reisen oder bei besonderen Anlässen bieten, richtet sich sowohl nach Ihren
-              Vorstellungen als auch nach den vor Ort geltenden Bestimmungen.
-              Länderspezifische Anordnungen und etwaige Einschränkungen werden von den
-              selbstständigen High-Class Begleitpersonen selbstverständlich beachtet.
-            </p>
-            <br>
-          </div>
-          <div>
-            <p>
-              <b>
-                Ihre Privatsphäre – (Rechtliche Hinweis) <br>
-                Mila Escort – Ihre professionelle Vermittlungsagentur
-              </b> <br> <br>
-              Die Escort &amp; Vermittlungsagentur Mila Escort ist eine renommierte Internetplattform,
-              die selbstständige - freiberufliche Escort Damen aus Deutschland, Österreich und der
-              Schweiz vermittelt. Unsere Damen handeln in eigener Verantwortung und sind als
-              selbstständige freiberufliche Escort Models tätig. Die Agentur &amp; Plattform Mila Escort
-              hat zu keinem Zeitpunkt Weisungsbefugnis gegenüber den einzelnen Escort Damen.
-              Diese haben uns die Vollmacht erteilt, die Kommunikation mit Kunden zu
-              übernehmen und die Abwicklung von Termin und Date Anfragen zu koordinieren. Alle
-              Entscheidungen hinsichtlich der Annahme, Ablehnung, Verlängerung oder des
-              Abbruchs von Buchungen obliegen ausschließlich den freiberuflichen Escort Damen.
-            </p>
-            <p> <br>
-              Die Verwendung des Begriffs „unsere“ in Verbindung mit Damen, Ladys, Models und
-              Escort Damen bezieht sich ausschließlich auf die selbstständigen &amp; freiberuflichen
-              Unternehmerinnen, die über unsere Plattform Mila Escort Service vermittelt werden.
-              Es besteht kein Angestelltenverhältnis zu den Escort Damen.
-              Die Escort Models &amp; Escort Damen agieren und handeln eigenverantwortlich. Die
-              Agentur Mila hat lediglich einen Werbe- und Vermittlungsvertrag mit diesen Damen.
-            </p>
-            <p> <br>
-              © 2025 Mila Escort – Alle Rechte vorbehalten. <br>
-              High Class Escort Agentur von Mila Escort International High Class Escort Service. <br>
+            <v-col cols="12">
+              <p>
+                Die hier bereitgestellten Inhalte sind mit größter Sorgfalt recherchiert. Dennoch kann keine Gewähr für
+                deren Richtigkeit übernommen werden. Die Benutzung erfolgt ausschließlich auf eigenes Risiko.
+              </p>
+            </v-col>
 
-              Die Inhalte und Bilder auf dieser Webseite sind urheberrechtlich geschützt und <br>
-              dürfen ohne ausdrückliche Genehmigung nicht kopiert, verwendet oder verbreitet <br>
-              werden.
-            </p>
-            <br>
-          </div>
-        </div>
-      </v-col>
-    </v-row>
+            <v-col cols="12">
+              <p>Andrea Bachem<br>
+                Tier-Gesundheitszentrum<br>
+                Peter-May-straße 47<br>
+                50374 Köttingen<br>
+                Telefon 01786915915<br>
+                St-Nr.203/5008/2253</p>
+            </v-col>
+
+            <v-col cols="12">
+              <h1 class="line">Website created by</h1>
+            </v-col>
+
+            <v-col cols="12">
+              <p>
+                <a href="https://www.franke-arts.de" target="_blank">Stefan Franke</a>
+                <br>
+                <a href="https://www.leandro-graf.de" target="_blank">Leandro Graf</a>
+              </p>
+            </v-col>
+
+            <v-col cols="12">
+              <h1 class="line">Streitschlichtung</h1>
+            </v-col>
+
+            <v-col cols="12">
+              <p>
+                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a
+                  href="https://ec.europa.eu/consumers/odr"
+                  target="_blank">https://ec.europa.eu/consumers/odr</a>.<br>
+                Unsere E-Mail-Adresse finden Sie oben im Impressum.<br>
+                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+            </v-col>
+
+            <v-col cols="12">
+              <h1 class="line">Haftung für Inhalte</h1>
+            </v-col>
+
+            <v-col cols="12">
+              <p>
+                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
+                allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+                verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
+                forschen, die auf eine rechtswidrige Tätigkeit hinweisen.<br>
+                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
+                bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis
+                einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden
+                wir diese Inhalte umgehend entfernen.
+              </p>
+            </v-col>
+
+            <v-col cols="12">
+              <h1 class="line">Haftung für Links</h1>
+            </v-col>
+
+
+            <v-col cols="12">
+              <p>
+                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+                Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
+                verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
+                verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
+                Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.<br>
+                Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
+                Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links
+                umgehend entfernen.
+              </p>
+            </v-col>
+
+            <v-col cols="12">
+              <h1 class="line">Urheberrecht</h1>
+            </v-col>
+
+            <v-col cols="12">
+              <p>
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+                Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.<br>
+                Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte
+                Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem
+                auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
+                Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+              </p>
+            </v-col>
+          </v-row>
+
+        </v-col>
+      </v-row>
+    </div>
+
   </div>
-</div>
+
 </template>
-
-
 <script setup>
-import {ref} from 'vue';
-
-
 useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Impressum - Mila Escort Service Frankfurt',
+  title: 'Impressum | Andrea Bachem – Tiergesundheitszentrum Erftstadt',
   link: [
     {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap'
+    },
+    {
       rel: 'canonical',
-      href: `https://mila-escort.de/impressum`,
+      href: 'https://tier-gesundheitszentrum.com/produkte',
     },
   ],
   meta: [
     {
       name: 'description',
-      content: 'Impressum von Mila Escort – rechtliche Angaben, Kontaktinformationen und Verantwortlichkeiten auf einen Blick.',
+      content:
+          'Impressum des Tier-Gesundheitszentrums Andrea Bachem in Erftstadt. Angaben gemäß §5 TMG: Adresse, Kontakt, Verantwortliche, Haftung und Urheberrecht.'
     },
     {
       name: 'keywords',
-      content: 'Impressum, Mila Escort, Kontakt, Anbieterkennzeichnung, rechtliche Informationen, Frankfurt, Escortagentur',
+      content:
+          'Impressum, Andrea Bachem, Tiergesundheitszentrum, Erftstadt, TMG, rechtliche Hinweise, Heilmittelwerbegesetz, Urheberrecht, Haftungsausschluss'
+    },
+    {
+      name: 'author',
+      content: 'Andrea Bachem'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
+      property: 'og:title',
+      content: 'Impressum | Andrea Bachem – Tiergesundheitszentrum Erftstadt'
+    },
+    {
+      property: 'og:description',
+      content:
+          'Rechtliche Informationen und Kontakt zum Tier-Gesundheitszentrum Andrea Bachem in Erftstadt. Impressum gemäß TMG, inklusive Haftungsausschluss und Urheberrecht.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:url',
+      content: 'https://tier-gesundheitszentrum.com/impressum'
+    },
+    {
+      property: 'og:image',
+      content: 'https://tier-gesundheitszentrum.com/images/social-share.jpg'
     }
-
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Tiergesundheitszentrum Andrea Bachem",
+        "url": "https://tier-gesundheitszentrum.com/impressum",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Peter-May-Straße 47",
+          "addressLocality": "Erftstadt",
+          "postalCode": "50374",
+          "addressCountry": "DE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+49 178 6915915",
+          "contactType": "Kundenservice",
+          "email": "info@tier-gesundheitszentrum.com"
+        }
+      })
+    }
+  ]
 });
-</script>
-<script>
 
-import {useScreenStore} from "~/stores/screen.js";
+</script>
+
+<script>
+import HeaderComponent from "@/components/HeaderComponent.vue";
+
 
 export default {
-  name: "Impressum",
-  computed:{
-    wide() {
-      const screenStore = useScreenStore();
-      return screenStore.wide;
-    },
-    desktop() {
-      const screenStore = useScreenStore();
-      return screenStore.desktop;
-    },
-    mobile() {
-      const screenStore = useScreenStore();
-      return screenStore.mobile;
-    },
-    tablet() {
-      const screenStore = useScreenStore();
-      return screenStore.tablet;
-    },
-    tabletHorizontal() {
-      const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
-    },
+  name: "impressum",
+
+    data: () => ({
+    loading: false,
+  }),
+
+  methods: {},
+  mounted() {
+
   },
-}
+  computed: {},
+  components: {
+    HeaderComponent,
+  },
+};
 </script>
 
 <style scoped>
+.background {
+  position: fixed;
+  background-image: url("@/assets/paper.webp");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
 p {
-  font-family: "Aptos", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
-  font-size: 0.8rem;
+  color: #4b4a4a;
+}
+
+h1 {
+  color: #4b4a4a;
+}
+
+.line {
+  font-family: "Dancing Script", cursive;
+  margin-top: 10px;
 }
 </style>

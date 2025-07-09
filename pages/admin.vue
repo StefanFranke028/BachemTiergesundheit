@@ -1,6 +1,6 @@
 <template>
   <div v-if="!mobile && !tablet " style="width: 100vw">
-    <div class="background d-flex justify-center" style="width: 100vw; height: 100vh">
+    <div class="background d-flex justify-center" style="width: 100vw; height: 200vh">
       <div v-if="isLoading" class="d-flex justify-center" style="width: 100vw">
         <v-col class="d-flex justify-center align-center" cols="12">
           <v-progress-circular color="primary" indeterminate size="70"></v-progress-circular>
@@ -19,12 +19,12 @@
             </router-link>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="6">
-            <h1>Verwaltung von Mila-Escort</h1>
+            <h1>Verwaltung von Andrea Bachem</h1>
           </v-col>
           <v-col class="d-flex justify-center align-center" cols="3">
             <h3 class="text-center" @click="logout">Ausloggen</h3>
           </v-col>
-          <v-col class="d-flex justify-center align-center" cols="3">
+          <v-col class="d-flex justify-center align-center" cols="8">
             <!-- Erster Dropdown -->
             <v-select
                 v-model="selectedSeite"
@@ -32,40 +32,22 @@
                 label="Wählen Sie eine Seite">
             </v-select>
           </v-col>
-          <v-col class="d-flex justify-center align-center" cols="1">
-            <p class="mt-n5">< -- ></p>
-          </v-col>
-          <v-col class="d-flex justify-center align-center" cols="3">
-            <!-- Zweiter Dropdown -->
-            <v-select
-                v-model="selectedItem"
-                :items="items"
-                label="Wählen Sie Damen, Preise, etc.">
-              test
-            </v-select>
-          </v-col>
-          <v-col cols="9">
+
+
+          <v-col cols="12">
             <v-card
-                :height="selectedSeite === null && selectedItem === null ? '100%' : '70vh'"
+                width="95vw"
+                height="100vh"
                 class="mt-n10"
                 style="background-color: transparent !important; border: 1px solid transparent !important; box-shadow: none !important;">
-              <StartseiteComponent v-if="selectedSeite === 'Startseite'"/>
-              <TeamComponent v-if="selectedSeite === 'Vision'"/>
-              <VitaComponent v-if="selectedSeite === 'Vita'"/>
-              <EscortComponent v-if="selectedSeite === 'High Class Begleitungen'"/>
-              <BewerbenComponent v-if="selectedSeite === 'Escort'"/>
-              <KontaktComponent v-if="selectedSeite === 'Get in touch'"/>
-              <HonorareComponent v-if="selectedSeite === 'Konditionen'"/>
-              <BlogComponent v-if="selectedSeite === 'Magazin'"/>
-              <VertragsbedingungenComponent v-if="selectedSeite === 'Vertragsbedingungen'"/>
-              <!-- Weitere Optionen basierend auf selectedItem -->
-              <BlogEintraegeComponent v-if="selectedItem === 'Blog-Einträge'"/>
-              <DinnerPreiseComponent v-if="selectedItem === 'Konditionen Tabelle 1'"/>
-              <EscortPreiseComponent v-if="selectedItem === 'Konditionen Tabelle 2'"/>
-              <DamenComponent v-if="selectedItem === 'Damen'"/>
-              <CastingComponent v-if="selectedItem === 'Casting'"/>
-              <StadtComponent v-if="selectedItem === 'Stadt'"/>
-              <RechnungComponent v-if="selectedItem === 'Rechnung'"/>
+
+
+              <RechnungComponent v-if="selectedSeite === 'Rechnung'"></RechnungComponent>
+              <KontaktaufnahmeComponent v-if="selectedSeite === 'Kontaktaufnahme'"></KontaktaufnahmeComponent>
+              <BerichteComponent v-if="selectedSeite === 'Berichte'"></BerichteComponent>
+              <ServiceComponent v-if="selectedSeite === 'Service'"></ServiceComponent>
+              <!---COmponents--->
+
             </v-card>
           </v-col>
         </v-row>
@@ -89,71 +71,41 @@
 
 <script>
 import {useUserStore} from "~/stores/user.js";
-import StartseiteComponent from "~/components/verwaltung/StartseiteComponent.vue";
-import TeamComponent from "~/components/verwaltung/TeamComponent.vue";
-import VitaComponent from "~/components/verwaltung/VitaComponent.vue";
-import EscortComponent from "~/components/verwaltung/EscortComponent.vue";
-import BewerbenComponent from "~/components/verwaltung/BewerbenComponent.vue";
-import KontaktComponent from "~/components/verwaltung/kontaktComponent.vue";
-import HonorareComponent from "~/components/verwaltung/HonorareComponent.vue";
-import BlogComponent from "~/components/verwaltung/BlogComponent.vue";
-import BlogEintraegeComponent from "~/components/verwaltung/BlogEintraegeComponent.vue";
-import DinnerPreiseComponent from "~/components/verwaltung/DinnerPreiseComponent.vue";
-import EscortPreiseComponent from "~/components/verwaltung/EscortPreiseComponent.vue";
-import DamenComponent from "~/components/verwaltung/DamenComponent.vue";
-import StadtComponent from "~/components/verwaltung/StadtComponent.vue";
+
 import LoginComponent from "~/components/verwaltung/LoginComponent.vue";
-import VertragsbedingungenComponent from "~/components/verwaltung/VertragsbedinungenComponent.vue";
-import CastingComponent from "~/components/verwaltung/CastingComponent.vue";
 import RechnungComponent from "~/components/verwaltung/RechnungComponent.vue";
+import KontaktaufnahmeComponent from "~/components/verwaltung/KontaktaufnahmenComponent.vue";
+import BerichteComponent from "~/components/verwaltung/BerichteComponent.vue";
+import ServiceComponent from "~/components/verwaltung/ServiceComponent.vue";
+
 
 export default {
   name: "verwaltung",
   components: {
+    ServiceComponent,
+    BerichteComponent,
+    KontaktaufnahmeComponent,
     RechnungComponent,
-    StartseiteComponent,
-    TeamComponent,
-    VitaComponent,
-    EscortComponent,
-    BewerbenComponent,
-    KontaktComponent: KontaktComponent,
-    HonorareComponent,
-    BlogComponent,
-    BlogEintraegeComponent,
-    DinnerPreiseComponent,
-    EscortPreiseComponent,
-    CastingComponent,
-    DamenComponent,
-    StadtComponent,
+
     LoginComponent,
-    VertragsbedingungenComponent
   },
   data() {
     return {
-      seiten: ['Startseite', 'Vision', 'Vita', 'High Class Begleitungen', 'Escort', 'Get in touch', 'Konditionen', 'Magazin', 'Vertragsbedingungen'],
-      items: ['Blog-Einträge', 'Konditionen Tabelle 1', 'Konditionen Tabelle 2', 'Damen', 'Casting', 'Stadt', 'Rechnung'],
+      seiten: ['Berichte', 'Produkte', 'Service', 'Preise','Kontaktaufnahme','Rechnung'],
       selectedSeite: null,
-      selectedItem: null,
       isLoading: true,
     };
   },
   watch: {
-    // Wenn im ersten Dropdown eine Seite ausgewählt wird:
+
     selectedSeite(newVal) {
-      console.log('selectedItem:', newVal);  // Füge dies hinzu
+
 
       if (newVal) {
-        this.selectedItem = null; // Zweites Dropdown zurücksetzen
         this.updateHashForSeite();
       }
     },
-    // Wenn im zweiten Dropdown eine Auswahl getroffen wird:
-    selectedItem(newVal) {
-      if (newVal) {
-        this.selectedSeite = null; // Erstes Dropdown zurücksetzen
-        this.updateHashForItem();
-      }
-    },
+
   },
   mounted() {
     this.getUser();
@@ -168,7 +120,7 @@ export default {
         console.log("token is da");
       }
       try {
-        let response = await $fetch("https://mila-escort.de:8443/auth/user", {
+        let response = await $fetch("https://tier-gesundheitszentrum.com:8080/auth/user", {
           method: "GET",
           headers: {
             Authorization: token ? `Bearer ${token}` : undefined,
@@ -183,7 +135,6 @@ export default {
       }
       this.isLoading = false;
     },
-    // Slugify-Funktion: wandelt Text in einen URL-freundlichen String um, inklusive Umlautkonvertierung
     slugify(text) {
       return text
           .toLowerCase()
@@ -194,19 +145,13 @@ export default {
           .replace(/ß/g, 'ss')
           .replace(/\s+/g, '-');
     },
-    // Aktualisiert den Hash für den ersten Dropdown (Seiten)
+
     updateHashForSeite() {
       if (process.client && this.selectedSeite) {
         window.location.hash = `#${this.slugify(this.selectedSeite)}`;
       }
     },
-    // Aktualisiert den Hash für den zweiten Dropdown (Items)
-    updateHashForItem() {
-      if (process.client && this.selectedItem) {
-        window.location.hash = `#${this.slugify(this.selectedItem)}`;
-      }
-    },
-    // Liest beim Laden der Seite den Hash aus und setzt entweder selectedSeite oder selectedItem anhand des slugified Values
+
     setComponentFromHash() {
       const hash = window.location.hash.slice(1);
       console.log("Hash from URL:", hash);
@@ -215,14 +160,8 @@ export default {
         return acc;
       }, {});
       console.log("Generated seitenSlugs:", seitenSlugs);
-      const itemsSlugs = this.items.reduce((acc, i) => {
-        acc[this.slugify(i)] = i;
-        return acc;
-      }, {});
       if (seitenSlugs[hash]) {
         this.selectedSeite = seitenSlugs[hash];
-      } else if (itemsSlugs[hash]) {
-        this.selectedItem = itemsSlugs[hash];
       }
     },
     logout() {
@@ -253,13 +192,13 @@ export default {
 
 <style scoped>
 .background {
-  background-image: url('../assets/verwaltungBG2.jpg');
+  background-image: url('../assets/bgv.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .backgroundLogin {
-  background-image: url('../assets/verwaltungBG2.jpg');
+  background-image: url('../assets/bg_login_dialog.jpg');
   background-size: cover;
   background-position: center;
 }

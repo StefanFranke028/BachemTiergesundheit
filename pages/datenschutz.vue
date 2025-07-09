@@ -1,530 +1,278 @@
 <template>
-  <div>
-    <div>
-      <v-row style="width: 100%;" class="d-flex justify-center ma-0 mt-10">
-        <v-col class="d-flex justify-center" cols="8">
-          <div style="width: 100%;">
-            <h1>
-              Datenschutz auf einen Blick
-            </h1>
-            <h2>
-              Allgemeine Hinweise
-            </h2>
-            <p class="mt-2">
-              Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
-              personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
-              Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert
-              werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie
-              unserer unter diesem Text aufgeführten Datenschutzerklärung.
-            </p>
-            <h3 class="mt-3">
-              <b>Datenerfassung auf dieser Website <br>
-                Wer ist verantwortlich für die Datenerfassung auf dieser Website?</b>
-            </h3>
-            <div>
-              <p>
-                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
-                Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen
-                Stelle“ in dieser Datenschutzerklärung entnehmen.
-              </p>
-              <br>
+    <div class="background">
 
-            </div>
-            <div>
-              <h3>
-                Wie erfassen wir Ihre Daten?
-              </h3>
-              <p>
-                <b>
-                </b> <br>
-                Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei
-                kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. <br> <br>
-                Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der
-                Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B.
-                Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung
-                dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Wofür nutzen wir Ihre Daten?
-                </b> <br>
-                Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
-                gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet
-                werden.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Welche Rechte haben Sie bezüglich Ihrer Daten?
-                </b> <br>
-                Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und
-                Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben
-                außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.
-                Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese
-                Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht,
-                unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer
-                personenbezogenen Daten zu verlangen.
-                <br>
-                <br>
-                Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen
-                Aufsichtsbehörde zu.
-                <br>
-                <br>
-                Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich
-                jederzeit an uns wenden.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Analyse-Tools und Tools von Drittanbietern
-                </b> <br>
-                Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden.
-                Das geschieht vor allem mit sogenannten Analyseprogrammen.
-                Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden
-                Datenschutzerklärung.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Hosting
-                </b> <br>
-                Wir hosten die Inhalte unserer Website beifolgenden Anbieter: <br>
-                Strato. Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles
-                inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von Strato: <br> <br>
-                Die Verwendung von Strato erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir
-                haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung
-                unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt
-                die Verarbeitung ausschließlich auf Grundlage von Art. <br> <br>
-                6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die
-                Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des
-                Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung
-                ist jederzeit widerrufbar.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Allgemeine Hinweise und Pflichtinformationen
-                </b> <br>
-                Datenschutz <br> <br>
-                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst.
-                Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den
-                gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-                Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten
-                erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert
-                werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir
-                erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das
-                geschieht. Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei
-                der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser
-                Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Hinweis zur verantwortlichen Stelle
-                </b> <br>
-                Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-                 <br>
-                Telefon: +49 151- 670 376 96
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  E-Mail:
-                </b> <br>
-                Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder
-                gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von
-                personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Speicherdauer
-                </b> <br>
-                Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer
-                genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck
-                für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend
-                machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten
-                gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung
-                Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche
-                Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall
-                dieser Gründe.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser
-                  Website
-                </b> <br>
-                Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre
-                personenbezogenen Daten auf <br> <br>
-                Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern
-                besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle
-                einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in
-                Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. <br> <br>
-                49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den
-                Zugriff auf Informationen in Ihr Endgerät (z. B. via Device-Fingerprinting) eingewilligt
-                haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1
-                TDDDG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur <br> <br>
-                Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich,
-                verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des
-                Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen
-                Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. <br> <br>
-                Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses
-                nach Art. 6 Abs. 1 lit. f <br>
-                DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird
-                in den folgenden
-                Absätzen dieser Datenschutzerklärung informiert.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Empfänger von personenbezogenen Daten
-                </b> <br>
-                Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen
-                Stellen zusammen. Dabei ist teilweise auch eine Übermittlung von
-                personenbezogenen Daten an diese externen Stellen erforderlich.
-                Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies
-                im Rahmen einer
-                Vertragserfüllung erforderlich ist, wenn wir gesetzlich hierzu verpflichtet sind (z. B.
-                Weitergabe von Daten an Steuerbehörden), wenn wir ein berechtigtes Interesse nach
-                Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe haben oder wenn eine sonstige
-                Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von
-                Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf
-                Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer
-                gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung
-                geschlossen.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Widerruf Ihrer Einwilligung zur Datenverarbeitung
-                </b> <br>
-                Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung
-                möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die
-                Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom
-                Widerruf unberührt. <br> <br>
-                Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen <br> <br>
-                Direktwerbung (Art. 21 DSGVO) <br> <br>
-                WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E
-                ODER F DSGVO <br> <br>
-                ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS
-                IHRER BESONDEREN <br> <br>
-                SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER
-                PERSONENBEZOGENEN DATEN <br> <br>
-                WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE
-                BESTIMMUNGEN GESTÜTZTES <br> <br>
-                PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE
-                VERARBEITUNG BERUHT, <br> <br>
-                ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE
-                WIDERSPRUCH EINLEGEN, <br> <br>
-                WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT
-                MEHR VERARBEITEN, ES  <br> <br>
-                SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE
-                VERARBEITUNG  <br> <br>
+          <HeaderComponent></HeaderComponent>
 
-                NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN
-                ÜBERWIEGEN ODER DIE  <br> <br>
-                VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER
-                VERTEIDIGUNG VON  <br> <br>
-                RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).  <br> <br>
-                WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM
-                DIREKTWERBUNG ZU BETREIBEN,  <br> <br>
-                SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE
-                VERARBEITUNG SIE  <br> <br>
-                BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER
-                WERBUNG  <br> <br>
-                EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT
-                SOLCHER DIREKTWERBUNG IN  <br> <br>
-                VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE
-                PERSONENBEZOGENEN DATEN  <br> <br>
-                ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG
-                VERWENDET (WIDERSPRUCH
-                NACH ART. 21 ABS. 2 DSGVO).
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Beschwerderecht bei der zuständigen Aufsichtsbehörde
-                </b> <br>
-                Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
-                Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat
-                ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des
-                mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet
-                anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
-              </p>
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Recht auf Datenübertragbarkeit
-                </b> <br> <br>
-                Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in
-                Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in
-                einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die
-                direkte Übertragung der Daten an einen anderen Verantwortlichen <br>
-                verlangen, erfolgt dies nur, soweit es technisch machbar ist.
-                Auskunft, Berichtigung und Löschung
-                Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das
-                Recht auf unentgeltliche
-                Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und
-                Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf
-                Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum
-                Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
-                Recht auf Einschränkung der Verarbeitung
-                Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen
-                Daten zu verlangen.
-                Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der
-                Verarbeitung besteht in
-                folgenden Fällen: <br> <br>
-                Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten
-                bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der
-                Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer
-                personenbezogenen Daten zu verlangen. <br> <br>
-                Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig
-                geschah/geschieht, können Sie statt der Löschung die Einschränkung der
-                Datenverarbeitung verlangen.  <br> <br>
-                Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur
-                Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen,
-                haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer
-                personenbezogenen Daten zu verlangen.  <br> <br>
-                Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss
-                eine Abwägung zwischen  <br> <br>
-                Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht,
-                wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der
-                Verarbeitung Ihrer personenbezogenen Daten zu verlangen.  <br> <br>
-                Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben,
-                dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung
-                oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder
-                zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus
-                Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines
-                Mitgliedstaats verarbeitet werden.
-              </p>
+      <div style="overflow: scroll; height: 100%; padding-bottom: 210px">
+        <v-row class="justify-center">
+          <v-col cols="6">
+            <v-row class="mx-0" style="width: 100%">
+              <v-col class="d-flex" cols="12">
+                <h1 class="line">
+                  Datenschutz Praxis Andrea Bachem Tiergesundheit
+                </h1>
+              </v-col>
+              <v-col cols="12">
+                <p class="mt-5">
+                  Wir legen großen Wert auf den Schutz der Privatsphäre unserer Kunden sowie die
+                  Vertraulichkeit der von
+                  ihnen bereitgestellten Daten. Diese Datenschutzerklärung erläutert, wie wir personenbezogene
+                  Informationen
+                  erfassen, verwenden, offenlegen und schützen, insbesondere in Bezug auf die Zusammenarbeit mit anderen
+                  Therapeuten und Tierärzten. Bitte lesen Sie die folgenden Informationen sorgfältig durch.
+                </p>
+              </v-col>
 
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  SSL- bzw. TLS-Verschlüsselung
-                </b> <br> <br>
-                Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
-                vertraulicher Inhalte, wie zum
-                Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine
-                SSL- bzw. TLSVerschlüsselung. <br> <br>
+              <v-col cols="12">
+                <h1 class="line"> 1. Datenerfassung und -verwendung</h1>
+              </v-col>
 
-                Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des
-                Browsers von„http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer
-                Browserzeile. <br>
-                Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an
-                uns übermitteln, nicht von Dritten mitgelesen werden.
-              </p>
+              <v-col cols="12">
+                <p>
+                  In unserer Praxis erheben und verarbeiten wir personenbezogene Daten nur in dem Umfang,
+                  der zur
+                  Erbringung unserer Dienstleistungen notwendig ist. Dies umfasst Informationen über das Tier, den
+                  Besitzer
+                  und gegebenenfalls relevante medizinische Informationen. Diese Daten werden streng vertraulich behandelt
+                  und nur für den vorgesehenen Zweck verwendet.
+                </p>
+              </v-col>
 
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Widerspruch gegen Werbe-E-Mails
-                </b> <br> <br>
-                Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten
-                zur Übersendung von nicht ausdrücklich angeforderter Werbung und
-                Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten
-                behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung
-                von Werbeinformationen, etwa durch Spam-E-Mails, vor.
-              </p>
+              <v-col cols="12">
+                <h1 class="line text-left"> 2. Zusammenarbeit mit anderen Therapeuten und
+                  Tierärzten</h1>
+              </v-col>
 
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Datenerfassung auf dieser Website Cookies
-                </b> <br> <br>
-                Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine
-                Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden
-                entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder
-                dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies
-                werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies
-                bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine
-                automatische Löschung durch Ihren Webbrowser erfolgt.
-                Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen
-                (sog. Third-Party-
-                Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter
-                Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z. B. Cookies zur
-                Abwicklung von Zahlungsdienstleistungen).
-                Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch
-                notwendig, da bestimmte Webseitenfunktionen ohne diese nicht funktionieren
-                würden (z. B. die Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies
-                können zur Auswertung des Nutzerverhaltens oder zu Werbezwecken verwendet
-                werden.
-                Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur
-                Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z. B. für die
-                Warenkorbfunktion) oder zur Optimierung der Website (z. B. Cookies zur Messung
-                des Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage
-                von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage
-                angegeben wird.
-                Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von
-                notwendigen Cookies zur
-                technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern eine
-                Einwilligung zur Speicherung von Cookies und vergleichbaren
-                Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung
-                ausschließlich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25
-                Abs. 1
-                TDDDG); die Einwilligung ist jederzeit widerrufbar.
-                Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies
-                informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies
-                für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der
-                Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies
-                kann die Funktionalität dieser Website eingeschränkt sein.
-                Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie
-                dieser
-                Datenschutzerklärung entnehmen.
-              </p>
+              <v-col cols="12">
+                <p>
+                  Wir sind bestrebt, das Wohl des Tieres sicherzustellen. Daher kann es in einigen Fällen
+                  erforderlich
+                  sein, uns mit anderen Therapeuten und Tierärzten abzustimmen, um eine bestmögliche Behandlung zu
+                  gewährleisten. In solchen Fällen behalten wir uns das Recht vor, relevante Informationen über das Tier
+                  und
+                  seine medizinische Geschichte im Rahmen dieser Zusammenarbeit weiterzugeben. Es wird darauf geachtet,
+                  dass
+                  keine persönlichen Daten des Besitzers offengelegt werden, sofern dies nicht ausdrücklich gewünscht
+                  wird.
+                </p>
+              </v-col>
 
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Analyse-Tools und Werbung
-                </b> <br> <br>
-                WP Statistics <br> <br>
+              <v-col cols="12">
+                <h1 class="line text-left"> 3. Einwilligung und Information der Besitzer</h1>
+              </v-col>
 
-                Diese Website nutzt das Analysetool WP Statistics, um Besucherzugriffe statistisch
-                auszuwerten. Anbieter ist Veronalabs, Tatari 64, 10134, Tallinn, Estland (
-                https://veronalabs.com).
-                Mit WP Statistics können wir die Nutzung unserer Website analysieren. WP Statistics
-                erfasst dabei u. a. Logdateien (IP-Adresse, Referrer, verwendete Browser, Herkunft
-                des Nutzers, verwendete Suchmaschine) und Aktionen, die die Websitebesucher auf
-                der Seite getätigt haben (z. B. Klicks und Ansichten).
-                Die mit WP Statistics erfassten Daten werden ausschließlich auf unserem eigenen
-                Server gespeichert.
-                Die Nutzung dieses Analyse-Tools erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
-                DSGVO. Wir haben ein berechtigtes Interesse an der anonymisierten Analyse des
-                Nutzerverhaltens, um sowohl unser Webangebot als auch unsere Werbung zu
-                optimieren. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die
-                Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25
-                Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den
-                Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im
-                Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-                IP-Anonymisierung
-                Wir verwenden WP Statistics mit anonymisierter IP. Ihre IP-Adresse wird dabei
-                gekürzt, sodass diese Ihnen nicht mehr direkt zugeordnet werden kann.
-              </p>
+              <v-col cols="12">
+                <p>
+                  Wir respektieren die Privatsphäre unserer Kunden und geben keine persönlichen Daten
+                  ohne Zustimmung
+                  weiter. Falls wir die Zustimmung zur Weitergabe von Informationen benötigen, werden wir den Besitzer
+                  zuvor
+                  kontaktieren und die Zustimmung explizit einholen.
+                </p>
+              </v-col>
 
-              <br>
-            </div>
-            <div>
-              <p>
-                <b>
-                  Quelle:
-                </b> <br> <br>
-                https://www.e-recht24.de
-              </p>
+              <v-col cols="12">
+                <h1 class="line text-left"> 4. Datensicherheit</h1>
+              </v-col>
 
-              <br>
-            </div>
-          </div>
-        </v-col>
-      </v-row>
+              <v-col cols="12">
+                <p>
+                  Wir treffen angemessene technische und organisatorische Maßnahmen, um die Sicherheit
+                  personenbezogener
+                  Daten zu gewährleisten. Wir verwenden geeignete Sicherheitsvorkehrungen, um unberechtigten Zugriff,
+                  unbefugte Offenlegung, unbefugte Änderungen oder Zerstörung der gesel Daten zu verhindern.
+                </p>
+              </v-col>
+
+              <v-col cols="12">
+                <h1 class="line"> 5. Aufbewahrungsfrist</h1>
+              </v-col>
+
+              <v-col cols="12">
+                <p>
+                  Personenbezogene Daten werden nur so lange aufbewahrt, wie es für die Erbringung
+                  unserer Dienstleistungen
+                  und die Einhaltung rechtlicher Anforderungen erforderlich ist. Sobald die Daten nicht mehr benötigt
+                  werden, werden sie sicher gelöscht oder anonymisiert.
+                </p>
+              </v-col>
+
+              <v-col cols="12">
+                <h1 class="line text-left"> 6. Rechte der betroffenen Personen</h1>
+              </v-col>
+
+              <v-col cols="12">
+                <p>
+                  Unsere Kunden haben das Recht auf Auskunft, Berichtigung und Löschung ihrer
+                  personenbezogenen Daten.
+                  Falls Sie Fragen zu unseren Datenschutzpraktiken haben oder Ihre Rechte ausüben möchten, wenden Sie sich
+                  bitte an uns.
+                </p>
+              </v-col>
+
+              <v-col cols="12">
+                <h1 class="line text-left"> 7. Änderungen der Datenschutzerklärung</h1>
+              </v-col>
+
+              <v-col cols="12">
+                <p>
+                  Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern oder zu
+                  aktualisieren, um
+                  den aktuellen rechtlichen Anforderungen zu entsprechen oder um unsere Praktiken im Hinblick auf den
+                  Schutz
+                  personenbezogener Daten zu verbessern. Wir empfehlen unseren Kunden, regelmäßig unsere Website zu
+                  besuchen, um über etwaige Änderungen informiert zu bleiben.
+                </p>
+              </v-col>
+
+              <v-col cols="12">
+                <p class="text-left mt-15">Bitte beachten Sie, dass diese Datenschutzerklärung eine allgemeine
+                  Beschreibung
+                  unserer Praktiken
+                  darstellt. Für spezifische Informationen und Abstimmungen im Zusammenhang mit der Weitergabe von
+                  Informationen zwischen Therapeuten und Tierärzten kontaktieren Sie uns bitte direkt.
+                </p>
+              </v-col>
+
+              <v-col class="text-left" cols="12">
+                <p>Bei weiteren Fragen stehen wir Ihnen gerne zur Verfügung.</p>
+                <p>Tiergesundheit Andrea Bachem</p>
+                <p>Postadresse: </p>
+                <a href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,
+          13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
+                   target="_blank">
+                  <p>Peter-May-straße 47 </p>
+                  <p>50374 Köttingen</p>
+                </a>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </div>
+
     </div>
-  </div>
+
+
 </template>
-
-
 <script setup>
-import {ref} from 'vue';
-
-
 useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Datenschutz - Mila Escort Service Frankfurt',
+  title: 'Datenschutz | Andrea Bachem – Tiergesundheitszentrum Erftstadt',
   link: [
     {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap'
+    },
+    {
       rel: 'canonical',
-      href: `https://mila-escort.de/datenschutz`,
+      href: 'https://tier-gesundheitszentrum.com/datenschutz',
     },
   ],
   meta: [
     {
       name: 'description',
-      content: 'Erfahren Sie alles über den Datenschutz bei Mila Escort – wie wir Ihre persönlichen Daten schützen und verarbeiten.',
+      content: 'Datenschutzerklärung des Tier-Gesundheitszentrums Andrea Bachem in Erftstadt: Erfassung, Nutzung und Schutz personenbezogener Daten bei der tiertherapeutischen Behandlung.'
     },
     {
       name: 'keywords',
-      content: 'Datenschutz, Datenschutzrichtlinie, personenbezogene Daten, DSGVO, Mila Escort, Frankfurt, Escortagentur, Privatsphäre, Sicherheit',
+      content: 'Datenschutz, personenbezogene Daten, Andrea Bachem, Tiergesundheit, Erftstadt, Datenschutzerklärung, Tiertherapie, Datensicherheit'
+    },
+    {
+      name: 'author',
+      content: 'Andrea Bachem'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
+      property: 'og:title',
+      content: 'Datenschutz | Andrea Bachem – Tiergesundheitszentrum Erftstadt'
+    },
+    {
+      property: 'og:description',
+      content: 'Wie wir personenbezogene Daten in unserer tiertherapeutischen Praxis verarbeiten und schützen. Erfahren Sie mehr über Ihre Rechte und unsere Maßnahmen zum Datenschutz.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:url',
+      content: 'https://tier-gesundheitszentrum.com/datenschutz'
+    },
+    {
+      property: 'og:image',
+      content: 'https://tier-gesundheitszentrum.com/images/social-share.jpg'
     }
-
-
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Datenschutzerklärung – Tiergesundheitszentrum Andrea Bachem",
+        "url": "https://tier-gesundheitszentrum.com/datenschutz",
+        "description": "Datenschutzerklärung und Informationen zur Verarbeitung personenbezogener Daten bei der tiertherapeutischen Praxis Andrea Bachem in Erftstadt.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tiergesundheitszentrum Andrea Bachem",
+          "url": "https://tier-gesundheitszentrum.com",
+        }
+      })
+    }
+  ]
 });
-</script>
-<script>
 
-import {useScreenStore} from "~/stores/screen.js";
+
+</script>
+
+<script>
+import HeaderComponent from "@/components/HeaderComponent.vue";
+
 
 export default {
-  name: "Datenschutz",
-  computed: {
-    wiVde() {
-      const screenStore = useScreenStore();
-      return screenStore.wide;
-    },
-    desktop() {
-      const screenStore = useScreenStore();
-      return screenStore.desktop;
-    },
-    mobile() {
-      const screenStore = useScreenStore();
-      return screenStore.mobile;
-    },
-    tablet() {
-      const screenStore = useScreenStore();
-      return screenStore.tablet;
-    },
-    tabletHorizontal() {
-      const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
-    },
+  name: "datenschutz",
+
+  data: () => ({
+    loading: false,
+  }),
+
+  methods: {},
+  mounted() {
+
   },
-}
+  computed: {},
+  components: {
+    HeaderComponent,
+  },
+};
 </script>
 
 <style scoped>
+.background {
+  position: fixed;
+  background-image: url("@/assets/paper.webp");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
 p {
-  font-family: "Aptos", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.3;
-  font-size: 0.8rem;
+  color: #4b4a4a;
+}
+
+h1 {
+  color: #4b4a4a;
+}
+
+
+
+.line {
+  font-family: "Dancing Script", cursive;
+  margin-top: 10px;
 }
 </style>
