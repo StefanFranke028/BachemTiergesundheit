@@ -72,7 +72,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://www.deine-domain.de/ueber-mich'
+      href: 'https://www.deine-domain.de/ueberuns'
     }
   ]
 });

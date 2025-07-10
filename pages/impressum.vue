@@ -137,7 +137,7 @@ useHead({
     },
     {
       rel: 'canonical',
-      href: 'https://tier-gesundheitszentrum.com/produkte',
+      href: 'https://tier-gesundheitszentrum.com/imressum',
     },
   ],
   meta: [
