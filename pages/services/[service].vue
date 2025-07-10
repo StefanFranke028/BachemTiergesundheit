@@ -76,7 +76,7 @@ useHead(() => ({
   htmlAttrs: {
     lang: 'de',
   },
-  title: `${stadt.value?.ueberschrift} – Tiergesundheitszentrum Andrea Bachem`,
+  title: `${stadt.value?.ueberschrift}`,
   meta: [
     {
       name: 'description',

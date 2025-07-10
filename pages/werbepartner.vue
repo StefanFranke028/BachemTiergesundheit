@@ -130,7 +130,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Werbepartner | Andrea Bachem – Tiergesundheitszentrum Erftstadt',
+  title: 'Werbepartner Andrea Bachem Tiergesundheitszentrum Erftstadt',
   link: [
     {
       rel: 'apple-touch-icon',

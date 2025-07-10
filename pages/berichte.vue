@@ -214,7 +214,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Berichte aus der Praxis Andrea Bachem – Tiergesundheitszentrum Erftstadt',
+  title: 'Berichte aus der Praxis Tiergesundheitszentrum Erftstadt',
   meta: [
     {
       name: 'description',

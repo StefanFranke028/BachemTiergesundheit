@@ -137,7 +137,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Tierosteopathie für Hund & Pferd | Andrea Bachem – Tiergesundheitszentrum Erftstadt',
+  title: 'Tierosteopathie für Hund & Pferd  Tiergesundheits Erftstadt',
   link: [
     {
       rel: 'stylesheet',

@@ -181,7 +181,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Tierprodukte für Hund & Pferd | Andrea Bachem – Empfehlungen & Kaufberatung',
+  title: 'Tierprodukte für Hund & Pferd Empfehlungen & Kaufberatung',
   link: [
     {
       rel: 'apple-touch-icon',

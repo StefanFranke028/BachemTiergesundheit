@@ -54,7 +54,7 @@
 
 <script setup>
 useHead({
-  title: 'Andrea Bachem – Tierphysiotherapie, Osteopathie & Ernährungsberatung',
+  title: 'Andrea Bachem Chiropraktik Osteopathie & Ernährungsberatung',
   meta: [
     {
       name: 'description',

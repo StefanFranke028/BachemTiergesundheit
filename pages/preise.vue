@@ -238,7 +238,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Tierprodukte & Preise | Andrea Bachem – Tiergesundheitszentrum Erftstadt',
+  title: 'Berichte aus der Praxis Tiergesundheitszentrum Erftstadt',
   link: [
     {
       rel: 'canonical',
