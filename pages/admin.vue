@@ -46,6 +46,8 @@
               <KontaktaufnahmeComponent v-if="selectedSeite === 'Kontaktaufnahme'"></KontaktaufnahmeComponent>
               <BerichteComponent v-if="selectedSeite === 'Berichte'"></BerichteComponent>
               <ServiceComponent v-if="selectedSeite === 'Service'"></ServiceComponent>
+              <ProdukteComponent></ProdukteComponent>
+
               <!---COmponents--->
 
             </v-card>
@@ -77,11 +79,13 @@ import RechnungComponent from "~/components/verwaltung/RechnungComponent.vue";
 import KontaktaufnahmeComponent from "~/components/verwaltung/KontaktaufnahmenComponent.vue";
 import BerichteComponent from "~/components/verwaltung/BerichteComponent.vue";
 import ServiceComponent from "~/components/verwaltung/ServiceComponent.vue";
+import ProdukteComponent from "~/components/verwaltung/ProdukteComponent.vue";
 
 
 export default {
   name: "verwaltung",
   components: {
+    ProdukteComponent,
     ServiceComponent,
     BerichteComponent,
     KontaktaufnahmeComponent,

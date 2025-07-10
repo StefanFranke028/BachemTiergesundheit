@@ -55,7 +55,7 @@
             <v-img
                 :src="preis.bild"
                 cover
-                style="width: 300px; height: 300px"
+                style="width: 300px; height: 270px"
                 :alt="preis.ueberschrift"
                 itemprop="image"
             ></v-img>
@@ -66,7 +66,7 @@
 
             <v-divider class="mx-8 opacity-80"></v-divider>
 
-            <v-card-text class="text-center" itemprop="description">
+            <v-card-text class="text-center" style="height: 120px; overflow:hidden; overflow-y: scroll"  itemprop="description">
               {{ preis.text }}
             </v-card-text>
 
@@ -138,11 +138,11 @@
           <v-img
               :src="preis.bild"
               cover
-              style="width: 300px; height: 300px"
+              style="width: 300px; height: 270px"
           ></v-img>
           <v-card-title class="text-center">{{ preis.ueberschrift }}</v-card-title>
           <v-divider class="mx-8 opacity-80"></v-divider>
-          <v-card-text class="text-center">
+          <v-card-text class="text-center" style="height: 120px; overflow-y: scroll">
 
             {{ preis.text }}
 
