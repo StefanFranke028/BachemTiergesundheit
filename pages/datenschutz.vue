@@ -24,7 +24,7 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line"> 1. Datenerfassung und -verwendung</h1>
+                <h2 class="line"> 1. Datenerfassung und -verwendung</h2>
               </v-col>
 
               <v-col cols="12">
@@ -39,8 +39,8 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line text-left"> 2. Zusammenarbeit mit anderen Therapeuten und
-                  Tierärzten</h1>
+                <h2 class="line text-left"> 2. Zusammenarbeit mit anderen Therapeuten und
+                  Tierärzten</h2>
               </v-col>
 
               <v-col cols="12">
@@ -58,7 +58,7 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line text-left"> 3. Einwilligung und Information der Besitzer</h1>
+                <h2 class="line text-left"> 3. Einwilligung und Information der Besitzer</h2>
               </v-col>
 
               <v-col cols="12">
@@ -72,7 +72,7 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line text-left"> 4. Datensicherheit</h1>
+                <h2 class="line text-left"> 4. Datensicherheit</h2>
               </v-col>
 
               <v-col cols="12">
@@ -85,7 +85,7 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line"> 5. Aufbewahrungsfrist</h1>
+                <h2 class="line"> 5. Aufbewahrungsfrist</h2>
               </v-col>
 
               <v-col cols="12">
@@ -98,7 +98,7 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line text-left"> 6. Rechte der betroffenen Personen</h1>
+                <h2 class="line text-left"> 6. Rechte der betroffenen Personen</h2>
               </v-col>
 
               <v-col cols="12">
@@ -111,7 +111,7 @@
               </v-col>
 
               <v-col cols="12">
-                <h1 class="line text-left"> 7. Änderungen der Datenschutzerklärung</h1>
+                <h2 class="line text-left"> 7. Änderungen der Datenschutzerklärung</h2>
               </v-col>
 
               <v-col cols="12">

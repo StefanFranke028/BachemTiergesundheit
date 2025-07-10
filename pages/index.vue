@@ -11,10 +11,10 @@
             </h1>
           </v-col>
           <v-col cols="10">
-            <h1 style="color: #0082c2">
+            <h2 style="color: #0082c2">
               Ganzheitliche Therapie für die Gesundheit deines Tieres <br>
               Raus aus dem Schmerz!
-            </h1>
+            </h2>
           </v-col>
           <v-col cols="10">
             <p style="font-size: 15px; color: #dedddd">
@@ -41,7 +41,7 @@
                   <v-col>
                     <v-row class="justify-center">
                       <v-col class="d-flex justify-center" cols="10">
-                        <h1 class="line"> Termin Vereinbaren</h1>
+                        <h3 class="line"> Termin Vereinbaren</h3>
                       </v-col>
                       <v-col class="d-flex justify-center mt-n3" cols="10">
                         <v-text-field v-model="name" label="Name" variant="underlined"/>
@@ -201,7 +201,7 @@
         </NuxtLink>
         <span class="text-white mt-n1">|</span>
 
-        <NuxtLink to="/ueberUns" class="mx-2 footer-link text-white link" >
+        <NuxtLink to="/ueberuns" class="mx-2 footer-link text-white link" >
           Über Uns
         </NuxtLink>
       </nav>
@@ -301,6 +301,11 @@
         <NuxtLink to="/admin" class="mx-2 text-white link" style="font-size: 12px">Verwaltung</NuxtLink>
         <span class="text-white">|</span>
         <NuxtLink to="/datenschutz" class="mx-2 text-white link" style="font-size: 12px">Datenschutz</NuxtLink>
+        <span class="text-white mt-n1">|</span>
+
+        <NuxtLink to="/ueberuns" class="mx-2 text-white link" >
+          Über Uns
+        </NuxtLink>
         <a href="/Video" aria-label="YouTube" class="mx-2" style="color: red; font-size: 30px">
           <Icon icon="grommet-icons:youtube" />
         </a>
