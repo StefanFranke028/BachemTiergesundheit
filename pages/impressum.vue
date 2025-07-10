@@ -38,7 +38,7 @@
             </v-col>
 
             <v-col cols="12">
-              <h1 class="line">Website created by</h1>
+              <h2 class="line">Website created by</h2>
             </v-col>
 
             <v-col cols="12">
@@ -50,7 +50,7 @@
             </v-col>
 
             <v-col cols="12">
-              <h1 class="line">Streitschlichtung</h1>
+              <h2 class="line">Streitschlichtung</h2>
             </v-col>
 
             <v-col cols="12">
@@ -65,7 +65,7 @@
             </v-col>
 
             <v-col cols="12">
-              <h1 class="line">Haftung für Inhalte</h1>
+              <h2 class="line">Haftung für Inhalte</h2>
             </v-col>
 
             <v-col cols="12">
@@ -82,7 +82,7 @@
             </v-col>
 
             <v-col cols="12">
-              <h1 class="line">Haftung für Links</h1>
+              <h2 class="line">Haftung für Links</h2>
             </v-col>
 
 
@@ -100,7 +100,7 @@
             </v-col>
 
             <v-col cols="12">
-              <h1 class="line">Urheberrecht</h1>
+              <h2 class="line">Urheberrecht</h2>
             </v-col>
 
             <v-col cols="12">
