@@ -323,18 +323,23 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Tiergesundheitszentrum Andrea Bachem – Chiropraktik, Osteopathie & mehr',
+  title: 'Tiergesundheit Andrea Bachem Chiropraktik & Osteopathie',
   link: [
     {
       rel: 'canonical',
       href: 'https://tier-gesundheitszentrum.com',
     },
+    {
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180'
+    }
   ],
   meta: [
     {
       name: 'description',
       content:
-          'Ganzheitliche Tiertherapie im Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie, Physiotherapie und individuelle Ernährungsberatung für dein Tier.',
+          'Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie & Ernährungsberatung ganzheitliche Therapie für dein Tier.',
     },
     {
       name: 'keywords',
