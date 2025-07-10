@@ -46,7 +46,7 @@
               <KontaktaufnahmeComponent v-if="selectedSeite === 'Kontaktaufnahme'"></KontaktaufnahmeComponent>
               <BerichteComponent v-if="selectedSeite === 'Berichte'"></BerichteComponent>
               <ServiceComponent v-if="selectedSeite === 'Service'"></ServiceComponent>
-              <ProdukteComponent></ProdukteComponent>
+              <ProdukteComponent v-if="selectedSeite === 'Produkte'"></ProdukteComponent>
 
               <!---COmponents--->
 

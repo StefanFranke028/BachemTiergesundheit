@@ -20,7 +20,7 @@
             <v-col cols="12">
               <v-card
                   class="mx-auto my-12 pa-5"
-                  height="500"
+                  height="700"
                   style="background-color: rgba(255,255,255,0.75)">
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="10">
