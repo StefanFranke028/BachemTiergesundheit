@@ -73,7 +73,7 @@
             <v-row style="width: 100%;" class="ma-0 mt-n5">
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn class="mt-3" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                  <a :href="preis.link" itemprop="url" style="text-decoration: none" target="_blank">
+                  <a :href="preis.link" itemprop="url" style="text-decoration: none" rel="noopener" target="_blank">
                     Zum Produkt &gt;
                   </a>
                 </v-btn>
@@ -152,7 +152,7 @@
             <v-col cols="12" class="d-flex justify-center">
               <v-btn  class="mt-3 " style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
 
-                <a :href="preis.link" style="text-decoration: none" target="_blank">
+                <a :href="preis.link" rel="noopener" style="text-decoration: none" target="_blank">
                   Zum Produkt >
                 </a>
               </v-btn>

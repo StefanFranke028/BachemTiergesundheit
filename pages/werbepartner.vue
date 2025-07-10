@@ -215,7 +215,7 @@ export default {
           url: 'https://gesundesfutterandreabachem.de/',
           description: 'Gesundes Futter | Andrea Bachem',
           image: 'https://gesundesfutterandreabachem.de/.cm4all/mediadb/.Andrea%20Bachem%20%288%29.png/picture-200',
-          rel: 'notfollow',
+          rel: 'notfollow noopener noreferrer',
           target: '_blank'
         }
       ]

@@ -142,7 +142,7 @@
 
                   </v-col>
                   <v-col class="d-flex justify-center" cols="12">
-                    <a href="mailto:andreabachem83@gmail.com" style="text-decoration: none" target="_blank">
+                    <a href="mailto:andreabachem83@gmail.com" style="text-decoration: none" rel="noopener" target="_blank">
                       <h3 class="mt-n4" style="color: #fcfbfb">
                         andreabachem83@gmail.com
                       </h3>
@@ -165,7 +165,7 @@
                     </h2>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="12">
-                    <a href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
+                    <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
                        target="_blank">
                       <p class="text-center mt-n4" style="font-size: 14px; color: #fcfafa">
                         <b>
@@ -292,7 +292,7 @@
               <a href="mailto:andreabachem83@gmail.com">
                 <Icon icon="ic:outline-mail" style="font-size: 24px; color: white; cursor: pointer"/>
               </a>
-              <a href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280338,6.7222716,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046719!2d50.8280628!3e0?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+              <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280338,6.7222716,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046719!2d50.8280628!3e0?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
                 <Icon icon="ic:outline-place" style="font-size: 24px; color: white; cursor: pointer"/>
               </a>
             </v-row>
