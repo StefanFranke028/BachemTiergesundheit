@@ -72,94 +72,100 @@ onMounted(() => {
 if (!city.startsWith('service')) {
   navigateTo('/');
 }
-useHead(() => ({
-  htmlAttrs: {
-    lang: 'de',
-  },
-  title: `${stadt.value?.ueberschrift}`,
-  meta: [
-    {
-      name: 'description',
-      content: stadt.value?.miniUnterUeberschrift || 'Entdecken Sie unsere ganzheitlichen Behandlungen für Tiere in Ihrer Nähe.',
+useHead(() => {
+  const baseTitle = stadt.value?.ueberschrift || '';
+  const fullTitle = baseTitle.length < 30 ? `${baseTitle} – Tiergesundheitszentrum` : baseTitle;
+
+  return {
+    htmlAttrs: {
+      lang: 'de',
     },
-    {
-      name: 'keywords',
-      content: `Tiergesundheit, ${stadtparam}, ${stadt.value?.ueberschrift}, Tierosteopathie, Chiropraktik, Naturheilkunde, Andrea Bachem, Tierheilpraxis, Service`,
-    },
-    {
-      name: 'robots',
-      content: 'index, follow',
-    },
-    // Open Graph
-    {
-      property: 'og:title',
-      content: `${stadt.value?.ueberschrift} – Tiergesundheitszentrum`,
-    },
-    {
-      property: 'og:description',
-      content: stadt.value?.miniUnterUeberschrift || '',
-    },
-    {
-      property: 'og:image',
-      content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
-    },
-    {
-      property: 'og:url',
-      content: `https://tier-gesundheitszentrum.com/services/${route.params.service}`,
-    },
-    {
-      property: 'og:type',
-      content: 'website',
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image',
-    },
-    {
-      name: 'twitter:title',
-      content: `${stadt.value?.ueberschrift} – Tiergesundheitszentrum`,
-    },
-    {
-      name: 'twitter:description',
-      content: stadt.value?.miniUnterUeberschrift || '',
-    },
-    {
-      name: 'twitter:image',
-      content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
-    },
-  ],
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://tier-gesundheitszentrum.com/services/${route.params.service}`,
-    },
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": stadt.value?.ueberschrift,
-        "description": stadt.value?.miniUnterUeberschrift,
-        "provider": {
-          "@type": "Organization",
-          "name": "Tiergesundheitszentrum Andrea Bachem",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://tier-gesundheitszentrum.com/logo.png"
-          }
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Deutschland"
-        },
-        "image": stadt.value?.image,
-        "url": `https://tier-gesundheitszentrum.com/services/${route.params.service}`
-      }),
-    }
-  ]
-}));
+    title: fullTitle,
+    meta: [
+      {
+        name: 'description',
+        content: stadt.value?.miniUnterUeberschrift || 'Entdecken Sie unsere ganzheitlichen Behandlungen für Tiere in Ihrer Nähe.',
+      },
+      {
+        name: 'keywords',
+        content: `Tiergesundheit, ${stadtparam}, ${baseTitle}, Tierosteopathie, Chiropraktik, Naturheilkunde, Andrea Bachem, Tierheilpraxis, Service`,
+      },
+      {
+        name: 'robots',
+        content: 'index, follow',
+      },
+      // Open Graph
+      {
+        property: 'og:title',
+        content: fullTitle,
+      },
+      {
+        property: 'og:description',
+        content: stadt.value?.miniUnterUeberschrift || '',
+      },
+      {
+        property: 'og:image',
+        content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
+      },
+      {
+        property: 'og:url',
+        content: `https://tier-gesundheitszentrum.com/services/${route.params.service}`,
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:title',
+        content: fullTitle,
+      },
+      {
+        name: 'twitter:description',
+        content: stadt.value?.miniUnterUeberschrift || '',
+      },
+      {
+        name: 'twitter:image',
+        content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: `https://tier-gesundheitszentrum.com/services/${route.params.service}`,
+      },
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": fullTitle,
+          "description": stadt.value?.miniUnterUeberschrift,
+          "provider": {
+            "@type": "Organization",
+            "name": "Tiergesundheitszentrum Andrea Bachem",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://tier-gesundheitszentrum.com/logo.png"
+            }
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Deutschland"
+          },
+          "image": stadt.value?.image,
+          "url": `https://tier-gesundheitszentrum.com/services/${route.params.service}`
+        }),
+      }
+    ]
+  };
+});
+
 
 
 
