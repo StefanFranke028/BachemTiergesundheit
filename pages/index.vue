@@ -23,36 +23,36 @@
               </h3>
               <h2  class="mt-5" style="color: #0082c2">Ganzheitliche Tiertherapie mit Herz und Kompetenz</h2>
               <p style="font-size: 17px; color: #dedddd">
-                Im <strong>Tiergesundheitszentrum Andrea Bachem</strong> steht die ganzheitliche Gesundheit deines Tieres im Mittelpunkt.
-                Unsere Praxis in <strong>Erftstadt</strong> bietet individuelle Therapieansätze für Hunde und Pferde, die auf den
-                neuesten Erkenntnissen der <strong>Tierchiropraktik</strong>, <strong>Tierosteopathie</strong> und <strong>Tierphysiotherapie</strong> basieren.
+                Im Tiergesundheitszentrum Andrea Bachem steht die ganzheitliche Gesundheit deines Tieres im Mittelpunkt.
+                Unsere Praxis in Erftstadt bietet individuelle Therapieansätze für Hunde und Pferde, die auf den
+                neuesten Erkenntnissen der Tierchiropraktik, Tierosteopathie undTierphysiotherapie basieren.
                 <br><br>
-                Als zertifizierte Therapeutin für den Bewegungsapparat behandle ich gezielt Beschwerden wie <strong>Arthrose</strong>,
-                <strong>Spondylose</strong>, <strong>Bandscheibenvorfälle</strong>, <strong>Lahmheiten</strong>, sowie <strong>Bewegungseinschränkungen</strong>
-                und <strong>Haltungsprobleme</strong>. Dabei lege ich großen Wert auf eine fundierte Anamnese und eine individuell abgestimmte Behandlung.
+                Als zertifizierte Therapeutin für den Bewegungsapparat behandle ich gezielt Beschwerden wie Arthrose,
+                Spondylose, Bandscheibenvorfälle, Lahmheiten, sowie Bewegungseinschränkungen
+                und Haltungsprobleme. Dabei lege ich großen Wert auf eine fundierte Anamnese und eine individuell abgestimmte Behandlung.
               </p>
 
               <h3 class="text-white mt-3">Individuelle Behandlung statt Schema F</h3>
               <p style="font-size: 17px; color: #dedddd">
-                Jeder Hund und jedes Pferd bringt seine eigene Geschichte mit. Deshalb wird jede <strong>Chiropraktik-Sitzung</strong>,
-                jede <strong>osteopathische Behandlung</strong> und jede <strong>physiotherapeutische Maßnahme</strong> individuell geplant und durchgeführt.
+                Jeder Hund und jedes Pferd bringt seine eigene Geschichte mit. Deshalb wird jede Chiropraktik-Sitzung,
+                jede osteopathische Behandlung und jede physiotherapeutische Maßnahme individuell geplant und durchgeführt.
                 Unsere manuelle Therapie verfolgt das Ziel, Blockaden zu lösen, die Beweglichkeit zu verbessern und Schmerzen nachhaltig zu lindern.
               </p>
               <h3 class="text-white mt-3">Ernährungsberatung – der unterschätzte Heilungsweg</h3>
               <p style="font-size: 17px; color: #dedddd">
-                Auch die <strong>Ernährung deines Tieres</strong> spielt eine zentrale Rolle für dessen Gesundheit.
-                Im Rahmen unserer <strong>Ernährungsberatung</strong> analysieren wir bestehende Futterrationen und zeigen dir,
+                Auch die Ernährung deines Tieres spielt eine zentrale Rolle für dessen Gesundheit.
+                Im Rahmen unserer Ernährungsberatung analysieren wir bestehende Futterrationen und zeigen dir,
                 wie du die Ernährung deines Vierbeiners gezielt optimieren kannst – egal ob bei chronischen Entzündungen, Hautproblemen oder Gewichtsmanagement.
               </p>
               <h3 class="text-white mt-3">Vertrauen, Empathie und Fachwissen</h3>
               <p style="font-size: 17px; color: #dedddd">
                 Als erfahrene Therapeutin liegt mir nicht nur das körperliche, sondern auch das seelische Wohl deines Tieres am Herzen.
                 Ich arbeite mit viel Einfühlungsvermögen und Geduld, um deinem Tier eine angenehme Behandlung zu ermöglichen – in einer
-                ruhigen und vertrauensvollen Atmosphäre. <strong>Tiergesundheit beginnt mit Vertrauen.</strong>
+                ruhigen und vertrauensvollen Atmosphäre. Tiergesundheit beginnt mit Vertrauen.
               </p>
               <h3 class="text-white mt-3">Jetzt Termin im Tiergesundheitszentrum vereinbaren</h3>
               <p style="font-size: 17px; color: #dedddd">
-                Du möchtest einen Termin in unserem <strong>Tiergesundheitszentrum in Erftstadt</strong> vereinbaren?
+                Du möchtest einen Termin in unserem Tiergesundheitszentrum in Erftstadt vereinbaren?
                 Dann nutze jetzt unser Kontaktformular oder rufe direkt an. Gemeinsam finden wir den passenden Therapieansatz
                 für deinen vierbeinigen Begleiter.
                 <br><br>
@@ -199,36 +199,36 @@
           </h3>
           <h2  class="mt-5" style="color: #0082c2">Ganzheitliche Tiertherapie mit Herz und Kompetenz</h2>
           <p style="font-size: 17px; color: #dedddd">
-            Im <strong>Tiergesundheitszentrum Andrea Bachem</strong> steht die ganzheitliche Gesundheit deines Tieres im Mittelpunkt.
-            Unsere Praxis in <strong>Erftstadt</strong> bietet individuelle Therapieansätze für Hunde und Pferde, die auf den
-            neuesten Erkenntnissen der <strong>Tierchiropraktik</strong>, <strong>Tierosteopathie</strong> und <strong>Tierphysiotherapie</strong> basieren.
+            Im Tiergesundheitszentrum Andrea Bachem steht die ganzheitliche Gesundheit deines Tieres im Mittelpunkt.
+            Unsere Praxis in Erftstadt bietet individuelle Therapieansätze für Hunde und Pferde, die auf den
+            neuesten Erkenntnissen der Tierchiropraktik, Tierosteopathie und Tierphysiotherapie basieren.
             <br><br>
-            Als zertifizierte Therapeutin für den Bewegungsapparat behandle ich gezielt Beschwerden wie <strong>Arthrose</strong>,
-            <strong>Spondylose</strong>, <strong>Bandscheibenvorfälle</strong>, <strong>Lahmheiten</strong>, sowie <strong>Bewegungseinschränkungen</strong>
-            und <strong>Haltungsprobleme</strong>. Dabei lege ich großen Wert auf eine fundierte Anamnese und eine individuell abgestimmte Behandlung.
+            Als zertifizierte Therapeutin für den Bewegungsapparat behandle ich gezielt Beschwerden wie Arthrose,
+            Spondylose, Bandscheibenvorfälle, Lahmheiten, sowie Bewegungseinschränkungen
+            und Haltungsprobleme. Dabei lege ich großen Wert auf eine fundierte Anamnese und eine individuell abgestimmte Behandlung.
           </p>
 
           <h3 class="text-white mt-3">Individuelle Behandlung statt Schema F</h3>
           <p style="font-size: 17px; color: #dedddd">
-            Jeder Hund und jedes Pferd bringt seine eigene Geschichte mit. Deshalb wird jede <strong>Chiropraktik-Sitzung</strong>,
-            jede <strong>osteopathische Behandlung</strong> und jede <strong>physiotherapeutische Maßnahme</strong> individuell geplant und durchgeführt.
+            Jeder Hund und jedes Pferd bringt seine eigene Geschichte mit. Deshalb wird jede Chiropraktik-Sitzung,
+            jede osteopathische Behandlung und jede physiotherapeutische Maßnahme individuell geplant und durchgeführt.
             Unsere manuelle Therapie verfolgt das Ziel, Blockaden zu lösen, die Beweglichkeit zu verbessern und Schmerzen nachhaltig zu lindern.
           </p>
           <h3 class="text-white mt-3">Ernährungsberatung – der unterschätzte Heilungsweg</h3>
           <p style="font-size: 17px; color: #dedddd">
-            Auch die <strong>Ernährung deines Tieres</strong> spielt eine zentrale Rolle für dessen Gesundheit.
-            Im Rahmen unserer <strong>Ernährungsberatung</strong> analysieren wir bestehende Futterrationen und zeigen dir,
+            Auch die Ernährung deines Tieres spielt eine zentrale Rolle für dessen Gesundheit.
+            Im Rahmen unserer Ernährungsberatung analysieren wir bestehende Futterrationen und zeigen dir,
             wie du die Ernährung deines Vierbeiners gezielt optimieren kannst – egal ob bei chronischen Entzündungen, Hautproblemen oder Gewichtsmanagement.
           </p>
           <h3 class="text-white mt-3">Vertrauen, Empathie und Fachwissen</h3>
           <p style="font-size: 17px; color: #dedddd">
             Als erfahrene Therapeutin liegt mir nicht nur das körperliche, sondern auch das seelische Wohl deines Tieres am Herzen.
             Ich arbeite mit viel Einfühlungsvermögen und Geduld, um deinem Tier eine angenehme Behandlung zu ermöglichen – in einer
-            ruhigen und vertrauensvollen Atmosphäre. <strong>Tiergesundheit beginnt mit Vertrauen.</strong>
+            ruhigen und vertrauensvollen Atmosphäre. Tiergesundheit beginnt mit Vertrauen.
           </p>
           <h3 class="text-white mt-3">Jetzt Termin im Tiergesundheitszentrum vereinbaren</h3>
           <p style="font-size: 17px; color: #dedddd">
-            Du möchtest einen Termin in unserem <strong>Tiergesundheitszentrum in Erftstadt</strong> vereinbaren?
+            Du möchtest einen Termin in unserem Tiergesundheitszentrum in Erftstadt vereinbaren?
             Dann nutze jetzt unser Kontaktformular oder rufe direkt an. Gemeinsam finden wir den passenden Therapieansatz
             für deinen vierbeinigen Begleiter.
             <br><br>
@@ -253,7 +253,7 @@
         <p class="text-center mt-2" style="font-size: 14px">
           Zögern Sie nicht, unser Kontaktformular zu nutzen, um mit unserem Tiergesundheitszentrum in Verbindung zu treten.
           <br><br>
-          <strong>Bitte beachten:</strong> Termine müssen mindestens 36 Stunden im Voraus abgesagt werden. Andernfalls behalten wir uns vor, den Termin in Rechnung zu stellen.
+          Bitte beachten: Termine müssen mindestens 36 Stunden im Voraus abgesagt werden. Andernfalls behalten wir uns vor, den Termin in Rechnung zu stellen.
         </p>
         <v-text-field v-model="name" label="Name" variant="underlined"/>
         <v-text-field v-model="email" label="Email" variant="underlined"/>
