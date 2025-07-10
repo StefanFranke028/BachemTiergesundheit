@@ -113,6 +113,16 @@ useHead(() => ({
       rel: 'canonical',
       href: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
     },
+    {
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180'
+    },
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    },
   ],
   script: [
     {

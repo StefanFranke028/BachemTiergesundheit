@@ -166,6 +166,16 @@ useHead({
       href: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap'
     },
     {
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180'
+    },
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    },
+    {
       rel: 'canonical',
       href: 'https://tier-gesundheitszentrum.com/datenschutz',
     },

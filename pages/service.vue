@@ -238,6 +238,16 @@ useHead({
   ],
   link: [
     {
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
+      sizes: '180x180'
+    },
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    },
+    {
       rel: 'canonical',
       href: 'https://tier-gesundheitszentrum.com/service'
     }
