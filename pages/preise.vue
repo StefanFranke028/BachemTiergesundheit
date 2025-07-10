@@ -93,12 +93,15 @@
 
             <v-divider class="mx-8 opacity-80"></v-divider>
 
-            <v-card-text class="text-center" itemprop="description">
+            <v-card-text class="text-center" style="height: 150px ;overflow-y: scroll"  itemprop="description">
               {{ preis.text }} <br>
               {{ preis.preis }}
             </v-card-text>
 
-            <v-row style="width: 100%;" class="ma-0 mt-n5">
+
+
+
+            <v-row style="width: 100%;" class="ma-0 mt-5">
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn class="mt-3" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
                   <NuxtLink to="/">
@@ -199,13 +202,13 @@
           ></v-img>
           <v-card-title class="text-center">{{ preis.ueberschrift }}</v-card-title>
           <v-divider class="mx-8 opacity-80"></v-divider>
-          <v-card-text class="text-center">
+          <v-card-text class="text-center" style="overflow-y: scroll;height: 130px">
 
             {{ preis.text }}
 
 
           </v-card-text>
-          <v-row style="width: 100% ;" class="ma-0 mt-n4">
+          <v-row style="width: 100% ;" class="ma-0 mt-5">
             <v-col cols="12" class="d-flex justify-center">
               <v-btn  class="mt-3 " style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
 

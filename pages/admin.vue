@@ -47,6 +47,7 @@
               <BerichteComponent v-if="selectedSeite === 'Berichte'"></BerichteComponent>
               <ServiceComponent v-if="selectedSeite === 'Service'"></ServiceComponent>
               <ProdukteComponent v-if="selectedSeite === 'Produkte'"></ProdukteComponent>
+              <PreiseComponent  v-if="selectedSeite === 'Preise'"></PreiseComponent>
 
               <!---COmponents--->
 
@@ -80,11 +81,13 @@ import KontaktaufnahmeComponent from "~/components/verwaltung/KontaktaufnahmenCo
 import BerichteComponent from "~/components/verwaltung/BerichteComponent.vue";
 import ServiceComponent from "~/components/verwaltung/ServiceComponent.vue";
 import ProdukteComponent from "~/components/verwaltung/ProdukteComponent.vue";
+import PreiseComponent from "~/components/verwaltung/PreiseComponent.vue";
 
 
 export default {
   name: "verwaltung",
   components: {
+    PreiseComponent,
     ProdukteComponent,
     ServiceComponent,
     BerichteComponent,
