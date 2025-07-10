@@ -73,85 +73,94 @@ onMounted(() => {
 if (!city.startsWith('tiergesundheit')) {
   navigateTo('/');
 }
-useHead(() => ({
-  htmlAttrs: {
-    lang: 'de',
-  },
-  title: `${stadt.value?.überschrift}`,
-  meta: [
-    {
-      name: 'description',
-      content: stadt.value?.miniUnterUeberschrift || 'Erfahren Sie mehr über ganzheitliche Tiergesundheit in Ihrer Stadt.',
+useHead(() => {
+  const baseTitle = stadt.value?.überschrift || '';
+  const fullTitle =
+      baseTitle.length < 30
+          ? `${baseTitle} – Tiergesundheitszentrum`
+          : baseTitle;
+
+  return {
+    htmlAttrs: {
+      lang: 'de',
     },
-    {
-      name: 'keywords',
-      content: `Tiergesundheit, Bericht, ${stadtparam}, Andrea Bachem, Tierosteopathie, Chiropraktik, Naturheilkunde`,
-    },
-    {
-      property: 'og:title',
-      content: `${stadt.value?.überschrift} – Tiergesundheitszentrum`,
-    },
-    {
-      property: 'og:description',
-      content: stadt.value?.miniUnterUeberschrift || '',
-    },
-    {
-      property: 'og:image',
-      content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
-    },
-    {
-      property: 'og:url',
-      content: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
-    },
-    {
-      property: 'og:type',
-      content: 'article',
-    }
-  ],
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
-    },
-    {
-      rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
-      sizes: '180x180'
-    },
-    {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    },
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": stadt.value?.überschrift,
-        "description": stadt.value?.miniUnterUeberschrift,
-        "author": {
-          "@type": "Person",
-          "name": "Andrea Bachem"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Tiergesundheitszentrum Andrea Bachem",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://tier-gesundheitszentrum.com/logo.png"
+    title: fullTitle,
+    meta: [
+      {
+        name: 'description',
+        content: stadt.value?.miniUnterUeberschrift || 'Erfahren Sie mehr über ganzheitliche Tiergesundheit in Ihrer Stadt.',
+      },
+      {
+        name: 'keywords',
+        content: `Tiergesundheit, Bericht, ${stadtparam}, Andrea Bachem, Tierosteopathie, Chiropraktik, Naturheilkunde`,
+      },
+      {
+        property: 'og:title',
+        content: `${fullTitle}`,
+      },
+      {
+        property: 'og:description',
+        content: stadt.value?.miniUnterUeberschrift || '',
+      },
+      {
+        property: 'og:image',
+        content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
+      },
+      {
+        property: 'og:url',
+        content: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
+      },
+      {
+        property: 'og:type',
+        content: 'article',
+      }
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: `https://tier-gesundheitszentrum.com/${route.params.stadt}`,
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+        sizes: '180x180'
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": fullTitle,
+          "description": stadt.value?.miniUnterUeberschrift,
+          "author": {
+            "@type": "Person",
+            "name": "Andrea Bachem"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Tiergesundheitszentrum Andrea Bachem",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://tier-gesundheitszentrum.com/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://tier-gesundheitszentrum.com/${route.params.stadt}`
           }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": `https://tier-gesundheitszentrum.com/${route.params.stadt}`
-        }
-      })
-    }
-  ]
-}));
+        })
+      }
+    ]
+  };
+});
+
 
 
 </script>
