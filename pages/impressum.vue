@@ -128,7 +128,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Impressum | Andrea Bachem – Tiergesundheitszentrum Erftstadt',
+  title: 'Impressum | Andrea Bachem – Tiergesundheitszentrum',
   link: [
     {
       rel: 'stylesheet',

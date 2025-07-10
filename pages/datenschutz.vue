@@ -159,7 +159,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Datenschutz Andrea Bachem Tiergesundheitszentrum Erftstadt',
+  title: 'Datenschutz Andrea Bachem Tiergesundheitszentrum',
   link: [
     {
       rel: 'stylesheet',
