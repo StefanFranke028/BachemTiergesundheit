@@ -28,7 +28,7 @@
           <v-col  class="d-flex align-center" cols="3">
             <h5  class="link text-white text-center"
             >
-              <a style="font-size: 16px" class="link" aria-label="Ernährung" target="_blank"  href="https://gesundesfutterandreabachem.de/">
+              <a style="font-size: 16px" class="link" aria-label="Ernährung" rel="noopener noreferrer" target="_blank"  href="https://gesundesfutterandreabachem.de/">
                 Ernährung
               </a>
             </h5>

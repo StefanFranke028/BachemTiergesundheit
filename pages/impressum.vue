@@ -137,7 +137,7 @@ useHead({
     },
     {
       rel: 'canonical',
-      href: 'https://tier-gesundheitszentrum.com/imressum',
+      href: 'https://tier-gesundheitszentrum.com/impressum',
     },
   ],
   meta: [

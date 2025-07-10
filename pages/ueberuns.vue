@@ -72,7 +72,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://www.deine-domain.de/ueberuns'
+      href: 'https://tier-gesundheitszentrum.com/ueberuns'
     }
   ]
 });
