@@ -15,7 +15,7 @@
               Ganzheitliche Therapie für die Gesundheit deines Tieres
 
             </h2>
-            <h3>
+            <h3 class="text-center">
               Raus aus dem Schmerz!
             </h3>
           </v-col>
@@ -233,7 +233,7 @@
           Ganzheitliche Therapie für die Gesundheit deines Tieres
 
         </h2>
-        <h3>
+        <h3 class="text-center">
           Raus aus dem Schmerz
         </h3>
       </v-col>
