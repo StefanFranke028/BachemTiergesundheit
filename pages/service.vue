@@ -52,7 +52,7 @@
         <article itemscope itemtype="https://schema.org/Product">
           <v-card
               class="mx-auto my-12"
-              height="450"
+              height="480"
               style="background-color: rgb(255,255,255); backdrop-filter: blur(4px); box-shadow: 1px 1px 5px black"
               width="300"
           >
@@ -61,22 +61,22 @@
                 loading="lazy"
                 :src="preis.image"
                 cover
-                style="width: 300px; height: 300px"
+                style="width: 300px; height: 270px"
                 :alt="preis.ueberschrift"
                 itemprop="image"
             ></v-img>
+<v-card-text>
 
-            <v-card-title class="text-center" itemprop="name">
-              <p class="text-black"  style="font-size: 16px">
+              <p itemprop="name" class="text-black text-center"  style="font-size: 16px">
                 {{ preis.ueberschrift }}
 
               </p>
 
-            </v-card-title>
-            <p class="text-black mt-n3 text-center" style="font-size: 14px">
+            <p class="text-black mt-3 text-center" style="font-size: 14px">
               {{ preis.unterUeberschrift }}
 
             </p>
+</v-card-text>
             <v-divider class="mx-8 opacity-80"></v-divider>
 
 
@@ -156,18 +156,18 @@
               :alt="preis.ueberschrift"
               itemprop="image"
           ></v-img>
+<v-card-text>
 
-          <v-card-title class="text-center" itemprop="name ">
-            <p class="text-black"  style="font-size: 16px">
+            <p  itemprop="name" class="text-black text-center mt-5"  style="font-size: 16px">
               {{ preis.ueberschrift }}
 
             </p>
 
-          </v-card-title>
-          <p class="text-black mt-n3 text-center" style="font-size: 14px">
+          <p class="text-black mt-7 text-center" style="font-size: 14px">
             {{ preis.unterUeberschrift }}
 
           </p>
+</v-card-text>
           <v-divider class="mx-8 opacity-80"></v-divider>
 
 

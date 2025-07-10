@@ -33,9 +33,7 @@
           <v-col cols="11" md="4" class="d-flex align-center py-8">
             <v-card class="background-impressum" style="height: 60vh; width: 100%;">
               <v-img :alt="stadt.unterUeberschrift" style="height: 600px" cover  :src="stadt.image">
-
               </v-img>
-
             </v-card>
           </v-col>
         </v-row>
