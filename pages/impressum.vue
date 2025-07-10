@@ -43,9 +43,7 @@
 
             <v-col cols="12">
               <p>
-                <a href="https://www.franke-arts.de" target="_blank">Stefan Franke</a>
-                <br>
-                <a href="https://www.leandro-graf.de" target="_blank">Leandro Graf</a>
+                <a href="https://fastglobeit.de" rel="noopener" target="_blank">FastglobeIt</a>
               </p>
             </v-col>
 
