@@ -12,9 +12,12 @@
           </v-col>
           <v-col cols="10">
             <h2 style="color: #0082c2">
-              Ganzheitliche Therapie für die Gesundheit deines Tieres <br>
-              Raus aus dem Schmerz!
+              Ganzheitliche Therapie für die Gesundheit deines Tieres
+
             </h2>
+            <h3>
+              Raus aus dem Schmerz!
+            </h3>
           </v-col>
           <v-col cols="10">
             <p style="font-size: 15px; color: #dedddd">
@@ -227,9 +230,12 @@
       </v-col>
       <v-col cols="11">
         <h2 class="text-center" style="color: #0082c2; font-size: 18px">
-          Ganzheitliche Therapie für die Gesundheit deines Tieres <br>
-          Raus aus dem Schmerz
+          Ganzheitliche Therapie für die Gesundheit deines Tieres
+
         </h2>
+        <h3>
+          Raus aus dem Schmerz
+        </h3>
       </v-col>
       <v-col cols="11">
         <p class="text-white text-center" style="font-size: 14px">
