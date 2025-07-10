@@ -93,7 +93,6 @@ export default {
     BerichteComponent,
     KontaktaufnahmeComponent,
     RechnungComponent,
-
     LoginComponent,
   },
   data() {

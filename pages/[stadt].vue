@@ -1,5 +1,5 @@
 <template>
-<div class="background" >
+<div class="background" style="overflow-y: scroll; height: 100vh" >
   <HeaderComponent v-if="desktop || tabletHorizontal"></HeaderComponent>
   <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
   <article>
@@ -11,11 +11,11 @@
     </section>
 
     <!-- Stadtbeschreibung -->
-    <section style=" min-height: 750px;">
+    <section style="  overflow-y: scroll">
       <v-row class="mx-0 justify-center">
         <v-col cols="11" md="8" class="d-flex align-center py-8">
 
-          <v-card class="background-impressum" style="height: 600px; width: 100%;overflow-y: scroll">
+          <v-card class="background-impressum" style="height: 60vh; width: 100%;overflow-y: scroll">
             <h2 class="text-center line">{{stadt?.unterUeberschrift}}</h2>
             <v-divider class="mx-12" />
             <v-card-text>
@@ -30,7 +30,7 @@
           </v-card>
         </v-col>
         <v-col cols="11" md="4" class="d-flex align-center py-8">
-          <v-card class="background-impressum" style="height: 600px; width: 100%;">
+          <v-card class="background-impressum" style="height: 60vh; width: 100%;">
             <v-img :alt="stadt.unterUeberschrift" style="height: 600px" cover  :src="stadt.image">
 
             </v-img>
