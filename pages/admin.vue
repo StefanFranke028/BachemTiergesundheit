@@ -99,7 +99,7 @@ export default {
   data() {
     return {
       seiten: ['Berichte', 'Produkte', 'Service', 'Preise','Kontaktaufnahme','Rechnung'],
-      selectedSeite: null,
+      selectedSeite: 'Kontaktaufnahme',
       isLoading: true,
     };
   },
