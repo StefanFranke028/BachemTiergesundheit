@@ -2,105 +2,65 @@
   <div class="background" v-if="desktop || tabletHorizontal">
     <HeaderComponent class="" v-if=" (desktop || tabletHorizontal)"></HeaderComponent>
 
-    <v-row  class="ma-0 mt-n10 pa-0" style="width: 100%">
+    <v-row   class="ma-0 mt-n10 pa-0" style="width: 100%;overflow-y: scroll">
       <v-col cols="9">
         <v-row class="justify-center mx-0  pt-10" style="width: 100%">
+
           <v-col cols="10">
             <h1 class="text-white" style="font-size: 45px">
               Tier Gesundheitszentrum Andrea Bachem
             </h1>
           </v-col>
           <v-col cols="10">
-            <h2 style="color: #0082c2">
-              Ganzheitliche Therapie für die Gesundheit deines Tieres
 
-            </h2>
-            <h3 class="text-white">
-              Raus aus dem Schmerz!
-            </h3>
-          </v-col>
-          <v-col cols="10">
-            <p style="font-size: 15px; color: #dedddd">
-              Bei uns steht die umfassende Gesundheit deines Tieres im Mittelpunkt.
-              Wir bieten hochwertige Therapien, darunter Chiropraktik, Osteopathie, Physiotherapie und individuelle Ernährungsberatung.
-              <br> <br>
-              Als spezialisierte Therapeutin für den Bewegungsapparat von Hund und Pferd unterstütze ich gezielt bei Beschwerden wie Arthrose, Spondylose, Bandscheibenvorfällen sowie entzündlichen Prozessen. Auch bei Lahmheiten, Bewegungseinschränkungen oder Haltungsproblemen bin ich deine kompetente Ansprechpartnerin.
-              Ergänzend berücksichtige ich futterbedingte Einflüsse und optimiere auf Wunsch die Ernährung deines Tieres, um Heilung und Wohlbefinden ganzheitlich zu fördern.
-            </p>
-          </v-col>
-          <v-col cols="10">
-            <v-dialog v-model="dialog" scrim="black" width="1200">
-              <template v-slot:activator="{ props }">
+            <div style="height: 50vh; overflow-y: scroll">
+              <h2 style="color: #0082c2">
+                Ganzheitliche Therapie für die Gesundheit deines Tieres
 
-                <v-btn style="background-color: #0082c2; color: #dedddd" v-bind="props">
-                  Termin Vereinbaren
-                </v-btn>
-              </template>
-              <v-card
-                  class="mx-auto my-12 pa-5 dialogBackground"
-                  style="background-color: rgb(205,205,205); box-shadow: 0 4px 8px 0 rgb(0,0,0), 0 6px 20px 0 rgb(0,0,0)"
-                  width="1200">
-                <v-row>
-                  <v-col>
-                    <v-row class="justify-center">
-                      <v-col class="d-flex justify-center" cols="10">
-                        <h3 class="line"> Termin Vereinbaren</h3>
-                      </v-col>
-                      <v-col class="d-flex justify-center mt-n3" cols="10">
-                        <v-text-field v-model="name" label="Name" variant="underlined"/>
-                      </v-col>
-                      <v-col class="d-flex justify-center mt-n3" cols="10">
-                        <v-text-field v-model="email" label="Email" variant="underlined"/>
-                      </v-col>
-                      <v-col class="d-flex justify-center mt-n3" cols="10">
-                        <v-text-field v-model="telefonnummer" label="Telefonnummer" variant="underlined"/>
-                      </v-col>
-                      <v-col class="d-flex justify-center mt-n3" cols="10">
-                        <v-textarea v-model="text" clearable counter
-                                    label="Nachricht" no-resize style="color: black" variant="underlined"/>
-                      </v-col>
-                    </v-row>
-                  </v-col>
-                  <v-col class="align-center d-flex pr-16">
-                    <v-row class="mt-10">
-                      <v-col cols="8">
-                        <div class="logo"/>
-                      </v-col>
-                      <v-col class=" pt-15" cols="12">
-                        <h2 class="pt-10">Ihre Anliegen sind uns wichtig!</h2>
-                        <br>
-                        <p style="font-size: 16px">Zögern Sie nicht, unser
-                          Kontaktformular
-                          zu
-                          nutzen,
-                          um
-                          mit
-                          unserem Tiergesundheitszentrum in Verbindung zu treten und die bestmögliche Betreuung für
-                          Ihr Haustier zu erhalten. <br> <br>
-                          Bitte beachten Sie: Termine müssen mindestens 36 Stunden im Voraus abgesagt werden. Andernfalls behalten wir uns vor, den Termin in Rechnung zu stellen.
-                        </p>
-                      </v-col>
-                    </v-row>
-                  </v-col>
-                  <v-col cols="12">
-                    <v-row class="mt-10">
-                      <v-col class="d-flex justify-center" cols="6">
-                        <v-btn variant="text" @click="create" :loading="loading">
-                          Senden
-                        </v-btn>
-                      </v-col>
-                      <v-col class="d-flex justify-center" cols="6">
-                        <v-btn variant="text" @click="dialog = false">
-                          Abbrechen
-                        </v-btn>
-                      </v-col>
-                    </v-row>
-                  </v-col>
-                </v-row>
-              </v-card>
+              </h2>
+              <h3 class="text-white">
+                Raus aus dem Schmerz!
+              </h3>
+              <h2  class="mt-5" style="color: #0082c2">Ganzheitliche Tiertherapie mit Herz und Kompetenz</h2>
+              <p style="font-size: 17px; color: #dedddd">
+                Im <strong>Tiergesundheitszentrum Andrea Bachem</strong> steht die ganzheitliche Gesundheit deines Tieres im Mittelpunkt.
+                Unsere Praxis in <strong>Erftstadt</strong> bietet individuelle Therapieansätze für Hunde und Pferde, die auf den
+                neuesten Erkenntnissen der <strong>Tierchiropraktik</strong>, <strong>Tierosteopathie</strong> und <strong>Tierphysiotherapie</strong> basieren.
+                <br><br>
+                Als zertifizierte Therapeutin für den Bewegungsapparat behandle ich gezielt Beschwerden wie <strong>Arthrose</strong>,
+                <strong>Spondylose</strong>, <strong>Bandscheibenvorfälle</strong>, <strong>Lahmheiten</strong>, sowie <strong>Bewegungseinschränkungen</strong>
+                und <strong>Haltungsprobleme</strong>. Dabei lege ich großen Wert auf eine fundierte Anamnese und eine individuell abgestimmte Behandlung.
+              </p>
 
-            </v-dialog>
+              <h3 class="text-white mt-3">Individuelle Behandlung statt Schema F</h3>
+              <p style="font-size: 17px; color: #dedddd">
+                Jeder Hund und jedes Pferd bringt seine eigene Geschichte mit. Deshalb wird jede <strong>Chiropraktik-Sitzung</strong>,
+                jede <strong>osteopathische Behandlung</strong> und jede <strong>physiotherapeutische Maßnahme</strong> individuell geplant und durchgeführt.
+                Unsere manuelle Therapie verfolgt das Ziel, Blockaden zu lösen, die Beweglichkeit zu verbessern und Schmerzen nachhaltig zu lindern.
+              </p>
+              <h3 class="text-white mt-3">Ernährungsberatung – der unterschätzte Heilungsweg</h3>
+              <p style="font-size: 17px; color: #dedddd">
+                Auch die <strong>Ernährung deines Tieres</strong> spielt eine zentrale Rolle für dessen Gesundheit.
+                Im Rahmen unserer <strong>Ernährungsberatung</strong> analysieren wir bestehende Futterrationen und zeigen dir,
+                wie du die Ernährung deines Vierbeiners gezielt optimieren kannst – egal ob bei chronischen Entzündungen, Hautproblemen oder Gewichtsmanagement.
+              </p>
+              <h3 class="text-white mt-3">Vertrauen, Empathie und Fachwissen</h3>
+              <p style="font-size: 17px; color: #dedddd">
+                Als erfahrene Therapeutin liegt mir nicht nur das körperliche, sondern auch das seelische Wohl deines Tieres am Herzen.
+                Ich arbeite mit viel Einfühlungsvermögen und Geduld, um deinem Tier eine angenehme Behandlung zu ermöglichen – in einer
+                ruhigen und vertrauensvollen Atmosphäre. <strong>Tiergesundheit beginnt mit Vertrauen.</strong>
+              </p>
+              <h3 class="text-white mt-3">Jetzt Termin im Tiergesundheitszentrum vereinbaren</h3>
+              <p style="font-size: 17px; color: #dedddd">
+                Du möchtest einen Termin in unserem <strong>Tiergesundheitszentrum in Erftstadt</strong> vereinbaren?
+                Dann nutze jetzt unser Kontaktformular oder rufe direkt an. Gemeinsam finden wir den passenden Therapieansatz
+                für deinen vierbeinigen Begleiter.
+                <br><br>
+                Andrea Bachem – <em>Ihre Ansprechpartnerin für Tiergesundheit mit Herz und Verstand</em>.
+              </p>
+            </div>
           </v-col>
+
         </v-row>
 
         <v-row class="justify-center mx-0 mt-n10" style="width: 100%">
@@ -181,13 +141,13 @@
         </v-row>
 
       </v-col>
-      <v-col class="py-0" cols="3">
 
-        <v-img  alt="Therapiekollage mit Hund und Pferd" src="../assets/kolage.webp"
-               style="background-size: cover;margin-top: -78px; height: 110vh;"></v-img>
-      </v-col>
+
+
     </v-row>
-    <footer class="d-flex" style="position: absolute; bottom: 10px; width: 100%;  align-items: center">
+        <v-img  alt="Therapiekollage mit Hund und Pferd" src="../assets/kolage.webp"
+               style="background-size: cover;margin-top: -78px; height: 120vh;position: fixed; top:80px; right: 20px;width: 430px;"></v-img>
+    <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
       <nav class="d-flex">
         <NuxtLink to="/impressum" class="mx-2 footer-link text-white link">
           Impressum
@@ -229,27 +189,58 @@
         <h1 class="text-white text-center" style="font-size: 30px">Tier Gesundheitszentrum Andrea Bachem</h1>
       </v-col>
       <v-col cols="11">
-        <h2 class="text-center" style="color: #0082c2; font-size: 18px">
-          Ganzheitliche Therapie für die Gesundheit deines Tieres
+        <div style="height: 40vh; overflow-y: scroll">
+          <h2 style="color: #0082c2">
+            Ganzheitliche Therapie für die Gesundheit deines Tieres
 
-        </h2>
-        <h3 class="text-white">
-          Raus aus dem Schmerz
-        </h3>
+          </h2>
+          <h3 class="text-white">
+            Raus aus dem Schmerz!
+          </h3>
+          <h2  class="mt-5" style="color: #0082c2">Ganzheitliche Tiertherapie mit Herz und Kompetenz</h2>
+          <p style="font-size: 17px; color: #dedddd">
+            Im <strong>Tiergesundheitszentrum Andrea Bachem</strong> steht die ganzheitliche Gesundheit deines Tieres im Mittelpunkt.
+            Unsere Praxis in <strong>Erftstadt</strong> bietet individuelle Therapieansätze für Hunde und Pferde, die auf den
+            neuesten Erkenntnissen der <strong>Tierchiropraktik</strong>, <strong>Tierosteopathie</strong> und <strong>Tierphysiotherapie</strong> basieren.
+            <br><br>
+            Als zertifizierte Therapeutin für den Bewegungsapparat behandle ich gezielt Beschwerden wie <strong>Arthrose</strong>,
+            <strong>Spondylose</strong>, <strong>Bandscheibenvorfälle</strong>, <strong>Lahmheiten</strong>, sowie <strong>Bewegungseinschränkungen</strong>
+            und <strong>Haltungsprobleme</strong>. Dabei lege ich großen Wert auf eine fundierte Anamnese und eine individuell abgestimmte Behandlung.
+          </p>
+
+          <h3 class="text-white mt-3">Individuelle Behandlung statt Schema F</h3>
+          <p style="font-size: 17px; color: #dedddd">
+            Jeder Hund und jedes Pferd bringt seine eigene Geschichte mit. Deshalb wird jede <strong>Chiropraktik-Sitzung</strong>,
+            jede <strong>osteopathische Behandlung</strong> und jede <strong>physiotherapeutische Maßnahme</strong> individuell geplant und durchgeführt.
+            Unsere manuelle Therapie verfolgt das Ziel, Blockaden zu lösen, die Beweglichkeit zu verbessern und Schmerzen nachhaltig zu lindern.
+          </p>
+          <h3 class="text-white mt-3">Ernährungsberatung – der unterschätzte Heilungsweg</h3>
+          <p style="font-size: 17px; color: #dedddd">
+            Auch die <strong>Ernährung deines Tieres</strong> spielt eine zentrale Rolle für dessen Gesundheit.
+            Im Rahmen unserer <strong>Ernährungsberatung</strong> analysieren wir bestehende Futterrationen und zeigen dir,
+            wie du die Ernährung deines Vierbeiners gezielt optimieren kannst – egal ob bei chronischen Entzündungen, Hautproblemen oder Gewichtsmanagement.
+          </p>
+          <h3 class="text-white mt-3">Vertrauen, Empathie und Fachwissen</h3>
+          <p style="font-size: 17px; color: #dedddd">
+            Als erfahrene Therapeutin liegt mir nicht nur das körperliche, sondern auch das seelische Wohl deines Tieres am Herzen.
+            Ich arbeite mit viel Einfühlungsvermögen und Geduld, um deinem Tier eine angenehme Behandlung zu ermöglichen – in einer
+            ruhigen und vertrauensvollen Atmosphäre. <strong>Tiergesundheit beginnt mit Vertrauen.</strong>
+          </p>
+          <h3 class="text-white mt-3">Jetzt Termin im Tiergesundheitszentrum vereinbaren</h3>
+          <p style="font-size: 17px; color: #dedddd">
+            Du möchtest einen Termin in unserem <strong>Tiergesundheitszentrum in Erftstadt</strong> vereinbaren?
+            Dann nutze jetzt unser Kontaktformular oder rufe direkt an. Gemeinsam finden wir den passenden Therapieansatz
+            für deinen vierbeinigen Begleiter.
+            <br><br>
+            Andrea Bachem – <em>Ihre Ansprechpartnerin für Tiergesundheit mit Herz und Verstand</em>.
+          </p>
+        </div>
       </v-col>
-      <v-col cols="11">
-        <p class="text-white text-center" style="font-size: 14px">
-          Bei uns steht die umfassende Gesundheit deines Tieres im Mittelpunkt.
-          Wir bieten hochwertige Therapien, darunter Chiropraktik, Osteopathie, Physiotherapie und individuelle Ernährungsberatung.
-          <br> <br>
-          Als spezialisierte Therapeutin für den Bewegungsapparat von Hund und Pferd unterstütze ich gezielt bei Beschwerden wie Arthrose, Spondylose, Bandscheibenvorfällen sowie entzündlichen Prozessen. Auch bei Lahmheiten, Bewegungseinschränkungen oder Haltungsproblemen bin ich deine kompetente Ansprechpartnerin.
-          Ergänzend berücksichtige ich futterbedingte Einflüsse und optimiere auf Wunsch die Ernährung deines Tieres, um Heilung und Wohlbefinden ganzheitlich zu fördern.
-        </p>
-      </v-col>
+
     </v-row>
 
     <!-- Termin-Button -->
-    <v-row class="justify-center ">
+    <v-row class="justify-center mt-9 ">
       <v-btn style="background-color: #0082c2; color: #dedddd" @click="dialog = true">
         Termin Vereinbaren
       </v-btn>
