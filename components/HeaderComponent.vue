@@ -9,59 +9,59 @@
       <v-col class="d-flex justify-center align-center" cols="7">
         <v-row style="width: 100%">
           <v-col class="d-flex align-center" cols="3">
-            <h5  class="link text-white text-center">
+            <p  class="link text-white text-center">
               <NuxtLink style="font-size: 16px" aria-label="Chiropraktik" to="/chiropraktik">Chiropraktik</NuxtLink>
-            </h5>
+            </p>
           </v-col>
           <v-col  class="d-flex align-center" cols="3">
-            <h5
+            <p
                  class="link text-white text-center">
               <NuxtLink style="font-size: 16px" aria-label="Osteopathie" to="/osteopathie">Osteopathie</NuxtLink>
-            </h5>
+            </p>
           </v-col>
           <v-col class="d-flex align-center" cols="3">
-            <h5
+            <p
                  class="link text-white text-center" >
               <NuxtLink style="font-size: 16px" aria-label="Werbepartner" to="/werbepartner">Werbepartner</NuxtLink>
-            </h5>
+            </p>
           </v-col>
           <v-col  class="d-flex align-center" cols="3">
-            <h5  class="link text-white text-center"
+            <p  class="link text-white text-center"
             >
               <a style="font-size: 16px" class="link" aria-label="Ernährung" rel="noopener noreferrer" target="_blank"  href="https://gesundesfutterandreabachem.de/">
                 Ernährung
               </a>
-            </h5>
+            </p>
           </v-col>
 
           <v-col class="d-flex align-center" cols="3">
-            <h5  class="link text-white text-center">
+            <p  class="link text-white text-center">
               <NuxtLink style="font-size: 16px" aria-label="Berichte" to="/berichte">Berichte</NuxtLink>
-            </h5>
+            </p>
 
           </v-col>
           <v-col class="d-flex align-center" cols="3">
-            <h5  class="link text-white text-center">
+            <p  class="link text-white text-center">
 
               <NuxtLink style="font-size: 16px" aria-label="Produkte" to="/produkte">Produkte</NuxtLink>
 
-            </h5>
+            </p>
 
           </v-col>
           <v-col class="d-flex align-center" cols="3">
-            <h5  class="link text-white text-center">
+            <p  class="link text-white text-center">
 
               <NuxtLink style="font-size: 16px" aria-label="Service" to="/service">Service</NuxtLink>
 
-            </h5>
+            </p>
 
           </v-col>
           <v-col class="d-flex align-center" cols="3">
-            <h5   class="link text-white text-center">
+            <p   class="link text-white text-center">
 
               <NuxtLink style="font-size: 16px" aria-label="Preise" to="/preise">Preise</NuxtLink>
 
-            </h5>
+            </p>
 
           </v-col>
         </v-row>
