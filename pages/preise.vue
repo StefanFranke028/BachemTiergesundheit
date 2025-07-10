@@ -238,7 +238,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Berichte aus der Praxis Tiergesundheitszentrum Erftstadt',
+  title: 'Tierprodukte & Preise Tiergesundheitszentrum Erftstadt',
   link: [
     {
       rel: 'canonical',
