@@ -143,7 +143,7 @@ useHead({
     {
       name: 'description',
       content:
-          'Impressum des Tier-Gesundheitszentrums Andrea Bachem in Erftstadt. Angaben gemäß §5 TMG: Adresse, Kontakt, Verantwortliche, Haftung und Urheberrecht.'
+          'Impressum des Tier-Gesundheitszentrums Andrea Bachem in Erftstadt. Adresse, Kontakt, Verantwortliche, Haftung und Urheberrecht.'
     },
     {
       name: 'keywords',

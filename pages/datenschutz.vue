@@ -183,7 +183,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Datenschutzerklärung des Tier-Gesundheitszentrums Andrea Bachem in Erftstadt: Erfassung, Nutzung und Schutz personenbezogener Daten bei der tiertherapeutischen Behandlung.'
+      content: 'Datenschutzerklärung des Tier-Gesundheitszentrums Andrea Bachem in Erftstadt: tiertherapeutische Behandlung.'
     },
     {
       name: 'keywords',

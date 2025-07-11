@@ -58,7 +58,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Andrea Bachem – Staatlich geprüfte Tierarzthelferin mit Spezialisierung auf Tierphysiotherapie, Osteopathie, manuelle Therapie, Akupunktur und Ernährungsberatung für Hunde, Pferde und Katzen.'
+      content: 'Andrea Bachem – Staatlich geprüfte Tierarzthelferin mit Spezialisierung auf Tierphysiotherapie, Osteopathie,  Ernährungsberatung.'
     },
     {
       name: 'keywords',

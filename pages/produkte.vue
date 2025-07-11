@@ -206,7 +206,7 @@ useHead({
     {
       name: 'description',
       content:
-          'Entdecke geprüfte Tierprodukte für Hund & Pferd: Nahrungsergänzung, Pflege & Therapie – persönlich empfohlen von Andrea Bachem, Tiertherapeutin aus Erftstadt.',
+          'Entdecke geprüfte Tierprodukte für Hund & Pferd: Nahrungsergänzung, Pflege & Therapie persönlich empfohlen von Andrea Bachem.',
     },
     {
       name: 'keywords',

@@ -219,7 +219,7 @@ useHead({
     {
       name: 'description',
       content:
-          'Erfahren Sie in unseren Praxisberichten mehr über Tierbehandlungen, Workshops & Erfahrungen rund um Tiergesundheit. Authentische Einblicke bei Andrea Bachem.'
+          'Erfahren Sie in unseren Praxisberichten mehr über Tierbehandlungen, Workshops & Erfahrungen rund um Tiergesundheit. '
     },
     {
       name: 'keywords',
