@@ -24,7 +24,7 @@
                     itemprop="serviceType"
                     class="mt-3"
                     style="text-align: justify;"
-                    :style="mobile ? 'font-size: 12px' : ''"
+                    :style="mobile ? 'font-size: 13px' : 'font-size: 15px'"
                     v-html="stadt?.text"
                 />
               </v-card-text>
