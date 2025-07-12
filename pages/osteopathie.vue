@@ -183,6 +183,9 @@ useHead({
           'Professionelle osteopathische Betreuung für Hunde & Pferde. Sanfte Therapie zur Förderung der Selbstheilung und Mobilität – bei Andrea Bachem in Erftstadt.',
     },
     {
+      property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png'
+    },
+    {
       property: 'og:url',
       content: 'https://tier-gesundheitszentrum.com/osteopathie'
     },

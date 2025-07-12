@@ -292,6 +292,9 @@ useHead({
       content: 'https://tier-gesundheitszentrum.com/preise'
     },
     {
+      property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png'
+    },
+    {
       property: 'og:type',
       content: 'website'
     },

@@ -221,7 +221,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Leistungen | Tiergesundheitszentrum Andrea Bachem – Erftstadt'
+      content: 'Service | Tiergesundheitszentrum Andrea Bachem – Erftstadt'
     },
     {
       property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png'

@@ -104,7 +104,7 @@ useHead(() => {
       },
       {
         property: 'og:image',
-        content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/logo.png',
+        content: stadt.value?.image || 'https://tier-gesundheitszentrum.com/favicon.png',
       },
       {
         property: 'og:url',

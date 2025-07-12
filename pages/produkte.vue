@@ -234,6 +234,9 @@ useHead({
           'Erprobte Produkte für Tiere – von erfahrenen Herstellern & mit tiertherapeutischer Empfehlung. Jetzt entdecken & beraten lassen!',
     },
     {
+      property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png'
+    },
+    {
       property: 'og:url',
       content: 'https://tier-gesundheitszentrum.com/produkte'
     },

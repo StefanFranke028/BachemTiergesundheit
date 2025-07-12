@@ -249,7 +249,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: 'https://tier-gesundheitszentrum.com/images/berichte-vorschau.jpg'
+      content: 'https://tier-gesundheitszentrum.com/favicon.png'
     }
   ],
   link: [
