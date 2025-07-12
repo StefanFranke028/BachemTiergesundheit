@@ -259,23 +259,25 @@ useHead({
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Unsere Leistungen – Tiergesundheitszentrum Andrea Bachem",
-        "itemListElement": produkteArray.value.map((produkt, index) => ({
-          "@type": "Product",
+        "itemListElement": produkteArray.value.map((service, index) => ({
+          "@type": "Service",
           "position": index + 1,
-          "name": produkt.ueberschrift,
-          "description": produkt.unterUeberschrift,
-          "url": `https://tier-gesundheitszentrum.com/services/service-${produkt.url}`,
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "EUR",
-            "price": "0.00",
-            "availability": "https://schema.org/InStock",
-            "url": `https://tier-gesundheitszentrum.com/services/service-${produkt.url}`
+          "name": service.ueberschrift,
+          "description": service.unterUeberschrift,
+          "url": `https://tier-gesundheitszentrum.com/services/service-${service.url}`,
+          "provider": {
+            "@type": "Organization",
+            "name": "Tiergesundheitszentrum Andrea Bachem"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Erftstadt und Umgebung"
           }
         }))
       })
     }
   ]
+
 });
 </script>
 <script>
