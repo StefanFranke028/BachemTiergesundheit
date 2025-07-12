@@ -84,7 +84,7 @@ useHead(() => {
     meta: [
       {
         name: 'description',
-        content: stadt.value?.miniUnterUeberschrift || 'Entdecken Sie unsere ganzheitlichen Behandlungen für Tiere in Ihrer Nähe.',
+        content: (stadt.value?.miniUnterUeberschrift?.slice(0, 155)) || 'Entdecken Sie unsere ganzheitlichen Behandlungen für Tiere in Ihrer Nähe.',
       },
       {
         name: 'keywords',
