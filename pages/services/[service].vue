@@ -165,7 +165,7 @@ useHead(() => {
             }
           },
           "areaServed": {
-            "@type": "Place",
+            "@type": "Country",
             "name": "Deutschland"
           },
           "image": stadt.value?.image,

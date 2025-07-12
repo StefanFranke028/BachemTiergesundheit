@@ -317,8 +317,8 @@ useHead({
             "name": "Tiergesundheitszentrum Andrea Bachem"
           },
           "areaServed": {
-            "@type": "Place",
-            "name": "Erftstadt"
+            "@type": "Country",
+            "name": "Deutschland"
           }
         }))
       })
