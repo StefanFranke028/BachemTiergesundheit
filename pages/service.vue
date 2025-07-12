@@ -264,7 +264,14 @@ useHead({
           "position": index + 1,
           "name": produkt.ueberschrift,
           "description": produkt.unterUeberschrift,
-          "url": `https://tier-gesundheitszentrum.com/services/service-${produkt.url}`
+          "url": `https://tier-gesundheitszentrum.com/services/service-${produkt.url}`,
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "0.00",
+            "availability": "https://schema.org/InStock",
+            "url": `https://tier-gesundheitszentrum.com/services/service-${produkt.url}`
+          }
         }))
       })
     }
