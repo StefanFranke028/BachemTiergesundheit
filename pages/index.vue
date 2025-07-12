@@ -357,6 +357,24 @@ useHead({
           'Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie & Ernährungsberatung ganzheitliche Therapie für dein Tier.',
     },
     {
+      property: 'og:title',
+      content: 'Leistungen | Tiergesundheitszentrum Andrea Bachem – Erftstadt'
+    },
+    { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/apple-touch-icon.png' },
+
+    {
+      property: 'og:description',
+      content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden: Jetzt mehr über unsere Leistungen für Hund, Katze & Pferd erfahren.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://tier-gesundheitszentrum.com/service'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
       name: 'keywords',
       content:
           'Tiergesundheitszentrum, Tierchiropraktik, Tierosteopathie, Physiotherapie Tiere, Ernährungsberatung Hund Katze Pferd, Andrea Bachem, Tiertherapie Erftstadt',
