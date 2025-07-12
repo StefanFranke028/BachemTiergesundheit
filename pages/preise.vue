@@ -302,23 +302,25 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Empfohlene Tierprodukte",
+        "name": "Empfohlene Tierleistungen",
         "itemListElement": produkteArray.value.map((produkt, index) => ({
-          "@type": "Product",
+          "@type": "Service",
           "position": index + 1,
           "name": produkt.ueberschrift,
-          "preis": produkt.preis,
           "description": produkt.text,
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "EUR",
-            "price": "0.00",
-            "availability": "https://schema.org/InStock",
+          "provider": {
+            "@type": "Organization",
+            "name": "Tiergesundheitszentrum Andrea Bachem"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Erftstadt"
           }
         }))
       })
     }
   ]
+
 });
 
 
