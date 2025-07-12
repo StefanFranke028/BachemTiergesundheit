@@ -43,7 +43,7 @@
     </v-row>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="4" v-for="preis in produkteArray" :key="preis.id">
-        <article itemscope itemtype="https://schema.org/Product">
+        <article itemscope itemtype="https://schema.org/Service">
           <v-card
               class="mx-auto my-12"
               height="500"
@@ -121,47 +121,50 @@
     </v-row>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="11" v-for="preis in produkteArray" :key="preis.id">
-        <v-card
-            :loading="loading"
-            class="mx-auto my-12 "
-            height="500"
-            style="background-color: rgb(255,255,255); backdrop-filter: blur(4px);box-shadow: 1px 1px 5px black "
-            width="300"
-        >
-          <template>
-            <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-            ></v-progress-linear>
-          </template>
-          <v-img
-              :src="preis.bild"
-              cover
-              style="width: 300px; height: 270px"
-          ></v-img>
-          <v-card-title class="text-center">{{ preis.ueberschrift }}</v-card-title>
-          <v-divider class="mx-8 opacity-80"></v-divider>
-          <v-card-text class="text-center" style="height: 120px; overflow-y: scroll">
+        <article itemscope itemtype="https://schema.org/Service">
+          <v-card
+              :loading="loading"
+              class="mx-auto my-12 "
+              height="500"
+              style="background-color: rgb(255,255,255); backdrop-filter: blur(4px);box-shadow: 1px 1px 5px black "
+              width="300"
+          >
+            <template>
+              <v-progress-linear
+                  color="deep-purple"
+                  height="10"
+                  indeterminate
+              ></v-progress-linear>
+            </template>
+            <v-img
+                :src="preis.bild"
+                cover
+                style="width: 300px; height: 270px"
+            ></v-img>
+            <v-card-title class="text-center">{{ preis.ueberschrift }}</v-card-title>
+            <v-divider class="mx-8 opacity-80"></v-divider>
+            <v-card-text class="text-center" style="height: 120px; overflow-y: scroll">
 
-            {{ preis.text }}
-
-
-          </v-card-text>
-          <v-row style="width: 100% ;" class="ma-0 mt-n4">
-            <v-col cols="12" class="d-flex justify-center">
-              <v-btn  class="mt-3 " style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-
-                <a :href="preis.link" rel="noopener" style="text-decoration: none" target="_blank">
-                  Zum Produkt >
-                </a>
-              </v-btn>
-            </v-col>
-          </v-row>
+              {{ preis.text }}
 
 
+            </v-card-text>
+            <v-row style="width: 100% ;" class="ma-0 mt-n4">
+              <v-col cols="12" class="d-flex justify-center">
+                <v-btn  class="mt-3 " style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
 
-        </v-card>
+                  <a :href="preis.link" rel="noopener" style="text-decoration: none" target="_blank">
+                    Zum Produkt >
+                  </a>
+                </v-btn>
+              </v-col>
+            </v-row>
+
+
+
+          </v-card>
+
+        </article>
       </v-col>
     </v-row>
   </div>

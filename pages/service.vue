@@ -49,7 +49,7 @@
     </v-row>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="4" v-for="preis in produkteArray" :key="preis.id">
-        <article itemscope itemtype="https://schema.org/Product">
+        <article itemscope itemtype="https://schema.org/Service">
           <v-card
               class="mx-auto my-12"
               height="480"
@@ -140,7 +140,7 @@
     </v-row>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="11" v-for="preis in produkteArray" :key="preis.id">
-        <article itemscope itemtype="https://schema.org/Product">
+        <article itemscope itemtype="https://schema.org/Service">
         <v-card
             class="mx-auto my-12"
             height="450"
