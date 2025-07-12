@@ -61,7 +61,7 @@
   <div v-if="mobile || tablet " class="d-flex justify-center align-center pb-16">
     <v-card class="mx-5 mt-16" color="grey">
       <v-card-title>
-        <h1>Mila-Escort</h1>
+        <h1>Andre Bachem</h1>
       </v-card-title>
       <v-card-item>
         Diese Ansicht ist leider auf dem Handy nicht verfügbar. Bitte kehren Sie zur
