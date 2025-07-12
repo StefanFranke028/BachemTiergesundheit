@@ -309,6 +309,12 @@ useHead({
           "name": produkt.ueberschrift,
           "preis": produkt.preis,
           "description": produkt.text,
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "0.00",
+            "availability": "https://schema.org/InStock",
+          }
         }))
       })
     }

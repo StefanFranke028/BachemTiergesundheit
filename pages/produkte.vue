@@ -252,7 +252,14 @@ useHead({
           "name": produkt.ueberschrift,
 
           "description": produkt.text,
-          "url": produkt.link
+          "url": produkt.link,
+
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "0.00",
+            "availability": "https://schema.org/InStock",
+          }
         }))
       })
     }
