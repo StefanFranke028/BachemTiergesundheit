@@ -40,6 +40,39 @@
       </section>
 
     </article>
+    <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
+      <nav class="d-flex">
+        <NuxtLink  title="Impressum von Andrea Bachem" to="/impressum" class="mx-2 footer-link text-white link">
+          Impressum
+        </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+
+        <NuxtLink  title="Verwaltungsseite" rel="nofollow" to="/admin" class="mx-2 text-white footer-link link" >
+          Verwaltung
+        </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+
+        <NuxtLink title="Datenschautz von Tiergesundheitszentrum.de"  to="/datenschutz" class="mx-2 footer-link text-white link" >
+          Datenschutz
+        </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+
+        <NuxtLink title="Meine Vita und intressantes über mich" to="/ueberuns" class="mx-2 footer-link text-white link" >
+          Über Uns
+        </NuxtLink>
+      </nav>
+
+      <!-- YouTube-Link als echter externer Link -->
+      <a href="https://www.youtube.com/results?search_query=andrea+bachem" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
+        <Icon icon="grommet-icons:youtube" />
+      </a>
+
+      <!-- Instagram-Link -->
+      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
+        <Icon icon="skill-icons:instagram" />
+      </a>
+    </footer>
+
   </div>
 
 </template>
