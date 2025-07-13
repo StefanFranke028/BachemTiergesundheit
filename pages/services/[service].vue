@@ -217,9 +217,13 @@ useHead(() => {
 
 <script>
 import {useScreenStore} from "~/stores/screen.js";
+import {Icon} from '@iconify/vue';
 
 export default {
   name:'[Service]',
+  components: {
+    Icon
+  },
   data() {
     return {
       stadtparam: '',
