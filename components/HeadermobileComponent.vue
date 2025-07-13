@@ -10,6 +10,7 @@
       <v-list-item
           class="mt-2"
           v-for="item in menuItems"
+          :title="item.title"
           :key="item.title"
           :to="{ name: item.route }"
           role="option"
@@ -26,6 +27,7 @@
       <v-list-item
           class="mt-2"
           tag="a"
+          title="Ernährung ist für ihr Haustier wichtig"
           href="https://gesundesfutterandreabachem.de/"
           role="option"
           :aria-label="'Ernährung'"
@@ -82,13 +84,13 @@ export default {
     return{
       drawer:false,
       menuItems: [
-        { title: 'Chiropraktik', icon: 'heroicons:home-solid', route: 'chiropraktik' },
-        { title: 'Osteopathie', icon: 'fluent:person-32-filled', route: 'osteopathie' },
-        { title: 'Werbepartner', icon: 'fluent:people-team-16-filled', route: 'werbepartner' },
-        { title: 'Berichte', icon: 'icon-park-solid:women', route: 'berichte' },
-        { title: 'Produkte', icon: 'streamline:contact-phonebook-2-solid', route: 'produkte' },
-        { title: 'Service', icon: 'foundation:pricetag-multiple', route: 'service' },
-        { title: 'Preise', icon: 'mdi-book', route: 'preise' },
+        { title: 'Chiropraktik', icon: 'heroicons:home-solid', route: 'chiropraktikÄ', beschreibung:'Chiropraktik für Tiere ist eine ganzheitliche Therapieform.'},
+        { title: 'Osteopathie', icon: 'fluent:person-32-filled', route: 'osteopathie',beschreibung:'Osteopathie für Tiere eine ganzheitliche Behandlungsmethode' },
+        { title: 'Werbepartner', icon: 'fluent:people-team-16-filled', route: 'werbepartner' ,beschreibung:'Infos für interessierte Werbepartner'},
+        { title: 'Berichte', icon: 'icon-park-solid:women', route: 'berichte' ,beschreibung:'Berichte aus unserer Praxis'},
+        { title: 'Produkte', icon: 'streamline:contact-phonebook-2-solid', route: 'produkte' ,beschreibung:'Verschiedene Produkte empfehlung'},
+        { title: 'Service', icon: 'foundation:pricetag-multiple', route: 'service' ,beschreibung:'unsre Service und Seminare'},
+        { title: 'Preise', icon: 'mdi-book', route: 'preise', beschreibung:'Meine Preise auf einen Blick'},
       ],
     }
   }
