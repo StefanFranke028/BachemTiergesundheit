@@ -62,7 +62,83 @@
           </v-col>
 
         </v-row>
+        <!-- Termin-Button -->
 
+
+        <!-- Termin-Dialog -->
+        <v-dialog v-model="dialog" scrim="black" width="1200">
+          <template v-slot:activator="{ props }">
+
+            <div class="d-flex justify-center">
+            <v-btn  class="text-center" style="background-color: #0082c2; color: #dedddd" v-bind="props">
+              Termin Vereinbaren
+            </v-btn>
+
+            </div>
+          </template>
+          <v-card
+              class="mx-auto my-12 pa-5 dialogBackground"
+              style="background-color: rgb(205,205,205); box-shadow: 0 4px 8px 0 rgb(0,0,0), 0 6px 20px 0 rgb(0,0,0)"
+              width="1200">
+            <v-row>
+              <v-col>
+                <v-row class="justify-center">
+                  <v-col class="d-flex justify-center" cols="10">
+                    <h1 class="line"> Termin Vereinbaren</h1>
+                  </v-col>
+                  <v-col class="d-flex justify-center mt-n3" cols="10">
+                    <v-text-field v-model="name" label="Name" variant="underlined"/>
+                  </v-col>
+                  <v-col class="d-flex justify-center mt-n3" cols="10">
+                    <v-text-field v-model="email" label="Email" variant="underlined"/>
+                  </v-col>
+                  <v-col class="d-flex justify-center mt-n3" cols="10">
+                    <v-text-field v-model="telefonnummer" label="Telefonnummer" variant="underlined"/>
+                  </v-col>
+                  <v-col class="d-flex justify-center mt-n3" cols="10">
+                    <v-textarea v-model="text" clearable counter
+                                label="Nachricht" no-resize style="color: black" variant="underlined"/>
+                  </v-col>
+                </v-row>
+              </v-col>
+              <v-col class="align-center d-flex pr-16">
+                <v-row class="mt-10">
+                  <v-col cols="8">
+                    <div class="logo"/>
+                  </v-col>
+                  <v-col class=" pt-15" cols="12">
+                    <h2 class="pt-10">Ihre Anliegen sind uns wichtig!</h2>
+                    <br>
+                    <p style="font-size: 16px">Zögern Sie nicht, unser
+                      Kontaktformular
+                      zu
+                      nutzen,
+                      um
+                      mit
+                      unserem Tiergesundheitszentrum in Verbindung zu treten und die bestmögliche Betreuung für
+                      Ihr Haustier zu erhalten.
+                    </p>
+                  </v-col>
+                </v-row>
+              </v-col>
+              <v-col cols="12">
+                <v-row class="mt-10">
+                  <v-col class="d-flex justify-center" cols="6">
+                    <v-btn variant="text" @click="create" :loading="loading">
+                      Senden
+                    </v-btn>
+                  </v-col>
+                  <v-col class="d-flex justify-center" cols="6">
+                    <v-btn variant="text" @click="dialog = false">
+                      Abbrechen
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </v-col>
+            </v-row>
+          </v-card>
+
+        </v-dialog>
         <v-row class="justify-center mx-0 mt-n10" style="width: 100%">
           <v-col class="d-flex justify-center mx-4  " cols="10">
             <v-row class="info mt-16 mx-0" style="width: 100%">
