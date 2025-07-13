@@ -219,7 +219,7 @@ useHead({
     {
       name: 'description',
       content:
-          'Erfahren Sie in unseren Praxisberichten mehr über Tierbehandlungen, Workshops & Erfahrungen rund um Tiergesundheit. '
+          'Erfahren Sie in unseren Praxisberichten mehr über Tierbehandlungen, Workshops & Erfahrungen rund um Tiergesundheit. von Andrea Bachem, Tierheilpraktikerin in Erftstadt.'
     },
     {
       name: 'keywords',
