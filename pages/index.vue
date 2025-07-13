@@ -149,22 +149,22 @@
                style="background-size: cover;margin-top: -78px; height: 120vh;position: fixed; top:80px; right: 20px;width: 430px;"></v-img>
     <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
       <nav class="d-flex">
-        <NuxtLink to="/impressum" class="mx-2 footer-link text-white link">
+        <NuxtLink  title="Impressum von Andrea Bachem" to="/impressum" class="mx-2 footer-link text-white link">
           Impressum
         </NuxtLink>
         <span class="text-white mt-n1">|</span>
 
-        <NuxtLink to="/admin" class="mx-2 text-white footer-link link" >
+        <NuxtLink  title="Verwaltungsseite" rel="nofollow" to="/admin" class="mx-2 text-white footer-link link" >
           Verwaltung
         </NuxtLink>
         <span class="text-white mt-n1">|</span>
 
-        <NuxtLink to="/datenschutz" class="mx-2 footer-link text-white link" >
+        <NuxtLink title="Datenschautz von Tiergesundheitszentrum.de"  to="/datenschutz" class="mx-2 footer-link text-white link" >
           Datenschutz
         </NuxtLink>
         <span class="text-white mt-n1">|</span>
 
-        <NuxtLink to="/ueberuns" class="mx-2 footer-link text-white link" >
+        <NuxtLink title="Meine Vita und intressantes über mich" to="/ueberuns" class="mx-2 footer-link text-white link" >
           Über Uns
         </NuxtLink>
       </nav>
