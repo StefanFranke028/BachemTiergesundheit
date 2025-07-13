@@ -10,25 +10,25 @@
         <v-row style="width: 100%">
           <v-col class="d-flex align-center" cols="3">
             <p  class="link text-white text-center">
-              <NuxtLink style="font-size: 16px" aria-label="Chiropraktik" to="/chiropraktik">Chiropraktik</NuxtLink>
+              <NuxtLink title="Chiropraktik für Tiere ist eine ganzheitliche Therapieform." style="font-size: 16px" aria-label="Chiropraktik" to="/chiropraktik">Chiropraktik</NuxtLink>
             </p>
           </v-col>
           <v-col  class="d-flex align-center" cols="3">
             <p
                  class="link text-white text-center">
-              <NuxtLink style="font-size: 16px" aria-label="Osteopathie" to="/osteopathie">Osteopathie</NuxtLink>
+              <NuxtLink title="Osteopathie für Tiere eine ganzheitliche Behandlungsmethode" style="font-size: 16px" aria-label="Osteopathie" to="/osteopathie">Osteopathie</NuxtLink>
             </p>
           </v-col>
           <v-col class="d-flex align-center" cols="3">
             <p
                  class="link text-white text-center" >
-              <NuxtLink style="font-size: 16px" aria-label="Werbepartner" to="/werbepartner">Werbepartner</NuxtLink>
+              <NuxtLink title="Infos für interessierte Werbepartner" style="font-size: 16px" aria-label="Werbepartner" to="/werbepartner">Werbepartner</NuxtLink>
             </p>
           </v-col>
           <v-col  class="d-flex align-center" cols="3">
             <p  class="link text-white text-center"
             >
-              <a style="font-size: 16px" class="link" aria-label="Ernährung" rel="noopener noreferrer" target="_blank"  href="https://gesundesfutterandreabachem.de/">
+              <a title="Ernährung ist für ihr Haustier wichtig" style="font-size: 16px" class="link" aria-label="Ernährung" rel="noopener noreferrer" target="_blank"  href="https://gesundesfutterandreabachem.de/">
                 Ernährung
               </a>
             </p>
@@ -36,14 +36,14 @@
 
           <v-col class="d-flex align-center" cols="3">
             <p  class="link text-white text-center">
-              <NuxtLink style="font-size: 16px" aria-label="Berichte" to="/berichte">Berichte</NuxtLink>
+              <NuxtLink title="Berichte aus unserer Praxis" style="font-size: 16px" aria-label="Berichte" to="/berichte">Berichte</NuxtLink>
             </p>
 
           </v-col>
           <v-col class="d-flex align-center" cols="3">
             <p  class="link text-white text-center">
 
-              <NuxtLink style="font-size: 16px" aria-label="Produkte" to="/produkte">Produkte</NuxtLink>
+              <NuxtLink title="Verschiedene Produkte empfehlung" style="font-size: 16px" aria-label="Produkte" to="/produkte">Produkte</NuxtLink>
 
             </p>
 
@@ -51,7 +51,7 @@
           <v-col class="d-flex align-center" cols="3">
             <p  class="link text-white text-center">
 
-              <NuxtLink style="font-size: 16px" aria-label="Service" to="/service">Service</NuxtLink>
+              <NuxtLink title="unsre Service und Seminare" style="font-size: 16px" aria-label="Service" to="/service">Service</NuxtLink>
 
             </p>
 
@@ -59,7 +59,7 @@
           <v-col class="d-flex align-center" cols="3">
             <p   class="link text-white text-center">
 
-              <NuxtLink style="font-size: 16px" aria-label="Preise" to="/preise">Preise</NuxtLink>
+              <NuxtLink title="Meine Preise auf einen Blick" style="font-size: 16px" aria-label="Preise" to="/preise">Preise</NuxtLink>
 
             </p>
 
