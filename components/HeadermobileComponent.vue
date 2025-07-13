@@ -10,7 +10,7 @@
       <v-list-item
           class="mt-2"
           v-for="item in menuItems"
-          :title="item.title"
+          :title="item.beschreibung"
           :key="item.title"
           :to="{ name: item.route }"
           role="option"

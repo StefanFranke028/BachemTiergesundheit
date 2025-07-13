@@ -221,7 +221,6 @@
               </v-col>
             </v-row>
           </v-card>
-
         </article>
       </v-col>
     </v-row>
