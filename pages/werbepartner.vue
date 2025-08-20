@@ -43,7 +43,7 @@
               md="4"
           >
             <a :href="partner.url" :target="partner.target" :rel="partner.rel">
-              <v-card class="pa-4 text-center">
+              <v-card class="pa-4 text-center" style="min-height: 230px">
                 <v-img :src="partner.image" :alt="partner.name" contain height="100" />
                 <h3 class="mt-2">{{ partner.name }}</h3>
                 <p class="text-caption">{{ partner.description }}</p>
@@ -225,8 +225,14 @@ export default {
           url: 'https://gesundesfutterandreabachem.de/',
           description: 'Gesundes Futter | Andrea Bachem',
           image: 'https://gesundesfutterandreabachem.de/.cm4all/mediadb/.Andrea%20Bachem%20%288%29.png/picture-200',
-          rel: 'notfollow noopener noreferrer',
-          target: '_blank'
+          rel: 'noopener',
+        },
+        {
+          name: 'Tierseminare Andrea Bachem',
+          url: 'https://tierseminare.com/',
+          description: 'Seminare zur Tiergesundheit | Andrea Bachem',
+          image: 'https://tierseminare.com/assets/images/n/ed2fe928-8dbe-4598-b975-93fa7e09beaa-n5s42ktgf6qxfrv.jpeg',
+          rel: 'noopener',
         }
       ]
     }

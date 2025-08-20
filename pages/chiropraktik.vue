@@ -161,6 +161,11 @@
       </a>
     </footer>
   </div>
+
+
+
+
+
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <v-row class="justify-center mx-0 mt-2" style="overflow-y: scroll">

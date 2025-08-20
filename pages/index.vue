@@ -446,7 +446,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://tier-gesundheitszentrum.com/service'
+      content: 'https://tier-gesundheitszentrum.com'
     },
     {
       property: 'og:type',
