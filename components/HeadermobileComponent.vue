@@ -84,7 +84,7 @@ export default {
     return{
       drawer:false,
       menuItems: [
-        { title: 'Chiropraktik', icon: 'heroicons:home-solid', route: 'chiropraktikÄ', beschreibung:'Chiropraktik für Tiere ist eine ganzheitliche Therapieform.'},
+        { title: 'Chiropraktik', icon: 'heroicons:home-solid', route: 'chiropraktik', beschreibung:'Chiropraktik für Tiere ist eine ganzheitliche Therapieform.'},
         { title: 'Osteopathie', icon: 'fluent:person-32-filled', route: 'osteopathie',beschreibung:'Osteopathie für Tiere eine ganzheitliche Behandlungsmethode' },
         { title: 'Werbepartner', icon: 'fluent:people-team-16-filled', route: 'werbepartner' ,beschreibung:'Infos für interessierte Werbepartner'},
         { title: 'Berichte', icon: 'icon-park-solid:women', route: 'berichte' ,beschreibung:'Berichte aus unserer Praxis'},
