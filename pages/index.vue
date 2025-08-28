@@ -177,7 +177,7 @@
 
                   </v-col>
                   <v-col class="d-flex justify-center" cols="12">
-                    <a href="tel:+4917806915915">
+                    <a href="tel:+491786915915">
                       <h3 class=" mt-n4" style="color: #fdfcfc">
                         01786915915
                       </h3>
@@ -416,7 +416,7 @@
         <v-row class="ma-0 justify-center">
           <v-col cols="11" class="d-flex justify-center" >
             <v-row class="justify-center align-center text-center"  style="gap: 50px">
-              <a href="tel:+4917806915915">
+              <a href="tel:01786915915">
                 <Icon icon="solar:phone-broken" style="font-size: 24px; color: white; cursor: pointer"/>
               </a>
               <a href="mailto:andreabachem83@gmail.com">
