@@ -30,6 +30,25 @@
               </v-card-text>
             </v-card>
           </v-col>
+          <v-col cols="11">                    <form class="layout_form cr_form cr_font" action="https://seu2.cleverreach.com/f/430331-415442/wcs/" method="post" target="_blank">
+            <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
+              <div class="editable_content" style="text-align:left;background-color: transparent !important;">
+                <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
+                  <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
+                    <label class="text-white" for="text9467951">Newslatter abonieren</label>
+                    <input class="cr_form-input" type="email" id="text9467951" name="email" value="" placeholder="name@example.com" style="width:100%;">
+                  </div>
+                </div>
+                <div id="9467953" rel="button" class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable  submit_container">
+                  <button type="submit" class="cr_form-block cr_button">Abonieren</button>
+                </div>
+              </div>
+              <noscript><a href="http://www.cleverreach.de">www.CleverReach.de</a></noscript>
+            </div>
+
+
+          </form>
+          </v-col>
           <v-col cols="11" md="4" class="d-flex align-center py-8">
             <v-card class="background-impressum" style="height: 60vh; width: 100%;">
               <NuxtImg :alt="stadt.unterUeberschrift" style="width: 100%; object-fit: cover"  cover  :src="stadt.image">
@@ -80,7 +99,42 @@
 
 <script setup>
 
+if (process.client) {
+  function loadjQuery(src, callback) {
+    const n = document.createElement("script")
+    n.setAttribute("src", src)
+    n.onload = callback
+    n.onreadystatechange = function () {
+      if (this.readyState === "complete" || this.readyState === "loaded") {
+        callback()
+      }
+    }
+    document.head.appendChild(n)
+  }
 
+  function main() {
+    const $cr = jQuery.noConflict()
+    let old_src
+
+    $cr(document).ready(function () {
+      // dein kompletter jQuery-Code hier …
+    })
+
+    function captcha_reload() {
+      const timestamp = new Date().getTime()
+      $cr("div[rel='captcha'] img:not(.captcha2_reload)")
+          .attr("src", "")
+          .attr("src", old_src + "?t=" + timestamp)
+      return false
+    }
+  }
+
+  if (typeof window.jQuery === "undefined") {
+    loadjQuery("//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", main)
+  } else {
+    main()
+  }
+}
 const route = useRoute();
 import { useRoute, navigateTo } from '#imports';
 import { useAsyncData } from '#app';
