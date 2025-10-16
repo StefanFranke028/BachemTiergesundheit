@@ -573,7 +573,8 @@ export default {
     Icon,
   },
   data() {
-    return {dialog1: false,
+    return {
+      dialog1: false,
       loading: false,
       name: '',
       email: '',

@@ -3,7 +3,7 @@
 
     <v-row class="justify-center mx-0 px-6 bg" style="width: 100%">
       <v-col class="pa-0 d-flex  align-center" cols="2">
-        <v-img alt="Tier-Gesundheits logo" class="" src="~/assets/logo-weiß.png"
+        <v-img alt="Tier-Gesundheits logo" class="mt-5" src="~/assets/logo-weiß.png"
                style="height: 130px; width: 130px; cursor: pointer" @click="navigateTo('/')"></v-img>
       </v-col>
       <v-col class="d-flex justify-center align-center" cols="7">
