@@ -95,6 +95,7 @@
                   <td>{{ item.autor }}</td>
                   <td>{{ item.unterUeberschrift }}</td>
                   <td>{{ item.miniUnterUeberschrift }}</td>
+                  <td>{{ item.backlinkName }}</td>
                   <td>
                     <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
                   </td>
