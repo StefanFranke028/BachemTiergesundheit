@@ -169,6 +169,8 @@ export default {
       this.text = ''
       this.ueberschrift = ''
       this.image = ''
+      this.backlinkName = ''
+      this.backlinkUrl = ''
       this.datum = ''
       this.unterUeberschrift = ''
       this.miniUnterUeberschrift = ''
@@ -255,9 +257,13 @@ export default {
           this.url = ''
           this.text = ''
           this.ueberschrift = ''
+          this.bild = ''
+          this.imageURL = ''
           this.image = ''
           this.unterUeberschrift = ''
           this.miniUnterUeberschrift = ''
+          this.backlinkUrl = ''
+          this.backlinkName = ''
         } catch (e) {
           alert('Bitte füllen Sie alle Felder korrekt aus.')
         }
