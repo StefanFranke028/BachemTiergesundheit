@@ -95,7 +95,6 @@
                   <td>{{ item.autor }}</td>
                   <td>{{ item.unterUeberschrift }}</td>
                   <td>{{ item.miniUnterUeberschrift }}</td>
-                  <td>{{ item.backlinkName }}</td>
                   <td>
                     <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
                   </td>
@@ -155,6 +154,8 @@ export default {
       return this.berichteArray.map(item => {
         const newObj = Object.assign({...item, icon: 'fluent:delete-16-regular'}, item);
         delete newObj.bild;
+        delete newObj.backlinkName;
+        delete newObj.backlinkUrl;
         delete newObj.text;
         return newObj;
       });
