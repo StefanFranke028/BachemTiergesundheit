@@ -144,7 +144,7 @@ useHead({
   htmlAttrs: { lang: "de" },
 
   // Podcast-Seite
-  title: "Podcast Tiergesundheit | Andrea Bachem – Tiergesundheitszentrum",
+  title: "Podcast | Andrea Bachem – Tiergesundheitszentrum",
 
   link: [
     {
