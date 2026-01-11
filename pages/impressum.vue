@@ -248,7 +248,7 @@ h1 {
 }
 
 .line {
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
   margin-top: 10px;
 }
 </style>

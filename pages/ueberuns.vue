@@ -119,7 +119,7 @@ export default {
 </script>
 <style scoped>
 .line {
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.86);
 }
 a {
