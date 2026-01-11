@@ -53,6 +53,17 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+p{
+  font-family: "Montserrat", sans-serif;
+
+}
 
 body {
   font-family: "Aptos", sans-serif;
