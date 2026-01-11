@@ -94,7 +94,9 @@
                   <td>{{ item.unterUeberschrift }}</td>
                   <td>{{ item.miniUnterUeberschrift }}</td>
                   <td>
-                    <a :href="item.backlinkUrl"></a>{{ item.backlinkName }}
+                    <a :href="item.backlinkUrl">
+                      {{ item.backlinkName }}
+                    </a>
                   </td>
                   <td>
                     <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
