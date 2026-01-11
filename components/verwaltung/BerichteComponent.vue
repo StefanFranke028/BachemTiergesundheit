@@ -25,19 +25,19 @@
               >
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-text-field v-model="name"  label="Name" variant="outlined" />
+                    <v-text-field v-model="name" label="Name" variant="outlined"/>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-text-field v-model="ueberschrift" label="Überschrift" variant="outlined" />
+                    <v-text-field v-model="ueberschrift" label="Überschrift" variant="outlined"/>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-text-field v-model="unterUeberschrift" label="Unter-Überschrift" variant="outlined" />
+                    <v-text-field v-model="unterUeberschrift" label="Unter-Überschrift" variant="outlined"/>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-text-field v-model="miniUnterUeberschrift" label="Mini Unter-Überschrift" variant="outlined" />
+                    <v-text-field v-model="miniUnterUeberschrift" label="Mini Unter-Überschrift" variant="outlined"/>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="10">
-                    <v-text-field v-model="autor" label="Autor" variant="outlined" />
+                    <v-text-field v-model="autor" label="Autor" variant="outlined"/>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
                     <v-text-field v-model="backlinkName" label="Backlink Name" variant="outlined"/>
@@ -91,11 +91,15 @@
                   <td>{{ item.id }}</td>
                   <td>{{ item.name }}</td>
                   <td>{{ item.überschrift }}</td>
-                  <td><v-img :src="item.image"></v-img></td>
+                  <td>
+                    <v-img :src="item.image"></v-img>
+                  </td>
                   <td>{{ item.autor }}</td>
                   <td>{{ item.unterUeberschrift }}</td>
                   <td>{{ item.miniUnterUeberschrift }}</td>
-                  <td>{{ item.backlinkName }}</td>
+                  <td>
+                    <a :href="item.backlinkUrl"></a>{{ item.backlinkName }}
+                  </td>
                   <td>
                     <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
                   </td>
@@ -116,11 +120,8 @@
 import {Icon} from "@iconify/vue";
 
 
-
-
-
 export default {
-  name:'BerichteComponent',
+  name: 'BerichteComponent',
   data() {
     return {
       tab: null,
@@ -130,13 +131,13 @@ export default {
       miniUnterUeberschrift: '',
       name: '',
       autor: 'Andrea Bachem',
-      image:'',
+      image: '',
       ueberschrift: '',
       backlinkName: '',
       backlinkUrl: '',
       text: '',
       imageURL: '',
-      berichteArray:[],
+      berichteArray: [],
       editorOptions: {
         modules: {
           toolbar: [
@@ -231,7 +232,7 @@ export default {
 
     async create() {
       if (process.client) {
-        if (this.image ===''){
+        if (this.image === '') {
           console.log(this.image)
           return
         }
