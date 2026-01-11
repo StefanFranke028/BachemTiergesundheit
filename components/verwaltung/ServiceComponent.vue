@@ -37,6 +37,13 @@
                     <v-text-field v-model="miniUnterUeberschrift" label="Mini Unter-Überschrift" variant="outlined" />
                   </v-col>
 
+                  <v-col class="d-flex justify-center" cols="5">
+                    <v-text-field v-model="backlinkName" label="Backlink Name" variant="outlined"/>
+                  </v-col>
+                  <v-col class="d-flex justify-center" cols="5">
+                    <v-text-field v-model="backlinkUrl" label="Backlink URL" variant="outlined"/>
+                  </v-col>
+
                   <v-col class="d-flex justify-center" cols="10">
                     <v-file-input
                         v-model="bild"
@@ -122,6 +129,8 @@ export default {
       autor: '',
       image:'',
       ueberschrift: '',
+      backlinkName: '',
+      backlinkUrl: '',
       text: '',
       imageURL: '',
       berichteArray:[],
@@ -225,6 +234,8 @@ export default {
             text: this.text.replaceAll('\n', '<br>'),
             ueberschrift: this.ueberschrift, // korrektes Feld aus v-model
             image: this.image,
+            backlinkUrl: this.backlinkUrl,
+            backlinkName: this.backlinkName,
             unterUeberschrift: this.unterUeberschrift,
             miniUnterUeberschrift: this.miniUnterUeberschrift
           }

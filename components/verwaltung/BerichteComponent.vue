@@ -39,6 +39,12 @@
                   <v-col class="d-flex justify-center" cols="10">
                     <v-text-field v-model="autor" label="Autor" variant="outlined" />
                   </v-col>
+                  <v-col class="d-flex justify-center" cols="5">
+                    <v-text-field v-model="backlinkName" label="Backlink Name" variant="outlined"/>
+                  </v-col>
+                  <v-col class="d-flex justify-center" cols="5">
+                    <v-text-field v-model="backlinkUrl" label="Backlink URL" variant="outlined"/>
+                  </v-col>
                   <v-col class="d-flex justify-center" cols="10">
                     <v-file-input
                         v-model="bild"
@@ -125,6 +131,8 @@ export default {
       autor: 'Andrea Bachem',
       image:'',
       ueberschrift: '',
+      backlinkName: '',
+      backlinkUrl: '',
       text: '',
       imageURL: '',
       berichteArray:[],
@@ -232,6 +240,8 @@ export default {
             überschrift: this.ueberschrift, // korrektes Feld aus v-model
             image: this.image,
             autor: this.autor,
+            backlinkUrl: this.backlinkUrl,
+            backlinkName: this.backlinkName,
             unterUeberschrift: this.unterUeberschrift,
             miniUnterUeberschrift: this.miniUnterUeberschrift
           }
