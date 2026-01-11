@@ -218,7 +218,7 @@ export default {
 
 }
 .line {
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
   color: #2c2a2a;
 }
 .linkdiv{

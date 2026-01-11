@@ -245,10 +245,7 @@ export default {
 }
 
 
-.line {
-  font-family: "Dancing Script", cursive;
-  color: rgba(44, 42, 42, 0.86);
-}
+
 a {
   text-decoration: none;
   color: inherit
@@ -258,7 +255,7 @@ a {
 
 
 .line {
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
   color: #2c2a2a;
 }
 

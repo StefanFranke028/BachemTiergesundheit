@@ -64,6 +64,10 @@ p{
   font-family: "Montserrat", sans-serif;
 
 }
+div{
+  font-family: "Montserrat", sans-serif;
+
+}
 
 body {
   font-family: "Aptos", sans-serif;
