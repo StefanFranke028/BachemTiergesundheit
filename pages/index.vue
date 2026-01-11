@@ -265,6 +265,11 @@
         <NuxtLink title="Meine Vita und intressantes über mich" to="/ueberuns" class="mx-2 footer-link text-white link" >
           Über Uns
         </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+
+        <NuxtLink title="Mein Podcast" to="/podcast" class="mx-2 footer-link text-white link" >
+         Podcast
+        </NuxtLink>
       </nav>
 
       <!-- YouTube-Link als echter externer Link -->
@@ -441,6 +446,10 @@
 
         <NuxtLink to="/ueberuns" class="mx-2 text-white link" >
           Über Uns
+        </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+        <NuxtLink to="/podcast" class="mx-2 text-white link" >
+          Podcast
         </NuxtLink>
         <a href="/Video" aria-label="YouTube" class="mx-2" style="color: red; font-size: 30px">
           <Icon icon="grommet-icons:youtube" />

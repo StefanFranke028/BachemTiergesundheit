@@ -128,38 +128,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
-      <nav class="d-flex">
-        <NuxtLink to="/impressum" class="mx-2 footer-link text-white link">
-          Impressum
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
 
-        <NuxtLink to="/admin" class="mx-2 text-white footer-link link" >
-          Verwaltung
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink to="/datenschutz" class="mx-2 footer-link text-white link" >
-          Datenschutz
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink to="/ueberuns" class="mx-2 footer-link text-white link" >
-          Über Uns
-        </NuxtLink>
-      </nav>
-
-      <!-- YouTube-Link als echter externer Link -->
-      <a href="https://www.youtube.com/results?search_query=andrea+bachem" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
-        <Icon icon="grommet-icons:youtube" />
-      </a>
-
-      <!-- Instagram-Link -->
-      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
-        <Icon icon="skill-icons:instagram" />
-      </a>
-    </footer>
   </div>
 
 
@@ -283,24 +252,6 @@
 
     </v-row>
 
-    <footer class="d-flex justify-center align-center mt-auto" style="width: 100%; flex-wrap: wrap; background-color: #0082c2; padding-bottom: 20px">
-      <NuxtLink to="/impressum" class="mx-2 text-white link" style="font-size: 12px">Impressum</NuxtLink>
-      <span class="text-white">|</span>
-      <NuxtLink to="/admin" class="mx-2 text-white link" style="font-size: 12px">Verwaltung</NuxtLink>
-      <span class="text-white">|</span>
-      <NuxtLink to="/datenschutz" class="mx-2 text-white link" style="font-size: 12px">Datenschutz</NuxtLink>
-      <span class="text-white mt-n1">|</span>
-
-      <NuxtLink to="/ueberuns" class="mx-2 text-white link" >
-        Über Uns
-      </NuxtLink>
-      <a href="/Video" aria-label="YouTube" class="mx-2" style="color: red; font-size: 30px">
-        <Icon icon="grommet-icons:youtube" />
-      </a>
-      <a href="https://www.instagram.com/andreabachem?..." target="_blank" rel="noopener" class="mx-2" style="font-size: 30px">
-        <Icon icon="skill-icons:instagram" />
-      </a>
-    </footer>
 
   </div>
 </template>
