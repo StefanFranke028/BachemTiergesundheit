@@ -37,6 +37,19 @@
 
           </v-card>
         </v-col>
+        <v-col v-if="stadt?.backlinkUrl !== null" cols="11" md="12">
+          <a
+              :href="stadt?.backlinkUrl"
+              class="linkdiv pt-1 d-block"
+          >
+            <p class="text-center" style="font-size: 22px">
+              <b>
+                {{ stadt?.backlinkName }}
+
+              </b>
+            </p>
+          </a>
+        </v-col>
       </v-row>
     </section>
 
@@ -231,5 +244,10 @@ export default {
 .line {
   font-family: "Dancing Script", cursive;
   color: #2c2a2a;
+}
+.linkdiv{
+  height: 40px;
+  background-color: white;
+  border-radius: 4px;
 }
 </style>

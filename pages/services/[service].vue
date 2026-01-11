@@ -30,7 +30,23 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col cols="11">                    <form class="layout_form cr_form cr_font" action="https://seu2.cleverreach.com/f/430331-415442/wcs/" method="post" target="_blank">
+          <v-col v-if="stadt?.backlinkUrl !== null" cols="11" md="8">
+            <a
+                :href="stadt?.backlinkUrl"
+                class="linkdiv pt-1 d-block"
+            >
+              <p class="text-center" style="font-size: 22px">
+                <b>
+                {{ stadt?.backlinkName }}
+
+                </b>
+              </p>
+            </a>
+          </v-col>
+
+
+          <v-col cols="11">
+            <form class="layout_form cr_form cr_font" action="https://seu2.cleverreach.com/f/430331-415442/wcs/" method="post" target="_blank">
             <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
               <div class="editable_content" style="text-align:left;background-color: transparent !important;">
                 <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
@@ -339,5 +355,10 @@ export default {
 .line {
   font-family: "Dancing Script", cursive;
   color: #2c2a2a;
+}
+.linkdiv{
+  height: 40px;
+  background-color: white;
+  border-radius: 4px;
 }
 </style>
