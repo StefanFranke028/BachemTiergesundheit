@@ -43,7 +43,7 @@
 
             <v-col cols="12">
               <p>
-                <a href="https://fastglobeit.de" rel="noopener" target="_blank">FastglobeIt</a>
+                <a href="https://fastglobeit.de" title="FastglobeIt Website" rel="noopener" target="_blank">FastglobeIt</a>
               </p>
             </v-col>
 
@@ -55,6 +55,7 @@
               <p>
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a
                   href="https://ec.europa.eu/consumers/odr"
+                  title="EU-Plattform zur Online-Streitbeilegung"
                   rel="noopener noreferrer"
                   target="_blank">https://ec.europa.eu/consumers/odr</a>.<br>
                 Unsere E-Mail-Adresse finden Sie oben im Impressum.<br>

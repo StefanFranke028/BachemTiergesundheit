@@ -40,6 +40,7 @@
         <v-col v-if="stadt?.backlinkUrl !== null" cols="11" md="12">
           <a
               :href="stadt?.backlinkUrl"
+              :title="stadt?.backlinkName ? `Mehr Informationen: ${stadt.backlinkName}` : 'Mehr Informationen'"
               class="linkdiv pt-1 d-block"
           >
             <p class="text-center" style="font-size: 22px">

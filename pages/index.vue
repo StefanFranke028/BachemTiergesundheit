@@ -134,7 +134,7 @@
                           <button type="submit" class="cr_form-block cr_button">Abonieren</button>
                         </div>
                         </div>
-                        <noscript><a href="http://www.cleverreach.de">www.CleverReach.de</a></noscript>
+                        <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
                       </div>
 
 
@@ -177,7 +177,7 @@
 
                   </v-col>
                   <v-col class="d-flex justify-center" cols="12">
-                    <a href="tel:01786915915">
+                    <a href="tel:01786915915" title="Anrufen: 01786915915">
                       <h3 class=" mt-n4" style="color: #fdfcfc">
                         01786915915
                       </h3>
@@ -200,7 +200,7 @@
 
                   </v-col>
                   <v-col class="d-flex justify-center" cols="12">
-                    <a href="mailto:andreabachem83@gmail.com" style="text-decoration: none" rel="noopener" target="_blank">
+                    <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem" style="text-decoration: none" rel="noopener" target="_blank">
                       <h3 class="mt-n4" style="color: #fcfbfb">
                         andreabachem83@gmail.com
                       </h3>
@@ -224,6 +224,7 @@
                   </v-col>
                   <v-col class="d-flex justify-center" cols="12">
                     <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
+                       title="Anfahrt zu Peter-May-Straße 47, Erftstadt"
                        target="_blank">
                       <p class="text-center mt-n4" style="font-size: 14px; color: #fcfafa">
                         <b>
@@ -273,12 +274,12 @@
       </nav>
 
       <!-- YouTube-Link als echter externer Link -->
-      <a href="https://www.youtube.com/results?search_query=andrea+bachem" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
+      <a href="https://www.youtube.com/results?search_query=andrea+bachem" title="Andrea Bachem auf YouTube" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
         <Icon icon="grommet-icons:youtube" />
       </a>
 
       <!-- Instagram-Link -->
-      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
+      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" title="Andrea Bachem auf Instagram" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
         <Icon icon="skill-icons:instagram" />
       </a>
     </footer>
@@ -403,7 +404,7 @@
                     <button type="submit" class="cr_form-block cr_button">Abonieren</button>
                   </div>
                 </div>
-                <noscript><a href="http://www.cleverreach.de">www.CleverReach.de</a></noscript>
+                <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
               </div>
 
 
@@ -421,13 +422,13 @@
         <v-row class="ma-0 justify-center">
           <v-col cols="11" class="d-flex justify-center" >
             <v-row class="justify-center align-center text-center"  style="gap: 50px">
-              <a href="tel:01786915915">
+              <a href="tel:01786915915" title="Anrufen: 01786915915">
                 <Icon icon="solar:phone-broken" style="font-size: 24px; color: white; cursor: pointer"/>
               </a>
-              <a href="mailto:andreabachem83@gmail.com">
+              <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem">
                 <Icon icon="ic:outline-mail" style="font-size: 24px; color: white; cursor: pointer"/>
               </a>
-              <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280338,6.7222716,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046719!2d50.8280628!3e0?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+              <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280338,6.7222716,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046719!2d50.8280628!3e0?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" title="Anfahrt zu Peter-May-Straße 47, Erftstadt" target="_blank">
                 <Icon icon="ic:outline-place" style="font-size: 24px; color: white; cursor: pointer"/>
               </a>
             </v-row>
@@ -437,24 +438,24 @@
 
       <!-- Footer -->
       <footer class="d-flex justify-center align-center mt-auto" style="width: 100%; flex-wrap: wrap; background-color: #0082c2; padding-bottom: 20px">
-        <NuxtLink to="/impressum" class="mx-2 text-white link" style="font-size: 12px">Impressum</NuxtLink>
+        <NuxtLink to="/impressum" title="Impressum" class="mx-2 text-white link" style="font-size: 12px">Impressum</NuxtLink>
         <span class="text-white">|</span>
-        <NuxtLink to="/admin" class="mx-2 text-white link" style="font-size: 12px">Verwaltung</NuxtLink>
+        <NuxtLink to="/admin" title="Verwaltung" class="mx-2 text-white link" style="font-size: 12px">Verwaltung</NuxtLink>
         <span class="text-white">|</span>
-        <NuxtLink to="/datenschutz" class="mx-2 text-white link" style="font-size: 12px">Datenschutz</NuxtLink>
+        <NuxtLink to="/datenschutz" title="Datenschutz" class="mx-2 text-white link" style="font-size: 12px">Datenschutz</NuxtLink>
         <span class="text-white mt-n1">|</span>
 
-        <NuxtLink to="/ueberuns" class="mx-2 text-white link" >
+        <NuxtLink to="/ueberuns" title="Über Uns" class="mx-2 text-white link" >
           Über Uns
         </NuxtLink>
         <span class="text-white mt-n1">|</span>
-        <NuxtLink to="/podcast" class="mx-2 text-white link" >
+        <NuxtLink to="/podcast" title="Podcast" class="mx-2 text-white link" >
           Podcast
         </NuxtLink>
-        <a href="/Video" aria-label="YouTube" class="mx-2" style="color: red; font-size: 30px">
+        <a href="/Video" title="Videos" aria-label="YouTube" class="mx-2" style="color: red; font-size: 30px">
           <Icon icon="grommet-icons:youtube" />
         </a>
-        <a href="https://www.instagram.com/andreabachem?..." target="_blank" rel="noopener" class="mx-2" style="font-size: 30px">
+        <a href="https://www.instagram.com/andreabachem?..." title="Andrea Bachem auf Instagram" target="_blank" rel="noopener" class="mx-2" style="font-size: 30px">
           <Icon icon="skill-icons:instagram" />
         </a>
       </footer>
@@ -541,6 +542,10 @@ useHead({
       name: 'description',
       content:
           'Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie & Ernährungsberatung ganzheitliche Therapie für dein Tier.',
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
     },
     {
       property: 'og:title',
@@ -666,7 +671,7 @@ export default {
                 <h3>Hallo Andrea,</h3>
                 <p>
                   Es wurde eine neue Kontaktanfrage gestellt. Weitere Details können Sie unter folgendem Link einsehen:
-                  <a href="https://tier-gesundheitszentrum.com/admin/">Zur Verwaltung</a>
+                  <a href="https://tier-gesundheitszentrum.com/admin/" title="Zur Verwaltung">Zur Verwaltung</a>
                 </p>
                 <br>
                 <p>
@@ -695,7 +700,7 @@ export default {
                 </p>
                 <p>
                   Bei weiteren Problemen oder Fragen können Sie sich gerne unter folgender E-Mail-Adresse melden:
-                  <a href="mailto:andreabachem83@gmail.com">andreabachem83@gmail.com</a>
+                  <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem">andreabachem83@gmail.com</a>
                 </p>
                 <br>
                 <p>

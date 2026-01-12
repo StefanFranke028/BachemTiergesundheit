@@ -98,7 +98,7 @@
                   <td>{{ item.unterUeberschrift }}</td>
                   <td>{{ item.miniUnterUeberschrift }}</td>
                   <td>
-                    <a :href="item.backlinkUrl">
+                    <a :href="item.backlinkUrl" :title="item.backlinkName || item.backlinkUrl">
                       {{ item.backlinkName }}
                     </a>
                   </td>

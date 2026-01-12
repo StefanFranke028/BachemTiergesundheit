@@ -21,7 +21,7 @@
                 <tr>
                   <td>{{ item.id }}</td>
                   <td>
-                    <a :href="'mailto:' + item.email" target="_blank">
+                    <a :href="'mailto:' + item.email" :title="`E-Mail an ${item.email}`" target="_blank">
                       {{ item.email }}
                     </a>
                   </td>

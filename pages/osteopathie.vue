@@ -170,6 +170,10 @@ useHead({
           'Tierosteopathie Hund, Tierosteopathie Pferd, Osteopathie Tiere Erftstadt, Andrea Bachem, Tiertherapie, ganzheitliche Tierbehandlung, Gelenkprobleme Tiere, sanfte Tierbehandlung',
     },
     {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
       name: 'author',
       content: 'Andrea Bachem'
     },

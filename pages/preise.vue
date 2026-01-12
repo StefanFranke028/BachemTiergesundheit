@@ -104,7 +104,7 @@
             <v-row style="width: 100%;" class="ma-0 mt-5">
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn class="mt-3" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                  <NuxtLink to="/">
+                  <NuxtLink to="/" title="Termin vereinbaren">
                     Termin Vereinbaren &gt;
 
                   </NuxtLink>
@@ -214,7 +214,7 @@
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn  class="mt-3 " style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
 
-                  <a :href="preis.link" style="text-decoration: none" target="_blank">
+                  <a :href="preis.link" :title="preis.ueberschrift ? `Mehr zu ${preis.ueberschrift}` : 'Mehr zur Leistung'" style="text-decoration: none" target="_blank">
                     Zum Produkt >
                   </a>
                 </v-btn>
@@ -272,6 +272,10 @@ useHead({
       name: 'keywords',
       content:
           'Tierprodukte Hund Pferd, Tierpreise, Tierbehandlung Kosten, Osteopathie Preise Tiere, Andrea Bachem, Tiergesundheit, Tierosteopathie Erftstadt'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
     },
     {
       name: 'author',

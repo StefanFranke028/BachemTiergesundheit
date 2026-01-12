@@ -91,7 +91,7 @@
             <v-row style="width: 100%;" class="ma-0 mt-n5">
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn class="mt-7" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                  <NuxtLink :to="'/tiergesundheit-'+ preis.name">
+                  <NuxtLink :to="'/tiergesundheit-'+ preis.name" :title="preis.überschrift ? `Zum Bericht: ${preis.überschrift}` : 'Zum Bericht'">
                     Zum Bericht >
 
                   </NuxtLink>
@@ -187,7 +187,7 @@
           <v-row style="width: 100%;" class="ma-0 mt-n5">
             <v-col cols="12" class="d-flex justify-center">
               <v-btn class="mt-7" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                <NuxtLink :to="'/tiergesundheit-'+ preis.name">
+                <NuxtLink :to="'/tiergesundheit-'+ preis.name" :title="preis.überschrift ? `Zum Bericht: ${preis.überschrift}` : 'Zum Bericht'">
                   Zum Bericht >
                 </NuxtLink>
               </v-btn>
@@ -225,6 +225,10 @@ useHead({
       name: 'keywords',
       content:
           'Tiergesundheit Berichte, Tierosteopathie Erfahrungen, Hund Behandlung, Pferde Chiropraktik, Andrea Bachem, Tierheilpraktikerin Erftstadt, Tierseminare, Tierheilung'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
     },
     {
       name: 'author',

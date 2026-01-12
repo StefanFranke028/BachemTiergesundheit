@@ -33,6 +33,7 @@
           <v-col v-if="stadt?.backlinkUrl !== null" cols="11" md="8">
             <a
                 :href="stadt?.backlinkUrl"
+                :title="stadt?.backlinkName ? `Mehr Informationen: ${stadt.backlinkName}` : 'Mehr Informationen'"
                 class="linkdiv pt-1 d-block"
             >
               <p class="text-center" style="font-size: 22px">
@@ -59,7 +60,7 @@
                   <button type="submit" class="cr_form-block cr_button">Abonieren</button>
                 </div>
               </div>
-              <noscript><a href="http://www.cleverreach.de">www.CleverReach.de</a></noscript>
+              <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
             </div>
 
 
@@ -98,12 +99,12 @@
       </nav>
 
       <!-- YouTube-Link als echter externer Link -->
-      <a href="https://www.youtube.com/results?search_query=andrea+bachem" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
+      <a href="https://www.youtube.com/results?search_query=andrea+bachem" title="Andrea Bachem auf YouTube" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
         <Icon icon="grommet-icons:youtube" />
       </a>
 
       <!-- Instagram-Link -->
-      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
+      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" title="Andrea Bachem auf Instagram" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
         <Icon icon="skill-icons:instagram" />
       </a>
     </footer>

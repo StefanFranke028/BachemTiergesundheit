@@ -65,6 +65,10 @@ useHead({
       content: 'Tierphysiotherapie, Tierosteopathie, Dorntherapie, Akupunktur, manuelle Therapie, Hunde, Pferde, Katzen, Andrea Bachem, Tiertherapie, Tiergesundheit, Bewegungstherapie, Tierdozentin'
     },
     {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
       name: 'author',
       content: 'Andrea Bachem'
     }

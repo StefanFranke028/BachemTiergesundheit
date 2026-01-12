@@ -84,7 +84,7 @@
             <v-row style="width: 100%;" class="ma-0 mt-n5">
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn class="mt-7" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                  <NuxtLink :to="'/services/service-'+ preis.url">
+                  <NuxtLink :to="'/services/service-'+ preis.url" :title="preis.ueberschrift ? `Zum Service: ${preis.ueberschrift}` : 'Zum Service'">
                     Zum Service>
                   </NuxtLink>
 
@@ -175,7 +175,7 @@
           <v-row style="width: 100%;" class="ma-0 mt-n5">
             <v-col cols="12" class="d-flex justify-center">
               <v-btn class="mt-7" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                <NuxtLink :to="'/services/service-'+ preis.url">
+                <NuxtLink :to="'/services/service-'+ preis.url" :title="preis.ueberschrift ? `Zum Service: ${preis.ueberschrift}` : 'Zum Service'">
                   Zum Service >
 
                 </NuxtLink>
@@ -214,6 +214,10 @@ useHead({
     {
       name: 'keywords',
       content: 'Tiergesundheit Leistungen, Tierosteopathie, Chiropraktik Hund Pferd, Tierheilpraktikerin Erftstadt, Andrea Bachem, Tierberatung, Fütterung Tier'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
     },
     {
       name: 'author',

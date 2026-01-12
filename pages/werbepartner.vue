@@ -42,7 +42,7 @@
               cols="12"
               md="4"
           >
-            <a :href="partner.url" :target="partner.target" :rel="partner.rel">
+            <a :href="partner.url" :title="partner.name ? `Werbepartner: ${partner.name}` : 'Werbepartner'" :target="partner.target" :rel="partner.rel">
               <v-card class="pa-4 text-center" style="min-height: 230px">
                 <v-img :src="partner.image" :alt="partner.name" contain height="100" />
                 <h3 class="mt-2">{{ partner.name }}</h3>
@@ -106,7 +106,7 @@
                 cols="12"
                 md="4"
             >
-              <a :href="partner.url" :target="partner.target" :rel="partner.rel">
+              <a :href="partner.url" :title="partner.name ? `Werbepartner: ${partner.name}` : 'Werbepartner'" :target="partner.target" :rel="partner.rel">
                 <v-card class="pa-4 text-center">
                   <v-img :src="partner.image" :alt="partner.name" contain height="100" />
                   <h3 class="mt-2">{{ partner.name }}</h3>

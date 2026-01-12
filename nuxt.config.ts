@@ -1,6 +1,14 @@
 export default defineNuxtConfig({
     ssr: true,
     target: 'server',
+    app: {
+        head: {
+            meta: [
+                { name: 'author', content: 'Andrea Bachem' },
+                { name: 'publisher', content: 'Andrea Bachem' },
+            ],
+        },
+    },
     build: {
         extend(config, ctx) {
             if (ctx.isClient) {

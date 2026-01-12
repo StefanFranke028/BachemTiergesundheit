@@ -70,7 +70,7 @@
                 <tr>
                   <td>{{ item.id }}</td>
                   <td>{{ item.ueberschrift }}</td>
-                  <td><a :href="item.link" target="_blank">{{ item.link }}</a></td>
+                  <td><a :href="item.link" :title="item.ueberschrift ? `Produktlink: ${item.ueberschrift}` : item.link" target="_blank">{{ item.link }}</a></td>
                   <td>
                     <Icon :icon="item.löschen" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
                   </td>

@@ -14,7 +14,7 @@
         <v-row v-else class="d-flex justify-center ma-0"
                style="background-color: rgba(255,255,255,0.0); width: 100vw; height: 100vh">
           <v-col class="d-flex justify-center align-center" cols="3">
-            <router-link to="/">
+            <router-link to="/" title="Zurück zur Startseite">
               <h3 class="text-center">Zurück zur Startseite</h3>
             </router-link>
           </v-col>
@@ -65,12 +65,24 @@
       </v-card-title>
       <v-card-item>
         Diese Ansicht ist leider auf dem Handy nicht verfügbar. Bitte kehren Sie zur
-        <router-link style="color: blue" to="/">Startseite</router-link>
+        <router-link style="color: blue" to="/" title="Zur Startseite">Startseite</router-link>
         zurück.
       </v-card-item>
     </v-card>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Verwaltung | Andrea Bachem',
+  meta: [
+    {
+      name: 'robots',
+      content: 'noindex, nofollow'
+    }
+  ]
+});
+</script>
 
 <script>
 import {useUserStore} from "~/stores/user.js";
