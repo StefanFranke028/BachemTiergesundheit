@@ -8,14 +8,14 @@
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
-      <v-col cols="12">
-        <div class="pa-7 d-flex justify-center" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
-          <div style="width: 86%;">
-            <h1 class="line mt-3">Unsere Leistungen – Ganzheitliche Tiergesundheit mit Herz und Verstand</h1>
+      <v-col cols="10">
+        <div class="pa-7 d-flex justify-center background-impressum" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div >
+            <h1 class="line mt-3">Unsere Leistungen <br> Ganzheitliche Tiergesundheit mit Herz und Verstand</h1>
             <p>
-              Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an ganzheitlichen Behandlungsmethoden für Hunde,
-              <br>
-              Katzen, Pferde und andere Tiere. Mit einem tiefen Verständnis für Tierkörper und -seele begleiten wir Ihr              <br>
+              Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an <br>
+              ganzheitlichen Behandlungsmethoden für Hunde, Katzen, Pferde und andere Tiere. <br>
+              Mit einem tiefen Verständnis für Tierkörper und -seele begleiten wir Ihr              <br>
               Tier individuell und achtsam auf seinem Weg zur Gesundheit.
             </p>
 
@@ -339,14 +339,14 @@ export default {
 <style scoped>
 .line {
   font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 }
 a {
   text-decoration: none;
   color: inherit
 }
 p{
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 
 }
 
@@ -361,7 +361,12 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.background-impressum {
 
+  background-image: url("@/assets/paper.webp");
+  background-size: cover;
+
+}
 
 a:focus {
   outline: 2px solid blue;

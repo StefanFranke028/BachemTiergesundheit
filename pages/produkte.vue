@@ -8,9 +8,9 @@
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
-      <v-col cols="12" class="r">
-        <v-card class="pa-7  d-flex justify-center" style="overflow: auto; max-height: 70vh; width: 100%; background-color: rgba(0,0,0,0)">
-          <div style="width: 85%;">
+      <v-col cols="10" class="r">
+        <div class="pa-7 d-flex justify-center background-impressum" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div >
             <h1 class="line">Ausgewählte Tierprodukte für Gesundheit und Wohlbefinden</h1>
 
             <h2 class="line mt-3">Hochwertige Produkte – sorgfältig für dein Tier ausgewählt</h2>
@@ -44,7 +44,7 @@
 
           </div>
 
-        </v-card>
+        </div>
       </v-col>
 
 
@@ -338,14 +338,14 @@ export default {
 
 .line {
   font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 }
 a {
   text-decoration: none;
   color: inherit
 }
 p{
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 
 }
 

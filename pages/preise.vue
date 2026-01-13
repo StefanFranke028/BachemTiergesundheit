@@ -8,8 +8,8 @@
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
-      <v-col cols="12">
-        <div class="pa-7 d-flex justify-center" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+      <v-col cols="10">
+        <div class="pa-7 d-flex justify-center background-impressum" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
           <div style="width: 85%;">
             <h1 class="line">Preise & Leistungen im Tiergesundheitszentrum Andrea Bachem</h1>
 
@@ -405,14 +405,14 @@ export default {
 
 .line {
   font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 }
 a {
   text-decoration: none;
   color: inherit
 }
 p{
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 
 }
 

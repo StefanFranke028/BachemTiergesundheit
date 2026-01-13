@@ -8,15 +8,16 @@
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
-      <v-col cols="12">
-        <div class="pa-7 ml-12 d-flex justify-center" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
-          <div style="width: 90%;">
+      <v-col cols="10">
+        <div class="pa-7 d-flex justify-center background-impressum" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div>
             <h1 class="line mt-3">Berichte aus der Praxis – Tiergesundheit Andrea Bachem</h1>
 
             <p>
               In unserer Tiergesundheitspraxis in Erftstadt legen wir großen Wert auf Transparenz, Fachwissen und persönliche Erfahrungen.
               <br>
-              Auf dieser Seite finden Sie aktuelle Berichte über Behandlungen, Seminare, Erfahrungsberichte von Tierhaltern sowie besondere Ereignisse aus unserem Praxisalltag.
+              Auf dieser Seite finden Sie aktuelle Berichte über Behandlungen, Seminare, Erfahrungsberichte von Tierhaltern
+              <br> sowie besondere Ereignisse aus unserem Praxisalltag.
             </p>
 
             <h2 class="line mt-3">Aktuelle Einblicke in unsere Arbeit mit Tieren</h2>
@@ -358,14 +359,14 @@ export default {
 <style scoped>
 .line {
   font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 }
 a {
   text-decoration: none;
   color: inherit
 }
 p{
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 
 }
 
@@ -380,7 +381,12 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.background-impressum {
 
+  background-image: url("@/assets/paper.webp");
+  background-size: cover;
+
+}
 
 a:focus {
   outline: 2px solid blue;
