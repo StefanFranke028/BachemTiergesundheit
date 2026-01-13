@@ -8,33 +8,41 @@
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
-      <v-col cols="12">
-        <v-card class="pa-7" style="overflow: auto; max-height: 70vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line">Ausgewählte Tierprodukte für Gesundheit und Wohlbefinden</h1>
+      <v-col cols="12" class="r">
+        <v-card class="pa-7  d-flex justify-center" style="overflow: auto; max-height: 70vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div style="width: 85%;">
+            <h1 class="line">Ausgewählte Tierprodukte für Gesundheit und Wohlbefinden</h1>
 
-          <h2 class="line mt-3">Hochwertige Produkte – sorgfältig für dein Tier ausgewählt</h2>
-          <p>
-            Im Tiergesundheitszentrum Andrea Bachem findest du eine Auswahl bewährter Produkte von renommierten Herstellern.
-            Ob unterstützende Nahrungsergänzung, Pflegeprodukte oder therapeutische Hilfsmittel – jedes Produkt wurde mit Blick auf
-            Wirkung, Qualität und Verträglichkeit geprüft.
-          </p>
+            <h2 class="line mt-3">Hochwertige Produkte – sorgfältig für dein Tier ausgewählt</h2>
+            <p>
+              Im Tiergesundheitszentrum Andrea Bachem findest du eine Auswahl bewährter Produkte von renommierten Herstellern.
+              <br>
+              Ob unterstützende Nahrungsergänzung, Pflegeprodukte oder therapeutische Hilfsmittel – jedes Produkt wurde mit Blick auf
+              <br>
+              Wirkung, Qualität und Verträglichkeit geprüft.
+            </p>
 
-          <h2 class="line mt-3">Zusammenarbeit mit erfahrenen Marken</h2>
-          <p>
-            Unsere Empfehlungen basieren auf langjähriger Erfahrung in der tiergestützten Therapie. Wir arbeiten eng mit Herstellern
-            zusammen, die sich durch tierschonende, wirksame und naturbasierte Ansätze auszeichnen. So findest du bei uns nur das,
-            was wir auch selbst im Alltag verwenden würden.
-          </p>
+            <h2 class="line mt-3">Zusammenarbeit mit erfahrenen Marken</h2>
+            <p>
+              Unsere Empfehlungen basieren auf langjähriger Erfahrung in der tiergestützten Therapie. Wir arbeiten eng mit Herstellern
+              <br>
+              zusammen, die sich durch tierschonende, wirksame und naturbasierte Ansätze auszeichnen. So findest du bei uns nur das,         <br>
+              was wir auch selbst im Alltag verwenden würden.
+            </p>
 
-          <h3 class="line mt-3">Für Hund, Pferd und andere tierische Begleiter</h3>
-          <p>
-            Ganz gleich, ob du ein unterstützendes Produkt für deinen Hund suchst oder gezielt Ergänzungen für dein Pferd brauchst – wir helfen dir bei der Auswahl und beantworten gern deine Fragen zur Anwendung.
-          </p>
+            <h3 class="line mt-3">Für Hund, Pferd und andere tierische Begleiter</h3>
+            <p>
+              Ganz gleich, ob du ein unterstützendes Produkt für deinen Hund suchst oder gezielt Ergänzungen für dein Pferd brauchst        <br>
+              wir helfen dir bei der Auswahl und beantworten gern deine Fragen zur Anwendung.
+            </p>
 
-          <h2 class="line mt-3">Individuelle Beratung vor Ort oder telefonisch</h2>
-          <p>
-            Du bist unsicher, welches Produkt zu deinem Tier passt? Sprich uns gerne an. Wir beraten dich individuell und kompetent – abgestimmt auf das Alter, die Bedürfnisse und den Gesundheitszustand deines Tieres.
-          </p>
+            <h2 class="line mt-3">Individuelle Beratung vor Ort oder telefonisch</h2>
+            <p>
+              Du bist unsicher, welches Produkt zu deinem Tier passt? Sprich uns gerne an. Wir beraten dich individuell und kompetent         <br>
+              abgestimmt auf das Alter, die Bedürfnisse und den Gesundheitszustand deines Tieres.
+            </p>
+
+          </div>
 
         </v-card>
       </v-col>

@@ -9,40 +9,51 @@
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
       <v-col cols="12">
-        <v-card class="pa-7" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line mt-3">Unsere Leistungen – Ganzheitliche Tiergesundheit mit Herz und Verstand</h1>
-          <p>
-            Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an ganzheitlichen Behandlungsmethoden für Hunde, Katzen, Pferde und andere Tiere. Mit einem tiefen Verständnis für Tierkörper und -seele begleiten wir Ihr Tier individuell und achtsam auf seinem Weg zur Gesundheit.
-          </p>
+        <div class="pa-7 d-flex justify-center" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div style="width: 86%;">
+            <h1 class="line mt-3">Unsere Leistungen – Ganzheitliche Tiergesundheit mit Herz und Verstand</h1>
+            <p>
+              Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an ganzheitlichen Behandlungsmethoden für Hunde,
+              <br>
+              Katzen, Pferde und andere Tiere. Mit einem tiefen Verständnis für Tierkörper und -seele begleiten wir Ihr              <br>
+              Tier individuell und achtsam auf seinem Weg zur Gesundheit.
+            </p>
 
-          <h2 class="line mt-3">Ganzheitliche Therapiekonzepte für Ihr Tier</h2>
-          <p>
-            Unsere Leistungen vereinen traditionelles Wissen mit moderner Tierheilkunde. Dabei setzen wir auf natürliche, sanfte Methoden, die Körper, Geist und Seele Ihres Tieres in Einklang bringen.
-          </p>
+            <h2 class="line mt-3">Ganzheitliche Therapiekonzepte für Ihr Tier</h2>
+            <p>
+              Unsere Leistungen vereinen traditionelles Wissen mit moderner Tierheilkunde. Dabei setzen wir auf natürliche,              <br>
+              sanfte Methoden, die Körper, Geist und Seele Ihres Tieres in Einklang bringen.
+            </p>
 
-          <h3 class="line mt-3">Osteopathie & Chiropraktik</h3>
-          <p>
-            Verspannungen, Lahmheiten oder Verhaltensauffälligkeiten? Mit gezielten osteopathischen und chiropraktischen Techniken lösen wir Blockaden und fördern die Beweglichkeit Ihres Tieres.
-          </p>
+            <h3 class="line mt-3">Osteopathie & Chiropraktik</h3>
+            <p>
+              Verspannungen, Lahmheiten oder Verhaltensauffälligkeiten? Mit gezielten osteopathischen und              <br>
+              chiropraktischen Techniken lösen wir Blockaden und fördern die Beweglichkeit Ihres Tieres.
+            </p>
 
-          <h2 class="line mt-3">Zusatzleistungen für Tierhalter</h2>
-          <p>
-            Neben der Behandlung Ihres Tieres bieten wir umfassende Beratung und begleitende Leistungen – individuell, verständlich und praxisnah.
-          </p>
+            <h2 class="line mt-3">Zusatzleistungen für Tierhalter</h2>
+            <p>
+              Neben der Behandlung Ihres Tieres bieten wir umfassende Beratung und begleitende Leistungen              <br>
+              individuell, verständlich und praxisnah.
+            </p>
 
-          <h3 class="line mt-3">Fütterungsberatung</h3>
-          <p>
-            Die richtige Ernährung ist die Basis für Gesundheit. Wir erstellen individuelle Fütterungskonzepte abgestimmt auf Alter, Rasse, Vorerkrankungen und Lebensumstände.
-          </p>
-
-
-          <h2 class="line mt-3">Warum Sie uns vertrauen können</h2>
-          <p>
-            Fachliche Kompetenz, jahrelange Erfahrung und ein liebevoller Umgang mit Tier und Mensch das zeichnet unsere Praxis aus. Wir nehmen uns Zeit, hören zu und gehen individuell auf die Bedürfnisse Ihres Tieres ein.
-          </p>
+            <h3 class="line mt-3">Fütterungsberatung</h3>
+            <p>
+              Die richtige Ernährung ist die Basis für Gesundheit. Wir erstellen individuelle Fütterungskonzepte              <br>
+              abgestimmt auf Alter, Rasse, Vorerkrankungen und Lebensumstände.
+            </p>
 
 
-        </v-card>
+            <h2 class="line mt-3">Warum Sie uns vertrauen können</h2>
+            <p>
+              Fachliche Kompetenz, jahrelange Erfahrung und ein liebevoller Umgang mit Tier und Mensch das zeichnet              <br>
+              unsere Praxis aus. Wir nehmen uns Zeit, hören zu und gehen individuell auf die Bedürfnisse Ihres Tieres ein.
+            </p>
+
+          </div>
+
+
+        </div>
       </v-col>
 
 

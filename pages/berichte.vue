@@ -9,47 +9,59 @@
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
       <v-col cols="12">
-        <v-card class="pa-7" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line mt-3">Berichte aus der Praxis – Tiergesundheit Andrea Bachem</h1>
+        <div class="pa-7 ml-12 d-flex justify-center" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div style="width: 90%;">
+            <h1 class="line mt-3">Berichte aus der Praxis – Tiergesundheit Andrea Bachem</h1>
 
-          <p>
-            In unserer Tiergesundheitspraxis in Erftstadt legen wir großen Wert auf Transparenz, Fachwissen und persönliche Erfahrungen. Auf dieser Seite finden Sie aktuelle Berichte über Behandlungen, Seminare, Erfahrungsberichte von Tierhaltern sowie besondere Ereignisse aus unserem Praxisalltag.
-          </p>
+            <p>
+              In unserer Tiergesundheitspraxis in Erftstadt legen wir großen Wert auf Transparenz, Fachwissen und persönliche Erfahrungen.
+              <br>
+              Auf dieser Seite finden Sie aktuelle Berichte über Behandlungen, Seminare, Erfahrungsberichte von Tierhaltern sowie besondere Ereignisse aus unserem Praxisalltag.
+            </p>
 
-          <h2 class="line mt-3">Aktuelle Einblicke in unsere Arbeit mit Tieren</h2>
+            <h2 class="line mt-3">Aktuelle Einblicke in unsere Arbeit mit Tieren</h2>
 
-          <p>
-            Unsere Arbeit mit Tieren ist vielfältig, liebevoll und fachlich fundiert. In den folgenden Berichten erhalten Sie ehrliche Einblicke in die ganzheitlichen Behandlungsansätze, die wir bei Hunden, Katzen, Pferden und weiteren Tierarten anwenden.
-          </p>
+            <p>
+              Unsere Arbeit mit Tieren ist vielfältig, liebevoll und fachlich fundiert. In den folgenden Berichten erhalten Sie ehrliche
+              <br> Einblicke in die ganzheitlichen Behandlungsansätze, die wir bei Hunden, Katzen, Pferden und weiteren Tierarten anwenden.
+            </p>
 
-          <h3 class="line mt-3">Ganzheitliche Therapie im Fokus</h3>
-          <p>
-            Ob über die Anwendung von Homöopathie, Mykotherapie, Akupunktur oder energetischen Heilmethoden – wir zeigen anhand echter Beispiele, wie individuell abgestimmte Therapiepläne den Heilungsverlauf positiv beeinflussen.
-          </p>
+            <h3 class="line mt-3">Ganzheitliche Therapie im Fokus</h3>
+            <p>
+              Ob über die Anwendung von Homöopathie, Mykotherapie, Akupunktur oder energetischen Heilmethoden
+              <br> wir zeigen anhand echter Beispiele, wie individuell abgestimmte Therapiepläne den Heilungsverlauf positiv beeinflussen.
+            </p>
 
-          <h3 class="line mt-3">Erfahrungsberichte unserer Kunden</h3>
-          <p>
-            Lesen Sie authentische Stimmen unserer Tierhalter, die über ihre Erfahrungen mit unserer Praxis berichten. Vertrauen, Achtsamkeit und nachhaltige Tiergesundheit stehen dabei immer im Vordergrund.
-          </p>
+            <h3 class="line mt-3">Erfahrungsberichte unserer Kunden</h3>
+            <p>
+              Lesen Sie authentische Stimmen unserer Tierhalter, die über ihre Erfahrungen mit unserer Praxis berichten. Vertrauen, Achtsamkeit
+              <br> und nachhaltige Tiergesundheit stehen dabei immer im Vordergrund.
+            </p>
 
-          <h2 class="line mt-3">Veranstaltungen & Workshops rund um Tiergesundheit</h2>
-          <p>
-            In regelmäßigen Abständen veranstalten wir Workshops, Informationsabende oder Fortbildungen zu Themen wie Fütterung, Impfkritik, Verhalten oder alternativen Heilmethoden. Unsere Berichte dazu finden Sie hier.
-          </p>
+            <h2 class="line mt-3">Veranstaltungen & Workshops rund um Tiergesundheit</h2>
+            <p>
+              In regelmäßigen Abständen veranstalten wir Workshops, Informationsabende oder Fortbildungen zu Themen wie Fütterung,
+              <br> Impfkritik, Verhalten oder alternativen Heilmethoden. Unsere Berichte dazu finden Sie hier.
+            </p>
 
-          <h3 class="line mt-3">Praxiswissen verständlich erklärt</h3>
-          <p>
-            In jedem Bericht geben wir fachlich fundierte, aber leicht verständliche Einblicke in komplexe Themen der Tiermedizin damit Sie als Tierhalter fundierte Entscheidungen treffen können.
-          </p>
+            <h3 class="line mt-3">Praxiswissen verständlich erklärt</h3>
+            <p>
+              In jedem Bericht geben wir fachlich fundierte, aber leicht verständliche Einblicke in komplexe Themen <br>
+              der Tiermedizin damit Sie als Tierhalter fundierte Entscheidungen treffen können.
+            </p>
 
-          <h2 class="line mt-3">Warum Transparenz bei uns wichtig ist</h2>
-          <p>
-            Mit unseren Praxisberichten möchten wir Ihnen nicht nur zeigen, wie wir arbeiten sondern auch Vertrauen schaffen. Sie sollen wissen, worauf Sie sich bei einem Besuch in unserer Praxis verlassen können: Kompetenz, Herz und ganzheitliche Tiermedizin.
-          </p>
+            <h2 class="line mt-3">Warum Transparenz bei uns wichtig ist</h2>
+            <p>
+              Mit unseren Praxisberichten möchten wir Ihnen nicht nur zeigen, wie wir arbeiten sondern auch Vertrauen schaffen.
+              <br>
+              Sie sollen wissen, worauf Sie sich bei einem Besuch in unserer Praxis verlassen können: Kompetenz, Herz und ganzheitliche Tiermedizin.
+            </p>
 
 
 
-        </v-card>
+          </div>
+          </div>
+
       </v-col>
 
 

@@ -9,61 +9,75 @@
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
 
       <v-col cols="12">
-        <v-card class="pa-7" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line">Preise & Leistungen im Tiergesundheitszentrum Andrea Bachem</h1>
+        <div class="pa-7 d-flex justify-center" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
+          <div style="width: 85%;">
+            <h1 class="line">Preise & Leistungen im Tiergesundheitszentrum Andrea Bachem</h1>
 
-          <h2 class="line mt-3">Transparente Kosten für Behandlung, Beratung & Zusatzservices</h2>
-          <p>
-            Im Tiergesundheitszentrum Andrea Bachem in Erftstadt stehen die Gesundheit und das Wohlbefinden deines Tieres im Mittelpunkt. Unsere Preise sind transparent, fair und auf die individuellen Bedürfnisse von Hund, Pferd und anderen tierischen Begleitern abgestimmt. Hier findest du eine Übersicht über alle Leistungen und deren Kosten.
-          </p>
+            <h2 class="line mt-3">Transparente Kosten für Behandlung, Beratung & Zusatzservices</h2>
+            <p>
+              Im Tiergesundheitszentrum Andrea Bachem in Erftstadt stehen die Gesundheit und das Wohlbefinden deines Tieres im Mittelpunkt.
+              <br>
+              Unsere Preise sind transparent, fair und auf die individuellen Bedürfnisse von Hund, Pferd und anderen tierischen Begleitern abgestimmt.       <br>
+              Hier findest du eine Übersicht über alle Leistungen und deren Kosten.
+            </p>
 
-          <h2 class="line mt-4">Therapeutische Behandlungen für Hund und Pferd</h2>
+            <h2 class="line mt-4">Therapeutische Behandlungen für Hund und Pferd</h2>
 
-          <h3 class="line mt-3">Tierosteopathie</h3>
-          <p>
-            Ganzheitliche osteopathische Behandlungen zur Förderung der Selbstheilung und Mobilität deines Tieres. Geeignet bei Bewegungseinschränkungen, Verspannungen und chronischen Beschwerden.
-          </p>
+            <h3 class="line mt-3">Tierosteopathie</h3>
+            <p>
+              Ganzheitliche osteopathische Behandlungen zur Förderung der Selbstheilung und Mobilität deines Tieres.        <br>
+              Geeignet bei Bewegungseinschränkungen, Verspannungen und chronischen Beschwerden.
+            </p>
 
-          <h3 class="line mt-3">Tierphysiotherapie</h3>
-          <p>
-            Gezielte physiotherapeutische Maßnahmen wie Massagen, Dehnungen, aktive Übungen und mehr – individuell abgestimmt auf den Zustand deines Tieres.
-          </p>
+            <h3 class="line mt-3">Tierphysiotherapie</h3>
+            <p>
+              Gezielte physiotherapeutische Maßnahmen wie Massagen, Dehnungen, aktive Übungen und mehr
+              <br> individuell abgestimmt auf den Zustand deines Tieres.
+            </p>
 
-          <h3 class="line mt-3">Chiropraktik für Tiere</h3>
-          <p>
-            Sanfte chiropraktische Justierungen zur Korrektur von Blockaden und zur Förderung der Beweglichkeit. Ideal für sportlich geführte Tiere oder nach Verletzungen.
-          </p>
+            <h3 class="line mt-3">Chiropraktik für Tiere</h3>
+            <p>
+              Sanfte chiropraktische Justierungen zur Korrektur von Blockaden und zur Förderung der Beweglichkeit.       <br>
+              Ideal für sportlich geführte Tiere oder nach Verletzungen.
+            </p>
 
-          <h2 class="line mt-4">Weitere Leistungen & Zusatzangebote</h2>
+            <h2 class="line mt-4">Weitere Leistungen & Zusatzangebote</h2>
 
-          <h3 class="line mt-3">Ernährungsberatung</h3>
-          <p>
-            Individuelle Beratung zur artgerechten und gesundheitsfördernden Ernährung deines Tieres – abgestimmt auf Alter, Rasse und Beschwerden.
-          </p>
+            <h3 class="line mt-3">Ernährungsberatung</h3>
+            <p>
+              Individuelle Beratung zur artgerechten und gesundheitsfördernden Ernährung deines Tieres        <br>
+              abgestimmt auf Alter, Rasse und Beschwerden.
+            </p>
 
-          <h3 class="line mt-3">Mobile Tierbehandlung</h3>
-          <p>
-            Behandlungen vor Ort direkt bei dir zuhause oder im Stall. Ideal für Tiere, die den Transport schlecht vertragen oder sich in gewohnter Umgebung wohler fühlen. Es fällt eine Anfahrtspauschale an, abhängig vom Standort.
-          </p>
+            <h3 class="line mt-3">Mobile Tierbehandlung</h3>
+            <p>
+              Behandlungen vor Ort direkt bei dir zuhause oder im Stall. Ideal für Tiere, die den Transport schlecht        <br>
+              vertragen oder sich in gewohnter Umgebung wohler fühlen. Es fällt eine Anfahrtspauschale an, abhängig vom Standort.
+            </p>
 
-          <h3 class="line mt-3">Kooperation mit Tierärzten & Therapeuten</h3>
-          <p>
-            Interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten für eine bestmögliche Versorgung deines Tieres.
-          </p>
+            <h3 class="line mt-3">Kooperation mit Tierärzten & Therapeuten</h3>
+            <p>
+              Interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten für eine bestmögliche Versorgung deines Tieres.       <br>
+            </p>
 
-          <h2 class="line mt-4">Was du noch wissen solltest</h2>
-          <p>
-            Alle Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart. Vor der ersten Behandlung führen wir ein ausführliches Anamnesegespräch durch. Gerne beraten wir dich auch telefonisch zu individuellen Anliegen.
-          </p>
+            <h2 class="line mt-4">Was du noch wissen solltest</h2>
+            <p>
+              Alle Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart.       <br>
+              Vor der ersten Behandlung führen wir ein ausführliches Anamnesegespräch durch.       <br>
+              Gerne beraten wir dich auch telefonisch zu individuellen Anliegen.
+            </p>
 
-          <h3 class="line mt-3">Individuelle Angebote auf Anfrage</h3>
-          <p>
-            Du hast besondere Anforderungen oder möchtest mehrere Leistungen kombinieren? Sprich uns an – wir erstellen dir ein passendes Paketangebot.
-          </p>
+            <h3 class="line mt-3">Individuelle Angebote auf Anfrage</h3>
+            <p>
+              Du hast besondere Anforderungen oder möchtest mehrere Leistungen kombinieren?       <br>
+              Sprich uns an, wir erstellen dir ein passendes Paketangebot.
+            </p>
+
+          </div>
 
 
 
-        </v-card>
+        </div>
       </v-col>
 
 
