@@ -7,6 +7,13 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://tier-gesundheitszentrum.com/podcast</loc>
+        <lastmod>2025-07-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
         <loc>https://tier-gesundheitszentrum.com/chiropraktik</loc>
         <lastmod>2025-07-10</lastmod>
         <changefreq>weekly</changefreq>

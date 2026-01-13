@@ -17,42 +17,68 @@
       </v-col>
       <v-col cols="6">
         <v-card class="background-impressum pa-7" style="overflow: auto; max-height: 70vh; width: 100%">
-          <h1 class="line">Chiropraktik für Tiere</h1>
+          <h1 class="line">Was ist Tierchiropraktik?</h1>
           <br>
-          <h2 class="line">Ganzheitliche Therapie für Wirbelsäule und Gelenke</h2>
+
           <p>
-            Die Chiropraktik für Tiere ist eine ganzheitliche Therapieform, die den Bewegungsapparat und das Nervensystem
-            in den Fokus rückt. Besonders bei Hund und Pferd kann es durch Fehlstellungen oder Blockaden zu gesundheitlichen
-            Problemen kommen, die sich auf das gesamte Wohlbefinden auswirken. Als erfahrene Tierchiropraktikerin biete ich Andrea Bachem
-            – in meiner Praxis in Erftstadt professionelle Behandlungen an, die auf die individuellen Bedürfnisse deines Tieres abgestimmt sind.
+            Die Chiropraktik für Tiere ist eine ganzheitliche Therapieform, die auf die Mobilität der Wirbelsäule und die Funktion des Nervensystems abzielt.
+            Schon kleine Blockaden in der Wirbelsäule oder den Gelenken können weitreichende Auswirkungen auf Muskulatur, Organe, Verhalten und Bewegungsabläufe haben.
+            Durch gezielte, manuelle Impulse (Justierungen) wird die Beweglichkeit gefördert und die natürliche Balance des Körpers unterstützt – ganz ohne Medikamente oder invasive Eingriffe.
           </p>
           <br>
+          <h2 class="line">Sanfte Justierungen für mehr Bewegungsfreiheit</h2>
           <p>
-            Die Tierchiropraktik basiert auf der Annahme, dass eine optimale Beweglichkeit der Wirbelsäule essenziell für die Gesundheit
-            des gesamten Organismus ist. Schon kleinste Blockaden können Auswirkungen auf das Nervensystem, die Muskulatur, die Organe
-            und sogar auf das Verhalten deines Tieres haben. Durch gezielte chiropraktische Justierungen lassen sich diese Einschränkungen
-            oft sanft und effektiv beheben.
+            In meiner Praxis lege ich großen Wert auf eine ruhige Atmosphäre und einen respektvollen Umgang mit deinem Tier.
+            Die chiropraktischen Justierungen bei Hunden und Pferden erfolgen präzise, sanft und immer angepasst an die Anatomie
+            und das Alter des Tieres. Ziel ist es, die Gelenkbeweglichkeit zu verbessern, muskuläre Dysbalancen auszugleichen und das Nervensystem zu entlasten.
           </p>
           <br>
-          <h2 class="line">Sanfte Justierungen zur Förderung der natürlichen Balance</h2>
-          <p>
-            In meiner Praxis in Erftstadt lege ich besonderen Wert auf eine sanfte und respektvolle Herangehensweise. Die Justierungen,
-            die ich bei Hunden und Pferden durchführe, sind präzise, schmerzfrei und an die Anatomie des jeweiligen Tieres angepasst.
-            Ziel ist es, Blockaden zu lösen, Gelenke zu mobilisieren und die natürliche Bewegungsfreiheit wiederherzustellen.
-          </p>
+
+
+
+          <h2 class="line">Chiropraktik für Hund und Pferd – wann ist sie sinnvoll?</h2>
           <br>
           <p>
-            Viele Tierbesitzer berichten bereits nach wenigen Behandlungen über positive Veränderungen: mehr Energie, verbesserte Beweglichkeit,
-            weniger Schmerzen und ein ausgeglicheneres Verhalten. Gerade bei sportlich geführten Pferden oder aktiven Hunden kann eine regelmäßige
-            chiropraktische Behandlung helfen, die Leistungsfähigkeit zu steigern und Verletzungen vorzubeugen.
+            Typische Indikationen für eine chiropraktische Behandlung:
           </p>
-          <br>
-          <h3 class="line">Das Nervensystem als Schlüsselfaktor</h3>
+          <ul class="ml-5">
+            <li>
+              Lahmheiten und Gangbildveränderungen
+            </li>
+            <li>
+              Rückenprobleme und Verspannungen
+            </li>
+            <li>
+              Taktunreinheiten und Leistungsabfall beim Pferd
+            </li>
+            <li>
+              Bewegungsunlust oder Schonhaltungen beim Hund
+            </li>
+            <li>
+              Spondylose, Arthrose, Bandscheibenvorfälle
+            </li>
+            <li>
+              Unruhe, Verhaltensveränderungen, Aggression oder Rückzug
+            </li>
+            <li>
+              Reaktionen beim Satteln oder Heben
+            </li>
+            <li>
+              Altersbedingte Einschränkungen der Mobilität
+            </li>
+
+          </ul>
           <p>
-            Das zentrale Nervensystem ist die Schaltzentrale des Körpers. Es steuert nicht nur die Muskulatur, sondern auch alle inneren Organe.
-            Wird ein Nerv durch eine Wirbelfehlstellung eingeklemmt oder gereizt, kann das die Signalweiterleitung massiv beeinträchtigen.
-            Die Folgen sind oft nicht direkt erkennbar, sie äußern sich beispielsweise in Lahmheiten, Muskelverspannungen, Verdauungsproblemen
-            oder einem veränderten Verhalten.
+            Besonders bei sportlich aktiven Hunden (z. B. Agility, Mantrailing, Jagd) oder Turnierpferden kann eine regelmäßige chiropraktische Betreuung helfen, Dysbalancen frühzeitig zu erkennen und vorzubeugen.
+          </p>
+
+
+          <br>
+          <h3 class="line">Für Tiere jeden Alters – vom Welpen bis zum Senior</h3>
+          <p>
+            Die Tierchiropraktik eignet sich für Hunde und Pferde jeden Alters.
+            Junge Tiere profitieren von einer frühzeitigen Begleitung, um Fehlentwicklungen zu erkennen, ältere Tiere von der gezielten Förderung der Mobilität und Lebensqualität.
+            Jede Behandlung wird individuell auf das jeweilige Tier abgestimmt – sanft, schmerzfrei und effektiv.
           </p>
           <br>
           <p>
@@ -89,26 +115,7 @@
             In Erftstadt biete ich hierfür einen geschützten, ruhigen Rahmen, in dem sich dein Tier wohlfühlen kann.
           </p>
           <br>
-          <h3 class="line">Deine zertifizierte Chiropraktikerin</h3>
-          <p>
-            Mein Name ist Andrea Bachem, ich bin geprüfte Tierchiropraktikerin mit Spezialisierung auf Hund und Pferd.
-            Meine Ausbildung absolvierte ich an der renommierten Akademie für Tiernaturheilkunde (ATM), die für ihre hohe
-            fachliche Qualität bekannt ist. Durch ständige Fortbildungen bleibe ich auf dem neuesten Stand der Forschung
-            und kombiniere moderne Erkenntnisse mit bewährten Techniken.
-          </p>
-          <br>
-          <p>
-            Als Tierfreundin und Therapeutin ist es mir ein persönliches Anliegen, Tieren zu mehr Lebensqualität zu verhelfen.
-            Ich arbeite eng mit Tierärzt:innen, Tierphysiotherapeut:innen und Tierbesitzer:innen zusammen, um das bestmögliche
-            Ergebnis zu erzielen. Meine Praxis in Erftstadt ist ein Ort, an dem dein Tier nicht nur behandelt, sondern
-            auch verstanden wird.
-          </p>
-          <br>
-          <p>
-            Wenn du deinem Hund oder Pferd etwas Gutes tun möchtest, vereinbare gerne einen Termin zur Erstuntersuchung.
-            Gemeinsam finden wir heraus, ob eine chiropraktische Behandlung sinnvoll ist und wie sie sich in das
-            Gesundheitskonzept deines Tieres einfügt.
-          </p>
+
 
           <v-row class="justify-end mt-5" style="width: 100%;">
             <v-col cols="2">
@@ -149,44 +156,69 @@
       </v-col>
       <v-col cols="11">
         <v-card class="background-impressum pa-7" style="overflow: auto; max-height: 40vh; width: 100%">
-          <h1 class="line">Chiropraktik für Tiere</h1>
+          <h1 class="line">Was ist Tierchiropraktik?</h1>
           <br>
-          <h2 class="line">Ganzheitliche Therapie für Wirbelsäule und Gelenke</h2>
+
           <p>
-            Die Chiropraktik für Tiere ist eine ganzheitliche Therapieform, die den Bewegungsapparat und das Nervensystem
-            in den Fokus rückt. Besonders bei Hund und Pferd kann es durch Fehlstellungen oder Blockaden zu gesundheitlichen
-            Problemen kommen, die sich auf das gesamte Wohlbefinden auswirken. Als erfahrene Tierchiropraktikerin biete ich Andrea Bachem
-            – in meiner Praxis in Erftstadt professionelle Behandlungen an, die auf die individuellen Bedürfnisse deines Tieres abgestimmt sind.
+            Die Chiropraktik für Tiere ist eine ganzheitliche Therapieform, die auf die Mobilität der Wirbelsäule und die Funktion des Nervensystems abzielt.
+            Schon kleine Blockaden in der Wirbelsäule oder den Gelenken können weitreichende Auswirkungen auf Muskulatur, Organe, Verhalten und Bewegungsabläufe haben.
+            Durch gezielte, manuelle Impulse (Justierungen) wird die Beweglichkeit gefördert und die natürliche Balance des Körpers unterstützt – ganz ohne Medikamente oder invasive Eingriffe.
           </p>
           <br>
+
+          <h2 class="line">Sanfte Justierungen für mehr Bewegungsfreiheit</h2>
           <p>
-            Die Tierchiropraktik basiert auf der Annahme, dass eine optimale Beweglichkeit der Wirbelsäule essenziell für die Gesundheit
-            des gesamten Organismus ist. Schon kleinste Blockaden können Auswirkungen auf das Nervensystem, die Muskulatur, die Organe
-            und sogar auf das Verhalten deines Tieres haben. Durch gezielte chiropraktische Justierungen lassen sich diese Einschränkungen
-            oft sanft und effektiv beheben.
+            In meiner Praxis lege ich großen Wert auf eine ruhige Atmosphäre und einen respektvollen Umgang mit deinem Tier.
+            Die chiropraktischen Justierungen bei Hunden und Pferden erfolgen präzise, sanft und immer angepasst an die Anatomie
+            und das Alter des Tieres. Ziel ist es, die Gelenkbeweglichkeit zu verbessern, muskuläre Dysbalancen auszugleichen und das Nervensystem zu entlasten.
           </p>
           <br>
-          <h2 class="line">Sanfte Justierungen zur Förderung der natürlichen Balance</h2>
-          <p>
-            In meiner Praxis in Erftstadt lege ich besonderen Wert auf eine sanfte und respektvolle Herangehensweise. Die Justierungen,
-            die ich bei Hunden und Pferden durchführe, sind präzise, schmerzfrei und an die Anatomie des jeweiligen Tieres angepasst.
-            Ziel ist es, Blockaden zu lösen, Gelenke zu mobilisieren und die natürliche Bewegungsfreiheit wiederherzustellen.
-          </p>
+
+          <h2 class="line">Chiropraktik für Hund und Pferd – wann ist sie sinnvoll?</h2>
           <br>
           <p>
-            Viele Tierbesitzer berichten bereits nach wenigen Behandlungen über positive Veränderungen: mehr Energie, verbesserte Beweglichkeit,
-            weniger Schmerzen und ein ausgeglicheneres Verhalten. Gerade bei sportlich geführten Pferden oder aktiven Hunden kann eine regelmäßige
-            chiropraktische Behandlung helfen, die Leistungsfähigkeit zu steigern und Verletzungen vorzubeugen.
+            Typische Indikationen für eine chiropraktische Behandlung:
           </p>
-          <br>
-          <h3 class="line">Das Nervensystem als Schlüsselfaktor</h3>
+          <ul class="ml-5">
+            <li>
+              Lahmheiten und Gangbildveränderungen
+            </li>
+            <li>
+              Rückenprobleme und Verspannungen
+            </li>
+            <li>
+              Taktunreinheiten und Leistungsabfall beim Pferd
+            </li>
+            <li>
+              Bewegungsunlust oder Schonhaltungen beim Hund
+            </li>
+            <li>
+              Spondylose, Arthrose, Bandscheibenvorfälle
+            </li>
+            <li>
+              Unruhe, Verhaltensveränderungen, Aggression oder Rückzug
+            </li>
+            <li>
+              Reaktionen beim Satteln oder Heben
+            </li>
+            <li>
+              Altersbedingte Einschränkungen der Mobilität
+            </li>
+          </ul>
+
           <p>
-            Das zentrale Nervensystem ist die Schaltzentrale des Körpers. Es steuert nicht nur die Muskulatur, sondern auch alle inneren Organe.
-            Wird ein Nerv durch eine Wirbelfehlstellung eingeklemmt oder gereizt, kann das die Signalweiterleitung massiv beeinträchtigen.
-            Die Folgen sind oft nicht direkt erkennbar, sie äußern sich beispielsweise in Lahmheiten, Muskelverspannungen, Verdauungsproblemen
-            oder einem veränderten Verhalten.
+            Besonders bei sportlich aktiven Hunden (z. B. Agility, Mantrailing, Jagd) oder Turnierpferden kann eine regelmäßige chiropraktische Betreuung helfen, Dysbalancen frühzeitig zu erkennen und vorzubeugen.
+          </p>
+
+          <br>
+          <h3 class="line">Für Tiere jeden Alters – vom Welpen bis zum Senior</h3>
+          <p>
+            Die Tierchiropraktik eignet sich für Hunde und Pferde jeden Alters.
+            Junge Tiere profitieren von einer frühzeitigen Begleitung, um Fehlentwicklungen zu erkennen, ältere Tiere von der gezielten Förderung der Mobilität und Lebensqualität.
+            Jede Behandlung wird individuell auf das jeweilige Tier abgestimmt – sanft, schmerzfrei und effektiv.
           </p>
           <br>
+
           <p>
             In der Tierchiropraktik ist es daher besonders wichtig, den Zusammenhang zwischen strukturellen Problemen und funktionellen
             Störungen zu erkennen. Durch meine fundierte Ausbildung und jahrelange Erfahrung erkenne ich subtile Veränderungen und
@@ -194,6 +226,7 @@
             und glücklicherer Hund oder ein leistungsfähigeres, entspannteres Pferd.
           </p>
           <br>
+
           <h2 class="line">Indikationen für eine chiropraktische Behandlung</h2>
           <p>
             Die Anwendungsmöglichkeiten der Tierchiropraktik sind vielfältig. Typische Indikationen sind:
@@ -202,12 +235,14 @@
             aber auch Verhaltensauffälligkeiten wie Aggression oder Rückzug.
           </p>
           <br>
+
           <p>
             Besonders bei Hunden und Pferden, die im Sport aktiv sind, sei es beim Agility, Turniersport oder bei der Jagd
             kann eine chiropraktische Begleitung helfen, Fehlbelastungen frühzeitig zu erkennen und auszugleichen.
             Auch ältere Tiere profitieren enorm, da die Mobilität erhalten bleibt und Alterserscheinungen gelindert werden können.
           </p>
           <br>
+
           <h2 class="line">Für Hund und Pferd jeden Alters geeignet</h2>
           <p>
             Meine Tierchiropraktik richtet sich ausdrücklich an alle Altersklassen vom jungen Fohlen oder Welpen bis hin zum Senior.
@@ -215,32 +250,13 @@
             bereits degenerative Veränderungen zeigen, reagieren positiv auf die wiedergewonnene Beweglichkeit.
           </p>
           <br>
+
           <p>
             Aber auch junge Tiere sollten regelmäßig chiropraktisch untersucht werden, um Fehlentwicklungen frühzeitig zu erkennen.
             Denn: Je früher Fehlstellungen behoben werden, desto besser ist die Prognose für eine langfristige Gesundheit.
             In Erftstadt biete ich hierfür einen geschützten, ruhigen Rahmen, in dem sich dein Tier wohlfühlen kann.
           </p>
           <br>
-          <h3 class="line">Deine zertifizierte Chiropraktikerin</h3>
-          <p>
-            Mein Name ist Andrea Bachem, ich bin geprüfte Tierchiropraktikerin mit Spezialisierung auf Hund und Pferd.
-            Meine Ausbildung absolvierte ich an der renommierten Akademie für Tiernaturheilkunde (ATM), die für ihre hohe
-            fachliche Qualität bekannt ist. Durch ständige Fortbildungen bleibe ich auf dem neuesten Stand der Forschung
-            und kombiniere moderne Erkenntnisse mit bewährten Techniken.
-          </p>
-          <br>
-          <p>
-            Als Tierfreundin und Therapeutin ist es mir ein persönliches Anliegen, Tieren zu mehr Lebensqualität zu verhelfen.
-            Ich arbeite eng mit Tierärzt:innen, Tierphysiotherapeut:innen und Tierbesitzer:innen zusammen, um das bestmögliche
-            Ergebnis zu erzielen. Meine Praxis in Erftstadt ist ein Ort, an dem dein Tier nicht nur behandelt, sondern
-            auch verstanden wird.
-          </p>
-          <br>
-          <p>
-            Wenn du deinem Hund oder Pferd etwas Gutes tun möchtest, vereinbare gerne einen Termin zur Erstuntersuchung.
-            Gemeinsam finden wir heraus, ob eine chiropraktische Behandlung sinnvoll ist und wie sie sich in das
-            Gesundheitskonzept deines Tieres einfügt.
-          </p>
 
           <v-row class="justify-end mt-5" style="width: 100%;">
             <v-col cols="2">
@@ -248,6 +264,7 @@
             </v-col>
           </v-row>
         </v-card>
+
       </v-col>
 
     </v-row>
