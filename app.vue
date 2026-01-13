@@ -7,6 +7,7 @@
 </template>
 
 
+
 <script>
 import {useScreenStore} from "~/stores/screen.js";
 
