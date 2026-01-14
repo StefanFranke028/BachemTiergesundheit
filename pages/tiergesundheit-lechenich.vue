@@ -323,7 +323,7 @@
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <v-row class="justify-center mx-0 mt-2">
       <v-col cols="11">
-        <v-card class="pa-6" style="overflow: auto; max-height: 70vh; width: 100%; background-color: rgba(0,0,0,0.22)">
+        <v-card class="pa-6 background-impressum" style="overflow: auto; max-height: 70vh; width: 100%;">
           <article itemscope itemtype="https://schema.org/Service">
             <meta itemprop="serviceType" content="Tierchiropraktik, Tierosteopathie, Tierphysiotherapie, Ernährungsberatung">
             <meta itemprop="areaServed" content="Lechenich">

@@ -77,7 +77,7 @@
 
     </article>
     <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
-      <nav class="d-flex">
+      <nav class="d-flex footer-nav">
         <NuxtLink  title="Impressum von Andrea Bachem" to="/impressum" class="mx-2 footer-link text-white link">
           Impressum
         </NuxtLink>
@@ -96,6 +96,32 @@
         <NuxtLink title="Meine Vita und intressantes über mich" to="/ueberuns" class="mx-2 footer-link text-white link" >
           Über Uns
         </NuxtLink>
+        <template v-if="desktop || tabletHorizontal">
+          <span class="text-white mt-n1">|</span>
+          <template v-for="(city, index) in cityLinks" :key="city.to">
+            <span v-if="index > 0" class="text-white mt-n1">|</span>
+            <NuxtLink :title="`Tiergesundheit ${city.label}`" :to="city.to" class="mx-2 footer-link text-white link">
+              {{ city.label }}
+            </NuxtLink>
+          </template>
+        </template>
+        <template v-else>
+          <span class="text-white mt-n1">|</span>
+          <details class="footer-dropdown mx-2">
+            <summary class="text-white footer-link link">Städte</summary>
+            <div class="footer-dropdown-menu">
+              <NuxtLink
+                v-for="city in cityLinks"
+                :key="city.to"
+                :title="`Tiergesundheit ${city.label}`"
+                :to="city.to"
+                class="footer-dropdown-link text-white link"
+              >
+                {{ city.label }}
+              </NuxtLink>
+            </div>
+          </details>
+        </template>
       </nav>
 
       <!-- YouTube-Link als echter externer Link -->
@@ -154,6 +180,18 @@ if (process.client) {
     main()
   }
 }
+
+const cityLinks = [
+  { label: 'Bonn', to: '/tiergesundheit-bonn' },
+  { label: 'Erftstadt', to: '/tiergesundheit-erftstadt' },
+  { label: 'Liblar', to: '/tiergesundheit-liblar' },
+  { label: 'Lechenich', to: '/tiergesundheit-lechenich' },
+  { label: 'Kierdorf', to: '/tiergesundheit-kierdorf' },
+  { label: 'Köttingen', to: '/tiergesundheit-koettingen' },
+  { label: 'Gymnich', to: '/tiergesundheit-gymnich' },
+  { label: 'Bliesheim', to: '/tiergesundheit-bliesheim' },
+  { label: 'Friesheim', to: '/tiergesundheit-friesheim' },
+];
 
 const route = useRoute();
 const prefix = 'service';
@@ -355,5 +393,49 @@ export default {
   height: 40px;
   background-color: white;
   border-radius: 4px;
+}
+.footer-nav {
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+  row-gap: 4px;
+}
+.footer-link {
+  font-size: 12px;
+  text-decoration: none;
+}
+.footer-dropdown {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-dropdown summary {
+  cursor: pointer;
+  list-style: none;
+}
+.footer-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.footer-dropdown summary::after {
+  content: "v";
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+.footer-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+.footer-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 130, 194, 0.95);
+}
+.footer-dropdown-link {
+  font-size: 12px;
 }
 </style>
