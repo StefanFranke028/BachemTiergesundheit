@@ -33,7 +33,7 @@
             Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit gefördert. Viele Tierhalter berichten nach
             wenigen Terminen von mehr Vitalität, weniger Schmerzen und einem geschmeidigeren Bewegungsablauf – besonders bei
             sportlich geführten Pferden oder aktiven Hunden aus Bonn und Umgebung. Mehr erfahren zur
-            <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
+            <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere" class="hyperlink">Chiropraktik</NuxtLink>.
           </p>
           <p>
             Häufige Gründe für eine chiropraktische Behandlung sind Rückenbeschwerden, Arthrose, Lahmheiten,
@@ -55,7 +55,7 @@
             Verdauungsproblemen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
             eignet sich für Hunde und Pferde aller Altersgruppen – vom Welpen über das Sportpferd bis zum Senior. Als Ergänzung
             zur Schulmedizin kann sie helfen, die Lebensqualität deines Tieres spürbar zu steigern. Mehr erfahren zur
-            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie">Osteopathie</NuxtLink>.
+            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie" class="hyperlink">Osteopathie</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Service Bonn – ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
@@ -65,7 +65,7 @@
             gehören manuelle Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen
             Bausteinen. Ergänzend bieten wir mobile Tierbehandlungen an – ideal für Tiere, die den Transport schlecht vertragen
             oder zu Hause entspannter sind. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr erfahren zu
-            unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
+            unseren <NuxtLink to="/service" title="Mehr zum Service" class="hyperlink">Leistungen</NuxtLink>.
           </p>
           <p>
             Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt für eine
@@ -80,7 +80,7 @@
             ein ausführliches Anamnesegespräch, um die passende Therapie festzulegen. Gerne beraten wir dich auch telefonisch zu
             individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen? Sprich uns an –
             wir erstellen dir ein passendes Paket. Mehr erfahren zu unseren
-            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen">Preisen</NuxtLink>.
+            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen" class="hyperlink">Preisen</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Andrea Bachem Bonn – Erfahrung, Qualifikation und Tierwohl</h2>
@@ -348,7 +348,7 @@
             Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit gefördert. Viele Tierhalter berichten nach
             wenigen Terminen von mehr Vitalität, weniger Schmerzen und einem geschmeidigeren Bewegungsablauf – besonders bei
             sportlich geführten Pferden oder aktiven Hunden aus Bonn und Umgebung. Mehr erfahren zur
-            <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
+            <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere" class="hyperlink">Chiropraktik</NuxtLink>.
           </p>
           <p>
             Häufige Gründe für eine chiropraktische Behandlung sind Rückenbeschwerden, Arthrose, Lahmheiten,
@@ -370,7 +370,7 @@
             Verdauungsproblemen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
             eignet sich für Hunde und Pferde aller Altersgruppen – vom Welpen über das Sportpferd bis zum Senior. Als Ergänzung
             zur Schulmedizin kann sie helfen, die Lebensqualität deines Tieres spürbar zu steigern. Mehr erfahren zur
-            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie">Osteopathie</NuxtLink>.
+            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie" class="hyperlink">Osteopathie</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Service Bonn – ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
@@ -380,7 +380,7 @@
             gehören manuelle Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen
             Bausteinen. Ergänzend bieten wir mobile Tierbehandlungen an – ideal für Tiere, die den Transport schlecht vertragen
             oder zu Hause entspannter sind. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr erfahren zu
-            unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
+            unseren <NuxtLink to="/service" title="Mehr zum Service" class="hyperlink">Leistungen</NuxtLink>.
           </p>
           <p>
             Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt für eine
@@ -395,7 +395,7 @@
             ein ausführliches Anamnesegespräch, um die passende Therapie festzulegen. Gerne beraten wir dich auch telefonisch zu
             individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen? Sprich uns an –
             wir erstellen dir ein passendes Paket. Mehr erfahren zu unseren
-            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen">Preisen</NuxtLink>.
+            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen" class="hyperlink">Preisen</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Andrea Bachem Bonn – Erfahrung, Qualifikation und Tierwohl</h2>
@@ -760,9 +760,16 @@ details {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
   color: inherit;
   cursor: pointer;
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .kontakt-card a {
@@ -819,5 +826,14 @@ a {
 
 a:focus {
   outline: 2px solid blue;
+}
+
+.hyperlink {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.hyperlink:hover {
+  color: #0082c2;
 }
 </style>

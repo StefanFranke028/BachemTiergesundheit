@@ -33,7 +33,7 @@
             Durch gezielte, präzise und schmerzfreie Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit
             wiederhergestellt. Viele Tierbesitzer berichten bereits nach wenigen Behandlungen über mehr Energie, weniger Schmerzen
             und eine deutlich bessere Beweglichkeit – besonders bei sportlich geführten Pferden oder aktiven Hunden in Köln und
-            Umgebung. Mehr erfahren zur <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
+            Umgebung. Mehr erfahren zur <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere" class="hyperlink">Chiropraktik</NuxtLink>.
           </p>
           <p>
             Typische Indikationen für eine chiropraktische Behandlung sind Rückenprobleme, Arthrosen, Lahmheiten,
@@ -55,7 +55,7 @@
             Verdauungsstörungen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
             eignet sich für Hunde und Pferde aller Altersgruppen – ob Welpe, Sportpferd oder Senior. Sie ist eine wertvolle
             Ergänzung zur Schulmedizin und kann helfen, die Lebensqualität deines Tieres spürbar zu verbessern. Mehr erfahren zur
-            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie">Osteopathie</NuxtLink>.
+            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie" class="hyperlink">Osteopathie</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Tiergesundheitszentrum Köln Service ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
@@ -65,7 +65,7 @@
             Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen Bausteinen.
             Ergänzend bieten wir eine mobile Tierbehandlung an – ideal für Tiere, die den Transport schlecht vertragen oder sich
             in ihrer gewohnten Umgebung wohler fühlen. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr
-            erfahren zu unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
+            erfahren zu unseren <NuxtLink to="/service" title="Mehr zum Service" class="hyperlink">Leistungen</NuxtLink>.
           </p>
           <p>
             Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt dafür, dass dein
@@ -80,7 +80,7 @@
             wir ein ausführliches Anamnesegespräch durch, um die passende Therapie auszuwählen. Gerne beraten wir dich auch
             telefonisch zu individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen?
             Sprich uns an – wir erstellen dir ein passendes Paketangebot. Mehr erfahren zu unseren
-            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen">Preisen</NuxtLink>.
+            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen" class="hyperlink">Preisen</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Andrea Bachem Köln – Erfahrung, Qualifikation, Tierwohl</h2>
@@ -348,7 +348,7 @@
             Durch gezielte, präzise und schmerzfreie Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit
             wiederhergestellt. Viele Tierbesitzer berichten bereits nach wenigen Behandlungen über mehr Energie, weniger Schmerzen
             und eine deutlich bessere Beweglichkeit – besonders bei sportlich geführten Pferden oder aktiven Hunden in Köln und
-            Umgebung. Mehr erfahren zur <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
+            Umgebung. Mehr erfahren zur <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere" class="hyperlink">Chiropraktik</NuxtLink>.
           </p>
           <p>
             Typische Indikationen für eine chiropraktische Behandlung sind Rückenprobleme, Arthrosen, Lahmheiten,
@@ -370,7 +370,7 @@
             Verdauungsstörungen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
             eignet sich für Hunde und Pferde aller Altersgruppen – ob Welpe, Sportpferd oder Senior. Sie ist eine wertvolle
             Ergänzung zur Schulmedizin und kann helfen, die Lebensqualität deines Tieres spürbar zu verbessern. Mehr erfahren zur
-            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie">Osteopathie</NuxtLink>.
+            <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie" class="hyperlink">Osteopathie</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Service Köln – ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
@@ -380,7 +380,7 @@
             Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen Bausteinen.
             Ergänzend bieten wir eine mobile Tierbehandlung an – ideal für Tiere, die den Transport schlecht vertragen oder sich
             in ihrer gewohnten Umgebung wohler fühlen. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr
-            erfahren zu unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
+            erfahren zu unseren <NuxtLink to="/service" title="Mehr zum Service" class="hyperlink">Leistungen</NuxtLink>.
           </p>
           <p>
             Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt dafür, dass dein
@@ -395,7 +395,7 @@
             wir ein ausführliches Anamnesegespräch durch, um die passende Therapie auszuwählen. Gerne beraten wir dich auch
             telefonisch zu individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen?
             Sprich uns an – wir erstellen dir ein passendes Paketangebot. Mehr erfahren zu unseren
-            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen">Preisen</NuxtLink>.
+            <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen" class="hyperlink">Preisen</NuxtLink>.
           </p>
 
           <h2 class="line mt-4">Andrea Bachem Köln – Erfahrung, Qualifikation, Tierwohl</h2>
@@ -760,9 +760,16 @@ details {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
   color: inherit;
   cursor: pointer;
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .kontakt-card a {
@@ -819,5 +826,14 @@ a {
 
 a:focus {
   outline: 2px solid blue;
+}
+
+.hyperlink {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.hyperlink:hover {
+  color: #0082c2;
 }
 </style>

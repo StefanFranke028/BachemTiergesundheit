@@ -760,9 +760,16 @@ details {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
   color: inherit;
   cursor: pointer;
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .kontakt-card a {
