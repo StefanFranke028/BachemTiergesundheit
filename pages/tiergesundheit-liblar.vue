@@ -11,130 +11,130 @@
         <v-card class="pa-7 background-impressum" style="overflow: auto; max-height: 70vh; width: 100%;">
           <article itemscope itemtype="https://schema.org/Service">
             <meta itemprop="serviceType" content="Tierchiropraktik, Tierosteopathie, Tierphysiotherapie, Ernährungsberatung">
-            <meta itemprop="areaServed" content="Köln">
+            <meta itemprop="areaServed" content="Liblar">
             <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
               <meta itemprop="name" content="Tiergesundheitszentrum Andrea Bachem">
               <meta itemprop="addressLocality" content="Erftstadt">
             </div>
-            <h1 itemprop="name" class="line mt-2">Tiergesundheit Köln – Chiropraktik, Osteopathie & Service</h1>
+            <h1 itemprop="name" class="line mt-2">Tiergesundheit Liblar – Chiropraktik, Osteopathie & ganzheitliche Betreuung</h1>
             <p itemprop="description">
-              Diese Seite richtet sich an Tierhalter aus Köln, die sich über ganzheitliche Tiergesundheit Köln informieren möchten.
-              Im Tiergesundheitszentrum Andrea Bachem steht die Gesundheit deines Tieres im Mittelpunkt. Unsere Praxis in Erftstadt
-              bietet individuelle Therapieansätze für Hunde, Pferde und Katzen, die auf Tierchiropraktik, Tierosteopathie,
-              Tierphysiotherapie und Ernährungsberatung basieren. Ziel ist es, Schmerzen zu lindern, Beweglichkeit zu verbessern
-              und das Wohlbefinden langfristig zu stärken. Für Tiergesundheit Köln und Tiertherapie Köln setzen wir auf eine
-              fundierte Anamnese und einen individuell abgestimmten Behandlungsplan – denn es gibt kein Schema F.
+              Diese Seite ist für Tierhalter aus Liblar, die sich über ganzheitliche Tiergesundheit Liblar informieren möchten.
+              Im Tiergesundheitszentrum Andrea Bachem steht das Wohlbefinden deines Tieres im Fokus. Unsere Praxis in Erftstadt
+              bietet maßgeschneiderte Therapieansätze für Hunde, Pferde und Katzen – von Tierchiropraktik und Tierosteopathie bis
+              Tierphysiotherapie und Ernährungsberatung. Ziel ist es, Schmerzen zu reduzieren, Beweglichkeit zu fördern und die
+              Lebensqualität nachhaltig zu verbessern. Für Tiergesundheit Liblar und Tiertherapie Liblar setzen wir auf eine
+              gründliche Anamnese und einen Behandlungsplan, der exakt auf dein Tier abgestimmt ist.
             </p>
 
-          <h2 class="line mt-4">Chiropraktik Köln für Tiere – Beweglichkeit und Nervensystem im Fokus</h2>
+          <h2 class="line mt-4">Tierchiropraktik Liblar – Bewegungsfreiheit und Nervensystem im Gleichgewicht</h2>
           <p>
-            Die Chiropraktik für Tiere ist eine ganzheitliche Therapieform, die den Bewegungsapparat und das Nervensystem in den
-            Fokus rückt. Fehlstellungen oder Blockaden der Wirbelsäule können sich auf Muskulatur, Organe und Verhalten auswirken.
-            Durch gezielte, präzise und schmerzfreie Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit
-            wiederhergestellt. Viele Tierbesitzer berichten bereits nach wenigen Behandlungen über mehr Energie, weniger Schmerzen
-            und eine deutlich bessere Beweglichkeit – besonders bei sportlich geführten Pferden oder aktiven Hunden in Köln und
-            Umgebung. Mehr erfahren zur <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
+            Die Tierchiropraktik betrachtet Bewegungsapparat und Nervensystem als Einheit und setzt auf gezielte Impulse an der
+            Wirbelsäule. Blockaden können Muskulatur, Organe und sogar das Verhalten beeinflussen. Mit präzisen, sanften
+            Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit gefördert. Viele Tierhalter berichten nach
+            wenigen Terminen von mehr Vitalität, weniger Schmerzen und einem geschmeidigeren Bewegungsablauf – besonders bei
+            sportlich geführten Pferden oder aktiven Hunden aus Liblar und Umgebung. Mehr erfahren zur
+            <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
           </p>
           <p>
-            Typische Indikationen für eine chiropraktische Behandlung sind Rückenprobleme, Arthrosen, Lahmheiten,
-            Koordinationsstörungen, Spondylose, Muskelverspannungen, Bandscheibenvorfälle, Leistungsabfall, Taktunreinheiten,
-            Schmerzreaktionen beim Satteln oder Heben sowie Verhaltensauffälligkeiten wie Aggression oder Rückzug. Die
-            Tierchiropraktik richtet sich an alle Altersklassen vom Welpen oder Fohlen bis zum Senior und wird stets individuell
-            an die Anatomie des jeweiligen Tieres angepasst.
+            Häufige Gründe für eine chiropraktische Behandlung sind Rückenbeschwerden, Arthrose, Lahmheiten,
+            Koordinationsprobleme, Spondylose, Muskelverspannungen, Bandscheibenprobleme, Leistungsabfall, Taktunreinheiten,
+            Schmerzreaktionen beim Satteln oder Heben sowie auffälliges Verhalten wie Aggression oder Rückzug. Die
+            Tierchiropraktik eignet sich für alle Altersstufen vom Welpen oder Fohlen bis zum Senior und wird stets an die
+            Anatomie und Bedürfnisse des jeweiligen Tieres angepasst.
           </p>
 
-          <h2 class="line mt-4">Osteopathie Köln für Tiere – sanfte Impulse für Selbstheilung</h2>
+          <h2 class="line mt-4">Tierosteopathie Liblar – sanfte Impulse für die Selbstheilung</h2>
           <p>
-            Die Osteopathie ist eine besonders sanfte, ganzheitliche Behandlungsmethode, die darauf abzielt, die natürlichen
-            Selbstheilungskräfte deines Tieres zu aktivieren. Durch gezielte manuelle Techniken werden Blockaden, Verspannungen
-            und Bewegungseinschränkungen aufgespürt und gelöst – ganz ohne Medikamente. Dabei steht nicht das einzelne Symptom,
-            sondern das Zusammenspiel von Struktur, Funktion und Energie im gesamten Körper im Mittelpunkt.
+            Osteopathie ist eine besonders sanfte, ganzheitliche Behandlungsmethode, die die körpereigenen
+            Selbstheilungskräfte deines Tieres anregen soll. Mit gezielten manuellen Techniken werden Blockaden, Verspannungen
+            und Bewegungseinschränkungen ertastet und gelöst – ohne Medikamente. Im Mittelpunkt steht nicht nur das Symptom,
+            sondern das Zusammenspiel von Struktur, Funktion und Energie im gesamten Organismus.
           </p>
           <p>
-            Osteopathie kann bei Bewegungseinschränkungen, Rücken- und Gelenkproblemen, muskulären Verspannungen,
-            Verdauungsstörungen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
-            eignet sich für Hunde und Pferde aller Altersgruppen – ob Welpe, Sportpferd oder Senior. Sie ist eine wertvolle
-            Ergänzung zur Schulmedizin und kann helfen, die Lebensqualität deines Tieres spürbar zu verbessern. Mehr erfahren zur
+            Die Methode kann bei Bewegungseinschränkungen, Rücken- und Gelenkproblemen, muskulären Verspannungen,
+            Verdauungsproblemen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
+            eignet sich für Hunde und Pferde aller Altersgruppen – vom Welpen über das Sportpferd bis zum Senior. Als Ergänzung
+            zur Schulmedizin kann sie helfen, die Lebensqualität deines Tieres spürbar zu steigern. Mehr erfahren zur
             <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie">Osteopathie</NuxtLink>.
           </p>
 
-          <h2 class="line mt-4">Tiergesundheitszentrum Köln Service ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
+          <h2 class="line mt-4">Service Liblar – ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
           <p>
-            Unser Service vereint traditionelles Wissen mit moderner Tierheilkunde. Wir setzen auf natürliche, sanfte Methoden,
-            die Körper, Geist und Seele deines Tieres in Einklang bringen. Neben Chiropraktik und Osteopathie gehören manuelle
-            Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen Bausteinen.
-            Ergänzend bieten wir eine mobile Tierbehandlung an – ideal für Tiere, die den Transport schlecht vertragen oder sich
-            in ihrer gewohnten Umgebung wohler fühlen. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr
-            erfahren zu unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
+            Unser Service verbindet traditionelles Erfahrungswissen mit moderner Tiertherapie. Wir setzen auf natürliche,
+            schonende Methoden, die Körper, Geist und Seele deines Tieres in Balance bringen. Neben Chiropraktik und Osteopathie
+            gehören manuelle Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen
+            Bausteinen. Ergänzend bieten wir mobile Tierbehandlungen an – ideal für Tiere, die den Transport schlecht vertragen
+            oder zu Hause entspannter sind. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr erfahren zu
+            unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
           </p>
           <p>
-            Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt dafür, dass dein
-            Tier bestmöglich versorgt wird. Fachliche Kompetenz, jahrelange Erfahrung und ein liebevoller Umgang mit Tier und
-            Mensch zeichnen unsere Praxis aus. Wir nehmen uns Zeit, hören zu und gehen individuell auf die Bedürfnisse deines
-            Tieres ein – auch für Tierhalter aus Köln, die eine ganzheitliche Betreuung in der Nähe suchen.
+            Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt für eine
+            bestmögliche Versorgung. Fachliche Kompetenz, langjährige Erfahrung und ein achtsamer Umgang mit Tier und Mensch
+            zeichnen unsere Praxis aus. Wir nehmen uns Zeit, hören zu und richten jede Behandlung individuell aus – auch für
+            Tierhalter aus Liblar, die eine ganzheitliche Betreuung in der Nähe suchen.
           </p>
 
-          <h2 class="line mt-4">Preise Tiergesundheitszentrum Köln – transparent, fair und individuell</h2>
+          <h2 class="line mt-4">Preise Liblar – transparent, fair und individuell</h2>
           <p>
-            Unsere Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart. Vor der ersten Behandlung führen
-            wir ein ausführliches Anamnesegespräch durch, um die passende Therapie auszuwählen. Gerne beraten wir dich auch
-            telefonisch zu individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen?
-            Sprich uns an – wir erstellen dir ein passendes Paketangebot. Mehr erfahren zu unseren
+            Die Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart. Vor der ersten Behandlung führen wir
+            ein ausführliches Anamnesegespräch, um die passende Therapie festzulegen. Gerne beraten wir dich auch telefonisch zu
+            individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen? Sprich uns an –
+            wir erstellen dir ein passendes Paket. Mehr erfahren zu unseren
             <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen">Preisen</NuxtLink>.
           </p>
 
-          <h2 class="line mt-4">Andrea Bachem Köln – Erfahrung, Qualifikation, Tierwohl</h2>
+          <h2 class="line mt-4">Andrea Bachem Liblar – Erfahrung, Qualifikation und Tierwohl</h2>
           <p>
             Andrea Bachem ist staatlich geprüfte Tierarzthelferin und hat sich durch zahlreiche Aus- und Weiterbildungen auf die
-            Gesundheit und das Wohlbefinden von Tieren spezialisiert. Zu den Qualifikationen zählen unter anderem
-            Tierphysiotherapie, Tierosteopathie, manuelle Therapie sowie Dorntherapie und Chiropraktik. Stetige Fortbildung und
-            ein klarer Fokus auf das Tierwohl sind die Grundlage jeder Behandlung.
+            Gesundheit und das Wohlbefinden von Tieren spezialisiert. Zu ihren Qualifikationen zählen unter anderem
+            Tierphysiotherapie, Tierosteopathie, manuelle Therapie sowie Dorntherapie und Chiropraktik. Regelmäßige Fortbildungen
+            und ein klarer Fokus auf das Tierwohl bilden die Grundlage jeder Behandlung.
           </p>
 
           <section class="faq" itemscope itemtype="https://schema.org/FAQPage">
-            <h2 class="line mt-4">FAQ Köln – häufige Fragen zur Tiergesundheit</h2>
+            <h2 class="line mt-4">FAQ Liblar – häufige Fragen zur Tiergesundheit</h2>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Ist die Tierchiropraktik in Köln für jedes Alter geeignet?</summary>
+              <summary class="faq-question" itemprop="name">Eignet sich Tierchiropraktik in Liblar für jedes Alter?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
                   Ja. Die chiropraktische Behandlung wird individuell angepasst und ist für Welpen, junge Tiere, Sportpferde
-                  sowie Senioren geeignet. Ziel ist es, Beweglichkeit und Wohlbefinden zu fördern.
+                  sowie Senioren geeignet. Ziel ist es, Beweglichkeit und Wohlbefinden nachhaltig zu fördern.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Wann ist Osteopathie für Tiere aus Köln sinnvoll?</summary>
+              <summary class="faq-question" itemprop="name">In welchen Fällen ist Osteopathie für Tiere aus Liblar sinnvoll?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
-                  Osteopathie kann helfen, wenn Bewegungseinschränkungen, Verspannungen oder Verdauungsprobleme bestehen. Sie
-                  ist sanft, schmerzfrei und eignet sich sowohl für Hunde als auch für Pferde.
+                  Osteopathie kann unterstützen, wenn Bewegungseinschränkungen, Verspannungen oder Verdauungsprobleme bestehen.
+                  Sie ist sanft, schmerzfrei und eignet sich sowohl für Hunde als auch für Pferde.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Welche Leistungen umfasst der Service für Tierhalter aus Köln?</summary>
+              <summary class="faq-question" itemprop="name">Was beinhaltet der Service für Tierhalter aus Liblar?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
                   Unser Service umfasst Chiropraktik, Osteopathie, Tierphysiotherapie, manuelle Therapie und Ernährungsberatung.
-                  Ergänzend bieten wir bei Bedarf eine mobile Tierbehandlung an.
+                  Zusätzlich bieten wir bei Bedarf eine mobile Tierbehandlung an.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Wie entstehen die Preise für Behandlungen?</summary>
+              <summary class="faq-question" itemprop="name">Wie setzen sich die Behandlungskosten zusammen?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
-                  Die Preise richten sich nach dem zeitlichen Aufwand und der Tierart. Vor der ersten Behandlung findet ein
-                  ausführliches Anamnesegespräch statt, um den passenden Therapieplan festzulegen.
+                  Die Kosten richten sich nach Zeitaufwand und Tierart. Vor der ersten Behandlung findet ein ausführliches
+                  Anamnesegespräch statt, um den passenden Therapieplan festzulegen.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Wo findet die Behandlung für Köln statt?</summary>
+              <summary class="faq-question" itemprop="name">Wo findet die Behandlung für Liblar statt?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
                   Die Behandlungen erfolgen in der Praxis in Erftstadt. Für Tiere, die den Transport schlecht vertragen, ist
-                  eine mobile Behandlung möglich, abhängig vom Standort.
+                  eine mobile Behandlung möglich – abhängig vom Standort.
                 </p>
               </div>
             </details>
@@ -326,130 +326,130 @@
         <v-card class="pa-6" style="overflow: auto; max-height: 70vh; width: 100%; background-color: rgba(0,0,0,0.22)">
           <article itemscope itemtype="https://schema.org/Service">
             <meta itemprop="serviceType" content="Tierchiropraktik, Tierosteopathie, Tierphysiotherapie, Ernährungsberatung">
-            <meta itemprop="areaServed" content="Köln">
+            <meta itemprop="areaServed" content="Liblar">
             <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
               <meta itemprop="name" content="Tiergesundheitszentrum Andrea Bachem">
               <meta itemprop="addressLocality" content="Erftstadt">
             </div>
-            <h1 itemprop="name" class="line mt-2">Tiergesundheit Köln – Chiropraktik, Osteopathie & Service</h1>
+            <h1 itemprop="name" class="line mt-2">Tiergesundheit Liblar – Chiropraktik, Osteopathie & ganzheitliche Betreuung</h1>
             <p itemprop="description">
-              Diese Seite richtet sich an Tierhalter aus Köln, die sich über ganzheitliche Tiergesundheit Köln informieren möchten.
-              Im Tiergesundheitszentrum Andrea Bachem steht die Gesundheit deines Tieres im Mittelpunkt. Unsere Praxis in Erftstadt
-              bietet individuelle Therapieansätze für Hunde, Pferde und Katzen, die auf Tierchiropraktik, Tierosteopathie,
-              Tierphysiotherapie und Ernährungsberatung basieren. Ziel ist es, Schmerzen zu lindern, Beweglichkeit zu verbessern
-              und das Wohlbefinden langfristig zu stärken. Für Tiergesundheit Köln und Tiertherapie Köln setzen wir auf eine
-              fundierte Anamnese und einen individuell abgestimmten Behandlungsplan – denn es gibt kein Schema F.
+              Diese Seite ist für Tierhalter aus Liblar, die sich über ganzheitliche Tiergesundheit Liblar informieren möchten.
+              Im Tiergesundheitszentrum Andrea Bachem steht das Wohlbefinden deines Tieres im Fokus. Unsere Praxis in Erftstadt
+              bietet maßgeschneiderte Therapieansätze für Hunde, Pferde und Katzen – von Tierchiropraktik und Tierosteopathie bis
+              Tierphysiotherapie und Ernährungsberatung. Ziel ist es, Schmerzen zu reduzieren, Beweglichkeit zu fördern und die
+              Lebensqualität nachhaltig zu verbessern. Für Tiergesundheit Liblar und Tiertherapie Liblar setzen wir auf eine
+              gründliche Anamnese und einen Behandlungsplan, der exakt auf dein Tier abgestimmt ist.
             </p>
 
-          <h2 class="line mt-4">Chiropraktik Köln für Tiere – Beweglichkeit und Nervensystem im Fokus</h2>
+          <h2 class="line mt-4">Tierchiropraktik Liblar – Bewegungsfreiheit und Nervensystem im Gleichgewicht</h2>
           <p>
-            Die Chiropraktik für Tiere ist eine ganzheitliche Therapieform, die den Bewegungsapparat und das Nervensystem in den
-            Fokus rückt. Fehlstellungen oder Blockaden der Wirbelsäule können sich auf Muskulatur, Organe und Verhalten auswirken.
-            Durch gezielte, präzise und schmerzfreie Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit
-            wiederhergestellt. Viele Tierbesitzer berichten bereits nach wenigen Behandlungen über mehr Energie, weniger Schmerzen
-            und eine deutlich bessere Beweglichkeit – besonders bei sportlich geführten Pferden oder aktiven Hunden in Köln und
-            Umgebung. Mehr erfahren zur <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
+            Die Tierchiropraktik betrachtet Bewegungsapparat und Nervensystem als Einheit und setzt auf gezielte Impulse an der
+            Wirbelsäule. Blockaden können Muskulatur, Organe und sogar das Verhalten beeinflussen. Mit präzisen, sanften
+            Justierungen werden Gelenke mobilisiert und die natürliche Beweglichkeit gefördert. Viele Tierhalter berichten nach
+            wenigen Terminen von mehr Vitalität, weniger Schmerzen und einem geschmeidigeren Bewegungsablauf – besonders bei
+            sportlich geführten Pferden oder aktiven Hunden aus Liblar und Umgebung. Mehr erfahren zur
+            <NuxtLink to="/chiropraktik" title="Mehr zur Chiropraktik für Tiere">Chiropraktik</NuxtLink>.
           </p>
           <p>
-            Typische Indikationen für eine chiropraktische Behandlung sind Rückenprobleme, Arthrosen, Lahmheiten,
-            Koordinationsstörungen, Spondylose, Muskelverspannungen, Bandscheibenvorfälle, Leistungsabfall, Taktunreinheiten,
-            Schmerzreaktionen beim Satteln oder Heben sowie Verhaltensauffälligkeiten wie Aggression oder Rückzug. Die
-            Tierchiropraktik richtet sich an alle Altersklassen vom Welpen oder Fohlen bis zum Senior und wird stets individuell
-            an die Anatomie des jeweiligen Tieres angepasst.
+            Häufige Gründe für eine chiropraktische Behandlung sind Rückenbeschwerden, Arthrose, Lahmheiten,
+            Koordinationsprobleme, Spondylose, Muskelverspannungen, Bandscheibenprobleme, Leistungsabfall, Taktunreinheiten,
+            Schmerzreaktionen beim Satteln oder Heben sowie auffälliges Verhalten wie Aggression oder Rückzug. Die
+            Tierchiropraktik eignet sich für alle Altersstufen vom Welpen oder Fohlen bis zum Senior und wird stets an die
+            Anatomie und Bedürfnisse des jeweiligen Tieres angepasst.
           </p>
 
-          <h2 class="line mt-4">Osteopathie Köln für Tiere – sanfte Impulse für Selbstheilung</h2>
+          <h2 class="line mt-4">Tierosteopathie Liblar – sanfte Impulse für die Selbstheilung</h2>
           <p>
-            Die Osteopathie ist eine besonders sanfte, ganzheitliche Behandlungsmethode, die darauf abzielt, die natürlichen
-            Selbstheilungskräfte deines Tieres zu aktivieren. Durch gezielte manuelle Techniken werden Blockaden, Verspannungen
-            und Bewegungseinschränkungen aufgespürt und gelöst – ganz ohne Medikamente. Dabei steht nicht das einzelne Symptom,
-            sondern das Zusammenspiel von Struktur, Funktion und Energie im gesamten Körper im Mittelpunkt.
+            Osteopathie ist eine besonders sanfte, ganzheitliche Behandlungsmethode, die die körpereigenen
+            Selbstheilungskräfte deines Tieres anregen soll. Mit gezielten manuellen Techniken werden Blockaden, Verspannungen
+            und Bewegungseinschränkungen ertastet und gelöst – ohne Medikamente. Im Mittelpunkt steht nicht nur das Symptom,
+            sondern das Zusammenspiel von Struktur, Funktion und Energie im gesamten Organismus.
           </p>
           <p>
-            Osteopathie kann bei Bewegungseinschränkungen, Rücken- und Gelenkproblemen, muskulären Verspannungen,
-            Verdauungsstörungen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
-            eignet sich für Hunde und Pferde aller Altersgruppen – ob Welpe, Sportpferd oder Senior. Sie ist eine wertvolle
-            Ergänzung zur Schulmedizin und kann helfen, die Lebensqualität deines Tieres spürbar zu verbessern. Mehr erfahren zur
+            Die Methode kann bei Bewegungseinschränkungen, Rücken- und Gelenkproblemen, muskulären Verspannungen,
+            Verdauungsproblemen und Verhaltensauffälligkeiten unterstützen. Die Behandlung ist in der Regel schmerzfrei und
+            eignet sich für Hunde und Pferde aller Altersgruppen – vom Welpen über das Sportpferd bis zum Senior. Als Ergänzung
+            zur Schulmedizin kann sie helfen, die Lebensqualität deines Tieres spürbar zu steigern. Mehr erfahren zur
             <NuxtLink to="/osteopathie" title="Mehr zur Tierosteopathie">Osteopathie</NuxtLink>.
           </p>
 
-          <h2 class="line mt-4">Service Köln – ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
+          <h2 class="line mt-4">Service Liblar – ganzheitliche Betreuung im Tiergesundheitszentrum</h2>
           <p>
-            Unser Service vereint traditionelles Wissen mit moderner Tierheilkunde. Wir setzen auf natürliche, sanfte Methoden,
-            die Körper, Geist und Seele deines Tieres in Einklang bringen. Neben Chiropraktik und Osteopathie gehören manuelle
-            Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen Bausteinen.
-            Ergänzend bieten wir eine mobile Tierbehandlung an – ideal für Tiere, die den Transport schlecht vertragen oder sich
-            in ihrer gewohnten Umgebung wohler fühlen. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr
-            erfahren zu unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
+            Unser Service verbindet traditionelles Erfahrungswissen mit moderner Tiertherapie. Wir setzen auf natürliche,
+            schonende Methoden, die Körper, Geist und Seele deines Tieres in Balance bringen. Neben Chiropraktik und Osteopathie
+            gehören manuelle Therapie, Tierphysiotherapie und eine individuell abgestimmte Ernährungsberatung zu den zentralen
+            Bausteinen. Ergänzend bieten wir mobile Tierbehandlungen an – ideal für Tiere, die den Transport schlecht vertragen
+            oder zu Hause entspannter sind. Für die Anfahrt fällt eine Pauschale an, abhängig vom Standort. Mehr erfahren zu
+            unseren <NuxtLink to="/service" title="Mehr zum Service">Leistungen</NuxtLink>.
           </p>
           <p>
-            Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt dafür, dass dein
-            Tier bestmöglich versorgt wird. Fachliche Kompetenz, jahrelange Erfahrung und ein liebevoller Umgang mit Tier und
-            Mensch zeichnen unsere Praxis aus. Wir nehmen uns Zeit, hören zu und gehen individuell auf die Bedürfnisse deines
-            Tieres ein – auch für Tierhalter aus Köln, die eine ganzheitliche Betreuung in der Nähe suchen.
+            Eine interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten sorgt für eine
+            bestmögliche Versorgung. Fachliche Kompetenz, langjährige Erfahrung und ein achtsamer Umgang mit Tier und Mensch
+            zeichnen unsere Praxis aus. Wir nehmen uns Zeit, hören zu und richten jede Behandlung individuell aus – auch für
+            Tierhalter aus Liblar, die eine ganzheitliche Betreuung in der Nähe suchen.
           </p>
 
-          <h2 class="line mt-4">Preise Köln – transparent, fair und individuell</h2>
+          <h2 class="line mt-4">Preise Liblar – transparent, fair und individuell</h2>
           <p>
-            Unsere Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart. Vor der ersten Behandlung führen
-            wir ein ausführliches Anamnesegespräch durch, um die passende Therapie auszuwählen. Gerne beraten wir dich auch
-            telefonisch zu individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen?
-            Sprich uns an – wir erstellen dir ein passendes Paketangebot. Mehr erfahren zu unseren
+            Die Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart. Vor der ersten Behandlung führen wir
+            ein ausführliches Anamnesegespräch, um die passende Therapie festzulegen. Gerne beraten wir dich auch telefonisch zu
+            individuellen Anliegen. Du möchtest mehrere Leistungen kombinieren oder hast besondere Anforderungen? Sprich uns an –
+            wir erstellen dir ein passendes Paket. Mehr erfahren zu unseren
             <NuxtLink to="/preise" title="Mehr zu Preisen und Leistungen">Preisen</NuxtLink>.
           </p>
 
-          <h2 class="line mt-4">Andrea Bachem Köln – Erfahrung, Qualifikation, Tierwohl</h2>
+          <h2 class="line mt-4">Andrea Bachem Liblar – Erfahrung, Qualifikation und Tierwohl</h2>
           <p>
             Andrea Bachem ist staatlich geprüfte Tierarzthelferin und hat sich durch zahlreiche Aus- und Weiterbildungen auf die
-            Gesundheit und das Wohlbefinden von Tieren spezialisiert. Zu den Qualifikationen zählen unter anderem
-            Tierphysiotherapie, Tierosteopathie, manuelle Therapie sowie Dorntherapie und Chiropraktik. Stetige Fortbildung und
-            ein klarer Fokus auf das Tierwohl sind die Grundlage jeder Behandlung.
+            Gesundheit und das Wohlbefinden von Tieren spezialisiert. Zu ihren Qualifikationen zählen unter anderem
+            Tierphysiotherapie, Tierosteopathie, manuelle Therapie sowie Dorntherapie und Chiropraktik. Regelmäßige Fortbildungen
+            und ein klarer Fokus auf das Tierwohl bilden die Grundlage jeder Behandlung.
           </p>
 
           <section class="faq" itemscope itemtype="https://schema.org/FAQPage">
-            <h2 class="line mt-4">FAQ Köln – häufige Fragen zur Tiergesundheit</h2>
+            <h2 class="line mt-4">FAQ Liblar – häufige Fragen zur Tiergesundheit</h2>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Ist die Tierchiropraktik in Köln für jedes Alter geeignet?</summary>
+              <summary class="faq-question" itemprop="name">Eignet sich Tierchiropraktik in Liblar für jedes Alter?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
                   Ja. Die chiropraktische Behandlung wird individuell angepasst und ist für Welpen, junge Tiere, Sportpferde
-                  sowie Senioren geeignet. Ziel ist es, Beweglichkeit und Wohlbefinden zu fördern.
+                  sowie Senioren geeignet. Ziel ist es, Beweglichkeit und Wohlbefinden nachhaltig zu fördern.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Wann ist Osteopathie für Tiere aus Köln sinnvoll?</summary>
+              <summary class="faq-question" itemprop="name">In welchen Fällen ist Osteopathie für Tiere aus Liblar sinnvoll?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
-                  Osteopathie kann helfen, wenn Bewegungseinschränkungen, Verspannungen oder Verdauungsprobleme bestehen. Sie
-                  ist sanft, schmerzfrei und eignet sich sowohl für Hunde als auch für Pferde.
+                  Osteopathie kann unterstützen, wenn Bewegungseinschränkungen, Verspannungen oder Verdauungsprobleme bestehen.
+                  Sie ist sanft, schmerzfrei und eignet sich sowohl für Hunde als auch für Pferde.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Welche Leistungen umfasst der Service für Tierhalter aus Köln?</summary>
+              <summary class="faq-question" itemprop="name">Was beinhaltet der Service für Tierhalter aus Liblar?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
                   Unser Service umfasst Chiropraktik, Osteopathie, Tierphysiotherapie, manuelle Therapie und Ernährungsberatung.
-                  Ergänzend bieten wir bei Bedarf eine mobile Tierbehandlung an.
+                  Zusätzlich bieten wir bei Bedarf eine mobile Tierbehandlung an.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Wie entstehen die Preise für Behandlungen?</summary>
+              <summary class="faq-question" itemprop="name">Wie setzen sich die Behandlungskosten zusammen?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
-                  Die Preise richten sich nach dem zeitlichen Aufwand und der Tierart. Vor der ersten Behandlung findet ein
-                  ausführliches Anamnesegespräch statt, um den passenden Therapieplan festzulegen.
+                  Die Kosten richten sich nach Zeitaufwand und Tierart. Vor der ersten Behandlung findet ein ausführliches
+                  Anamnesegespräch statt, um den passenden Therapieplan festzulegen.
                 </p>
               </div>
             </details>
             <details class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-              <summary class="faq-question" itemprop="name">Wo findet die Behandlung für Köln statt?</summary>
+              <summary class="faq-question" itemprop="name">Wo findet die Behandlung für Liblar statt?</summary>
               <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <p itemprop="text">
                   Die Behandlungen erfolgen in der Praxis in Erftstadt. Für Tiere, die den Transport schlecht vertragen, ist
-                  eine mobile Behandlung möglich, abhängig vom Standort.
+                  eine mobile Behandlung möglich – abhängig vom Standort.
                 </p>
               </div>
             </details>
@@ -475,9 +475,9 @@
               <meta itemprop="postalCode" content="50374">
               <meta itemprop="addressLocality" content="Erftstadt">
             </div>
-            <h2 class="line text-center">Kontakt Köln & Terminvereinbarung</h2>
+            <h2 class="line text-center">Kontakt Liblar & Terminvereinbarung</h2>
             <p class="text-center">
-              Du kommst aus Köln und möchtest mehr über Chiropraktik, Osteopathie, Service oder Preise erfahren? Melde dich gern –
+              Du bist in Liblar und möchtest mehr über Chiropraktik, Osteopathie, Service oder Preise wissen? Melde dich gern –
               wir beraten dich persönlich und finden den passenden Therapieansatz für dein Tier.
             </p>
             <v-row class="justify-center text-center">
@@ -521,17 +521,17 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Tiergesundheit Köln – Chiropraktik & Osteopathie | Andrea Bachem',
+  title: 'Tiergesundheit Liblar – ganzheitliche Tiertherapie | Andrea Bachem',
   meta: [
     {
       name: 'description',
       content:
-        'Tiergesundheit für Köln: Informieren Sie sich über Chiropraktik, Osteopathie, Service und Preise im Tiergesundheitszentrum Andrea Bachem in Erftstadt.'
+        'Tiergesundheit für Liblar: Informationen zu Chiropraktik, Osteopathie, Service und Preisen im Tiergesundheitszentrum Andrea Bachem in Erftstadt.'
     },
     {
       name: 'keywords',
       content:
-        'Tiergesundheit Köln, Tierchiropraktik Köln, Tierosteopathie Köln, Chiropraktik Hund Pferd, Osteopathie Tiere, Service Tiergesundheitszentrum, Preise Tiertherapie, Andrea Bachem, Erftstadt'
+        'Tiergesundheit Liblar, Tierchiropraktik Liblar, Tierosteopathie Liblar, Chiropraktik Hund Pferd, Osteopathie Tiere, Tierphysiotherapie, Ernährungsberatung, Service Tiergesundheitszentrum, Preise Tiertherapie, Andrea Bachem, Erftstadt'
     },
     {
       name: 'robots',
@@ -543,12 +543,12 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Tiergesundheit Köln – Chiropraktik & Osteopathie | Andrea Bachem'
+      content: 'Tiergesundheit Liblar – ganzheitliche Tiertherapie | Andrea Bachem'
     },
     {
       property: 'og:description',
       content:
-        'Ganzheitliche Tiergesundheit für Köln: Chiropraktik, Osteopathie, Service und transparente Preise bei Andrea Bachem.'
+        'Ganzheitliche Tiergesundheit für Liblar: Chiropraktik, Osteopathie, Service und transparente Preise bei Andrea Bachem.'
     },
     {
       property: 'og:image',
@@ -556,7 +556,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://tier-gesundheitszentrum.com/tiergesundheit-koeln'
+      content: 'https://tier-gesundheitszentrum.com/tiergesundheit-liblar'
     },
     {
       property: 'og:type',
@@ -566,7 +566,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://tier-gesundheitszentrum.com/tiergesundheit-koeln'
+      href: 'https://tier-gesundheitszentrum.com/tiergesundheit-liblar'
     },
     {
       rel: 'apple-touch-icon',
@@ -587,7 +587,7 @@ import { useScreenStore } from "~/stores/screen.js";
 import { Icon } from '@iconify/vue';
 
 export default {
-  name: 'tiergesundheit-koeln',
+  name: 'tiergesundheit-liblar',
   components: {
     Icon,
   },
