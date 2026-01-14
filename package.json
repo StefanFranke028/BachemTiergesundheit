@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "TierGesundheitsNuxt",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,8 +11,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/sitemap": "^6.1.5",
     "compression": "^1.7.4",
     "html2pdf.js": "^0.10.3",
     "nuxt": "^3.13.0",

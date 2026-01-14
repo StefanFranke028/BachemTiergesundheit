@@ -61,32 +61,24 @@
 
 
 <script setup>
-
+import { navigateTo, useRoute } from '#imports';
+import { useAsyncData } from '#app';
 
 const route = useRoute();
-import { useRoute, navigateTo } from '#imports';
-import { useAsyncData } from '#app';
-const city = route.params.stadt || '';
+const prefix = 'tiergesundheit';
+const city = String(route.params.stadt || '');
 
-if (!city.startsWith('tiergesundheit')) {
+if (!city.startsWith(prefix)) {
   navigateTo('/');
-
 }
 
-const stadtparam = city.slice(15);
+const stadtparam = city.slice(prefix.length);
 
 const { data: stadtData } = await useAsyncData(`stadt-${stadtparam}`, () =>
     $fetch(`https://tier-gesundheitszentrum.com:8080/auth/stadt/name/${stadtparam}`)
 );
 
 const stadt = computed(() => stadtData.value || null);
-onMounted(() => {
-  console.log('stadt:', stadt.value);
-});
-
-if (!city.startsWith('tiergesundheit')) {
-  navigateTo('/');
-}
 const pageUrl = computed(() =>
     `https://tier-gesundheitszentrum.com/${encodeURI(String(route.params.stadt || ''))}`
 );

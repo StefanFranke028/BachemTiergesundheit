@@ -52,12 +52,12 @@
               <div class="editable_content" style="text-align:left;background-color: transparent !important;">
                 <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
                   <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                    <label class="text-white" for="text9467951">Newslatter abonieren</label>
+                    <label class="text-white" for="text9467951">Newsletter abonnieren</label>
                     <input class="cr_form-input" type="email" id="text9467951" name="email" value="" placeholder="name@example.com" style="width:100%;">
                   </div>
                 </div>
                 <div id="9467953" rel="button" class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable  submit_container">
-                  <button type="submit" class="cr_form-block cr_button">Abonieren</button>
+                  <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
                 </div>
               </div>
               <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
@@ -115,6 +115,8 @@
 
 
 <script setup>
+import { navigateTo, useRoute } from '#imports';
+import { useAsyncData } from '#app';
 
 if (process.client) {
   function loadjQuery(src, callback) {
@@ -152,30 +154,22 @@ if (process.client) {
     main()
   }
 }
+
 const route = useRoute();
-import { useRoute, navigateTo } from '#imports';
-import { useAsyncData } from '#app';
-const city = route.params.service || '';
+const prefix = 'service';
+const city = String(route.params.service || '');
 
-if (!city.startsWith('service')) {
+if (!city.startsWith(prefix)) {
   navigateTo('/');
-
 }
 
-const stadtparam = city.slice(8);
+const stadtparam = city.slice(prefix.length);
 
 const { data: stadtData } = await useAsyncData(`stadt-${stadtparam}`, () =>
     $fetch(`https://tier-gesundheitszentrum.com:8080/auth/seminare/url/${stadtparam}`)
 );
 
 const stadt = computed(() => stadtData.value || null);
-onMounted(() => {
-  console.log('stadt:', stadt.value);
-});
-
-if (!city.startsWith('service')) {
-  navigateTo('/');
-}
 useHead(() => {
   const baseTitle = stadt.value?.ueberschrift || '';
   const fullTitle = baseTitle.length < 30 ? `${baseTitle} – Tiergesundheitszentrum` : baseTitle;

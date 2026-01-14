@@ -137,12 +137,12 @@
                         <div class="editable_content" style="text-align:left;background-color: transparent !important;">
                           <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
                             <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                              <label for="text9467951">Newslatter abonieren</label>
+                              <label for="text9467951">Newsletter abonnieren</label>
                               <input class="cr_form-input" type="email" id="text9467951" name="email" value="" placeholder="name@example.com" style="width:100%;">
                             </div>
                           </div>
                           <div id="9467953" rel="button" class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable  submit_container">
-                          <button type="submit" class="cr_form-block cr_button">Abonieren</button>
+                          <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
                         </div>
                         </div>
                         <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
@@ -375,7 +375,7 @@
         </v-col>
         <v-col cols="12" class="mt-n4 d-flex justify-center">
           <v-btn style="background-color: #0082c2; color: #dedddd" @click="dialog1 = true">
-            newslatter abonieren
+            newsletter abonnieren
           </v-btn>
 
         </v-col>
@@ -418,12 +418,12 @@
                 <div class="editable_content" style="text-align:left;background-color: transparent !important;">
                   <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
                     <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                      <label for="text9467951">Newslatter abonieren</label>
+                      <label for="text9467951">Newsletter abonnieren</label>
                       <input class="cr_form-input" type="email" id="text9467951" name="email" value="" placeholder="name@example.com" style="width:100%;">
                     </div>
                   </div>
                   <div id="9467953" rel="button" class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable  submit_container">
-                    <button type="submit" class="cr_form-block cr_button">Abonieren</button>
+                    <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
                   </div>
                 </div>
                 <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>

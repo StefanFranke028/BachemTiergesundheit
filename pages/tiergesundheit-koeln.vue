@@ -6,9 +6,9 @@
       </v-col>
     </v-row>
 
-    <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
+    <v-row class="d-flex ma-0 justify-center " style="width: 100%;">
       <v-col cols="11">
-        <v-card class="pa-7" style="overflow: auto; max-height: 70vh; width: 100%; background-color: rgba(0,0,0,0.22)">
+        <v-card class="pa-7 background-impressum" style="overflow: auto; max-height: 70vh; width: 100%;">
           <article itemscope itemtype="https://schema.org/Service">
             <meta itemprop="serviceType" content="Tierchiropraktik, Tierosteopathie, Tierphysiotherapie, Ernährungsberatung">
             <meta itemprop="areaServed" content="Köln">
@@ -144,60 +144,92 @@
       </v-col>
     </v-row>
 
-    <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
-      <v-col cols="11">
-        <v-card class="pa-6 kontakt-card" style="background-color: rgba(0,0,0,0.35)">
-          <div itemscope itemtype="https://schema.org/Organization">
-            <meta itemprop="name" content="Tiergesundheitszentrum Andrea Bachem">
-            <meta itemprop="url" content="https://tier-gesundheitszentrum.com">
-            <div itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-              <meta itemprop="contactType" content="customer service">
-              <meta itemprop="telephone" content="+49 178 6915915">
-              <meta itemprop="email" content="andreabachem83@gmail.com">
-            </div>
-            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <meta itemprop="streetAddress" content="Peter-May-Straße 47">
-              <meta itemprop="postalCode" content="50374">
-              <meta itemprop="addressLocality" content="Erftstadt">
-            </div>
-            <h2 class="line text-center">Kontakt Köln & Terminvereinbarung</h2>
-            <p class="text-center">
-              Du kommst aus Köln und möchtest mehr über Chiropraktik, Osteopathie, Service oder Preise erfahren? Melde dich gern –
-              wir beraten dich persönlich und finden den passenden Therapieansatz für dein Tier.
-            </p>
-            <v-row class="justify-center text-center">
-              <v-col cols="12" md="4">
-                <div class="kontakt-icon">
-                  <Icon icon="solar:phone-broken" style="font-size: 28px"/>
-                </div>
-                <a itemprop="telephone" href="tel:01786915915" title="Anrufen: 01786915915">01786915915</a>
+ <!-- Termin-Button -->
+      <v-row class="mt-n3">
+        <v-col cols="12" class=" d-flex justify-center">
+      <v-btn style="background-color: #0082c2; color: #dedddd" @click="dialog = true">
+        Termin Vereinbaren
+      </v-btn>
+        </v-col>
+      </v-row>
+
+      <v-row class="justify-center mx-0 mt-n10" style="width: 100%">
+          <v-col class="d-flex justify-center mx-4  " cols="10">
+            <v-row class="info mt-16 mx-0" style="width: 100%">
+              <v-col class="d-flex justify-center align-center" cols="4">
+                <v-row class="d-flex justify-center">
+                  <div class="d-flex justify-center align-center"
+                       style="border: 1px solid rgba(255,255,255,0.57); position: absolute;height: 45px; width: 45px ;left: 15%; top:-20px; background-color: #0082c2; border-radius: 100%">
+                    <Icon icon="solar:phone-broken" style="font-size: 38px"/>
+                  </div>
+                  <v-col class="d-flex justify-center" cols="12">
+                    <h2 style=" color: #ffffff">
+                      Ruf mich an
+                    </h2>
+
+                  </v-col>
+                  <v-col class="d-flex justify-center" cols="12">
+                    <a href="tel:01786915915" title="Anrufen: 01786915915">
+                      <h3 class=" mt-n4" style="color: #fdfcfc">
+                        01786915915
+                      </h3>
+                    </a>
+                  </v-col>
+                </v-row>
               </v-col>
-              <v-col cols="12" md="4">
-                <div class="kontakt-icon">
-                  <Icon icon="ic:outline-mail" style="font-size: 28px"/>
-                </div>
-                <a itemprop="email" href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem" rel="noopener" target="_blank">
-                  andreabachem83@gmail.com
-                </a>
+              <!--                <v-divider style="background-color: #fcf8f8; color: #fffdfd" vertical></v-divider>-->
+
+              <v-col class="d-flex justify-center align-center" cols="4">
+                <v-row class="d-flex justify-center">
+                  <div class="d-flex justify-center align-center"
+                       style="border: 1px solid rgba(255,255,255,0.57); position: absolute;height: 45px; width: 45px ;left: 48%; top:-20px; background-color: #0082c2; border-radius: 100%">
+                    <Icon icon="ic:outline-mail" style="font-size: 38px"/>
+                  </div>
+                  <v-col class="d-flex justify-center" cols="12">
+                    <h2 style="color: #fcf8f8">
+                      Schreib mir eine Mail
+                    </h2>
+
+                  </v-col>
+                  <v-col class="d-flex justify-center" cols="12">
+                    <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem" style="text-decoration: none" rel="noopener" target="_blank">
+                      <h3 class="mt-n4" style="color: #fcfbfb">
+                        andreabachem83@gmail.com
+                      </h3>
+                    </a>
+
+                  </v-col>
+                </v-row>
               </v-col>
-              <v-col cols="12" md="4">
-                <div class="kontakt-icon">
-                  <Icon icon="ic:outline-place" style="font-size: 28px"/>
-                </div>
-                <a
-                  rel="noopener"
-                  href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
-                  title="Anfahrt zu Peter-May-Straße 47, Erftstadt"
-                  target="_blank"
-                >
-                  Peter-May-Straße 47, 50374 Köttingen
-                </a>
+              <!--                <v-divider style="color: #faf7f7; background-color: #f8f8f8" vertical></v-divider>-->
+
+              <v-col class="d-flex justify-center align-center" cols="4">
+                <v-row class="d-flex justify-center">
+                  <div class="d-flex justify-center align-center"
+                       style="border: 1px solid rgba(255,255,255,0.57); position: absolute;height: 45px; width: 45px ;left: 81%; top:-20px; background-color: #0082c2; border-radius: 100%">
+                    <Icon icon="ic:outline-place" style="font-size: 38px"/>
+                  </div>
+                  <v-col class="d-flex justify-center" cols="12">
+                    <h2 style="color: #fafafa">
+                      So findest du mich
+                    </h2>
+                  </v-col>
+                  <v-col class="d-flex justify-center" cols="12">
+                    <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
+                       title="Anfahrt zu Peter-May-Straße 47, Erftstadt"
+                       target="_blank">
+                      <p class="text-center mt-n4" style="font-size: 14px; color: #fcfafa">
+                        <b>
+                          Peter-May-Straße 47 50374 Köttingen
+                        </b>
+                      </p>
+                    </a>
+                  </v-col>
+                </v-row>
               </v-col>
             </v-row>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
+          </v-col>
+        </v-row>
   </div>
 
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px; overflow-y: scroll">
@@ -342,7 +374,7 @@
 
     <v-row class="justify-center mx-0">
       <v-col cols="11">
-        <v-card class="pa-6 kontakt-card" style="background-color: rgba(0,0,0,0.35)">
+        <v-card class="pa-6 kontakt-card">
           <div itemscope itemtype="https://schema.org/Organization">
             <meta itemprop="name" content="Tiergesundheitszentrum Andrea Bachem">
             <meta itemprop="url" content="https://tier-gesundheitszentrum.com">
@@ -465,9 +497,13 @@ useHead({
 
 <script>
 import { useScreenStore } from "~/stores/screen.js";
+import { Icon } from '@iconify/vue';
 
 export default {
   name: 'tiergesundheit-koeln',
+  components: {
+    Icon,
+  },
   computed: {
     wide() {
       const screenStore = useScreenStore();
@@ -496,14 +532,14 @@ export default {
 <style scoped>
 .line {
   font-family: "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 }
 
 p,
 div,
 summary,
 details {
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(0, 0, 0, 0.86);
 }
 
 a {
@@ -523,16 +559,28 @@ a {
   margin-bottom: 4px;
 }
 
+.kontakt-card {
+  background-color: #0082c2;
+}
+.info {
+  background-color: rgba(0, 130, 194, 0.82);
+  min-height: 120px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  border: 2px solid #0082c2;
+  position: relative;
+  overflow: visible;
+}
 .faq {
   margin-top: 16px;
 }
 
 .faq-item {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 6px;
   padding: 10px 14px;
   margin-top: 12px;
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .faq-question {
