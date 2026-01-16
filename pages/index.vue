@@ -13,7 +13,7 @@
           </v-col>
           <v-col cols="10">
 
-            <div style="height: 50vh; overflow-y: scroll">
+            <div style="height:40vh; overflow-y: scroll">
               <h2 style="color: #0082c2">
                 Ganzheitliche Therapie für Hund und Pferd in Erftstadt
 
@@ -255,7 +255,7 @@
 
 
     </v-row>
-        <v-img  alt="Therapiekollage mit Hund und Pferd" src="../assets/kolage.webp"
+    <v-img  alt="Therapiekollage mit Hund und Pferd" src="../assets/kolage.webp"
                style="background-size: cover;margin-top: -78px; height: 120vh;position: fixed; top:80px; right: 20px;width: 430px;"></v-img>
     <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
       <nav class="d-flex footer-nav">
@@ -303,6 +303,9 @@
     </footer>
 
   </div>
+
+
+
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <!-- Titel & Beschreibung -->
