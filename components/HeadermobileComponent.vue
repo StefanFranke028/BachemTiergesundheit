@@ -45,7 +45,7 @@
 
 <v-row style="width: 100%; height: 100%" class="ma-0 px-2">
   <v-col cols="4" style="height: 100%" class="d-flex pa-0 align-center">
-    <v-img  @click="navigateTo('/')" style="height: 90px; width: 90px; cursor: pointer" src="~/assets/logo-weiß.png"  alt="Andrea Bachem Logo"></v-img>
+    <v-img @click="navigateTo('/')" style="height: 90px; width: 90px; cursor: pointer" src="~/assets/logo-weiß.png" alt="Andrea Bachem Logo" title="Tiergesundheitszentrum Bachem Logo"></v-img>
   </v-col>
   <v-col cols="5" class="d-flex align-center justify-center">
     <div class="d-flex justify-center" style="cursor: pointer">

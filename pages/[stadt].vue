@@ -93,23 +93,24 @@ const ogImage = computed(() => {
 useHead(() => {
   const baseTitle = stadt.value?.überschrift || '';
   const fullTitle = baseTitle.length < 30 ? `${baseTitle} – Tiergesundheitszentrum` : baseTitle;
+  const clampedTitle = fullTitle.length > 64 ? fullTitle.slice(0, 64).trimEnd() : fullTitle;
   const desc = stadt.value?.miniUnterUeberschrift || 'Erfahren Sie mehr über ganzheitliche Tiergesundheit in Ihrer Stadt.';
 
   return {
     htmlAttrs: { lang: 'de' },
-    title: fullTitle,
+    title: clampedTitle,
     meta: [
       { name: 'description', content: desc },
       { name: 'robots', content: 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' },
 
-      { property: 'og:title', content: fullTitle },
+      { property: 'og:title', content: clampedTitle },
       { property: 'og:description', content: desc },
       { property: 'og:image', content: ogImage.value },
       { property: 'og:url', content: pageUrl.value },
       { property: 'og:type', content: 'article' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: fullTitle },
+      { name: 'twitter:title', content: clampedTitle },
       { name: 'twitter:description', content: desc },
       { name: 'twitter:image', content: ogImage.value },
     ],
@@ -124,7 +125,7 @@ useHead(() => {
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": fullTitle,
+          "headline": clampedTitle,
           "description": desc,
           "image": [ogImage.value],
           "datePublished": "2025-07-10",
