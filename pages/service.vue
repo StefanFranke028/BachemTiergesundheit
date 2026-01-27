@@ -63,7 +63,7 @@
         <article itemscope itemtype="https://schema.org/Service">
           <v-card
               class="mx-auto my-12"
-              height="480"
+              height="520"
               style="background-color: rgb(255,255,255); backdrop-filter: blur(4px); box-shadow: 1px 1px 5px black"
               width="300"
           >

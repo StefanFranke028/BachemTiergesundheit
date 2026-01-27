@@ -72,7 +72,7 @@ if (!city.startsWith(prefix)) {
   navigateTo('/');
 }
 
-const stadtparam = city.slice(prefix.length);
+const stadtparam = city.slice(prefix.length +1);
 
 const { data: stadtData } = await useAsyncData(`stadt-${stadtparam}`, () =>
     $fetch(`https://tier-gesundheitszentrum.com:8080/auth/stadt/name/${stadtparam}`)
