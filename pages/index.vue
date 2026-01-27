@@ -555,6 +555,7 @@ if (process.client) {
 
 const cityLinks = [
   { label: 'Bonn', to: '/tiergesundheit-bonn' },
+  { label: 'Köln', to: '/tiergesundheit-koeln' },
   { label: 'Erftstadt', to: '/tiergesundheit-erftstadt' },
   { label: 'Liblar', to: '/tiergesundheit-liblar' },
   { label: 'Lechenich', to: '/tiergesundheit-lechenich' },

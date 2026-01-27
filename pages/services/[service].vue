@@ -211,12 +211,13 @@ const stadt = computed(() => stadtData.value || null);
 useHead(() => {
   const baseTitle = stadt.value?.ueberschrift || '';
   const fullTitle = baseTitle.length < 30 ? `${baseTitle} – Tiergesundheitszentrum` : baseTitle;
+  const clampedTitle = fullTitle.length > 64 ? fullTitle.slice(0, 64).trimEnd() : fullTitle;
 
   return {
     htmlAttrs: {
       lang: 'de',
     },
-    title: fullTitle,
+    title: clampedTitle,
     meta: [
       {
         name: 'description',
@@ -233,7 +234,7 @@ useHead(() => {
       // Open Graph
       {
         property: 'og:title',
-        content: fullTitle,
+        content: clampedTitle,
       },
       {
         property: 'og:description',
@@ -257,7 +258,7 @@ useHead(() => {
       },
       {
         name: 'twitter:title',
-        content: fullTitle,
+        content: clampedTitle,
       },
       {
         name: 'twitter:description',

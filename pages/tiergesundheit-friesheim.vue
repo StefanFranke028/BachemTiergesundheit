@@ -457,6 +457,39 @@
       </v-col>
     </v-row>
 
+    <v-row class="mt-4">
+      <v-col cols="12" class="d-flex justify-center">
+        <v-btn style="background-color: #0082c2; color: #dedddd" @click="dialog = true">
+          Termin Vereinbaren
+        </v-btn>
+      </v-col>
+    </v-row>
+
+    <v-dialog v-model="dialog" scrim="black" width="95%">
+      <v-card class="pa-5 dialogBackground" style="background-color: rgb(205,205,205)">
+        <h2 class="text-center">Ihre Anliegen sind uns wichtig!</h2>
+        <p class="text-center mt-2" style="font-size: 14px">
+          Zögern Sie nicht, unser Kontaktformular zu nutzen, um mit unserem Tiergesundheitszentrum in Verbindung zu treten.
+          <br><br>
+          Bitte beachten: Termine müssen mindestens 36 Stunden im Voraus abgesagt werden. Andernfalls behalten wir uns vor, den Termin in Rechnung zu stellen.
+        </p>
+
+        <v-text-field v-model="name" label="Name" variant="underlined"/>
+        <v-text-field v-model="email" label="Email" variant="underlined"/>
+        <v-text-field v-model="telefonnummer" label="Telefonnummer" variant="underlined"/>
+        <v-textarea v-model="text" label="Nachricht" variant="underlined"/>
+
+        <v-row class="mt-4">
+          <v-col cols="6">
+            <v-btn block @click="create" :loading="loading">Senden</v-btn>
+          </v-col>
+          <v-col cols="6">
+            <v-btn block @click="dialog = false">Abbrechen</v-btn>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-dialog>
+
     <v-row class="justify-center mx-0">
       <v-col cols="11">
         <v-card class="pa-6 kontakt-card">
@@ -519,7 +552,7 @@ useHead({
   htmlAttrs: {
     lang: 'de'
   },
-  title: 'Tiergesundheit Friesheim – ganzheitliche Tiertherapie | Andrea Bachem',
+  title: 'Tiergesundheit Friesheim – Tiertherapie | Andrea Bachem',
   meta: [
     {
       name: 'description',
@@ -541,7 +574,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Tiergesundheit Friesheim – ganzheitliche Tiertherapie | Andrea Bachem'
+      content: 'Tiergesundheit Friesheim – Tiertherapie | Andrea Bachem'
     },
     {
       property: 'og:description',
