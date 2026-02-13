@@ -69,7 +69,7 @@
           <v-col class="d-flex align-center" cols="3">
             <p  class="link text-white text-center">
               <b>
-              <NuxtLink title="unsre Service und Seminare" style="font-size: 16px" aria-label="Service" to="/service">Service</NuxtLink>
+              <NuxtLink title="unsre Service und Seminare" style="font-size: 16px" aria-label="Service" to="/service">Seminare</NuxtLink>
 
               </b>
 
