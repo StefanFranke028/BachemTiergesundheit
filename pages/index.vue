@@ -15,7 +15,7 @@
 
             <div style="height:40vh; overflow-y: scroll">
               <h2 style="color: #0082c2">
-                Ganzheitliche Therapie für Hund und Pferd in Erftstadt
+                Ganzheitliche Wirbelsäulentherapie für Hund und Pferd in Erftstadt
 
               </h2>
               <h3 class="text-white">
@@ -316,7 +316,7 @@
       <v-col cols="11">
         <div style="height: 40vh; overflow-y: scroll">
           <h2 style="color: #0082c2">
-            Ganzheitliche Therapie für Hund und Pferd in Erftstadt
+            Ganzheitliche Wirbelsäulentherapie für Hund und Pferd in Erftstadt
           </h2>
 
           <h3 class="text-white">
