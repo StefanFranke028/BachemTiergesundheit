@@ -278,10 +278,18 @@
           Über Uns
         </NuxtLink>
         <span class="text-white mt-n1">|</span>
+        <p class="mx-2 footer-link text-white link">
+          <a href="https://fastglobeit.de/blog/tiere" title="Blogbeiträge zu Tierhaltung und Ernährung" rel="noopener" target="_blank">Blogbeiträge zu Tieren</a>
+        </p>
+        <span class="text-white mt-n1">|</span>
 
         <NuxtLink title="Mein Podcast" to="/podcast" class="mx-2 footer-link text-white link" >
          Podcast
         </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+        <p class="mx-2 footer-link text-white link">
+          <a href="https://fastglobeit.de/blog/tiere" title="Blogbeiträge zu Tierhaltung und Ernährung" rel="noopener" target="_blank">Blogbeiträge zu Tieren</a>
+        </p>
         <span class="text-white mt-n1">|</span>
         <template v-for="(city, index) in cityLinks" :key="city.to">
           <span v-if="index > 0" class="text-white mt-n1">|</span>
@@ -480,10 +488,16 @@
         <NuxtLink to="/ueberuns" title="Über Uns" class="mx-2 text-white link" >
           Über Uns
         </NuxtLink>
+
+
         <span class="text-white mt-n1">|</span>
         <NuxtLink to="/podcast" title="Podcast" class="mx-2 text-white link" >
           Podcast
         </NuxtLink>
+        <span class="text-white mt-n1">|</span>
+        <p class="mx-2 footer-link text-white link">
+          <a href="https://fastglobeit.de/blog/tiere" title="Blogbeiträge zu Tierhaltung und Ernährung" rel="noopener" target="_blank">Blogbeiträge zu Tieren</a>
+        </p>
         <span class="text-white mt-n1">|</span>
         <details class="footer-dropdown mx-2">
           <summary class="text-white footer-link link">Städte</summary>
