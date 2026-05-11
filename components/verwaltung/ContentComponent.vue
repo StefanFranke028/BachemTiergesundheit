@@ -139,15 +139,18 @@ export default {
         // Vor dem Speichern prüfen, ob URL schon existiert
         try {
           const token = localStorage.getItem('token');
+          console.log('[ContentComponent] GET /auth/page (URL-Check)');
           const list = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
             headers: {Authorization: `Bearer ${token}`}
           });
+          console.log('[ContentComponent] GET /auth/page (URL-Check) response:', list);
           const arr = Array.isArray(list) ? list : (list?.data || []);
           if (arr.some(e => (e.url || '').toLowerCase() === this.url)) {
             alert(`Die URL "${this.url}" existiert bereits. Bitte eine andere wählen.`);
             return;
           }
         } catch (e) {
+          console.error('[ContentComponent] GET /auth/page (URL-Check) error:', e);
           alert('Fehler bei der Prüfung der URL. Bitte erneut versuchen.');
           return;
         }
@@ -189,12 +192,14 @@ export default {
       if (process.client) {
         try {
           const token = localStorage.getItem('token');
+          console.log('[ContentComponent] GET /auth/page');
           const response = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
             headers: {Authorization: `Bearer ${token}`}
           });
+          console.log('[ContentComponent] GET /auth/page response:', response);
           this.contentArray = response.data || response || [];
         } catch (e) {
-          console.error('Fehler beim Laden der Inhalte:', e);
+          console.error('[ContentComponent] GET /auth/page error:', e);
         }
       }
     }
