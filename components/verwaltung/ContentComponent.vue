@@ -128,10 +128,30 @@ export default {
     },
     async create() {
       if (process.client) {
+        // Leerzeichen → "-" und kleinschreiben
+        this.url = (this.url || '').toLowerCase().trim().replace(/\s+/g, '-');
+
         if (!this.url || !this.title || !this.content) {
           alert('Bitte füllen Sie URL, Titel und Inhalt aus.');
           return;
         }
+
+        // Vor dem Speichern prüfen, ob URL schon existiert
+        try {
+          const token = localStorage.getItem('token');
+          const list = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
+            headers: {Authorization: `Bearer ${token}`}
+          });
+          const arr = Array.isArray(list) ? list : (list?.data || []);
+          if (arr.some(e => (e.url || '').toLowerCase() === this.url)) {
+            alert(`Die URL "${this.url}" existiert bereits. Bitte eine andere wählen.`);
+            return;
+          }
+        } catch (e) {
+          alert('Fehler bei der Prüfung der URL. Bitte erneut versuchen.');
+          return;
+        }
+
         try {
           const token = localStorage.getItem('token');
           const body = {
@@ -193,7 +213,7 @@ export default {
 }
 
 .content-textarea-small :deep(textarea) {
-  font-size: 6px !important;
+  font-size: 10px !important;
   line-height: 1.2;
   height: 250px !important;
   max-height: 250px !important;

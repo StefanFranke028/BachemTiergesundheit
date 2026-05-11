@@ -61,10 +61,15 @@ function extractFromHtml(html) {
 
 const parsed = computed(() => extractFromHtml(entry.value?.content));
 
+const canonicalUrl = `https://tier-gesundheitszentrum.com/content/${slug}`;
+
 useHead(() => ({
   title: parsed.value.title || entry.value?.title || 'Inhalt nicht gefunden',
   meta: parsed.value.metas,
-  link: parsed.value.links,
+  link: [
+    ...parsed.value.links.filter(l => (l.rel || '').toLowerCase() !== 'canonical'),
+    { rel: 'canonical', href: canonicalUrl },
+  ],
 }));
 </script>
 
