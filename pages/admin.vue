@@ -48,6 +48,7 @@
               <ServiceComponent v-if="selectedSeite === 'Service'"></ServiceComponent>
               <ProdukteComponent v-if="selectedSeite === 'Produkte'"></ProdukteComponent>
               <PreiseComponent  v-if="selectedSeite === 'Preise'"></PreiseComponent>
+              <ContentComponent v-if="selectedSeite === 'Content'"></ContentComponent>
 
               <!---COmponents--->
 
@@ -94,6 +95,7 @@ import BerichteComponent from "~/components/verwaltung/BerichteComponent.vue";
 import ServiceComponent from "~/components/verwaltung/ServiceComponent.vue";
 import ProdukteComponent from "~/components/verwaltung/ProdukteComponent.vue";
 import PreiseComponent from "~/components/verwaltung/PreiseComponent.vue";
+import ContentComponent from "~/components/verwaltung/ContentComponent.vue";
 
 
 export default {
@@ -106,10 +108,11 @@ export default {
     KontaktaufnahmeComponent,
     RechnungComponent,
     LoginComponent,
+    ContentComponent,
   },
   data() {
     return {
-      seiten: ['Berichte', 'Produkte', 'Service', 'Preise','Kontaktaufnahme','Rechnung'],
+      seiten: ['Berichte', 'Produkte', 'Service', 'Preise','Kontaktaufnahme','Rechnung','Content'],
       selectedSeite: 'Kontaktaufnahme',
       isLoading: true,
     };

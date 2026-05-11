@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "url": "beispiel",
+    "title": "Beispiel_Seite",
+    "content": "<h1>Beispiel</h1><p>Das ist ein Beispiel-Inhalt für den Slug <strong>beispiel</strong>.</p>"
+  },
+  {
+    "id": 2,
+    "url": "info",
+    "title": "Info_Seite",
+    "content": "<h1>Info</h1><p>Hier steht der HTML-Inhalt für die Info-Seite.</p>"
+  }
+]
