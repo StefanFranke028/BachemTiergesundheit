@@ -1,35 +1,36 @@
 <template>
-  <div class="d-flex justify-center align-center" style="width: 100vw; height: 100vh">
-    <v-form @submit.prevent="login">
-      <v-card class="card1"
-              style="box-shadow: none; border-top: 1px solid rgba(255,255,255,0); border-left: 1px solid rgba(255,255,255,0)">
-        <v-card-title class="text-center">
-          <span class="text-h5 ">Einloggen</span>
+  <div class="login-view">
+    <v-form class="login-form" @submit.prevent="login">
+      <v-card class="card1" elevation="0">
+        <v-card-title class="login-title">
+          <span>Verwaltung</span>
+          <h1>Einloggen</h1>
         </v-card-title>
-        <v-card-text>
-          <v-container>
-            <v-row class="d-flex justify-center" style="width: 100%">
-              <v-col
-                  cols="12">
-                <v-text-field v-model="email"
-
-                              label="Email"
-                              required
-                              variant="underlined"
+        <v-card-text class="login-body">
+          <v-container class="pa-0">
+            <v-row class="login-grid">
+              <v-col cols="12">
+                <v-text-field
+                    v-model="email"
+                    bg-color="white"
+                    density="comfortable"
+                    label="Email"
+                    required
+                    variant="outlined"
                 ></v-text-field>
               </v-col>
-              <v-col
-                  cols="12">
+              <v-col cols="12">
                 <v-text-field
                     v-model="password"
                     :append-icon="show ?'mdi-eye':'mdi-eye-off'"
                     :type="show ?'text':'password'"
-
+                    bg-color="white"
+                    density="comfortable"
                     label="Passwort"
                     name="password"
                     persistent-hint
                     required
-                    variant="underlined"
+                    variant="outlined"
                     @click:append="show=!show">
                 </v-text-field>
               </v-col>
@@ -45,25 +46,26 @@
             Einloggen ist momentan nicht möglich. Bitte wenden Sie sich an den Administrator.
           </v-alert>
         </v-card-text>
-        <v-card-actions class="d-flex justify-center">
-          <v-row>
+        <v-card-actions class="login-actions">
+          <v-row class="ma-0">
             <v-col class="d-flex justify-end" cols="6">
-              <v-btn color="white"
-                     style="border: none"
+              <v-btn
+                     class="login-submit"
                      type="submit"
-                     variant="outlined">
+                     variant="flat">
                 Einloggen
               </v-btn>
             </v-col>
             <v-col class="d-flex justify-start" cols="6">
-              <v-btn color="white"
-                     style="border: none"
-                     variant="outlined" @click="$router.push('/')">
+              <v-btn
+                     class="login-cancel"
+                     variant="outlined"
+                     @click="$router.push('/')">
                 Abbrechen
               </v-btn>
             </v-col>
-            <v-col class="d-flex justify-center mt-n5" cols="12">
-              <v-btn v-if="anmeldeversuch >= 3" variant="text" @click="forgetPassword">
+            <v-col class="forgot-row" cols="12">
+              <v-btn v-if="anmeldeversuch >= 3" class="forgot-button" variant="text" @click="forgetPassword">
                 passwort vergessen
               </v-btn>
             </v-col>
@@ -141,14 +143,120 @@ export default {
 </script>
 
 <style scoped>
+.login-view {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.login-form {
+  width: min(520px, 100%);
+}
+
 .card1 {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.75);
-  border-left: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
-  box-shadow: 5px 5px 10px #2c2a2a;
-  height: 350px;
-  width: 600px;
+  width: 100%;
+  border: 1px solid rgba(74, 55, 40, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 249, 0.9);
+  box-shadow: 0 24px 70px rgba(74, 55, 40, 0.12) !important;
+  backdrop-filter: blur(12px);
+  padding: 28px;
+}
+
+.login-title {
+  padding: 0;
+  text-align: center;
+  color: #4a3728;
+}
+
+.login-title span {
+  display: block;
+  margin-bottom: 6px;
+  color: #4a6741;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.login-title h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.login-body {
+  padding: 28px 0 4px;
+}
+
+.login-grid {
+  width: 100%;
+  margin: 0;
+}
+
+.login-actions {
+  padding: 12px 0 0;
+}
+
+.login-submit,
+.login-cancel {
+  min-width: 132px;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: none !important;
+}
+
+.login-submit {
+  background: #4a6741 !important;
+  color: #fffdf9 !important;
+}
+
+.login-cancel {
+  border-color: rgba(74, 55, 40, 0.26) !important;
+  color: #4a3728 !important;
+}
+
+.forgot-row {
+  display: flex;
+  justify-content: center;
+  min-height: 38px;
+  padding-top: 2px;
+}
+
+.forgot-button {
+  color: #4a6741;
+  text-transform: none;
+}
+
+:deep(.v-field) {
+  border-radius: 6px !important;
+  background: #fffdf9 !important;
+}
+
+:deep(.v-field__outline) {
+  color: rgba(74, 55, 40, 0.28) !important;
+}
+
+:deep(.v-label),
+:deep(.v-field__input) {
+  color: #4a3728 !important;
+}
+
+@media (max-width: 540px) {
+  .card1 {
+    padding: 22px;
+  }
+
+  .login-submit,
+  .login-cancel {
+    min-width: 100%;
+  }
 }
 </style>
