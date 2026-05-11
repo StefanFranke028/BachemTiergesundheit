@@ -19,13 +19,12 @@ const slug = String(route.params.slug || '');
 const { data: entry } = await useAsyncData(`content-${slug}`, async () => {
   const sideTag = process.server ? '[SSR]' : '[CSR]';
   try {
-    console.log(`${sideTag} [content/${slug}] GET /auth/page`);
-    const list = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page');
-    console.log(`${sideTag} [content/${slug}] GET /auth/page response:`, list);
-    const arr = Array.isArray(list) ? list : (list?.data || []);
-    return arr.find(e => e.url === slug) || null;
+    console.log(`${sideTag} [content/${slug}] GET /auth/page/${slug}`);
+    const res = await $fetch(`https://tier-gesundheitszentrum.com:8080/auth/page/${slug}`);
+    console.log(`${sideTag} [content/${slug}] GET /auth/page/${slug} response:`, res);
+    return res || null;
   } catch (e) {
-    console.error(`${sideTag} [content/${slug}] GET /auth/page error:`, e?.message || e);
+    console.error(`${sideTag} [content/${slug}] GET /auth/page/${slug} error:`, e?.message || e);
     return null;
   }
 });
