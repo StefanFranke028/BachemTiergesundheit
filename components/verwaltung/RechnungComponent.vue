@@ -18,7 +18,6 @@
             <v-col cols="8">
               <v-card
                   class="mx-auto my-12 pa-5"
-                  height="500"
                   style="background-color: rgba(255,255,255,0.75)">
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="6">
@@ -100,17 +99,23 @@
       <v-window-item style="height: 100%" value="1">
         <v-row class="justify-center mt-3" style="width: 100%; height: 100%">
           <v-col cols="12">
-            <v-data-table-virtual :items="bereinigtesRechnungsArray" fixed-header  height="550"
+            <v-data-table-virtual
+                :headers="rechnungsHeaders"
+                :items="bereinigtesRechnungsArray"
+                fixed-header
+                height="550"
                                   >
               <template v-slot:item="{ item }">
                 <tr>
                   <td>{{ item.id }}</td>
                   <td>{{ item.name }}</td>
                   <td>{{ item.vorname }}</td>
-                  <td>{{ item.straße }}</td>
-                  <td>{{ item.hausnummer }}</td>
-                  <td>{{ item.plz }}</td>
-                  <td>{{ item.ort }}</td>
+                  <td>
+                    <div class="address-cell">
+                      <span>{{ item.straße }} {{ item.hausnummer }}</span>
+                      <span>{{ item.plz }} {{ item.ort }}</span>
+                    </div>
+                  </td>
                   <td>{{ item.preis }}</td>
                   <td>{{ item.datum }}</td>
                   <td>{{ item.firma === 't' ? 'Tier-Gesundheitszentrum' : 'Ernährungsberatung' }}</td>
@@ -282,6 +287,18 @@ export default {
       leistungen: [],
       menge: '',
       pdf: {},
+      rechnungsHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'Name', key: 'name' },
+        { title: 'Vorname', key: 'vorname' },
+        { title: 'Adresse', key: 'adresse', sortable: false },
+        { title: 'Preis', key: 'preis' },
+        { title: 'Datum', key: 'datum' },
+        { title: 'Firma', key: 'firma' },
+        { title: 'Leistungen', key: 'leistungen', sortable: false },
+        { title: 'Löschen', key: 'löschen', sortable: false },
+        { title: 'Download', key: 'pdf', sortable: false },
+      ],
       rules: [v => v.length <= 132 || 'Maximale Zeichenanzahl 133 erreicht'],
 
       isTierGesundheitszentrum: true
@@ -476,5 +493,14 @@ async  mounted() {
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.address-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 130px;
+  white-space: normal;
+  line-height: 1.35;
 }
 </style>

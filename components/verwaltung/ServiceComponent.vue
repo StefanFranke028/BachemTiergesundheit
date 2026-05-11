@@ -20,8 +20,7 @@
             <v-col>
               <v-card
                   class="mx-auto pa-5"
-                  height="1200"
-                  style="overflow-y: scroll;background-color: rgba(255,255,255,0.75)"
+                  style="background-color: rgba(255,255,255,0.75)"
               >
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="5">
@@ -83,7 +82,10 @@
       <v-window-item value="1">
         <v-row class="justify-center mt-3" style="width: 100%">
           <v-col cols="12">
-            <v-data-table-virtual :items="bereinigtesBerichteArray" fixed-header
+            <v-data-table-virtual
+                :headers="serviceHeaders"
+                :items="bereinigtesBerichteArray"
+                fixed-header
                                   height="550" items-per-page="7">
               <template v-slot:item="{ item }">
                 <tr>
@@ -91,7 +93,6 @@
                   <td>{{ item.url }}</td>
                   <td>{{ item.ueberschrift }}</td>
                   <td><v-img :src="item.image"></v-img></td>
-                  <td>{{ item.unterUeberschrift }}</td>
                   <td>{{ item.miniUnterUeberschrift }}</td>
                   <td>
                     <a :href="item.backlinkUrl" :title="item.backlinkName || item.backlinkUrl">
@@ -127,18 +128,27 @@ export default {
     return {
       url:'',
       tab: null,
-      bild: '',
+      bild: null,
       datum: '',
       unterUeberschrift: '',
       miniUnterUeberschrift: '',
       autor: '',
-      image:'',
+      image: null,
       ueberschrift: '',
       backlinkName: '',
       backlinkUrl: '',
       text: '',
-      imageURL: '',
+      imageURL: null,
       berichteArray:[],
+      serviceHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'URL', key: 'url' },
+        { title: 'Überschrift', key: 'ueberschrift' },
+        { title: 'Bild', key: 'image', sortable: false },
+        { title: 'Mini-Überschrift', key: 'miniUnterUeberschrift' },
+        { title: 'Backlink', key: 'backlinkName', sortable: false },
+        { title: 'Löschen', key: 'icon', sortable: false },
+      ],
       editorOptions: {
         modules: {
           toolbar: [
@@ -172,14 +182,14 @@ export default {
       this.url = ''
       this.text = ''
       this.ueberschrift = ''
-      this.image = ''
+      this.image = null
       this.backlinkName = ''
       this.backlinkUrl = ''
       this.datum = ''
       this.unterUeberschrift = ''
       this.miniUnterUeberschrift = ''
-      this.bild = ''
-      this.imageURL = ''
+      this.bild = null
+      this.imageURL = null
     },
 
     async handleFileChange() {
@@ -230,7 +240,7 @@ export default {
 
     async create() {
       if (process.client) {
-        if (this.image ===''){
+        if (!this.image){
           console.log(this.image)
           return
         }
@@ -261,9 +271,9 @@ export default {
           this.url = ''
           this.text = ''
           this.ueberschrift = ''
-          this.bild = ''
-          this.imageURL = ''
-          this.image = ''
+          this.bild = null
+          this.imageURL = null
+          this.image = null
           this.unterUeberschrift = ''
           this.miniUnterUeberschrift = ''
           this.backlinkUrl = ''

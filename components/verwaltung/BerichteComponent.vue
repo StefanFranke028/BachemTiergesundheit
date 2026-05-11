@@ -20,8 +20,7 @@
             <v-col>
               <v-card
                   class="mx-auto pa-5"
-                  height="1200"
-                  style="overflow-y: scroll;background-color: rgba(255,255,255,0.75)"
+                  style="background-color: rgba(255,255,255,0.75)"
               >
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="5">
@@ -127,18 +126,18 @@ export default {
   data() {
     return {
       tab: null,
-      bild: '',
+      bild: null,
       datum: '',
       unterUeberschrift: '',
       miniUnterUeberschrift: '',
       name: '',
       autor: 'Andrea Bachem',
-      image: '',
+      image: null,
       ueberschrift: '',
       backlinkName: '',
       backlinkUrl: '',
       text: '',
-      imageURL: '',
+      imageURL: null,
       berichteArray: [],
       editorOptions: {
         modules: {
@@ -177,13 +176,13 @@ export default {
       this.backlinkName = ''
       this.backlinkUrl = ''
       this.ueberschrift = ''
-      this.image = ''
+      this.image = null
       this.autor = 'Andrea Bachem'
       this.datum = ''
       this.unterUeberschrift = ''
       this.miniUnterUeberschrift = ''
-      this.bild = ''
-      this.imageURL = ''
+      this.bild = null
+      this.imageURL = null
     },
 
     async handleFileChange() {
@@ -234,7 +233,7 @@ export default {
 
     async create() {
       if (process.client) {
-        if (this.image === '') {
+        if (!this.image) {
           console.log(this.image)
           return
         }
@@ -268,7 +267,7 @@ export default {
           this.ueberschrift = ''
           this.backlinkUrl = ''
           this.backlinkName = ''
-          this.image = ''
+          this.image = null
           this.autor = 'Andrea Bachem'
           this.unterUeberschrift = ''
           this.miniUnterUeberschrift = ''

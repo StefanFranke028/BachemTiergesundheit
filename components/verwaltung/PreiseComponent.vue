@@ -20,7 +20,6 @@
               <v-col cols="12">
               <v-card
                   class="mx-auto my-12 pa-5"
-                  height="800"
                   style="background-color: rgba(255,255,255,0.75)">
                 <v-row class="justify-center mt-3">
                   <v-col class="d-flex justify-center" cols="5">
@@ -106,8 +105,8 @@ export default {
       tab: null,
       ueberschrift: '',
       preis: '',
-      bild: '',
-      imageURL: '',
+      bild: null,
+      imageURL: null,
       einheit: '',
       dauer: '',
       text: '',
@@ -161,7 +160,7 @@ export default {
         await this.get();
 
         this.bild = null;
-        this.imageURL = '';
+        this.imageURL = null;
         this.text = '';
         this.preis = '';
         this.dauer = '';

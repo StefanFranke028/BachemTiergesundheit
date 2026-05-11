@@ -25,7 +25,11 @@
                       {{ item.email }}
                     </a>
                   </td>
-                  <td>{{ item.telefonnummer }}</td>
+                  <td>
+                    <a :href="'tel:' + item.telefonnummer" :title="`Telefonnummer ${item.telefonnummer} anrufen`">
+                      {{ item.telefonnummer }}
+                    </a>
+                  </td>
                   <td>{{ item.name }}</td>
                   <td>{{ item.text }}</td>
                   <td>

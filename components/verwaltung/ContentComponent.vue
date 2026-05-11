@@ -262,9 +262,34 @@ export default {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(47, 79, 58, 0.14);
   border-radius: 8px;
-  max-width: 420px;
+  width: fit-content;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 6px;
+  height: auto !important;
+}
+
+.content-tabs :deep(.v-slide-group__content) {
+  gap: 4px;
+}
+
+.content-tabs :deep(.v-tab) {
+  min-width: 96px;
+  min-height: 40px !important;
+  padding: 0 18px !important;
+  border-radius: 5px !important;
+  color: #4a3728 !important;
+}
+
+.content-tabs :deep(.v-tab--selected) {
+  background: #4a6741 !important;
+  color: #fffdf9 !important;
+}
+
+.content-tabs :deep(.v-tab__slider),
+.content-tabs :deep(.v-btn__overlay) {
+  display: none !important;
 }
 
 .content-admin {
