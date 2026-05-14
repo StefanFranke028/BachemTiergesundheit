@@ -26,8 +26,8 @@
         </div>
         <div class="home-hero-visual">
           <div class="home-hero-image-wrap">
-            <v-img src="~/assets/kolage.webp"
-                   alt="Therapiekollage mit Hund und Pferd"
+            <v-img src="~/assets/Andrea.png"
+                   alt="Andrea Bachem – Tiergesundheitszentrum Erftstadt"
                    class="home-hero-image"
                    cover/>
           </div>
