@@ -1,709 +1,309 @@
 <template>
-  <div class="background" v-if="desktop || tabletHorizontal">
-    <HeaderComponent class="" v-if=" (desktop || tabletHorizontal)"></HeaderComponent>
-
-    <v-row   class="ma-0 mt-n10 pa-0" style="width: 100%;overflow-y: scroll">
-      <v-col cols="9">
-        <v-row class="justify-center mx-0  pt-10" style="width: 100%">
-
-          <v-col cols="10">
-            <h1 class="text-white" style="font-size: 45px">
-              Tiergesundheitszentrum Andrea Bachem
-            </h1>
-          </v-col>
-          <v-col cols="10">
-
-            <div style="height:40vh; overflow-y: scroll">
-              <h2 style="color: #0082c2">
-                Ganzheitliche Wirbelsäulentherapie für Hund und Pferd in Erftstadt
-
-              </h2>
-              <h3 class="text-white">
-                Dein Hund lahmt, hat Schmerzen oder bewegt sich anders als früher?
-
-              </h3>
-              <h3 class="text-white">
-                Du spürst, dass etwas nicht stimmt, aber du bekommst keine klaren Antworten?
-              </h3>
-              <h3 class="text-white">
-                Dein Pferd zeigt Auffälligkeiten im Bewegungsablauf oder reagiert empfindlich beim Reiten?
-              </h3>
-              <h2  class="mt-5" style="color: #0082c2">
-                Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bist du genau richtig.
-              </h2>
-
-
-              <p style="font-size: 17px; color: #dedddd">
-                Hier steht dein Tier im Mittelpunkt – mit all seinen individuellen Bedürfnissen. <br>
-                Ich bin spezialisiert auf die ganzheitliche Betreuung von Hunden und Pferden mit Beschwerden im Bewegungsapparat.
-                Mein Schwerpunkt liegt auf moderner Tierchiropraktik, Tierosteopathie, Tierphysiotherapiesowie Ernährungsberatung.
-              </p>
-
-              <h3 class="text-white mt-3"> Individuelle Therapie statt Schema F</h3>
-              <p style="font-size: 17px; color: #dedddd">
-                Jede Behandlung wird sorgfältig geplant – auf Grundlage einer ausführlichen Anamnese.
-                Ob dein Tier unter einem Kreuzbandriss, Bandscheibenvorfall, Arthrose, Spondylose oder anderen Bewegungseinschränkungen leidet:
-                Ich entwickle ein passendes Therapiekonzept – angepasst an die aktuelle Situation und Bedürfnisse.
-              </p>
-              <h3 class="text-white mt-3">Ganzheitliche Tiertherapie mit Herz und Fachwissen</h3>
-              <p style="font-size: 17px; color: #dedddd">
-                Ich arbeite mit manuellen Techniken wie Chiropraktik, Osteopathie und Physiotherapie. Ergänzt wird die Therapie durch eine fundierte Ernährungsberatung,
-                um dein Tier bestmöglich zu unterstützen. Dabei lege ich großen Wert auf eine ruhige, vertrauensvolle Atmosphäre – für eine positive Behandlungserfahrung.
-              </p>
-
-
-              <h3 class="text-white mt-3">Wissen weitergeben – Menschen und Tiere stärken</h3>
-              <p style="font-size: 17px; color: #dedddd">
-                Neben der Arbeit mit Tieren bilde ich auch Tiertherapeuten und Tierhalter aus
-                für ein besseres Verständnis von Tiergesundheit und mehr Sicherheit im Alltag.
-
-
-              </p>
-              <h3 class="text-white mt-3">Suchst du eine Tiertherapeutin in Erftstadt, die sich wirklich Zeit nimmt und ganzheitlich denkt?</h3>
-              <p style="font-size: 17px; color: #dedddd">
-                Dann vereinbare jetzt einen Termin – telefonisch oder über unser Kontaktformular.
-                Ich freue mich auf dich und dein Tier!
-                <br><br>
-                <i>
-                Andrea Bachem – <em>Ihre Ansprechpartnerin für Tiergesundheit mit Herz und Verstand</em>.
-
-                </i>
-              </p>
-            </div>
-          </v-col>
-
-        </v-row>
-        <!-- Termin-Button -->
-
-
-        <!-- Termin-Dialog -->
-        <v-dialog v-model="dialog" scrim="black" width="1200">
-          <template v-slot:activator="{ props }">
-
-            <div class="d-flex justify-center">
-            <v-btn  class="text-center" style="background-color: #0082c2; color: #dedddd" v-bind="props">
-              Termin Vereinbaren
-            </v-btn>
-
-            </div>
-          </template>
-          <v-card
-              class="mx-auto my-12 pa-5 dialogBackground"
-              style="background-color: rgb(205,205,205); box-shadow: 0 4px 8px 0 rgb(0,0,0), 0 6px 20px 0 rgb(0,0,0)"
-              width="1200">
-            <v-row>
-              <v-col>
-                <v-row class="justify-center">
-                  <v-col class="d-flex justify-center" cols="10">
-                    <h1 class="line"> Termin Vereinbaren</h1>
-                  </v-col>
-                  <v-col class="d-flex justify-center mt-n3" cols="10">
-                    <v-text-field v-model="name" label="Name" variant="underlined"/>
-                  </v-col>
-                  <v-col class="d-flex justify-center mt-n3" cols="10">
-                    <v-text-field v-model="email" label="Email" variant="underlined"/>
-                  </v-col>
-                  <v-col class="d-flex justify-center mt-n3" cols="10">
-                    <v-text-field v-model="telefonnummer" label="Telefonnummer" variant="underlined"/>
-                  </v-col>
-                  <v-col class="d-flex justify-center mt-n3" cols="10">
-                    <v-textarea v-model="text" clearable counter
-                                label="Nachricht" no-resize style="color: black" variant="underlined"/>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col class="align-center d-flex pr-16">
-                <v-row class="mt-10">
-                  <v-col cols="8">
-                    <div class="logo"/>
-                  </v-col>
-
-                  <v-col class=" pt-15" cols="12">
-                    <h2 class="pt-10">Ihre Anliegen sind uns wichtig!</h2>
-                    <br>
-                    <p style="font-size: 16px">Zögern Sie nicht, unser
-                      Kontaktformular
-                      zu
-                      nutzen,
-                      um
-                      mit
-                      unserem Tiergesundheitszentrum in Verbindung zu treten und die bestmögliche Betreuung für
-                      Ihr Haustier zu erhalten.
-                    </p>
-                  </v-col>
-                  <v-col cols="12">
-                    <form class="layout_form cr_form cr_font" action="https://seu2.cleverreach.com/f/430331-415442/wcs/" method="post" target="_blank">
-                      <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
-                        <div class="editable_content" style="text-align:left;background-color: transparent !important;">
-                          <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
-                            <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                              <label for="text9467951">Newsletter abonnieren</label>
-                              <input class="cr_form-input" type="email" id="text9467951" name="email" value="" placeholder="name@example.com" style="width:100%;">
-                            </div>
-                          </div>
-                          <div id="9467953" rel="button" class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable  submit_container">
-                          <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
-                        </div>
-                        </div>
-                        <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
-                      </div>
-
-
-                    </form>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="12">
-
-                <v-row class="mt-10">
-                  <v-col class="d-flex justify-center" cols="6">
-                    <v-btn variant="text" @click="create" :loading="loading">
-                      Senden
-                    </v-btn>
-                  </v-col>
-                  <v-col class="d-flex justify-center" cols="6">
-                    <v-btn variant="text" @click="dialog = false">
-                      Abbrechen
-                    </v-btn>
-                  </v-col>
-                </v-row>
-              </v-col>
-            </v-row>
-          </v-card>
-
-        </v-dialog>
-        <v-row class="justify-center mx-0 mt-n10" style="width: 100%">
-          <v-col class="d-flex justify-center mx-4  " cols="10">
-            <v-row class="info mt-16 mx-0" style="width: 100%">
-              <v-col class="d-flex justify-center align-center" cols="4">
-                <v-row class="d-flex justify-center">
-                  <div class="d-flex justify-center align-center"
-                       style="border: 1px solid rgba(255,255,255,0.57); position: absolute;height: 45px; width: 45px ;left: 15%; top:-20px; background-color: #0082c2; border-radius: 100%">
-                    <Icon icon="solar:phone-broken" style="font-size: 38px"/>
-                  </div>
-                  <v-col class="d-flex justify-center" cols="12">
-                    <h2 style=" color: #ffffff">
-                      Ruf mich an
-                    </h2>
-
-                  </v-col>
-                  <v-col class="d-flex justify-center" cols="12">
-                    <a href="tel:01786915915" title="Anrufen: 01786915915">
-                      <h3 class=" mt-n4" style="color: #fdfcfc">
-                        01786915915
-                      </h3>
-                    </a>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <!--                <v-divider style="background-color: #fcf8f8; color: #fffdfd" vertical></v-divider>-->
-
-              <v-col class="d-flex justify-center align-center" cols="4">
-                <v-row class="d-flex justify-center">
-                  <div class="d-flex justify-center align-center"
-                       style="border: 1px solid rgba(255,255,255,0.57); position: absolute;height: 45px; width: 45px ;left: 48%; top:-20px; background-color: #0082c2; border-radius: 100%">
-                    <Icon icon="ic:outline-mail" style="font-size: 38px"/>
-                  </div>
-                  <v-col class="d-flex justify-center" cols="12">
-                    <h2 style="color: #fcf8f8">
-                      Schreib mir eine Mail
-                    </h2>
-
-                  </v-col>
-                  <v-col class="d-flex justify-center" cols="12">
-                    <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem" style="text-decoration: none" rel="noopener" target="_blank">
-                      <h3 class="mt-n4" style="color: #fcfbfb">
-                        andreabachem83@gmail.com
-                      </h3>
-                    </a>
-
-                  </v-col>
-                </v-row>
-              </v-col>
-              <!--                <v-divider style="color: #faf7f7; background-color: #f8f8f8" vertical></v-divider>-->
-
-              <v-col class="d-flex justify-center align-center" cols="4">
-                <v-row class="d-flex justify-center">
-                  <div class="d-flex justify-center align-center"
-                       style="border: 1px solid rgba(255,255,255,0.57); position: absolute;height: 45px; width: 45px ;left: 81%; top:-20px; background-color: #0082c2; border-radius: 100%">
-                    <Icon icon="ic:outline-place" style="font-size: 38px"/>
-                  </div>
-                  <v-col class="d-flex justify-center" cols="12">
-                    <h2 style="color: #fafafa">
-                      So findest du mich
-                    </h2>
-                  </v-col>
-                  <v-col class="d-flex justify-center" cols="12">
-                    <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046778!2d50.8280484!3e0?entry=ttu"
-                       title="Anfahrt zu Peter-May-Straße 47, Erftstadt"
-                       target="_blank">
-                      <p class="text-center mt-n4" style="font-size: 14px; color: #fcfafa">
-                        <b>
-                          Peter-May-Straße 47 50374 Köttingen
-                        </b>
-                      </p>
-                    </a>
-                  </v-col>
-                </v-row>
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-
-      </v-col>
-
-
-
-    </v-row>
-    <v-img  alt="Therapiekollage mit Hund und Pferd" src="../assets/kolage.webp"
-               style="background-size: cover;margin-top: -78px; height: 120vh;position: fixed; top:80px; right: 20px;width: 430px;"></v-img>
-    <footer class="d-flex" style="position: fixed; bottom: 10px; width: 100%;  align-items: center">
-      <nav class="d-flex footer-nav">
-        <NuxtLink  title="Impressum von Andrea Bachem" to="/impressum" class="mx-2 footer-link text-white link">
-          Impressum
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink  title="Verwaltungsseite" rel="nofollow" to="/admin" class="mx-2 text-white footer-link link" >
-          Verwaltung
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink title="Datenschautz von Tiergesundheitszentrum.de"  to="/datenschutz" class="mx-2 footer-link text-white link" >
-          Datenschutz
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink title="Meine Vita und intressantes über mich" to="/ueberuns" class="mx-2 footer-link text-white link" >
-          Über Uns
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-        <p class="mx-2 footer-link text-white link">
-          <a href="https://fastglobeit.de/blog/tiere" title="Blogbeiträge zu Tierhaltung und Ernährung" rel="noopener" target="_blank">Blogbeiträge zu Tieren</a>
-        </p>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink title="Mein Podcast" to="/podcast" class="mx-2 footer-link text-white link" >
-         Podcast
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-        <p class="mx-2 footer-link text-white link">
-          <a href="https://fastglobeit.de/blog/tiere" title="Blogbeiträge zu Tierhaltung und Ernährung" rel="noopener" target="_blank">Blogbeiträge zu Tieren</a>
-        </p>
-        <span class="text-white mt-n1">|</span>
-        <template v-for="(city, index) in cityLinks" :key="city.to">
-          <span v-if="index > 0" class="text-white mt-n1">|</span>
-          <NuxtLink :title="`Tiergesundheit ${city.label}`" :to="city.to" class="mx-2 footer-link text-white link">
-            {{ city.label }}
-          </NuxtLink>
-        </template>
-      </nav>
-
-      <!-- YouTube-Link als echter externer Link -->
-      <a href="https://www.youtube.com/results?search_query=andrea+bachem" title="Andrea Bachem auf YouTube" aria-label="YouTube" class="mx-3 mt-n4" style="color: red; font-size: 40px">
-        <Icon icon="grommet-icons:youtube" />
-      </a>
-
-      <!-- Instagram-Link -->
-      <a href="https://www.instagram.com/andreabachem?igsh=MTIxZTJxZHRvd2wxeg==" title="Andrea Bachem auf Instagram" target="_blank" rel="noopener" aria-label="Instagram" class="mx-3 mt-n4" style="font-size: 40px">
-        <Icon icon="skill-icons:instagram" />
-      </a>
-    </footer>
-
-  </div>
-
-
-
-  <div v-if="mobile || tablet" class="background" style="padding-top: 20px">
+  <div class="background home-page">
+    <HeaderComponent v-if="desktop || tabletHorizontal"></HeaderComponent>
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
-    <!-- Titel & Beschreibung -->
-    <v-row class="justify-center mx-0 ">
-      <v-col cols="11">
-        <h1 class="text-white text-center" style="font-size: 30px">Tier Gesundheitszentrum Andrea Bachem</h1>
-      </v-col>
-      <v-col cols="11">
-        <div style="height: 40vh; overflow-y: scroll">
-          <h2 style="color: #0082c2">
-            Ganzheitliche Wirbelsäulentherapie für Hund und Pferd in Erftstadt
-          </h2>
 
-          <h3 class="text-white">
-            Dein Hund lahmt, hat Schmerzen oder bewegt sich anders als früher?
-          </h3>
-          <h3 class="text-white">
-            Du spürst, dass etwas nicht stimmt, aber du bekommst keine klaren Antworten?
-          </h3>
-          <h3 class="text-white">
-            Dein Pferd zeigt Auffälligkeiten im Bewegungsablauf oder reagiert empfindlich beim Reiten?
-          </h3>
-
-          <h2 class="mt-5" style="color: #0082c2">
+    <!-- HERO -->
+    <section class="home-hero">
+      <div class="home-container home-hero-grid">
+        <div class="home-hero-text">
+          <span class="home-eyebrow">Tiergesundheitszentrum · Erftstadt</span>
+          <h1 class="home-title">
+            Andrea Bachem
+            <span class="home-title-accent">Ganzheitliche Wirbelsäulentherapie für Hund &amp; Pferd</span>
+          </h1>
+          <p class="home-lead">
+            Dein Hund lahmt, hat Schmerzen oder bewegt sich anders als früher? Dein Pferd zeigt
+            Auffälligkeiten im Bewegungsablauf oder reagiert empfindlich beim Reiten? Du spürst,
+            dass etwas nicht stimmt, aber bekommst keine klaren Antworten?
+          </p>
+          <p class="home-lead-strong">
             Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bist du genau richtig.
-          </h2>
-
-          <p style="font-size: 17px; color: #dedddd">
-            Hier steht dein Tier im Mittelpunkt – mit all seinen individuellen Bedürfnissen. <br>
-            Ich bin spezialisiert auf die ganzheitliche Betreuung von Hunden und Pferden mit Beschwerden im Bewegungsapparat.
-            Mein Schwerpunkt liegt auf moderner Tierchiropraktik, Tierosteopathie, Tierphysiotherapiesowie Ernährungsberatung.
           </p>
+          <div class="home-cta-row">
+            <button class="home-cta-primary" @click="dialog = true">Termin vereinbaren</button>
+          </div>
+        </div>
+        <div class="home-hero-visual">
+          <div class="home-hero-image-wrap">
+            <v-img src="~/assets/kolage.webp"
+                   alt="Therapiekollage mit Hund und Pferd"
+                   class="home-hero-image"
+                   cover/>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h3 class="text-white mt-3">Individuelle Therapie statt Schema F</h3>
-          <p style="font-size: 17px; color: #dedddd">
-            Jede Behandlung wird sorgfältig geplant – auf Grundlage einer ausführlichen Anamnese.
-            Ob dein Tier unter einem Kreuzbandriss, Bandscheibenvorfall, Arthrose, Spondylose oder anderen Bewegungseinschränkungen leidet:
-            Ich entwickle ein passendes Therapiekonzept – angepasst an die aktuelle Situation und Bedürfnisse.
-          </p>
+    <!-- CONTACT INFO STRIPE -->
+    <section class="home-info-stripe">
+      <div class="home-container">
+        <div class="home-info-grid">
+          <a href="tel:01786915915" title="Anrufen: 01786915915" class="home-info-card">
+            <div class="home-info-icon">
+              <Icon icon="solar:phone-broken"/>
+            </div>
+            <div class="home-info-text">
+              <span class="home-info-label">Ruf mich an</span>
+              <span class="home-info-value">01786915915</span>
+            </div>
+          </a>
+          <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem"
+             class="home-info-card" rel="noopener" target="_blank">
+            <div class="home-info-icon">
+              <Icon icon="ic:outline-mail"/>
+            </div>
+            <div class="home-info-text">
+              <span class="home-info-label">Schreib mir</span>
+              <span class="home-info-value">andreabachem83@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280411,6.7633927,13z"
+             title="Anfahrt zu Peter-May-Straße 47, Erftstadt"
+             class="home-info-card" target="_blank" rel="noopener">
+            <div class="home-info-icon">
+              <Icon icon="ic:outline-place"/>
+            </div>
+            <div class="home-info-text">
+              <span class="home-info-label">So findest du mich</span>
+              <span class="home-info-value">Peter-May-Straße 47, 50374 Köttingen</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-          <h3 class="text-white mt-3">Ganzheitliche Tiertherapie mit Herz und Fachwissen</h3>
-          <p style="font-size: 17px; color: #dedddd">
-            Ich arbeite mit manuellen Techniken wie Chiropraktik, Osteopathie und Physiotherapie. Ergänzt wird die Therapie durch eine fundierte Ernährungsberatung,
-            um dein Tier bestmöglich zu unterstützen. Dabei lege ich großen Wert auf eine ruhige, vertrauensvolle Atmosphäre – für eine positive Behandlungserfahrung.
-          </p>
-
-          <h3 class="text-white mt-3">Wissen weitergeben – Menschen und Tiere stärken</h3>
-          <p style="font-size: 17px; color: #dedddd">
-            Neben der Arbeit mit Tieren bilde ich auch Tiertherapeuten und Tierhalter aus
-            für ein besseres Verständnis von Tiergesundheit und mehr Sicherheit im Alltag.
-          </p>
-
-          <h3 class="text-white mt-3">
-            Suchst du eine Tiertherapeutin in Erftstadt, die sich wirklich Zeit nimmt und ganzheitlich denkt?
-          </h3>
-          <p style="font-size: 17px; color: #dedddd">
-            Dann vereinbare jetzt einen Termin – telefonisch oder über unser Kontaktformular.
-            Ich freue mich auf dich und dein Tier!
-            <br><br>
-            <i>
-              Andrea Bachem – <em>Ihre Ansprechpartnerin für Tiergesundheit mit Herz und Verstand</em>.
-            </i>
+    <!-- CONTENT -->
+    <section class="home-content">
+      <div class="home-container">
+        <div class="home-text-block">
+          <h2 class="home-h2">Im Tiergesundheitszentrum Andrea Bachem bist du genau richtig</h2>
+          <p>
+            Hier steht dein Tier im Mittelpunkt – mit all seinen individuellen Bedürfnissen.
+            Ich bin spezialisiert auf die ganzheitliche Betreuung von Hunden und Pferden mit
+            Beschwerden im Bewegungsapparat. Mein Schwerpunkt liegt auf moderner Tierchiropraktik,
+            Tierosteopathie, Tierphysiotherapie sowie Ernährungsberatung.
           </p>
         </div>
 
-      </v-col>
+        <div class="home-text-block">
+          <h2 class="home-h2">Individuelle Therapie statt Schema F</h2>
+          <p>
+            Jede Behandlung wird sorgfältig geplant – auf Grundlage einer ausführlichen Anamnese.
+            Ob dein Tier unter einem Kreuzbandriss, Bandscheibenvorfall, Arthrose, Spondylose oder
+            anderen Bewegungseinschränkungen leidet: Ich entwickle ein passendes Therapiekonzept –
+            angepasst an die aktuelle Situation und Bedürfnisse.
+          </p>
+        </div>
 
-    </v-row>
+        <div class="home-text-block">
+          <h2 class="home-h2">Ganzheitliche Tiertherapie mit Herz und Fachwissen</h2>
+          <p>
+            Ich arbeite mit manuellen Techniken wie Chiropraktik, Osteopathie und Physiotherapie.
+            Ergänzt wird die Therapie durch eine fundierte Ernährungsberatung, um dein Tier
+            bestmöglich zu unterstützen. Dabei lege ich großen Wert auf eine ruhige, vertrauensvolle
+            Atmosphäre – für eine positive Behandlungserfahrung.
+          </p>
+        </div>
 
-    <!-- Termin-Button -->
-      <v-row class="mt-n3">
-        <v-col cols="12" class=" d-flex justify-center">
-      <v-btn style="background-color: #0082c2; color: #dedddd" @click="dialog = true">
-        Termin Vereinbaren
-      </v-btn>
+        <div class="home-text-block">
+          <h2 class="home-h2">Wissen weitergeben – Menschen und Tiere stärken</h2>
+          <p>
+            Neben der Arbeit mit Tieren bilde ich auch Tiertherapeuten und Tierhalter aus – für ein
+            besseres Verständnis von Tiergesundheit und mehr Sicherheit im Alltag.
+          </p>
+        </div>
 
-        </v-col>
-        <v-col cols="12" class="mt-n4 d-flex justify-center">
-          <v-btn style="background-color: #0082c2; color: #dedddd" @click="dialog1 = true">
-            newsletter abonnieren
-          </v-btn>
+        <div class="home-text-block">
+          <h2 class="home-h2">Suchst du eine Tiertherapeutin in Erftstadt, die sich wirklich Zeit nimmt?</h2>
+          <p>
+            Dann vereinbare jetzt einen Termin – telefonisch oder über unser Kontaktformular.
+            Ich freue mich auf dich und dein Tier!
+          </p>
+          <p class="home-signature">
+            <em>Andrea Bachem</em> – Ihre Ansprechpartnerin für Tiergesundheit mit Herz und Verstand.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        </v-col>
-      </v-row>
+    <!-- BOTTOM CTA -->
+    <section class="home-cta">
+      <div class="home-container">
+        <div class="home-cta-card">
+          <div>
+            <h2 class="home-cta-title">Bereit für einen Termin?</h2>
+            <p class="home-cta-text">
+              Lass uns gemeinsam schauen, was dein Tier braucht.
+              Ich nehme mir Zeit für eine ausführliche Anamnese.
+            </p>
+          </div>
+          <button class="home-cta-btn" @click="dialog = true">Termin vereinbaren ›</button>
+        </div>
+      </div>
+    </section>
 
+    <!-- FOOTER -->
+    <FooterComponent/>
 
-    <!-- Termin-Dialog -->
-    <v-dialog v-model="dialog" scrim="black" width="95%">
-      <v-card class="pa-5 dialogBackground" style="background-color: rgb(205,205,205)">
-        <h2 class="text-center">Ihre Anliegen sind uns wichtig!</h2>
-        <p class="text-center mt-2" style="font-size: 14px">
-          Zögern Sie nicht, unser Kontaktformular zu nutzen, um mit unserem Tiergesundheitszentrum in Verbindung zu treten.
-          <br><br>
-          Bitte beachten: Termine müssen mindestens 36 Stunden im Voraus abgesagt werden. Andernfalls behalten wir uns vor, den Termin in Rechnung zu stellen.
-        </p>
-
-
-        <v-text-field v-model="name" label="Name" variant="underlined"/>
-        <v-text-field v-model="email" label="Email" variant="underlined"/>
-        <v-text-field v-model="telefonnummer" label="Telefonnummer" variant="underlined"/>
-        <v-textarea v-model="text" label="Nachricht" variant="underlined"/>
-
-
-        <v-row class="mt-4">
-          <v-col cols="6">
-            <v-btn block @click="create" :loading="loading">Senden</v-btn>
+    <!-- TERMIN-DIALOG -->
+    <v-dialog v-model="dialog" scrim="black" :width="mobile || tablet ? '95%' : 1200">
+      <v-card
+          class="mx-auto my-12 pa-5 dialogBackground"
+          style="background-color: rgb(205,205,205); box-shadow: 0 4px 8px 0 rgb(0,0,0), 0 6px 20px 0 rgb(0,0,0)"
+          :width="mobile || tablet ? '100%' : 1200">
+        <v-row>
+          <v-col cols="12" md="6">
+            <v-row class="justify-center">
+              <v-col class="d-flex justify-center" cols="10">
+                <h1 class="line">Termin Vereinbaren</h1>
+              </v-col>
+              <v-col class="d-flex justify-center mt-n3" cols="10">
+                <v-text-field v-model="name" label="Name" variant="underlined"/>
+              </v-col>
+              <v-col class="d-flex justify-center mt-n3" cols="10">
+                <v-text-field v-model="email" label="Email" variant="underlined"/>
+              </v-col>
+              <v-col class="d-flex justify-center mt-n3" cols="10">
+                <v-text-field v-model="telefonnummer" label="Telefonnummer" variant="underlined"/>
+              </v-col>
+              <v-col class="d-flex justify-center mt-n3" cols="10">
+                <v-textarea v-model="text"
+                            label="Nachricht" no-resize style="color: black" variant="underlined"/>
+              </v-col>
+            </v-row>
           </v-col>
-          <v-col cols="6">
-            <v-btn block @click="dialog = false">Abbrechen</v-btn>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-dialog>
-    <v-dialog v-model="dialog1" scrim="black" width="95%">
-      <v-card class="pa-5 dialogBackground" style="background-color: rgb(205,205,205)">
-        <v-row class="mt-4">
-          <v-col cols="12">
-            <form class="layout_form cr_form cr_font" action="https://seu2.cleverreach.com/f/430331-415442/wcs/" method="post" target="_blank">
-              <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
-                <div class="editable_content" style="text-align:left;background-color: transparent !important;">
-                  <div id="9467951" rel="email" class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave" style="margin-bottom:0;">
-                    <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                      <label for="text9467951">Newsletter abonnieren</label>
-                      <input class="cr_form-input" type="email" id="text9467951" name="email" value="" placeholder="name@example.com" style="width:100%;">
+          <v-col cols="12" md="6" class="align-center d-flex pr-md-16">
+            <v-row class="mt-10">
+              <v-col cols="8" v-if="!mobile && !tablet">
+                <div class="logo"/>
+              </v-col>
+
+              <v-col class="pt-md-15" cols="12">
+                <h2 class="pt-md-10">Ihre Anliegen sind uns wichtig!</h2>
+                <br>
+                <p style="font-size: 16px">
+                  Zögern Sie nicht, unser Kontaktformular zu nutzen, um mit unserem
+                  Tiergesundheitszentrum in Verbindung zu treten und die bestmögliche
+                  Betreuung für Ihr Haustier zu erhalten.
+                </p>
+              </v-col>
+              <v-col cols="12">
+                <form class="layout_form cr_form cr_font"
+                      action="https://seu2.cleverreach.com/f/430331-415442/wcs/"
+                      method="post" target="_blank">
+                  <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
+                    <div class="editable_content" style="text-align:left;background-color: transparent !important;">
+                      <div id="9467951" rel="email"
+                           class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave"
+                           style="margin-bottom:0;">
+                        <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
+                          <label for="text9467951">Newsletter abonnieren</label>
+                          <input class="cr_form-input" type="email" id="text9467951" name="email" value=""
+                                 placeholder="name@example.com" style="width:100%;">
+                        </div>
+                      </div>
+                      <div id="9467953" rel="button"
+                           class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable submit_container">
+                        <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
+                      </div>
                     </div>
+                    <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
                   </div>
-                  <div id="9467953" rel="button" class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable  submit_container">
-                    <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
-                  </div>
-                </div>
-                <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
-              </div>
-
-
-            </form>
+                </form>
+              </v-col>
+            </v-row>
           </v-col>
           <v-col cols="12">
-            <v-btn style="background-color: #3e3d3d ; color: white" block @click="dialog1 = false">Abbrechen</v-btn>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-dialog>
-    <!-- Kontakt-Infos -->
-    <div style="position:absolute; bottom: 0px; width: 100%">
-      <div style="background-color: #0082c2; padding: 10px 0">
-        <v-row class="ma-0 justify-center">
-          <v-col cols="11" class="d-flex justify-center" >
-            <v-row class="justify-center align-center text-center"  style="gap: 50px">
-              <a href="tel:01786915915" title="Anrufen: 01786915915">
-                <Icon icon="solar:phone-broken" style="font-size: 24px; color: white; cursor: pointer"/>
-              </a>
-              <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem">
-                <Icon icon="ic:outline-mail" style="font-size: 24px; color: white; cursor: pointer"/>
-              </a>
-              <a rel="noopener" href="https://www.google.de/maps/dir//Peter-May-Stra%C3%9Fe+47,+50374+Erftstadt/@50.8280338,6.7222716,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47bf3d9b8e9b9ba3:0xf038ba0f5709dcf2!2m2!1d6.8046719!2d50.8280628!3e0?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" title="Anfahrt zu Peter-May-Straße 47, Erftstadt" target="_blank">
-                <Icon icon="ic:outline-place" style="font-size: 24px; color: white; cursor: pointer"/>
-              </a>
+            <v-row class="mt-md-10 mt-3">
+              <v-col class="d-flex justify-center" cols="6">
+                <v-btn variant="text" @click="create" :loading="loading">
+                  Senden
+                </v-btn>
+              </v-col>
+              <v-col class="d-flex justify-center" cols="6">
+                <v-btn variant="text" @click="dialog = false">
+                  Abbrechen
+                </v-btn>
+              </v-col>
             </v-row>
           </v-col>
         </v-row>
-      </div>
-
-      <!-- Footer -->
-      <footer class="d-flex justify-center align-center mt-auto" style="width: 100%; flex-wrap: wrap; background-color: #0082c2; padding-bottom: 20px">
-        <NuxtLink to="/impressum" title="Impressum" class="mx-2 text-white link" style="font-size: 12px">Impressum</NuxtLink>
-        <span class="text-white">|</span>
-        <NuxtLink to="/admin" title="Verwaltung" class="mx-2 text-white link" style="font-size: 12px">Verwaltung</NuxtLink>
-        <span class="text-white">|</span>
-        <NuxtLink to="/datenschutz" title="Datenschutz" class="mx-2 text-white link" style="font-size: 12px">Datenschutz</NuxtLink>
-        <span class="text-white mt-n1">|</span>
-
-        <NuxtLink to="/ueberuns" title="Über Uns" class="mx-2 text-white link" >
-          Über Uns
-        </NuxtLink>
-
-
-        <span class="text-white mt-n1">|</span>
-        <NuxtLink to="/podcast" title="Podcast" class="mx-2 text-white link" >
-          Podcast
-        </NuxtLink>
-        <span class="text-white mt-n1">|</span>
-        <p class="mx-2 footer-link text-white link">
-          <a href="https://fastglobeit.de/blog/tiere" title="Blogbeiträge zu Tierhaltung und Ernährung" rel="noopener" target="_blank">Blogbeiträge zu Tieren</a>
-        </p>
-        <span class="text-white mt-n1">|</span>
-        <details class="footer-dropdown mx-2">
-          <summary class="text-white footer-link link">Städte</summary>
-          <div class="footer-dropdown-menu">
-            <NuxtLink
-              v-for="city in cityLinks"
-              :key="city.to"
-              :title="`Tiergesundheit ${city.label}`"
-              :to="city.to"
-              class="footer-dropdown-link text-white link"
-            >
-              {{ city.label }}
-            </NuxtLink>
-          </div>
-        </details>
-        <a href="/Video" title="Videos" aria-label="YouTube" class="mx-2" style="color: red; font-size: 30px">
-          <Icon icon="grommet-icons:youtube" />
-        </a>
-        <a href="https://www.instagram.com/andreabachem?..." title="Andrea Bachem auf Instagram" target="_blank" rel="noopener" class="mx-2" style="font-size: 30px">
-          <Icon icon="skill-icons:instagram" />
-        </a>
-      </footer>
-    </div>
-
+      </v-card>
+    </v-dialog>
   </div>
-
 </template>
 
-
-
 <script setup>
+import FooterComponent from "~/components/FooterComponent.vue";
+
 if (process.client) {
   function loadjQuery(src, callback) {
-    const n = document.createElement("script")
-    n.setAttribute("src", src)
-    n.onload = callback
-    n.onreadystatechange = function () {
-      if (this.readyState === "complete" || this.readyState === "loaded") {
-        callback()
-      }
-    }
-    document.head.appendChild(n)
+    const n = document.createElement("script");
+    n.setAttribute("src", src);
+    n.onload = callback;
+    document.head.appendChild(n);
   }
-
   function main() {
-    const $cr = jQuery.noConflict()
-    let old_src
-
-    $cr(document).ready(function () {
-      // dein kompletter jQuery-Code hier …
-    })
-
-    function captcha_reload() {
-      const timestamp = new Date().getTime()
-      $cr("div[rel='captcha'] img:not(.captcha2_reload)")
-          .attr("src", "")
-          .attr("src", old_src + "?t=" + timestamp)
-      return false
-    }
+    /* jQuery dummy */
   }
-
   if (typeof window.jQuery === "undefined") {
-    loadjQuery("//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", main)
+    loadjQuery("//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js", main);
   } else {
-    main()
+    main();
   }
 }
 
-
-const cityLinks = [
-  { label: 'Bonn', to: '/tiergesundheit-bonn' },
-  { label: 'Köln', to: '/tiergesundheit-koeln' },
-  { label: 'Erftstadt', to: '/tiergesundheit-erftstadt' },
-  { label: 'Liblar', to: '/tiergesundheit-liblar' },
-  { label: 'Lechenich', to: '/tiergesundheit-lechenich' },
-  { label: 'Kierdorf', to: '/tiergesundheit-kierdorf' },
-  { label: 'Köttingen', to: '/tiergesundheit-koettingen' },
-  { label: 'Gymnich', to: '/tiergesundheit-gymnich' },
-  { label: 'Bliesheim', to: '/tiergesundheit-bliesheim' },
-  { label: 'Friesheim', to: '/tiergesundheit-friesheim' },
-];
-
 useHead({
-  htmlAttrs: {
-    lang: 'de'
-  },
+  htmlAttrs: { lang: 'de' },
   title: 'Tiergesundheit Andrea Bachem Chiropraktik & Osteopathie',
   link: [
-    {
-      rel: 'canonical',
-      href: 'https://tier-gesundheitszentrum.com',
-    },
-    {
-      rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
-      sizes: '180x180'
-    },
-    {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    },
-    {
-      rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
-      sizes: '180x180'
-    },
-    {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    },
+    { rel: 'canonical', href: 'https://tier-gesundheitszentrum.com' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap' },
   ],
   meta: [
-    {
-      name: 'description',
-      content:
-          'Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie & Ernährungsberatung ganzheitliche Therapie für dein Tier.',
-    },
-    {
-      name: 'robots',
-      content: 'index, follow'
-    },
-    {
-      property: 'og:title',
-      content: 'Leistungen | Tiergesundheitszentrum Andrea Bachem – Erftstadt'
-    },
-    {
-      property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png'
-    },
-
-    {
-      property: 'og:description',
-      content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden: Jetzt mehr über unsere Leistungen für Hund, Katze & Pferd erfahren.'
-    },
-    {
-      property: 'og:url',
-      content: 'https://tier-gesundheitszentrum.com'
-    },
-    {
-      property: 'og:type',
-      content: 'website'
-    },
-    {
-      name: 'keywords',
-      content:
-          'Tiergesundheitszentrum, Tierchiropraktik, Tierosteopathie, Physiotherapie Tiere, Ernährungsberatung Hund Katze Pferd, Andrea Bachem, Tiertherapie Erftstadt',
-    },
+    { name: 'description', content: 'Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie & Ernährungsberatung – ganzheitliche Therapie für dein Tier.' },
+    { name: 'robots', content: 'index, follow' },
+    { property: 'og:title', content: 'Tiergesundheit Andrea Bachem – Erftstadt' },
+    { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
+    { property: 'og:description', content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden – Chiropraktik, Osteopathie & Ernährungsberatung.' },
+    { property: 'og:url', content: 'https://tier-gesundheitszentrum.com' },
+    { property: 'og:type', content: 'website' },
+    { name: 'keywords', content: 'Tiergesundheitszentrum, Tierchiropraktik, Tierosteopathie, Physiotherapie Tiere, Ernährungsberatung Hund Katze Pferd, Andrea Bachem, Tiertherapie Erftstadt' },
   ],
 });
-
 </script>
+
 <script>
-import {useScreenStore} from "~/stores/screen.js";
-import {Icon} from '@iconify/vue';
+import { useScreenStore } from "~/stores/screen.js";
+import { Icon } from '@iconify/vue';
 
 export default {
   name: "Startseite",
-
-  components: {
-    Icon,
-  },
+  components: { Icon },
   data() {
     return {
-      dialog1: false,
+      dialog: false,
       loading: false,
       name: '',
       email: '',
       telefonnummer: '',
       text: '',
-      isHovered: false,
-      dialog: false,
     };
   },
   computed: {
-    wide() {
-      const screenStore = useScreenStore();
-      return screenStore.wide;
-    },
-    desktop() {
-      const screenStore = useScreenStore();
-      return screenStore.desktop;
-    },
-    mobile() {
-      const screenStore = useScreenStore();
-      return screenStore.mobile;
-    },
-    tablet() {
-      const screenStore = useScreenStore();
-      return screenStore.tablet;
-    },
-    tabletHorizontal() {
-      const screenStore = useScreenStore();
-      return screenStore.tabletHorizontal;
-    },
-  },
-
-  mounted() {
-
+    wide() { return useScreenStore().wide; },
+    desktop() { return useScreenStore().desktop; },
+    mobile() { return useScreenStore().mobile; },
+    tablet() { return useScreenStore().tablet; },
+    tabletHorizontal() { return useScreenStore().tabletHorizontal; },
   },
   methods: {
     async create() {
       try {
-        console.log('[create] Sende Kontaktanfrage…');
-
-       var response = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/kontaktaufnahme', {
+        await $fetch('https://tier-gesundheitszentrum.com:8080/auth/kontaktaufnahme', {
           method: 'POST',
           body: {
             email: this.email,
@@ -712,133 +312,320 @@ export default {
             text: this.text,
           }
         });
-
-        console.log('[create] Anfrage erfolgreich gesendet. Starte E-Mail-Versand…',response);
         await this.sendEmail();
-
-        console.log('[create] Felder werden zurückgesetzt.');
         this.email = null;
         this.telefonnummer = null;
         this.text = null;
-
-        console.log('[create] Vorgang abgeschlossen.');
       } catch (e) {
-        console.error('[create] Fehler beim Absenden der Anfrage:', e);
+        console.error('[create] Fehler:', e);
         alert("Bitte füllen Sie alle Felder aus.");
       }
     },
-
     async sendEmail() {
       this.loading = true;
-      console.log('[sendEmail] Starte E-Mail-Versand…');
-
       if (this.email !== '' && this.name !== '') {
         try {
-          // E-Mail an Andrea
-          const responseAdmin = await $fetch('https://fastglobeit.de:8081/auth/sendMailAsHTML', {
+          await $fetch('https://fastglobeit.de:8081/auth/sendMailAsHTML', {
             method: 'POST',
             body: {
               to: 'andreabachem83@gmail.com',
               subject: 'Neue Kontaktanfrage gestellt',
-              htmlText: `
-              <div>
-                <h3>Hallo Andrea,</h3>
-                <p>
-                  Es wurde eine neue Kontaktanfrage gestellt. Weitere Details können Sie unter folgendem Link einsehen:
-                  <a href="https://tier-gesundheitszentrum.com/admin/" title="Zur Verwaltung">Zur Verwaltung</a>
-                </p>
-                <br>
-                <p>
-                  Mit freundlichen Grüßen<br>
-                  Ihr FastGlobeIT-Team
-                </p>
-                <i>Diese E-Mail wurde automatisch erzeugt.</i>
-              </div>
-            `
+              htmlText: `<div><h3>Hallo Andrea,</h3><p>Es wurde eine neue Kontaktanfrage gestellt. <a href="https://tier-gesundheitszentrum.com/admin/">Zur Verwaltung</a></p></div>`
             }
           });
-
-          console.log('[sendEmail] E-Mail an Andrea gesendet:', responseAdmin);
-
-          // Bestätigung an Absender
-          const responseUser = await $fetch('https://fastglobeit.de:8081/auth/sendMailAsHTML', {
+          await $fetch('https://fastglobeit.de:8081/auth/sendMailAsHTML', {
             method: 'POST',
             body: {
               to: this.email,
-              subject: 'Im Auftrag des Tier-Gesundheitszentrums: Ihre Kontaktanfrage',
-              htmlText: `
-              <div>
-                <h3>Hallo ${this.name}</h3>
-                <p>
-                  Ihre Kontaktanfrage ist bei uns eingegangen. Wir werden uns so schnell wie möglich bei Ihnen melden.
-                </p>
-                <p>
-                  Bei weiteren Problemen oder Fragen können Sie sich gerne unter folgender E-Mail-Adresse melden:
-                  <a href="mailto:andreabachem83@gmail.com" title="E-Mail an Andrea Bachem">andreabachem83@gmail.com</a>
-                </p>
-                <br>
-                <p>
-                  Mit freundlichen Grüßen<br>
-                  Ihr FastGlobeIT-Team<br>
-                  Im Auftrag von Andrea Bachem
-                </p>
-                <i>Diese E-Mail wurde automatisch erzeugt.</i>
-              </div>
-            `
+              subject: 'Ihre Kontaktanfrage',
+              htmlText: `<div><h3>Hallo ${this.name}</h3><p>Ihre Kontaktanfrage ist bei uns eingegangen. Wir melden uns so schnell wie möglich.</p></div>`
             }
           });
-
-          console.log('[sendEmail] Bestätigungs-E-Mail an Nutzer gesendet:', responseUser);
-
-          // Rücksetzen nach erfolgreicher E-Mail
           this.name = 'Vielen Dank für Ihre Anfrage.';
           this.email = '';
-          this.handynummer = '';
-
-          console.log('[sendEmail] E-Mail-Versand abgeschlossen.');
         } catch (e) {
-          console.error('[sendEmail] Fehler beim E-Mail-Versand:', e);
+          console.error('[sendEmail] Fehler:', e);
         }
-      } else {
-        console.warn('[sendEmail] Fehlende Pflichtfelder: email oder name.');
       }
-
       this.loading = false;
     }
   }
-
 };
-
-
 </script>
+
 <style scoped>
-a {
+.home-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.home-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* HERO */
+.home-hero {
+  padding: 40px 0 60px;
+  color: #fff;
+}
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.home-eyebrow {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2px;
+  margin-bottom: 26px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
+}
+.home-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 1.1;
+  color: #fff;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+.home-title-accent {
+  display: block;
+  font-weight: 500;
+  font-style: italic;
+  color: rgb(0, 130, 194);
+  font-size: 0.55em;
+  margin-top: 12px;
+  line-height: 1.3;
+}
+.home-lead {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 14px;
+  max-width: 600px;
+}
+.home-lead-strong {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(0, 130, 194);
+  line-height: 1.5;
+  margin: 6px 0 24px;
+  max-width: 600px;
+}
+.home-cta-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.home-cta-primary,
+.home-cta-ghost,
+.home-cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.home-cta-primary {
+  background: rgb(0, 130, 194);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 130, 194, 0.35);
+}
+.home-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 130, 194, 0.5);
+}
+.home-cta-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+.home-cta-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgb(0, 130, 194);
+}
+
+.home-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+.home-hero-image-wrap {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.home-hero-image,
+.home-hero-image-wrap :deep(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFO STRIPE */
+.home-info-stripe {
+  padding: 20px 0 40px;
+}
+.home-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.home-info-card {
+  background: rgba(0, 130, 194, 0.92);
+  border-radius: 8px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   text-decoration: none;
-  color: inherit
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #fff;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.home-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  background: rgb(0, 130, 194);
+}
+.home-info-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.home-info-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+.home-info-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+.home-info-value {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.96rem;
+  font-weight: 500;
 }
 
-.tab-card {
-  height: 85vh;
-
-  background-color: transparent;
-
+/* CONTENT */
+.home-content {
+  padding: 30px 0 60px;
 }
-
-.text {
-  text-align: justify;
-  font-size: 15px;
-}
-
-.line {
-  font-family: "Dancing Script", cursive;
+.home-text-block {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 3px solid rgb(0, 130, 194);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin: 0 auto 20px;
+  max-width: 980px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  font-family: "Montserrat", sans-serif;
   color: #2c2a2a;
+}
+.home-h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+.home-text-block p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #2c2a2a;
+  margin: 0 0 10px;
+}
+.home-text-block p:last-child { margin-bottom: 0; }
+.home-signature {
+  margin-top: 14px;
+  font-style: italic;
+  color: rgb(0, 100, 160);
+  font-weight: 500;
+}
+
+/* BOTTOM CTA */
+.home-cta {
+  padding: 20px 0 40px;
+}
+.home-cta-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgb(0, 130, 194) 0%, rgb(0, 100, 160) 100%);
+  border-radius: 8px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+.home-cta-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 0 8px;
+}
+.home-cta-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  max-width: 560px;
+}
+.home-cta-btn {
+  background: #fff;
+  color: rgb(0, 130, 194);
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.home-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
   background-image: url("@/assets/Logo2.png");
-  background-size: cover;
-  width: 372px;
-  height: 165px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 260px;
+  height: 115px;
 }
 
 .dialogBackground {
@@ -846,198 +633,94 @@ a {
   background-size: cover;
 }
 
-.background-impressum {
-
-  background-image: url("@/assets/paper.webp");
-  background-size: cover;
-
+.line {
+  font-family: "Dancing Script", cursive;
+  color: #2c2a2a;
 }
 
-
-
-
-.footer-link {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-  margin: 0 8px;
+/* Newsletter-Form im Termin-Dialog */
+.dialogBackground :deep(.cr_form-component--email label) {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
 }
-.footer-nav {
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 100%;
-  row-gap: 4px;
-}
-.footer-dropdown {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.footer-dropdown summary {
-  cursor: pointer;
-  list-style: none;
-}
-.footer-dropdown summary::-webkit-details-marker {
-  display: none;
-}
-.footer-dropdown summary::after {
-  content: "v";
-  display: inline-block;
-  margin-left: 6px;
-  font-size: 10px;
-  transition: transform 0.2s ease;
-}
-.footer-dropdown[open] summary::after {
-  transform: rotate(180deg);
-}
-.footer-dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 6px;
-  padding: 6px 8px;
+.dialogBackground :deep(.cr_form-component--email .cr_form-input) {
+  width: 100%;
+  padding: 10px 12px;
   border-radius: 4px;
-  background-color: rgba(0, 130, 194, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
 }
-.footer-dropdown-link {
-  font-size: 12px;
+.dialogBackground :deep(.cr_form-component--email .cr_form-input:focus) {
+  border-color: rgb(0, 130, 194);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 130, 194, 0.25);
 }
-
-
-.info {
-  background-color: rgba(0, 130, 194, 0.82);
-  min-height: 120px;
-  border-radius: 4px;
-  backdrop-filter: blur(4px);
-  border-left: rgba(255, 255, 255, 0.5) solid 1px;
-  border-top: rgba(255, 255, 255, 0.5) solid 1px;
-
+.dialogBackground :deep(.cr_form-component--email) {
+  margin: 0 !important;
+  padding: 0 !important;
 }
-
-.kontaktformular {
-  background-color: rgba(242, 243, 243, 0.39);
-  backdrop-filter: blur(3px);
-  border: solid 2px black;
+.dialogBackground :deep(.cr_form-inputgroup) {
+  margin: 0 !important;
 }
-
-a {
-  text-decoration: none;
+.dialogBackground :deep(.submit_container) {
+  margin-top: 10px;
+  text-align: left;
+  padding: 0 !important;
+}
+.dialogBackground :deep(.cr_button) {
+  background: rgb(0, 130, 194) !important;
+  color: #fff !important;
+  border-radius: 30px !important;
+  padding: 0 24px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
   cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.dialogBackground :deep(.cr_button:hover) {
+  background: rgb(0, 100, 160) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 1;
 }
 
-.container1 {
-  background-color: rgb(238, 238, 238);
-
-  border: 2px solid black;
-  padding: 20px;
-
-  overflow: hidden;
-  border-radius: 5px;
-  transform-origin: -0px 0px;
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .home-hero-visual { order: -1; }
+  .home-hero-image-wrap { max-width: 360px; aspect-ratio: 5 / 4; }
+  .home-info-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .home-container { padding: 0 18px; }
+  .home-hero { padding: 24px 0 36px; }
+  .home-info-stripe { padding: 12px 0 24px; }
+  .home-content { padding: 20px 0 40px; }
+  .home-text-block { padding: 22px 20px; }
+  .home-h2 { font-size: 1.18rem; }
+  .home-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 22px;
+    gap: 20px;
+  }
+  .home-cta-title { font-size: 1.35rem; }
+  .home-cta-text { font-size: 0.95rem; }
 }
 
-.image {
-  float: left; /* Float links für das Bild */
-  margin-right: 20px; /* Abstand zum Text rechts vom Bild */
-}
-
-.buchBG {
-  background-image: url("@/assets/blattBg.png");
-  background-size: cover;
-  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.34);
-}
-
-p {
-  font-size: 10px;
-}
-
-.chirosiegel {
-  background-image: url("@/assets/chiroSiegel.webp");
-  background-size: cover;
-  height: 70px;
-  width: 70px;
-}
-
-.chirosiegel1 {
-  background-image: url("@/assets/osteoSiegel.png");
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin-right: 60px;
-
-}
-
-.chirosiegel2 {
-  background-image: url("@/assets/physioSiegel.png");
-  background-size: cover;
-  height: 30px;
-  width: 170px;
-
-}
-
-a:focus {
-  outline: 2px solid blue;
-}
-</style>
-
-
-
-<style>
-* {box-sizing: border-box;}
-.cr-mail-responsive, .cr-mail-responsive * {box-sizing: unset;}
-.cr_site{margin:0;padding:75px 0 0 0;text-align:center;background-color:#eeeeee;}
-.cr_font{font-size: 14px;font-family: Arial;}
-.cr_page{width: 100% !important;max-width:640px}
-.cr_body{line-height:150%;font-family:Helvetica;font-size:12px;color: transparent;}
-.cr_body h2, .cr_header h2{font-size:22px;line-height:28px;margin:0 0 10px 0;}
-.cr_body h1, .cr_header h2{font-size:28px;margin-bottom:15px;padding:0;margin-top:0;}
-.wrapper, .cr_page{margin:0 auto 10px auto;text-align:left;}
-.cr_header{text-align:center;background: transparent !Important;}
-.cr_header img {max-width: 100%;}
-.cr_body label, .cr_body .label{float:none;clear:both;display:inline-block;width:auto;margin-top:8px;text-align:left;font-weight:bold;position:relative;}
-.cr_body .no-label{font-weight: normal;}
-.cr_body #editable_content{padding:20px; background-color: transparent !important;}
-.editable-content {padding:20px; background-color: transparent !important;}
-.cr_button{display:inline-block;font-family:'Helvetica', Arial, sans-serif;width:auto;white-space:nowrap;height:32px;margin:5px 0;padding:0 22px;text-decoration:none;text-align:center;font-weight:bold;font-style:normal;font-size:15px;line-height:32px;cursor:pointer;border:0;-moz-border-radius:4px;border-radius:4px;-webkit-border-radius:4px;vertical-align:top;}
-.cr_button{background-color:#333;color:#ffffff;}
-.cr_button:hover,.cr_button-small:hover{opacity:0.7;filter:alpha(opacity=70);}
-.powered{padding:20px 0;width:560px;margin:0 auto;}
-.cr_ipe_item label{line-height:150%;font-size:14px;}
-.cr_ipe_item textarea{background: none repeat scroll 0 0 #ffffff;border-radius:3px;border: 1px solid #ccc;font-family: Helvetica;font-size: 16px;}
-.cr_ipe_item input{background: none repeat scroll 0 0 #ffffff;border-radius:3px;border: 1px solid #ccc;padding: 12px;font-family: Helvetica;font-size: 16px;}
-.cr_ipe_item select{background: none repeat scroll 0 0 #ffffff;border-radius:3px;border: 1px solid #ccc;padding: 12px !Important;display: block;margin: 0;padding: 5px;width: 100%;font-family: Helvetica;font-size: 16px;}
-.cr_ipe_item input.cr_ipe_radio, input.cr_ipe_checkbox{-moz-binding: none;-moz-box-sizing: border-box;background-color: -moz-field !important;border: 2px inset ThreeDFace !important;color: -moz-fieldtext !important;cursor: default;height: 13px;padding: 0 !important;width: 13px;}
-.cr_ipe_item input.cr_ipe_radio{-moz-appearance: radio;border-radius: 100% 100% 100% 100% !important;margin: 3px 3px 0 5px;}
-.cr_ipe_item{margin: 0px 10px; padding: 0px 10px;}
-.submit_container{text-align:center}
-.cr_ipe_item.inactive{display:none;}
-.imprint{font-size:0.8em;}
-.cr_captcha{padding-left:130px;}
-.cr_error{font-size:1.1em;padding:10px;}
-.clever_form_error{background-color:#f99; color:#000; border:1px solid #f22 !important}
-.clever_form_note {margin:26px 0 0 3px;position:absolute;display:inline; padding: 2px 4px; font-weight:bold;background-color:#f2ecb5; color:#000; font-size:12px !important;  }
-.cr_form-flex{display: flex;}
-.cr_form-flex>.cr_form-inputgroup{flex-grow:1;margin-right: 5px;}
-.cr_form-flex>.cr_form-inputgroup:last-child{margin-right: 0px;}
-.cr_form-flex input{width:100%;}
-
-.cr_site {background-color:#eee;}
-.cr_header {color:#000000;}
-.cr_body {background-color:#ffffff;font-size:12px;color:#000000;}
-.cr_hr {background-color:#ccc;}
-.cr_site a {color:#0084ff;}
-.imprint{color:#000;}
-
-</style>
-
-
-<style id="style">
-.cr_site {background-color:#eee;}
-.cr_header {color:#000000;}
-.cr_body {background-color:#ffffff;font-size:12px;color:#000000;}
-.cr_hr {background-color:#ccc;}
-.cr_site a {color:#0084ff;}
-.imprint {color:#000;}
-.cr_page {width:auto;max-width:350px;}
-
+a { text-decoration: none; color: inherit; }
 </style>

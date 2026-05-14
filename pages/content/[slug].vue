@@ -67,8 +67,15 @@ function extractFromHtml(html) {
     if (Object.keys(attrs).length) links.push(attrs);
   }
 
-  // Body extrahieren / "head" entfernen, damit die Meta-Tags nicht zusätzlich
-  // im Body landen.
+  // <style>-Tags des HTMLs sammeln, damit sie nach dem Strippen des <head> erhalten bleiben.
+  const styleBlocks = [];
+  const styleRe = /<style\b[^>]*>[\s\S]*?<\/style>/gi;
+  let s;
+  while ((s = styleRe.exec(html)) !== null) {
+    styleBlocks.push(s[0]);
+  }
+
+  // Body extrahieren / "head" entfernen, damit die Meta-Tags nicht zusätzlich im Body landen.
   let body = html;
   const bodyMatch = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i);
   if (bodyMatch) {
@@ -76,12 +83,17 @@ function extractFromHtml(html) {
   } else {
     body = body.replace(/<head\b[^>]*>[\s\S]*?<\/head>/gi, '');
   }
-  // Verbleibende einzelne <title>, <meta>, <link>-Tags entfernen (Sicherheitsnetz)
+  // Verbleibende einzelne <title>, <meta>, <link>-Tags und Style-Tags im Body entfernen
+  // (Style-Tags fügen wir gleich kontrolliert wieder ein, sonst kämen sie doppelt).
   body = body
       .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
       .replace(/<meta\b[^>]*>/gi, '')
       .replace(/<link\b[^>]*>/gi, '')
+      .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
       .replace(/<\/?(html|body)\b[^>]*>/gi, '');
+
+  // Style-Tags aus dem ursprünglichen HTML voranstellen, damit das CSS der Seite greift.
+  body = styleBlocks.join('\n') + '\n' + body;
 
   return { title, metas, links, body };
 }

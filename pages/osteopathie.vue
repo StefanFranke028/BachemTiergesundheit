@@ -167,6 +167,8 @@
         </div>
       </div>
     </section>
+
+    <FooterComponent/>
   </div>
 </template>
 

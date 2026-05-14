@@ -85,6 +85,8 @@
 
       </v-col>
     </v-row>
+
+    <FooterComponent/>
   </div>
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px;overflow-y: scroll">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
@@ -148,6 +150,8 @@
         </article>
       </v-col>
     </v-row>
+
+    <FooterComponent/>
   </div>
 </template>
 
