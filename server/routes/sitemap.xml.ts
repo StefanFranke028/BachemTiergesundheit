@@ -71,7 +71,7 @@ export default defineEventHandler(async (event) => {
         }
     }
 
-    // 3) Dynamische Berichte/Stadt-Artikel (/tiergesundheit-<name>)
+
     type StadtItem = { name?: string };
     const stadtList = await fetchSafe<StadtItem[]>(
         'https://tier-gesundheitszentrum.com:8080/auth/stadt'

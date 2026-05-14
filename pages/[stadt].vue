@@ -217,7 +217,7 @@ export default {
   border: 1px solid rgba(255,255,255,0.55);
   border-radius: 2px;
   margin-bottom: 24px;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+
   background: rgba(0,0,0,0.25);
 }
 .osteo-title {
@@ -227,7 +227,7 @@ export default {
   line-height: 1.18;
   color: #fff;
   margin: 0 0 18px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+
 }
 .osteo-title-accent {
   display: block;

@@ -450,13 +450,13 @@ p{
   text-transform: uppercase; color: #ffffff;
   padding: 8px 18px; border: 1px solid rgba(255,255,255,0.55);
   border-radius: 2px; margin-bottom: 28px;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.5); background: rgba(0,0,0,0.25);
+ background: rgba(0,0,0,0.25);
 }
 .intro-title {
   font-family: "Montserrat", sans-serif; font-weight: 600;
   font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.2;
   color: #fff; margin: 0 auto 20px; max-width: 900px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+
 }
 .intro-lead {
   font-family: "Montserrat", sans-serif; font-size: 1.05rem;

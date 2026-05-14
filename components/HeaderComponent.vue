@@ -146,7 +146,7 @@ export default {
 
 .active {
   color: #0082c2 !important;
-  text-shadow: 1px 1px 1px black;
+
 }
 
 .link:hover {

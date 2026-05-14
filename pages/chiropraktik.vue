@@ -320,12 +320,12 @@ export default {
   text-transform: uppercase; color: #fff;
   padding: 8px 18px; border: 1px solid rgba(255,255,255,0.55);
   border-radius: 2px; margin-bottom: 24px;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.5); background: rgba(0,0,0,0.25);
+ background: rgba(0,0,0,0.25);
 }
 .osteo-title {
   font-family: "Montserrat", sans-serif; font-weight: 600;
   font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.18; color: #fff;
-  margin: 0 0 18px; text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+  margin: 0 0 18px;
 }
 .osteo-title-accent {
   display: block; font-weight: 400; font-style: italic;
@@ -400,7 +400,7 @@ export default {
 .osteo-faq-title {
   font-family: "Montserrat", sans-serif; font-weight: 600;
   font-size: clamp(1.8rem, 3vw, 2.4rem); color: #fff;
-  margin: 18px 0 10px; text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+  margin: 18px 0 10px;
 }
 .osteo-faq-sub {
   font-family: "Montserrat", sans-serif; font-size: 1rem;
