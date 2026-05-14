@@ -853,14 +853,9 @@ a {
 
 }
 
-.background {
-  background-image: url('@/assets/black.webp');
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  padding-bottom: 150px;
-}
+
+
+
 .footer-link {
   font-size: 12px;
   color: white;

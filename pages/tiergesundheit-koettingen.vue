@@ -849,13 +849,7 @@ a:hover {
   margin-top: 8px;
 }
 
-.background {
-  background-image: url("@/assets/black.webp");
-  background-size: cover;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-}
+
 
 a:focus {
   outline: 2px solid blue;

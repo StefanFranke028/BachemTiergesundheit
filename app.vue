@@ -48,6 +48,13 @@ export default {
 
 
 <style>
+.background {
+  background-color: #9da991;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
 @font-face {
   font-family: "Aptos";
   src: url("assets/fonts/Aptos.ttf") format("truetype");

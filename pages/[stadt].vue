@@ -197,14 +197,7 @@ export default {
   font-style: normal;
 }
 
-.background {
-  background-image: url("@/assets/black.webp");
-  background-size: cover;
-  position: fixed;
-  height: 100vh;
 
-  width: 100vw;
-}
 .background-impressum {
 
   background-image: url("@/assets/paper.webp");

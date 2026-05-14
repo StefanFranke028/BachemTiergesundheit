@@ -272,13 +272,7 @@ export default {
 
 <style scoped>
 
-.background {
-  background-image: url("@/assets/black.webp");
-  background-size: cover;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-}
+
 
 
 .chirosiegel {
@@ -310,8 +304,6 @@ a {
   background-size: cover;
 
 }
-
-
 
 
 a {

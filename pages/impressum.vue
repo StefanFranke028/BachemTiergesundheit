@@ -232,13 +232,7 @@ export default {
 </script>
 
 <style scoped>
-.background {
-  position: fixed;
-  background-image: url("@/assets/paper.webp");
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-}
+
 
 p {
   color: #4b4a4a;
