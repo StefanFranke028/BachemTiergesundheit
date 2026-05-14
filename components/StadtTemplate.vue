@@ -313,48 +313,35 @@ export default {
   },
   methods: {
     async create() {
+      if (!this.name || !this.email || !this.text) {
+        alert("Bitte füllen Sie Name, Email und Nachricht aus.");
+        return;
+      }
+
+      this.loading = true;
       try {
-        await $fetch('https://tier-gesundheitszentrum.com:8080/auth/kontaktaufnahme', {
+        await $fetch('https://fastglobeit.de:8081/kontakt/tiergesundheit', {
           method: 'POST',
           body: {
-            email: this.email, telefonnummer: this.telefonnummer,
-            name: this.name, text: this.text,
+            name: this.name,
+            email: this.email,
+            phone: this.telefonnummer,
+            message: this.text,
           }
         });
-        await this.sendEmail();
-        this.email = null; this.telefonnummer = null; this.text = null;
+
+        this.name = '';
+        this.email = '';
+        this.telefonnummer = '';
+        this.text = '';
+        this.dialog = false;
+        alert("Vielen Dank für Ihre Anfrage.");
       } catch (e) {
         console.error('[create] error:', e);
-        alert("Bitte füllen Sie alle Felder aus.");
+        alert("Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.");
+      } finally {
+        this.loading = false;
       }
-    },
-    async sendEmail() {
-      this.loading = true;
-      if (this.email !== '' && this.name !== '') {
-        try {
-          await $fetch('https://fastglobeit.de:8081/auth/sendMailAsHTML', {
-            method: 'POST',
-            body: {
-              to: 'andreabachem83@gmail.com',
-              subject: 'Neue Kontaktanfrage gestellt',
-              htmlText: `<div><h3>Hallo Andrea,</h3><p>Es wurde eine neue Kontaktanfrage gestellt. <a href="https://tier-gesundheitszentrum.com/admin/">Zur Verwaltung</a></p></div>`
-            }
-          });
-          await $fetch('https://fastglobeit.de:8081/auth/sendMailAsHTML', {
-            method: 'POST',
-            body: {
-              to: this.email,
-              subject: 'Ihre Kontaktanfrage',
-              htmlText: `<div><h3>Hallo ${this.name}</h3><p>Ihre Kontaktanfrage ist bei uns eingegangen. Wir melden uns so schnell wie möglich.</p></div>`
-            }
-          });
-          this.name = 'Vielen Dank für Ihre Anfrage.';
-          this.email = '';
-        } catch (e) {
-          console.error('[sendEmail] error:', e);
-        }
-      }
-      this.loading = false;
     },
   },
 };
