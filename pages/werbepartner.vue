@@ -233,6 +233,13 @@ export default {
           description: 'Seminare zur Tiergesundheit | Andrea Bachem',
           image: 'https://tierseminare.com/assets/images/n/ed2fe928-8dbe-4598-b975-93fa7e09beaa-n5s42ktgf6qxfrv.jpeg',
           rel: 'noopener',
+        },
+        {
+          name: 'Rehatechnik für Tiere',
+          url: 'https://www.rehatechnik-tiere.de/index.html',
+          description: 'Rehatechnik für Tiere, Hunderollstühle, Tierprothesen, Orthesen, Bandangen',
+          image: 'https://www.rehatechnik-tiere.de/images/logo.png',
+          rel: 'noopener',
         }
       ]
     }
