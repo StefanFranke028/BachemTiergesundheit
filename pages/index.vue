@@ -315,6 +315,16 @@ export default {
 
       this.loading = true;
       try {
+        await $fetch('https://tier-gesundheitszentrum.com:8080/auth/kontaktaufnahme', {
+          method: 'POST',
+          body: {
+            email: this.email,
+            telefonnummer: this.telefonnummer,
+            name: this.name,
+            text: this.text,
+          }
+        });
+
         await $fetch('https://fastglobeit.de:8081/kontakt/tiergesundheit', {
           method: 'POST',
           body: {
