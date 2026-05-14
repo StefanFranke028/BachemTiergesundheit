@@ -43,12 +43,12 @@
       </div>
     </section>
 
-    <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
-      <v-col v-for="page in pages" :key="page.url" cols="4" class="d-flex justify-center">
+    <v-row class="d-flex ma-0 justify-center" style="width: 100%;" dense>
+      <v-col v-for="page in pages" :key="page.url" cols="3" class="d-flex justify-center pa-1">
         <article itemscope itemtype="https://schema.org/Service">
           <v-card
-              class="mx-auto my-12 pa-3"
-              width="340"
+              class="mx-auto my-4 pa-2"
+              width="300"
               style="background-color: transparent; box-shadow: none;"
           >
             <div class="phone-frame">
@@ -348,10 +348,10 @@ a:focus {
 
 /* Smartphone-Frame um das iframe */
 .phone-frame {
-  width: 300px;
-  height: 540px;
+  width: 260px;
+  height: 470px;
   margin: 0 auto;
-  border-radius: 28px;
+  border-radius: 24px;
   background: #111;
   padding: 10px 8px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
@@ -362,7 +362,7 @@ a:focus {
   content: "";
   position: absolute;
   top: 6px; left: 50%; transform: translateX(-50%);
-  width: 50px; height: 6px;
+  width: 45px; height: 5px;
   background: #222;
   border-radius: 4px;
 }
@@ -371,11 +371,11 @@ a:focus {
   height: 667px;
   border: 0;
   background: white;
-  border-radius: 18px;
-  /* Mobilansicht (375px) in 284px breiten Bereich einpassen */
-  transform: scale(0.757);
+  border-radius: 16px;
+  /* Mobilansicht (375px) in 244px breiten Bereich einpassen (260 - 16 padding) */
+  transform: scale(0.651);
   transform-origin: top left;
   display: block;
-  pointer-events: none; /* Klicks an die Karte/den CTA Button delegieren */
+  pointer-events: none;
 }
 </style>

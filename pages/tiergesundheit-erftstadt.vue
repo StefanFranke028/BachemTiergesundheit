@@ -850,7 +850,6 @@ a:hover {
 }
 
 
-
 a:focus {
   outline: 2px solid blue;
 }
