@@ -57,7 +57,12 @@ function extractFromHtml(html) {
   let m;
   while ((m = metaRe.exec(html)) !== null) {
     const attrs = parseAttrs(m[1]);
-    if (Object.keys(attrs).length) metas.push(attrs);
+    if (!Object.keys(attrs).length) continue;
+    const name = (attrs.name || '').toLowerCase();
+    // viewport + charset werden bereits durch Nuxt/Browser-Defaults gesetzt
+    // -> aus dem HTML rausfiltern, damit es nicht zu Duplikaten kommt.
+    if (name === 'viewport' || 'charset' in attrs) continue;
+    metas.push(attrs);
   }
 
   const links = [];
