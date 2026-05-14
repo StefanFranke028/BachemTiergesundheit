@@ -3,3 +3,4 @@ Disallow: /admin
 Disallow: /_nuxt
 Disallow: /visiont
 
+Sitemap: https://tier-gesundheitszentrum.com/sitemap.xml

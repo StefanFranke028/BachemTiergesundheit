@@ -42,54 +42,47 @@
       </div>
     </section>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
-      <v-col cols="4" v-for="preis in produkteArray" :key="preis.id">
+      <v-col v-for="preis in produkteArray" :key="preis.id" cols="3" class="d-flex justify-center pa-1">
         <article itemscope itemtype="https://schema.org/Article">
           <v-card
-              class="mx-auto my-12"
-
-              style="background-color: rgb(255,255,255); backdrop-filter: blur(4px); box-shadow: 1px 1px 5px black; overflow-y: scroll"
+              class="mx-auto my-4 pa-2 pb-4"
               width="300"
+              style="background-color: transparent; box-shadow: none;"
           >
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <v-img
+                    loading="lazy"
+                    :src="preis.image"
+                    cover
+                    class="phone-image"
+                    :alt="preis.überschrift"
+                    itemprop="image"
+                />
+                <div class="phone-content">
+                  <p itemprop="name" class="phone-title">
+                    {{ preis.überschrift }}
+                  </p>
+                  <p class="phone-text" itemprop="description">
+                    {{ preis.unterUeberschrift }}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            <v-img
-                loading="lazy"
-                :src="preis.image"
-                cover
-                style="width: 300px; height: 300px"
-                :alt="preis.überschrift"
-                itemprop="image"
-            ></v-img>
-
-            <v-card-title class="text-center" itemprop="name ">
-              <p class="text-black"  style="font-size: 16px">
-              {{ preis.überschrift }}
-
-              </p>
-
-            </v-card-title>
-            <p class="text-black mt-n3 text-center" itemprop="description" style="font-size: 14px">
-              {{ preis.unterUeberschrift }}
-
-            </p>
-            <v-divider class="mx-8 opacity-80"></v-divider>
-
-
-
-            <v-row style="width: 100%;" class="ma-0 mt-n5">
+            <v-row style="width: 100%;" class="ma-0">
               <v-col cols="12" class="d-flex justify-center">
-                <v-btn class="mt-7" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                  <NuxtLink :to="'/tiergesundheit-'+ preis.name" :title="preis.überschrift ? `Zum Bericht: ${preis.überschrift}` : 'Zum Bericht'">
-                    Zum Bericht >
-
-                  </NuxtLink>
-
-                </v-btn>
+                <NuxtLink :to="'/tiergesundheit-' + preis.name"
+                          :title="preis.überschrift ? `Zum Bericht: ${preis.überschrift}` : 'Zum Bericht'">
+                  <v-btn class="mt-5"
+                         style="background-color: rgb(0, 130, 194); color: white; border-radius: 20px">
+                    Zum Bericht ›
+                  </v-btn>
+                </NuxtLink>
               </v-col>
             </v-row>
-
           </v-card>
         </article>
-
       </v-col>
     </v-row>
 
@@ -110,48 +103,47 @@
       </div>
     </section>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
-      <v-col cols="11" v-for="preis in produkteArray" :key="preis.id">
+      <v-col v-for="preis in produkteArray" :key="preis.id" cols="11" class="d-flex justify-center">
         <article itemscope itemtype="https://schema.org/Article">
-        <v-card
+          <v-card
+              class="mx-auto my-8 pa-3 pb-4"
+              width="320"
+              style="background-color: transparent; box-shadow: none;"
+          >
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <v-img
+                    loading="lazy"
+                    :src="preis.image"
+                    cover
+                    class="phone-image"
+                    :alt="preis.überschrift"
+                    itemprop="image"
+                />
+                <div class="phone-content">
+                  <p itemprop="name" class="phone-title">
+                    {{ preis.überschrift }}
+                  </p>
+                  <p class="phone-text" itemprop="description">
+                    {{ preis.unterUeberschrift }}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            class="mx-auto my-12"
-            height="450"
-            style="background-color: rgb(255,255,255); backdrop-filter: blur(4px); box-shadow: 1px 1px 5px black;overflow-y: scroll"
-            width="300"
-        >
-
-          <v-img
-              loading="lazy"
-              :src="preis.image"
-              cover
-              style="width: 300px; height: 200px"
-              :alt="preis.überschrift"
-              itemprop="image"
-          ></v-img>
-
-          <v-card-title class="text-center" itemprop="name ">
-            <p class="text-black"  style="font-size: 16px">
-              {{ preis.überschrift }}
-
-            </p>
-
-          </v-card-title>
-          <p class="text-black mt-n3 text-center" itemprop="description" style="font-size: 14px">
-            {{ preis.unterUeberschrift }}
-
-          </p>
-          <v-divider class="mx-8 opacity-80"></v-divider>
-          <v-row style="width: 100%;" class="ma-0 mt-n5">
-            <v-col cols="12" class="d-flex justify-center">
-              <v-btn class="mt-7" style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
-                <NuxtLink :to="'/tiergesundheit-'+ preis.name" :title="preis.überschrift ? `Zum Bericht: ${preis.überschrift}` : 'Zum Bericht'">
-                  Zum Bericht >
+            <v-row style="width: 100%;" class="ma-0">
+              <v-col cols="12" class="d-flex justify-center">
+                <NuxtLink :to="'/tiergesundheit-' + preis.name"
+                          :title="preis.überschrift ? `Zum Bericht: ${preis.überschrift}` : 'Zum Bericht'">
+                  <v-btn class="mt-5"
+                         style="background-color: rgb(0, 130, 194); color: white; border-radius: 20px">
+                    Zum Bericht ›
+                  </v-btn>
                 </NuxtLink>
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card>
-      </article>
+              </v-col>
+            </v-row>
+          </v-card>
+        </article>
       </v-col>
     </v-row>
 
@@ -303,6 +295,65 @@ export default {
 
 
 <style scoped>
+/* Smartphone-Frame um Bild + Inhalt – analog zu /preise & /service */
+.phone-frame {
+  width: 260px;
+  height: 430px;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: #111;
+  padding: 16px 8px 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.phone-frame::before {
+  content: "";
+  position: absolute;
+  top: 6px; left: 50%; transform: translateX(-50%);
+  width: 45px; height: 5px; background: #222;
+  border-radius: 4px; z-index: 2;
+}
+.phone-screen {
+  width: 100%; height: 100%;
+  border-radius: 16px; background: #fff;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.phone-image {
+  width: 100%; height: 180px !important;
+  max-height: 180px; flex-shrink: 0; overflow: hidden;
+}
+.phone-image :deep(.v-responsive),
+.phone-image :deep(.v-responsive__content),
+.phone-image :deep(.v-img__img) {
+  height: 180px !important; max-height: 180px !important;
+}
+.phone-image :deep(.v-responsive__sizer) { display: none !important; }
+.phone-image :deep(img) {
+  width: 100%; height: 180px !important; max-height: 180px;
+  object-fit: cover; display: block;
+}
+.phone-content {
+  padding: 14px 14px 12px;
+  flex: 1;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.phone-title {
+  font-family: "Dancing Script", "Montserrat", cursive;
+  font-weight: 700; font-size: 1.05rem;
+  color: #1a1a1a; margin: 4px 0 10px;
+  text-align: center; line-height: 1.2;
+  word-break: break-word;
+}
+.phone-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem; line-height: 1.45;
+  color: #444; text-align: center;
+  margin: 0; flex: 1; overflow-y: auto;
+}
+
 .line {
   font-family: "Montserrat", sans-serif;
   color: rgba(0, 0, 0, 0.86);
