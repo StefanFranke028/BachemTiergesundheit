@@ -192,6 +192,11 @@ useHead({
     { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
     { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/osteopathie' },
     { property: 'og:type', content: 'website' },
+    { name: 'publisher', content: 'Andrea Bachem' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Tierosteopathie für Hund & Pferd | Andrea Bachem – Erftstadt' },
+    { name: 'twitter:description', content: 'Sanfte osteopathische Betreuung für Hunde und Pferde in Erftstadt – Förderung der Selbstheilung und Mobilität.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
 });
 </script>

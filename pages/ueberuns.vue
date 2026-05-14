@@ -68,10 +68,17 @@ useHead({
       name: 'robots',
       content: 'index, follow'
     },
-    {
-      name: 'author',
-      content: 'Andrea Bachem'
-    }
+    { name: 'author', content: 'Andrea Bachem' },
+    { name: 'publisher', content: 'Andrea Bachem' },
+    { property: 'og:title', content: 'Über uns – Andrea Bachem | Tiergesundheitszentrum Erftstadt' },
+    { property: 'og:description', content: 'Andrea Bachem – Staatlich geprüfte Tierarzthelferin mit Spezialisierung auf Tierphysiotherapie, Osteopathie und Ernährungsberatung.' },
+    { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
+    { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/ueberuns' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Über uns – Andrea Bachem | Tiergesundheitszentrum Erftstadt' },
+    { name: 'twitter:description', content: 'Andrea Bachem – Tierphysiotherapie, Osteopathie, Ernährungsberatung & mehr für Hund, Pferd und Katze.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   link: [
     {

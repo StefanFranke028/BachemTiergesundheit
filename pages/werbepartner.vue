@@ -139,8 +139,13 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Werbepartner | Andrea Bachem – Tiergesundheitszentrum Erftstadt' },
     { property: 'og:description', content: 'Gemeinsam stark für Tiergesundheit: Lernen Sie die Werbepartner von Andrea Bachem in Erftstadt kennen – für ganzheitliche Versorgung von Hund & Pferd.' },
+    { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
     { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/werbepartner' },
     { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Werbepartner | Andrea Bachem – Tiergesundheitszentrum Erftstadt' },
+    { name: 'twitter:description', content: 'Werbepartner & Kooperationen des Tiergesundheitszentrums Andrea Bachem in Erftstadt.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   script: [
     {

@@ -17,6 +17,10 @@ useHead({
     { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
     { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/tiergesundheit-bonn' },
     { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Tiergesundheit Bonn – Tiertherapie | Andrea Bachem' },
+    { name: 'twitter:description', content: 'Ganzheitliche Tiergesundheit für Bonn: Chiropraktik, Osteopathie und faire Preise.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   link: [
     { rel: 'canonical', href: 'https://tier-gesundheitszentrum.com/tiergesundheit-bonn' },

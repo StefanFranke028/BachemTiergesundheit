@@ -207,6 +207,11 @@ useHead({
     { property: 'og:description', content: 'Chiropraktische Behandlung für den Bewegungsapparat von Hund und Pferd – individuell, sanft & effektiv. Jetzt Termin in Erftstadt vereinbaren.' },
     { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/chiropraktik' },
     { property: 'og:type', content: 'website' },
+    { name: 'publisher', content: 'Andrea Bachem' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Tierchiropraktik Hund & Pferd | Andrea Bachem Erftstadt' },
+    { name: 'twitter:description', content: 'Chiropraktische Behandlung für den Bewegungsapparat von Hund und Pferd – individuell, sanft & effektiv.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   script: [
     {

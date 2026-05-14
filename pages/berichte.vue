@@ -205,7 +205,12 @@ useHead({
     {
       property: 'og:image',
       content: 'https://tier-gesundheitszentrum.com/favicon.png'
-    }
+    },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Berichte aus der Praxis | Andrea Bachem – Tiergesundheitszentrum Erftstadt' },
+    { name: 'twitter:description', content: 'Erhalten Sie ehrliche Einblicke in ganzheitliche Tierbehandlungen und Seminare bei Andrea Bachem.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
+    { name: 'publisher', content: 'Andrea Bachem' },
   ],
   link: [
     {

@@ -180,6 +180,10 @@ useHead(() => ({
     },
     { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/service' },
     { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Service | Tiergesundheitszentrum Andrea Bachem – Erftstadt' },
+    { name: 'twitter:description', content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden: Jetzt mehr über unsere Leistungen für Hund, Katze & Pferd erfahren.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   link: [
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },

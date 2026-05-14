@@ -178,8 +178,12 @@ useHead({
     },
     {
       property: 'og:image',
-      content: 'https://tier-gesundheitszentrum.com/images/social-share.jpg'
-    }
+      content: 'https://tier-gesundheitszentrum.com/favicon.png'
+    },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Impressum | Andrea Bachem – Tiergesundheitszentrum Erftstadt' },
+    { name: 'twitter:description', content: 'Rechtliche Informationen und Kontakt zum Tiergesundheitszentrum Andrea Bachem.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   script: [
     {

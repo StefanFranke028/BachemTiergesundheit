@@ -1,10 +1,13 @@
 <template>
-  <div class="content-page">
-    <div v-if="entry" v-html="bodyHtml"/>
-    <div v-else class="not-found">
-      <h1>Inhalt nicht gefunden</h1>
-      <p>Für den Slug "{{ slug }}" wurde kein Eintrag gefunden.</p>
+  <div class="content-page-wrapper">
+    <div class="content-page">
+      <div v-if="entry" v-html="bodyHtml"/>
+      <div v-else class="not-found">
+        <h1>Inhalt nicht gefunden</h1>
+        <p>Für den Slug "{{ slug }}" wurde kein Eintrag gefunden.</p>
+      </div>
     </div>
+    <FooterComponent/>
   </div>
 </template>
 
@@ -90,11 +93,13 @@ function extractFromHtml(html) {
   }
   // Verbleibende einzelne <title>, <meta>, <link>-Tags und Style-Tags im Body entfernen
   // (Style-Tags fügen wir gleich kontrolliert wieder ein, sonst kämen sie doppelt).
+  // <footer>-Element ebenfalls entfernen, weil die Site bereits einen FooterComponent rendert.
   body = body
       .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
       .replace(/<meta\b[^>]*>/gi, '')
       .replace(/<link\b[^>]*>/gi, '')
       .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/gi, '')
       .replace(/<\/?(html|body)\b[^>]*>/gi, '');
 
   // Style-Tags aus dem ursprünglichen HTML voranstellen, damit das CSS der Seite greift.

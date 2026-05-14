@@ -274,6 +274,10 @@ useHead({
     { property: 'og:url', content: 'https://tier-gesundheitszentrum.com' },
     { property: 'og:type', content: 'website' },
     { name: 'keywords', content: 'Tiergesundheitszentrum, Tierchiropraktik, Tierosteopathie, Physiotherapie Tiere, Ernährungsberatung Hund Katze Pferd, Andrea Bachem, Tiertherapie Erftstadt' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Tiergesundheit Andrea Bachem – Erftstadt' },
+    { name: 'twitter:description', content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden – Chiropraktik, Osteopathie & Ernährungsberatung.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
 });
 </script>

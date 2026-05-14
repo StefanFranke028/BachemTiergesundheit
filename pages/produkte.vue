@@ -224,7 +224,12 @@ useHead({
     {
       property: 'og:type',
       content: 'website'
-    }
+    },
+    { name: 'publisher', content: 'Andrea Bachem' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Tierprodukte für Hund & Pferd | Andrea Bachem – Erftstadt' },
+    { name: 'twitter:description', content: 'Geprüfte Tierprodukte: Nahrungsergänzung, Pflege & Therapie – persönlich empfohlen von Andrea Bachem.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   script: [
     {

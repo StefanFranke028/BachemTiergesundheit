@@ -226,10 +226,11 @@ useHead({
       property: 'og:type',
       content: 'website'
     },
-    {
-      property: 'og:image',
-      content: 'https://tier-gesundheitszentrum.com/images/social-share.jpg' // ← Falls du ein OG-Bild hast
-    }
+    { name: 'publisher', content: 'Andrea Bachem' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Tierprodukte & Preise | Andrea Bachem – Tiergesundheitszentrum Erftstadt' },
+    { name: 'twitter:description', content: 'Transparente Preise & ausgewählte Tierprodukte im Tiergesundheitszentrum Andrea Bachem.' },
+    { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
   script: [
     {
