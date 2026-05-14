@@ -7,12 +7,12 @@
         color="#2f4f3a"
     >
       <v-tab :value="0">Erstellen</v-tab>
-      <v-tab :value="1">Löschen</v-tab>
+      <v-tab :value="1">Löschen/Bearbeiten</v-tab>
     </v-tabs>
 
     <v-window v-model="tab">
       <v-window-item value="0">
-        <v-container class="content-admin" fluid>
+        <v-container class="content-admin content-create-admin" fluid>
           <v-row justify="center">
             <v-col cols="12" lg="10" xl="9">
               <v-card class="content-card" elevation="0">
@@ -339,6 +339,13 @@ export default {
   padding-top: 20px;
 }
 
+.content-create-admin {
+  max-height: calc(100vh - 240px);
+  overflow-y: auto;
+  padding-bottom: 120px;
+  scrollbar-gutter: stable;
+}
+
 .content-card {
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(47, 79, 58, 0.14);
@@ -361,9 +368,9 @@ export default {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 12px !important;
   line-height: 1.45;
-  height: 360px !important;
-  max-height: 360px !important;
-  min-height: 360px !important;
+  height: clamp(180px, 32vh, 320px) !important;
+  max-height: clamp(180px, 32vh, 320px) !important;
+  min-height: 180px !important;
   overflow-y: auto !important;
   resize: none !important;
 }
@@ -374,6 +381,15 @@ export default {
   gap: 12px;
   flex-wrap: wrap;
   padding-top: 4px;
+}
+
+.content-create-admin .action-bar {
+  position: sticky;
+  bottom: 20px;
+  z-index: 2;
+  margin-bottom: 32px;
+  padding: 16px 0 10px;
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0), rgba(255, 253, 249, 0.98) 30%);
 }
 
 .content-table {
@@ -424,6 +440,11 @@ export default {
 }
 
 @media (max-width: 700px) {
+  .content-create-admin {
+    max-height: calc(100vh - 200px);
+    padding-bottom: 140px;
+  }
+
   .content-card {
     padding: 16px;
   }
