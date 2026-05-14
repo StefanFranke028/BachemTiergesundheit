@@ -10,7 +10,6 @@
       <v-list-item
           class="mt-2"
           v-for="item in menuItems"
-          :title="item.beschreibung"
           :key="item.title"
           :to="{ name: item.route }"
           role="option"
@@ -27,7 +26,6 @@
       <v-list-item
           class="mt-2"
           tag="a"
-          title="Ernährung ist für ihr Haustier wichtig"
           href="https://gesundesfutterandreabachem.de/"
           role="option"
           :aria-label="'Ernährung'"
