@@ -6,88 +6,47 @@
       </v-col>
     </v-row>
 
-    <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
+    <section class="intro-section">
+      <div class="intro-container">
+        <span class="intro-eyebrow">Preise & Leistungen</span>
+        <h1 class="intro-title">
+          Transparent, fair und individuell
+        </h1>
+        <p class="intro-lead">
+          Faire Preise abgestimmt auf Hund, Pferd und Co. Vor jeder Behandlung führen wir ein
+          ausführliches Anamnesegespräch – damit du genau weißt, was dein Tier braucht.
+        </p>
 
-      <v-col cols="10">
-        <div class="pa-7 d-flex justify-center background-impressum" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
-          <div style="width: 85%;">
-            <h1 class="line">Preise & Leistungen im Tiergesundheitszentrum Andrea Bachem</h1>
-
-            <h2 class="line mt-3">Transparente Kosten für Behandlung, Beratung & Zusatzservices</h2>
-            <p>
-              Im Tiergesundheitszentrum Andrea Bachem in Erftstadt stehen die Gesundheit und das Wohlbefinden deines Tieres im Mittelpunkt.
-              <br>
-              Unsere Preise sind transparent, fair und auf die individuellen Bedürfnisse von Hund, Pferd und anderen tierischen Begleitern abgestimmt.       <br>
-              Hier findest du eine Übersicht über alle Leistungen und deren Kosten.
-            </p>
-
-            <h2 class="line mt-4">Therapeutische Behandlungen für Hund und Pferd</h2>
-
-            <h3 class="line mt-3">Tierosteopathie</h3>
-            <p>
-              Ganzheitliche osteopathische Behandlungen zur Förderung der Selbstheilung und Mobilität deines Tieres.        <br>
-              Geeignet bei Bewegungseinschränkungen, Verspannungen und chronischen Beschwerden.
-            </p>
-
-            <h3 class="line mt-3">Tierphysiotherapie</h3>
-            <p>
-              Gezielte physiotherapeutische Maßnahmen wie Massagen, Dehnungen, aktive Übungen und mehr
-              <br> individuell abgestimmt auf den Zustand deines Tieres.
-            </p>
-
-            <h3 class="line mt-3">Chiropraktik für Tiere</h3>
-            <p>
-              Sanfte chiropraktische Justierungen zur Korrektur von Blockaden und zur Förderung der Beweglichkeit.       <br>
-              Ideal für sportlich geführte Tiere oder nach Verletzungen.
-            </p>
-
-            <h2 class="line mt-4">Weitere Leistungen & Zusatzangebote</h2>
-
-            <h3 class="line mt-3">Ernährungsberatung</h3>
-            <p>
-              Individuelle Beratung zur artgerechten und gesundheitsfördernden Ernährung deines Tieres        <br>
-              abgestimmt auf Alter, Rasse und Beschwerden.
-            </p>
-
-            <h3 class="line mt-3">Mobile Tierbehandlung</h3>
-            <p>
-              Behandlungen vor Ort direkt bei dir zuhause oder im Stall. Ideal für Tiere, die den Transport schlecht        <br>
-              vertragen oder sich in gewohnter Umgebung wohler fühlen. Es fällt eine Anfahrtspauschale an, abhängig vom Standort.
-            </p>
-
-            <h3 class="line mt-3">Kooperation mit Tierärzten & Therapeuten</h3>
-            <p>
-              Interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten für eine bestmögliche Versorgung deines Tieres.       <br>
-            </p>
-
-            <h2 class="line mt-4">Was du noch wissen solltest</h2>
-            <p>
-              Alle Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart.       <br>
-              Vor der ersten Behandlung führen wir ein ausführliches Anamnesegespräch durch.       <br>
-              Gerne beraten wir dich auch telefonisch zu individuellen Anliegen.
-            </p>
-
-            <h3 class="line mt-3">Individuelle Angebote auf Anfrage</h3>
-            <p>
-              Du hast besondere Anforderungen oder möchtest mehrere Leistungen kombinieren?       <br>
-              Sprich uns an, wir erstellen dir ein passendes Paketangebot.
-            </p>
-
+        <div class="intro-grid">
+          <div class="intro-card">
+            <div class="intro-card-num">01</div>
+            <h3>Tierosteopathie</h3>
+            <p>Ganzheitliche Behandlungen zur Förderung der Selbstheilung und Mobilität.</p>
           </div>
-
-
-
+          <div class="intro-card">
+            <div class="intro-card-num">02</div>
+            <h3>Tierphysiotherapie</h3>
+            <p>Massagen, Dehnungen und aktive Übungen, individuell abgestimmt.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-num">03</div>
+            <h3>Chiropraktik</h3>
+            <p>Sanfte Justierungen zur Korrektur von Blockaden und mehr Beweglichkeit.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-num">04</div>
+            <h3>Mobile Behandlung</h3>
+            <p>Vor Ort bei dir zuhause oder im Stall – mit Anfahrtspauschale je nach Standort.</p>
+          </div>
         </div>
-      </v-col>
-
-
-    </v-row>
+      </div>
+    </section>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="4" v-for="preis in produkteArray" :key="preis.id">
         <article itemscope itemtype="https://schema.org/Service">
           <v-card
-              class="mx-auto my-12"
-              height="500"
+              class="mx-auto my-12 pb-4"
+              height="620"
               style="background-color: rgb(255,255,255); backdrop-filter: blur(4px); box-shadow: 1px 1px 5px black"
               width="300"
           >
@@ -101,16 +60,18 @@
                 itemprop="image"
             ></v-img>
 
-            <v-card-title class="text-center" itemprop="name">
+            <v-card-title class="text-center" itemprop="name" style="white-space: normal; word-break: break-word;">
               {{ preis.ueberschrift }}
             </v-card-title>
 
             <v-divider class="mx-8 opacity-80"></v-divider>
 
-            <v-card-text class="text-center" style="height: 150px ;overflow-y: scroll"  itemprop="description">
-              {{ preis.text }} <br>
-              {{ preis.preis }}
+            <v-card-text class="text-center" style="height: 130px; overflow-y: auto" itemprop="description">
+              {{ preis.text }}
             </v-card-text>
+            <div v-if="preis.preis" class="preis-badge" itemprop="priceSpecification">
+              {{ preis.preis }}
+            </div>
 
 
 
@@ -135,71 +96,24 @@
   </div>
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px;overflow-y: scroll">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
-    <v-row class="justify-center mx-0 mt-2" style="overflow-y: scroll">
-      <v-col cols="11">
-        <v-card class="pa-7" style="overflow: auto; max-height: 50vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line">Preise & Leistungen im Tiergesundheitszentrum Andrea Bachem</h1>
-
-          <h2 class="line mt-3">Transparente Kosten für Behandlung, Beratung & Zusatzservices</h2>
-          <p>
-            Im Tiergesundheitszentrum Andrea Bachem in Erftstadt stehen die Gesundheit und das Wohlbefinden deines Tieres im Mittelpunkt. Unsere Preise sind transparent, fair und auf die individuellen Bedürfnisse von Hund, Pferd und anderen tierischen Begleitern abgestimmt. Hier findest du eine Übersicht über alle Leistungen und deren Kosten.
-          </p>
-
-          <h2 class="line mt-4">Therapeutische Behandlungen für Hund und Pferd</h2>
-
-          <h3 class="line mt-3">Tierosteopathie</h3>
-          <p>
-            Ganzheitliche osteopathische Behandlungen zur Förderung der Selbstheilung und Mobilität deines Tieres. Geeignet bei Bewegungseinschränkungen, Verspannungen und chronischen Beschwerden.
-          </p>
-
-          <h3 class="line mt-3">Tierphysiotherapie</h3>
-          <p>
-            Gezielte physiotherapeutische Maßnahmen wie Massagen, Dehnungen, aktive Übungen und mehr – individuell abgestimmt auf den Zustand deines Tieres.
-          </p>
-
-          <h3 class="line mt-3">Chiropraktik für Tiere</h3>
-          <p>
-            Sanfte chiropraktische Justierungen zur Korrektur von Blockaden und zur Förderung der Beweglichkeit. Ideal für sportlich geführte Tiere oder nach Verletzungen.
-          </p>
-
-          <h2 class="line mt-4">Weitere Leistungen & Zusatzangebote</h2>
-
-          <h3 class="line mt-3">Ernährungsberatung</h3>
-          <p>
-            Individuelle Beratung zur artgerechten und gesundheitsfördernden Ernährung deines Tieres – abgestimmt auf Alter, Rasse und Beschwerden.
-          </p>
-
-          <h3 class="line mt-3">Mobile Tierbehandlung</h3>
-          <p>
-            Behandlungen vor Ort direkt bei dir zuhause oder im Stall. Ideal für Tiere, die den Transport schlecht vertragen oder sich in gewohnter Umgebung wohler fühlen. Es fällt eine Anfahrtspauschale an, abhängig vom Standort.
-          </p>
-
-          <h3 class="line mt-3">Kooperation mit Tierärzten & Therapeuten</h3>
-          <p>
-            Interdisziplinäre Zusammenarbeit mit Tierärzten, Hufschmieden und weiteren Therapeuten für eine bestmögliche Versorgung deines Tieres.
-          </p>
-
-          <h2 class="line mt-4">Was du noch wissen solltest</h2>
-          <p>
-            Alle Preise richten sich nach dem zeitlichen Aufwand und der jeweiligen Tierart. Vor der ersten Behandlung führen wir ein ausführliches Anamnesegespräch durch. Gerne beraten wir dich auch telefonisch zu individuellen Anliegen.
-          </p>
-
-          <h3 class="line mt-3">Individuelle Angebote auf Anfrage</h3>
-          <p>
-            Du hast besondere Anforderungen oder möchtest mehrere Leistungen kombinieren? Sprich uns an – wir erstellen dir ein passendes Paketangebot.
-          </p>
-
-
-        </v-card>
-      </v-col>
-    </v-row>
+    <section class="intro-section intro-section--mobile">
+      <div class="intro-container">
+        <span class="intro-eyebrow">Preise & Leistungen</span>
+        <h1 class="intro-title">
+          Transparent, fair und individuell
+        </h1>
+        <p class="intro-lead">
+          Faire Preise für Hund, Pferd und Co. – abgestimmt auf zeitlichen Aufwand und Tierart.
+        </p>
+      </div>
+    </section>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="11" v-for="preis in produkteArray" :key="preis.id">
         <article itemscope itemtype="https://schema.org/Service">
           <v-card
               :loading="loading"
-              class="mx-auto my-12 "
-              height="500"
+              class="mx-auto my-12 pb-4"
+              height="600"
               style="background-color: rgb(255,255,255); backdrop-filter: blur(4px);box-shadow: 1px 1px 5px black "
               width="300"
           >
@@ -216,14 +130,14 @@
                 style="width: 300px; height: 200px"
                 itemprop="image"
             ></v-img>
-            <v-card-title class="text-center">{{ preis.ueberschrift }}</v-card-title>
+            <v-card-title class="text-center" style="white-space: normal; word-break: break-word;">{{ preis.ueberschrift }}</v-card-title>
             <v-divider class="mx-8 opacity-80"></v-divider>
-            <v-card-text class="text-center" style="overflow-y: scroll;height: 130px">
-
+            <v-card-text class="text-center" style="height: 110px; overflow-y: auto">
               {{ preis.text }}
-
-
             </v-card-text>
+            <div v-if="preis.preis" class="preis-badge">
+              {{ preis.preis }}
+            </div>
             <v-row style="width: 100% ;" class="ma-0 mt-5">
               <v-col cols="12" class="d-flex justify-center">
                 <v-btn  class="mt-3 " style="background-color:rgb(0, 130, 194); color: white; border-radius: 20px">
@@ -418,11 +332,71 @@ p{
 
 
 
-.background-impressum {
+.preis-badge {
+  margin: 8px 16px 0;
+  padding: 10px 16px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+  background: rgb(0, 130, 194);
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
-  background-image: url("@/assets/paper.webp");
-  background-size: cover;
-
+/* INTRO-SECTION */
+.intro-section { padding: 80px 24px 40px; color: #fff; }
+.intro-section--mobile { padding: 40px 16px 20px; }
+.intro-container { max-width: 1100px; margin: 0 auto; text-align: center; }
+.intro-eyebrow {
+  display: inline-block; font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: #ffffff;
+  padding: 8px 18px; border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 2px; margin-bottom: 28px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5); background: rgba(0,0,0,0.25);
+}
+.intro-title {
+  font-family: "Montserrat", sans-serif; font-weight: 600;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.2;
+  color: #fff; margin: 0 auto 20px; max-width: 900px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+}
+.intro-lead {
+  font-family: "Montserrat", sans-serif; font-size: 1.05rem;
+  line-height: 1.75; color: rgba(255,255,255,0.85);
+  max-width: 720px; margin: 0 auto 48px;
+}
+.intro-section--mobile .intro-lead { font-size: 0.95rem; margin-bottom: 16px; }
+.intro-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-top: 32px;
+}
+.intro-card {
+  text-align: left; padding: 24px 24px 26px;
+  border-left: 3px solid rgb(0, 130, 194);
+  background: rgba(255,255,255,0.92); border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.intro-card:hover {
+  background: #ffffff; transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.intro-card-num {
+  font-family: "Montserrat", sans-serif; font-size: 0.85rem;
+  font-weight: 600; letter-spacing: 0.1em;
+  color: rgb(0, 130, 194); margin-bottom: 10px;
+}
+.intro-card h3 {
+  font-family: "Montserrat", sans-serif; font-weight: 600;
+  font-size: 1.1rem; color: #1a1a1a; margin: 0 0 10px;
+}
+.intro-card p {
+  font-family: "Montserrat", sans-serif; font-size: 0.92rem;
+  line-height: 1.65; color: #444; margin: 0;
 }
 
 

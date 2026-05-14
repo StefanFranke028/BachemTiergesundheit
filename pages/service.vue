@@ -6,49 +6,42 @@
       </v-col>
     </v-row>
 
-    <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
-      <v-col cols="10">
-        <div class="pa-7 d-flex justify-center background-impressum"
-             style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
-          <div>
-            <h1 class="line mt-3">Unsere Leistungen <br> Ganzheitliche Tiergesundheit mit Herz und Verstand</h1>
-            <p>
-              Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an <br>
-              ganzheitlichen Behandlungsmethoden für Hunde, Katzen, Pferde und andere Tiere. <br>
-              Mit einem tiefen Verständnis für Tierkörper und -seele begleiten wir Ihr <br>
-              Tier individuell und achtsam auf seinem Weg zur Gesundheit.
-            </p>
-            <h2 class="line mt-3">Ganzheitliche Therapiekonzepte für Ihr Tier</h2>
-            <p>
-              Unsere Leistungen vereinen traditionelles Wissen mit moderner Tierheilkunde. Dabei setzen wir auf
-              natürliche, <br>
-              sanfte Methoden, die Körper, Geist und Seele Ihres Tieres in Einklang bringen.
-            </p>
-            <h3 class="line mt-3">Osteopathie & Chiropraktik</h3>
-            <p>
-              Verspannungen, Lahmheiten oder Verhaltensauffälligkeiten? Mit gezielten osteopathischen und <br>
-              chiropraktischen Techniken lösen wir Blockaden und fördern die Beweglichkeit Ihres Tieres.
-            </p>
-            <h2 class="line mt-3">Zusatzleistungen für Tierhalter</h2>
-            <p>
-              Neben der Behandlung Ihres Tieres bieten wir umfassende Beratung und begleitende Leistungen <br>
-              individuell, verständlich und praxisnah.
-            </p>
-            <h3 class="line mt-3">Fütterungsberatung</h3>
-            <p>
-              Die richtige Ernährung ist die Basis für Gesundheit. Wir erstellen individuelle Fütterungskonzepte <br>
-              abgestimmt auf Alter, Rasse, Vorerkrankungen und Lebensumstände.
-            </p>
-            <h2 class="line mt-3">Warum Sie uns vertrauen können</h2>
-            <p>
-              Fachliche Kompetenz, jahrelange Erfahrung und ein liebevoller Umgang mit Tier und Mensch das zeichnet <br>
-              unsere Praxis aus. Wir nehmen uns Zeit, hören zu und gehen individuell auf die Bedürfnisse Ihres Tieres
-              ein.
-            </p>
+    <section class="intro-section">
+      <div class="intro-container">
+        <span class="intro-eyebrow">Tiergesundheitszentrum Andrea Bachem</span>
+        <h1 class="intro-title">
+          Ganzheitliche Tiergesundheit mit Herz und Verstand
+        </h1>
+        <p class="intro-lead">
+          Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an
+          ganzheitlichen Behandlungsmethoden für Hunde, Katzen, Pferde und andere Tiere – individuell,
+          achtsam und auf den ganzen Körper bezogen.
+        </p>
+
+        <div class="intro-grid">
+          <div class="intro-card">
+            <div class="intro-card-num">01</div>
+            <h3>Osteopathie & Chiropraktik</h3>
+            <p>Wir lösen Blockaden, fördern Beweglichkeit und begleiten Ihr Tier zurück in die Balance.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-num">02</div>
+            <h3>Fütterungsberatung</h3>
+            <p>Individuelle Konzepte, abgestimmt auf Alter, Rasse, Vorerkrankungen und Lebensumstände.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-num">03</div>
+            <h3>Ganzheitliche Therapie</h3>
+            <p>Natürliche Methoden, die Körper, Geist und Seele Ihres Tieres in Einklang bringen.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-num">04</div>
+            <h3>Persönliche Begleitung</h3>
+            <p>Wir nehmen uns Zeit, hören zu und gehen auf die Bedürfnisse Ihres Tieres ein.</p>
           </div>
         </div>
-      </v-col>
-    </v-row>
+      </div>
+    </section>
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col v-for="page in pages" :key="page.url" cols="4" class="d-flex justify-center">
@@ -94,22 +87,18 @@
 
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px;overflow-y: scroll">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
-    <v-row class="justify-center mx-0 mt-2" style="overflow-y: scroll">
-      <v-col cols="11">
-        <v-card class="pa-7"
-                style="overflow: auto; max-height: 50vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line mt-3">Unsere Leistungen – Ganzheitliche Tiergesundheit mit Herz und Verstand</h1>
-          <p>
-            Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an ganzheitlichen
-            Behandlungsmethoden für Hunde, Katzen, Pferde und andere Tiere.
-          </p>
-          <h2 class="line mt-3">Ganzheitliche Therapiekonzepte für Ihr Tier</h2>
-          <p>
-            Unsere Leistungen vereinen traditionelles Wissen mit moderner Tierheilkunde.
-          </p>
-        </v-card>
-      </v-col>
-    </v-row>
+    <section class="intro-section intro-section--mobile">
+      <div class="intro-container">
+        <span class="intro-eyebrow">Tiergesundheitszentrum Andrea Bachem</span>
+        <h1 class="intro-title">
+          Ganzheitlich, achtsam, individuell
+        </h1>
+        <p class="intro-lead">
+          Osteopathie, Chiropraktik, Fütterungsberatung – ganzheitliche Methoden für Hund, Katze und Pferd
+          im Tiergesundheitszentrum Erftstadt.
+        </p>
+      </div>
+    </section>
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col v-for="page in pages" :key="page.url" cols="11" class="d-flex justify-center">
@@ -248,9 +237,110 @@ a {
 p {
   color: rgba(0, 0, 0, 0.86);
 }
-.background-impressum {
-  background-image: url("@/assets/paper.webp");
-  background-size: cover;
+/* INTRO-SECTION */
+.intro-section {
+  padding: 80px 24px 40px;
+  color: #fff;
+}
+.intro-section--mobile {
+  padding: 40px 16px 20px;
+}
+.intro-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro-eyebrow {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2px;
+  margin-bottom: 28px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
+}
+.intro-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 auto 20px;
+  max-width: 900px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+.intro-title-accent {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgb(0, 130, 194);
+  padding: 6px 18px;
+  border-radius: 4px;
+  margin-top: 16px;
+  font-size: 0.7em;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.intro-lead {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+.intro-section--mobile .intro-lead {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+.intro-card {
+  text-align: left;
+  padding: 24px 24px 26px;
+  border-left: 3px solid rgb(0, 130, 194);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.intro-card:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.intro-card-num {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgb(0, 130, 194);
+  margin-bottom: 10px;
+}
+.intro-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+}
+.intro-card p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0;
 }
 a:focus {
   outline: 2px solid blue;

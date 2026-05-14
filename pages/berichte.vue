@@ -6,67 +6,41 @@
       </v-col>
     </v-row>
 
-    <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
+    <section class="intro-section">
+      <div class="intro-container">
+        <span class="intro-eyebrow">Praxiseinblicke</span>
+        <h1 class="intro-title">
+          Berichte aus der Praxis
+        </h1>
+        <p class="intro-lead">
+          Ehrliche Einblicke in ganzheitliche Tierbehandlungen, Erfahrungsberichte unserer Kunden
+          und besondere Ereignisse aus dem Tiergesundheitszentrum Andrea Bachem in Erftstadt.
+        </p>
 
-      <v-col cols="10">
-        <div class="pa-7 d-flex justify-center background-impressum" style="overflow: auto; max-height: 60vh; width: 100%; background-color: rgba(0,0,0,0)">
-          <div>
-            <h1 class="line mt-3">Berichte aus der Praxis – Tiergesundheit Andrea Bachem</h1>
-
-            <p>
-              In unserer Tiergesundheitspraxis in Erftstadt legen wir großen Wert auf Transparenz, Fachwissen und persönliche Erfahrungen.
-              <br>
-              Auf dieser Seite finden Sie aktuelle Berichte über Behandlungen, Seminare, Erfahrungsberichte von Tierhaltern
-              <br> sowie besondere Ereignisse aus unserem Praxisalltag.
-            </p>
-
-            <h2 class="line mt-3">Aktuelle Einblicke in unsere Arbeit mit Tieren</h2>
-
-            <p>
-              Unsere Arbeit mit Tieren ist vielfältig, liebevoll und fachlich fundiert. In den folgenden Berichten erhalten Sie ehrliche
-              <br> Einblicke in die ganzheitlichen Behandlungsansätze, die wir bei Hunden, Katzen, Pferden und weiteren Tierarten anwenden.
-            </p>
-
-            <h3 class="line mt-3">Ganzheitliche Therapie im Fokus</h3>
-            <p>
-              Ob über die Anwendung von Homöopathie, Mykotherapie, Akupunktur oder energetischen Heilmethoden
-              <br> wir zeigen anhand echter Beispiele, wie individuell abgestimmte Therapiepläne den Heilungsverlauf positiv beeinflussen.
-            </p>
-
-            <h3 class="line mt-3">Erfahrungsberichte unserer Kunden</h3>
-            <p>
-              Lesen Sie authentische Stimmen unserer Tierhalter, die über ihre Erfahrungen mit unserer Praxis berichten. Vertrauen, Achtsamkeit
-              <br> und nachhaltige Tiergesundheit stehen dabei immer im Vordergrund.
-            </p>
-
-            <h2 class="line mt-3">Veranstaltungen & Workshops rund um Tiergesundheit</h2>
-            <p>
-              In regelmäßigen Abständen veranstalten wir Workshops, Informationsabende oder Fortbildungen zu Themen wie Fütterung,
-              <br> Impfkritik, Verhalten oder alternativen Heilmethoden. Unsere Berichte dazu finden Sie hier.
-            </p>
-
-            <h3 class="line mt-3">Praxiswissen verständlich erklärt</h3>
-            <p>
-              In jedem Bericht geben wir fachlich fundierte, aber leicht verständliche Einblicke in komplexe Themen <br>
-              der Tiermedizin damit Sie als Tierhalter fundierte Entscheidungen treffen können.
-            </p>
-
-            <h2 class="line mt-3">Warum Transparenz bei uns wichtig ist</h2>
-            <p>
-              Mit unseren Praxisberichten möchten wir Ihnen nicht nur zeigen, wie wir arbeiten sondern auch Vertrauen schaffen.
-              <br>
-              Sie sollen wissen, worauf Sie sich bei einem Besuch in unserer Praxis verlassen können: Kompetenz, Herz und ganzheitliche Tiermedizin.
-            </p>
-
-
-
+        <div class="intro-grid">
+          <div class="intro-card">
+            <div class="intro-card-num">01</div>
+            <h3>Ganzheitliche Therapie</h3>
+            <p>Homöopathie, Mykotherapie, Akupunktur und energetische Heilmethoden – wie individuelle Pläne wirken.</p>
           </div>
+          <div class="intro-card">
+            <div class="intro-card-num">02</div>
+            <h3>Erfahrungsberichte</h3>
+            <p>Authentische Stimmen unserer Tierhalter: Vertrauen, Achtsamkeit und nachhaltige Tiergesundheit.</p>
           </div>
-
-      </v-col>
-
-
-    </v-row>
+          <div class="intro-card">
+            <div class="intro-card-num">03</div>
+            <h3>Workshops</h3>
+            <p>Fortbildungen zu Fütterung, Verhalten und alternativen Heilmethoden – fachlich fundiert, verständlich.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-num">04</div>
+            <h3>Transparenz</h3>
+            <p>Wir zeigen, wie wir arbeiten – damit Sie wissen, worauf Sie sich verlassen können.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="4" v-for="preis in produkteArray" :key="preis.id">
         <article itemscope itemtype="https://schema.org/Article">
@@ -121,50 +95,18 @@
   </div>
   <div v-if="mobile || tablet" class="background" style="padding-top: 20px;overflow-y: scroll">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
-    <v-row class="justify-center mx-0 mt-2" style="overflow-y: scroll">
-      <v-col cols="11">
-        <v-card class="pa-7" style="overflow: auto; max-height: 50vh; width: 100%; background-color: rgba(0,0,0,0.22)">
-          <h1 class="line mt-3">Berichte aus der Praxis – Tiergesundheit Andrea Bachem</h1>
-
-          <p>
-            In unserer Tiergesundheitspraxis in Erftstadt legen wir großen Wert auf Transparenz, Fachwissen und persönliche Erfahrungen. Auf dieser Seite finden Sie aktuelle Berichte über Behandlungen, Seminare, Erfahrungsberichte von Tierhaltern sowie besondere Ereignisse aus unserem Praxisalltag.
-          </p>
-
-          <h2 class="line mt-3">Aktuelle Einblicke in unsere Arbeit mit Tieren</h2>
-
-          <p>
-            Unsere Arbeit mit Tieren ist vielfältig, liebevoll und fachlich fundiert. In den folgenden Berichten erhalten Sie ehrliche Einblicke in die ganzheitlichen Behandlungsansätze, die wir bei Hunden, Katzen, Pferden und weiteren Tierarten anwenden.
-          </p>
-
-          <h3 class="line mt-3">Ganzheitliche Therapie im Fokus</h3>
-          <p>
-            Ob über die Anwendung von Homöopathie, Mykotherapie, Akupunktur oder energetischen Heilmethoden wir zeigen anhand echter Beispiele, wie individuell abgestimmte Therapiepläne den Heilungsverlauf positiv beeinflussen.
-          </p>
-
-          <h3 class="line mt-3">Erfahrungsberichte unserer Kunden</h3>
-          <p>
-            Lesen Sie authentische Stimmen unserer Tierhalter, die über ihre Erfahrungen mit unserer Praxis berichten. Vertrauen, Achtsamkeit und nachhaltige Tiergesundheit stehen dabei immer im Vordergrund.
-          </p>
-
-          <h2 class="line mt-3">Veranstaltungen & Workshops rund um Tiergesundheit</h2>
-          <p>
-            In regelmäßigen Abständen veranstalten wir Workshops, Informationsabende oder Fortbildungen zu Themen wie Fütterung, Impfkritik, Verhalten oder alternativen Heilmethoden. Unsere Berichte dazu finden Sie hier.
-          </p>
-
-          <h3 class="line mt-3">Praxiswissen verständlich erklärt</h3>
-          <p>
-            In jedem Bericht geben wir fachlich fundierte, aber leicht verständliche Einblicke in komplexe Themen der Tiermedizin – damit Sie als Tierhalter fundierte Entscheidungen treffen können.
-          </p>
-
-          <h2 class="line mt-3">Warum Transparenz bei uns wichtig ist</h2>
-          <p>
-            Mit unseren Praxisberichten möchten wir Ihnen nicht nur zeigen, wie wir arbeiten sondern auch Vertrauen schaffen. Sie sollen wissen, worauf Sie sich bei einem Besuch in unserer Praxis verlassen können: Kompetenz, Herz und ganzheitliche Tiermedizin.
-          </p>
-
-
-        </v-card>
-      </v-col>
-    </v-row>
+    <section class="intro-section intro-section--mobile">
+      <div class="intro-container">
+        <span class="intro-eyebrow">Praxiseinblicke</span>
+        <h1 class="intro-title">
+          Berichte aus der Praxis
+        </h1>
+        <p class="intro-lead">
+          Ehrliche Einblicke in ganzheitliche Tierbehandlungen, Erfahrungen unserer Tierhalter und
+          besondere Momente aus dem Tiergesundheitszentrum Andrea Bachem.
+        </p>
+      </div>
+    </section>
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col cols="11" v-for="preis in produkteArray" :key="preis.id">
         <article itemscope itemtype="https://schema.org/Article">
@@ -375,11 +317,57 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-.background-impressum {
-
-  background-image: url("@/assets/paper.webp");
-  background-size: cover;
-
+/* INTRO-SECTION */
+.intro-section { padding: 80px 24px 40px; color: #fff; }
+.intro-section--mobile { padding: 40px 16px 20px; }
+.intro-container { max-width: 1100px; margin: 0 auto; text-align: center; }
+.intro-eyebrow {
+  display: inline-block; font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: #ffffff;
+  padding: 8px 18px; border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 2px; margin-bottom: 28px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5); background: rgba(0,0,0,0.25);
+}
+.intro-title {
+  font-family: "Montserrat", sans-serif; font-weight: 600;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.2;
+  color: #fff; margin: 0 auto 20px; max-width: 900px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+}
+.intro-lead {
+  font-family: "Montserrat", sans-serif; font-size: 1.05rem;
+  line-height: 1.75; color: rgba(255,255,255,0.85);
+  max-width: 720px; margin: 0 auto 48px;
+}
+.intro-section--mobile .intro-lead { font-size: 0.95rem; margin-bottom: 16px; }
+.intro-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-top: 32px;
+}
+.intro-card {
+  text-align: left; padding: 24px 24px 26px;
+  border-left: 3px solid rgb(0, 130, 194);
+  background: rgba(255,255,255,0.92); border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.intro-card:hover {
+  background: #ffffff; transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.intro-card-num {
+  font-family: "Montserrat", sans-serif; font-size: 0.85rem;
+  font-weight: 600; letter-spacing: 0.1em;
+  color: rgb(0, 130, 194); margin-bottom: 10px;
+}
+.intro-card h3 {
+  font-family: "Montserrat", sans-serif; font-weight: 600;
+  font-size: 1.1rem; color: #1a1a1a; margin: 0 0 10px;
+}
+.intro-card p {
+  font-family: "Montserrat", sans-serif; font-size: 0.92rem;
+  line-height: 1.65; color: #444; margin: 0;
 }
 
 a:focus {
