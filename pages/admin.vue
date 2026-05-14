@@ -109,7 +109,7 @@ export default {
   },
   data() {
     return {
-      seiten: ['Berichte', 'Produkte', 'Service', 'Preise','Kontaktaufnahme','Rechnung','Content'],
+      seiten: ['Berichte', 'Produkte', 'Preise','Kontaktaufnahme','Rechnung','Content'],
       selectedSeite: 'Kontaktaufnahme',
       isLoading: true,
     };

@@ -64,7 +64,13 @@
       <v-window-item value="1">
         <v-row class="justify-center mt-3" style="width: 100%">
           <v-col cols="10">
-            <v-data-table-virtual :items="bereinigtesProdukteArray" fixed-header="true" height="550" items-per-page="7">
+            <v-data-table-virtual
+                :headers="produktHeaders"
+                :items="bereinigtesProdukteArray"
+                fixed-header="true"
+                height="550"
+                items-per-page="7"
+            >
               <template v-slot:item="{ item }">
                 <tr>
                   <td>{{ item.id }}</td>
@@ -100,6 +106,12 @@ export default {
       text: '',
       ueberschrift: '',
       link: '',
+      produktHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'Überschrift', key: 'ueberschrift' },
+        { title: 'Link', key: 'link', sortable: false },
+        { title: 'Löschen', key: 'löschen', sortable: false },
+      ],
       rules: [v => v.length <= 132 || 'Maximale Zeichenanzahl 133 erreicht'],
     }
   },

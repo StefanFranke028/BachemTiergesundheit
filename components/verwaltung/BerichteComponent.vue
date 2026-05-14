@@ -83,8 +83,13 @@
       <v-window-item value="1">
         <v-row class="justify-center mt-3" style="width: 100%">
           <v-col cols="12">
-            <v-data-table-virtual :items="bereinigtesBerichteArray" fixed-header
-                                  height="550" items-per-page="7">
+            <v-data-table-virtual
+                :headers="berichtHeaders"
+                :items="bereinigtesBerichteArray"
+                fixed-header
+                height="550"
+                items-per-page="7"
+            >
               <template v-slot:item="{ item }">
                 <tr>
                   <td>{{ item.id }}</td>
@@ -139,6 +144,17 @@ export default {
       text: '',
       imageURL: null,
       berichteArray: [],
+      berichtHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'URL', key: 'name' },
+        { title: 'Überschrift', key: 'überschrift' },
+        { title: 'Bild', key: 'image', sortable: false },
+        { title: 'Autor', key: 'autor' },
+        { title: 'Unter-Überschrift', key: 'unterUeberschrift' },
+        { title: 'Mini-Überschrift', key: 'miniUnterUeberschrift' },
+        { title: 'Backlink', key: 'backlinkName', sortable: false },
+        { title: 'Löschen', key: 'icon', sortable: false },
+      ],
       editorOptions: {
         modules: {
           toolbar: [

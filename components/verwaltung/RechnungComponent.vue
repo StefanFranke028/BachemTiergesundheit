@@ -77,6 +77,7 @@
             <v-col cols="4">
               <v-card class="mt-12">
                 <v-data-table-virtual
+                    :headers="leistungsHeaders"
                     :items="bereinigtestLeistungsArray"
                     fixed-header>
                   <template v-slot:item="{ item }">
@@ -287,6 +288,12 @@ export default {
       leistungen: [],
       menge: '',
       pdf: {},
+      leistungsHeaders: [
+        { title: 'Leistung', key: 'text', sortable: false },
+        { title: 'Menge', key: 'menge' },
+        { title: 'Gesamtpreis', key: 'preis' },
+        { title: 'Löschen', key: 'löschen', sortable: false },
+      ],
       rechnungsHeaders: [
         { title: 'ID', key: 'id' },
         { title: 'Name', key: 'name' },

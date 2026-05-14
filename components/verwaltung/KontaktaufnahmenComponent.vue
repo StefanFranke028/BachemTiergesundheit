@@ -15,8 +15,13 @@
       <v-window-item value="0">
         <v-row class="justify-center mt-3" style="width: 100%">
           <v-col cols="10">
-            <v-data-table-virtual :items="bereinigtesKontaktaufnahmenArray" fixed-header height="550"
-                                  items-per-page="7">
+            <v-data-table-virtual
+                :headers="kontaktHeaders"
+                :items="bereinigtesKontaktaufnahmenArray"
+                fixed-header
+                height="550"
+                items-per-page="7"
+            >
               <template v-slot:item="{ item }">
                 <tr>
                   <td>{{ item.id }}</td>
@@ -50,6 +55,7 @@
 <script>
 
 import {Icon} from "@iconify/vue";
+import {useUserStore} from "~/stores/user.js";
 
 export default {
   name:'KontaktaufnahmeComponent',
@@ -60,7 +66,15 @@ export default {
       telefonnummer: '',
       name: '',
       text: '',
-      kontaktaufnahmenArray:[]
+      kontaktaufnahmenArray:[],
+      kontaktHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'E-Mail', key: 'email' },
+        { title: 'Telefonnummer', key: 'telefonnummer' },
+        { title: 'Name', key: 'name' },
+        { title: 'Nachricht', key: 'text', sortable: false },
+        { title: 'Löschen', key: 'icon', sortable: false },
+      ]
     }
   },
   computed: {
@@ -86,7 +100,7 @@ export default {
           const kontaktaufnahmeArray = response.data || response;
           this.kontaktaufnahmenArray = Object.freeze(kontaktaufnahmeArray)
         } catch (error) {
-          alert("Fehler beim Laden der Kontaktaufnahmen. Bitte versuchen Sie es erneut.")
+          this.redirectToLogin()
         }
       }
     },
@@ -106,6 +120,14 @@ export default {
         } catch (e) {
           alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut. Falls das Problem weiterhin besteht, kontaktieren Sie bitte den Administrator.")
         }
+      }
+    },
+    redirectToLogin() {
+      const userStore = useUserStore();
+      userStore.logout();
+
+      if (this.$route.path !== '/admin') {
+        this.$router.replace('/admin');
       }
     }
   },

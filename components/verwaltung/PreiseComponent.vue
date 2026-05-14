@@ -54,13 +54,17 @@
                                 no-resize variant="outlined"/>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-btn @click="create">
-                      speichern
+                    <v-btn
+                        :disabled="isSavingPreis"
+                        :loading="isSavingPreis"
+                        @click="create"
+                    >
+                      {{ editingPreisId ? 'aktualisieren' : 'speichern' }}
                     </v-btn>
                   </v-col>
                   <v-col class="d-flex justify-center" cols="5">
-                    <v-btn>
-                      leeren
+                    <v-btn @click="reset">
+                      {{ editingPreisId ? 'abbrechen' : 'leeren' }}
                     </v-btn>
                   </v-col>
                 </v-row>
@@ -73,14 +77,21 @@
       <v-window-item value="1">
         <v-row class="justify-center mt-3" style="width: 100%">
           <v-col cols="10">
-            <v-data-table-virtual :items="bereinigtesPreisArray" fixed-header="true" height="550" items-per-page="7">
+            <v-data-table-virtual
+                :headers="preisHeaders"
+                :items="bereinigtesPreisArray"
+                fixed-header="true"
+                height="550"
+                items-per-page="7"
+            >
               <template v-slot:item="{ item }">
                 <tr>
                   <td>{{ item.id }}</td>
                   <td>{{ item.ueberschrift }}</td>
                   <td>{{ item.preis }}</td>
-                  <td>{{ item.dauer }} {{einheit}}</td>
+                  <td>{{ item.dauer }}</td>
                   <td>
+                    <Icon class="edit-icon" icon="mdi:pencil-outline" title="Preis bearbeiten" @click="startEdit(item)"/>
                     <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
                   </td>
                 </tr>
@@ -111,6 +122,15 @@ export default {
       dauer: '',
       text: '',
       preiseArray:[],
+      editingPreisId: null,
+      isSavingPreis: false,
+      preisHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'Überschrift', key: 'ueberschrift' },
+        { title: 'Preis', key: 'preis' },
+        { title: 'Dauer', key: 'dauer' },
+        { title: 'Aktionen', key: 'actions', sortable: false },
+      ],
       rules: [v => v.length <= 214 || 'Maximale Zeichenanzahl 215 erreicht'],
     }
   },
@@ -118,8 +138,6 @@ export default {
     bereinigtesPreisArray() {
       return this.preiseArray.map(item => {
         const newObj = Object.assign({...item, icon: 'fluent:delete-16-regular'}, item);
-        delete newObj.bild;
-        delete newObj.text;
         return newObj;
       });
     }
@@ -131,42 +149,82 @@ export default {
         this.preis += '€';
       }
     },
+    reset() {
+      this.bild = null;
+      this.imageURL = null;
+      this.text = '';
+      this.preis = '';
+      this.dauer = '';
+      this.einheit = '';
+      this.ueberschrift = '';
+      this.editingPreisId = null;
+    },
     handleFileChange() {
       if (this.bild ) {
         const file = this.bild;
         this.imageURL = URL.createObjectURL(file);
       }
     },
+    splitDauer(value) {
+      const einheiten = [' Minuten', ' Stunden', ' Tage', ' Wochen', ' Monate'];
+      const dauerText = value || '';
+      const einheit = einheiten.find(x => dauerText.endsWith(x)) || '';
+
+      return {
+        dauer: einheit ? dauerText.slice(0, -einheit.length) : dauerText,
+        einheit
+      };
+    },
+    startEdit(item) {
+      const dauerParts = this.splitDauer(item.dauer);
+      this.editingPreisId = item.id;
+      this.ueberschrift = item.ueberschrift || '';
+      this.preis = item.preis || '';
+      this.dauer = dauerParts.dauer;
+      this.einheit = dauerParts.einheit;
+      this.text = item.text || '';
+      this.bild = null;
+      this.imageURL = item.bild || null;
+      this.tab = 0;
+    },
     async create() {
       try {
         const file = Array.isArray(this.bild) ? this.bild[0] : this.bild;
+        if (!this.editingPreisId && !file) {
+          alert('Bitte wählen Sie ein Bild aus.');
+          return;
+        }
+
+        this.isSavingPreis = true;
+
         const formData = new FormData();
-        formData.append('files', file);
+        if (file) {
+          formData.append('files', file);
+        }
         formData.append('text', this.text);
         formData.append('ueberschrift', this.ueberschrift);
         formData.append('preis', this.preis);
         formData.append('dauer', this.dauer + this.einheit);
 
-        const response = await fetch('https://tier-gesundheitszentrum.com:8080/auth/preis', {
-          method: 'POST',
+        const endpoint = this.editingPreisId
+            ? `https://tier-gesundheitszentrum.com:8080/auth/preis/${this.editingPreisId}`
+            : 'https://tier-gesundheitszentrum.com:8080/auth/preis';
+        const response = await fetch(endpoint, {
+          method: this.editingPreisId ? 'PUT' : 'POST',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           },
           body: formData
         });
 
-        if (!response.ok) throw new Error('Fehler beim Erstellen');
+        if (!response.ok) throw new Error(this.editingPreisId ? 'Fehler beim Aktualisieren' : 'Fehler beim Erstellen');
 
         await this.get();
-
-        this.bild = null;
-        this.imageURL = null;
-        this.text = '';
-        this.preis = '';
-        this.dauer = '';
-        this.ueberschrift = '';
+        this.reset();
       } catch (e) {
         alert('Bitte füllen Sie alle Felder aus.');
+      } finally {
+        this.isSavingPreis = false;
       }
     },
     async deleteMethod(preis) {
@@ -192,9 +250,11 @@ export default {
 
         this.preiseArray = preiseArray.map(item => ({
           ...item,
-          bild: item.bild.startsWith('data:image')
+          bild: item.bild && item.bild.startsWith('data:image')
               ? item.bild
-              : `data:image/jpeg;base64,${item.bild}`
+              : item.bild
+                  ? `data:image/jpeg;base64,${item.bild}`
+                  : null
         }));
       } catch (e) {
         console.error('Fehler beim Laden der Preise:', e);
@@ -218,5 +278,18 @@ export default {
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.edit-icon {
+  color: #4a6741;
+  cursor: pointer;
+  font-size: 28px;
+  margin-right: 12px;
+  transition: color 0.16s ease, transform 0.16s ease;
+}
+
+.edit-icon:hover {
+  color: #1f3527;
+  transform: scale(1.08);
 }
 </style>

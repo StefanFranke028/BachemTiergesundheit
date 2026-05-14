@@ -60,9 +60,19 @@
 
                     <v-col cols="12">
                       <div class="action-bar">
-                        <v-btn color="#2f4f3a" variant="flat" @click="create">speichern</v-btn>
+                        <v-btn
+                            :disabled="isSavingContent"
+                            :loading="isSavingContent"
+                            color="#2f4f3a"
+                            variant="flat"
+                            @click="create"
+                        >
+                          {{ editingContentId ? 'aktualisieren' : 'speichern' }}
+                        </v-btn>
                         <v-btn variant="tonal" color="#2f4f3a" @click="openPreview">Vorschau öffnen</v-btn>
-                        <v-btn variant="text" color="#6b5f55" @click="reset">leeren</v-btn>
+                        <v-btn variant="text" color="#6b5f55" @click="reset">
+                          {{ editingContentId ? 'abbrechen' : 'leeren' }}
+                        </v-btn>
                       </div>
                   </v-col>
                 </v-row>
@@ -79,6 +89,7 @@
             <v-col cols="12" lg="10" xl="9">
               <v-card class="content-card" elevation="0">
                 <v-data-table-virtual
+                    :headers="contentHeaders"
                     :items="bereinigtesContentArray"
                     class="content-table"
                     fixed-header
@@ -97,6 +108,12 @@
                           icon="mdi:open-in-new"
                           title="Seite in neuem Tab öffnen"
                           @click="openContentPage(item)"
+                      />
+                      <Icon
+                          class="edit-icon"
+                          icon="mdi:pencil-outline"
+                          title="Eintrag bearbeiten"
+                          @click="startEdit(item)"
                       />
                       <Icon
                           class="delete-icon"
@@ -131,7 +148,15 @@ export default {
       title: '',
       content: '',
       contentArray: [],
-      showPreview: false
+      editingContentId: null,
+      isSavingContent: false,
+      showPreview: false,
+      contentHeaders: [
+        { title: 'ID', key: 'id' },
+        { title: 'URL', key: 'url' },
+        { title: 'Titel', key: 'title' },
+        { title: 'Aktionen', key: 'actions', sortable: false },
+      ]
     }
   },
   computed: {
@@ -140,6 +165,7 @@ export default {
         id: item.id,
         url: item.url,
         title: item.title,
+        content: item.content,
         icon: 'fluent:delete-16-regular'
       }));
     }
@@ -154,6 +180,7 @@ export default {
       this.url = '';
       this.title = '';
       this.content = '';
+      this.editingContentId = null;
     },
     openPreview() {
       if (process.client) {
@@ -167,6 +194,13 @@ export default {
         window.open(`/content/${item.url}`, '_blank');
       }
     },
+    startEdit(item) {
+      this.editingContentId = item.id;
+      this.url = item.url || '';
+      this.title = item.title || '';
+      this.content = item.content || '';
+      this.tab = 0;
+    },
     async create() {
       if (process.client) {
         // Leerzeichen → "-" und kleinschreiben
@@ -177,41 +211,50 @@ export default {
           return;
         }
 
-        // Vor dem Speichern prüfen, ob URL schon existiert
-        try {
-          const token = localStorage.getItem('token');
-          console.log('[ContentComponent] GET /auth/page (URL-Check)');
-          const list = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
-            headers: {Authorization: `Bearer ${token}`}
-          });
-          console.log('[ContentComponent] GET /auth/page (URL-Check) response:', list);
-          const arr = Array.isArray(list) ? list : (list?.data || []);
-          if (arr.some(e => (e.url || '').toLowerCase() === this.url)) {
-            alert(`Die URL "${this.url}" existiert bereits. Bitte eine andere wählen.`);
-            return;
-          }
-        } catch (e) {
-          console.error('[ContentComponent] GET /auth/page (URL-Check) error:', e);
-          alert('Fehler bei der Prüfung der URL. Bitte erneut versuchen.');
-          return;
-        }
+        this.isSavingContent = true;
 
         try {
-          const token = localStorage.getItem('token');
-          const body = {
-            url: this.url,
-            title: this.title,
-            content: this.content
-          };
-          await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
-            method: 'POST',
-            body,
-            headers: {Authorization: `Bearer ${token}`}
-          });
-          await this.get();
-          this.reset();
-        } catch (e) {
-          alert('Speichern fehlgeschlagen. Bitte überprüfen Sie die Eingaben.');
+          // Vor dem Speichern prüfen, ob URL schon existiert
+          try {
+            const token = localStorage.getItem('token');
+            console.log('[ContentComponent] GET /auth/page (URL-Check)');
+            const list = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
+              headers: {Authorization: `Bearer ${token}`}
+            });
+            console.log('[ContentComponent] GET /auth/page (URL-Check) response:', list);
+            const arr = Array.isArray(list) ? list : (list?.data || []);
+            if (arr.some(e => (e.url || '').toLowerCase() === this.url && e.id !== this.editingContentId)) {
+              alert(`Die URL "${this.url}" existiert bereits. Bitte eine andere wählen.`);
+              return;
+            }
+          } catch (e) {
+            console.error('[ContentComponent] GET /auth/page (URL-Check) error:', e);
+            alert('Fehler bei der Prüfung der URL. Bitte erneut versuchen.');
+            return;
+          }
+
+          try {
+            const token = localStorage.getItem('token');
+            const body = {
+              url: this.url,
+              title: this.title,
+              content: this.content
+            };
+            const endpoint = this.editingContentId
+                ? `https://tier-gesundheitszentrum.com:8080/auth/page/${this.editingContentId}`
+                : 'https://tier-gesundheitszentrum.com:8080/auth/page';
+            await $fetch(endpoint, {
+              method: this.editingContentId ? 'PUT' : 'POST',
+              body,
+              headers: {Authorization: `Bearer ${token}`}
+            });
+            await this.get();
+            this.reset();
+          } catch (e) {
+            alert('Speichern fehlgeschlagen. Bitte überprüfen Sie die Eingaben.');
+          }
+        } finally {
+          this.isSavingContent = false;
         }
       }
     },
@@ -352,6 +395,18 @@ export default {
 }
 
 .open-icon:hover {
+  color: #1f3527;
+  transform: scale(1.08);
+}
+
+.edit-icon {
+  color: #4a6741;
+  cursor: pointer;
+  font-size: 25px;
+  transition: color 0.16s ease, transform 0.16s ease;
+}
+
+.edit-icon:hover {
   color: #1f3527;
   transform: scale(1.08);
 }
