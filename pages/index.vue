@@ -266,6 +266,8 @@ useHead({
   meta: [
     { name: 'description', content: 'Tiergesundheitszentrum Andrea Bachem: Chiropraktik, Osteopathie & Ernährungsberatung – ganzheitliche Therapie für dein Tier.' },
     { name: 'robots', content: 'index, follow' },
+    { name: 'author', content: 'Andrea Bachem' },
+    { name: 'publisher', content: 'Andrea Bachem' },
     { property: 'og:title', content: 'Tiergesundheit Andrea Bachem – Erftstadt' },
     { property: 'og:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
     { property: 'og:description', content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden – Chiropraktik, Osteopathie & Ernährungsberatung.' },
@@ -464,15 +466,17 @@ export default {
 .home-hero-visual {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .home-hero-image-wrap {
   width: 100%;
-  max-width: 460px;
+  max-width: 280px;
   aspect-ratio: 4 / 5;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0 auto;
 }
 .home-hero-image,
 .home-hero-image-wrap :deep(img) {
@@ -702,8 +706,30 @@ export default {
     gap: 36px;
   }
   .home-hero-visual { order: -1; }
-  .home-hero-image-wrap { max-width: 360px; aspect-ratio: 5 / 4; }
+  .home-hero-image-wrap { max-width: 240px; aspect-ratio: 5 / 4; }
   .home-info-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .home-hero-visual { order: 1; }
+  .home-hero-image-wrap {
+    max-width: 280px;
+    aspect-ratio: auto;
+    height: auto;
+    line-height: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+  }
+  .home-hero-image,
+  .home-hero-image-wrap :deep(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: transparent;
+  }
 }
 @media (max-width: 640px) {
   .home-container { padding: 0 18px; }
