@@ -87,13 +87,13 @@
         <v-container class="content-admin" fluid>
           <v-row justify="center">
             <v-col cols="12" lg="10" xl="9">
-              <v-card class="content-card" elevation="0">
+              <v-card class="content-card content-list-card" elevation="0">
                 <v-data-table-virtual
                     :headers="contentHeaders"
                     :items="bereinigtesContentArray"
                     class="content-table"
                     fixed-header
-                    height="550"
+                    height="calc(100vh - 440px)"
                     items-per-page="7"
                 >
               <template v-slot:item="{ item }">
@@ -340,10 +340,8 @@ export default {
 }
 
 .content-create-admin {
-  max-height: calc(100vh - 240px);
-  overflow-y: auto;
-  padding-bottom: 120px;
-  scrollbar-gutter: stable;
+  overflow: visible;
+  padding-bottom: 96px;
 }
 
 .content-card {
@@ -351,6 +349,12 @@ export default {
   border: 1px solid rgba(47, 79, 58, 0.14);
   border-radius: 8px;
   padding: 24px;
+}
+
+.content-list-card {
+  max-height: calc(100vh - 280px);
+  overflow: hidden;
+  padding-bottom: 34px;
 }
 
 .form-grid {
@@ -380,16 +384,7 @@ export default {
   justify-content: flex-end;
   gap: 12px;
   flex-wrap: wrap;
-  padding-top: 4px;
-}
-
-.content-create-admin .action-bar {
-  position: sticky;
-  bottom: 20px;
-  z-index: 2;
-  margin-bottom: 32px;
-  padding: 16px 0 10px;
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0), rgba(255, 253, 249, 0.98) 30%);
+  padding: 8px 0 2px;
 }
 
 .content-table {
@@ -441,8 +436,12 @@ export default {
 
 @media (max-width: 700px) {
   .content-create-admin {
-    max-height: calc(100vh - 200px);
-    padding-bottom: 140px;
+    padding-bottom: 120px;
+  }
+
+  .content-list-card {
+    max-height: calc(100vh - 220px);
+    padding-bottom: 28px;
   }
 
   .content-card {

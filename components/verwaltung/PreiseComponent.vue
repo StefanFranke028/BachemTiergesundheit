@@ -77,26 +77,28 @@
       <v-window-item value="1">
         <v-row class="justify-center mt-3" style="width: 100%">
           <v-col cols="10">
-            <v-data-table-virtual
-                :headers="preisHeaders"
-                :items="bereinigtesPreisArray"
-                fixed-header="true"
-                height="550"
-                items-per-page="7"
-            >
-              <template v-slot:item="{ item }">
-                <tr>
-                  <td>{{ item.id }}</td>
-                  <td>{{ item.ueberschrift }}</td>
-                  <td>{{ item.preis }}</td>
-                  <td>{{ item.dauer }}</td>
-                  <td>
-                    <Icon class="edit-icon" icon="mdi:pencil-outline" title="Preis bearbeiten" @click="startEdit(item)"/>
-                    <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
-                  </td>
-                </tr>
-              </template>
-            </v-data-table-virtual>
+            <v-card class="preis-list-card" elevation="0">
+              <v-data-table-virtual
+                  :headers="preisHeaders"
+                  :items="bereinigtesPreisArray"
+                  fixed-header="true"
+                  height="calc(100vh - 440px)"
+                  items-per-page="7"
+              >
+                <template v-slot:item="{ item }">
+                  <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.ueberschrift }}</td>
+                    <td>{{ item.preis }}</td>
+                    <td>{{ item.dauer }}</td>
+                    <td>
+                      <Icon class="edit-icon" icon="mdi:pencil-outline" title="Preis bearbeiten" @click="startEdit(item)"/>
+                      <Icon :icon="item.icon" color="red" style="font-size: 30px" @click="deleteMethod(item)"/>
+                    </td>
+                  </tr>
+                </template>
+              </v-data-table-virtual>
+            </v-card>
           </v-col>
         </v-row>
       </v-window-item>
@@ -278,6 +280,12 @@ export default {
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.preis-list-card {
+  max-height: calc(100vh - 280px);
+  overflow: hidden;
+  padding: 24px 24px 34px;
 }
 
 .edit-icon {
