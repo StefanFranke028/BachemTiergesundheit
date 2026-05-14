@@ -94,6 +94,7 @@ import ProdukteComponent from "~/components/verwaltung/ProdukteComponent.vue";
 import PreiseComponent from "~/components/verwaltung/PreiseComponent.vue";
 import ContentComponent from "~/components/verwaltung/ContentComponent.vue";
 
+//test
 
 export default {
   name: "verwaltung",
