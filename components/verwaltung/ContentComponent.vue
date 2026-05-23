@@ -195,6 +195,9 @@ export default {
       this.url = newVal.toLowerCase().replace(/\s+/g, '-');
     },
     topic() {
+      if (this.tab !== 1) {
+        return;
+      }
       this.get();
     }
   },
@@ -307,7 +310,7 @@ export default {
         try {
           const token = localStorage.getItem('token');
           console.log('[ContentComponent] GET /auth/page');
-          const response = await $fetch(`https://tier-gesundheitszentrum.com:8080/auth/page?topic=${this.topic}`, {
+          const response = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
             headers: {Authorization: `Bearer ${token}`}
           });
           console.log('[ContentComponent] GET /auth/page response:', response);
