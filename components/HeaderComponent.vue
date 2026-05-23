@@ -40,9 +40,9 @@
             >
               <b>
 
-              <a title="Ernährung ist für ihr Haustier wichtig" style="font-size: 16px" class="link" aria-label="Ernährung" rel="noopener noreferrer" target="_blank"  href="https://gesundesfutterandreabachem.de/">
+              <NuxtLink title="Ernährungsberatung für Tiere" style="font-size: 16px" aria-label="Ernährung" to="/ernaehrungsberatung">
                 Ernährung
-              </a>
+              </NuxtLink>
               </b>
             </p>
           </v-col>

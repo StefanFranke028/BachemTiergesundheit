@@ -10,7 +10,7 @@
       <div class="intro-container">
         <span class="intro-eyebrow">Tiergesundheitszentrum Andrea Bachem</span>
         <h1 class="intro-title">
-          Ganzheitliche Tiergesundheit mit Herz und Verstand
+          Ernährungsberatung für Tiere
         </h1>
         <p class="intro-lead">
           Im Tiergesundheitszentrum Andrea Bachem in Erftstadt bieten wir ein breites Spektrum an
@@ -93,7 +93,7 @@
       <div class="intro-container">
         <span class="intro-eyebrow">Tiergesundheitszentrum Andrea Bachem</span>
         <h1 class="intro-title">
-          Ganzheitlich, achtsam, individuell
+          Ernährungsberatung für Tiere
         </h1>
         <p class="intro-lead">
           Osteopathie, Chiropraktik, Fütterungsberatung – ganzheitliche Methoden für Hund, Katze und Pferd
@@ -148,9 +148,9 @@
 </template>
 
 <script setup>
-const { data: pages } = await useAsyncData('page-meta-tiergesundheit', async () => {
+const { data: pages } = await useAsyncData('page-meta-ernaehrung', async () => {
   try {
-    const res = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page/meta/all?topic=TIERGESUNDHEIT');
+    const res = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page/meta/all?topic=ERNAEHRUNG');
     return Array.isArray(res) ? res : (res?.data || []);
   } catch (e) {
     console.error('[service] GET /auth/page/meta/all error:', e?.message || e);
@@ -158,12 +158,12 @@ const { data: pages } = await useAsyncData('page-meta-tiergesundheit', async () 
   }
 });
 
-const contentUrl = (page) => `/content/${page.url}`;
+const contentUrl = (page) => `/content/${page.url}?topic=ERNAEHRUNG`;
 const absoluteContentUrl = (page) => `https://tier-gesundheitszentrum.com${contentUrl(page)}`;
 
 useHead(() => ({
   htmlAttrs: { lang: 'de' },
-  title: 'Leistungen – Tiergesundheit mit Herz Andrea Bachem',
+  title: 'Ernährungsberatung – Andrea Bachem',
   meta: [
     {
       name: 'description',
@@ -181,7 +181,7 @@ useHead(() => ({
       property: 'og:description',
       content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden: Jetzt mehr über unsere Leistungen für Hund, Katze & Pferd erfahren.'
     },
-    { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/service' },
+    { property: 'og:url', content: 'https://tier-gesundheitszentrum.com/ernaehrungsberatung' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Service | Tiergesundheitszentrum Andrea Bachem – Erftstadt' },
@@ -191,7 +191,7 @@ useHead(() => ({
   link: [
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'canonical', href: 'https://tier-gesundheitszentrum.com/service' }
+    { rel: 'canonical', href: 'https://tier-gesundheitszentrum.com/ernaehrungsberatung' }
   ],
   script: [
     {
@@ -199,7 +199,7 @@ useHead(() => ({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Unsere Leistungen – Tiergesundheitszentrum Andrea Bachem",
+        "name": "Ernährungsberatung – Andrea Bachem",
         "itemListElement": (pages.value || []).map((page, index) => ({
           "@type": "Service",
           "position": index + 1,
@@ -221,7 +221,7 @@ useHead(() => ({
 import { useScreenStore } from "~/stores/screen.js";
 
 export default {
-  name: "service",
+  name: "ernaehrungsberatung",
   data() {
     return { loading: false };
   },

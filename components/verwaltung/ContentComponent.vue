@@ -17,6 +17,14 @@
             <v-col cols="12" lg="10" xl="9">
               <v-card class="content-card" elevation="0">
                 <v-card-text class="pa-0">
+                  <div class="topic-switch">
+                    <v-switch
+                        v-model="isErnaehrungTopic"
+                        :label="isErnaehrungTopic ? 'Ernährung' : 'Tiergesundheit'"
+                        color="#2f4f3a"
+                        hide-details
+                    />
+                  </div>
                   <v-row class="form-grid" dense>
                     <v-col cols="12" md="5">
                     <v-text-field
@@ -101,6 +109,7 @@
                   <td>{{ item.id }}</td>
                   <td>{{ item.url }}</td>
                   <td>{{ item.title }}</td>
+                  <td>{{ topicLabel(item.topic) }}</td>
                   <td>
                     <div class="row-actions">
                       <Icon
@@ -147,6 +156,7 @@ export default {
       url: '',
       title: '',
       content: '',
+      topic: 'TIERGESUNDHEIT',
       contentArray: [],
       editingContentId: null,
       isSavingContent: false,
@@ -155,17 +165,27 @@ export default {
         { title: 'ID', key: 'id' },
         { title: 'URL', key: 'url' },
         { title: 'Titel', key: 'title' },
+        { title: 'Thema', key: 'topic' },
         { title: 'Aktionen', key: 'actions', sortable: false },
       ]
     }
   },
   computed: {
+    isErnaehrungTopic: {
+      get() {
+        return this.topic === 'ERNAEHRUNG';
+      },
+      set(value) {
+        this.topic = value ? 'ERNAEHRUNG' : 'TIERGESUNDHEIT';
+      }
+    },
     bereinigtesContentArray() {
       return this.contentArray.map(item => ({
         id: item.id,
         url: item.url,
         title: item.title,
         content: item.content,
+        topic: item.topic || 'TIERGESUNDHEIT',
         icon: 'fluent:delete-16-regular'
       }));
     }
@@ -173,6 +193,9 @@ export default {
   watch: {
     url(newVal) {
       this.url = newVal.toLowerCase().replace(/\s+/g, '-');
+    },
+    topic() {
+      this.get();
     }
   },
   methods: {
@@ -191,7 +214,9 @@ export default {
     },
     openContentPage(item) {
       if (process.client && item?.url) {
-        window.open(`/content/${item.url}`, '_blank');
+        const topic = item.topic || this.topic || 'TIERGESUNDHEIT';
+        const query = topic === 'ERNAEHRUNG' ? '?topic=ERNAEHRUNG' : '';
+        window.open(`/content/${item.url}${query}`, '_blank');
       }
     },
     startEdit(item) {
@@ -199,7 +224,11 @@ export default {
       this.url = item.url || '';
       this.title = item.title || '';
       this.content = item.content || '';
+      this.topic = item.topic || 'TIERGESUNDHEIT';
       this.tab = 0;
+    },
+    topicLabel(topic) {
+      return topic === 'ERNAEHRUNG' ? 'Ernährung' : 'Tiergesundheit';
     },
     async create() {
       if (process.client) {
@@ -218,13 +247,13 @@ export default {
           try {
             const token = localStorage.getItem('token');
             console.log('[ContentComponent] GET /auth/page (URL-Check)');
-            const list = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
+            const list = await $fetch(`https://tier-gesundheitszentrum.com:8080/auth/page?topic=${this.topic}`, {
               headers: {Authorization: `Bearer ${token}`}
             });
             console.log('[ContentComponent] GET /auth/page (URL-Check) response:', list);
             const arr = Array.isArray(list) ? list : (list?.data || []);
-            if (arr.some(e => (e.url || '').toLowerCase() === this.url && e.id !== this.editingContentId)) {
-              alert(`Die URL "${this.url}" existiert bereits. Bitte eine andere wählen.`);
+            if (arr.some(e => (e.url || '').toLowerCase() === this.url && (e.topic || 'TIERGESUNDHEIT') === this.topic && e.id !== this.editingContentId)) {
+              alert(`Die URL "${this.url}" existiert für dieses Thema bereits. Bitte eine andere wählen.`);
               return;
             }
           } catch (e) {
@@ -238,7 +267,8 @@ export default {
             const body = {
               url: this.url,
               title: this.title,
-              content: this.content
+              content: this.content,
+              topic: this.topic
             };
             const endpoint = this.editingContentId
                 ? `https://tier-gesundheitszentrum.com:8080/auth/page/${this.editingContentId}`
@@ -277,7 +307,7 @@ export default {
         try {
           const token = localStorage.getItem('token');
           console.log('[ContentComponent] GET /auth/page');
-          const response = await $fetch('https://tier-gesundheitszentrum.com:8080/auth/page', {
+          const response = await $fetch(`https://tier-gesundheitszentrum.com:8080/auth/page?topic=${this.topic}`, {
             headers: {Authorization: `Bearer ${token}`}
           });
           console.log('[ContentComponent] GET /auth/page response:', response);
@@ -359,6 +389,12 @@ export default {
 
 .form-grid {
   row-gap: 14px;
+}
+
+.topic-switch {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 18px;
 }
 
 .editor-shell {

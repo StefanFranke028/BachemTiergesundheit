@@ -18,16 +18,19 @@ import { computed, onMounted } from 'vue';
 
 const route = useRoute();
 const slug = String(route.params.slug || '');
+const topic = String(route.query.topic || 'TIERGESUNDHEIT');
 
-const { data: entry } = await useAsyncData(`content-${slug}`, async () => {
+const { data: entry } = await useAsyncData(`content-${topic}-${slug}`, async () => {
   const sideTag = process.server ? '[SSR]' : '[CSR]';
   try {
-    console.log(`${sideTag} [content/${slug}] GET /auth/page/${slug}`);
-    const res = await $fetch(`https://tier-gesundheitszentrum.com:8080/auth/page/${slug}`);
-    console.log(`${sideTag} [content/${slug}] GET /auth/page/${slug} response:`, res);
+    console.log(`${sideTag} [content/${slug}] GET /auth/page/${slug}?topic=${topic}`);
+    const res = await $fetch(`https://tier-gesundheitszentrum.com:8080/auth/page/${slug}`, {
+      query: { topic }
+    });
+    console.log(`${sideTag} [content/${slug}] GET /auth/page/${slug}?topic=${topic} response:`, res);
     return res || null;
   } catch (e) {
-    console.error(`${sideTag} [content/${slug}] GET /auth/page/${slug} error:`, e?.message || e);
+    console.error(`${sideTag} [content/${slug}] GET /auth/page/${slug}?topic=${topic} error:`, e?.message || e);
     return null;
   }
 });
@@ -47,6 +50,31 @@ function parseAttrs(raw) {
     attrs[a[1].toLowerCase()] = a[3] ?? a[4] ?? a[5] ?? '';
   }
   return attrs;
+}
+
+function normalizeEmbeddedUrls(html) {
+  return html.replace(/\s(src|href)\s*=\s*("([^"]*)"|'([^']*)')/gi, (match, attr, quoted, doubleValue, singleValue) => {
+    const value = doubleValue ?? singleValue ?? '';
+    const trimmed = value.trim();
+    const lower = trimmed.toLowerCase();
+
+    if (
+        !trimmed ||
+        trimmed.startsWith('/') ||
+        trimmed.startsWith('#') ||
+        lower.startsWith('http://') ||
+        lower.startsWith('https://') ||
+        lower.startsWith('data:') ||
+        lower.startsWith('mailto:') ||
+        lower.startsWith('tel:') ||
+        lower.startsWith('javascript:')
+    ) {
+      return match;
+    }
+
+    const quote = quoted.startsWith('"') ? '"' : "'";
+    return ` ${attr}=${quote}/${trimmed}${quote}`;
+  });
 }
 
 function extractFromHtml(html) {
@@ -98,12 +126,13 @@ function extractFromHtml(html) {
       .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
       .replace(/<meta\b[^>]*>/gi, '')
       .replace(/<link\b[^>]*>/gi, '')
+      .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
       .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
       .replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/gi, '')
       .replace(/<\/?(html|body)\b[^>]*>/gi, '');
 
   // Style-Tags aus dem ursprünglichen HTML voranstellen, damit das CSS der Seite greift.
-  body = styleBlocks.join('\n') + '\n' + body;
+  body = styleBlocks.join('\n') + '\n' + normalizeEmbeddedUrls(body);
 
   return { title, metas, links, body };
 }
@@ -111,7 +140,9 @@ function extractFromHtml(html) {
 const parsed = computed(() => extractFromHtml(entry.value?.content));
 const bodyHtml = computed(() => parsed.value.body);
 
-const canonicalUrl = `https://tier-gesundheitszentrum.com/content/${slug}`;
+const canonicalUrl = topic === 'ERNAEHRUNG'
+    ? `https://tier-gesundheitszentrum.com/content/${slug}?topic=ERNAEHRUNG`
+    : `https://tier-gesundheitszentrum.com/content/${slug}`;
 
 useHead(() => {
   const effectiveTitle =

@@ -35,6 +35,7 @@
             <li><NuxtLink to="/chiropraktik" title="Tierchiropraktik">Chiropraktik</NuxtLink></li>
             <li><NuxtLink to="/osteopathie" title="Tierosteopathie">Osteopathie</NuxtLink></li>
             <li><NuxtLink to="/service" title="Service & Seminare">Seminare</NuxtLink></li>
+            <li><NuxtLink to="/ernaehrungsberatung" title="Ernährungsberatung">Ernährungsberatung</NuxtLink></li>
             <li><NuxtLink to="/produkte" title="Tierprodukte">Produkte</NuxtLink></li>
             <li><NuxtLink to="/preise" title="Preise & Leistungen">Preise</NuxtLink></li>
           </ul>
