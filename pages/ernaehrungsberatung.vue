@@ -1,5 +1,5 @@
 <template>
-  <div v-if="desktop || tabletHorizontal" class="background" style="overflow-y: scroll">
+  <div v-if="desktop || tabletHorizontal" class="background ernaehrung-page" style="overflow-y: scroll">
     <v-row class="ma-0 mb-7 bg pb-7 pa-0" style="width: 100%">
       <v-col cols="12">
         <HeaderComponent></HeaderComponent>
@@ -87,7 +87,7 @@
     <FooterComponent/>
   </div>
 
-  <div v-if="mobile || tablet" class="background" style="padding-top: 20px;overflow-y: scroll">
+  <div v-if="mobile || tablet" class="background ernaehrung-page ernaehrung-page--mobile" style="padding-top: 20px; overflow-y: scroll; overflow-x: hidden;">
     <HeadermobileComponent v-if="mobile || tablet"></HeadermobileComponent>
     <section class="intro-section intro-section--mobile">
       <div class="intro-container">
@@ -104,10 +104,11 @@
 
     <v-row class="d-flex ma-0 justify-center" style="width: 100%;">
       <v-col v-for="page in pages" :key="page.url" cols="11" class="d-flex justify-center">
-        <article itemscope itemtype="https://schema.org/Service">
+        <article class="mobile-content-preview" itemscope itemtype="https://schema.org/Service">
           <v-card
-              class="mx-auto my-8 pa-3"
-              width="320"
+              class="mx-auto my-8 pa-3 mobile-content-card"
+              max-width="320"
+              width="100%"
               style="background-color: transparent; box-shadow: none;"
           >
             <div class="phone-frame">
@@ -248,6 +249,10 @@ a {
 p {
   color: rgba(0, 0, 0, 0.86);
 }
+.ernaehrung-page {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 /* INTRO-SECTION */
 .intro-section {
   padding: 80px 24px 40px;
@@ -255,6 +260,9 @@ p {
 }
 .intro-section--mobile {
   padding: 40px 16px 20px;
+}
+.intro-section--mobile .intro-container {
+  max-width: 100%;
 }
 .intro-container {
   max-width: 1100px;
@@ -311,6 +319,17 @@ p {
   font-size: 0.95rem;
   margin-bottom: 16px;
 }
+.intro-section--mobile .intro-eyebrow {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  padding: 8px 12px;
+}
+.intro-section--mobile .intro-title {
+  overflow-wrap: anywhere;
+}
 .intro-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -356,6 +375,19 @@ p {
 a:focus {
   outline: 2px solid blue;
 }
+.ernaehrung-page--mobile :deep(.v-row),
+.ernaehrung-page--mobile :deep(.v-col) {
+  max-width: 100%;
+}
+.mobile-content-preview {
+  width: 100%;
+  max-width: calc(100vw - 32px);
+  overflow: hidden;
+}
+.mobile-content-card {
+  max-width: min(320px, calc(100vw - 32px)) !important;
+  overflow: hidden;
+}
 
 /* Smartphone-Frame um das iframe */
 .phone-frame {
@@ -368,6 +400,9 @@ a:focus {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
+}
+.ernaehrung-page--mobile .phone-frame {
+  max-width: calc(100vw - 64px);
 }
 .phone-frame::before {
   content: "";
