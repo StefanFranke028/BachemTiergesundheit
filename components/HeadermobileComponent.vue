@@ -23,21 +23,6 @@
           </v-col>
         </v-row>
       </v-list-item>
-      <v-list-item
-          class="mt-2"
-          tag="a"
-          href="https://gesundesfutterandreabachem.de/"
-          role="option"
-          :aria-label="'Ernährung'"
-          nav
-          link
-      >
-        <v-row style="width: 100%;" class="mx-0">
-          <v-col>
-            Ernährung
-          </v-col>
-        </v-row>
-      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 
@@ -87,6 +72,7 @@ export default {
         { title: 'Berichte', icon: 'icon-park-solid:women', route: 'berichte' ,beschreibung:'Berichte aus unserer Praxis'},
         { title: 'Produkte', icon: 'streamline:contact-phonebook-2-solid', route: 'produkte' ,beschreibung:'Verschiedene Produkte empfehlung'},
         { title: 'Seminare', icon: 'foundation:pricetag-multiple', route: 'service' ,beschreibung:'unsre Service und Seminare'},
+        { title: 'Ernährung', icon: 'mdi-food-apple', route: 'ernaehrungsberatung' ,beschreibung:'Ernährungsberatung für Tiere'},
         { title: 'Preise', icon: 'mdi-book', route: 'preise', beschreibung:'Meine Preise auf einen Blick'},
         { title: 'Werbepartner', icon: 'fluent:people-team-16-filled', route: 'werbepartner' ,beschreibung:'Infos für interessierte Werbepartner'}
       ],
