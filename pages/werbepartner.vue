@@ -165,6 +165,7 @@ useHead({
 
 <script>
 import { useScreenStore } from "~/stores/screen.js";
+import struppilogImage from "~/assets/webepartnerStruppilog.png";
 
 export default {
   name: "werbepartner",
@@ -190,6 +191,13 @@ export default {
           url: 'https://www.rehatechnik-tiere.de/index.html',
           description: 'Rehatechnik für Tiere, Hunderollstühle, Tierprothesen, Orthesen, Bandagen',
           image: 'https://www.rehatechnik-tiere.de/images/logo.png',
+          rel: 'noopener',
+        },
+        {
+          name: 'Struppilog',
+          url: 'https://www.struppilog.com/',
+          description: 'Alle Gesundheitsdaten deiner Lieblinge',
+          image: struppilogImage,
           rel: 'noopener',
         }
       ]
