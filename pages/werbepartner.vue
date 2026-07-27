@@ -173,13 +173,6 @@ export default {
     return {
       werbepartner: [
         {
-          name: 'Tierfutter Andera Bachem',
-          url: 'https://gesundesfutterandreabachem.de/',
-          description: 'Gesundes Futter | Andrea Bachem',
-          image: 'https://gesundesfutterandreabachem.de/.cm4all/mediadb/.Andrea%20Bachem%20%288%29.png/picture-200',
-          rel: 'noopener',
-        },
-        {
           name: 'Tierseminare Andrea Bachem',
           url: 'https://tierseminare.com/',
           description: 'Seminare zur Tiergesundheit | Andrea Bachem',
@@ -198,6 +191,13 @@ export default {
           url: 'https://www.struppilog.com/',
           description: 'Alle Gesundheitsdaten deiner Lieblinge',
           image: struppilogImage,
+          rel: 'noopener',
+        },
+        {
+          name: 'Schnurrrstracks',
+          url: 'https://schnurrrstracks.de/',
+          description: 'Katzenverhaltensberatung – Online-Beratung bei Unsauberkeit & Verhaltensproblemen',
+          image: 'https://schnurrrstracks.de/wp-content/uploads/2026/04/new-logo-transparent-300x300.png',
           rel: 'noopener',
         }
       ]

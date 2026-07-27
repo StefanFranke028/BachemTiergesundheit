@@ -12,7 +12,7 @@
             <p  class="link text-white text-center">
               <b>
 
-              <NuxtLink title="Chiropraktik für Tiere ist eine ganzheitliche Therapieform." style="font-size: 16px" aria-label="Chiropraktik" to="/chiropraktik">Chiropraktik</NuxtLink>
+              <NuxtLink title="Chiropraktik für Tiere ist eine ganzheitliche Therapieform." style="font-size: 19px" aria-label="Chiropraktik" to="/chiropraktik">Chiropraktik</NuxtLink>
               </b>
             </p>
           </v-col>
@@ -21,7 +21,7 @@
                  class="link text-white text-center">
               <b>
 
-              <NuxtLink title="Osteopathie für Tiere eine ganzheitliche Behandlungsmethode" style="font-size: 16px" aria-label="Osteopathie" to="/osteopathie">Osteopathie</NuxtLink>
+              <NuxtLink title="Osteopathie für Tiere eine ganzheitliche Behandlungsmethode" style="font-size: 19px" aria-label="Osteopathie" to="/osteopathie">Osteopathie</NuxtLink>
               </b>
             </p>
           </v-col>
@@ -30,7 +30,7 @@
                  class="link text-white text-center" >
               <b>
 
-              <NuxtLink title="Infos für interessierte Werbepartner" style="font-size: 16px" aria-label="Werbepartner" to="/werbepartner">Werbepartner</NuxtLink>
+              <NuxtLink title="Infos für interessierte Werbepartner" style="font-size: 19px" aria-label="Werbepartner" to="/werbepartner">Werbepartner</NuxtLink>
 
               </b>
             </p>
@@ -40,7 +40,7 @@
             >
               <b>
 
-              <NuxtLink title="Ernährungsberatung für Tiere" style="font-size: 16px" aria-label="Ernährung" to="/ernaehrungsberatung">
+              <NuxtLink title="Ernährungsberatung für Tiere" style="font-size: 19px" aria-label="Ernährung" to="/ernaehrungsberatung">
                 Ernährung
               </NuxtLink>
               </b>
@@ -51,7 +51,7 @@
             <p  class="link text-white text-center">
               <b>
 
-              <NuxtLink title="Berichte aus unserer Praxis" style="font-size: 16px" aria-label="Berichte" to="/berichte">Berichte</NuxtLink>
+              <NuxtLink title="Berichte aus unserer Praxis" style="font-size: 19px" aria-label="Berichte" to="/berichte">Berichte</NuxtLink>
               </b>
             </p>
 
@@ -60,7 +60,7 @@
             <p  class="link text-white text-center">
 <b>
 
-              <NuxtLink title="Verschiedene Produkte empfehlung" style="font-size: 16px" aria-label="Produkte" to="/produkte">Produkte</NuxtLink>
+              <NuxtLink title="Verschiedene Produkte empfehlung" style="font-size: 19px" aria-label="Produkte" to="/produkte">Produkte</NuxtLink>
 </b>
 
             </p>
@@ -69,7 +69,7 @@
           <v-col class="d-flex align-center" cols="3">
             <p  class="link text-white text-center">
               <b>
-              <NuxtLink title="unsre Service und Seminare" style="font-size: 16px" aria-label="Service" to="/service">Seminare</NuxtLink>
+              <NuxtLink title="unsre Service und Seminare" style="font-size: 19px" aria-label="Service" to="/service">Seminare</NuxtLink>
 
               </b>
 
@@ -79,7 +79,7 @@
           <v-col class="d-flex align-center" cols="3">
             <p   class="link text-white text-center">
               <b>
-              <NuxtLink title="Meine Preise auf einen Blick" style="font-size: 16px" aria-label="Preise" to="/preise">Preise</NuxtLink>
+              <NuxtLink title="Meine Preise auf einen Blick" style="font-size: 19px" aria-label="Preise" to="/preise">Preise</NuxtLink>
 
               </b>
 
