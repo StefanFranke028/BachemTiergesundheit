@@ -73,6 +73,75 @@
       </div>
     </section>
 
+    <!-- INTRO-VIDEO -->
+    <section class="home-video">
+      <div class="home-container home-video-grid">
+        <div class="home-video-visual">
+          <div class="phone-glow" aria-hidden="true"></div>
+          <div class="phone">
+            <span class="phone-btn phone-btn--silent" aria-hidden="true"></span>
+            <span class="phone-btn phone-btn--vol-up" aria-hidden="true"></span>
+            <span class="phone-btn phone-btn--vol-down" aria-hidden="true"></span>
+            <span class="phone-btn phone-btn--power" aria-hidden="true"></span>
+            <div class="phone-screen">
+              <video
+                  ref="introVideo"
+                  class="phone-video"
+                  src="/startvideo.mp4"
+                  poster="/startvideo-poster.jpg"
+                  preload="none"
+                  playsinline
+                  :controls="videoStarted"
+                  @play="videoStarted = true"
+                  @ended="videoStarted = false"
+              ></video>
+              <span class="phone-island" aria-hidden="true"></span>
+              <button
+                  v-show="!videoStarted"
+                  class="phone-play"
+                  type="button"
+                  title="Einleitungsvideo abspielen"
+                  aria-label="Einleitungsvideo von Andrea Bachem abspielen"
+                  @click="playIntro">
+                <span class="phone-play-icon">
+                  <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+                    <path d="M8 5.5v13a1 1 0 0 0 1.53.85l10-6.5a1 1 0 0 0 0-1.7l-10-6.5A1 1 0 0 0 8 5.5z"
+                          fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="phone-play-label">Video ansehen</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-video-text">
+          <span class="home-eyebrow">Persönliches Video</span>
+          <h2 class="home-video-title">
+            Lerne mich kennen
+            <span class="home-video-title-accent">Bevor du dein Tier in fremde Hände gibst</span>
+          </h2>
+          <p class="home-lead">
+            Du möchtest wissen, wer sich um dein Tier kümmert – das ist völlig verständlich.
+            In diesem kurzen Video stelle ich mich dir persönlich vor.
+          </p>
+          <ul class="home-video-list">
+            <li>Wer ich bin und wie ich zur Tiertherapie gekommen bin</li>
+            <li>Wie eine Behandlung bei mir abläuft</li>
+            <li>Was dein Tier und du davon habt</li>
+          </ul>
+          <p class="home-video-meta">
+            <span>2:27 Minuten</span>
+            <span class="home-video-meta-dot" aria-hidden="true">·</span>
+            <span>am besten mit Ton</span>
+          </p>
+          <div class="home-cta-row">
+            <button class="home-cta-ghost" @click="dialog = true">Termin vereinbaren</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTENT -->
     <section class="home-content">
       <div class="home-container">
@@ -173,46 +242,8 @@
               </v-col>
             </v-row>
           </v-col>
-          <v-col cols="12" md="6" class="align-center d-flex pr-md-16">
-            <v-row class="mt-10">
-              <v-col cols="8" v-if="!mobile && !tablet">
-                <div class="logo"/>
-              </v-col>
-
-              <v-col class="pt-md-15" cols="12">
-                <h2 class="pt-md-10">Ihre Anliegen sind uns wichtig!</h2>
-                <br>
-                <p style="font-size: 16px">
-                  Zögern Sie nicht, unser Kontaktformular zu nutzen, um mit unserem
-                  Tiergesundheitszentrum in Verbindung zu treten und die bestmögliche
-                  Betreuung für Ihr Haustier zu erhalten.
-                </p>
-              </v-col>
-              <v-col cols="12">
-                <form class="layout_form cr_form cr_font"
-                      action="https://seu2.cleverreach.com/f/430331-415442/wcs/"
-                      method="post" target="_blank">
-                  <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
-                    <div class="editable_content" style="text-align:left;background-color: transparent !important;">
-                      <div id="9467951" rel="email"
-                           class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave"
-                           style="margin-bottom:0;">
-                        <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                          <label for="text9467951">Newsletter abonnieren</label>
-                          <input class="cr_form-input" type="email" id="text9467951" name="email" value=""
-                                 placeholder="name@example.com" style="width:100%;">
-                        </div>
-                      </div>
-                      <div id="9467953" rel="button"
-                           class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable submit_container">
-                        <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
-                      </div>
-                    </div>
-                    <noscript><a href="http://www.cleverreach.de" title="CleverReach">www.CleverReach.de</a></noscript>
-                  </div>
-                </form>
-              </v-col>
-            </v-row>
+          <v-col cols="12" md="6" class="align-center d-flex">
+            <NewsletterEmbedComponent/>
           </v-col>
           <v-col cols="12">
             <v-row class="mt-md-10 mt-3">
@@ -279,6 +310,22 @@ useHead({
     { name: 'twitter:description', content: 'Ganzheitliche Tiergesundheit durch fundierte Methoden – Chiropraktik, Osteopathie & Ernährungsberatung.' },
     { name: 'twitter:image', content: 'https://tier-gesundheitszentrum.com/favicon.png' },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Andrea Bachem stellt sich vor – Tiergesundheitszentrum Erftstadt",
+        "description": "Andrea Bachem stellt sich persönlich vor: wer sie ist, wie sie arbeitet und was dich bei einem Termin im Tiergesundheitszentrum in Erftstadt erwartet.",
+        "thumbnailUrl": "https://tier-gesundheitszentrum.com/startvideo-poster.jpg",
+        "contentUrl": "https://tier-gesundheitszentrum.com/startvideo.mp4",
+        "duration": "PT2M27S",
+        "uploadDate": "2026-08-04",
+        "publisher": { "@type": "Organization", "name": "Tiergesundheitszentrum Andrea Bachem" }
+      })
+    }
+  ],
 });
 </script>
 
@@ -293,6 +340,7 @@ export default {
     return {
       dialog: false,
       loading: false,
+      videoStarted: false,
       name: '',
       email: '',
       telefonnummer: '',
@@ -307,6 +355,19 @@ export default {
     tabletHorizontal() { return useScreenStore().tabletHorizontal; },
   },
   methods: {
+    playIntro() {
+      const video = this.$refs.introVideo;
+      if (!video) return;
+      video.muted = false;
+      const played = video.play();
+      // Falls der Browser Ton ohne Nutzergeste blockiert: stumm starten.
+      if (played && played.catch) {
+        played.catch(() => {
+          video.muted = true;
+          video.play();
+        });
+      }
+    },
     async create() {
       if (!this.name || !this.email || !this.text) {
         alert("Bitte füllen Sie Name, Email und Nachricht aus.");
@@ -541,6 +602,235 @@ export default {
   font-weight: 500;
 }
 
+/* INTRO-VIDEO / HANDY-MOCKUP */
+.home-video {
+  padding: 20px 0 60px;
+}
+.home-video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 64px;
+  align-items: center;
+}
+.home-video-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.phone-glow {
+  position: absolute;
+  inset: 6% -10% 2%;
+  background: radial-gradient(ellipse at center, rgba(0, 130, 194, 0.42) 0%, rgba(0, 130, 194, 0) 68%);
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+/* Gehäuse: Metallrahmen */
+.phone {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 9 / 17;
+  padding: 11px;
+  border-radius: 46px;
+  background: linear-gradient(148deg,
+  #e2e6ea 0%, #9aa0a7 16%, #4d5257 38%,
+  #2c3034 58%, #6d7379 78%, #cfd4d9 100%);
+  box-shadow:
+      0 34px 70px rgba(0, 0, 0, 0.62),
+      0 8px 20px rgba(0, 0, 0, 0.45),
+      inset 0 1px 1px rgba(255, 255, 255, 0.5),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+}
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 36px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: inset 0 0 0 2px #0b0d0f, 0 0 0 1px rgba(0, 0, 0, 0.85);
+}
+.phone-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dynamic Island */
+.phone-island {
+  position: absolute;
+  top: 2.2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 31%;
+  height: 3.4%;
+  min-height: 16px;
+  border-radius: 999px;
+  background: #000;
+  box-shadow: inset -7px 0 0 -4px #14171a;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Seitentasten */
+.phone-btn {
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #5f656b 0%, #c3c9cf 45%, #4e5358 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.phone-btn--silent {
+  left: -2px;
+  top: 13%;
+  height: 4.5%;
+}
+.phone-btn--vol-up {
+  left: -2px;
+  top: 21%;
+  height: 8%;
+}
+.phone-btn--vol-down {
+  left: -2px;
+  top: 31%;
+  height: 8%;
+}
+.phone-btn--power {
+  right: -2px;
+  top: 25%;
+  height: 12%;
+}
+
+/* Play-Overlay */
+.phone-play {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: linear-gradient(180deg,
+  rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.08) 40%, rgba(0, 0, 0, 0.55) 100%);
+  transition: background 0.2s;
+}
+.phone-play:hover {
+  background: linear-gradient(180deg,
+  rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.6) 100%);
+}
+.phone-play:focus-visible {
+  outline: 3px solid rgb(0, 130, 194);
+  outline-offset: -6px;
+}
+.phone-play-icon {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: rgb(0, 130, 194);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s, background 0.18s;
+}
+.phone-play-icon::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  animation: phone-pulse 2.4s ease-out infinite;
+}
+.phone-play:hover .phone-play-icon {
+  transform: scale(1.07);
+  background: #fff;
+}
+.phone-play-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+@keyframes phone-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .phone-play-icon::before { animation: none; }
+  .phone-play:hover .phone-play-icon { transform: none; }
+}
+
+/* Textspalte */
+.home-video-text { color: #fff; }
+.home-video-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 18px;
+}
+.home-video-title-accent {
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.5em;
+  color: rgb(0, 130, 194);
+  margin-top: 10px;
+  line-height: 1.35;
+}
+.home-video-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+}
+.home-video-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+}
+.home-video-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgb(0, 130, 194);
+  box-shadow: 0 0 0 4px rgba(0, 130, 194, 0.22);
+}
+.home-video-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 24px;
+}
+.home-video-meta-dot { color: rgb(0, 130, 194); }
+
 /* CONTENT */
 .home-content {
   padding: 30px 0 60px;
@@ -705,6 +995,8 @@ export default {
   .home-hero-visual { order: -1; }
   .home-hero-image-wrap { max-width: 240px; aspect-ratio: 5 / 4; }
   .home-info-grid { grid-template-columns: 1fr; }
+  .home-video-grid { grid-template-columns: 1fr; gap: 36px; }
+  .home-video-text { order: -1; }
 }
 @media (max-width: 640px) {
   .home-hero-visual { order: 1; }
@@ -743,6 +1035,11 @@ export default {
   }
   .home-cta-title { font-size: 1.35rem; }
   .home-cta-text { font-size: 0.95rem; }
+  .home-video { padding: 10px 0 40px; }
+  .phone { max-width: 250px; padding: 9px; border-radius: 40px; }
+  .phone-screen { border-radius: 31px; }
+  .phone-play-icon { width: 58px; height: 58px; }
+  .home-video-list { font-size: 0.95rem; }
 }
 
 a { text-decoration: none; color: inherit; }

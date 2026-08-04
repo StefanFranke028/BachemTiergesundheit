@@ -208,43 +208,8 @@
               </v-col>
             </v-row>
           </v-col>
-          <v-col cols="12" md="6" class="align-center d-flex pr-md-16">
-            <v-row class="mt-10">
-              <v-col cols="8" v-if="!mobile && !tablet">
-                <div class="logo"/>
-              </v-col>
-              <v-col class="pt-md-15" cols="12">
-                <h2 class="pt-md-10">Ihre Anliegen sind uns wichtig!</h2>
-                <br>
-                <p style="font-size: 16px">
-                  Zögern Sie nicht, unser Kontaktformular zu nutzen, um mit unserem Tiergesundheitszentrum
-                  in Verbindung zu treten und die bestmögliche Betreuung für Ihr Haustier zu erhalten.
-                </p>
-              </v-col>
-              <v-col cols="12">
-                <form class="layout_form cr_form cr_font"
-                      action="https://seu2.cleverreach.com/f/430331-415442/wcs/"
-                      method="post" target="_blank">
-                  <div class="cr_body cr_page cr_font formbox" style="background-color: transparent !important;">
-                    <div class="editable_content" style="text-align:left;background-color: transparent !important;">
-                      <div :id="`cr-email-${city}`" rel="email"
-                           class="cr_form-component cr_form-component--email cr_ipe_item ui-sortable musthave"
-                           style="margin-bottom:0;">
-                        <div class="cr_form-inputgroup cr_form-inputgroup--typeemail">
-                          <label :for="`cr-input-${city}`">Newsletter abonnieren</label>
-                          <input class="cr_form-input" type="email" :id="`cr-input-${city}`" name="email"
-                                 value="" placeholder="name@example.com" style="width:100%;">
-                        </div>
-                      </div>
-                      <div rel="button"
-                           class="cr_form-component cr_form-component--submit cr_ipe_item ui-sortable submit_container">
-                        <button type="submit" class="cr_form-block cr_button">Abonnieren</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </v-col>
-            </v-row>
+          <v-col cols="12" md="6" class="align-center d-flex">
+            <NewsletterEmbedComponent/>
           </v-col>
           <v-col cols="12">
             <v-row class="mt-md-10 mt-3">
