@@ -310,6 +310,7 @@ export default {
         this.telefonnummer = '';
         this.text = '';
         this.dialog = false;
+        trackMetaEvent('Lead');
         alert("Vielen Dank für Ihre Anfrage.");
       } catch (e) {
         console.error('[create] error:', e);

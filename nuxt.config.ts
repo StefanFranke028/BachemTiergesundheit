@@ -7,6 +7,13 @@ export default defineNuxtConfig({
                 { name: 'author', content: 'Andrea Bachem' },
                 { name: 'publisher', content: 'Andrea Bachem' },
             ],
+            // Meta-Pixel Fallback fuer Besucher ohne JavaScript.
+            noscript: [
+                {
+                    tagPosition: 'bodyOpen',
+                    innerHTML: '<img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1350014756913022&ev=PageView&noscript=1"/>',
+                },
+            ],
         },
     },
     build: {

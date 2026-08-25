@@ -26,9 +26,22 @@ export default {
     script.async = true;
     container.after(script);
     this.script = script;
+
+    // Das Formular wird erst spaeter von ActiveCampaign eingefuegt.
+    // submit-Events blubbern, deshalb reicht ein Listener am Wrapper.
+    this.$el.addEventListener('submit', this.onSubmit);
   },
   beforeUnmount() {
     if (this.script) this.script.remove();
+    this.$el.removeEventListener('submit', this.onSubmit);
+  },
+  methods: {
+    onSubmit(event) {
+      const email = event.target.querySelector('input[name="email"]');
+      // Bei leerem Pflichtfeld bricht ActiveCampaign selbst ab – dann kein Event.
+      if (email && !email.value.trim()) return;
+      trackMetaEvent('Subscribe');
+    },
   },
 }
 </script>

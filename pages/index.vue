@@ -92,7 +92,7 @@
                   preload="none"
                   playsinline
                   :controls="videoStarted"
-                  @play="videoStarted = true"
+                  @play="onVideoPlay"
                   @ended="videoStarted = false"
               ></video>
               <span class="phone-island" aria-hidden="true"></span>
@@ -341,6 +341,7 @@ export default {
       dialog: false,
       loading: false,
       videoStarted: false,
+      videoTracked: false,
       name: '',
       email: '',
       telefonnummer: '',
@@ -355,6 +356,16 @@ export default {
     tabletHorizontal() { return useScreenStore().tabletHorizontal; },
   },
   methods: {
+    onVideoPlay() {
+      this.videoStarted = true;
+      // Nur einmal pro Seitenaufruf melden, nicht bei jedem Fortsetzen.
+      if (this.videoTracked) return;
+      this.videoTracked = true;
+      trackMetaEvent('ViewContent', {
+        content_name: 'Einleitungsvideo Andrea Bachem',
+        content_type: 'video',
+      });
+    },
     playIntro() {
       const video = this.$refs.introVideo;
       if (!video) return;
@@ -401,6 +412,7 @@ export default {
         this.telefonnummer = '';
         this.text = '';
         this.dialog = false;
+        trackMetaEvent('Lead');
         alert("Vielen Dank für Ihre Anfrage.");
       } catch (e) {
         console.error('[create] Fehler:', e);
